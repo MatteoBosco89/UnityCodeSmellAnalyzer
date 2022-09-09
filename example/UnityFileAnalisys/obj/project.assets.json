@@ -1900,19 +1900,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matte\\.nuget\\packages\\": {}
+    "C:\\Users\\pasqu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
       "projectName": "UnityFileAnalisys",
-      "projectPath": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
-      "packagesPath": "C:\\Users\\matte\\.nuget\\packages\\",
-      "outputPath": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
+      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+      "packagesPath": "C:\\Users\\pasqu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\matte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pasqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
