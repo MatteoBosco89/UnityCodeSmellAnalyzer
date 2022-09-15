@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Element;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace UnityData
 {
@@ -16,24 +17,19 @@ namespace UnityData
             for(int i = 0; i < lines.Length; i++ )
             {
                 Console.Write(i + "\t");
+                string cid = "";
                 if (lines[i].Contains(spec_str)) continue;
                 if (lines[i].Contains(comp_id))
                 {
-                    Console.WriteLine("Ho un id");
+                    cid = lines[i].Split('&')[1];
+                    i++;
                 }
-                else if (lines[i].Split(':')[1].Length <= 1)
+                if (lines[i].Split(':')[1].Length <= 1)
                 {
-                    Console.WriteLine("Ho un dizionario interno");
-                }
-                else if (lines[i].Contains("{"))
-                {
-                    Console.WriteLine("Ho un dizionario interno con le graffe");
-                }
-                else
-                {
-                    Console.WriteLine("Ho un valore");
-                }
-                
+                    DictionaryElement d = new DictionaryElement();
+                    i++;
+                    i = d.LoadNormalDictionary(lines, i);
+                } 
             }
         }
     }
