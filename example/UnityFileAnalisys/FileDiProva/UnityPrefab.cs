@@ -45,7 +45,7 @@ namespace UnityAnalyzer
             id = lines[1].Split(':')[1].Trim();
         }
 
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             //carichiamo due prefab, cube e sphere
             UnityPrefab cube = new UnityPrefab("Cube");
@@ -66,33 +66,33 @@ namespace UnityAnalyzer
                 //Console.WriteLine(k.Key);
                 k.Value.PrintData();
             }*/
-            //Stampiamo le informaizoni di una delle componenti di Cube
-            Console.WriteLine("numero di componenti: " + cube.Components.Count);
-            DataObject d = cube.Components["1109823753433287060"];
-            Console.WriteLine("Proprietà di: " + d.Id);
-            d.PrintData();
+        //Stampiamo le informaizoni di una delle componenti di Cube
+        /*Console.WriteLine("numero di componenti: " + cube.Components.Count);
+        DataObject d = cube.Components["1109823753433287060"];
+        Console.WriteLine("Proprietà di: " + d.Id);
+        d.PrintData();
 
-            //ricerchiamo i riferimenti ad oggetti esterni (altri prefab) presenti in Cube
-            //i riferimenti ad oggetti esterni sono sempre identificati dalla chiave guid
-            Console.WriteLine("Estrazione dei riferimenti esterni dal Cube.prefab");
-            List<string> refer = new List<string>(); 
-            foreach(KeyValuePair<string, DataObject> c in cube.Components)
+        //ricerchiamo i riferimenti ad oggetti esterni (altri prefab) presenti in Cube
+        //i riferimenti ad oggetti esterni sono sempre identificati dalla chiave guid
+        Console.WriteLine("Estrazione dei riferimenti esterni dal Cube.prefab");
+        List<string> refer = new List<string>(); 
+        foreach(KeyValuePair<string, DataObject> c in cube.Components)
+        {
+            DataObject data = c.Value;
+            foreach(RowData k  in data.Data.Values)
             {
-                DataObject data = c.Value;
-                foreach(RowData k  in data.Data.Values)
-                {
-                    string s = k.FindParameters("guid");
-                    if (s != "") refer.Add(s);
+                string s = k.FindParameters("guid");
+                if (s != "") refer.Add(s);
 
-                }
-            }
-            //andiamo a cercare i riferimenti a prefab esterni confrontando tutti i guid estratti con la
-            //lista dei prefab caricati
-            foreach(UnityPrefab up in prefabs)
-            {
-                if (refer.Contains(up.id)) Console.WriteLine("Riferimento ad oggetto esterno\n\tNome: " + up.Name + "\n\tId: " + up.Id);
             }
         }
+        //andiamo a cercare i riferimenti a prefab esterni confrontando tutti i guid estratti con la
+        //lista dei prefab caricati
+        foreach(UnityPrefab up in prefabs)
+        {
+            if (refer.Contains(up.id)) Console.WriteLine("Riferimento ad oggetto esterno\n\tNome: " + up.Name + "\n\tId: " + up.Id);
+        }
+    }*/
     }
 
 }

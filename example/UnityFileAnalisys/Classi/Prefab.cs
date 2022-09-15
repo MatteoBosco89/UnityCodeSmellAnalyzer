@@ -9,12 +9,14 @@ namespace UnityData
         protected string id;
         protected string name;
         protected string comp_id = "--- !u!";
+        protected string spec_str = "%";
         protected Dictionary<string, Element.Element> components;
         public Prefab(string[] lines)
         {
-            for(int i = 1; i < lines.Length; i++ )
+            for(int i = 0; i < lines.Length; i++ )
             {
                 Console.Write(i + "\t");
+                if (lines[i].Contains(spec_str)) continue;
                 if (lines[i].Contains(comp_id))
                 {
                     Console.WriteLine("Ho un id");
