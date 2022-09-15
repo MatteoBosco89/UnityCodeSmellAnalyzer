@@ -1905,11 +1905,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
       "projectName": "UnityFileAnalisys",
-      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
       "packagesPath": "C:\\Users\\pasqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
+      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pasqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
