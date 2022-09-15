@@ -14,9 +14,10 @@ namespace UnityData
         protected Dictionary<string, Element.Element> components;
         public Prefab(string[] lines)
         {
+
+            components = new Dictionary<string, Element.Element>();
             for(int i = 0; i < lines.Length; i++ )
             {
-                Console.Write(i + "\t");
                 string cid = "";
                 if (lines[i].Contains(spec_str)) continue;
                 if (lines[i].Contains(comp_id))
@@ -24,12 +25,19 @@ namespace UnityData
                     cid = lines[i].Split('&')[1];
                     i++;
                 }
-                if (lines[i].Split(':')[1].Length <= 1)
-                {
-                    DictionaryElement d = new DictionaryElement();
-                    i++;
-                    i = d.LoadNormalDictionary(lines, i);
-                } 
+                DictionaryElement d = new DictionaryElement();
+                i = d.LoadNormalDictionary(lines, i, comp_id);
+                Console.WriteLine(cid);
+                if(cid != "")components.Add(cid, d);
+            }
+        }
+
+        public void PrintPrefab()
+        {
+            foreach(KeyValuePair<string, Element.Element> kvp in components)
+            {
+                Console.WriteLine("id: " + kvp.Key);
+                kvp.Value.PrintElement();
             }
         }
     }

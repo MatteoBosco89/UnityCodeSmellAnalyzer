@@ -21,7 +21,7 @@ namespace UnityFileProva
         {
             string[] lines = File.ReadAllLines("Files\\BluePlayer.prefab");
             Prefab p = new Prefab(lines);
-            
+            p.PrintPrefab();
         }
     }
 }
