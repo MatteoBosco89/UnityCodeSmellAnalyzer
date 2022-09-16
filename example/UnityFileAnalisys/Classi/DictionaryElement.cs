@@ -25,30 +25,35 @@ namespace Element
             {
                 int num_spaces = NumOfSpaces(lines[i]) - indent;
 
-                if (num_spaces < 0)
-                {
-                    Console.WriteLine("space " + num_spaces + " " + lines[i]);
-                    return i;
-                }
+                if (num_spaces < 0)return i;
+                if (lines[i].Trim().Length <= 1) return i; 
+
                 string[] vals = lines[i].Split(':');
                 Element d;
                 if (vals[1].Length <= 1)
                 {
-                    if (NumOfSpaces(lines[i+1])-indent > 0)
+                    if(i + 1 < lines.Length)
                     {
-                        d = new DictionaryElement();
-                        i = d.LoadNormalDictionary(lines, i);
-                        i--;
+                        if (NumOfSpaces(lines[i + 1]) - indent > 0)
+                        {
+                            d = new DictionaryElement();
+                            i = d.LoadNormalDictionary(lines, i);
+                            i--;
+                        }else
+                            d = new SimpleElement("");
                     }
                     else
-                    {
                         d = new SimpleElement("");
-                    }
                 }
                 else if (vals[1].Contains("{"))
                 {
-                    d = new DictionaryElement();
-                    d.LoadParenthesisDictionary(lines[i]);
+                    if (!vals[1].Contains("{}"))
+                    {
+                        d = new DictionaryElement();
+                        d.LoadParenthesisDictionary(lines[i]);
+                    }
+                    else
+                        d = new SimpleElement("");
                 }
                 else
                 {

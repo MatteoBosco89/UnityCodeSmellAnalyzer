@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using Element;
 using System.IO;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Drawing.Imaging;
+using System.Security.Cryptography;
 
-namespace UnityData
+namespace UnityAnalyzer
 {
-    public class Prefab
+    public class UnityData
     {
         protected string id;
         protected string name;
@@ -14,7 +16,7 @@ namespace UnityData
         protected string SPEC_STR = "%";
         protected string GUID = "guid";
         protected Dictionary<string, Element.Element> components;
-        public Prefab(string mainFile, string metaFile)
+        public UnityData(string mainFile, string metaFile)
         {
             try
             {
@@ -22,9 +24,23 @@ namespace UnityData
                 string[] metaLines = File.ReadAllLines(metaFile);
                 name = Path.GetFileNameWithoutExtension(mainFile);
                 LoadMainData(lines);
-                LoadMetaData(metaLines);
+                LoadId(metaLines);
             }
             catch(FileNotFoundException)
+            {
+                Console.WriteLine("No file found");
+            }
+        }
+
+        public UnityData(string metaFile)
+        {
+            try
+            {
+                string[] metaLines = File.ReadAllLines(metaFile);
+                name = Path.GetFileNameWithoutExtension(metaFile);
+                LoadMetaFile(metaLines);
+            }
+            catch (FileNotFoundException)
             {
                 Console.WriteLine("No file found");
             }
@@ -38,7 +54,6 @@ namespace UnityData
                 string cid = "";
                 if (lines[i].Contains(SPEC_STR)) continue;
 
-                Console.WriteLine(lines[i]);
                 if (lines[i].Contains(COMP_ID))
                 {
                     cid = lines[i].Split('&')[1];
@@ -55,7 +70,29 @@ namespace UnityData
             }
         }
 
-        private void LoadMetaData(string[] lines)
+        private void LoadMetaFile(string[] lines)
+        {
+            components = new Dictionary<string, Element.Element>();
+            for(int i = 1; i < lines.Length; i++)
+            {
+                Console.WriteLine(lines[i]);
+                if (lines[i].Contains(GUID))
+                {
+                    id = lines[i].Split(':')[1].Trim();
+                    i++;
+                }
+                string[] vals = lines[i].Split(':');
+                if (vals[1].Length <= 1)
+                {
+                    DictionaryElement d = new DictionaryElement();
+                    i = d.LoadNormalDictionary(lines, i);
+                    components.Add(vals[0].Trim(), d);
+                }
+
+            }
+        }
+
+        private void LoadId(string[] lines)
         {
             foreach(string line in lines)
             {

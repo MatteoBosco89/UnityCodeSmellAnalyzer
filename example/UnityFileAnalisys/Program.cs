@@ -11,7 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnityData;
+using UnityAnalyzer;
 
 namespace UnityFileProva
 {
@@ -19,9 +19,10 @@ namespace UnityFileProva
     {
         static void Main(string[] args)
         {
-            string[] lines = File.ReadAllLines("Files\\SampleScene.unity");
-            Prefab p = new Prefab("Files\\BluePlayer.prefab", "Files\\BluePlayer.prefab.meta");
-            p.PrintPrefab();
+            //UnityData p = new UnityData("Files\\BluePlayer.prefab", "Files\\BluePlayer.prefab.meta");
+            //p.PrintPrefab();
+            UnityData d = new UnityData("Files\\BluePlayer.prefab.meta");
+            d.PrintPrefab();
         }
     }
 }
