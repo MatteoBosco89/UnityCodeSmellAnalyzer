@@ -19,8 +19,8 @@ namespace UnityFileProva
     {
         static void Main(string[] args)
         {
-            string[] lines = File.ReadAllLines("Files\\BluePlayer.prefab");
-            Prefab p = new Prefab(lines);
+            string[] lines = File.ReadAllLines("Files\\SampleScene.unity");
+            Prefab p = new Prefab("Files\\BluePlayer.prefab", "Files\\BluePlayer.prefab.meta");
             p.PrintPrefab();
         }
     }

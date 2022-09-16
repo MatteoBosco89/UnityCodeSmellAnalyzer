@@ -1,55 +1,74 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace Element
 {
     public class DictionaryElement : Element
     {
         protected Dictionary<string, Element> values;
+        protected string name;
         
         public Dictionary<string, Element> Values { get { return values; } }
-        public DictionaryElement(Dictionary<string, Element> new_values)
-        {
-            values = new_values;    
-        }
+        public string Name { get { return name; } }
+        
         public DictionaryElement() { }
 
-        public int LoadNormalDictionary(string[] lines, int i, string end_line)
+        override public int LoadNormalDictionary(string[] lines, int i)
         {
             values = new Dictionary<string, Element>();
-            int ind_block = NumOfSpaces(lines[i]);
+            name = lines[i].Split(':')[0].Trim();
+            i++;
+            int indent = NumOfSpaces(lines[i]);
+            int j = 0;
             for (; i < lines.Length; i++)
             {
-                if ((NumOfSpaces(lines[i]) - ind_block <= 0)&& ind_block !=0 || lines[i].Contains(end_line)) break;
+                int num_spaces = NumOfSpaces(lines[i]) - indent;
+
+                if (num_spaces < 0)
+                {
+                    Console.WriteLine("space " + num_spaces + " " + lines[i]);
+                    return i;
+                }
                 string[] vals = lines[i].Split(':');
-                Console.WriteLine(vals[0]);
+                Element d;
                 if (vals[1].Length <= 1)
                 {
-                    Console.WriteLine("Dizionario normale");
-                    DictionaryElement d = new DictionaryElement();
-                    i++;
-                    i = d.LoadNormalDictionary(lines, i, end_line);
-                    values.Add(vals[0], d);
+                    if (NumOfSpaces(lines[i+1])-indent > 0)
+                    {
+                        d = new DictionaryElement();
+                        i = d.LoadNormalDictionary(lines, i);
+                        i--;
+                    }
+                    else
+                    {
+                        d = new SimpleElement("");
+                    }
                 }
-                else if (lines[i].Contains("{"))
+                else if (vals[1].Contains("{"))
                 {
-                    Console.WriteLine("Dizionario parentesi");
-                    DictionaryElement d = new DictionaryElement();
+                    d = new DictionaryElement();
                     d.LoadParenthesisDictionary(lines[i]);
-                    if(values.ContainsKey(vals[0].Trim()))values.Add(vals[0].Trim(), d);
                 }
                 else
                 {
-                    Console.WriteLine("Simple element");
-                    SimpleElement e = new SimpleElement(vals[1].Trim());
-                    values.Add(vals[0].Trim(), e);
+                    d = new SimpleElement(vals[1].Trim());
                 }
-                
+                string key = vals[0].Trim();
+                if (values.ContainsKey(key))
+                {
+                    j++;
+                    key = key + j;
+                }
+                else j = 0;
+
+                values.Add(key, d);
+
             }
             return i;
         }
 
-        public void LoadParenthesisDictionary(string line)
+        override public void LoadParenthesisDictionary(string line)
         {
             string d = line.Split('}')[0];
             d = d.Split('{')[1];
@@ -75,6 +94,7 @@ namespace Element
 
         override public void PrintElement()
         {
+            Console.WriteLine(name);
             foreach(KeyValuePair<string, Element> kvp in values)
             {
                 Console.WriteLine("\t" + kvp.Key);
