@@ -12,7 +12,7 @@ namespace HelloWorld
 {
     class Program
     {
-        public static List<string> nonLiterals = new List<string> { "0", "", "null", "0.0" };
+        public static List<string> nonLiterals = new List<string> { "0", "", "null", "0.0f" };
         const string programText =
             @"using System;
             using System.Collections;
@@ -51,6 +51,7 @@ namespace HelloWorld
                     }
                 }
             }";
+        /*
         static void Main(string[] args)
         {
             SyntaxTree tree = CSharpSyntaxTree.ParseText(programText);
@@ -77,7 +78,7 @@ namespace HelloWorld
 
             foreach (MethodDeclarationSyntax m in methods) MethodsCalls(m);//get all methods call for each method
 
-        }
+        }*/
 
         protected static List<MethodDeclarationSyntax> EmptyMethods(ClassDeclarationSyntax c)
         {
