@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{4FBEE810-0276-4DD7-B90D-A30F47FA5198}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Classi/DictionaryElement.cs">
+    <Files>
+      <File FileName="Classi/DictionaryElement.cs" Line="13" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UnityFileAnalisys" expanded="True">
+            <Node name="UnityFileAnalisys" expanded="True">
+              <Node name="Classi" expanded="True">
+                <Node name="DictionaryElement.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.UnityFileAnalisys PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
