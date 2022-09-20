@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using Element;
 using System.IO;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Drawing.Imaging;
-using System.Security.Cryptography;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace UnityAnalyzer
 {
@@ -12,6 +11,7 @@ namespace UnityAnalyzer
     {
         protected string id;
         protected string name;
+        protected string type;
         protected string COMP_ID = "--- !u!";
         protected string SPEC_STR = "%";
         protected string GUID = "guid";
@@ -23,6 +23,7 @@ namespace UnityAnalyzer
                 string[] lines = File.ReadAllLines(mainFile);
                 string[] metaLines = File.ReadAllLines(metaFile);
                 name = Path.GetFileNameWithoutExtension(mainFile);
+                type = Path.GetExtension(mainFile).Trim('.');
                 LoadMainData(lines);
                 LoadId(metaLines);
             }
@@ -38,6 +39,7 @@ namespace UnityAnalyzer
             {
                 string[] metaLines = File.ReadAllLines(metaFile);
                 name = Path.GetFileNameWithoutExtension(metaFile);
+                type = Path.GetExtension(metaFile).Trim('.');
                 LoadMetaFile(metaLines);
             }
             catch (FileNotFoundException)
@@ -49,14 +51,16 @@ namespace UnityAnalyzer
         private void LoadMainData(string[] lines)
         {
             components = new Dictionary<string, Element.Element>();
+            int j = 0;
             for (int i = 0; i < lines.Length; i++)
             {
                 string cid = "";
                 if (lines[i].Contains(SPEC_STR)) continue;
-
+                
                 if (lines[i].Contains(COMP_ID))
                 {
                     cid = lines[i].Split('&')[1];
+                    
                     i++;
                 }
                 if (lines[i].Split(':')[1].Length <= 1)
@@ -64,6 +68,12 @@ namespace UnityAnalyzer
                     DictionaryElement d = new DictionaryElement();
                     i = d.LoadNormalDictionary(lines, i);
                     i--;
+                    if (components.ContainsKey(cid))
+                    {
+                        j++;
+                        cid += i;
+                    }
+                    else j = 0;
                     components.Add(cid, d);
                 }
 
@@ -75,7 +85,6 @@ namespace UnityAnalyzer
             components = new Dictionary<string, Element.Element>();
             for(int i = 1; i < lines.Length; i++)
             {
-                Console.WriteLine(lines[i]);
                 if (lines[i].Contains(GUID))
                 {
                     id = lines[i].Split(':')[1].Trim();
@@ -88,7 +97,6 @@ namespace UnityAnalyzer
                     i = d.LoadNormalDictionary(lines, i);
                     components.Add(vals[0].Trim(), d);
                 }
-
             }
         }
 
@@ -113,6 +121,34 @@ namespace UnityAnalyzer
                 Console.WriteLine("id: " + kvp.Key);
                 kvp.Value.PrintElement();
             }
+        }
+
+        public JObject ToJsonObject()
+        {
+            JObject json = new JObject();
+            json.Add("guid", id);
+            json.Add("name", name);
+            json.Add("type", type);
+            JArray ja = new JArray();
+            foreach(KeyValuePair<string, Element.Element> kvp in components)
+            {
+                if (kvp.Value is DictionaryElement)
+                {
+                    DictionaryElement d = (DictionaryElement)kvp.Value;
+                    JObject jo = new JObject();
+                    jo.Add("id", kvp.Key);
+                    jo = d.ToJson(jo);
+                    ja.Add(jo);
+
+                }
+            }
+            json.Add("COMPONENTS", ja);
+            return json;
+        }
+
+        public void SaveDataToJsonFile(string filename)
+        {
+            File.WriteAllText(filename, ToJsonObject().ToString());
         }
     }
 }

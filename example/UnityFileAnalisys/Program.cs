@@ -19,10 +19,8 @@ namespace UnityFileProva
     {
         static void Main(string[] args)
         {
-            //UnityData p = new UnityData("Files\\BluePlayer.prefab", "Files\\BluePlayer.prefab.meta");
-            //p.PrintPrefab();
-            UnityData d = new UnityData("Files\\BluePlayer.prefab.meta");
-            d.PrintPrefab();
+            UnityData d = new UnityData("Files\\Futuristic.fbx.meta");
+            d.SaveDataToJsonFile(@"Files\\Prova.json");
         }
     }
 }

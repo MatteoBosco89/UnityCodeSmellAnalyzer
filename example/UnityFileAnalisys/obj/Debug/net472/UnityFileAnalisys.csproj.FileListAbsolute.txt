@@ -373,3 +373,4 @@ C:\Users\pasqu\Documents\Università\Tesi\Unity2\UnityCodeSmellAnalyzer\example\
 C:\Users\pasqu\Documents\Università\Tesi\Unity2\UnityCodeSmellAnalyzer\example\UnityFileAnalisys\obj\Debug\net472\UnityFileAnalisys.csproj.CopyComplete
 C:\Users\pasqu\Documents\Università\Tesi\Unity2\UnityCodeSmellAnalyzer\example\UnityFileAnalisys\obj\Debug\net472\UnityFileAnalisys.exe
 C:\Users\pasqu\Documents\Università\Tesi\Unity2\UnityCodeSmellAnalyzer\example\UnityFileAnalisys\obj\Debug\net472\UnityFileAnalisys.pdb
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\UnityFileAnalisys\bin\Debug\net472\Newtonsoft.Json.dll

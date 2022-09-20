@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj": {}
+    "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj": {
+    "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+        "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
         "projectName": "UnityFileAnalisys",
-        "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+        "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
         "packagesPath": "C:\\Users\\pasqu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
+        "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pasqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,6 +60,10 @@
             "Microsoft.CodeAnalysis.Workspaces.MSBuild": {
               "target": "Package",
               "version": "[3.3.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"

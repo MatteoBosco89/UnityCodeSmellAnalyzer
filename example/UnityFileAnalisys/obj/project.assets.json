@@ -437,6 +437,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
@@ -1064,6 +1077,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
@@ -1573,6 +1599,33 @@
         "microsoft.codeanalysis.workspaces.msbuild.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Buffers/4.4.0": {
       "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
       "type": "package",
@@ -1896,7 +1949,8 @@
       "Microsoft.CodeAnalysis.Analyzers >= 2.9.8",
       "Microsoft.CodeAnalysis.CSharp.Workspaces >= 3.3.1",
       "Microsoft.CodeAnalysis.VisualBasic.Workspaces >= 3.3.1",
-      "Microsoft.CodeAnalysis.Workspaces.MSBuild >= 3.3.1"
+      "Microsoft.CodeAnalysis.Workspaces.MSBuild >= 3.3.1",
+      "Newtonsoft.Json >= 13.0.1"
     ]
   },
   "packageFolders": {
@@ -1905,11 +1959,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
       "projectName": "UnityFileAnalisys",
-      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
       "packagesPath": "C:\\Users\\pasqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
+      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pasqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1958,6 +2012,10 @@
           "Microsoft.CodeAnalysis.Workspaces.MSBuild": {
             "target": "Package",
             "version": "[3.3.1, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M+2qkELUz3LQ7L/wiQDVM6kET5d9ioTHDTf0AxZyHw2oRPcju1dydg2WiT5nROqbV393FB+8MUT8n/AHEUV9JQ==",
+  "dgSpecHash": "8V4i1SeUE2k1ALFFRbW6rqIXCDPU4R6mODf6wmmdif7GwOHEHDA6njP52bTKRrm3fO1yOkdR7zHSufEoQNEX/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\Unity2\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
+  "projectFilePath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\UnityFileAnalisys\\UnityFileAnalisys.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.build.locator\\1.2.2\\microsoft.build.locator.1.2.2.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.8\\microsoft.codeanalysis.analyzers.2.9.8.nupkg.sha512",
@@ -13,6 +13,7 @@
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.codeanalysis.visualbasic.workspaces\\3.3.1\\microsoft.codeanalysis.visualbasic.workspaces.3.3.1.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\3.3.1\\microsoft.codeanalysis.workspaces.common.3.3.1.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.codeanalysis.workspaces.msbuild\\3.3.1\\microsoft.codeanalysis.workspaces.msbuild.3.3.1.nupkg.sha512",
+    "C:\\Users\\pasqu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\system.composition\\1.0.31\\system.composition.1.0.31.nupkg.sha512",
