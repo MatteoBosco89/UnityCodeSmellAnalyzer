@@ -77,22 +77,50 @@ namespace AnalyzerCU
                 CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: new[] { compilationUnits[0], compilationUnits[1] }, references: new[] { Mscorlib });
                 SemanticModel model = compilation.GetSemanticModel(s);
                 //Get al the classes inside the compilation unit
+                List<UsingDirectiveSyntax> usingDirectives = (from usingDirective in root.DescendantNodes().OfType<UsingDirectiveSyntax>() select usingDirective).ToList();
+                List<UsingStatementSyntax> usingStatements = (from usingStatement in root.DescendantNodes().OfType<UsingStatementSyntax>() select usingStatement).ToList();
                 List<MethodDeclarationSyntax> methods = new List<MethodDeclarationSyntax>();
                 List<ClassDeclarationSyntax> classes = (from classDeclaration in root.DescendantNodes().OfType<ClassDeclarationSyntax>() select classDeclaration).ToList();
                 List<InterfaceDeclarationSyntax> interfaces = (from interfaceDeclaration in root.DescendantNodes().OfType<InterfaceDeclarationSyntax>() select interfaceDeclaration).ToList();
-                
+                List<ConstructorDeclarationSyntax> constructors = (from cons in root.DescendantNodes().OfType<ConstructorDeclarationSyntax>() select cons).ToList();
 
+                foreach(ConstructorDeclarationSyntax con in constructors)
+                {
+                    Console.WriteLine(con.AttributeLists);
+                    Console.WriteLine(con.Body);
+                    Console.WriteLine(con.ExpressionBody);
+                    Console.WriteLine(con.Identifier);
+                    Console.WriteLine(con.Initializer);
+                    Console.WriteLine(con.Modifiers);
+                    Console.WriteLine(con.ParameterList);
+                }
+
+                foreach(UsingDirectiveSyntax ud in usingDirectives)
+                {
+                    Console.WriteLine("UsingDirective");
+                    
+                    Console.WriteLine(ud.Name);
+                    Console.WriteLine(ud.GetLocation().GetLineSpan().StartLinePosition.Line);
+                }
+
+                
                 foreach(InterfaceDeclarationSyntax i in interfaces)
                 {
                     Console.WriteLine(i.AttributeLists.ToString());
                     Console.WriteLine(i.Identifier);
                     Console.WriteLine(i.BaseList);
+                    Console.WriteLine(i.Keyword);
+                    Console.WriteLine(i.Modifiers);
+                    Console.WriteLine(i.GetLocation().GetLineSpan().StartLinePosition.Line);
+
+
                 }
 
                 //Methods inside all all classes
                 foreach (ClassDeclarationSyntax c in classes)
                 {
                     Console.WriteLine($"{c.Identifier}");
+                    Console.WriteLine(c.GetLocation().GetLineSpan().StartLinePosition.Line);
                     foreach(var cc in c.AttributeLists)
                     {
                         foreach (var ccc in cc.Attributes) Console.WriteLine(ccc.Name.ToString());
@@ -107,6 +135,7 @@ namespace AnalyzerCU
                         Console.WriteLine(property.Identifier);
                         Console.WriteLine(property.Modifiers);
                         Console.WriteLine(property.Type);
+                        Console.WriteLine(property.GetLocation().GetLineSpan().StartLinePosition.Line);
 
                     }
                 }

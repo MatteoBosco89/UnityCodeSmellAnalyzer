@@ -3,18 +3,18 @@
 namespace UnityCodeSmellAnalyzer
 {
     [Serializable]
-    public class PropertySchema
+    public class VariableSchema
     {
         protected string name;
         protected string type;
-        protected string modifier;
+        protected string assignment;
         protected int line;
 
-        public PropertySchema(string name, string type, string modifier, int line)
+        public VariableSchema(string name, string type, string assignment, int line)
         {
             this.name = name;
             this.type = type;
-            this.modifier = modifier;
+            this.assignment = assignment;
             this.line = line;
         }
     }

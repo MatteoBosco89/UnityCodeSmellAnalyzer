@@ -2,10 +2,14 @@
 
 namespace UnityCodeSmellAnalyzer
 {
-	public class NamespaceSchema
+	[Serializable]
+	public class NamespaceSchema : CompilationUnit
 	{
-		public NamespaceSchema()
+		protected int line;
+
+		public NamespaceSchema(string name, int line) : base(name)
 		{
+			this.line = line;
 		}
 	}
 }

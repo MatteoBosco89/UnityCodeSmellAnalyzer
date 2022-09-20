@@ -19,6 +19,13 @@ namespace RoslynExample
         protected float vel = 0.0f;
         int finalVel = 0;
         Class2 c2 = new Class2();
+        string name;
+
+
+        public Class1(string name)
+        {
+            this.name = name;
+        }
 
         void Update()
         {

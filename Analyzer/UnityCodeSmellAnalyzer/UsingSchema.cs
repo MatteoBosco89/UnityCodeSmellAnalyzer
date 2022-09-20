@@ -2,10 +2,16 @@
 
 namespace UnityCodeSmellAnalyzer
 {
+	[Serializable]
 	public class UsingSchema
 	{
-		public UsingSchema()
+		protected string name;
+		protected int line;
+
+		public UsingSchema(string name, int line)
 		{
+			this.name = name;
+			this.line = line;
 		}
 	}
 }
