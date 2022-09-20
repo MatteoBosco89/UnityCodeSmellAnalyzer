@@ -4,6 +4,7 @@ using Element;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+//using System.Text.RegularExpressions;
 
 namespace UnityAnalyzer
 {
@@ -12,10 +13,15 @@ namespace UnityAnalyzer
         protected string id;
         protected string name;
         protected string type;
-        protected string COMP_ID = "--- !u!";
-        protected string SPEC_STR = "%";
-        protected string GUID = "guid";
+        protected string COMP_ID = "--- !u!";//special substring indicating the id of a component
+        protected string SPEC_STR = "%";//substring indicating the line that aren't needed
+        protected string GUID = "guid";//special substring indicating the id of a unity object
         protected Dictionary<string, Element.Element> components;
+
+        /*
+         * This constructor is used for those file in witch the mainfile (.prefab, .controller ecc...) contains the information and
+         * the metafile only contains the guid of the object
+         */
         public UnityData(string mainFile, string metaFile)
         {
             try
@@ -32,7 +38,9 @@ namespace UnityAnalyzer
                 Console.WriteLine("No file found");
             }
         }
-
+        /*
+         * This constructor is used to load the data from oject stored on meta file
+         */
         public UnityData(string metaFile)
         {
             try
@@ -47,7 +55,9 @@ namespace UnityAnalyzer
                 Console.WriteLine("No file found");
             }
         }
-
+        /*
+         * Load the data from the mainfile(.prefab, .unity, .controller ecc...)
+         */
         private void LoadMainData(string[] lines)
         {
             components = new Dictionary<string, Element.Element>();
@@ -80,6 +90,9 @@ namespace UnityAnalyzer
             }
         }
 
+        /*
+         * Load the data from the meta file
+         */
         private void LoadMetaFile(string[] lines)
         {
             components = new Dictionary<string, Element.Element>();
@@ -99,7 +112,9 @@ namespace UnityAnalyzer
                 }
             }
         }
-
+        /*
+         * Load the id from the meta file
+         */
         private void LoadId(string[] lines)
         {
             foreach(string line in lines)
@@ -112,17 +127,22 @@ namespace UnityAnalyzer
             }
         }
 
-        public void PrintPrefab()
+        /*
+         * Print the UnityData Object
+         */
+        public void Print()
         {
             Console.WriteLine(name);
             Console.WriteLine(id);
             foreach(KeyValuePair<string, Element.Element> kvp in components)
             {
                 Console.WriteLine("id: " + kvp.Key);
-                kvp.Value.PrintElement();
+                kvp.Value.Print();
             }
         }
-
+        /*
+         * Convert the DataObject in json object
+         */
         public JObject ToJsonObject()
         {
             JObject json = new JObject();
@@ -136,7 +156,10 @@ namespace UnityAnalyzer
                 {
                     DictionaryElement d = (DictionaryElement)kvp.Value;
                     JObject jo = new JObject();
-                    jo.Add("id", kvp.Key);
+                    string s = kvp.Key;
+                    //remove the charater added to the key of the dictionary to avoid conflicts
+                    //if(id == d.Type)s = Regex.Replace(kvp.Key, @"[\d-]", string.Empty);
+                    jo.Add("id", s);
                     jo = d.ToJson(jo);
                     ja.Add(jo);
 

@@ -264,7 +264,7 @@
             {
               "human": [
                 {
-                  "- boneName": "root.x"
+                  " boneName": "root.x"
                 },
                 {
                   "humanName": "Hips"
@@ -319,65 +319,10 @@
                   ]
                 },
                 {
-                  "- boneName1": "thigh_stretch.l"
+                  " boneName": "thigh_stretch.l"
                 },
                 {
-                  "humanName2": "LeftUpperLeg"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName4": "thigh_stretch.r"
-                },
-                {
-                  "humanName5": "RightUpperLeg"
+                  "humanName": "LeftUpperLeg"
                 },
                 {
                   "limit": [
@@ -429,65 +374,10 @@
                   ]
                 },
                 {
-                  "- boneName7": "leg_stretch.l"
+                  " boneName": "thigh_stretch.r"
                 },
                 {
-                  "humanName8": "LeftLowerLeg"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName10": "leg_stretch.r"
-                },
-                {
-                  "humanName11": "RightLowerLeg"
+                  "humanName": "RightUpperLeg"
                 },
                 {
                   "limit": [
@@ -539,65 +429,10 @@
                   ]
                 },
                 {
-                  "- boneName13": "foot.l"
+                  " boneName": "leg_stretch.l"
                 },
                 {
-                  "humanName14": "LeftFoot"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName16": "foot.r"
-                },
-                {
-                  "humanName17": "RightFoot"
+                  "humanName": "LeftLowerLeg"
                 },
                 {
                   "limit": [
@@ -649,65 +484,10 @@
                   ]
                 },
                 {
-                  "- boneName19": "spine_01.x"
+                  " boneName": "leg_stretch.r"
                 },
                 {
-                  "humanName20": "Spine"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName22": "spine_02.x"
-                },
-                {
-                  "humanName23": "Chest"
+                  "humanName": "RightLowerLeg"
                 },
                 {
                   "limit": [
@@ -759,65 +539,10 @@
                   ]
                 },
                 {
-                  "- boneName25": "neck.x"
+                  " boneName": "foot.l"
                 },
                 {
-                  "humanName26": "Neck"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName28": "head.x"
-                },
-                {
-                  "humanName29": "Head"
+                  "humanName": "LeftFoot"
                 },
                 {
                   "limit": [
@@ -869,65 +594,10 @@
                   ]
                 },
                 {
-                  "- boneName31": "shoulder.l"
+                  " boneName": "foot.r"
                 },
                 {
-                  "humanName32": "LeftShoulder"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName34": "shoulder.r"
-                },
-                {
-                  "humanName35": "RightShoulder"
+                  "humanName": "RightFoot"
                 },
                 {
                   "limit": [
@@ -979,65 +649,10 @@
                   ]
                 },
                 {
-                  "- boneName37": "arm_stretch.l"
+                  " boneName": "spine_01.x"
                 },
                 {
-                  "humanName38": "LeftUpperArm"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName40": "arm_stretch.r"
-                },
-                {
-                  "humanName41": "RightUpperArm"
+                  "humanName": "Spine"
                 },
                 {
                   "limit": [
@@ -1089,65 +704,10 @@
                   ]
                 },
                 {
-                  "- boneName43": "forearm_stretch.l"
+                  " boneName": "spine_02.x"
                 },
                 {
-                  "humanName44": "LeftLowerArm"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName46": "forearm_stretch.r"
-                },
-                {
-                  "humanName47": "RightLowerArm"
+                  "humanName": "Chest"
                 },
                 {
                   "limit": [
@@ -1199,65 +759,10 @@
                   ]
                 },
                 {
-                  "- boneName49": "hand.l"
+                  " boneName": "neck.x"
                 },
                 {
-                  "humanName50": "LeftHand"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName52": "hand.r"
-                },
-                {
-                  "humanName53": "RightHand"
+                  "humanName": "Neck"
                 },
                 {
                   "limit": [
@@ -1309,65 +814,10 @@
                   ]
                 },
                 {
-                  "- boneName55": "toes_01.l"
+                  " boneName": "head.x"
                 },
                 {
-                  "humanName56": "LeftToes"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName58": "toes_01.r"
-                },
-                {
-                  "humanName59": "RightToes"
+                  "humanName": "Head"
                 },
                 {
                   "limit": [
@@ -1419,65 +869,10 @@
                   ]
                 },
                 {
-                  "- boneName61": "c_thumb1.l"
+                  " boneName": "shoulder.l"
                 },
                 {
-                  "humanName62": "Left Thumb Proximal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName64": "c_thumb2.l"
-                },
-                {
-                  "humanName65": "Left Thumb Intermediate"
+                  "humanName": "LeftShoulder"
                 },
                 {
                   "limit": [
@@ -1529,65 +924,10 @@
                   ]
                 },
                 {
-                  "- boneName67": "c_thumb3.l"
+                  " boneName": "shoulder.r"
                 },
                 {
-                  "humanName68": "Left Thumb Distal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName70": "c_index1.l"
-                },
-                {
-                  "humanName71": "Left Index Proximal"
+                  "humanName": "RightShoulder"
                 },
                 {
                   "limit": [
@@ -1639,65 +979,10 @@
                   ]
                 },
                 {
-                  "- boneName73": "c_index2.l"
+                  " boneName": "arm_stretch.l"
                 },
                 {
-                  "humanName74": "Left Index Intermediate"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName76": "c_index3.l"
-                },
-                {
-                  "humanName77": "Left Index Distal"
+                  "humanName": "LeftUpperArm"
                 },
                 {
                   "limit": [
@@ -1749,65 +1034,10 @@
                   ]
                 },
                 {
-                  "- boneName79": "c_middle1.l"
+                  " boneName": "arm_stretch.r"
                 },
                 {
-                  "humanName80": "Left Middle Proximal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName82": "c_middle2.l"
-                },
-                {
-                  "humanName83": "Left Middle Intermediate"
+                  "humanName": "RightUpperArm"
                 },
                 {
                   "limit": [
@@ -1859,65 +1089,10 @@
                   ]
                 },
                 {
-                  "- boneName85": "c_middle3.l"
+                  " boneName": "forearm_stretch.l"
                 },
                 {
-                  "humanName86": "Left Middle Distal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName88": "c_ring1.l"
-                },
-                {
-                  "humanName89": "Left Ring Proximal"
+                  "humanName": "LeftLowerArm"
                 },
                 {
                   "limit": [
@@ -1969,65 +1144,10 @@
                   ]
                 },
                 {
-                  "- boneName91": "c_ring2.l"
+                  " boneName": "forearm_stretch.r"
                 },
                 {
-                  "humanName92": "Left Ring Intermediate"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName94": "c_ring3.l"
-                },
-                {
-                  "humanName95": "Left Ring Distal"
+                  "humanName": "RightLowerArm"
                 },
                 {
                   "limit": [
@@ -2079,65 +1199,10 @@
                   ]
                 },
                 {
-                  "- boneName97": "c_pinky1.l"
+                  " boneName": "hand.l"
                 },
                 {
-                  "humanName98": "Left Little Proximal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName100": "c_pinky2.l"
-                },
-                {
-                  "humanName101": "Left Little Intermediate"
+                  "humanName": "LeftHand"
                 },
                 {
                   "limit": [
@@ -2189,65 +1254,10 @@
                   ]
                 },
                 {
-                  "- boneName103": "c_pinky3.l"
+                  " boneName": "hand.r"
                 },
                 {
-                  "humanName104": "Left Little Distal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName106": "c_thumb1.r"
-                },
-                {
-                  "humanName107": "Right Thumb Proximal"
+                  "humanName": "RightHand"
                 },
                 {
                   "limit": [
@@ -2299,65 +1309,10 @@
                   ]
                 },
                 {
-                  "- boneName109": "c_thumb2.r"
+                  " boneName": "toes_01.l"
                 },
                 {
-                  "humanName110": "Right Thumb Intermediate"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName112": "c_thumb3.r"
-                },
-                {
-                  "humanName113": "Right Thumb Distal"
+                  "humanName": "LeftToes"
                 },
                 {
                   "limit": [
@@ -2409,65 +1364,10 @@
                   ]
                 },
                 {
-                  "- boneName115": "c_index1.r"
+                  " boneName": "toes_01.r"
                 },
                 {
-                  "humanName116": "Right Index Proximal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName118": "c_index2.r"
-                },
-                {
-                  "humanName119": "Right Index Intermediate"
+                  "humanName": "RightToes"
                 },
                 {
                   "limit": [
@@ -2519,65 +1419,10 @@
                   ]
                 },
                 {
-                  "- boneName121": "c_index3.r"
+                  " boneName": "c_thumb1.l"
                 },
                 {
-                  "humanName122": "Right Index Distal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName124": "c_middle1.r"
-                },
-                {
-                  "humanName125": "Right Middle Proximal"
+                  "humanName": "Left Thumb Proximal"
                 },
                 {
                   "limit": [
@@ -2629,65 +1474,10 @@
                   ]
                 },
                 {
-                  "- boneName127": "c_middle2.r"
+                  " boneName": "c_thumb2.l"
                 },
                 {
-                  "humanName128": "Right Middle Intermediate"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName130": "c_middle3.r"
-                },
-                {
-                  "humanName131": "Right Middle Distal"
+                  "humanName": "Left Thumb Intermediate"
                 },
                 {
                   "limit": [
@@ -2739,65 +1529,10 @@
                   ]
                 },
                 {
-                  "- boneName133": "c_ring1.r"
+                  " boneName": "c_thumb3.l"
                 },
                 {
-                  "humanName134": "Right Ring Proximal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName136": "c_ring2.r"
-                },
-                {
-                  "humanName137": "Right Ring Intermediate"
+                  "humanName": "Left Thumb Distal"
                 },
                 {
                   "limit": [
@@ -2849,65 +1584,10 @@
                   ]
                 },
                 {
-                  "- boneName139": "c_ring3.r"
+                  " boneName": "c_index1.l"
                 },
                 {
-                  "humanName140": "Right Ring Distal"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName142": "c_pinky1.r"
-                },
-                {
-                  "humanName143": "Right Little Proximal"
+                  "humanName": "Left Index Proximal"
                 },
                 {
                   "limit": [
@@ -2959,65 +1639,10 @@
                   ]
                 },
                 {
-                  "- boneName145": "c_pinky2.r"
+                  " boneName": "c_index2.l"
                 },
                 {
-                  "humanName146": "Right Little Intermediate"
-                },
-                {
-                  "limit": [
-                    {
-                      "min": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "max": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "value": [
-                        {
-                          "x": "0"
-                        },
-                        {
-                          "y": "0"
-                        },
-                        {
-                          "z": "0"
-                        }
-                      ]
-                    },
-                    {
-                      "length": "0"
-                    },
-                    {
-                      "modified": "0"
-                    }
-                  ]
-                },
-                {
-                  "- boneName148": "c_pinky3.r"
-                },
-                {
-                  "humanName149": "Right Little Distal"
+                  "humanName": "Left Index Intermediate"
                 },
                 {
                   "limit": [
@@ -3069,10 +1694,1385 @@
                   ]
                 },
                 {
-                  "- boneName151": "spine_03.x"
+                  " boneName": "c_index3.l"
                 },
                 {
-                  "humanName152": "UpperChest"
+                  "humanName": "Left Index Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_middle1.l"
+                },
+                {
+                  "humanName": "Left Middle Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_middle2.l"
+                },
+                {
+                  "humanName": "Left Middle Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_middle3.l"
+                },
+                {
+                  "humanName": "Left Middle Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_ring1.l"
+                },
+                {
+                  "humanName": "Left Ring Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_ring2.l"
+                },
+                {
+                  "humanName": "Left Ring Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_ring3.l"
+                },
+                {
+                  "humanName": "Left Ring Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_pinky1.l"
+                },
+                {
+                  "humanName": "Left Little Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_pinky2.l"
+                },
+                {
+                  "humanName": "Left Little Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_pinky3.l"
+                },
+                {
+                  "humanName": "Left Little Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_thumb1.r"
+                },
+                {
+                  "humanName": "Right Thumb Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_thumb2.r"
+                },
+                {
+                  "humanName": "Right Thumb Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_thumb3.r"
+                },
+                {
+                  "humanName": "Right Thumb Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_index1.r"
+                },
+                {
+                  "humanName": "Right Index Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_index2.r"
+                },
+                {
+                  "humanName": "Right Index Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_index3.r"
+                },
+                {
+                  "humanName": "Right Index Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_middle1.r"
+                },
+                {
+                  "humanName": "Right Middle Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_middle2.r"
+                },
+                {
+                  "humanName": "Right Middle Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_middle3.r"
+                },
+                {
+                  "humanName": "Right Middle Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_ring1.r"
+                },
+                {
+                  "humanName": "Right Ring Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_ring2.r"
+                },
+                {
+                  "humanName": "Right Ring Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_ring3.r"
+                },
+                {
+                  "humanName": "Right Ring Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_pinky1.r"
+                },
+                {
+                  "humanName": "Right Little Proximal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_pinky2.r"
+                },
+                {
+                  "humanName": "Right Little Intermediate"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "c_pinky3.r"
+                },
+                {
+                  "humanName": "Right Little Distal"
+                },
+                {
+                  "limit": [
+                    {
+                      "min": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "max": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "value": [
+                        {
+                          "x": "0"
+                        },
+                        {
+                          "y": "0"
+                        },
+                        {
+                          "z": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "length": "0"
+                    },
+                    {
+                      "modified": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneName": "spine_03.x"
+                },
+                {
+                  "humanName": "UpperChest"
                 },
                 {
                   "limit": [
@@ -3128,7 +3128,7 @@
             {
               "skeleton": [
                 {
-                  "- name": "Sci-fi_character_unity(Clone)"
+                  " name": "Sci-fi_character_unity(Clone)"
                 },
                 {
                   "parentName": ""
@@ -3176,58 +3176,10 @@
                   ]
                 },
                 {
-                  "- name1": "Futuristic_Soldier"
+                  " name": "Futuristic_Soldier"
                 },
                 {
-                  "parentName2": "Sci-fi_character_unity(Clone)"
-                },
-                {
-                  "position": [
-                    {
-                      "x": "-0"
-                    },
-                    {
-                      "y": "0"
-                    },
-                    {
-                      "z": "0"
-                    }
-                  ]
-                },
-                {
-                  "rotation": [
-                    {
-                      "x": "0.000000021855694"
-                    },
-                    {
-                      "y": "0"
-                    },
-                    {
-                      "z": "-0"
-                    },
-                    {
-                      "w": "1"
-                    }
-                  ]
-                },
-                {
-                  "scale": [
-                    {
-                      "x": "1"
-                    },
-                    {
-                      "y": "1"
-                    },
-                    {
-                      "z": "1"
-                    }
-                  ]
-                },
-                {
-                  "- name6": "root"
-                },
-                {
-                  "parentName7": "Sci-fi_character_unity(Clone)"
+                  "parentName": "Sci-fi_character_unity(Clone)"
                 },
                 {
                   "position": [
@@ -3272,10 +3224,58 @@
                   ]
                 },
                 {
-                  "- name11": "root.x"
+                  " name": "root"
                 },
                 {
-                  "parentName12": "root"
+                  "parentName": "Sci-fi_character_unity(Clone)"
+                },
+                {
+                  "position": [
+                    {
+                      "x": "-0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.000000021855694"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "-0"
+                    },
+                    {
+                      "w": "1"
+                    }
+                  ]
+                },
+                {
+                  "scale": [
+                    {
+                      "x": "1"
+                    },
+                    {
+                      "y": "1"
+                    },
+                    {
+                      "z": "1"
+                    }
+                  ]
+                },
+                {
+                  " name": "root.x"
+                },
+                {
+                  "parentName": "root"
                 },
                 {
                   "position": [
@@ -3320,10 +3320,10 @@
                   ]
                 },
                 {
-                  "- name16": "thigh_stretch.l"
+                  " name": "thigh_stretch.l"
                 },
                 {
-                  "parentName17": "root.x"
+                  "parentName": "root.x"
                 },
                 {
                   "position": [
@@ -3368,10 +3368,10 @@
                   ]
                 },
                 {
-                  "- name21": "leg_stretch.l"
+                  " name": "leg_stretch.l"
                 },
                 {
-                  "parentName22": "thigh_stretch.l"
+                  "parentName": "thigh_stretch.l"
                 },
                 {
                   "position": [
@@ -3416,10 +3416,10 @@
                   ]
                 },
                 {
-                  "- name26": "foot.l"
+                  " name": "foot.l"
                 },
                 {
-                  "parentName27": "leg_stretch.l"
+                  "parentName": "leg_stretch.l"
                 },
                 {
                   "position": [
@@ -3464,10 +3464,10 @@
                   ]
                 },
                 {
-                  "- name31": "toes_01.l"
+                  " name": "toes_01.l"
                 },
                 {
-                  "parentName32": "foot.l"
+                  "parentName": "foot.l"
                 },
                 {
                   "position": [
@@ -3512,10 +3512,10 @@
                   ]
                 },
                 {
-                  "- name36": "leg_twist.l"
+                  " name": "leg_twist.l"
                 },
                 {
-                  "parentName37": "leg_stretch.l"
+                  "parentName": "leg_stretch.l"
                 },
                 {
                   "position": [
@@ -3560,10 +3560,10 @@
                   ]
                 },
                 {
-                  "- name41": "thigh_twist.l"
+                  " name": "thigh_twist.l"
                 },
                 {
-                  "parentName42": "thigh_stretch.l"
+                  "parentName": "thigh_stretch.l"
                 },
                 {
                   "position": [
@@ -3608,10 +3608,10 @@
                   ]
                 },
                 {
-                  "- name46": "thigh_stretch.r"
+                  " name": "thigh_stretch.r"
                 },
                 {
-                  "parentName47": "root.x"
+                  "parentName": "root.x"
                 },
                 {
                   "position": [
@@ -3656,10 +3656,10 @@
                   ]
                 },
                 {
-                  "- name51": "leg_stretch.r"
+                  " name": "leg_stretch.r"
                 },
                 {
-                  "parentName52": "thigh_stretch.r"
+                  "parentName": "thigh_stretch.r"
                 },
                 {
                   "position": [
@@ -3704,10 +3704,10 @@
                   ]
                 },
                 {
-                  "- name56": "foot.r"
+                  " name": "foot.r"
                 },
                 {
-                  "parentName57": "leg_stretch.r"
+                  "parentName": "leg_stretch.r"
                 },
                 {
                   "position": [
@@ -3752,10 +3752,10 @@
                   ]
                 },
                 {
-                  "- name61": "toes_01.r"
+                  " name": "toes_01.r"
                 },
                 {
-                  "parentName62": "foot.r"
+                  "parentName": "foot.r"
                 },
                 {
                   "position": [
@@ -3800,10 +3800,10 @@
                   ]
                 },
                 {
-                  "- name66": "leg_twist.r"
+                  " name": "leg_twist.r"
                 },
                 {
-                  "parentName67": "leg_stretch.r"
+                  "parentName": "leg_stretch.r"
                 },
                 {
                   "position": [
@@ -3848,10 +3848,10 @@
                   ]
                 },
                 {
-                  "- name71": "thigh_twist.r"
+                  " name": "thigh_twist.r"
                 },
                 {
-                  "parentName72": "thigh_stretch.r"
+                  "parentName": "thigh_stretch.r"
                 },
                 {
                   "position": [
@@ -3896,10 +3896,10 @@
                   ]
                 },
                 {
-                  "- name76": "spine_01.x"
+                  " name": "spine_01.x"
                 },
                 {
-                  "parentName77": "root.x"
+                  "parentName": "root.x"
                 },
                 {
                   "position": [
@@ -3944,10 +3944,10 @@
                   ]
                 },
                 {
-                  "- name81": "spine_02.x"
+                  " name": "spine_02.x"
                 },
                 {
-                  "parentName82": "spine_01.x"
+                  "parentName": "spine_01.x"
                 },
                 {
                   "position": [
@@ -3992,10 +3992,10 @@
                   ]
                 },
                 {
-                  "- name86": "spine_03.x"
+                  " name": "spine_03.x"
                 },
                 {
-                  "parentName87": "spine_02.x"
+                  "parentName": "spine_02.x"
                 },
                 {
                   "position": [
@@ -4040,10 +4040,10 @@
                   ]
                 },
                 {
-                  "- name91": "neck.x"
+                  " name": "neck.x"
                 },
                 {
-                  "parentName92": "spine_03.x"
+                  "parentName": "spine_03.x"
                 },
                 {
                   "position": [
@@ -4088,10 +4088,10 @@
                   ]
                 },
                 {
-                  "- name96": "head.x"
+                  " name": "head.x"
                 },
                 {
-                  "parentName97": "neck.x"
+                  "parentName": "neck.x"
                 },
                 {
                   "position": [
@@ -4136,10 +4136,10 @@
                   ]
                 },
                 {
-                  "- name101": "shoulder.r"
+                  " name": "shoulder.r"
                 },
                 {
-                  "parentName102": "spine_03.x"
+                  "parentName": "spine_03.x"
                 },
                 {
                   "position": [
@@ -4184,10 +4184,10 @@
                   ]
                 },
                 {
-                  "- name106": "arm_stretch.r"
+                  " name": "arm_stretch.r"
                 },
                 {
-                  "parentName107": "shoulder.r"
+                  "parentName": "shoulder.r"
                 },
                 {
                   "position": [
@@ -4232,10 +4232,10 @@
                   ]
                 },
                 {
-                  "- name111": "forearm_stretch.r"
+                  " name": "forearm_stretch.r"
                 },
                 {
-                  "parentName112": "arm_stretch.r"
+                  "parentName": "arm_stretch.r"
                 },
                 {
                   "position": [
@@ -4280,10 +4280,10 @@
                   ]
                 },
                 {
-                  "- name116": "hand.r"
+                  " name": "hand.r"
                 },
                 {
-                  "parentName117": "forearm_stretch.r"
+                  "parentName": "forearm_stretch.r"
                 },
                 {
                   "position": [
@@ -4328,10 +4328,10 @@
                   ]
                 },
                 {
-                  "- name121": "c_thumb1.r"
+                  " name": "c_thumb1.r"
                 },
                 {
-                  "parentName122": "hand.r"
+                  "parentName": "hand.r"
                 },
                 {
                   "position": [
@@ -4376,10 +4376,10 @@
                   ]
                 },
                 {
-                  "- name126": "c_thumb2.r"
+                  " name": "c_thumb2.r"
                 },
                 {
-                  "parentName127": "c_thumb1.r"
+                  "parentName": "c_thumb1.r"
                 },
                 {
                   "position": [
@@ -4424,10 +4424,10 @@
                   ]
                 },
                 {
-                  "- name131": "c_thumb3.r"
+                  " name": "c_thumb3.r"
                 },
                 {
-                  "parentName132": "c_thumb2.r"
+                  "parentName": "c_thumb2.r"
                 },
                 {
                   "position": [
@@ -4472,10 +4472,10 @@
                   ]
                 },
                 {
-                  "- name136": "c_pinky1.r"
+                  " name": "c_pinky1.r"
                 },
                 {
-                  "parentName137": "hand.r"
+                  "parentName": "hand.r"
                 },
                 {
                   "position": [
@@ -4520,10 +4520,10 @@
                   ]
                 },
                 {
-                  "- name141": "c_pinky2.r"
+                  " name": "c_pinky2.r"
                 },
                 {
-                  "parentName142": "c_pinky1.r"
+                  "parentName": "c_pinky1.r"
                 },
                 {
                   "position": [
@@ -4568,10 +4568,10 @@
                   ]
                 },
                 {
-                  "- name146": "c_pinky3.r"
+                  " name": "c_pinky3.r"
                 },
                 {
-                  "parentName147": "c_pinky2.r"
+                  "parentName": "c_pinky2.r"
                 },
                 {
                   "position": [
@@ -4616,10 +4616,10 @@
                   ]
                 },
                 {
-                  "- name151": "c_ring1.r"
+                  " name": "c_ring1.r"
                 },
                 {
-                  "parentName152": "hand.r"
+                  "parentName": "hand.r"
                 },
                 {
                   "position": [
@@ -4664,10 +4664,10 @@
                   ]
                 },
                 {
-                  "- name156": "c_ring2.r"
+                  " name": "c_ring2.r"
                 },
                 {
-                  "parentName157": "c_ring1.r"
+                  "parentName": "c_ring1.r"
                 },
                 {
                   "position": [
@@ -4712,10 +4712,10 @@
                   ]
                 },
                 {
-                  "- name161": "c_ring3.r"
+                  " name": "c_ring3.r"
                 },
                 {
-                  "parentName162": "c_ring2.r"
+                  "parentName": "c_ring2.r"
                 },
                 {
                   "position": [
@@ -4760,10 +4760,10 @@
                   ]
                 },
                 {
-                  "- name166": "c_middle1.r"
+                  " name": "c_middle1.r"
                 },
                 {
-                  "parentName167": "hand.r"
+                  "parentName": "hand.r"
                 },
                 {
                   "position": [
@@ -4808,10 +4808,10 @@
                   ]
                 },
                 {
-                  "- name171": "c_middle2.r"
+                  " name": "c_middle2.r"
                 },
                 {
-                  "parentName172": "c_middle1.r"
+                  "parentName": "c_middle1.r"
                 },
                 {
                   "position": [
@@ -4856,10 +4856,10 @@
                   ]
                 },
                 {
-                  "- name176": "c_middle3.r"
+                  " name": "c_middle3.r"
                 },
                 {
-                  "parentName177": "c_middle2.r"
+                  "parentName": "c_middle2.r"
                 },
                 {
                   "position": [
@@ -4904,10 +4904,10 @@
                   ]
                 },
                 {
-                  "- name181": "c_index1.r"
+                  " name": "c_index1.r"
                 },
                 {
-                  "parentName182": "hand.r"
+                  "parentName": "hand.r"
                 },
                 {
                   "position": [
@@ -4952,10 +4952,10 @@
                   ]
                 },
                 {
-                  "- name186": "c_index2.r"
+                  " name": "c_index2.r"
                 },
                 {
-                  "parentName187": "c_index1.r"
+                  "parentName": "c_index1.r"
                 },
                 {
                   "position": [
@@ -5000,10 +5000,10 @@
                   ]
                 },
                 {
-                  "- name191": "c_index3.r"
+                  " name": "c_index3.r"
                 },
                 {
-                  "parentName192": "c_index2.r"
+                  "parentName": "c_index2.r"
                 },
                 {
                   "position": [
@@ -5048,10 +5048,10 @@
                   ]
                 },
                 {
-                  "- name196": "forearm_twist.r"
+                  " name": "forearm_twist.r"
                 },
                 {
-                  "parentName197": "forearm_stretch.r"
+                  "parentName": "forearm_stretch.r"
                 },
                 {
                   "position": [
@@ -5096,10 +5096,10 @@
                   ]
                 },
                 {
-                  "- name201": "arm_twist.r"
+                  " name": "arm_twist.r"
                 },
                 {
-                  "parentName202": "arm_stretch.r"
+                  "parentName": "arm_stretch.r"
                 },
                 {
                   "position": [
@@ -5144,10 +5144,10 @@
                   ]
                 },
                 {
-                  "- name206": "shoulder.l"
+                  " name": "shoulder.l"
                 },
                 {
-                  "parentName207": "spine_03.x"
+                  "parentName": "spine_03.x"
                 },
                 {
                   "position": [
@@ -5192,10 +5192,10 @@
                   ]
                 },
                 {
-                  "- name211": "arm_stretch.l"
+                  " name": "arm_stretch.l"
                 },
                 {
-                  "parentName212": "shoulder.l"
+                  "parentName": "shoulder.l"
                 },
                 {
                   "position": [
@@ -5240,10 +5240,10 @@
                   ]
                 },
                 {
-                  "- name216": "forearm_stretch.l"
+                  " name": "forearm_stretch.l"
                 },
                 {
-                  "parentName217": "arm_stretch.l"
+                  "parentName": "arm_stretch.l"
                 },
                 {
                   "position": [
@@ -5288,10 +5288,10 @@
                   ]
                 },
                 {
-                  "- name221": "hand.l"
+                  " name": "hand.l"
                 },
                 {
-                  "parentName222": "forearm_stretch.l"
+                  "parentName": "forearm_stretch.l"
                 },
                 {
                   "position": [
@@ -5336,10 +5336,10 @@
                   ]
                 },
                 {
-                  "- name226": "c_thumb1.l"
+                  " name": "c_thumb1.l"
                 },
                 {
-                  "parentName227": "hand.l"
+                  "parentName": "hand.l"
                 },
                 {
                   "position": [
@@ -5384,10 +5384,10 @@
                   ]
                 },
                 {
-                  "- name231": "c_thumb2.l"
+                  " name": "c_thumb2.l"
                 },
                 {
-                  "parentName232": "c_thumb1.l"
+                  "parentName": "c_thumb1.l"
                 },
                 {
                   "position": [
@@ -5432,10 +5432,10 @@
                   ]
                 },
                 {
-                  "- name236": "c_thumb3.l"
+                  " name": "c_thumb3.l"
                 },
                 {
-                  "parentName237": "c_thumb2.l"
+                  "parentName": "c_thumb2.l"
                 },
                 {
                   "position": [
@@ -5480,10 +5480,10 @@
                   ]
                 },
                 {
-                  "- name241": "c_pinky1.l"
+                  " name": "c_pinky1.l"
                 },
                 {
-                  "parentName242": "hand.l"
+                  "parentName": "hand.l"
                 },
                 {
                   "position": [
@@ -5528,10 +5528,10 @@
                   ]
                 },
                 {
-                  "- name246": "c_pinky2.l"
+                  " name": "c_pinky2.l"
                 },
                 {
-                  "parentName247": "c_pinky1.l"
+                  "parentName": "c_pinky1.l"
                 },
                 {
                   "position": [
@@ -5576,10 +5576,10 @@
                   ]
                 },
                 {
-                  "- name251": "c_pinky3.l"
+                  " name": "c_pinky3.l"
                 },
                 {
-                  "parentName252": "c_pinky2.l"
+                  "parentName": "c_pinky2.l"
                 },
                 {
                   "position": [
@@ -5624,10 +5624,10 @@
                   ]
                 },
                 {
-                  "- name256": "c_ring1.l"
+                  " name": "c_ring1.l"
                 },
                 {
-                  "parentName257": "hand.l"
+                  "parentName": "hand.l"
                 },
                 {
                   "position": [
@@ -5672,10 +5672,10 @@
                   ]
                 },
                 {
-                  "- name261": "c_ring2.l"
+                  " name": "c_ring2.l"
                 },
                 {
-                  "parentName262": "c_ring1.l"
+                  "parentName": "c_ring1.l"
                 },
                 {
                   "position": [
@@ -5720,10 +5720,10 @@
                   ]
                 },
                 {
-                  "- name266": "c_ring3.l"
+                  " name": "c_ring3.l"
                 },
                 {
-                  "parentName267": "c_ring2.l"
+                  "parentName": "c_ring2.l"
                 },
                 {
                   "position": [
@@ -5768,10 +5768,10 @@
                   ]
                 },
                 {
-                  "- name271": "c_middle1.l"
+                  " name": "c_middle1.l"
                 },
                 {
-                  "parentName272": "hand.l"
+                  "parentName": "hand.l"
                 },
                 {
                   "position": [
@@ -5816,10 +5816,10 @@
                   ]
                 },
                 {
-                  "- name276": "c_middle2.l"
+                  " name": "c_middle2.l"
                 },
                 {
-                  "parentName277": "c_middle1.l"
+                  "parentName": "c_middle1.l"
                 },
                 {
                   "position": [
@@ -5864,10 +5864,10 @@
                   ]
                 },
                 {
-                  "- name281": "c_middle3.l"
+                  " name": "c_middle3.l"
                 },
                 {
-                  "parentName282": "c_middle2.l"
+                  "parentName": "c_middle2.l"
                 },
                 {
                   "position": [
@@ -5912,10 +5912,10 @@
                   ]
                 },
                 {
-                  "- name286": "c_index1.l"
+                  " name": "c_index1.l"
                 },
                 {
-                  "parentName287": "hand.l"
+                  "parentName": "hand.l"
                 },
                 {
                   "position": [
@@ -5960,10 +5960,10 @@
                   ]
                 },
                 {
-                  "- name291": "c_index2.l"
+                  " name": "c_index2.l"
                 },
                 {
-                  "parentName292": "c_index1.l"
+                  "parentName": "c_index1.l"
                 },
                 {
                   "position": [
@@ -6008,10 +6008,10 @@
                   ]
                 },
                 {
-                  "- name296": "c_index3.l"
+                  " name": "c_index3.l"
                 },
                 {
-                  "parentName297": "c_index2.l"
+                  "parentName": "c_index2.l"
                 },
                 {
                   "position": [
@@ -6056,10 +6056,10 @@
                   ]
                 },
                 {
-                  "- name301": "forearm_twist.l"
+                  " name": "forearm_twist.l"
                 },
                 {
-                  "parentName302": "forearm_stretch.l"
+                  "parentName": "forearm_stretch.l"
                 },
                 {
                   "position": [
@@ -6104,10 +6104,10 @@
                   ]
                 },
                 {
-                  "- name306": "arm_twist.l"
+                  " name": "arm_twist.l"
                 },
                 {
-                  "parentName307": "arm_stretch.l"
+                  "parentName": "arm_stretch.l"
                 },
                 {
                   "position": [

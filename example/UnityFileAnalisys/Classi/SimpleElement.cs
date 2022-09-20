@@ -2,6 +2,9 @@
 
 namespace Element
 {
+    /*
+     * This represent a simple element inside the unity file
+     */
     public class SimpleElement:Element
     {
         protected string value;
