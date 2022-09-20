@@ -4,10 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-
+using System.Security.Permissions;
 
 namespace RoslynExample
 {
+    public interface IStrunz
+    {
+        string Name { get; }
+        public void Metodo();
+    }
+
     class Class1
     {
         protected float vel = 0.0f;

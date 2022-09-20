@@ -7,8 +7,17 @@ using System.Xml.Linq;
 
 namespace RoslynExample
 {
+    [Serializable]
     class Class2 
     {
+
+        protected int field1 = 1;
+
+        public int Field1
+        {
+            get { return field1; }
+        }
+
         public Class2() { }
 
 

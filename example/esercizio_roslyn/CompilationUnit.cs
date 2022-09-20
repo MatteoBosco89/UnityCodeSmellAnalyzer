@@ -1,8 +1,21 @@
 ﻿using System;
 
-public class CompilationUnit
+namespace UnityCodeSmellAnalyzer
 {
-	public CompilationUnit()
-	{
-	}
+    public class CompilationUnit
+    {
+
+        
+
+        public CompilationUnit()
+        {
+        }
+
+
+
+        
+
+    }
 }
+
+
