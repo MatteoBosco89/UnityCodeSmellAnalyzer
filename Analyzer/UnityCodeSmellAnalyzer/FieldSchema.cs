@@ -14,6 +14,13 @@ namespace UnityCodeSmellAnalyzer
         protected int line;
         protected List<string> attributes = new List<string>();
 
+        public string Name { get { return name; } }
+        public string Type { get { return type; } }
+        public string Modifier { get { return modifier; } }
+        public string Assignment { get { return assignment; } }
+        public int Line { get { return line; } }
+        public List<string> Attributes { get { return attributes; } }
+
         public FieldSchema(string name, string type, string modifier, string assignment, int line)
         {
             this.name = name;

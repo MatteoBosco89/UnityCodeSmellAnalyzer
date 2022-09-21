@@ -7,6 +7,8 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string classRef;
 
+        public string ClassRef { get { return classRef; } }
+
         public ConstructorSchema(string name, string modifier, int line) : base(name, modifier, line)
         {
             classRef = name;

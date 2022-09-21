@@ -15,6 +15,14 @@ namespace UnityCodeSmellAnalyzer
         protected List<StatementSchema> statements = new List<StatementSchema>();
 
 
+        public string Name { get { return name; } }
+        public string Modifier { get { return modifier; } }
+        public int Line { get { return line; } }
+        public List<ParameterSchema> Parameters { get { return parameters; } }
+        public List<InvocationSchema> Invocations { get { return invocations; } }
+        public List<VariableSchema> Variables { get { return variables; } }
+        public List<StatementSchema> Statements { get { return statements; } }
+
         public MethodSchema(string name, string modifier, int line)
         {
             this.name = name;

@@ -9,6 +9,10 @@ namespace UnityCodeSmellAnalyzer
         protected string type;
         protected string assignment;
 
+        public string Name { get { return name; } }
+        public string Type { get { return type; } }
+        public string Assignment { get { return assignment; } }
+
         public ParameterSchema(string name, string type, string assignment)
         {
             this.name = name;

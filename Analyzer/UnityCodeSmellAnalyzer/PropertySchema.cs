@@ -10,6 +10,11 @@ namespace UnityCodeSmellAnalyzer
         protected string modifier;
         protected int line;
 
+        public string Name { get { return name; } }
+        public string Type { get { return type; } }
+        public string Modifier { get { return modifier; } }
+        public int Line { get { return line; } }
+
         public PropertySchema(string name, string type, string modifier, int line)
         {
             this.name = name;

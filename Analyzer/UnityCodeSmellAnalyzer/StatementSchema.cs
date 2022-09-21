@@ -7,6 +7,10 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string statement;
         protected int line;
+
+        public string Statement { get { return statement; } }
+        public int Line { get { return line; } }
+
         public StatementSchema(string statement, int line)
         {
             this.statement = statement;

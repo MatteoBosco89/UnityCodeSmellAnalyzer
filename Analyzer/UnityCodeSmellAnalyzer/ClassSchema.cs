@@ -11,16 +11,29 @@ namespace UnityCodeSmellAnalyzer
 		protected string modifier;
 		protected int line;
 		protected string inheritance;
+		protected List<string> usedInterfaces;
 		protected List<PropertySchema> properties = new List<PropertySchema>();
 		protected List<MethodSchema> methods = new List<MethodSchema>();
 		protected List<FieldSchema> fields = new List<FieldSchema>();
 
-		public ClassSchema(string name, string modifier, int line, string inheritance)
+
+		public string Name { get { return name; } }
+		public string Modifier { get { return modifier; } }
+		public string Inheritance { get { return inheritance; } }
+		public int Line { get { return line; } }
+		public List<string> Interfaces { get { return usedInterfaces; } }
+		public List<PropertySchema> Properties { get { return properties; } }
+		public List<MethodSchema> Methods { get { return methods; } }
+		public List<FieldSchema> Fields { get { return fields; } }
+
+
+		public ClassSchema(string name, string modifier, int line, string inheritance, List<string> usedInterfaces)
 		{
 			this.name = name;
 			this.modifier = modifier;
 			this.line = line;
 			this.inheritance = inheritance;
+			this.usedInterfaces = usedInterfaces;
 		}
 
 		public void AddProperty(PropertySchema p)
@@ -36,6 +49,11 @@ namespace UnityCodeSmellAnalyzer
 		public void AddField(FieldSchema f)
 		{
 			fields.Add(f);
+		}
+
+		public void AddInterface(string i)
+		{
+			usedInterfaces.Add(i);
 		}
 
 	}

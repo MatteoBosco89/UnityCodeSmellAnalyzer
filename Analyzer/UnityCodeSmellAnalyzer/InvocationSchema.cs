@@ -8,6 +8,10 @@ namespace UnityCodeSmellAnalyzer
     {
         protected int line;
         protected List<ParameterSchema> parameters = new List<ParameterSchema>();
+
+        public int Line { get { return line; } }
+        public List<ParameterSchema> Parameters { get { return parameters; } }
+
         public InvocationSchema(int line)
         {
             this.line = line;

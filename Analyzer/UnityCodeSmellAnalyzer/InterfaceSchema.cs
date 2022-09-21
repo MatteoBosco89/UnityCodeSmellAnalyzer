@@ -13,6 +13,13 @@ namespace UnityCodeSmellAnalyzer
         protected int line;
         protected string modifier;
 
+        public string Name { get { return name; } }
+        public int Line { get { return line; } }
+        public string Modifier { get { return modifier; } }
+        public List<MethodSchema> Methods { get { return methods; } }
+        public List<PropertySchema> Properties { get { return properties; } }
+        public List<string> Attributes { get { return attributes; } }
+
         public InterfaceSchema(string name, int line, string modifier)
         {
             this.name = name;
