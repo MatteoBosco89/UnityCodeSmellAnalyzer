@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
+using System.Collections.Generic;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -7,21 +10,35 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string name;
         protected string type;
-        protected string modifier;
+        protected List<string> modifiers;
         protected int line;
 
         public string Name { get { return name; } }
         public string Type { get { return type; } }
-        public string Modifier { get { return modifier; } }
+        public List<string> Modifiers { get { return modifiers; } }
         public int Line { get { return line; } }
 
-        public PropertySchema(string name, string type, string modifier, int line)
+        public PropertySchema(string name, string type, int line)
         {
             this.name = name;
             this.type = type;
-            this.modifier = modifier;
             this.line = line;
         }
+
+        public void AddModifier(string m)
+        {
+            modifiers.Add(m);
+        }
+
+        public void LoadInformations(SyntaxNode root, SemanticModel model)
+        {
+            PropertyDeclarationSyntax prop = root as PropertyDeclarationSyntax;
+            foreach(var mod in prop.Modifiers)
+            {
+                AddModifier(mod.ValueText);
+            }
+        }
+
     }
 }
 

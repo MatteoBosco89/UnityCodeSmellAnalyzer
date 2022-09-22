@@ -23,6 +23,9 @@ namespace RoslynExample
 
         public void Method1()
         {
+            int b = 10;
+            string s = "prova";
+            int c = b + 1;
             Console.WriteLine("Method1 called");
         }
 
@@ -30,6 +33,11 @@ namespace RoslynExample
         {
             Method1();
             return 0;
+        }
+
+        public string Method5(int i, string s = "ciao")
+        {
+            return s;
         }
 
     }

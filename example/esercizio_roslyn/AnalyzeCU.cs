@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 using System.Reflection;
+using System.Net.Http.Headers;
 
 public interface C
 {
@@ -121,9 +122,15 @@ namespace AnalyzerCU
                 {
                     Console.WriteLine($"{c.Identifier}");
                     Console.WriteLine(c.GetLocation().GetLineSpan().StartLinePosition.Line);
+                    Console.WriteLine("ATTRIBUTES");
                     foreach(var cc in c.AttributeLists)
                     {
                         foreach (var ccc in cc.Attributes) Console.WriteLine(ccc.Name.ToString());
+                    }
+
+                    foreach(var mod in c.Modifiers)
+                    {
+                        Console.WriteLine(mod.ValueText);
                     }
 
                     List<MethodDeclarationSyntax> temp = (from methodDeclaration in c.DescendantNodes().OfType<MethodDeclarationSyntax>() select methodDeclaration).ToList();
@@ -169,15 +176,18 @@ namespace AnalyzerCU
                 Console.WriteLine($"\t\t{md}");
                 Console.WriteLine(md.Ancestors().OfType<ClassDeclarationSyntax>().First().Identifier);
                 Console.WriteLine("---SemanticModel---");
-                var symbolType = model.GetTypeInfo(md);
+                if (md.ArgumentList.Arguments.Count <= 0) continue;
+                var symbolType = model.GetTypeInfo(md.ArgumentList.Arguments.First());
                 var invokedSymbol = model.GetSymbolInfo(md).Symbol;
                 Console.WriteLine(model.GetAliasInfo(md));
                 if (invokedSymbol == null) continue;
-                if (invokedSymbol.ContainingAssembly == null) Console.WriteLine("NULL");
-                else Console.WriteLine(invokedSymbol.ContainingAssembly); 
+                Console.WriteLine("invoked");
+                Console.WriteLine(invokedSymbol);
+                Console.WriteLine("finishedInvoked");
+                
                 Console.WriteLine(invokedSymbol.ContainingSymbol); 
                 Console.WriteLine(invokedSymbol.ContainingSymbol.Name);
-                Console.WriteLine(symbolType.ToString());
+                Console.WriteLine(symbolType.Type);
                 Console.WriteLine(symbolType.Type);
             }
         }
@@ -201,9 +211,27 @@ namespace AnalyzerCU
             Console.WriteLine(s);
             foreach (MethodDeclarationSyntax m in list)
             {
+                Console.WriteLine("PRINTMETHOD");
                 ClassDeclarationSyntax c = (ClassDeclarationSyntax)m.Parent;
                 Console.WriteLine($"\tClass: {c.Identifier}");
                 Console.WriteLine($"\t\t{m.AttributeLists} {m.Modifiers} {m.ReturnType} {m.Identifier} {m.ParameterList}");
+                Console.WriteLine("PARAM LIST");
+                foreach (var p in m.ParameterList.Parameters)
+                {
+                    if (p.Default != null) Console.WriteLine(p.Default.Value);
+                }
+                List<VariableDeclarationSyntax> vari = (from v in m.DescendantNodes().OfType<VariableDeclarationSyntax>() select v).ToList();
+                Console.Write(vari);
+                foreach(var vv in vari)
+                {
+                    
+                    foreach(var vvv in vv.Variables)
+                    {
+                        Console.WriteLine(vv.Type);
+                        Console.WriteLine(vvv.Identifier);
+                        if(vvv.Initializer != null) Console.WriteLine(vvv.Initializer.Value);
+                    }
+                }
             }
         }
     }

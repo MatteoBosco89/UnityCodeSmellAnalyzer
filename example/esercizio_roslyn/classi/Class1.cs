@@ -14,7 +14,7 @@ namespace RoslynExample
         public void Metodo();
     }
 
-    class Class1
+    public class Class1
     {
         protected float vel = 0.0f;
         int finalVel = 0;
@@ -35,6 +35,7 @@ namespace RoslynExample
         void FixedUpdate()
         {
             c2.Method1();
+            c2.Method5(1);
         }
 
         void Awake()
@@ -43,5 +44,11 @@ namespace RoslynExample
         }
 
     }
+
+    public static class Class3
+    {
+        public static void Method4(string s, int i = 1) { }
+    }
+
 }
 

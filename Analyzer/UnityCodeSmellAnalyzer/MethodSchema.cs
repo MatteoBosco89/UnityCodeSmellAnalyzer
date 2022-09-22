@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -7,7 +10,7 @@ namespace UnityCodeSmellAnalyzer
     public class MethodSchema
     {
         protected string name;
-        protected string modifier;
+        protected List<string> modifiers = new List<string>();
         protected int line;
         protected List<ParameterSchema> parameters = new List<ParameterSchema>();
         protected List<InvocationSchema> invocations = new List<InvocationSchema>();
@@ -16,17 +19,16 @@ namespace UnityCodeSmellAnalyzer
 
 
         public string Name { get { return name; } }
-        public string Modifier { get { return modifier; } }
+        public List<string> Modifiers { get { return modifiers; } }
         public int Line { get { return line; } }
         public List<ParameterSchema> Parameters { get { return parameters; } }
         public List<InvocationSchema> Invocations { get { return invocations; } }
         public List<VariableSchema> Variables { get { return variables; } }
         public List<StatementSchema> Statements { get { return statements; } }
 
-        public MethodSchema(string name, string modifier, int line)
+        public MethodSchema(string name, int line)
         {
             this.name = name;
-            this.modifier = modifier;
             this.line = line;
         }
 
@@ -48,6 +50,58 @@ namespace UnityCodeSmellAnalyzer
         public void AddStatement(StatementSchema s)
         {
             statements.Add(s);
+        }
+
+        public void AddModifier(string m)
+        {
+            modifiers.Add(m);
+        }
+
+        public void LoadInformations(SyntaxNode root, SemanticModel model)
+        {
+            MethodDeclarationSyntax method = root as MethodDeclarationSyntax;
+            List<InvocationExpressionSyntax> idsl = (from invoc in method.DescendantNodes().OfType<InvocationExpressionSyntax>() select invoc).ToList();
+            List<VariableDeclarationSyntax> vdsl = (from variab in method.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();
+            List<StatementSyntax> ssl = (from stat in method.DescendantNodes().OfType<StatementSyntax>() select stat).ToList();
+
+            foreach(var s in ssl)
+            {
+                AddStatement(new StatementSchema(s.ToString(), s.GetLocation().GetLineSpan().StartLinePosition.Line));
+            }
+
+            foreach(var param in method.ParameterList.Parameters)
+            {
+                string def = null;
+                if (param.Default != null) def = param.Default.Value.ToString();
+                ParameterSchema parameter = new ParameterSchema(param.Identifier.ToString(), param.Type.ToString(), def);
+                AddParameter(parameter);
+            }
+
+            foreach (var i in idsl) {
+                string name = null;
+                string fullName = null;
+                if(model.GetSymbolInfo(i).Symbol != null)
+                {
+                    fullName = model.GetSymbolInfo(i).Symbol.ToString();
+                    name = model.GetSymbolInfo(i).Symbol.MetadataName;
+                }
+                InvocationSchema invoc = new InvocationSchema(i.GetLocation().GetLineSpan().StartLinePosition.Line, name, fullName);
+                invoc.LoadInformations(i, model);
+                AddInvocation(invoc);
+            }
+
+            foreach(var v in vdsl)
+            {
+                foreach(var vv in v.Variables)
+                {
+                    string initializer = null;
+                    if(vv.Initializer != null) initializer = vv.Initializer.Value.ToString();
+                    VariableSchema variable = new VariableSchema(vv.Identifier.ToString(), v.Type.ToString(), initializer, vv.GetLocation().GetLineSpan().StartLinePosition.Line);
+                    AddVariable(variable);
+                }
+                
+            }
+
         }
 
     }
