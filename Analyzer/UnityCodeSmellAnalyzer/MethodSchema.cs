@@ -66,7 +66,7 @@ namespace UnityCodeSmellAnalyzer
 
             foreach(var s in ssl)
             {
-                AddStatement(new StatementSchema(s.ToString(), s.GetLocation().GetLineSpan().StartLinePosition.Line));
+                //AddStatement(new StatementSchema(s.ToString(), s.GetLocation().GetLineSpan().StartLinePosition.Line));
             }
 
             foreach(var param in method.ParameterList.Parameters)
@@ -82,8 +82,9 @@ namespace UnityCodeSmellAnalyzer
                 string fullName = null;
                 if(model.GetSymbolInfo(i).Symbol != null)
                 {
-                    fullName = model.GetSymbolInfo(i).Symbol.ToString();
                     name = model.GetSymbolInfo(i).Symbol.MetadataName;
+                    name = i.ArgumentList.Arguments.ToString();
+                    fullName = model.GetSymbolInfo(i).Symbol.ToString();
                 }
                 InvocationSchema invoc = new InvocationSchema(i.GetLocation().GetLineSpan().StartLinePosition.Line, name, fullName);
                 invoc.LoadInformations(i, model);

@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -20,16 +19,17 @@ namespace UnityCodeSmellAnalyzer
 
         protected static List<string> fileList = new List<string>();
         protected static List<SyntaxTreeWrapper> compilationUnits = new List<SyntaxTreeWrapper>();
-        protected static readonly MetadataReference Mscorlib = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
+        protected static List<MetadataReference> assemblies = new List<MetadataReference>();
         protected static List<CompilationUnit> project = new List<CompilationUnit>();
         protected static string jsonString;
 
         public static void Main(string[] args)
         {
+
             // mandatory -d option
             if (args.Length <= 0)
             {
-                Console.WriteLine("Directory path is mandatory, -d [directory/path]");
+                Console.WriteLine("Project directory path is mandatory, -d [directory/path]");
                 return;
             }
 
@@ -40,13 +40,39 @@ namespace UnityCodeSmellAnalyzer
 
             if (command.Equals("-d")) { directory = args[1]; }
 
+            LoadAssemblyList();
             LoadFileList(directory);
             Analyze();
         }
 
+        protected static void LoadAssemblyList()
+        {
+            Console.Write("Loading Assemblies...");
+            assemblies.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
+            try
+            {
+                string[] lines = File.ReadAllLines("Assemblies.conf");
+                string[] dir = { ".dll" };
+                foreach (string line in lines)
+                {
+                    List<string> files = Directory.GetFiles(line, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
+                    foreach (string f in files)
+                    {
+                        assemblies.Add(MetadataReference.CreateFromFile(f));
+                    }
+                    
+                }
+                Console.WriteLine("Loaded!");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Directory Not Found!");
+            }
+        }
 
         protected static void LoadFileList(string directory)
         {
+            Console.Write("Loading Project...");
             try
             {
                 string[] dir = { ".cs" };
@@ -55,6 +81,7 @@ namespace UnityCodeSmellAnalyzer
                 {
                     fileList.Add(f);
                 }
+                Console.WriteLine("Loaded!");
             }
             catch (Exception)
             {
@@ -64,6 +91,7 @@ namespace UnityCodeSmellAnalyzer
 
         protected static void Analyze()
         {
+            Console.WriteLine("Analyzing...");
             foreach (string file in fileList)
             {
                 SyntaxTree tree = CSharpSyntaxTree.ParseText(File.ReadAllText(file));
@@ -71,12 +99,15 @@ namespace UnityCodeSmellAnalyzer
                 compilationUnits.Add(new SyntaxTreeWrapper(tree, fileName));
             }
 
-            foreach(SyntaxTreeWrapper syntaxTree in compilationUnits)
+            CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies );
+            
+
+
+            foreach (SyntaxTreeWrapper syntaxTree in compilationUnits)
             {
                 SyntaxTree tree = syntaxTree.tree;
                 string fileName = syntaxTree.fileName;
                 CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
-                CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: new[] { Mscorlib });
                 SemanticModel model = compilation.GetSemanticModel(tree);
                 CompilationUnit cu = new CompilationUnit(fileName);
                 cu.LoadInformations(root, model);
@@ -84,7 +115,7 @@ namespace UnityCodeSmellAnalyzer
             }
 
             ToJson();
-            Console.WriteLine(jsonString);
+            ToFile(jsonString);
         }
 
         protected static IEnumerable<SyntaxTree> GetCU()
@@ -108,6 +139,13 @@ namespace UnityCodeSmellAnalyzer
                 this.tree = tree;
                 this.fileName = fileName;   
             }
+        }
+
+        protected static void ToFile(string toWrite)
+        {
+            Console.Write("Saving Results...");
+            File.WriteAllText("results.json", toWrite);
+            Console.Write("Done!\n");
         }
 
     }
