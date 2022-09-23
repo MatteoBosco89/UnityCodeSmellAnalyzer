@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -21,27 +22,52 @@ namespace UnityCodeSmellAnalyzer
         protected static List<SyntaxTreeWrapper> compilationUnits = new List<SyntaxTreeWrapper>();
         protected static List<MetadataReference> assemblies = new List<MetadataReference>();
         protected static List<CompilationUnit> project = new List<CompilationUnit>();
+        protected static Dictionary<string, string> commands = new Dictionary<string, string>();
         protected static string jsonString;
 
-        public static void Main(string[] args)
-        {
 
-            // mandatory -d option
-            if (args.Length <= 0)
+        protected static void ShowHelp()
+        {
+            Console.WriteLine("C# Code Analyzer based on Roslyn API for Unity3d");
+            Console.WriteLine(string.Format("{0,-30} {1,-30}", "OPTION", "FUNCTION"));
+            foreach (KeyValuePair<string, string> kv in commands) Console.WriteLine(string.Format("{0,-30} {1,-30}", kv.Key, kv.Value));
+        }
+        
+
+        public static void Main()
+        {
+            Console.WriteLine();
+            LoadCommands();
+            List<string> args = Environment.GetCommandLineArgs().ToList();
+
+            if(args.Contains("-help"))
             {
-                Console.WriteLine("Project directory path is mandatory, -d [directory/path]");
+                ShowHelp();
                 return;
             }
-
-            string command = args[0];
-            string directory = "";
-
-            if (command.Equals("-h")) { Console.WriteLine("-d [directory/path]\n-h [shows this message]"); return; }
-
-            if (command.Equals("-d")) { directory = args[1]; }
-
+            if (!args.Contains("-project"))
+            {
+                Console.WriteLine("-project command is mandatory\n");
+                ShowHelp();
+                return;
+            }
+            if (args.Contains("-project"))
+            {
+                int index = args.IndexOf("-project");
+                AnalyzerConfiguration.ProjectPath = args.ElementAt(index + 1);
+            }
+            if (args.Contains("-customAssembly"))
+            {
+                int index = args.IndexOf("-project");
+                AnalyzerConfiguration.AssembliesPath = args.ElementAt(index + 1);
+            }
+            if (args.Contains("-statements"))
+            {
+                AnalyzerConfiguration.StatementVerbose = true;
+            }
+        
             LoadAssemblyList();
-            LoadFileList(directory);
+            LoadFileList();
             Analyze();
         }
 
@@ -51,7 +77,7 @@ namespace UnityCodeSmellAnalyzer
             assemblies.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
             try
             {
-                string[] lines = File.ReadAllLines("Assemblies.conf");
+                string[] lines = File.ReadAllLines(AnalyzerConfiguration.AssembliesPath);
                 string[] dir = { ".dll" };
                 foreach (string line in lines)
                 {
@@ -70,13 +96,13 @@ namespace UnityCodeSmellAnalyzer
             }
         }
 
-        protected static void LoadFileList(string directory)
+        protected static void LoadFileList()
         {
             Console.Write("Loading Project...");
             try
             {
                 string[] dir = { ".cs" };
-                List<string> files = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
+                List<string> files = Directory.GetFiles(AnalyzerConfiguration.ProjectPath, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
                 foreach (string f in files)
                 {
                     fileList.Add(f);
@@ -146,6 +172,14 @@ namespace UnityCodeSmellAnalyzer
             Console.Write("Saving Results...");
             File.WriteAllText("results.json", toWrite);
             Console.Write("Done!\n");
+        }
+
+        protected static void LoadCommands()
+        {            
+            commands.Add("-project", "Project directory (use \"path/to/directory\" if there's spaces in the path)");
+            commands.Add("-statements", "Get all statements");
+            commands.Add("-customAssembly", "Path of the text file of assemblies' paths");
+            commands.Add("-help", "Shows this message");
         }
 
     }

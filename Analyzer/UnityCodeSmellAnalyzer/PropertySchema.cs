@@ -10,7 +10,7 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string name;
         protected string type;
-        protected List<string> modifiers;
+        protected List<string> modifiers = new List<string>();
         protected int line;
 
         public string Name { get { return name; } }
@@ -35,7 +35,7 @@ namespace UnityCodeSmellAnalyzer
             PropertyDeclarationSyntax prop = root as PropertyDeclarationSyntax;
             foreach(var mod in prop.Modifiers)
             {
-                AddModifier(mod.ValueText);
+                AddModifier(mod.ToString());
             }
         }
 

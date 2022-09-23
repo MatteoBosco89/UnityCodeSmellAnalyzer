@@ -63,7 +63,7 @@ namespace UnityCodeSmellAnalyzer
 
             foreach(MethodDeclarationSyntax m in mdsl)
             {
-                MethodSchema method = new MethodSchema(m.Identifier.ToString(), m.GetLocation().GetLineSpan().StartLinePosition.Line);
+                MethodSchema method = new MethodSchema(m.Identifier.ToString(), m.GetLocation().GetLineSpan().StartLinePosition.Line, model.GetTypeInfo(m).Type.Name);
                 method.LoadInformations(m, model);
                 AddMethod(method);
             }

@@ -12,6 +12,7 @@ namespace UnityCodeSmellAnalyzer
         protected string name;
         protected List<string> modifiers = new List<string>();
         protected int line;
+        protected string returnType;
         protected List<ParameterSchema> parameters = new List<ParameterSchema>();
         protected List<InvocationSchema> invocations = new List<InvocationSchema>();
         protected List<VariableSchema> variables = new List<VariableSchema>();
@@ -21,15 +22,17 @@ namespace UnityCodeSmellAnalyzer
         public string Name { get { return name; } }
         public List<string> Modifiers { get { return modifiers; } }
         public int Line { get { return line; } }
+        public string ReturnType { get { return returnType; } }
         public List<ParameterSchema> Parameters { get { return parameters; } }
         public List<InvocationSchema> Invocations { get { return invocations; } }
         public List<VariableSchema> Variables { get { return variables; } }
         public List<StatementSchema> Statements { get { return statements; } }
 
-        public MethodSchema(string name, int line)
+        public MethodSchema(string name, int line, string returnType)
         {
             this.name = name;
             this.line = line;
+            this.returnType = returnType;
         }
 
         public void AddParameter(ParameterSchema p)
@@ -64,12 +67,15 @@ namespace UnityCodeSmellAnalyzer
             List<VariableDeclarationSyntax> vdsl = (from variab in method.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();
             List<StatementSyntax> ssl = (from stat in method.DescendantNodes().OfType<StatementSyntax>() select stat).ToList();
 
-            foreach(var s in ssl)
+            if (AnalyzerConfiguration.StatementVerbose)
             {
-                //AddStatement(new StatementSchema(s.ToString(), s.GetLocation().GetLineSpan().StartLinePosition.Line));
+                foreach (var s in ssl)
+                {
+                    AddStatement(new StatementSchema(s.ToString(), s.GetLocation().GetLineSpan().StartLinePosition.Line));
+                }
             }
 
-            foreach(var param in method.ParameterList.Parameters)
+            foreach (var param in method.ParameterList.Parameters)
             {
                 string def = null;
                 if (param.Default != null) def = param.Default.Value.ToString();
@@ -80,13 +86,14 @@ namespace UnityCodeSmellAnalyzer
             foreach (var i in idsl) {
                 string name = null;
                 string fullName = null;
+                string returnType = null;
                 if(model.GetSymbolInfo(i).Symbol != null)
                 {
                     name = model.GetSymbolInfo(i).Symbol.MetadataName;
-                    name = i.ArgumentList.Arguments.ToString();
                     fullName = model.GetSymbolInfo(i).Symbol.ToString();
+                    returnType = model.GetTypeInfo(i).Type.Name;
                 }
-                InvocationSchema invoc = new InvocationSchema(i.GetLocation().GetLineSpan().StartLinePosition.Line, name, fullName);
+                InvocationSchema invoc = new InvocationSchema(i.GetLocation().GetLineSpan().StartLinePosition.Line, name, fullName, returnType);
                 invoc.LoadInformations(i, model);
                 AddInvocation(invoc);
             }
@@ -101,6 +108,11 @@ namespace UnityCodeSmellAnalyzer
                     AddVariable(variable);
                 }
                 
+            }
+
+            foreach (var mod in method.Modifiers)
+            {
+                AddModifier(mod.ValueText);
             }
 
         }

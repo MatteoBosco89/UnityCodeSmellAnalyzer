@@ -89,7 +89,7 @@ namespace UnityCodeSmellAnalyzer
                     List<INamedTypeSymbol> interf = its.Interfaces.ToList();
                     List<string> interfs = new List<string>();
                     foreach (INamedTypeSymbol t in interf) interfs.Add(t.Name);
-                    ClassSchema cs = new ClassSchema(c.Identifier.ToString(), c.Modifiers.ToString(), c.GetLocation().GetLineSpan().StartLinePosition.Line, inh, interfs);
+                    ClassSchema cs = new ClassSchema(c.Identifier.ToString(), c.GetLocation().GetLineSpan().StartLinePosition.Line, inh, interfs);
                     cs.LoadInformations(c, model);
                     AddClass(cs);
                 }
