@@ -13,10 +13,13 @@ namespace UnityAnalyzer
         protected string id;
         protected string name;
         protected string type;
-        protected string COMP_ID = "--- !u!";//special substring indicating the id of a component
-        protected string SPEC_STR = "%";//substring indicating the line that aren't needed
-        protected string GUID = "guid";//special substring indicating the id of a unity object
+        protected string filePath;
+        protected long fileSize = 0; // the file size in byte
+        protected const string COMP_ID = "--- !u!";//special substring indicating the id of a component
+        protected const string SPEC_STR = "%";//substring indicating the line that aren't needed
+        protected const string GUID = "guid";//special substring indicating the id of a unity object
         protected Dictionary<string, Element.Element> components;
+        protected int numComponents = 0;
 
         /*
          * This constructor is used for those file in witch the mainfile (.prefab, .controller ecc...) contains the information and
@@ -30,8 +33,11 @@ namespace UnityAnalyzer
                 string[] metaLines = File.ReadAllLines(metaFile);
                 name = Path.GetFileNameWithoutExtension(mainFile);
                 type = Path.GetExtension(mainFile).Trim('.');
+                fileSize = (new FileInfo(mainFile)).Length;
+                filePath = mainFile;
                 LoadMainData(lines);
                 LoadId(metaLines);
+                numComponents = components.Count;
             }
             catch(FileNotFoundException)
             {
@@ -48,6 +54,8 @@ namespace UnityAnalyzer
                 string[] metaLines = File.ReadAllLines(metaFile);
                 name = Path.GetFileNameWithoutExtension(metaFile);
                 type = Path.GetExtension(metaFile).Trim('.');
+                fileSize = (new FileInfo(metaFile)).Length;
+                filePath = metaFile;
                 LoadMetaFile(metaLines);
             }
             catch (FileNotFoundException)
@@ -148,8 +156,11 @@ namespace UnityAnalyzer
         {
             JObject json = new JObject();
             json.Add("guid", id);
+            json.Add("file_path", filePath);
             json.Add("name", name);
             json.Add("type", type);
+            json.Add("file_size", fileSize);
+            json.Add("num_components", numComponents);
             JArray ja = new JArray();
             foreach(KeyValuePair<string, Element.Element> kvp in components)
             {
