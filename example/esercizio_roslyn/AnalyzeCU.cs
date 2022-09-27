@@ -189,6 +189,8 @@ namespace AnalyzerCU
                 Console.WriteLine(invokedSymbol.ContainingSymbol.Name);
                 Console.WriteLine(symbolType.Type);
                 Console.WriteLine(symbolType.Type);
+                Console.WriteLine("ARGOMENTI");
+                foreach(ArgumentSyntax a in md.ArgumentList.Arguments) Console.WriteLine(a.ToString());
             }
         }
 

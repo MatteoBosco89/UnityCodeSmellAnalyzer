@@ -11,6 +11,7 @@ namespace UnityCodeSmellAnalyzer
     public class CompilationUnit
     {
         protected string name;
+        protected string fileName;
         protected List<UsingSchema> usings = new List<UsingSchema>();
         protected List<NamespaceSchema> namespaces = new List<NamespaceSchema>();
         protected List<InterfaceSchema> interfaces = new List<InterfaceSchema>();
@@ -21,11 +22,21 @@ namespace UnityCodeSmellAnalyzer
         {
             get { return name; }
         }
+        public string FileName
+        {
+            get { return fileName; }
+        }
 
         public List<InterfaceSchema> Interfaces { get { return interfaces; } }
         public List<NamespaceSchema> Namespaces { get { return namespaces; } }
         public List<ClassSchema> Classes { get { return classes; } }
         public List<UsingSchema> Usings { get { return usings; } }
+
+        public CompilationUnit(string name, string fileName)
+        {
+            this.name = name;
+            this.fileName = fileName;
+        }
 
         public CompilationUnit(string name)
         {

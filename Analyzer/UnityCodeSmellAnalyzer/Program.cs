@@ -117,12 +117,12 @@ namespace UnityCodeSmellAnalyzer
 
         protected static void Analyze()
         {
+            if (fileList.Count <= 0) return;
             Console.WriteLine("Analyzing...");
             foreach (string file in fileList)
             {
                 SyntaxTree tree = CSharpSyntaxTree.ParseText(File.ReadAllText(file));
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                compilationUnits.Add(new SyntaxTreeWrapper(tree, fileName));
+                compilationUnits.Add(new SyntaxTreeWrapper(tree, file));
             }
 
             CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies );
@@ -133,9 +133,10 @@ namespace UnityCodeSmellAnalyzer
             {
                 SyntaxTree tree = syntaxTree.tree;
                 string fileName = syntaxTree.fileName;
+                string name = Path.GetFileNameWithoutExtension(fileName);
                 CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
                 SemanticModel model = compilation.GetSemanticModel(tree);
-                CompilationUnit cu = new CompilationUnit(fileName);
+                CompilationUnit cu = new CompilationUnit(name, fileName);
                 cu.LoadInformations(root, model);
                 project.Add(cu);
             }

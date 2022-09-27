@@ -17,6 +17,7 @@ namespace UnityCodeSmellAnalyzer
         protected List<InvocationSchema> invocations = new List<InvocationSchema>();
         protected List<VariableSchema> variables = new List<VariableSchema>();
         protected List<StatementSchema> statements = new List<StatementSchema>();
+        protected List<WhileSchema> whileLoops = new List<WhileSchema>();
 
 
         public string Name { get { return name; } }
@@ -27,6 +28,7 @@ namespace UnityCodeSmellAnalyzer
         public List<InvocationSchema> Invocations { get { return invocations; } }
         public List<VariableSchema> Variables { get { return variables; } }
         public List<StatementSchema> Statements { get { return statements; } }
+        public List<WhileSchema> WhileLoops { get { return whileLoops; } }
 
         public MethodSchema(string name, int line, string returnType)
         {
@@ -60,12 +62,21 @@ namespace UnityCodeSmellAnalyzer
             modifiers.Add(m);
         }
 
+        public void AddWhileLoop(WhileSchema w)
+        {
+            whileLoops.Add(w);
+        }
+
         public void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             MethodDeclarationSyntax method = root as MethodDeclarationSyntax;
             List<InvocationExpressionSyntax> idsl = (from invoc in method.DescendantNodes().OfType<InvocationExpressionSyntax>() select invoc).ToList();
             List<VariableDeclarationSyntax> vdsl = (from variab in method.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();
             List<StatementSyntax> ssl = (from stat in method.DescendantNodes().OfType<StatementSyntax>() select stat).ToList();
+            List<WhileStatementSyntax> wbl = (from wh in method.DescendantNodes().OfType<WhileStatementSyntax>() select wh).ToList();
+            List<ForEachStatementSyntax> fessl = (from fe in method.DescendantNodes().OfType<ForEachStatementSyntax>() select fe).ToList();
+            List<IfStatementSyntax> ifssl = (from iff in method.DescendantNodes().OfType<IfStatementSyntax>() select iff).ToList();
+            List<ForStatementSyntax> fssl = (from fr in method.DescendantNodes().OfType<ForStatementSyntax>() select fr).ToList();
 
             if (AnalyzerConfiguration.StatementVerbose)
             {
@@ -113,6 +124,36 @@ namespace UnityCodeSmellAnalyzer
             foreach (var mod in method.Modifiers)
             {
                 AddModifier(mod.ValueText);
+            }
+
+            foreach (var w in wbl)
+            {
+                if(w.Parent == root)
+                {
+                    WhileSchema ws = new WhileSchema(w.GetLocation().GetLineSpan().StartLinePosition.Line, 0, w.Condition.ToString());
+                    ws.LoadInformations(w, model);
+                    AddWhileLoop(ws);
+                }
+            }
+
+            foreach (var f in fessl)
+            {
+                Console.WriteLine(f.ForEachKeyword);
+                Console.WriteLine(f.Type);
+                Console.WriteLine(f.Identifier);
+                Console.WriteLine(f.InKeyword);
+                Console.WriteLine(f.Expression);
+                Console.WriteLine();
+            }
+
+            foreach(var iff in ifssl)
+            {
+
+            }
+
+            foreach(var fr in fssl)
+            {
+
             }
 
         }

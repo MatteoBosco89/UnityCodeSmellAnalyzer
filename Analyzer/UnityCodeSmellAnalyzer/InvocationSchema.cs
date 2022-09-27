@@ -15,14 +15,14 @@ namespace UnityCodeSmellAnalyzer
         protected string name;
         protected string fullName;
         protected string returnType;
-        protected List<ParameterSchema> parameters = new List<ParameterSchema>();
+        protected List<ArgumentSchema> arguments = new List<ArgumentSchema>();
 
         public int Line { get { return line; } }
         public string Name { get { return name; } }
         public string FullName { get { return fullName; } }
         public string ReturnType { get { return returnType; } }
 
-        public List<ParameterSchema> Parameters { get { return parameters; } }
+        public List<ArgumentSchema> Arguments { get { return arguments; } }
 
         public InvocationSchema(int line, string name, string fullName, string returnType)
         {
@@ -32,25 +32,23 @@ namespace UnityCodeSmellAnalyzer
             this.returnType = returnType;
         }
 
-        public void AddParameter(ParameterSchema p)
+        public void AddArgument(ArgumentSchema a)
         {
-            parameters.Add(p);
+            arguments.Add(a);
         }
 
         public void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             InvocationExpressionSyntax invocation = root as InvocationExpressionSyntax;
 
-            var sym = (model.GetSymbolInfo(invocation).Symbol) as IMethodSymbol;
-            if(sym != null && sym.Parameters != null && sym.Parameters.Length > 0)
+            foreach (var arg in invocation.ArgumentList.Arguments)
             {
-                foreach (var param in sym.Parameters)
-                {
-                    ParameterSchema p = new ParameterSchema(param.Name, param.Type.ToString(), (param.HasExplicitDefaultValue ? param.ExplicitDefaultValue.ToString() : null));
-                    AddParameter(p);
-                }
+                bool isMeth = false;
+                if (model.GetSymbolInfo(arg.Expression).Symbol is IMethodSymbol) isMeth = true;
+                ArgumentSchema a = new ArgumentSchema(arg.Expression.ToString(), isMeth);
+                AddArgument(a);
             }
-            
+
         }
 
     }
