@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis.CSharp;
+using System;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -7,6 +8,13 @@ namespace UnityCodeSmellAnalyzer
         private static bool statementsVerbose = false;
         private static string assembliesPath = "Assemblies.conf";
         private static string projectPath = null;
+        private static CSharpCompilation compilation;
+
+        public static CSharpCompilation Compilation
+        {
+            get { return compilation; }
+            set { compilation = value; }
+        }
 
         public static bool StatementVerbose
         {

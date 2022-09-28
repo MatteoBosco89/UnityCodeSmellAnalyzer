@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
+using System.Collections.Generic;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -22,6 +25,31 @@ namespace UnityCodeSmellAnalyzer
             this.assignment = assignment;
             this.line = line;
         }
+
+        public void AddVariable(SyntaxNode v)
+        {
+            if(v is VariableDeclarationSyntax) { }
+        }
+
     }
+
+    [Serializable]
+    class UsedVariableSchema
+    {
+        public UsedVariableSchema() { }
+    }
+
+    [Serializable]
+    class AssignedVariableSchema
+    {
+        public AssignedVariableSchema() { }
+    }
+
+    [Serializable]
+    class DeclaredVariableSchema
+    {
+        public DeclaredVariableSchema() { }
+    }
+
 }
 

@@ -6,34 +6,31 @@ using System.Collections.Generic;
 namespace UnityCodeSmellAnalyzer
 {
     [Serializable]
-    public class PropertySchema
+    public class PropertySchema : SyntaxSchema
     {
         protected string name;
         protected string type;
         protected List<string> modifiers = new List<string>();
-        protected int line;
 
         public string Name { get { return name; } }
         public string Type { get { return type; } }
         public List<string> Modifiers { get { return modifiers; } }
-        public int Line { get { return line; } }
 
-        public PropertySchema(string name, string type, int line)
-        {
-            this.name = name;
-            this.type = type;
-            this.line = line;
-        }
+        public PropertySchema() { }
 
         public void AddModifier(string m)
         {
             modifiers.Add(m);
         }
 
-        public void LoadInformations(SyntaxNode root, SemanticModel model)
+        public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             PropertyDeclarationSyntax prop = root as PropertyDeclarationSyntax;
-            foreach(var mod in prop.Modifiers)
+            name = prop.Identifier.ToString();
+            type = prop.Type.ToString();
+            line = prop.GetLocation().GetLineSpan().StartLinePosition.Line;
+
+            foreach (var mod in prop.Modifiers)
             {
                 AddModifier(mod.ToString());
             }

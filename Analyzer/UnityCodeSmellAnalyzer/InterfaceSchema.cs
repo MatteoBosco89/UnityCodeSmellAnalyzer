@@ -7,27 +7,21 @@ using System.Linq;
 namespace UnityCodeSmellAnalyzer
 {
     [Serializable]
-    public class InterfaceSchema
+    public class InterfaceSchema : SyntaxSchema
     {
         protected List<MethodSchema> methods = new List<MethodSchema>();
         protected List<PropertySchema> properties = new List<PropertySchema>();
         protected List<string> attributes = new List<string>();
         protected string name;
-        protected int line;
         protected List<string> modifiers = new List<string>();
 
         public string Name { get { return name; } }
-        public int Line { get { return line; } }
         public List<string> Modifiers { get { return modifiers; } }
         public List<MethodSchema> Methods { get { return methods; } }
         public List<PropertySchema> Properties { get { return properties; } }
         public List<string> Attributes { get { return attributes; } }
 
-        public InterfaceSchema(string name, int line)
-        {
-            this.name = name;
-            this.line = line;
-        }
+        public InterfaceSchema() { }
         public void AddMethod(MethodSchema m)
         {
             methods.Add(m);
@@ -45,9 +39,14 @@ namespace UnityCodeSmellAnalyzer
             modifiers.Add(m);
         }
 
-        public void LoadInformations(SyntaxNode root, SemanticModel model)
+        public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
+
             InterfaceDeclarationSyntax r = root as InterfaceDeclarationSyntax;
+
+            name = r.Identifier.ToString();
+            line = r.GetLocation().GetLineSpan().StartLinePosition.Line;
+
             List<MethodDeclarationSyntax> mdsl = (from meth in r.DescendantNodes().OfType<MethodDeclarationSyntax>() select meth).ToList();
             List<PropertyDeclarationSyntax> pdsl = (from prop in r.DescendantNodes().OfType<PropertyDeclarationSyntax>() select prop).ToList();
 
@@ -63,15 +62,14 @@ namespace UnityCodeSmellAnalyzer
 
             foreach(MethodDeclarationSyntax m in mdsl)
             {
-                var msym = model.GetSymbolInfo(m).Symbol as IMethodSymbol;
-                MethodSchema method = new MethodSchema(m.Identifier.ToString(), m.GetLocation().GetLineSpan().StartLinePosition.Line, model.GetTypeInfo(m).Type.Name);
+                MethodSchema method = new MethodSchema();
                 method.LoadInformations(m, model);
                 AddMethod(method);
             }
 
             foreach(PropertyDeclarationSyntax p in pdsl)
             {
-                PropertySchema property = new PropertySchema(p.Identifier.ToString(), p.Type.ToString(), p.GetLocation().GetLineSpan().StartLinePosition.Line);
+                PropertySchema property = new PropertySchema();
                 property.LoadInformations(p, model);
                 AddProperty(property);
             }

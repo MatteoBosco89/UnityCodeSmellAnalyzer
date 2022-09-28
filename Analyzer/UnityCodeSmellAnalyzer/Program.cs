@@ -122,12 +122,14 @@ namespace UnityCodeSmellAnalyzer
             foreach (string file in fileList)
             {
                 SyntaxTree tree = CSharpSyntaxTree.ParseText(File.ReadAllText(file));
+                tree = tree.WithFilePath(file);
                 compilationUnits.Add(new SyntaxTreeWrapper(tree, file));
             }
 
-            CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies );
-            
+            CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies);
 
+            
+            AnalyzerConfiguration.Compilation = compilation;
 
             foreach (SyntaxTreeWrapper syntaxTree in compilationUnits)
             {

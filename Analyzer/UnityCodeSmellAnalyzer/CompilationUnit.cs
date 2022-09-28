@@ -8,7 +8,7 @@ using System.Linq;
 namespace UnityCodeSmellAnalyzer
 {
     [Serializable]
-    public class CompilationUnit
+    public class CompilationUnit : SyntaxSchema
     {
         protected string name;
         protected string fileName;
@@ -32,16 +32,14 @@ namespace UnityCodeSmellAnalyzer
         public List<ClassSchema> Classes { get { return classes; } }
         public List<UsingSchema> Usings { get { return usings; } }
 
+
         public CompilationUnit(string name, string fileName)
         {
             this.name = name;
             this.fileName = fileName;
         }
 
-        public CompilationUnit(string name)
-        {
-            this.name = name;
-        }
+        public CompilationUnit() { }
 
         public void AddInterface(InterfaceSchema i)
         {
@@ -63,18 +61,25 @@ namespace UnityCodeSmellAnalyzer
             usings.Add(u);
         }
 
-        public void LoadInformations(SyntaxNode root, SemanticModel model)
+        public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
+            line = root.GetLocation().GetLineSpan().StartLinePosition.Line;
+
             List<UsingDirectiveSyntax> udsl = (from directives in root.DescendantNodes().OfType<UsingDirectiveSyntax>() select directives).ToList();
             List<NamespaceDeclarationSyntax> ndsl = (from namespaces in root.DescendantNodes().OfType<NamespaceDeclarationSyntax>() select namespaces).ToList();
             List<InterfaceDeclarationSyntax> idsl = (from interfaces in root.DescendantNodes().OfType<InterfaceDeclarationSyntax>() select interfaces).ToList();
             List<ClassDeclarationSyntax> cdsl = (from classes in root.DescendantNodes().OfType<ClassDeclarationSyntax>() select classes).ToList();
 
-            foreach(UsingDirectiveSyntax u in udsl)  AddUsing(new UsingSchema(u.Name.ToString(), u.GetLocation().GetLineSpan().StartLinePosition.Line));
+            foreach(UsingDirectiveSyntax u in udsl)
+            {
+                UsingSchema us = new UsingSchema();
+                us.LoadInformations(u, model);
+                AddUsing(us);
+            }
             
             foreach(NamespaceDeclarationSyntax n in ndsl)
             {
-                NamespaceSchema ns = new NamespaceSchema(n.Name.ToString(), n.GetLocation().GetLineSpan().StartLinePosition.Line);
+                NamespaceSchema ns = new NamespaceSchema();
                 ns.LoadInformations(n, model);
                 AddNamespace(ns);
             }
@@ -83,7 +88,7 @@ namespace UnityCodeSmellAnalyzer
             {
                 if(i.Parent == root)
                 {
-                    InterfaceSchema ins = new InterfaceSchema(i.Identifier.ToString(), i.GetLocation().GetLineSpan().StartLinePosition.Line);
+                    InterfaceSchema ins = new InterfaceSchema();
                     ins.LoadInformations(i, model);
                     AddInterface(ins);
                 }
@@ -94,20 +99,13 @@ namespace UnityCodeSmellAnalyzer
             {
                 if (c.Parent == root)
                 {
-                    string inh;
-                    ITypeSymbol its = model.GetDeclaredSymbol(c);
-                    inh = its.BaseType.Name;
-                    List<INamedTypeSymbol> interf = its.Interfaces.ToList();
-                    List<string> interfs = new List<string>();
-                    foreach (INamedTypeSymbol t in interf) interfs.Add(t.Name);
-                    ClassSchema cs = new ClassSchema(c.Identifier.ToString(), c.GetLocation().GetLineSpan().StartLinePosition.Line, inh, interfs);
+                    ClassSchema cs = new ClassSchema();
                     cs.LoadInformations(c, model);
                     AddClass(cs);
                 }
             }
 
         }
-
     }
 }
 

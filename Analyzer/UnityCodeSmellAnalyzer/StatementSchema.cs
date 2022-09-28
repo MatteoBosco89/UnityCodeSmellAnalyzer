@@ -1,20 +1,24 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 
 namespace UnityCodeSmellAnalyzer
 {
     [Serializable]
-    public class StatementSchema
+    public class StatementSchema : SyntaxSchema
     {
         protected string statement;
-        protected int line;
 
         public string Statement { get { return statement; } }
-        public int Line { get { return line; } }
 
-        public StatementSchema(string statement, int line)
+
+        public StatementSchema() { }
+
+        public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
-            this.statement = statement;
-            this.line = line;
+            StatementSyntax s = root as StatementSyntax;
+            statement = s.ToString();
+            line = s.GetLocation().GetLineSpan().StartLinePosition.Line;
         }
     }
 }

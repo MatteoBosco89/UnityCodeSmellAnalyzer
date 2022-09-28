@@ -1,17 +1,21 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 
 namespace UnityCodeSmellAnalyzer
 {
 	[Serializable]
 	public class NamespaceSchema : CompilationUnit
 	{
-		protected int line;
+		
+		public NamespaceSchema() { }
 
-		public int Line { get { return line; } }
-
-		public NamespaceSchema(string name, int line) : base(name)
+		public override void LoadInformations(SyntaxNode root, SemanticModel model)
 		{
-			this.line = line;
-		}
+			NamespaceDeclarationSyntax namespaceDeclaration = root as NamespaceDeclarationSyntax;
+			base.LoadInformations(namespaceDeclaration, model);
+			name = namespaceDeclaration.Name.ToString(); 
+
+        }
 	}
 }

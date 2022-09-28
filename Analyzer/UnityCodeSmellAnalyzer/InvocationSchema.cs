@@ -9,43 +9,56 @@ using System.Linq;
 namespace UnityCodeSmellAnalyzer
 {
     [Serializable]
-    public class InvocationSchema
+    public class InvocationSchema : SyntaxSchema
     {
-        protected int line;
         protected string name;
         protected string fullName;
         protected string returnType;
+        protected string fileName;
+        protected int definitionLine;
+        protected string kind;
+        protected string module;
         protected List<ArgumentSchema> arguments = new List<ArgumentSchema>();
 
-        public int Line { get { return line; } }
         public string Name { get { return name; } }
         public string FullName { get { return fullName; } }
         public string ReturnType { get { return returnType; } }
-
+        public string FileName { get { return fileName; } }
+        public int DefinitionLine { get { return definitionLine + 1; } }
+        public string Kind { get { return kind; } }
+        public string Module { get { return module; } }
         public List<ArgumentSchema> Arguments { get { return arguments; } }
 
-        public InvocationSchema(int line, string name, string fullName, string returnType)
-        {
-            this.line = line;
-            this.name = name;
-            this.fullName = fullName;
-            this.returnType = returnType;
-        }
+        public InvocationSchema() { }
 
         public void AddArgument(ArgumentSchema a)
         {
             arguments.Add(a);
         }
 
-        public void LoadInformations(SyntaxNode root, SemanticModel model)
+        public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             InvocationExpressionSyntax invocation = root as InvocationExpressionSyntax;
 
-            foreach (var arg in invocation.ArgumentList.Arguments)
+            line = invocation.GetLocation().GetLineSpan().StartLinePosition.Line;
+
+            if (model.GetSymbolInfo(invocation).Symbol != null)
             {
-                bool isMeth = false;
-                if (model.GetSymbolInfo(arg.Expression).Symbol is IMethodSymbol) isMeth = true;
-                ArgumentSchema a = new ArgumentSchema(arg.Expression.ToString(), isMeth);
+                name = model.GetSymbolInfo(invocation).Symbol.MetadataName;
+                fullName = model.GetSymbolInfo(invocation).Symbol.ToString();
+                returnType = model.GetTypeInfo(invocation).Type.Name;
+                kind = model.GetSymbolInfo(invocation).Symbol.Locations.First().Kind.ToString();
+                definitionLine = model.GetSymbolInfo(invocation).Symbol.Locations.First().GetLineSpan().StartLinePosition.Line;
+                module = model.GetSymbolInfo(invocation).Symbol.Locations.First().MetadataModule?.ToString();
+                var meth = model.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+                fileName = meth.Locations.First().SourceTree?.FilePath;
+            }
+
+
+            foreach (var arg in invocation.ArgumentList.Arguments)
+            { 
+                ArgumentSchema a = new ArgumentSchema();
+                LoadInformations(arg, model);
                 AddArgument(a);
             }
 
