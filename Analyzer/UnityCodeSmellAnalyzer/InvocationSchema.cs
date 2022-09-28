@@ -58,7 +58,7 @@ namespace UnityCodeSmellAnalyzer
             foreach (var arg in invocation.ArgumentList.Arguments)
             { 
                 ArgumentSchema a = new ArgumentSchema();
-                LoadInformations(arg, model);
+                a.LoadInformations(arg, model);
                 AddArgument(a);
             }
 

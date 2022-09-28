@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Newtonsoft.Json;
 using System;
 
 namespace UnityCodeSmellAnalyzer
@@ -15,6 +16,8 @@ namespace UnityCodeSmellAnalyzer
         public string Type { get { return type; } }
         public string Assignment { get { return assignment; } }
 
+        [JsonIgnore]
+        public override int Line { get { return line; } }
 
         public ParameterSchema() { }
 

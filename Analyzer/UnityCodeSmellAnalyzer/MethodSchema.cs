@@ -73,13 +73,14 @@ namespace UnityCodeSmellAnalyzer
             fullName = model.GetDeclaredSymbol(method).ConstructedFrom.ToString();
 
             List<InvocationExpressionSyntax> idsl = (from invoc in method.DescendantNodes().OfType<InvocationExpressionSyntax>() select invoc).ToList();
-            List<VariableDeclarationSyntax> vdsl = (from variab in method.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();
+            List<VariableDeclarationSyntax> vdsl = (from variab in method.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();   
             List<StatementSyntax> ssl = (from stat in method.DescendantNodes().OfType<StatementSyntax>() select stat).ToList();
             List<WhileStatementSyntax> wbl = (from wh in method.DescendantNodes().OfType<WhileStatementSyntax>() select wh).ToList();
             List<ForEachStatementSyntax> fessl = (from fe in method.DescendantNodes().OfType<ForEachStatementSyntax>() select fe).ToList();
             List<IfStatementSyntax> ifssl = (from iff in method.DescendantNodes().OfType<IfStatementSyntax>() select iff).ToList();
             List<ForStatementSyntax> fssl = (from fr in method.DescendantNodes().OfType<ForStatementSyntax>() select fr).ToList();
-            //List<>
+            List<AssignmentExpressionSyntax> aesl = (from ae in method.DescendantNodes().OfType<AssignmentExpressionSyntax>() select ae).ToList();
+
 
             if (AnalyzerConfiguration.StatementVerbose)
             {
@@ -106,14 +107,24 @@ namespace UnityCodeSmellAnalyzer
 
             foreach(var v in vdsl)
             {
-                foreach(var vv in v.Variables)
+                foreach(var declarator in v.Variables)
                 {
-                    string initializer = null;
-                    if(vv.Initializer != null) initializer = vv.Initializer.Value.ToString();
-                    VariableSchema variable = new VariableSchema(vv.Identifier.ToString(), v.Type.ToString(), initializer, vv.GetLocation().GetLineSpan().StartLinePosition.Line);
+                    VariableSchema variable = new VariableSchema();
+                    variable.LoadDefinition(v, declarator, model);
                     AddVariable(variable);
-                }
-                
+                } 
+            }
+            foreach(var v in aesl)
+            {
+                VariableSchema variable = new VariableSchema();
+                variable.LoadAssignment(v, model);
+                AddVariable(variable);
+            }
+            foreach(var v in aesl)
+            {
+                VariableSchema variable = new VariableSchema();
+                variable.LoadUsage(v, model);
+                AddVariable(variable);
             }
 
             foreach (var mod in method.Modifiers)
@@ -133,12 +144,12 @@ namespace UnityCodeSmellAnalyzer
 
             foreach (var f in fessl)
             {
-                Console.WriteLine(f.ForEachKeyword);
-                Console.WriteLine(f.Type);
-                Console.WriteLine(f.Identifier);
-                Console.WriteLine(f.InKeyword);
-                Console.WriteLine(f.Expression);
-                Console.WriteLine();
+                //Console.WriteLine(f.ForEachKeyword);
+                //Console.WriteLine(f.Type);
+               // Console.WriteLine(f.Identifier);
+                //Console.WriteLine(f.InKeyword);
+                //Console.WriteLine(f.Expression);
+               // Console.WriteLine();
             }
 
             foreach(var iff in ifssl)
