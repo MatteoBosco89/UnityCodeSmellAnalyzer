@@ -9,7 +9,7 @@ namespace UnityCodeSmellAnalyzer
 
         protected int line;
 
-        public int Line { get { return line + 1; } }
+        public virtual int Line { get { return line + 1; } }
 
 
         public abstract void LoadInformations(SyntaxNode root, SemanticModel model);
