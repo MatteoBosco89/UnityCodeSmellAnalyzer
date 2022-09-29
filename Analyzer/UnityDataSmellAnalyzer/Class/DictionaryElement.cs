@@ -59,7 +59,7 @@ namespace Element
                                 if (!temp[0].Contains(":"))
                                 {
                                     d = new DictionaryElement();
-                                    i = d.LoadDictionaryWithSpecialElements(lines, i);
+                                    i = d.LoadDictionaryWithSpecialElements(lines, i, cmpId);
                                     i--;
                                 }
                                 else
@@ -162,7 +162,7 @@ namespace Element
             return i;
         }
 
-        override public int LoadDictionaryWithSpecialElements(string[] lines, int i)
+        override public int LoadDictionaryWithSpecialElements(string[] lines, int i, string cmpId)
         {
             values = new Dictionary<string, Element>();
             type = lines[i].Split(':')[0].Trim(); //read the type of the subdictionary from the first line passed
@@ -171,6 +171,7 @@ namespace Element
             int k = 0;
             for(; i < lines.Length; i++){
                 if (NumOfSpaces(lines[i]) - indent < 0) return i;
+                if (lines[i].Contains(cmpId)) return i;
                 string d = lines[i].Split('}')[0];
                 d = d.Split('{')[1];
                 string[] s = d.Split(',');
