@@ -54,9 +54,20 @@ namespace Element
                         {
                             if (NumOfSpaces(lines[i + 1]) - indent > 0)
                             {
-                                d = new DictionaryElement();
-                                i = d.LoadNormalDictionary(lines, i, cmpId);
-                                i--;
+                                //some time the element of the sub dictionary are - {fileID: 8600129312555473672}
+                                string[] temp = lines[i + 1].Split('{');
+                                if (!temp[0].Contains(":"))
+                                {
+                                    d = new DictionaryElement();
+                                    i = d.LoadDictionaryWithSpecialElements(lines, i);
+                                    i--;
+                                }
+                                else
+                                {
+                                    d = new DictionaryElement();
+                                    i = d.LoadNormalDictionary(lines, i, cmpId);
+                                    i--;
+                                }
                             }
                             else
                                 d = new SimpleElement("");
@@ -151,6 +162,28 @@ namespace Element
             return i;
         }
 
+        override public int LoadDictionaryWithSpecialElements(string[] lines, int i)
+        {
+            values = new Dictionary<string, Element>();
+            type = lines[i].Split(':')[0].Trim(); //read the type of the subdictionary from the first line passed
+            i++;
+            int indent = NumOfSpaces(lines[i]);
+            int k = 0;
+            for(; i < lines.Length; i++){
+                if (NumOfSpaces(lines[i]) - indent < 0) return i;
+                string d = lines[i].Split('}')[0];
+                d = d.Split('{')[1];
+                string[] s = d.Split(',');
+                foreach (string r in s)
+                {
+                    string[] elements = r.Split(':');
+                    values[elements[0].Trim()+k] = new SimpleElement(elements[1].Trim());
+                    k++;
+                }
+
+            }
+            return i;
+        }
         /*
          * This methods mesure the indentation of a line
          */
