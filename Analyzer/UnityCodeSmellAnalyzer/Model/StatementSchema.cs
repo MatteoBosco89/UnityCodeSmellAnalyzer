@@ -4,6 +4,10 @@ using System;
 
 namespace UnityCodeSmellAnalyzer
 {
+    /// <summary>
+    /// Class representing the actual Statement. 
+    /// Informations gathered: Statement, LOC
+    /// </summary>
     [Serializable]
     public class StatementSchema : SyntaxSchema
     {
@@ -15,6 +19,11 @@ namespace UnityCodeSmellAnalyzer
         public StatementSchema() { }
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
+        {
+            LoadBasicInformations(root, model);
+        }
+
+        public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             StatementSyntax s = root as StatementSyntax;
             statement = s.ToString();

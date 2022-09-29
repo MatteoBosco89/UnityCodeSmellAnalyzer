@@ -91,8 +91,11 @@ namespace Test
                     Instantiate(o.Cube);
                 }
 
+		public List<int> Numbers() { return new List<int>{ 1, 2, 3 } }
+
                 public override void Test2()
                 {
+		    foreach (int a in Numbers()){ Console.WriteLine(a); }
                     base.Test2();
                     Test();
                     while (isJumping)
@@ -106,6 +109,10 @@ namespace Test
 
                         k.ToString();
                         Console.WriteLine(i * k);
+			while (i > 10)
+			{
+			    Test();
+			}
                     }
                 }
             }

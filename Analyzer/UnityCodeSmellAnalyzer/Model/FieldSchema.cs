@@ -5,6 +5,10 @@ using System.Collections.Generic;
 
 namespace UnityCodeSmellAnalyzer
 {
+    /// <summary>
+    /// Class representing the Field Declaration. 
+    /// Information gathered: Name, Type, Initial Value, Modifiers, Attributes, LOC
+    /// </summary>
     [Serializable]
     public class FieldSchema : SyntaxSchema
     {
@@ -32,22 +36,47 @@ namespace UnityCodeSmellAnalyzer
         {
             modifiers.Add(m);
         }
-
+        /// <summary>
+        /// Specialized LoadInformations method.
+        /// </summary>
+        /// <param name="root">The Field Declaration</param>
+        /// <param name="v">The Variable Declaration</param>
+        /// <param name="model">The model</param>
         public void LoadInformations(SyntaxNode root, SyntaxNode v, SemanticModel model)
         {
             FieldDeclarationSyntax f = root as FieldDeclarationSyntax;
             VariableDeclaratorSyntax fds = v as VariableDeclaratorSyntax;
-            
+
             name = fds.Identifier.ToString();
             line = fds.GetLocation().GetLineSpan().StartLinePosition.Line;
             type = f.Declaration.Type.ToString();
             if (fds.Initializer != null) assignment = fds.Initializer.Value.ToString();
-            
+            LoadModifiers(f);
+            LoadAttributes(f);
+        }
+        /// <summary>
+        /// Loads all Modifiers of the Field
+        /// </summary>
+        /// <param name="f">The Field Declaration</param>
+        protected void LoadModifiers(FieldDeclarationSyntax f)
+        {
             foreach (var m in f.Modifiers) AddModifier(m.ToString());
-            foreach (var a in f.AttributeLists) AddAttribute(a.ToString());
+        }
+        /// <summary>
+        /// Loads all Attributes of the Field
+        /// </summary>
+        /// <param name="f">The Field Declaration</param>
+        protected void LoadAttributes(FieldDeclarationSyntax f)
+        {
+            foreach (var attr in f.AttributeLists)
+            {
+                foreach (var a in attr.Attributes) AddAttribute(a.ToString());
+            }
         }
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model) { }
+
+        public override void LoadBasicInformations(SyntaxNode root, SemanticModel model) { }
     }
 }
 

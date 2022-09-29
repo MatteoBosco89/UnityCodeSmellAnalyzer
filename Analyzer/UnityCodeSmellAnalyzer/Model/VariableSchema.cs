@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Operations;
 using Newtonsoft.Json;
@@ -7,12 +8,15 @@ using System.Collections.Generic;
 
 namespace UnityCodeSmellAnalyzer
 {
+    /// <summary>
+    /// Class representing the Simple Variable. 
+    /// Informations gathered: Name, Type, Kind Enum(Definition, Assignment, Use), Specialized Variable, LOC
+    /// </summary>
     [Serializable]
     public class VariableSchema : SyntaxSchema
     {
         protected string name;
         protected string type;
-        protected string assignment;
         protected string kind;
         protected VariableSchema variable;
         protected enum VariableKind { Definition, Assignment, Use }
@@ -52,14 +56,20 @@ namespace UnityCodeSmellAnalyzer
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model) { }
 
+        public override void LoadBasicInformations(SyntaxNode root, SemanticModel model) { }
     }
 
+    /// <summary>
+    /// Class representing the Variable of kind Use, inherit from VariableSchema. 
+    /// Informations gathered: Use Kind, Assigned To, Value, Variable List
+    /// </summary>
     [Serializable]
     class UsedVariableSchema : VariableSchema
     {
         protected string useKind;
         protected string assignedTo;
         protected string value;
+        protected string operation;
         protected List<UsedVariableSchema> variablesList = new List<UsedVariableSchema>();
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
@@ -70,9 +80,21 @@ namespace UnityCodeSmellAnalyzer
         public string UseKind { get { return useKind; } }
         public string AssignedTo { get { return assignedTo; } }
         public string Value { get { return value; } }
+        public string Operation { get { return operation; } }
         public List<UsedVariableSchema> VariablesList { get { return variablesList; } }
         protected void AddVariable(UsedVariableSchema v) { variablesList.Add(v); }
         public UsedVariableSchema() { }
+
+        protected void LoadBinaryOperation(SyntaxNode root, SemanticModel model)
+        {
+            UsedVariableSchema left = new UsedVariableSchema();
+            UsedVariableSchema right = new UsedVariableSchema();
+            var m = (model.GetOperation(root) as IBinaryOperation);
+            left.LoadInternal(m.LeftOperand.Syntax, model, this);
+            right.LoadInternal(m.RightOperand.Syntax, model, this);
+            AddVariable(left);
+            AddVariable(right);
+        }
         protected void LoadInternal(SyntaxNode root, SemanticModel model, UsedVariableSchema v)
         {
             kind = VariableKind.Use.ToString();
@@ -80,22 +102,9 @@ namespace UnityCodeSmellAnalyzer
             line = v.Line;
             type = model.GetTypeInfo(root).Type.ToString();
             useKind = model.GetOperation(root)?.Kind.ToString();
-            name = root.ToString();
-            if (model.GetOperation(root)?.Kind is OperationKind.Literal)
-            {
-                value = name;
-                name = null;
-            }
-            if (model.GetOperation(root)?.Kind is OperationKind.Binary)
-            {
-                UsedVariableSchema left = new UsedVariableSchema();
-                UsedVariableSchema right = new UsedVariableSchema();
-                var m = (model.GetOperation(root) as IBinaryOperation);
-                left.LoadInternal(m.LeftOperand.Syntax, model, this);
-                right.LoadInternal(m.RightOperand.Syntax, model, this);
-                AddVariable(left);
-                AddVariable(right);
-            }
+            operation = root.Kind().ToString();
+            _ = (model.GetOperation(root)?.Kind is OperationKind.Literal) ? value = root.ToString() : name = root.ToString();
+            if (model.GetOperation(root)?.Kind is OperationKind.Binary)  LoadBinaryOperation(root, model);
         }
         public void LoadMe(SyntaxNode root, SemanticModel model)
         {
@@ -105,29 +114,21 @@ namespace UnityCodeSmellAnalyzer
             line = exp.GetLocation().GetLineSpan().StartLinePosition.Line;
             type = model.GetTypeInfo(exp).Type.ToString();
             useKind = model.GetOperation(exp.Right)?.Kind.ToString();
-            name = exp.Right.ToString();
-            if (model.GetOperation(exp.Right)?.Kind is OperationKind.Literal)
-            {
-                value = name;
-                name = null;
-            }
-            if(model.GetOperation(exp.Right)?.Kind is OperationKind.Binary)
-            {
-                UsedVariableSchema left = new UsedVariableSchema();
-                UsedVariableSchema right = new UsedVariableSchema();
-                var m = (model.GetOperation(exp.Right) as IBinaryOperation);
-                left.LoadInternal(m.LeftOperand.Syntax, model, this);
-                right.LoadInternal(m.RightOperand.Syntax, model, this);
-                AddVariable(left);
-                AddVariable(right);
-            }
+            operation = exp.Kind().ToString();
+            _ = (model.GetOperation(exp.Right)?.Kind is OperationKind.Literal) ? value = exp.Right.ToString() : name = exp.Right.ToString();
+            if (model.GetOperation(exp.Right)?.Kind is OperationKind.Binary) LoadBinaryOperation(exp.Right, model);
         }
     }
 
+    /// <summary>
+    /// Class representing the Variable of kind Assignment, inherit from VariableSchema. 
+    /// Informations gathered: Assignment Kind, Assignment
+    /// </summary>
     [Serializable]
     class AssignedVariableSchema : VariableSchema
     {
         protected string assignmentKind;
+        protected string assignment;
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
         public string Name { get { return name; } }
@@ -150,9 +151,14 @@ namespace UnityCodeSmellAnalyzer
         }
     }
 
+    /// <summary>
+    /// Class representing the Variable of kind Definition, inherit from VariableSchema. 
+    /// Informations gathered: Assignment
+    /// </summary>
     [Serializable]
     class DeclaredVariableSchema : VariableSchema
     {
+        protected string assignment;
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
         public string Name { get { return name; } }

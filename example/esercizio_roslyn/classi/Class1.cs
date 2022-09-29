@@ -14,6 +14,11 @@ namespace RoslynExample
         public void Metodo();
     }
 
+    public class Class23
+    {
+
+    }
+
     public class Class1
     {
         protected float vel = 0.0f;
@@ -40,7 +45,22 @@ namespace RoslynExample
 
         void Awake()
         {
-            
+            int number = 0;
+            List<int> numbers = new List<int> { 0, 2, 5 };
+            switch (number)
+            {
+                case 0: 
+                    foreach(int n in numbers) Console.WriteLine(n);
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default: 
+                    break;
+            }
         }
 
     }

@@ -8,6 +8,11 @@ using System.Linq;
 
 namespace UnityCodeSmellAnalyzer
 {
+    /// <summary>
+    /// Class representing the Invocation Expression of a method. 
+    /// Informations gathered: Name, Full Name (Namespace.Class), Return Type, Path, Definition LOC, Location Kind, 
+    /// Module (if any), Arguments, LOC
+    /// </summary>
     [Serializable]
     public class InvocationSchema : SyntaxSchema
     {
@@ -35,13 +40,32 @@ namespace UnityCodeSmellAnalyzer
         {
             arguments.Add(a);
         }
+        /// <summary>
+        /// Loads all Arguments of the invocation
+        /// </summary>
+        /// <param name="invocation">The Invocation Expression</param>
+        /// <param name="model">The model</param>
+        protected void LoadArguments(InvocationExpressionSyntax invocation, SemanticModel model)
+        {
+            foreach (var arg in invocation.ArgumentList.Arguments)
+            {
+                ArgumentSchema a = new ArgumentSchema();
+                a.LoadInformations(arg, model);
+                AddArgument(a);
+            }
+        }
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             InvocationExpressionSyntax invocation = root as InvocationExpressionSyntax;
+            LoadBasicInformations(root, model);
+            LoadArguments(invocation, model);
+        }
 
+        public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
+        {
+            InvocationExpressionSyntax invocation = root as InvocationExpressionSyntax;
             line = invocation.GetLocation().GetLineSpan().StartLinePosition.Line;
-
             if (model.GetSymbolInfo(invocation).Symbol != null)
             {
                 name = model.GetSymbolInfo(invocation).Symbol.MetadataName;
@@ -53,17 +77,7 @@ namespace UnityCodeSmellAnalyzer
                 var meth = model.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
                 fileName = meth.Locations.First().SourceTree?.FilePath;
             }
-
-
-            foreach (var arg in invocation.ArgumentList.Arguments)
-            { 
-                ArgumentSchema a = new ArgumentSchema();
-                a.LoadInformations(arg, model);
-                AddArgument(a);
-            }
-
         }
-
     }
 }
 

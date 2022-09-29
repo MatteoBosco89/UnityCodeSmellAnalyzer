@@ -3,6 +3,10 @@ using System;
 
 namespace UnityCodeSmellAnalyzer
 {
+    /// <summary>
+    /// Utility Class representing configurations of the Analyzer such as:
+    /// Statements, Assemblies Path, Project Path, The CSharpCompilation, Miscellaneous
+    /// </summary>
     public static class AnalyzerConfiguration
     {
         private static bool statementsVerbose = false;
