@@ -1,0 +1,96 @@
+[
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+    "Name": "Find",
+    "Invocation": "UnityEngine.GameObject.Find(string)",
+    "Line": 46
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
+    "Name": "FindObjectOfType",
+    "Invocation": "UnityEngine.Object.FindObjectOfType<MyGame.CubeManager>()",
+    "Line": 22
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+    "Traceback": [
+      {
+        "Invocation": "MyGame.CubeManager.Smellami()",
+        "Line": 56,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+        "Traceback": [
+          {
+            "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+            "Line": 69,
+            "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+            "Traceback": [
+              {
+                "Method": "Test.Input.TestInput.StateManager.Test()",
+                "LineCall": 98,
+                "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                "Invocation": "UnityEngine.GameObject.FindGameObjectWithTag(string)",
+                "Name": "FindGameObjectWithTag",
+                "Line": 92
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+        "Line": 58,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+        "Traceback": [
+          {
+            "Method": "Test.Input.TestInput.StateManager.Test()",
+            "LineCall": 98,
+            "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+            "Invocation": "UnityEngine.GameObject.FindGameObjectWithTag(string)",
+            "Name": "FindGameObjectWithTag",
+            "Line": 92
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+    "Traceback": [
+      {
+        "Invocation": "MyGame.CubeManager.Smellami()",
+        "Line": 53,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+        "Traceback": [
+          {
+            "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+            "Line": 69,
+            "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+            "Traceback": [
+              {
+                "Method": "Test.Input.TestInput.StateManager.Test()",
+                "LineCall": 98,
+                "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                "Invocation": "UnityEngine.GameObject.FindGameObjectWithTag(string)",
+                "Name": "FindGameObjectWithTag",
+                "Line": 92
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
+    "Traceback": [
+      {
+        "Method": "MyGame.CubeManager.GenerateCube()",
+        "LineCall": 21,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+        "Invocation": "UnityEngine.Object.FindObjectOfType<UnityEngine.GameObject>()",
+        "Name": "FindObjectOfType",
+        "Line": 64
+      }
+    ]
+  }
+]

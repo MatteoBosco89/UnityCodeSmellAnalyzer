@@ -1,0 +1,102 @@
+[
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+    "Name": "Instantiate",
+    "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+    "Line": 54
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+    "Name": "Instantiate",
+    "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+    "Line": 43
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+    "Name": "Destroy",
+    "Invocation": "UnityEngine.Object.Destroy(UnityEngine.Object)",
+    "Line": 45
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+    "Traceback": [
+      {
+        "Invocation": "MyGame.CubeManager.Smellami()",
+        "Line": 56,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+        "Traceback": [
+          {
+            "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+            "Line": 69,
+            "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+            "Traceback": [
+              {
+                "Method": "Test.Input.TestInput.StateManager.Test()",
+                "LineCall": 98,
+                "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+                "Name": "Instantiate",
+                "Line": 91
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+        "Line": 58,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+        "Traceback": [
+          {
+            "Method": "Test.Input.TestInput.StateManager.Test()",
+            "LineCall": 98,
+            "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+            "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+            "Name": "Instantiate",
+            "Line": 91
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+    "Traceback": [
+      {
+        "Invocation": "MyGame.CubeManager.Smellami()",
+        "Line": 53,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+        "Traceback": [
+          {
+            "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+            "Line": 69,
+            "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+            "Traceback": [
+              {
+                "Method": "Test.Input.TestInput.StateManager.Test()",
+                "LineCall": 98,
+                "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+                "Name": "Instantiate",
+                "Line": 91
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
+    "Traceback": [
+      {
+        "Method": "MyGame.CubeManager.GenerateCube()",
+        "LineCall": 21,
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+        "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+        "Name": "Instantiate",
+        "Line": 63
+      }
+    ]
+  }
+]
