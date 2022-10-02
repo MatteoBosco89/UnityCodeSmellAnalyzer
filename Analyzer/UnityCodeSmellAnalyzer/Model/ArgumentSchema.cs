@@ -34,6 +34,7 @@ namespace UnityCodeSmellAnalyzer
             if (model.GetSymbolInfo(arg.Expression).Symbol is IMethodSymbol) isInvocation = true;
             if (model.GetSymbolInfo(arg.Expression).Symbol is ILiteralOperation) isLiteral = true;
             argument = arg.Expression.ToString();
+            
         }
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)

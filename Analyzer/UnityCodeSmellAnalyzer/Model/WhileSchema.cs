@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Operations;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,35 +16,21 @@ namespace UnityCodeSmellAnalyzer
     public class WhileSchema : CycleOrControlSchema
     {
 
-        protected string condition;
+        protected ConditionSchema condition;
 
         public WhileSchema() { }
 
-        public string Condition { get { return condition; } }
+        public ConditionSchema Condition { get { return condition; } }
         [JsonIgnore]
         public override int Line { get; }
-
-        public override void LoadInformations(SyntaxNode root, SemanticModel model)
-        {
-            List<WhileStatementSyntax> wbl = (from wh in root.DescendantNodes().OfType<WhileStatementSyntax>() select wh).ToList();
-            List<InvocationExpressionSyntax> invocations = (from wh in root.DescendantNodes().OfType<InvocationExpressionSyntax>() select wh).ToList();
-            List<VariableDeclarationSyntax> vdsl = (from variab in root.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();
-            List<AssignmentExpressionSyntax> aesl = (from ae in root.DescendantNodes().OfType<AssignmentExpressionSyntax>() select ae).ToList();
-            List<ForEachStatementSyntax> fel = (from fe in root.DescendantNodes().OfType<ForEachStatementSyntax>() select fe).ToList();
-            LoadBasicInformations(root, model);
-            LoadWhileStatement(root, wbl, model);
-            LoadForEachStatement(root, fel, model);
-            LoadInvocations(root, invocations, model);
-            LoadVariables(root, vdsl, aesl, model);
-        }
 
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             WhileStatementSyntax w = root as WhileStatementSyntax;
             startLine = w.GetLocation().GetLineSpan().StartLinePosition.Line;
             endLine = w.GetLocation().GetLineSpan().EndLinePosition.Line;
-            condition = w.Condition.ToString();
-            depth = 0;
+            condition = new ConditionSchema();
+            condition.LoadInformations(w.Condition, model);
         }
 
     }

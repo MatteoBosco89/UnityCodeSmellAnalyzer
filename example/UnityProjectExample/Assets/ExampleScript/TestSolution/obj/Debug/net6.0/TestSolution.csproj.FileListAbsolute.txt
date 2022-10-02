@@ -1,0 +1,15 @@
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.csproj.AssemblyReference.cache
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.GeneratedMSBuildEditorConfig.editorconfig
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.AssemblyInfoInputs.cache
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.AssemblyInfo.cs
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.csproj.CoreCompileInputs.cache
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\bin\Debug\net6.0\TestSolution.exe
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\bin\Debug\net6.0\TestSolution.deps.json
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\bin\Debug\net6.0\TestSolution.runtimeconfig.json
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\bin\Debug\net6.0\TestSolution.dll
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\bin\Debug\net6.0\TestSolution.pdb
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.dll
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\refint\TestSolution.dll
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.pdb
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\TestSolution.genruntimeconfig.cache
+D:\progetti\UnityCodeSmellAnalyzer\example\UnityProjectExample\Assets\ExampleScript\TestSolution\obj\Debug\net6.0\ref\TestSolution.dll

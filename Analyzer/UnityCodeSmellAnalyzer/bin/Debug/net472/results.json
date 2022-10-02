@@ -1,1067 +1,74 @@
 [
   {
-    "Name": "CubeManager",
-    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
-    "Interfaces": [],
-    "Namespaces": [
-      {
-        "Attributes": [],
-        "Name": "MyGame",
-        "FileName": null,
-        "Interfaces": [],
-        "Namespaces": [
-          {
-            "Attributes": [],
-            "Name": "Cube",
-            "FileName": null,
-            "Interfaces": [],
-            "Namespaces": [],
-            "Classes": [
-              {
-                "Name": "CubeHolder",
-                "Modifiers": [
-                  "public"
-                ],
-                "Inheritance": "Object",
-                "Interfaces": [],
-                "Properties": [
-                  {
-                    "Name": "Cube",
-                    "Type": "GameObject",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "Line": 15
-                  }
-                ],
-                "Methods": [],
-                "Fields": [
-                  {
-                    "Name": "cube",
-                    "Type": "GameObject",
-                    "Modifiers": [
-                      "protected"
-                    ],
-                    "Assignment": null,
-                    "Attributes": [
-                      "SerializeField"
-                    ],
-                    "Line": 12
-                  },
-                  {
-                    "Name": "num",
-                    "Type": "int",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Assignment": "0",
-                    "Attributes": [],
-                    "Line": 13
-                  }
-                ],
-                "Attributes": [],
-                "Line": 10
-              },
-              {
-                "Name": "CuboPiccolo",
-                "Modifiers": [
-                  "public",
-                  "sealed"
-                ],
-                "Inheritance": "Object",
-                "Interfaces": [
-                  "InterfacesTest"
-                ],
-                "Properties": [
-                  {
-                    "Name": "Anim",
-                    "Type": "Animation",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "Line": 24
-                  },
-                  {
-                    "Name": "Number",
-                    "Type": "int",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "Line": 25
-                  },
-                  {
-                    "Name": "Number1",
-                    "Type": "int",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "Line": 26
-                  },
-                  {
-                    "Name": "Number2",
-                    "Type": "int",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "Line": 27
-                  }
-                ],
-                "Methods": [
-                  {
-                    "Name": "Print",
-                    "FullName": "MyGame.Cube.CuboPiccolo.Print()",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "ReturnType": "void",
-                    "Parameters": [],
-                    "Invocations": [],
-                    "Variables": [],
-                    "Statements": [],
-                    "WhileBlocks": [],
-                    "ForEachBlocks": [],
-                    "Line": 29
-                  },
-                  {
-                    "Name": "PrintError",
-                    "FullName": "MyGame.Cube.CuboPiccolo.PrintError()",
-                    "Modifiers": [
-                      "public"
-                    ],
-                    "Attributes": [],
-                    "ReturnType": "void",
-                    "Parameters": [],
-                    "Invocations": [],
-                    "Variables": [],
-                    "Statements": [],
-                    "WhileBlocks": [],
-                    "ForEachBlocks": [],
-                    "Line": 34
-                  }
-                ],
-                "Fields": [
-                  {
-                    "Name": "anim",
-                    "Type": "Animation",
-                    "Modifiers": [
-                      "private"
-                    ],
-                    "Assignment": null,
-                    "Attributes": [
-                      "SerializeField",
-                      "HideInInspector"
-                    ],
-                    "Line": 22
-                  }
-                ],
-                "Attributes": [],
-                "Line": 20
-              }
-            ],
-            "Usings": [],
-            "Line": 8
-          }
-        ],
-        "Classes": [
-          {
-            "Name": "CubeManager",
-            "Modifiers": [
-              "public"
-            ],
-            "Inheritance": "MonoBehaviour",
-            "Interfaces": [],
-            "Properties": [],
-            "Methods": [
-              {
-                "Name": "Start",
-                "FullName": "MyGame.CubeManager.Start()",
-                "Modifiers": [],
-                "Attributes": [],
-                "ReturnType": "void",
-                "Parameters": [],
-                "Invocations": [],
-                "Variables": [
-                  {
-                    "Variable": {
-                      "Name": "x",
-                      "Type": "int",
-                      "Assignment": "0",
-                      "Kind": "Definition",
-                      "DefinitionLine": 45
-                    }
-                  },
-                  {
-                    "Variable": {
-                      "Name": "cube",
-                      "Type": "MyGame.Cube.CubeHolder",
-                      "Assignment": "new CubeHolder(x)",
-                      "Kind": "Assignment",
-                      "AssignmentLine": 46,
-                      "AssignmentKind": "SimpleAssignmentExpression"
-                    }
-                  },
-                  {
-                    "Variable": {
-                      "Name": "new CubeHolder(x)",
-                      "Type": "MyGame.Cube.CubeHolder",
-                      "Kind": "Use",
-                      "UseLine": 46,
-                      "UseKind": "ObjectCreation",
-                      "AssignedTo": "cube",
-                      "Value": null,
-                      "Operation": "SimpleAssignmentExpression",
-                      "VariablesList": []
-                    }
-                  }
-                ],
-                "Statements": [],
-                "WhileBlocks": [],
-                "ForEachBlocks": [],
-                "Line": 44
-              },
-              {
-                "Name": "Update",
-                "FullName": "MyGame.CubeManager.Update()",
-                "Modifiers": [],
-                "Attributes": [],
-                "ReturnType": "void",
-                "Parameters": [],
-                "Invocations": [
-                  {
-                    "Name": "Instantiate",
-                    "FullName": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
-                    "ReturnType": "GameObject",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "UnityEngine.CoreModule.dll",
-                    "Arguments": [
-                      {
-                        "Argument": "cube.Cube",
-                        "IsInvocation": false,
-                        "IsLiteral": false
-                      }
-                    ],
-                    "Line": 53
-                  },
-                  {
-                    "Name": "SetActive",
-                    "FullName": "UnityEngine.GameObject.SetActive(bool)",
-                    "ReturnType": "Void",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "UnityEngine.CoreModule.dll",
-                    "Arguments": [
-                      {
-                        "Argument": "true",
-                        "IsInvocation": false,
-                        "IsLiteral": false
-                      }
-                    ],
-                    "Line": 54
-                  }
-                ],
-                "Variables": [
-                  {
-                    "Variable": {
-                      "Name": "o",
-                      "Type": "GameObject",
-                      "Assignment": "Instantiate(cube.Cube)",
-                      "Kind": "Definition",
-                      "DefinitionLine": 52
-                    }
-                  }
-                ],
-                "Statements": [],
-                "WhileBlocks": [],
-                "ForEachBlocks": [],
-                "Line": 51
-              },
-              {
-                "Name": "GenerateCube",
-                "FullName": "MyGame.CubeManager.GenerateCube()",
-                "Modifiers": [
-                  "public"
-                ],
-                "Attributes": [],
-                "ReturnType": "void",
-                "Parameters": [],
-                "Invocations": [
-                  {
-                    "Name": "Instantiate",
-                    "FullName": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
-                    "ReturnType": "GameObject",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "UnityEngine.CoreModule.dll",
-                    "Arguments": [
-                      {
-                        "Argument": "cube.Cube",
-                        "IsInvocation": false,
-                        "IsLiteral": false
-                      }
-                    ],
-                    "Line": 59
-                  }
-                ],
-                "Variables": [
-                  {
-                    "Variable": {
-                      "Name": "o",
-                      "Type": "GameObject",
-                      "Assignment": "Instantiate(cube.Cube)",
-                      "Kind": "Definition",
-                      "DefinitionLine": 58
-                    }
-                  }
-                ],
-                "Statements": [],
-                "WhileBlocks": [],
-                "ForEachBlocks": [],
-                "Line": 57
-              }
-            ],
-            "Fields": [
-              {
-                "Name": "cube",
-                "Type": "CubeHolder",
-                "Modifiers": [
-                  "protected"
-                ],
-                "Assignment": null,
-                "Attributes": [],
-                "Line": 42
-              }
-            ],
-            "Attributes": [],
-            "Line": 40
-          }
-        ],
-        "Usings": [],
-        "Line": 6
-      }
-    ],
-    "Classes": [],
-    "Usings": [
-      {
-        "Name": "MyGame.Cube",
-        "Line": 1
-      },
-      {
-        "Name": "System.Collections",
-        "Line": 2
-      },
-      {
-        "Name": "System.Collections.Generic",
-        "Line": 3
-      },
-      {
-        "Name": "UnityEngine",
-        "Line": 4
-      }
-    ],
-    "Line": 1
-  },
-  {
-    "Name": "Inputs",
-    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+    "Name": "Program",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\Program.cs",
+    "Language": "C#",
     "Interfaces": [],
     "Namespaces": [],
     "Classes": [
       {
-        "Name": "Inputs",
+        "Name": "Program",
+        "FullName": "Program",
+        "FullInheritanceName": "object",
+        "InnerClasses": [],
+        "ClassConstraints": [],
         "Modifiers": [
           "public"
         ],
-        "Inheritance": "MonoBehaviour",
-        "Interfaces": [
-          "InterfacesTest"
-        ],
-        "Properties": [
-          {
-            "Name": "Number",
-            "Type": "int",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "Line": 13
-          },
-          {
-            "Name": "Number1",
-            "Type": "int",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "Line": 14
-          },
-          {
-            "Name": "Number2",
-            "Type": "int",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "Line": 15
-          }
-        ],
-        "Methods": [
-          {
-            "Name": "Print",
-            "FullName": "Inputs.Print()",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [],
-            "Variables": [
-              {
-                "Variable": {
-                  "Name": "list",
-                  "Type": "List<string>",
-                  "Assignment": "new List<string> { \"hello\", \"smell\", \"computer\" }",
-                  "Kind": "Definition",
-                  "DefinitionLine": 18
-                }
-              }
-            ],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [
-              {
-                "Iterator": "s",
-                "IteratorType": "string",
-                "Iterable": "list",
-                "IterableType": "System.Collections.Generic.List<string>",
-                "Invocation": null,
-                "ExpressionIsInvocation": false,
-                "Depth": 0,
-                "EndLine": 0,
-                "StartLine": 0,
-                "Invocations": [
-                  {
-                    "Name": "WriteLine",
-                    "FullName": "System.Console.WriteLine(string)",
-                    "ReturnType": "Void",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "CommonLanguageRuntimeLibrary",
-                    "Arguments": [
-                      {
-                        "Argument": "s",
-                        "IsInvocation": false,
-                        "IsLiteral": false
-                      }
-                    ],
-                    "Line": 20
-                  }
-                ],
-                "Variables": [],
-                "WhileBlocks": [],
-                "ForBlocks": [],
-                "IfBlocks": [],
-                "SwitchCaseBlocks": [],
-                "ForEachBlocks": [],
-                "ElseBlocks": [],
-                "Line": 1
-              }
-            ],
-            "Line": 17
-          },
-          {
-            "Name": "PrintError",
-            "FullName": "Inputs.PrintError()",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [],
-            "Variables": [],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 28
-          },
-          {
-            "Name": "Start",
-            "FullName": "Inputs.Start()",
-            "Modifiers": [],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [
-              {
-                "Name": "PlayQueued",
-                "FullName": "UnityEngine.Animation.PlayQueued(string)",
-                "ReturnType": "AnimationState",
-                "FileName": null,
-                "DefinitionLine": 1,
-                "Kind": "MetadataFile",
-                "Module": "UnityEngine.AnimationModule.dll",
-                "Arguments": [
-                  {
-                    "Argument": "\"Jump\"",
-                    "IsInvocation": false,
-                    "IsLiteral": false
-                  }
-                ],
-                "Line": 36
-              }
-            ],
-            "Variables": [],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 34
-          },
-          {
-            "Name": "Update",
-            "FullName": "Inputs.Update()",
-            "Modifiers": [],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [
-              {
-                "Name": "Instantiate",
-                "FullName": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
-                "ReturnType": "GameObject",
-                "FileName": null,
-                "DefinitionLine": 1,
-                "Kind": "MetadataFile",
-                "Module": "UnityEngine.CoreModule.dll",
-                "Arguments": [
-                  {
-                    "Argument": "o",
-                    "IsInvocation": false,
-                    "IsLiteral": false
-                  }
-                ],
-                "Line": 42
-              },
-              {
-                "Name": "Destroy",
-                "FullName": "UnityEngine.Object.Destroy(UnityEngine.Object)",
-                "ReturnType": "Void",
-                "FileName": null,
-                "DefinitionLine": 1,
-                "Kind": "MetadataFile",
-                "Module": "UnityEngine.CoreModule.dll",
-                "Arguments": [
-                  {
-                    "Argument": "o",
-                    "IsInvocation": false,
-                    "IsLiteral": false
-                  }
-                ],
-                "Line": 44
-              }
-            ],
-            "Variables": [
-              {
-                "Variable": {
-                  "Name": "o",
-                  "Type": "UnityEngine.GameObject",
-                  "Assignment": "Instantiate(o)",
-                  "Kind": "Assignment",
-                  "AssignmentLine": 41,
-                  "AssignmentKind": "SimpleAssignmentExpression"
-                }
-              },
-              {
-                "Variable": {
-                  "Name": "o.transform.position",
-                  "Type": "UnityEngine.Vector3",
-                  "Assignment": "o.transform.position + new Vector3(10, 10, 10)",
-                  "Kind": "Assignment",
-                  "AssignmentLine": 42,
-                  "AssignmentKind": "SimpleAssignmentExpression"
-                }
-              },
-              {
-                "Variable": {
-                  "Name": "Instantiate(o)",
-                  "Type": "UnityEngine.GameObject",
-                  "Kind": "Use",
-                  "UseLine": 41,
-                  "UseKind": "Invocation",
-                  "AssignedTo": "o",
-                  "Value": null,
-                  "Operation": "SimpleAssignmentExpression",
-                  "VariablesList": []
-                }
-              },
-              {
-                "Variable": {
-                  "Name": "o.transform.position + new Vector3(10, 10, 10)",
-                  "Type": "UnityEngine.Vector3",
-                  "Kind": "Use",
-                  "UseLine": 42,
-                  "UseKind": "BinaryOperator",
-                  "AssignedTo": "o.transform.position",
-                  "Value": null,
-                  "Operation": "SimpleAssignmentExpression",
-                  "VariablesList": [
-                    {
-                      "Name": "o.transform.position",
-                      "Type": "UnityEngine.Vector3",
-                      "Kind": "Use",
-                      "UseLine": 42,
-                      "UseKind": "PropertyReference",
-                      "AssignedTo": "o.transform.position",
-                      "Value": null,
-                      "Operation": "SimpleMemberAccessExpression",
-                      "VariablesList": []
-                    },
-                    {
-                      "Name": "new Vector3(10, 10, 10)",
-                      "Type": "UnityEngine.Vector3",
-                      "Kind": "Use",
-                      "UseLine": 42,
-                      "UseKind": "ObjectCreation",
-                      "AssignedTo": "o.transform.position",
-                      "Value": null,
-                      "Operation": "ObjectCreationExpression",
-                      "VariablesList": []
-                    }
-                  ]
-                }
-              }
-            ],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 40
-          },
-          {
-            "Name": "FixedUpdate",
-            "FullName": "Inputs.FixedUpdate()",
-            "Modifiers": [
-              "private"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [
-              {
-                "Name": "Test2",
-                "FullName": "Test.Input.TestInput.StateManager.Test2()",
-                "ReturnType": "Void",
-                "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                "DefinitionLine": 96,
-                "Kind": "SourceFile",
-                "Module": null,
-                "Arguments": [],
-                "Line": 50
-              }
-            ],
-            "Variables": [
-              {
-                "Variable": {
-                  "Name": "s",
-                  "Type": "StateManager",
-                  "Assignment": "new StateManager()",
-                  "Kind": "Definition",
-                  "DefinitionLine": 48
-                }
-              }
-            ],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 47
-          }
-        ],
-        "Fields": [
-          {
-            "Name": "anim",
-            "Type": "Animation",
-            "Modifiers": [],
-            "Assignment": null,
-            "Attributes": [
-              "SerializeField"
-            ],
-            "Line": 10
-          },
-          {
-            "Name": "o",
-            "Type": "GameObject",
-            "Modifiers": [],
-            "Assignment": null,
-            "Attributes": [
-              "SerializeField"
-            ],
-            "Line": 11
-          }
-        ],
-        "Attributes": [],
-        "Line": 8
-      }
-    ],
-    "Usings": [
-      {
-        "Name": "System",
-        "Line": 1
-      },
-      {
-        "Name": "System.Collections",
-        "Line": 2
-      },
-      {
-        "Name": "System.Collections.Generic",
-        "Line": 3
-      },
-      {
-        "Name": "Test.Input.TestInput",
-        "Line": 4
-      },
-      {
-        "Name": "Unity.VisualScripting",
-        "Line": 5
-      },
-      {
-        "Name": "UnityEngine",
-        "Line": 6
-      },
-      {
-        "Name": "UnityEngine.Animations",
-        "Line": 7
-      }
-    ],
-    "Line": 1
-  },
-  {
-    "Name": "InterfacesTest",
-    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\InterfacesTest.cs",
-    "Interfaces": [
-      {
-        "Name": "InterfacesTest",
-        "Modifiers": [
-          "public"
-        ],
-        "Methods": [
-          {
-            "Name": "Print",
-            "FullName": "InterfacesTest.Print()",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [],
-            "Variables": [],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 11
-          },
-          {
-            "Name": "PrintError",
-            "FullName": "InterfacesTest.PrintError()",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [],
-            "Variables": [],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 12
-          }
-        ],
-        "Properties": [
-          {
-            "Name": "Number",
-            "Type": "int",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "Line": 7
-          },
-          {
-            "Name": "Number1",
-            "Type": "int",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "Line": 8
-          },
-          {
-            "Name": "Number2",
-            "Type": "int",
-            "Modifiers": [
-              "public"
-            ],
-            "Attributes": [],
-            "Line": 9
-          }
-        ],
-        "Attributes": [],
-        "Line": 5
-      }
-    ],
-    "Namespaces": [],
-    "Classes": [],
-    "Usings": [
-      {
-        "Name": "System.Collections",
-        "Line": 1
-      },
-      {
-        "Name": "System.Collections.Generic",
-        "Line": 2
-      },
-      {
-        "Name": "UnityEngine",
-        "Line": 3
-      }
-    ],
-    "Line": 1
-  },
-  {
-    "Name": "SpehereManager",
-    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
-    "Interfaces": [],
-    "Namespaces": [
-      {
-        "Attributes": [],
-        "Name": "Sphere",
-        "FileName": null,
+        "Inheritance": "object",
         "Interfaces": [],
-        "Namespaces": [],
-        "Classes": [
+        "Properties": [],
+        "Methods": [
           {
-            "Name": "SpehereManager",
+            "HasBody": false,
+            "HasExpressionBody": false,
+            "Name": "Main",
+            "IsEmpty": true,
+            "FullName": "Program.Main(string[])",
             "Modifiers": [
-              "public"
-            ],
-            "Inheritance": "MonoBehaviour",
-            "Interfaces": [],
-            "Properties": [],
-            "Methods": [
-              {
-                "Name": "Start",
-                "FullName": "Sphere.SpehereManager.Start()",
-                "Modifiers": [],
-                "Attributes": [],
-                "ReturnType": "void",
-                "Parameters": [],
-                "Invocations": [
-                  {
-                    "Name": "FindObjectOfType",
-                    "FullName": "UnityEngine.Object.FindObjectOfType<MyGame.CubeManager>()",
-                    "ReturnType": "CubeManager",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "UnityEngine.CoreModule.dll",
-                    "Arguments": [],
-                    "Line": 15
-                  }
-                ],
-                "Variables": [
-                  {
-                    "Variable": {
-                      "Name": "cubeManager",
-                      "Type": "MyGame.CubeManager",
-                      "Assignment": "FindObjectOfType<CubeManager>()",
-                      "Kind": "Assignment",
-                      "AssignmentLine": 14,
-                      "AssignmentKind": "SimpleAssignmentExpression"
-                    }
-                  },
-                  {
-                    "Variable": {
-                      "Name": "FindObjectOfType<CubeManager>()",
-                      "Type": "MyGame.CubeManager",
-                      "Kind": "Use",
-                      "UseLine": 14,
-                      "UseKind": "Invocation",
-                      "AssignedTo": "cubeManager",
-                      "Value": null,
-                      "Operation": "SimpleAssignmentExpression",
-                      "VariablesList": []
-                    }
-                  }
-                ],
-                "Statements": [],
-                "WhileBlocks": [],
-                "ForEachBlocks": [],
-                "Line": 13
-              },
-              {
-                "Name": "Update",
-                "FullName": "Sphere.SpehereManager.Update()",
-                "Modifiers": [],
-                "Attributes": [],
-                "ReturnType": "void",
-                "Parameters": [],
-                "Invocations": [
-                  {
-                    "Name": "GenerateCube",
-                    "FullName": "MyGame.CubeManager.GenerateCube()",
-                    "ReturnType": "Void",
-                    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
-                    "DefinitionLine": 57,
-                    "Kind": "SourceFile",
-                    "Module": null,
-                    "Arguments": [],
-                    "Line": 21
-                  },
-                  {
-                    "Name": "FindObjectOfType",
-                    "FullName": "UnityEngine.Object.FindObjectOfType<MyGame.CubeManager>()",
-                    "ReturnType": "CubeManager",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "UnityEngine.CoreModule.dll",
-                    "Arguments": [],
-                    "Line": 22
-                  }
-                ],
-                "Variables": [
-                  {
-                    "Variable": {
-                      "Name": "cubeManager",
-                      "Type": "MyGame.CubeManager",
-                      "Assignment": "FindObjectOfType<CubeManager>()",
-                      "Kind": "Assignment",
-                      "AssignmentLine": 21,
-                      "AssignmentKind": "SimpleAssignmentExpression"
-                    }
-                  },
-                  {
-                    "Variable": {
-                      "Name": "FindObjectOfType<CubeManager>()",
-                      "Type": "MyGame.CubeManager",
-                      "Kind": "Use",
-                      "UseLine": 21,
-                      "UseKind": "Invocation",
-                      "AssignedTo": "cubeManager",
-                      "Value": null,
-                      "Operation": "SimpleAssignmentExpression",
-                      "VariablesList": []
-                    }
-                  }
-                ],
-                "Statements": [],
-                "WhileBlocks": [],
-                "ForEachBlocks": [],
-                "Line": 19
-              },
-              {
-                "Name": "GiveMeCube",
-                "FullName": "Sphere.SpehereManager.GiveMeCube(string)",
-                "Modifiers": [
-                  "public"
-                ],
-                "Attributes": [],
-                "ReturnType": "GameObject",
-                "Parameters": [],
-                "Invocations": [
-                  {
-                    "Name": "WriteLine",
-                    "FullName": "System.Console.WriteLine(string)",
-                    "ReturnType": "Void",
-                    "FileName": null,
-                    "DefinitionLine": 1,
-                    "Kind": "MetadataFile",
-                    "Module": "CommonLanguageRuntimeLibrary",
-                    "Arguments": [
-                      {
-                        "Argument": "s",
-                        "IsInvocation": false,
-                        "IsLiteral": false
-                      }
-                    ],
-                    "Line": 27
-                  },
-                  {
-                    "Name": "GenerateCube",
-                    "FullName": "MyGame.CubeManager.GenerateCube()",
-                    "ReturnType": "Void",
-                    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
-                    "DefinitionLine": 57,
-                    "Kind": "SourceFile",
-                    "Module": null,
-                    "Arguments": [],
-                    "Line": 28
-                  }
-                ],
-                "Variables": [],
-                "Statements": [],
-                "WhileBlocks": [],
-                "ForEachBlocks": [],
-                "Line": 25
-              }
-            ],
-            "Fields": [
-              {
-                "Name": "cubeManager",
-                "Type": "CubeManager",
-                "Modifiers": [],
-                "Assignment": null,
-                "Attributes": [],
-                "Line": 11
-              }
+              "public",
+              "static"
             ],
             "Attributes": [],
-            "Line": 9
+            "ReturnType": "void",
+            "Parameters": [
+              {
+                "Name": "args",
+                "Type": "string[]",
+                "Assignment": null,
+                "Attributes": []
+              }
+            ],
+            "Invocations": [],
+            "Variables": [],
+            "Statements": [],
+            "WhileBlocks": [],
+            "ForEachBlocks": [],
+            "ForBlocks": [],
+            "IfBlocks": [],
+            "SwitchBlocks": [],
+            "Returns": [],
+            "Line": 5
           }
         ],
-        "Usings": [],
-        "Line": 7
+        "Fields": [],
+        "Constructors": [],
+        "Attributes": [],
+        "Line": 3
       }
     ],
-    "Classes": [],
     "Usings": [
       {
-        "Name": "MyGame",
-        "Line": 1
-      },
-      {
         "Name": "System",
-        "Line": 2
-      },
-      {
-        "Name": "System.Collections",
-        "Line": 3
-      },
-      {
-        "Name": "System.Collections.Generic",
-        "Line": 4
-      },
-      {
-        "Name": "UnityEngine",
-        "Line": 5
+        "Line": 1
       }
     ],
     "Line": 1
   },
   {
-    "Name": "StateManager",
-    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+    "Name": "State",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\State.cs",
+    "Language": "C#",
     "Interfaces": [],
     "Namespaces": [
       {
@@ -1069,40 +76,648 @@
         "Name": "Test",
         "FileName": null,
         "Interfaces": [],
-        "Namespaces": [
+        "Namespaces": [],
+        "Classes": [
           {
-            "Attributes": [],
-            "Name": "Input",
-            "FileName": null,
+            "Name": "State",
+            "FullName": "Test.State",
+            "FullInheritanceName": "Test.StateManager",
+            "InnerClasses": [],
+            "ClassConstraints": [],
+            "Modifiers": [
+              "public"
+            ],
+            "Inheritance": "Test.StateManager",
             "Interfaces": [],
-            "Namespaces": [
+            "Properties": [],
+            "Methods": [],
+            "Fields": [
               {
+                "Name": "b",
+                "Type": "int",
+                "Modifiers": [
+                  "protected"
+                ],
+                "Assignment": null,
                 "Attributes": [],
-                "Name": "TestInput",
-                "FileName": null,
-                "Interfaces": [],
-                "Namespaces": [],
-                "Classes": [
+                "Line": 7
+              }
+            ],
+            "Constructors": [
+              {
+                "ClassRef": "Test.State",
+                "ReturnType": "State",
+                "HasBody": false,
+                "HasExpressionBody": true,
+                "Name": "State",
+                "IsEmpty": false,
+                "FullName": "State",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [
+                  "Obsolete"
+                ],
+                "Parameters": [
                   {
-                    "Name": "StateManager",
+                    "Name": "a",
+                    "Type": "int",
+                    "Assignment": null,
+                    "Attributes": []
+                  },
+                  {
+                    "Name": "b",
+                    "Type": "int",
+                    "Assignment": null,
+                    "Attributes": []
+                  }
+                ],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 8
+              },
+              {
+                "ClassRef": "Test.State",
+                "ReturnType": "State",
+                "HasBody": true,
+                "HasExpressionBody": false,
+                "Name": "State",
+                "IsEmpty": false,
+                "FullName": "State",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "Parameters": [
+                  {
+                    "Name": "a",
+                    "Type": "int",
+                    "Assignment": null,
+                    "Attributes": []
+                  },
+                  {
+                    "Name": "b",
+                    "Type": "int",
+                    "Assignment": null,
+                    "Attributes": []
+                  },
+                  {
+                    "Name": "c",
+                    "Type": "int",
+                    "Assignment": null,
+                    "Attributes": []
+                  }
+                ],
+                "Invocations": [],
+                "Variables": [
+                  {
+                    "Variable": {
+                      "Name": "this.b",
+                      "Type": "int",
+                      "Assignment": "b",
+                      "Kind": "Assignment",
+                      "AssignmentLine": 11,
+                      "AssignmentKind": "SimpleAssignmentExpression"
+                    }
+                  },
+                  {
+                    "Variable": {
+                      "Name": "b",
+                      "Type": "int",
+                      "Kind": "Use",
+                      "UseLine": 11,
+                      "UseKind": "ParameterReference",
+                      "AssignedTo": "this.b",
+                      "Value": null,
+                      "Operation": "SimpleAssignmentExpression",
+                      "VariablesList": []
+                    }
+                  }
+                ],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 10
+              }
+            ],
+            "Attributes": [],
+            "Line": 5
+          }
+        ],
+        "Usings": [],
+        "Line": 3
+      }
+    ],
+    "Classes": [],
+    "Usings": [
+      {
+        "Name": "System",
+        "Line": 1
+      }
+    ],
+    "Line": 1
+  },
+  {
+    "Name": "StateInState",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
+    "Language": "C#",
+    "Interfaces": [],
+    "Namespaces": [
+      {
+        "Attributes": [],
+        "Name": "Test",
+        "FileName": null,
+        "Interfaces": [],
+        "Namespaces": [],
+        "Classes": [
+          {
+            "Name": "StateInState",
+            "FullName": "Test.StateInState<T>",
+            "FullInheritanceName": "object",
+            "InnerClasses": [
+              {
+                "Name": "InnerState",
+                "FullName": "Test.StateInState<T>.InnerState",
+                "FullInheritanceName": "object",
+                "InnerClasses": [],
+                "ClassConstraints": [],
+                "Modifiers": [
+                  "public"
+                ],
+                "Inheritance": "object",
+                "Interfaces": [],
+                "Properties": [],
+                "Methods": [
+                  {
+                    "HasBody": false,
+                    "HasExpressionBody": false,
+                    "Name": "Method2",
+                    "IsEmpty": true,
+                    "FullName": "Test.StateInState<T>.InnerState.Method2()",
                     "Modifiers": [
                       "public"
                     ],
-                    "Inheritance": "SuperClass",
-                    "Interfaces": [],
-                    "Properties": [],
-                    "Methods": [
+                    "Attributes": [],
+                    "ReturnType": "void",
+                    "Parameters": [],
+                    "Invocations": [],
+                    "Variables": [],
+                    "Statements": [],
+                    "WhileBlocks": [],
+                    "ForEachBlocks": [],
+                    "ForBlocks": [],
+                    "IfBlocks": [],
+                    "SwitchBlocks": [],
+                    "Returns": [],
+                    "Line": 23
+                  },
+                  {
+                    "HasBody": true,
+                    "HasExpressionBody": false,
+                    "Name": "Method3",
+                    "IsEmpty": false,
+                    "FullName": "Test.StateInState<T>.InnerState.Method3()",
+                    "Modifiers": [
+                      "public"
+                    ],
+                    "Attributes": [],
+                    "ReturnType": "int",
+                    "Parameters": [],
+                    "Invocations": [],
+                    "Variables": [],
+                    "Statements": [],
+                    "WhileBlocks": [],
+                    "ForEachBlocks": [],
+                    "ForBlocks": [],
+                    "IfBlocks": [],
+                    "SwitchBlocks": [],
+                    "Returns": [
                       {
-                        "Name": "Start",
-                        "FullName": "Test.Input.TestInput.StateManager.Start()",
-                        "Modifiers": [],
-                        "Attributes": [],
-                        "ReturnType": "void",
-                        "Parameters": [],
+                        "ReturnStatement": "10",
+                        "ReturnKind": "NumericLiteralExpression",
+                        "Line": 24
+                      }
+                    ],
+                    "Line": 24
+                  },
+                  {
+                    "HasBody": false,
+                    "HasExpressionBody": true,
+                    "Name": "Ciaone2",
+                    "IsEmpty": false,
+                    "FullName": "Test.StateInState<T>.InnerState.Ciaone2()",
+                    "Modifiers": [
+                      "public"
+                    ],
+                    "Attributes": [],
+                    "ReturnType": "InnerState",
+                    "Parameters": [],
+                    "Invocations": [],
+                    "Variables": [],
+                    "Statements": [],
+                    "WhileBlocks": [],
+                    "ForEachBlocks": [],
+                    "ForBlocks": [],
+                    "IfBlocks": [],
+                    "SwitchBlocks": [],
+                    "Returns": [],
+                    "Line": 26
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Name": "d",
+                    "Type": "int",
+                    "Modifiers": [
+                      "protected"
+                    ],
+                    "Assignment": null,
+                    "Attributes": [],
+                    "Line": 13
+                  }
+                ],
+                "Constructors": [
+                  {
+                    "ClassRef": "Test.StateInState<T>.InnerState",
+                    "ReturnType": "InnerState",
+                    "HasBody": true,
+                    "HasExpressionBody": false,
+                    "Name": "InnerState",
+                    "IsEmpty": false,
+                    "FullName": "InnerState",
+                    "Modifiers": [
+                      "public"
+                    ],
+                    "Attributes": [],
+                    "Parameters": [],
+                    "Invocations": [
+                      {
+                        "Name": "Method2",
+                        "FullName": "Test.StateInState<T>.InnerState.Method2()",
+                        "ReturnType": "Void",
+                        "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
+                        "DefinitionLine": 23,
+                        "Kind": "SourceFile",
+                        "Module": null,
+                        "Arguments": [],
+                        "Line": 17
+                      },
+                      {
+                        "Name": "Method3",
+                        "FullName": "Test.StateInState<T>.InnerState.Method3()",
+                        "ReturnType": "Int32",
+                        "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
+                        "DefinitionLine": 24,
+                        "Kind": "SourceFile",
+                        "Module": null,
+                        "Arguments": [],
+                        "Line": 18
+                      }
+                    ],
+                    "Variables": [
+                      {
+                        "Variable": {
+                          "Name": "this.d",
+                          "Type": "int",
+                          "Assignment": "1",
+                          "Kind": "Assignment",
+                          "AssignmentLine": 15,
+                          "AssignmentKind": "SimpleAssignmentExpression"
+                        }
+                      },
+                      {
+                        "Variable": {
+                          "Name": "this.d",
+                          "Type": "int",
+                          "Assignment": "Method3()",
+                          "Kind": "Assignment",
+                          "AssignmentLine": 17,
+                          "AssignmentKind": "SimpleAssignmentExpression"
+                        }
+                      },
+                      {
+                        "Variable": {
+                          "Name": null,
+                          "Type": "int",
+                          "Kind": "Use",
+                          "UseLine": 15,
+                          "UseKind": "Literal",
+                          "AssignedTo": "this.d",
+                          "Value": "1",
+                          "Operation": "SimpleAssignmentExpression",
+                          "VariablesList": []
+                        }
+                      },
+                      {
+                        "Variable": {
+                          "Name": "Method3()",
+                          "Type": "int",
+                          "Kind": "Use",
+                          "UseLine": 17,
+                          "UseKind": "Invocation",
+                          "AssignedTo": "this.d",
+                          "Value": null,
+                          "Operation": "SimpleAssignmentExpression",
+                          "VariablesList": []
+                        }
+                      }
+                    ],
+                    "Statements": [],
+                    "WhileBlocks": [
+                      {
+                        "Condition": {
+                          "ConditionTokens": [
+                            "true"
+                          ],
+                          "Type": "bool",
+                          "ConditionStatement": "true",
+                          "ConditionType": "TrueLiteralExpression",
+                          "ConditionKind": "Literal"
+                        },
+                        "Depth": 1,
+                        "EndLine": 20,
+                        "StartLine": 20,
+                        "Invocations": [
+                          {
+                            "Name": "Method2",
+                            "FullName": "Test.StateInState<T>.InnerState.Method2()",
+                            "ReturnType": "Void",
+                            "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
+                            "DefinitionLine": 23,
+                            "Kind": "SourceFile",
+                            "Module": null,
+                            "Arguments": [],
+                            "Line": 20
+                          }
+                        ],
+                        "Variables": [],
+                        "WhileBlocks": [],
+                        "ForBlocks": [],
+                        "IfBlocks": [],
+                        "SwitchBlocks": [],
+                        "ForEachBlocks": [],
+                        "ElseBlocks": [],
+                        "Returns": []
+                      }
+                    ],
+                    "ForEachBlocks": [],
+                    "ForBlocks": [],
+                    "IfBlocks": [],
+                    "SwitchBlocks": [],
+                    "Returns": [],
+                    "Line": 14
+                  },
+                  {
+                    "ClassRef": "Test.StateInState<T>.InnerState",
+                    "ReturnType": "InnerState",
+                    "HasBody": false,
+                    "HasExpressionBody": true,
+                    "Name": "InnerState",
+                    "IsEmpty": false,
+                    "FullName": "InnerState",
+                    "Modifiers": [
+                      "public"
+                    ],
+                    "Attributes": [],
+                    "Parameters": [
+                      {
+                        "Name": "d",
+                        "Type": "int",
+                        "Assignment": null,
+                        "Attributes": []
+                      }
+                    ],
+                    "Invocations": [],
+                    "Variables": [],
+                    "Statements": [],
+                    "WhileBlocks": [],
+                    "ForEachBlocks": [],
+                    "ForBlocks": [],
+                    "IfBlocks": [],
+                    "SwitchBlocks": [],
+                    "Returns": [],
+                    "Line": 25
+                  }
+                ],
+                "Attributes": [],
+                "Line": 11
+              }
+            ],
+            "ClassConstraints": [],
+            "Modifiers": [
+              "public"
+            ],
+            "Inheritance": "object",
+            "Interfaces": [],
+            "Properties": [],
+            "Methods": [
+              {
+                "HasBody": false,
+                "HasExpressionBody": false,
+                "Name": "Method1",
+                "IsEmpty": true,
+                "FullName": "Test.StateInState<T>.Method1(string)",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "ReturnType": "void",
+                "Parameters": [
+                  {
+                    "Name": "s",
+                    "Type": "string",
+                    "Assignment": null,
+                    "Attributes": []
+                  }
+                ],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 9
+              }
+            ],
+            "Fields": [],
+            "Constructors": [
+              {
+                "ClassRef": "Test.StateInState<T>",
+                "ReturnType": "StateInState",
+                "HasBody": false,
+                "HasExpressionBody": false,
+                "Name": "StateInState",
+                "IsEmpty": true,
+                "FullName": "StateInState",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "Parameters": [],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 7
+              }
+            ],
+            "Attributes": [],
+            "Line": 5
+          }
+        ],
+        "Usings": [],
+        "Line": 3
+      }
+    ],
+    "Classes": [],
+    "Usings": [
+      {
+        "Name": "System",
+        "Line": 1
+      }
+    ],
+    "Line": 1
+  },
+  {
+    "Name": "StateManager",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
+    "Language": "C#",
+    "Interfaces": [],
+    "Namespaces": [
+      {
+        "Attributes": [],
+        "Name": "Test",
+        "FileName": null,
+        "Interfaces": [],
+        "Namespaces": [],
+        "Classes": [
+          {
+            "Name": "StateManager",
+            "FullName": "Test.StateManager",
+            "FullInheritanceName": "object",
+            "InnerClasses": [],
+            "ClassConstraints": [],
+            "Modifiers": [
+              "public",
+              "abstract"
+            ],
+            "Inheritance": "object",
+            "Interfaces": [],
+            "Properties": [
+              {
+                "Name": "A",
+                "Type": "int",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [
+                  "JsonIgnore"
+                ],
+                "Line": 12
+              },
+              {
+                "Name": "B",
+                "Type": "int",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "Line": 14
+              },
+              {
+                "Name": "C",
+                "Type": "int",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "Line": 19
+              }
+            ],
+            "Methods": [
+              {
+                "HasBody": true,
+                "HasExpressionBody": false,
+                "Name": "SwitchMeth",
+                "IsEmpty": false,
+                "FullName": "Test.StateManager.SwitchMeth()",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "ReturnType": "void",
+                "Parameters": [],
+                "Invocations": [
+                  {
+                    "Name": "Meth22",
+                    "FullName": "Test.StateManager.Meth22()",
+                    "ReturnType": "Int32",
+                    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
+                    "DefinitionLine": 34,
+                    "Kind": "SourceFile",
+                    "Module": null,
+                    "Arguments": [],
+                    "Line": 24
+                  }
+                ],
+                "Variables": [
+                  {
+                    "Variable": {
+                      "Name": "aa",
+                      "Type": "int",
+                      "Assignment": "10",
+                      "Kind": "Definition",
+                      "DefinitionLine": 22
+                    }
+                  }
+                ],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [
+                  {
+                    "Condition": {
+                      "ConditionTokens": [
+                        "Meth22()"
+                      ],
+                      "Type": "int",
+                      "ConditionStatement": "Meth22()",
+                      "ConditionType": "InvocationExpression",
+                      "ConditionKind": "Method"
+                    },
+                    "CaseBranches": [
+                      {
+                        "labels": [
+                          "case 0:",
+                          "case 2:"
+                        ],
+                        "EndLine": 28,
+                        "StartLine": 26,
                         "Invocations": [
                           {
                             "Name": "WriteLine",
-                            "FullName": "System.Console.WriteLine(string)",
+                            "FullName": "System.Console.WriteLine(int)",
                             "ReturnType": "Void",
                             "FileName": null,
                             "DefinitionLine": 1,
@@ -1110,529 +725,56 @@
                             "Module": "CommonLanguageRuntimeLibrary",
                             "Arguments": [
                               {
-                                "Argument": "\"Hello\"",
+                                "Argument": "0",
                                 "IsInvocation": false,
                                 "IsLiteral": false
                               }
                             ],
-                            "Line": 47
+                            "Line": 28
                           }
                         ],
                         "Variables": [],
-                        "Statements": [],
                         "WhileBlocks": [],
+                        "ForBlocks": [],
+                        "IfBlocks": [],
+                        "SwitchBlocks": [],
                         "ForEachBlocks": [],
-                        "Line": 43
+                        "ElseBlocks": [],
+                        "Returns": []
                       },
                       {
-                        "Name": "Update",
-                        "FullName": "Test.Input.TestInput.StateManager.Update()",
-                        "Modifiers": [],
-                        "Attributes": [],
-                        "ReturnType": "void",
-                        "Parameters": [],
-                        "Invocations": [],
-                        "Variables": [
-                          {
-                            "Variable": {
-                              "Name": "forward",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 59,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "backward",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 60,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "left",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 61,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "right",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 62,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "forward",
-                              "Type": "bool",
-                              "Assignment": "true",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 65,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "backward",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 66,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "left",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 67,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "right",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 68,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "forward",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 71,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "backward",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 72,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "left",
-                              "Type": "bool",
-                              "Assignment": "true",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 73,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "right",
-                              "Type": "bool",
-                              "Assignment": "false",
-                              "Kind": "Assignment",
-                              "AssignmentLine": 74,
-                              "AssignmentKind": "SimpleAssignmentExpression"
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 59,
-                              "UseKind": "Literal",
-                              "AssignedTo": "forward",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 60,
-                              "UseKind": "Literal",
-                              "AssignedTo": "backward",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 61,
-                              "UseKind": "Literal",
-                              "AssignedTo": "left",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 62,
-                              "UseKind": "Literal",
-                              "AssignedTo": "right",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 65,
-                              "UseKind": "Literal",
-                              "AssignedTo": "forward",
-                              "Value": "true",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 66,
-                              "UseKind": "Literal",
-                              "AssignedTo": "backward",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 67,
-                              "UseKind": "Literal",
-                              "AssignedTo": "left",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 68,
-                              "UseKind": "Literal",
-                              "AssignedTo": "right",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 71,
-                              "UseKind": "Literal",
-                              "AssignedTo": "forward",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 72,
-                              "UseKind": "Literal",
-                              "AssignedTo": "backward",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 73,
-                              "UseKind": "Literal",
-                              "AssignedTo": "left",
-                              "Value": "true",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": null,
-                              "Type": "bool",
-                              "Kind": "Use",
-                              "UseLine": 74,
-                              "UseKind": "Literal",
-                              "AssignedTo": "right",
-                              "Value": "false",
-                              "Operation": "SimpleAssignmentExpression",
-                              "VariablesList": []
-                            }
-                          }
+                        "labels": [
+                          "case 1:"
                         ],
-                        "Statements": [],
-                        "WhileBlocks": [],
-                        "ForEachBlocks": [],
-                        "Line": 52
-                      },
-                      {
-                        "Name": "Test",
-                        "FullName": "Test.Input.TestInput.StateManager.Test()",
-                        "Modifiers": [
-                          "public",
-                          "override"
-                        ],
-                        "Attributes": [],
-                        "ReturnType": "void",
-                        "Parameters": [],
-                        "Invocations": [
-                          {
-                            "Name": "Test",
-                            "FullName": "SuperClass.Test()",
-                            "ReturnType": "Void",
-                            "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SuperClass.cs",
-                            "DefinitionLine": 7,
-                            "Kind": "SourceFile",
-                            "Module": null,
-                            "Arguments": [],
-                            "Line": 82
-                          },
-                          {
-                            "Name": "Instantiate",
-                            "FullName": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
-                            "ReturnType": "GameObject",
-                            "FileName": null,
-                            "DefinitionLine": 1,
-                            "Kind": "MetadataFile",
-                            "Module": "UnityEngine.CoreModule.dll",
-                            "Arguments": [
-                              {
-                                "Argument": "o.Cube",
-                                "IsInvocation": false,
-                                "IsLiteral": false
-                              }
-                            ],
-                            "Line": 91
-                          }
-                        ],
-                        "Variables": [
-                          {
-                            "Variable": {
-                              "Name": "i",
-                              "Type": "int",
-                              "Assignment": "10",
-                              "Kind": "Definition",
-                              "DefinitionLine": 82
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "j",
-                              "Type": "int",
-                              "Assignment": "25",
-                              "Kind": "Definition",
-                              "DefinitionLine": 83
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "result",
-                              "Type": "int",
-                              "Assignment": "1",
-                              "Kind": "Definition",
-                              "DefinitionLine": 84
-                            }
-                          },
-                          {
-                            "Variable": {
-                              "Name": "o",
-                              "Type": "MyGame.Cube.CubeHolder",
-                              "Assignment": "new MyGame.Cube.CubeHolder(result)",
-                              "Kind": "Definition",
-                              "DefinitionLine": 89
-                            }
-                          }
-                        ],
-                        "Statements": [],
-                        "WhileBlocks": [],
-                        "ForEachBlocks": [],
-                        "Line": 80
-                      },
-                      {
-                        "Name": "Numbers",
-                        "FullName": "Test.Input.TestInput.StateManager.Numbers()",
-                        "Modifiers": [
-                          "public"
-                        ],
-                        "Attributes": [],
-                        "ReturnType": "List<int>",
-                        "Parameters": [],
+                        "EndLine": 29,
+                        "StartLine": 29,
                         "Invocations": [],
                         "Variables": [],
-                        "Statements": [],
-                        "WhileBlocks": [],
-                        "ForEachBlocks": [],
-                        "Line": 94
-                      },
-                      {
-                        "Name": "Test2",
-                        "FullName": "Test.Input.TestInput.StateManager.Test2()",
-                        "Modifiers": [
-                          "public",
-                          "override"
-                        ],
-                        "Attributes": [],
-                        "ReturnType": "void",
-                        "Parameters": [],
-                        "Invocations": [
-                          {
-                            "Name": "Test2",
-                            "FullName": "SuperClass.Test2()",
-                            "ReturnType": "Void",
-                            "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SuperClass.cs",
-                            "DefinitionLine": 8,
-                            "Kind": "SourceFile",
-                            "Module": null,
-                            "Arguments": [],
-                            "Line": 99
-                          },
-                          {
-                            "Name": "Test",
-                            "FullName": "Test.Input.TestInput.StateManager.Test()",
-                            "ReturnType": "Void",
-                            "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                            "DefinitionLine": 80,
-                            "Kind": "SourceFile",
-                            "Module": null,
-                            "Arguments": [],
-                            "Line": 100
-                          }
-                        ],
-                        "Variables": [],
-                        "Statements": [],
                         "WhileBlocks": [
                           {
-                            "Condition": "isJumping",
-                            "Depth": 0,
-                            "EndLine": 115,
-                            "StartLine": 100,
-                            "Invocations": [
-                              {
-                                "Name": "ToString",
-                                "FullName": "int.ToString()",
-                                "ReturnType": "String",
-                                "FileName": null,
-                                "DefinitionLine": 1,
-                                "Kind": "MetadataFile",
-                                "Module": "CommonLanguageRuntimeLibrary",
-                                "Arguments": [],
-                                "Line": 110
-                              },
-                              {
-                                "Name": "WriteLine",
-                                "FullName": "System.Console.WriteLine(int)",
-                                "ReturnType": "Void",
-                                "FileName": null,
-                                "DefinitionLine": 1,
-                                "Kind": "MetadataFile",
-                                "Module": "CommonLanguageRuntimeLibrary",
-                                "Arguments": [
-                                  {
-                                    "Argument": "i * k",
-                                    "IsInvocation": true,
-                                    "IsLiteral": false
-                                  }
-                                ],
-                                "Line": 111
-                              }
-                            ],
+                            "Condition": {
+                              "ConditionTokens": [
+                                "B",
+                                "10"
+                              ],
+                              "Type": "bool",
+                              "ConditionStatement": "B > 10",
+                              "ConditionType": "GreaterThanExpression",
+                              "ConditionKind": "Method"
+                            },
+                            "Depth": 2,
+                            "EndLine": 29,
+                            "StartLine": 29,
+                            "Invocations": [],
                             "Variables": [
                               {
                                 "Variable": {
-                                  "Name": "i",
+                                  "Name": "B",
                                   "Type": "int",
-                                  "Assignment": "0",
-                                  "Kind": "Definition",
-                                  "DefinitionLine": 102
-                                }
-                              },
-                              {
-                                "Variable": {
-                                  "Name": "k",
-                                  "Type": "int",
-                                  "Assignment": "30",
-                                  "Kind": "Definition",
-                                  "DefinitionLine": 104
-                                }
-                              },
-                              {
-                                "Variable": {
-                                  "Name": "i",
-                                  "Type": "int",
-                                  "Assignment": "10",
+                                  "Assignment": "1",
                                   "Kind": "Assignment",
-                                  "AssignmentLine": 103,
-                                  "AssignmentKind": "SimpleAssignmentExpression"
-                                }
-                              },
-                              {
-                                "Variable": {
-                                  "Name": "i",
-                                  "Type": "int",
-                                  "Assignment": "k",
-                                  "Kind": "Assignment",
-                                  "AssignmentLine": 105,
-                                  "AssignmentKind": "MultiplyAssignmentExpression"
-                                }
-                              },
-                              {
-                                "Variable": {
-                                  "Name": "k",
-                                  "Type": "int",
-                                  "Assignment": "i * i * k",
-                                  "Kind": "Assignment",
-                                  "AssignmentLine": 107,
-                                  "AssignmentKind": "SimpleAssignmentExpression"
+                                  "AssignmentLine": 28,
+                                  "AssignmentKind": "SubtractAssignmentExpression"
                                 }
                               },
                               {
@@ -1640,470 +782,361 @@
                                   "Name": null,
                                   "Type": "int",
                                   "Kind": "Use",
-                                  "UseLine": 103,
+                                  "UseLine": 28,
                                   "UseKind": "Literal",
-                                  "AssignedTo": "i",
-                                  "Value": "10",
-                                  "Operation": "SimpleAssignmentExpression",
+                                  "AssignedTo": "B",
+                                  "Value": "1",
+                                  "Operation": "SubtractAssignmentExpression",
                                   "VariablesList": []
                                 }
-                              },
-                              {
-                                "Variable": {
-                                  "Name": "k",
-                                  "Type": "int",
-                                  "Kind": "Use",
-                                  "UseLine": 105,
-                                  "UseKind": "LocalReference",
-                                  "AssignedTo": "i",
-                                  "Value": null,
-                                  "Operation": "MultiplyAssignmentExpression",
-                                  "VariablesList": []
-                                }
-                              },
-                              {
-                                "Variable": {
-                                  "Name": "i * i * k",
-                                  "Type": "int",
-                                  "Kind": "Use",
-                                  "UseLine": 107,
-                                  "UseKind": "BinaryOperator",
-                                  "AssignedTo": "k",
-                                  "Value": null,
-                                  "Operation": "SimpleAssignmentExpression",
-                                  "VariablesList": [
-                                    {
-                                      "Name": "i * i",
-                                      "Type": "int",
-                                      "Kind": "Use",
-                                      "UseLine": 107,
-                                      "UseKind": "BinaryOperator",
-                                      "AssignedTo": "k",
-                                      "Value": null,
-                                      "Operation": "MultiplyExpression",
-                                      "VariablesList": [
-                                        {
-                                          "Name": "i",
-                                          "Type": "int",
-                                          "Kind": "Use",
-                                          "UseLine": 107,
-                                          "UseKind": "LocalReference",
-                                          "AssignedTo": "k",
-                                          "Value": null,
-                                          "Operation": "IdentifierName",
-                                          "VariablesList": []
-                                        },
-                                        {
-                                          "Name": "i",
-                                          "Type": "int",
-                                          "Kind": "Use",
-                                          "UseLine": 107,
-                                          "UseKind": "LocalReference",
-                                          "AssignedTo": "k",
-                                          "Value": null,
-                                          "Operation": "IdentifierName",
-                                          "VariablesList": []
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "Name": "k",
-                                      "Type": "int",
-                                      "Kind": "Use",
-                                      "UseLine": 107,
-                                      "UseKind": "LocalReference",
-                                      "AssignedTo": "k",
-                                      "Value": null,
-                                      "Operation": "IdentifierName",
-                                      "VariablesList": []
-                                    }
-                                  ]
-                                }
                               }
                             ],
-                            "WhileBlocks": [
-                              {
-                                "Condition": "i > 10",
-                                "Depth": 1,
-                                "EndLine": 114,
-                                "StartLine": 111,
-                                "Invocations": [
-                                  {
-                                    "Name": "Test",
-                                    "FullName": "Test.Input.TestInput.StateManager.Test()",
-                                    "ReturnType": "Void",
-                                    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                                    "DefinitionLine": 80,
-                                    "Kind": "SourceFile",
-                                    "Module": null,
-                                    "Arguments": [],
-                                    "Line": 114
-                                  }
-                                ],
-                                "Variables": [],
-                                "WhileBlocks": [],
-                                "ForBlocks": [],
-                                "IfBlocks": [],
-                                "SwitchCaseBlocks": [],
-                                "ForEachBlocks": [],
-                                "ElseBlocks": []
-                              }
-                            ],
-                            "ForBlocks": [],
-                            "IfBlocks": [],
-                            "SwitchCaseBlocks": [],
-                            "ForEachBlocks": [],
-                            "ElseBlocks": []
-                          }
-                        ],
-                        "ForEachBlocks": [
-                          {
-                            "Iterator": "a",
-                            "IteratorType": "int",
-                            "Iterable": "Numbers()",
-                            "IterableType": "System.Collections.Generic.List<int>",
-                            "Invocation": "Test.Input.TestInput.StateManager.Numbers()",
-                            "ExpressionIsInvocation": true,
-                            "Depth": 0,
-                            "EndLine": 0,
-                            "StartLine": 0,
-                            "Invocations": [
-                              {
-                                "Name": "Numbers",
-                                "FullName": "Test.Input.TestInput.StateManager.Numbers()",
-                                "ReturnType": "List",
-                                "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                                "DefinitionLine": 94,
-                                "Kind": "SourceFile",
-                                "Module": null,
-                                "Arguments": [],
-                                "Line": 98
-                              },
-                              {
-                                "Name": "WriteLine",
-                                "FullName": "System.Console.WriteLine(int)",
-                                "ReturnType": "Void",
-                                "FileName": null,
-                                "DefinitionLine": 1,
-                                "Kind": "MetadataFile",
-                                "Module": "CommonLanguageRuntimeLibrary",
-                                "Arguments": [
-                                  {
-                                    "Argument": "a",
-                                    "IsInvocation": false,
-                                    "IsLiteral": false
-                                  }
-                                ],
-                                "Line": 98
-                              }
-                            ],
-                            "Variables": [],
                             "WhileBlocks": [],
                             "ForBlocks": [],
                             "IfBlocks": [],
-                            "SwitchCaseBlocks": [],
+                            "SwitchBlocks": [],
                             "ForEachBlocks": [],
                             "ElseBlocks": [],
-                            "Line": 1
+                            "Returns": []
                           }
                         ],
-                        "Line": 96
+                        "ForBlocks": [],
+                        "IfBlocks": [],
+                        "SwitchBlocks": [],
+                        "ForEachBlocks": [],
+                        "ElseBlocks": [],
+                        "Returns": []
+                      },
+                      {
+                        "labels": [
+                          "default:"
+                        ],
+                        "EndLine": 30,
+                        "StartLine": 30,
+                        "Invocations": [
+                          {
+                            "Name": "WriteLine",
+                            "FullName": "System.Console.WriteLine(int)",
+                            "ReturnType": "Void",
+                            "FileName": null,
+                            "DefinitionLine": 1,
+                            "Kind": "MetadataFile",
+                            "Module": "CommonLanguageRuntimeLibrary",
+                            "Arguments": [
+                              {
+                                "Argument": "10",
+                                "IsInvocation": false,
+                                "IsLiteral": false
+                              }
+                            ],
+                            "Line": 30
+                          }
+                        ],
+                        "Variables": [],
+                        "WhileBlocks": [],
+                        "ForBlocks": [],
+                        "IfBlocks": [],
+                        "SwitchBlocks": [],
+                        "ForEachBlocks": [],
+                        "ElseBlocks": [],
+                        "Returns": []
                       }
                     ],
-                    "Fields": [
-                      {
-                        "Name": "isJumping",
-                        "Type": "bool",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "false",
-                        "Attributes": [],
-                        "Line": 35
-                      },
-                      {
-                        "Name": "noDamage",
-                        "Type": "bool",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "false",
-                        "Attributes": [],
-                        "Line": 36
-                      },
-                      {
-                        "Name": "dir",
-                        "Type": "int",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "0",
-                        "Attributes": [],
-                        "Line": 37
-                      },
-                      {
-                        "Name": "forward",
-                        "Type": "bool",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "false",
-                        "Attributes": [],
-                        "Line": 38
-                      },
-                      {
-                        "Name": "backward",
-                        "Type": "bool",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "false",
-                        "Attributes": [],
-                        "Line": 39
-                      },
-                      {
-                        "Name": "left",
-                        "Type": "bool",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "false",
-                        "Attributes": [],
-                        "Line": 40
-                      },
-                      {
-                        "Name": "right",
-                        "Type": "bool",
-                        "Modifiers": [
-                          "protected"
-                        ],
-                        "Assignment": "false",
-                        "Attributes": [],
-                        "Line": 41
-                      }
-                    ],
-                    "Attributes": [],
-                    "Line": 33
+                    "Depth": 1,
+                    "EndLine": 31,
+                    "StartLine": 24,
+                    "Invocations": [],
+                    "Variables": [],
+                    "WhileBlocks": [],
+                    "ForBlocks": [],
+                    "IfBlocks": [],
+                    "SwitchBlocks": [],
+                    "ForEachBlocks": [],
+                    "ElseBlocks": [],
+                    "Returns": []
                   }
                 ],
-                "Usings": [
-                  {
-                    "Name": "UnityEngine.Rendering",
-                    "Line": 29
-                  },
-                  {
-                    "Name": "System.Linq",
-                    "Line": 30
-                  },
-                  {
-                    "Name": "System",
-                    "Line": 31
-                  }
-                ],
-                "Line": 27
-              }
-            ],
-            "Classes": [
+                "Returns": [],
+                "Line": 21
+              },
               {
-                "Name": "Prova",
+                "HasBody": false,
+                "HasExpressionBody": true,
+                "Name": "Meth22",
+                "IsEmpty": false,
+                "FullName": "Test.StateManager.Meth22()",
                 "Modifiers": [
-                  "public",
-                  "abstract"
-                ],
-                "Inheritance": "Object",
-                "Interfaces": [],
-                "Properties": [
-                  {
-                    "Name": "O",
-                    "Type": "GameObject",
-                    "Modifiers": [
-                      "public",
-                      "abstract"
-                    ],
-                    "Attributes": [],
-                    "Line": 19
-                  },
-                  {
-                    "Name": "Name",
-                    "Type": "string",
-                    "Modifiers": [
-                      "public",
-                      "abstract"
-                    ],
-                    "Attributes": [],
-                    "Line": 20
-                  },
-                  {
-                    "Name": "Description",
-                    "Type": "string",
-                    "Modifiers": [
-                      "public",
-                      "abstract"
-                    ],
-                    "Attributes": [],
-                    "Line": 21
-                  }
-                ],
-                "Methods": [
-                  {
-                    "Name": "Print",
-                    "FullName": "Test.Input.Prova.Print(int, string)",
-                    "Modifiers": [
-                      "public",
-                      "abstract"
-                    ],
-                    "Attributes": [],
-                    "ReturnType": "void",
-                    "Parameters": [],
-                    "Invocations": [],
-                    "Variables": [],
-                    "Statements": [],
-                    "WhileBlocks": [],
-                    "ForEachBlocks": [],
-                    "Line": 23
-                  },
-                  {
-                    "Name": "Update",
-                    "FullName": "Test.Input.Prova.Update(UnityEngine.GameObject)",
-                    "Modifiers": [
-                      "public",
-                      "abstract"
-                    ],
-                    "Attributes": [],
-                    "ReturnType": "void",
-                    "Parameters": [],
-                    "Invocations": [],
-                    "Variables": [],
-                    "Statements": [],
-                    "WhileBlocks": [],
-                    "ForEachBlocks": [],
-                    "Line": 24
-                  }
-                ],
-                "Fields": [
-                  {
-                    "Name": "o",
-                    "Type": "GameObject",
-                    "Modifiers": [
-                      "protected"
-                    ],
-                    "Assignment": null,
-                    "Attributes": [],
-                    "Line": 17
-                  }
+                  "public"
                 ],
                 "Attributes": [],
-                "Line": 15
+                "ReturnType": "int",
+                "Parameters": [],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 34
+              },
+              {
+                "HasBody": false,
+                "HasExpressionBody": false,
+                "Name": "Meth23",
+                "IsEmpty": true,
+                "FullName": "Test.StateManager.Meth23()",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "ReturnType": "void",
+                "Parameters": [],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 35
+              },
+              {
+                "HasBody": false,
+                "HasExpressionBody": true,
+                "Name": "MethExp",
+                "IsEmpty": false,
+                "FullName": "Test.StateManager.MethExp()",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "ReturnType": "int",
+                "Parameters": [],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 37
+              },
+              {
+                "HasBody": false,
+                "HasExpressionBody": true,
+                "Name": "Ciaone",
+                "IsEmpty": false,
+                "FullName": "Test.StateManager.Ciaone()",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "ReturnType": "string",
+                "Parameters": [],
+                "Invocations": [],
+                "Variables": [],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 38
               }
             ],
-            "Usings": [],
-            "Line": 13
+            "Fields": [
+              {
+                "Name": "a",
+                "Type": "int",
+                "Modifiers": [
+                  "protected"
+                ],
+                "Assignment": null,
+                "Attributes": [],
+                "Line": 8
+              },
+              {
+                "Name": "b",
+                "Type": "int",
+                "Modifiers": [
+                  "protected"
+                ],
+                "Assignment": null,
+                "Attributes": [],
+                "Line": 9
+              },
+              {
+                "Name": "c",
+                "Type": "int",
+                "Modifiers": [
+                  "protected"
+                ],
+                "Assignment": null,
+                "Attributes": [],
+                "Line": 10
+              }
+            ],
+            "Constructors": [
+              {
+                "ClassRef": "Test.StateManager",
+                "ReturnType": "StateManager",
+                "HasBody": true,
+                "HasExpressionBody": false,
+                "Name": "StateManager",
+                "IsEmpty": false,
+                "FullName": "StateManager",
+                "Modifiers": [
+                  "public"
+                ],
+                "Attributes": [],
+                "Parameters": [
+                  {
+                    "Name": "a",
+                    "Type": "int",
+                    "Assignment": null,
+                    "Attributes": []
+                  }
+                ],
+                "Invocations": [],
+                "Variables": [
+                  {
+                    "Variable": {
+                      "Name": "this.a",
+                      "Type": "int",
+                      "Assignment": "a",
+                      "Kind": "Assignment",
+                      "AssignmentLine": 42,
+                      "AssignmentKind": "SimpleAssignmentExpression"
+                    }
+                  },
+                  {
+                    "Variable": {
+                      "Name": "a",
+                      "Type": "int",
+                      "Kind": "Use",
+                      "UseLine": 42,
+                      "UseKind": "ParameterReference",
+                      "AssignedTo": "this.a",
+                      "Value": null,
+                      "Operation": "SimpleAssignmentExpression",
+                      "VariablesList": []
+                    }
+                  }
+                ],
+                "Statements": [],
+                "WhileBlocks": [],
+                "ForEachBlocks": [],
+                "ForBlocks": [],
+                "IfBlocks": [],
+                "SwitchBlocks": [],
+                "Returns": [],
+                "Line": 41
+              }
+            ],
+            "Attributes": [],
+            "Line": 6
           }
         ],
-        "Classes": [],
-        "Usings": [
-          {
-            "Name": "UnityEngine.Animations",
-            "Line": 8
-          },
-          {
-            "Name": "System.IO",
-            "Line": 9
-          }
-        ],
-        "Line": 6
+        "Usings": [],
+        "Line": 4
       }
     ],
     "Classes": [],
     "Usings": [
       {
-        "Name": "MyGame",
+        "Name": "System",
         "Line": 1
       },
       {
-        "Name": "System.Collections",
+        "Name": "System.Text.Json.Serialization",
         "Line": 2
-      },
-      {
-        "Name": "System.Collections.Generic",
-        "Line": 3
-      },
-      {
-        "Name": "UnityEngine",
-        "Line": 4
       }
     ],
     "Line": 1
   },
   {
-    "Name": "SuperClass",
-    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SuperClass.cs",
+    "Name": ".NETCoreApp,Version=v6.0.AssemblyAttributes",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\obj\\Debug\\net6.0\\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs",
+    "Language": "C#",
     "Interfaces": [],
     "Namespaces": [],
-    "Classes": [
-      {
-        "Name": "SuperClass",
-        "Modifiers": [
-          "public"
-        ],
-        "Inheritance": "MonoBehaviour",
-        "Interfaces": [],
-        "Properties": [],
-        "Methods": [
-          {
-            "Name": "Test",
-            "FullName": "SuperClass.Test()",
-            "Modifiers": [
-              "virtual",
-              "public"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [],
-            "Variables": [],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 7
-          },
-          {
-            "Name": "Test2",
-            "FullName": "SuperClass.Test2()",
-            "Modifiers": [
-              "virtual",
-              "public"
-            ],
-            "Attributes": [],
-            "ReturnType": "void",
-            "Parameters": [],
-            "Invocations": [],
-            "Variables": [],
-            "Statements": [],
-            "WhileBlocks": [],
-            "ForEachBlocks": [],
-            "Line": 8
-          }
-        ],
-        "Fields": [],
-        "Attributes": [],
-        "Line": 5
-      }
-    ],
+    "Classes": [],
     "Usings": [
       {
-        "Name": "System.Collections",
-        "Line": 1
-      },
-      {
-        "Name": "System.Collections.Generic",
+        "Name": "System",
         "Line": 2
       },
       {
-        "Name": "UnityEngine",
+        "Name": "System.Reflection",
         "Line": 3
       }
     ],
-    "Line": 1
+    "Line": 2
+  },
+  {
+    "Name": "TestSolution.AssemblyInfo",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\obj\\Debug\\net6.0\\TestSolution.AssemblyInfo.cs",
+    "Language": "C#",
+    "Interfaces": [],
+    "Namespaces": [],
+    "Classes": [],
+    "Usings": [
+      {
+        "Name": "System",
+        "Line": 11
+      },
+      {
+        "Name": "System.Reflection",
+        "Line": 12
+      }
+    ],
+    "Line": 11
+  },
+  {
+    "Name": "TestSolution.GlobalUsings.g",
+    "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\obj\\Debug\\net6.0\\TestSolution.GlobalUsings.g.cs",
+    "Language": "C#",
+    "Interfaces": [],
+    "Namespaces": [],
+    "Classes": [],
+    "Usings": [
+      {
+        "Name": "global::System",
+        "Line": 2
+      },
+      {
+        "Name": "global::System.Collections.Generic",
+        "Line": 3
+      },
+      {
+        "Name": "global::System.IO",
+        "Line": 4
+      },
+      {
+        "Name": "global::System.Linq",
+        "Line": 5
+      },
+      {
+        "Name": "global::System.Net.Http",
+        "Line": 6
+      },
+      {
+        "Name": "global::System.Threading",
+        "Line": 7
+      },
+      {
+        "Name": "global::System.Threading.Tasks",
+        "Line": 8
+      }
+    ],
+    "Line": 2
   }
 ]

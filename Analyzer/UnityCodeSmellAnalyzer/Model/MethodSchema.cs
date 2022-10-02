@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Operations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,26 +21,39 @@ namespace UnityCodeSmellAnalyzer
         protected List<string> modifiers = new List<string>();
         protected string returnType;
         protected string fullName;
+        protected bool isEmpty = false;
+        protected bool hasBody = false;
+        protected bool hasBodyExpression = false;
         protected List<ParameterSchema> parameters = new List<ParameterSchema>();
         protected List<InvocationSchema> invocations = new List<InvocationSchema>();
         protected List<VariableSchema> variables = new List<VariableSchema>();
         protected List<StatementSchema> statements = new List<StatementSchema>();
         protected List<WhileSchema> whileBlocks = new List<WhileSchema>();
         protected List<ForEachSchema> forEachBlocks = new List<ForEachSchema>();
+        protected List<IfSchema> ifBlocks = new List<IfSchema>();
+        protected List<ForSchema> forBlocks = new List<ForSchema>();
+        protected List<SwitchSchema> switchBlocks = new List<SwitchSchema>();
+        protected List<ReturnSchema> returns = new List<ReturnSchema>();
         protected List<string> attributes = new List<string>();
 
-
+        public bool HasBody { get { return hasBody; } }
+        public bool HasExpressionBody { get { return hasBodyExpression; } }
         public string Name { get { return name; } }
+        public bool IsEmpty { get { return isEmpty; } }
         public string FullName { get { return fullName; } }
         public List<string> Modifiers { get { return modifiers; } }
         public List<string> Attributes { get { return attributes; } }
-        public string ReturnType { get { return returnType; } }
+        public virtual string ReturnType { get { return returnType; } set { } }
         public List<ParameterSchema> Parameters { get { return parameters; } }
         public List<InvocationSchema> Invocations { get { return invocations; } }
         public List<VariableSchema> Variables { get { return variables; } }
         public List<StatementSchema> Statements { get { return statements; } }
         public List<WhileSchema> WhileBlocks { get { return whileBlocks; } }
         public List<ForEachSchema> ForEachBlocks { get { return forEachBlocks; } }
+        public List<ForSchema> ForBlocks { get { return forBlocks; } }
+        public List<IfSchema> IfBlocks { get { return ifBlocks; } }
+        public List<SwitchSchema> SwitchBlocks { get { return switchBlocks; } }
+        public List<ReturnSchema> Returns { get { return returns; } }
 
 
         public MethodSchema() { }
@@ -80,6 +94,22 @@ namespace UnityCodeSmellAnalyzer
         public void AddForEach(ForEachSchema f)
         {
             forEachBlocks.Add(f);
+        }
+        public void AddFor(ForSchema f)
+        {
+            forBlocks.Add(f);
+        }
+        public void AddIf(IfSchema i)
+        {
+            ifBlocks.Add(i);
+        }
+        public void AddReturn(ReturnSchema r)
+        {
+            returns.Add(r);
+        }
+        public void AddSwitch(SwitchSchema s)
+        {
+            switchBlocks.Add(s);
         }
         /// <summary>
         /// Check for configuration to include the TextStatement
@@ -211,9 +241,10 @@ namespace UnityCodeSmellAnalyzer
         {
             foreach (var w in wbl)
             {
-                if ((w.Parent as BlockSyntax)?.Parent == root)
+                if (SyntaxWalker.SearchParent(w, SyntaxWalker.ControlOrCycleAncestors) == root)
                 {
                     WhileSchema ws = new WhileSchema();
+                    ws.Depth = 0;
                     ws.LoadInformations(w, model);
                     AddWhileLoop(ws);
                 }
@@ -229,9 +260,10 @@ namespace UnityCodeSmellAnalyzer
         {
             foreach (var fess in fessl)
             {
-                if((fess.Parent as BlockSyntax)?.Parent == root)
+                if (SyntaxWalker.SearchParent(fess, SyntaxWalker.ControlOrCycleAncestors) == root)
                 {
                     ForEachSchema fes = new ForEachSchema();
+                    fes.Depth = 0;
                     fes.LoadInformations(fess, model);
                     AddForEach(fes);
                 }
@@ -247,9 +279,12 @@ namespace UnityCodeSmellAnalyzer
         {
             foreach (var fss in fssl)
             {
-                if((fss.Parent as BlockSyntax)?.Parent == root)
+                if (SyntaxWalker.SearchParent(fss, SyntaxWalker.ControlOrCycleAncestors) == root)
                 {
-
+                    ForSchema fs = new ForSchema();
+                    fs.Depth = 0;
+                    fs.LoadInformations(fss, model);
+                    AddFor(fs);
                 }
             }
         }
@@ -263,44 +298,59 @@ namespace UnityCodeSmellAnalyzer
         {
             foreach (var ifss in ifssl)
             {
-                if((ifss.Parent as BlockSyntax)?.Parent == root)
+                if (SyntaxWalker.SearchParent(ifss, SyntaxWalker.ControlOrCycleAncestors) == root)
                 {
-                    
+                    IfSchema i = new IfSchema();
+                    i.Depth = 0;
+                    i.LoadInformations(ifss, model);
+                    AddIf(i);
+                    //Console.WriteLine(ifss.Condition);
+                    //Console.WriteLine(ifss.Else);
                 }
             }
         }
         /// <summary>
-        /// Loads Else Control Structures inside the method with hierarchy
-        /// </summary>
-        /// <param name="root">The Syntax Root (direct parent)</param>
-        /// <param name="ifssl">List of Else Statements</param>
-        /// <param name="model">The Model</param>
-        protected void LoadElseStatement(SyntaxNode root, List<ElseClauseSyntax> ecsl, SemanticModel model)
-        {
-
-        }
-        /// <summary>
-        /// Loads Switch-Case Control Structure inside the method with hierarchy
+        /// Loads Switch Control Structure inside the method with hierarchy
         /// </summary>
         /// <param name="root">The Syntax Root (direct parent)</param>
         /// <param name="sssl">List of Switch-Case Statements</param>
         /// <param name="model">The Model</param>
-        protected void LoadSwitchCaseStatement(SyntaxNode root, List<SwitchStatementSyntax> sssl, SemanticModel model)
+        protected void LoadSwitchStatement(SyntaxNode root, List<SwitchStatementSyntax> sssl, SemanticModel model)
         {
             foreach (var sss in sssl)
             {
-                if((sss.Parent as BlockSyntax).Parent == root)
+                if (SyntaxWalker.SearchParent(sss, SyntaxWalker.ControlOrCycleAncestors) == root)
                 {
-
+                    SwitchSchema s = new SwitchSchema();
+                    s.Depth = 0;
+                    s.LoadInformations(sss, model);
+                    AddSwitch(s);
+                }
+            }
+        }
+        /// <summary>
+        /// Loads direct children Return Statements.
+        /// </summary>
+        /// <param name="root">Syntax Root</param>
+        /// <param name="rssl">List of Return Statements</param>
+        /// <param name="model">The model</param>
+        protected void LoadReturnStatements(SyntaxNode root, List<ReturnStatementSyntax> rssl, SemanticModel model)
+        {
+            foreach (var rss in rssl)
+            {
+                if (SyntaxWalker.SearchParent(rss, SyntaxWalker.ControlOrCycleAncestors) == root)
+                {
+                    ReturnSchema returnSchema = new ReturnSchema();
+                    returnSchema.LoadInformations(rss, model);
+                    AddReturn(returnSchema);
                 }
             }
         }
 
-
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             MethodDeclarationSyntax method = root as MethodDeclarationSyntax;
-           
+
             LoadBasicInformations(root, model);
 
             List<InvocationExpressionSyntax> idsl = (from invoc in method.DescendantNodes().OfType<InvocationExpressionSyntax>() select invoc).ToList();
@@ -312,22 +362,23 @@ namespace UnityCodeSmellAnalyzer
             List<IfStatementSyntax> ifssl = (from iff in method.DescendantNodes().OfType<IfStatementSyntax>() select iff).ToList();
             List<ForStatementSyntax> fssl = (from fr in method.DescendantNodes().OfType<ForStatementSyntax>() select fr).ToList();
             List<SwitchStatementSyntax> sssl = (from ss in method.DescendantNodes().OfType<SwitchStatementSyntax>() select ss).ToList();
-            List<ElseClauseSyntax> ecsl = (from es in method.DescendantNodes().OfType<ElseClauseSyntax>() select es).ToList();
-
+            List<ReturnStatementSyntax> rssl = (from rs in method.DescendantNodes().OfType<ReturnStatementSyntax>() select rs).ToList();
+            
             LoadInvocations(method, idsl, model);
             LoadVariables(method, vdsl, aesl, model);
             LoadStatements(ssl, model);
             LoadModifiers(method);
             LoadAttributes(method);
+            LoadParameters(method, model);
             LoadWhileStatement(method, wbl, model);
             LoadForeachStatement(method, fessl, model);
             LoadIfStatement(method, ifssl, model);
-            LoadElseStatement(method, ecsl, model);
-            LoadSwitchCaseStatement(method, sssl, model);
+            LoadSwitchStatement(method, sssl, model);
             LoadForStatement(method, fssl, model);
+            LoadReturnStatements(method, rssl, model);
             
         }
-
+        /// TODO MIGLIORARE ARROW E BODY PRENDENDO TUTTO
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             MethodDeclarationSyntax method = root as MethodDeclarationSyntax;
@@ -335,6 +386,30 @@ namespace UnityCodeSmellAnalyzer
             line = method.GetLocation().GetLineSpan().StartLinePosition.Line;
             returnType = method.ReturnType.ToString();
             fullName = model.GetDeclaredSymbol(method).ConstructedFrom.ToString();
+            //Console.WriteLine(method.Body?.DescendantNodes().Count());
+            //Console.WriteLine(method.ExpressionBody?.DescendantNodes().Count());
+
+            if (method.Body != null && method.Body?.DescendantNodes().Count() > 0)
+            {
+                //LoadConstructorBody(cons, model);
+                hasBody = true;
+            }
+            if (method.ExpressionBody != null && method.ExpressionBody?.DescendantNodes().Count() > 0)
+            {
+                
+                ReturnStatementSyntax r = SyntaxFactory.ReturnStatement(SyntaxFactory.Token(SyntaxKind.ReturnKeyword), method.ExpressionBody.Expression, SyntaxFactory.Token(SyntaxKind.SemicolonToken));
+                //Console.WriteLine(r.Expression);
+                foreach (var item in method.ExpressionBody.Expression.DescendantNodes())
+                {
+                    //Console.WriteLine((model.GetSymbolInfo(item).Symbol as IFieldSymbol)?.Kind);
+                    //Console.WriteLine(item);
+                    //Console.WriteLine(item.Kind());
+                }
+                //LoadConstructorExpressionBody(cons, model);
+                hasBodyExpression = true;
+            }
+            if (!hasBody && !hasBodyExpression) isEmpty = true;
+
         }
     }
 }

@@ -16,6 +16,7 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string name;
         protected string fileName;
+        protected string language;
         protected List<UsingSchema> usings = new List<UsingSchema>();
         protected List<NamespaceSchema> namespaces = new List<NamespaceSchema>();
         protected List<InterfaceSchema> interfaces = new List<InterfaceSchema>();
@@ -30,6 +31,7 @@ namespace UnityCodeSmellAnalyzer
         {
             get { return fileName; }
         }
+        public virtual string Language { get { return language; } }
 
         public List<InterfaceSchema> Interfaces { get { return interfaces; } }
         public List<NamespaceSchema> Namespaces { get { return namespaces; } }
@@ -156,6 +158,7 @@ namespace UnityCodeSmellAnalyzer
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             line = root.GetLocation().GetLineSpan().StartLinePosition.Line;
+            language = root.Language;
         }
     }
 }

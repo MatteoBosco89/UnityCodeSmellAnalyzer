@@ -7,6 +7,11 @@ using System.Linq;
 
 namespace UnityCodeSmellAnalyzer
 {
+    /// <summary>
+    /// Class representing a ForEach Statement Block. Inherit CycleOrControlSchema.
+    /// Informations gathered: Iterator, Iterator Type, Iterable, Iterable Type, Esxpression Is Invocation, 
+    /// Expressione Is Property, Invocation, Property
+    /// </summary>
     [Serializable]
     public class ForEachSchema : CycleOrControlSchema
     {
@@ -15,14 +20,18 @@ namespace UnityCodeSmellAnalyzer
         protected string iterable;
         protected string iterableType;
         protected bool expressionIsInvocation = false;
+        protected bool expressionIsProperty = false;
         protected string invocation;
+        protected string property;
 
         public string Iterator { get { return iterator; } }
         public string IteratorType { get { return iteratorType; } }
         public string Iterable { get { return iterable; } }
         public string IterableType { get { return iterableType; } }
         public string Invocation { get { return invocation; } }
+        public string Property { get { return property; } }
         public bool ExpressionIsInvocation { get { return expressionIsInvocation; } }
+        public bool ExpressionIsProperty { get { return expressionIsProperty; } }
         [JsonIgnore]
         public override int Line { get; }
 
@@ -41,22 +50,15 @@ namespace UnityCodeSmellAnalyzer
                 expressionIsInvocation = true;
                 invocation = (model.GetSymbolInfo(forEach.Expression).Symbol as IMethodSymbol).ToString();
             }
+            if (model.GetSymbolInfo(forEach.Expression).Symbol is IPropertySymbol)
+            {
+                expressionIsProperty = true;
+                property = (model.GetSymbolInfo(forEach.Expression).Symbol as IPropertySymbol).ToString();
+            }
             startLine = forEach.GetLocation().GetLineSpan().StartLinePosition.Line;
             endLine = forEach.GetLocation().GetLineSpan().EndLinePosition.Line;
-            depth = 0;
         }
 
-        public override void LoadInformations(SyntaxNode root, SemanticModel model)
-        {
-            List<WhileStatementSyntax> wbl = (from wh in root.DescendantNodes().OfType<WhileStatementSyntax>() select wh).ToList();
-            List<InvocationExpressionSyntax> invocations = (from wh in root.DescendantNodes().OfType<InvocationExpressionSyntax>() select wh).ToList();
-            List<VariableDeclarationSyntax> vdsl = (from variab in root.DescendantNodes().OfType<VariableDeclarationSyntax>() select variab).ToList();
-            List<AssignmentExpressionSyntax> aesl = (from ae in root.DescendantNodes().OfType<AssignmentExpressionSyntax>() select ae).ToList();
-
-            LoadBasicInformations(root, model);
-            LoadInvocations(root, invocations, model);
-            LoadVariables(root, vdsl, aesl, model);
-        }
     }
 }
 

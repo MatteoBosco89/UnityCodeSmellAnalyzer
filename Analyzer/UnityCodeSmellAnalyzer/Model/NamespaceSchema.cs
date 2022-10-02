@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -19,6 +20,8 @@ namespace UnityCodeSmellAnalyzer
 		{
 			attributes.Add(a);
 		}
+		[JsonIgnore]
+		public override string Language { get { return language; } }
 		public NamespaceSchema() { }
 
 		public override void LoadInformations(SyntaxNode root, SemanticModel model)

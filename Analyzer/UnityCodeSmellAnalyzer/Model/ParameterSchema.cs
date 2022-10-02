@@ -51,6 +51,7 @@ namespace UnityCodeSmellAnalyzer
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             ParameterSyntax param = root as ParameterSyntax;
+            
             name = param.Identifier.ToString();
             type = param.Type.ToString();
             if (param.Default != null) assignment = param.Default.Value.ToString();

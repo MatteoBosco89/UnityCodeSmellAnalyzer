@@ -39,6 +39,11 @@ namespace Test
                 protected bool backward = false;
                 protected bool left = false;
                 protected bool right = false;
+                protected List<int> n = new List<int> { 2, 3, 4 };
+
+                public bool IsJumping { get { return isJumping; } }
+                public List<int> N { get { return n; } }
+
                 // Start is called before the first frame update
                 void Start()
                 {
@@ -46,6 +51,19 @@ namespace Test
                     {
                         Console.WriteLine("Hello");
                     } while (true);
+                }
+
+                public void TestIf()
+                {
+                    if (dir > 0 && forward)
+                    {
+                        Test2();
+                    }
+                    else if (dir > 0 && backward)
+                    {
+                        Test();
+                    }
+                    else Console.WriteLine("Ciao");
                 }
 
                 // Update is called once per frame
@@ -91,14 +109,42 @@ namespace Test
                     Instantiate(o.Cube);
                 }
 
-		public List<int> Numbers() { return new List<int>{ 1, 2, 3 } }
+		        public List<int> Numbers() { return new List<int>{ 1, 2, 3 } }
 
+                public bool Meth() { return true; }
+                public bool Meth2() { return Meth(); }
+                public int Meth3() { return (2 + 3); }
                 public override void Test2()
                 {
-		    foreach (int a in Numbers()){ Console.WriteLine(a); }
+                    int iii = 0;
+                    for (iii = 1; iii <= Meth3() && isJumping; iii++)
+                    {
+                        foreach (int a in N)
+                        {
+                            for (int i = 0; i < Meth3(); i++)
+                            {
+                                if (IsJumping)
+                                {
+                                    foreach (int a in N)
+                                    {
+                                        if (!IsJumping) return;
+                                        else if (IsJumping) foreach (int a in N) Console.WriteLine("ciao");
+                                    }
+                                }
+                                else
+                                {
+                                    foreach(int a in N) Console.WriteLine("ciao");
+                                }
+                            }
+                        }
+                    }
+		            
+                    
                     base.Test2();
                     Test();
-                    while (isJumping)
+                    bool a = true;
+                    a = IsJumping;
+                    while (a && isJumping || dir <= 0 || IsJumping && Meth())
                     {
                         int i = 0;
                         i = 10;
@@ -109,10 +155,10 @@ namespace Test
 
                         k.ToString();
                         Console.WriteLine(i * k);
-			while (i > 10)
-			{
-			    Test();
-			}
+			            while (i > 10)
+			            {
+			                Test();
+			            }
                     }
                 }
             }
