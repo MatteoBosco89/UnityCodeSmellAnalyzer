@@ -27,7 +27,7 @@ namespace UnityCodeSmellAnalyzer
         {
             get { return name; }
         }
-        public string FileName
+        public virtual string FileName
         {
             get { return fileName; }
         }

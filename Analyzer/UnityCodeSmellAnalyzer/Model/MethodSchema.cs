@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Security.Cryptography;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -34,6 +35,7 @@ namespace UnityCodeSmellAnalyzer
         protected List<ForSchema> forBlocks = new List<ForSchema>();
         protected List<SwitchSchema> switchBlocks = new List<SwitchSchema>();
         protected List<ReturnSchema> returns = new List<ReturnSchema>();
+        protected List<TrySchema> tryBlocks = new List<TrySchema>();
         protected List<string> attributes = new List<string>();
 
         public bool HasBody { get { return hasBody; } }
@@ -54,7 +56,7 @@ namespace UnityCodeSmellAnalyzer
         public List<IfSchema> IfBlocks { get { return ifBlocks; } }
         public List<SwitchSchema> SwitchBlocks { get { return switchBlocks; } }
         public List<ReturnSchema> Returns { get { return returns; } }
-
+        public List<TrySchema> TryBlocks { get { return tryBlocks; } }
 
         public MethodSchema() { }
 
@@ -111,6 +113,11 @@ namespace UnityCodeSmellAnalyzer
         {
             switchBlocks.Add(s);
         }
+        public void AddTry(TrySchema t)
+        {
+            tryBlocks.Add(t);
+        }
+
         /// <summary>
         /// Check for configuration to include the TextStatement
         /// (The real line of code)
@@ -347,6 +354,25 @@ namespace UnityCodeSmellAnalyzer
             }
         }
 
+        /// <summary>
+        /// Loads direct children Try Blocks
+        /// </summary>
+        /// <param name="root">Syntax Root</param>
+        /// <param name="tssl">List of Try Blocks</param>
+        /// <param name="model">The model</param>
+        protected void LoadTryStatement(SyntaxNode root, List<TryStatementSyntax> tssl, SemanticModel model)
+        {
+            foreach (var tss in tssl)
+            {
+                if (SyntaxWalker.SearchParent(tss, SyntaxWalker.ControlOrCycleAncestors) == root)
+                {
+                    TrySchema t = new TrySchema();
+                    t.LoadInformations(tss, model);
+                    AddTry(t);
+                }
+            }
+        }
+
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             MethodDeclarationSyntax method = root as MethodDeclarationSyntax;
@@ -363,7 +389,8 @@ namespace UnityCodeSmellAnalyzer
             List<ForStatementSyntax> fssl = (from fr in method.DescendantNodes().OfType<ForStatementSyntax>() select fr).ToList();
             List<SwitchStatementSyntax> sssl = (from ss in method.DescendantNodes().OfType<SwitchStatementSyntax>() select ss).ToList();
             List<ReturnStatementSyntax> rssl = (from rs in method.DescendantNodes().OfType<ReturnStatementSyntax>() select rs).ToList();
-            
+            List<TryStatementSyntax> tssl = (from rs in method.DescendantNodes().OfType<TryStatementSyntax>() select rs).ToList();
+
             LoadInvocations(method, idsl, model);
             LoadVariables(method, vdsl, aesl, model);
             LoadStatements(ssl, model);
@@ -376,7 +403,7 @@ namespace UnityCodeSmellAnalyzer
             LoadSwitchStatement(method, sssl, model);
             LoadForStatement(method, fssl, model);
             LoadReturnStatements(method, rssl, model);
-            
+            LoadTryStatement(method, tssl, model);
         }
         /// TODO MIGLIORARE ARROW E BODY PRENDENDO TUTTO
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)

@@ -8,15 +8,15 @@ namespace UnityCodeSmellAnalyzer
     /// Class representing a Return Statement Block. Inherit SyntaxSchema.
     /// Informations gathered: Return Statement, Return Kind 
     /// </summary>
-    /// TODO MIGLIORARE LISTA TOKEN DEL RETURN
     [Serializable]
     public class ReturnSchema : SyntaxSchema
     {
-        protected string returnStatement = "return";
-        protected string returnKind = "void";
+        protected ConditionSchema returnStatement;
+        protected string returnType = "void";
 
-        public string ReturnStatement { get { return returnStatement; } }
-        public string ReturnKind { get { return returnKind; } }
+
+        public ConditionSchema ReturnStatement { get { return returnStatement; } }
+        public string ReturnType { get { return returnType; } }
 
         public ReturnSchema() { }
 
@@ -26,8 +26,9 @@ namespace UnityCodeSmellAnalyzer
             line = ret.GetLocation().GetLineSpan().StartLinePosition.Line;
             if(ret.Expression != null)
             {
-                returnStatement = ret.Expression.ToString();
-                returnKind = ret.Expression.Kind().ToString();
+                returnStatement = new ConditionSchema();
+                returnStatement.LoadBasicInformations(ret.Expression, model);
+                returnType = model.GetTypeInfo(ret.Expression).Type?.ToString();
             }
         }
 

@@ -16,6 +16,8 @@ namespace UnityCodeSmellAnalyzer
 	{
 		protected List<string> attributes = new List<string>();
 		public List<string> Attributes { get { return attributes; } }
+		[JsonIgnore]
+		public override string FileName { get { return fileName; } }
 		public void AddAttribute(string a)
 		{
 			attributes.Add(a);

@@ -19,19 +19,27 @@ namespace UnityCodeSmellAnalyzer
     [Serializable]
     public class ConditionSchema : SyntaxSchema
     {
-        protected static readonly string[] operators = new string[] { "&&", "||", "!", "<", "<=", "<<", ">", ">=", ">>", "=", "==" };
+        protected static readonly string[] operators = new string[] { "&&", "||", "!", "<", "<=", "<<", ">", ">=", ">>", "=", "==", "(", ")" };
         protected readonly string literal = "Literal";
+        protected readonly string invocation = "InvocationExpression";
+        protected readonly string property = "Property";
         protected string conditionStatement;
         protected string type;
         protected string conditionType;
         protected string conditionKind;
         protected List<string> conditionTokens = new List<string>();
+        protected List<InvocationSchema> invocations = new List<InvocationSchema>();
+        protected List<string> properties = new List<string>();
+        protected List<string> fields = new List<string>();
+        public List<string> Tokens { get { return conditionTokens; } }
+        public List<string> Properties { get { return properties; } }
+        public List<string> Fields { get { return fields; } }
+        public List<InvocationSchema> Invocations { get { return invocations; } }
         
-        public List<string> ConditionTokens { get { return conditionTokens; } }
         public string Type { get { return type; } }
-        public string ConditionStatement { get { return conditionStatement; } }
-        public string ConditionType { get { return conditionType; } }
-        public string ConditionKind { get { return conditionKind; } }
+        public string Statement { get { return conditionStatement; } }
+        public string ExpressionType { get { return conditionType; } }
+        public string Kind { get { return conditionKind; } }
         [JsonIgnore]
         public override int Line { get { return line; } }
         public ConditionSchema() { }
@@ -40,8 +48,19 @@ namespace UnityCodeSmellAnalyzer
         {
             conditionTokens.Add(t);
         }
-        
-        
+        public void AddField(string s)
+        {
+            fields.Add(s);
+        }
+        public void AddProperty(string p)
+        {
+            properties.Add(p);
+        }
+        public void AddInvocation(InvocationSchema i)
+        {
+            invocations.Add(i);
+        }
+       
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
@@ -53,13 +72,24 @@ namespace UnityCodeSmellAnalyzer
         }
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
+            List<InvocationExpressionSyntax> inv = (from i in root.DescendantNodesAndSelf().OfType<InvocationExpressionSyntax>() select i).ToList();
+            List<IMemberReferenceOperation> mrol = model.GetOperation(root).DescendantsAndSelf().OfType<IMemberReferenceOperation>().ToList();
+            
+            LoadInvocations(inv, model);
+            LoadMemberAccess(mrol, model);
+            
             conditionStatement = root.ToString();
+            conditionType = root.Kind().ToString();
             conditionKind = model.GetSymbolInfo(root).Symbol?.Kind.ToString();
             if (conditionKind == null) conditionKind = literal;
-            type = model.GetTypeInfo(root).Type.ToString();
-            conditionType = root.Kind().ToString();
+            type = model.GetTypeInfo(root).Type?.ToString();
+            
         }
-
+        /// <summary>
+        /// Remove operands and create the token list
+        /// </summary>
+        /// <param name="condition">The condition string</param>
+        /// <returns></returns>
         public List<string> Normalize(string condition)
         {
             foreach (var c in operators)
@@ -68,7 +98,34 @@ namespace UnityCodeSmellAnalyzer
             }
             return condition.Split(' ').ToList();
         }
-
+        /// <summary>
+        /// Loads all invocations
+        /// </summary>
+        /// <param name="inv">List of invocations</param>
+        /// <param name="model">Model</param>
+        protected void LoadInvocations(List<InvocationExpressionSyntax> inv, SemanticModel model)
+        {
+            foreach (InvocationExpressionSyntax item in inv)
+            {
+                InvocationSchema s = new InvocationSchema();
+                s.LoadInformations(item, model);
+                AddInvocation(s);
+            }
+        }
+        /// <summary>
+        /// Loads all member accesses (property or field)
+        /// </summary>
+        /// <param name="mrol">List of Members</param>
+        /// <param name="model">The model</param>
+        protected void LoadMemberAccess(List<IMemberReferenceOperation> mrol, SemanticModel model)
+        {
+            foreach (var i in mrol)
+            {
+                if (i.Member.Kind == SymbolKind.Property) AddProperty(i.Member.ToString());
+                if (i.Member.Kind == SymbolKind.Field) AddField(i.Member.ToString());
+            }
+        }
+        
     }
 }
 

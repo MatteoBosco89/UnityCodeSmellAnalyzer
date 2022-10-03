@@ -28,6 +28,8 @@ namespace UnityCodeSmellAnalyzer
         protected List<CycleOrControlSchema> switchBlocks = new List<CycleOrControlSchema>();
         protected List<CycleOrControlSchema> forEachBlocks = new List<CycleOrControlSchema>();
         protected List<CycleOrControlSchema> elseBlocks = new List<CycleOrControlSchema>();
+        protected List<CycleOrControlSchema> tryBlocks = new List<CycleOrControlSchema>();
+        
         protected void IncrementDepth() { depth += 1; }
         public virtual int Depth { get { return depth; } set { depth = value; } }
         public int EndLine { get { return endLine + 1; } }
@@ -40,6 +42,8 @@ namespace UnityCodeSmellAnalyzer
         public List<CycleOrControlSchema> SwitchBlocks { get { return switchBlocks; } }
         public List<CycleOrControlSchema> ForEachBlocks { get { return forEachBlocks; } }
         public List<CycleOrControlSchema> ElseBlocks { get { return elseBlocks; } }
+        public List<CycleOrControlSchema> TryBlocks { get { return tryBlocks; } }
+        
         public List<ReturnSchema> Returns { get { return returns; } }
         public void AddWhile(CycleOrControlSchema w)
         {
@@ -60,6 +64,10 @@ namespace UnityCodeSmellAnalyzer
         public void AddElse(CycleOrControlSchema e)
         {
             elseBlocks.Add(e);
+        }
+        public void AddTry(CycleOrControlSchema e)
+        {
+            tryBlocks.Add(e);
         }
         public void AddSwitch(CycleOrControlSchema sc)
         {
@@ -261,6 +269,24 @@ namespace UnityCodeSmellAnalyzer
                 }
             }
         }
+        /// <summary>
+        /// Loads direct children Try Blocks
+        /// </summary>
+        /// <param name="root">Syntax Root</param>
+        /// <param name="tssl">List of Try Blocks</param>
+        /// <param name="model">The model</param>
+        protected void LoadTryStatement(SyntaxNode root, List<TryStatementSyntax> tssl, SemanticModel model)
+        {
+            foreach (var tss in tssl)
+            {
+                if (SyntaxWalker.SearchParent(tss, SyntaxWalker.ControlOrCycleAncestors) == root)
+                {
+                    TrySchema t = new TrySchema();
+                    t.LoadInformations(tss, model);
+                    AddTry(t);
+                }
+            }
+        }
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
@@ -275,6 +301,7 @@ namespace UnityCodeSmellAnalyzer
             List<IfStatementSyntax> issl = (from i in root.DescendantNodes().OfType<IfStatementSyntax>() select i).ToList();
             List<ForStatementSyntax> fssl = (from fr in root.DescendantNodes().OfType<ForStatementSyntax>() select fr).ToList();
             List<SwitchStatementSyntax> sssl = (from ss in root.DescendantNodes().OfType<SwitchStatementSyntax>() select ss).ToList();
+            List<TryStatementSyntax> tssl = (from rs in root.DescendantNodes().OfType<TryStatementSyntax>() select rs).ToList();
 
             LoadWhileStatement(root, wbl, model);
             LoadForEachStatement(root, fel, model);
@@ -284,7 +311,7 @@ namespace UnityCodeSmellAnalyzer
             LoadInvocations(root, invocations, model);
             LoadVariables(root, vdsl, aesl, model);
             LoadReturnStatements(root, rssl, model);
-            
+            LoadTryStatement(root, tssl, model);
         }
 
     }
