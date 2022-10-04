@@ -145,25 +145,17 @@
                 "TryBlocks": [],
                 "ExpressionBody": {
                   "Tokens": [
-                    "[Obsolete]",
-                    "public",
-                    "Stateint",
-                    "a,",
-                    "int",
-                    "b",
-                    ":",
-                    "basea",
                     "this.b",
-                    "b;"
+                    "b"
                   ],
                   "Properties": [],
                   "Fields": [
                     "Test.State.b"
                   ],
                   "Invocations": [],
-                  "Type": null,
-                  "Statement": "[Obsolete] public State(int a, int b) : base(a) => this.b = b;",
-                  "ExpressionType": "ConstructorDeclaration",
+                  "Type": "int",
+                  "Statement": "this.b = b",
+                  "ExpressionType": "SimpleAssignmentExpression",
                   "Kind": "Literal"
                 },
                 "Line": 8
@@ -747,11 +739,8 @@
                     "TryBlocks": [],
                     "ExpressionBody": {
                       "Tokens": [
-                        "public",
-                        "InnerStateint",
-                        "d",
                         "this.d",
-                        "Method3;"
+                        "Method3"
                       ],
                       "Properties": [],
                       "Fields": [
@@ -770,9 +759,9 @@
                           "Line": 38
                         }
                       ],
-                      "Type": null,
-                      "Statement": "public InnerState(int d) => this.d = Method3();",
-                      "ExpressionType": "ConstructorDeclaration",
+                      "Type": "int",
+                      "Statement": "this.d = Method3()",
+                      "ExpressionType": "SimpleAssignmentExpression",
                       "Kind": "Literal"
                     },
                     "Line": 38
@@ -901,20 +890,17 @@
                 "TryBlocks": [],
                 "ExpressionBody": {
                   "Tokens": [
-                    "public",
-                    "StateInStateint",
-                    "b",
                     "aaaaa",
-                    "1;"
+                    "1"
                   ],
                   "Properties": [],
                   "Fields": [
                     "Test.StateInState<T>.aaaaa"
                   ],
                   "Invocations": [],
-                  "Type": null,
-                  "Statement": "public StateInState(int b) => aaaaa = 1;",
-                  "ExpressionType": "ConstructorDeclaration",
+                  "Type": "int",
+                  "Statement": "aaaaa = 1",
+                  "ExpressionType": "SimpleAssignmentExpression",
                   "Kind": "Literal"
                 },
                 "Line": 11
