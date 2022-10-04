@@ -968,6 +968,7 @@
         "Interfaces": [
           {
             "Name": "ITest",
+            "FullName": "Test.ITest",
             "Modifiers": [
               "public"
             ],

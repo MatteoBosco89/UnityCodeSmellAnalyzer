@@ -56,16 +56,13 @@ namespace UnityCodeSmellAnalyzer
                 int index = args.IndexOf("-project");
                 AnalyzerConfiguration.ProjectPath = args.ElementAt(index + 1);
             }
-            if (args.Contains("-customAssembly"))
-            {
-                int index = args.IndexOf("-project");
-                AnalyzerConfiguration.AssembliesPath = args.ElementAt(index + 1);
-            }
             if (args.Contains("-statements"))
             {
                 AnalyzerConfiguration.StatementVerbose = true;
             }
-        
+
+            AnalyzerConfiguration.Init();
+
             LoadAssemblyList();
             LoadFileList();
             Analyze();
@@ -77,17 +74,7 @@ namespace UnityCodeSmellAnalyzer
             assemblies.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
             try
             {
-                string[] lines = File.ReadAllLines(AnalyzerConfiguration.AssembliesPath);
-                string[] dir = { ".dll" };
-                foreach (string line in lines)
-                {
-                    List<string> files = Directory.GetFiles(line, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
-                    foreach (string f in files)
-                    {
-                        assemblies.Add(MetadataReference.CreateFromFile(f));
-                    }
-                    
-                }
+                foreach(string file in AnalyzerConfiguration.Assemblies) assemblies.Add(MetadataReference.CreateFromFile(file));
                 Console.WriteLine("Loaded!");
             }
             catch (Exception)
@@ -182,7 +169,6 @@ namespace UnityCodeSmellAnalyzer
         {            
             commands.Add("-project", "Project directory (use \"path/to/directory\" if there's spaces in the path)");
             commands.Add("-statements", "Get all statements");
-            commands.Add("-customAssembly", "Path of the text file of assemblies' paths");
             commands.Add("-help", "Shows this message");
         }
 

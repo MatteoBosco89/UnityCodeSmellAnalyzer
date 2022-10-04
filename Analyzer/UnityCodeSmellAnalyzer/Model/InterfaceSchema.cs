@@ -18,9 +18,11 @@ namespace UnityCodeSmellAnalyzer
         protected List<PropertySchema> properties = new List<PropertySchema>();
         protected List<string> attributes = new List<string>();
         protected string name;
+        protected string fullName;
         protected List<string> modifiers = new List<string>();
 
         public string Name { get { return name; } }
+        public string FullName { get { return fullName; } }
         public List<string> Modifiers { get { return modifiers; } }
         public List<MethodSchema> Methods { get { return methods; } }
         public List<PropertySchema> Properties { get { return properties; } }
@@ -94,6 +96,7 @@ namespace UnityCodeSmellAnalyzer
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             InterfaceDeclarationSyntax r = root as InterfaceDeclarationSyntax;
+            fullName = model.GetDeclaredSymbol(r).ToString();
             name = r.Identifier.ToString();
             line = r.GetLocation().GetLineSpan().StartLinePosition.Line;
             LoadAttributes(r);
