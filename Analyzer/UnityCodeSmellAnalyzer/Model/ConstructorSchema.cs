@@ -86,7 +86,8 @@ namespace UnityCodeSmellAnalyzer
         /// <param name="model">The model</param>
         protected void LoadConstructorExpressionBody(SyntaxNode root, SemanticModel model)
         {
-            LoadData(root, (root as ConstructorDeclarationSyntax).ExpressionBody.Expression, model);
+            expressionBody = new ConditionSchema();
+            expressionBody.LoadInformations(root, model);
         }
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)

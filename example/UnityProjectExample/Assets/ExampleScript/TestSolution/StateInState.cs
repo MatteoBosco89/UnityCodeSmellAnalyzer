@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Test
 {
     public class StateInState<T> where T : new()
     {
+
+        protected int aaaaa;
+
+        public StateInState(int b) => aaaaa = 1;
+
         public StateInState() { }
 
         public void Method1(string s)
@@ -15,7 +21,7 @@ namespace Test
         public class InnerState
         {
             protected int d;
-            public int D { get { return d; } }
+            public int D { get { return d; } protected set { d = value; } }
             public InnerState()
             {
                 this.d = 1;

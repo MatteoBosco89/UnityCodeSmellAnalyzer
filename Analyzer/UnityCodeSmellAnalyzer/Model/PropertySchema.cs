@@ -17,15 +17,25 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string name;
         protected string type;
-        protected bool isAutoProperty = false;
-        protected bool initializerValue;
+        protected bool isAutoProperty = true;
+        protected bool initializer;
+        protected bool hasExpressionBody = false;
+        protected ConditionSchema expressionBody;
+        protected ConditionSchema initializerValue;
         protected List<string> modifiers = new List<string>();
         protected List<string> attributes = new List<string>();
+        protected List<AccessorSchema> accessors = new List<AccessorSchema>();
 
-        public string Name { get { return name; } }
+        public string Name { get { return name; } set { name = value; } }
         public string Type { get { return type; } }
         public List<string> Modifiers { get { return modifiers; } }
         public List<string> Attributes { get { return attributes; } }
+        public bool IsAutoProperty { get { return isAutoProperty; } }
+        public bool Initializer { get { return initializer; } }
+        public ConditionSchema InitializerValue { get { return initializerValue; } }
+        public List<AccessorSchema> Accessor { get { return accessors; } }
+        public bool HasExpressionBody { get { return hasExpressionBody; } }
+        public ConditionSchema ExpressionBody { get { return expressionBody; } }
 
         public PropertySchema() { }
 
@@ -36,6 +46,10 @@ namespace UnityCodeSmellAnalyzer
         public void AddAttribute(string a)
         {
             attributes.Add(a);
+        }
+        protected void AddAccessor(AccessorSchema a)
+        {
+            accessors.Add(a);
         }
 
         public void LoadAttribute(PropertyDeclarationSyntax prop)
@@ -54,25 +68,59 @@ namespace UnityCodeSmellAnalyzer
             }
         }
 
+        /// <summary>
+        /// Loads the Property's Accessors (get, set)
+        /// </summary>
+        /// <param name="root">The Property</param>
+        /// <param name="model">The model</param>
+        protected void LoadAccessors(SyntaxNode root, SemanticModel model)
+        {
+            PropertyDeclarationSyntax prop = root as PropertyDeclarationSyntax;
+            foreach (var accessor in prop.AccessorList.Accessors)
+            {
+                AccessorSchema acc = new AccessorSchema();
+                acc.LoadInformations(accessor, model);
+                AddAccessor(acc);
+            }
+        }
+
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
             PropertyDeclarationSyntax prop = root as PropertyDeclarationSyntax;
             LoadBasicInformations(root, model);
             LoadAttribute(prop);
             LoadModifier(prop);
-            // PRENDERE ANCHE GET E SET, VEDERE SE SONO VUOTI (ABSTRACT) O NO
-            //Console.WriteLine(prop.Initializer?.Value);
-            //Console.WriteLine(prop.ExplicitInterfaceSpecifier);
-            //Console.WriteLine(prop.ExpressionBody);
-            //Console.WriteLine(prop.AccessorList);
+            if (prop.ExpressionBody == null) LoadAccessors(prop, model);
         }
 
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
+            
             PropertyDeclarationSyntax prop = root as PropertyDeclarationSyntax;
             name = prop.Identifier.ToString();
             type = prop.Type.ToString();
             line = prop.GetLocation().GetLineSpan().StartLinePosition.Line;
+            if(prop.Initializer?.Value != null)
+            {
+                initializer = true;
+                initializerValue = new ConditionSchema();
+                initializerValue.LoadInformations(prop.Initializer.Value, model);
+            }
+            if(prop.ExpressionBody != null)
+            {
+                hasExpressionBody = true;
+                isAutoProperty = false;
+                expressionBody = new ConditionSchema();
+                expressionBody.LoadInformations(prop.ExpressionBody.Expression, model);
+            }
+            if (prop.AccessorList != null)
+            {
+                foreach (var accessors in prop.AccessorList.Accessors)
+                {
+                    if (accessors.Body != null || accessors.ExpressionBody != null) isAutoProperty = false;
+                }
+            }
+            
         }
     }
 }

@@ -118,7 +118,7 @@ namespace UnityCodeSmellAnalyzer
         protected static void Analyze()
         {
             if (fileList.Count <= 0) return;
-            Console.WriteLine("Analyzing...");
+            Console.WriteLine("Analysis Started");
             foreach (string file in fileList)
             {
                 SyntaxTree tree = CSharpSyntaxTree.ParseText(File.ReadAllText(file));
@@ -139,6 +139,7 @@ namespace UnityCodeSmellAnalyzer
                 CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
                 SemanticModel model = compilation.GetSemanticModel(tree);
                 CompilationUnit cu = new CompilationUnit(name, fileName);
+                Console.WriteLine("Analyzing " + cu.Name);
                 cu.LoadInformations(root, model);
                 project.Add(cu);
             }

@@ -25,6 +25,7 @@ namespace UnityCodeSmellAnalyzer
         protected bool isEmpty = false;
         protected bool hasBody = false;
         protected bool hasBodyExpression = false;
+        protected ConditionSchema expressionBody;
         protected List<ParameterSchema> parameters = new List<ParameterSchema>();
         protected List<InvocationSchema> invocations = new List<InvocationSchema>();
         protected List<VariableSchema> variables = new List<VariableSchema>();
@@ -57,6 +58,7 @@ namespace UnityCodeSmellAnalyzer
         public List<SwitchSchema> SwitchBlocks { get { return switchBlocks; } }
         public List<ReturnSchema> Returns { get { return returns; } }
         public List<TrySchema> TryBlocks { get { return tryBlocks; } }
+        public ConditionSchema ExpressionBody { get { return expressionBody; } }
 
         public MethodSchema() { }
 
@@ -405,7 +407,7 @@ namespace UnityCodeSmellAnalyzer
             LoadReturnStatements(method, rssl, model);
             LoadTryStatement(method, tssl, model);
         }
-        /// TODO MIGLIORARE ARROW E BODY PRENDENDO TUTTO
+        
         public override void LoadBasicInformations(SyntaxNode root, SemanticModel model)
         {
             MethodDeclarationSyntax method = root as MethodDeclarationSyntax;
@@ -413,26 +415,13 @@ namespace UnityCodeSmellAnalyzer
             line = method.GetLocation().GetLineSpan().StartLinePosition.Line;
             returnType = method.ReturnType.ToString();
             fullName = model.GetDeclaredSymbol(method).ConstructedFrom.ToString();
-            //Console.WriteLine(method.Body?.DescendantNodes().Count());
-            //Console.WriteLine(method.ExpressionBody?.DescendantNodes().Count());
+            
 
-            if (method.Body != null && method.Body?.DescendantNodes().Count() > 0)
-            {
-                //LoadConstructorBody(cons, model);
-                hasBody = true;
-            }
+            if (method.Body != null && method.Body?.DescendantNodes().Count() > 0) hasBody = true;
             if (method.ExpressionBody != null && method.ExpressionBody?.DescendantNodes().Count() > 0)
             {
-                
-                ReturnStatementSyntax r = SyntaxFactory.ReturnStatement(SyntaxFactory.Token(SyntaxKind.ReturnKeyword), method.ExpressionBody.Expression, SyntaxFactory.Token(SyntaxKind.SemicolonToken));
-                //Console.WriteLine(r.Expression);
-                foreach (var item in method.ExpressionBody.Expression.DescendantNodes())
-                {
-                    //Console.WriteLine((model.GetSymbolInfo(item).Symbol as IFieldSymbol)?.Kind);
-                    //Console.WriteLine(item);
-                    //Console.WriteLine(item.Kind());
-                }
-                //LoadConstructorExpressionBody(cons, model);
+                expressionBody = new ConditionSchema();
+                expressionBody.LoadInformations(method.ExpressionBody.Expression, model);
                 hasBodyExpression = true;
             }
             if (!hasBody && !hasBodyExpression) isEmpty = true;

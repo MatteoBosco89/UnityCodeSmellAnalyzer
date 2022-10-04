@@ -4,11 +4,20 @@ using System.Text.Json.Serialization;
 
 namespace Test
 {
-    public abstract class StateManager
+
+    public interface ITest
+    {
+        int P { get; }
+    }
+
+    public abstract class StateManager : ITest
     {
         protected int a;
         protected int b;
         protected int c;
+        protected int d;
+
+        public int D => d;
 
         [JsonIgnore]
         public int A { get { return a; } set { a = value; } }
@@ -18,6 +27,9 @@ namespace Test
             set { b = value; while (Meth22() < 0 && Meth22() > 0) b++; }
         }
         public int C { get; set; } = 0;
+
+        public int P => a + d;
+
         public void MethodArg(int a, bool b, State s)
         {
             while ((a = c) == 0) Console.WriteLine(a);
