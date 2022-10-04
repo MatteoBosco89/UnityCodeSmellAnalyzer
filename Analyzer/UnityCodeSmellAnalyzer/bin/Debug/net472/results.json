@@ -101,6 +101,7 @@
                 ],
                 "Assignment": null,
                 "Attributes": [],
+                "FullName": "Test.State.b",
                 "Line": 7
               }
             ],
@@ -539,6 +540,7 @@
                     ],
                     "Assignment": null,
                     "Attributes": [],
+                    "FullName": "Test.StateInState<T>.InnerState.d",
                     "Line": 23
                   }
                 ],
@@ -854,6 +856,7 @@
                 ],
                 "Assignment": null,
                 "Attributes": [],
+                "FullName": "Test.StateInState<T>.aaaaa",
                 "Line": 9
               }
             ],
@@ -2221,6 +2224,7 @@
                 ],
                 "Assignment": null,
                 "Attributes": [],
+                "FullName": "Test.StateManager.a",
                 "Line": 15
               },
               {
@@ -2231,6 +2235,7 @@
                 ],
                 "Assignment": null,
                 "Attributes": [],
+                "FullName": "Test.StateManager.b",
                 "Line": 16
               },
               {
@@ -2241,6 +2246,7 @@
                 ],
                 "Assignment": null,
                 "Attributes": [],
+                "FullName": "Test.StateManager.c",
                 "Line": 17
               },
               {
@@ -2251,6 +2257,7 @@
                 ],
                 "Assignment": null,
                 "Attributes": [],
+                "FullName": "Test.StateManager.d",
                 "Line": 18
               }
             ],

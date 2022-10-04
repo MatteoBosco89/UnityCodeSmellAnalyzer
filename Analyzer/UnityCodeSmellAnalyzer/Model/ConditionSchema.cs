@@ -35,7 +35,6 @@ namespace UnityCodeSmellAnalyzer
         public List<string> Properties { get { return properties; } }
         public List<string> Fields { get { return fields; } }
         public List<InvocationSchema> Invocations { get { return invocations; } }
-        
         public string Type { get { return type; } }
         public string Statement { get { return conditionStatement; } }
         public string ExpressionType { get { return conditionType; } }

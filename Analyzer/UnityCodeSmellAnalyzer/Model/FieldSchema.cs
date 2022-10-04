@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace UnityCodeSmellAnalyzer
     {
 
         protected string name;
+        protected string fullName;
         protected string type;
         protected List<string> modifiers = new List<string>();
         protected string assignment;
@@ -24,6 +26,7 @@ namespace UnityCodeSmellAnalyzer
         public List<string> Modifiers { get { return modifiers; } }
         public string Assignment { get { return assignment; } }
         public List<string> Attributes { get { return attributes; } }
+        public string FullName { get { return fullName; } }
 
         public FieldSchema() { }
 
@@ -48,6 +51,7 @@ namespace UnityCodeSmellAnalyzer
             VariableDeclaratorSyntax fds = v as VariableDeclaratorSyntax;
 
             name = fds.Identifier.ToString();
+            fullName = model.GetDeclaredSymbol(fds).ToString();
             line = fds.GetLocation().GetLineSpan().StartLinePosition.Line;
             type = f.Declaration.Type.ToString();
             if (fds.Initializer != null) assignment = fds.Initializer.Value.ToString();
