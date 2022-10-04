@@ -1,0 +1,11 @@
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\obj\Debug\TestJsonQuery.csproj.AssemblyReference.cache
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\obj\Debug\TestJsonQuery.csproj.SuggestedBindingRedirects.cache
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\obj\Debug\TestJsonQuery.csproj.CoreCompileInputs.cache
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\obj\Debug\TestJsonQuery.csproj.CopyComplete
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\bin\Debug\InvocationSmell.exe.config
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\bin\Debug\InvocationSmell.exe
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\bin\Debug\InvocationSmell.pdb
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\obj\Debug\InvocationSmell.exe
+C:\Users\pasqu\Documents\Università\Tesi\ProgettiEsempio\TestJsonQuery\obj\Debug\InvocationSmell.pdb
