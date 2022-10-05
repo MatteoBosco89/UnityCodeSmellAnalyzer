@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,10 @@ namespace UnityCodeSmellAnalyzer
     public class AccessorSchema : MethodSchema
     {
         protected string accessorType;
-        
+
+        [JsonIgnore] public override string Name { get { return name; } }
+        [JsonIgnore] public override string FullName { get { return fullName; } }
+
         public string AccessorType { get { return accessorType; } }
         public AccessorSchema() { }
        

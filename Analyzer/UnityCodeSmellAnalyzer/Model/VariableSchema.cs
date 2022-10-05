@@ -19,7 +19,7 @@ namespace UnityCodeSmellAnalyzer
         protected string type;
         protected string kind;
         protected VariableSchema variable;
-        protected enum VariableKind { Definition, Assignment, Use }
+        protected enum VarKind { Definition, Assignment, Use }
 
         [JsonIgnore]
         public override int Line { get { return line; } }
@@ -97,10 +97,10 @@ namespace UnityCodeSmellAnalyzer
         }
         protected void LoadInternal(SyntaxNode root, SemanticModel model, UsedVariableSchema v)
         {
-            kind = VariableKind.Use.ToString();
+            kind = VarKind.Use.ToString();
             assignedTo = v.AssignedTo;
             line = v.Line;
-            type = model.GetTypeInfo(root).Type.ToString();
+            type = model.GetTypeInfo(root).Type?.ToString();
             useKind = model.GetOperation(root)?.Kind.ToString();
             operation = root.Kind().ToString();
             _ = (model.GetOperation(root)?.Kind is OperationKind.Literal) ? value = root.ToString() : name = root.ToString();
@@ -108,7 +108,7 @@ namespace UnityCodeSmellAnalyzer
         }
         public void LoadMe(SyntaxNode root, SemanticModel model)
         {
-            kind = VariableKind.Use.ToString();
+            kind = VarKind.Use.ToString();
             AssignmentExpressionSyntax exp = root as AssignmentExpressionSyntax;
             assignedTo = exp.Left.ToString();
             line = exp.GetLocation().GetLineSpan().StartLinePosition.Line;
@@ -129,6 +129,7 @@ namespace UnityCodeSmellAnalyzer
     {
         protected string assignmentKind;
         protected string assignment;
+        protected string variableKind;
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
         public string Name { get { return name; } }
@@ -136,17 +137,19 @@ namespace UnityCodeSmellAnalyzer
         public string Assignment { get { return assignment; } }
         public string Kind { get { return kind; } }
         public int AssignmentLine { get { return line; } }
+        public string VariableKind { get { return variableKind; } }
         public string AssignmentKind { get { return assignmentKind; } }
         public AssignedVariableSchema() { }
 
         public void LoadMe(SyntaxNode root, SemanticModel model)
         {
-            kind = VariableKind.Assignment.ToString();
+            kind = VarKind.Assignment.ToString();
             AssignmentExpressionSyntax exp = root as AssignmentExpressionSyntax;
             assignmentKind = exp.Kind().ToString();
             name = exp.Left.ToString();
             line = exp.GetLocation().GetLineSpan().StartLinePosition.Line;
             type = model.GetTypeInfo(exp).Type.ToString();
+            variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
             assignment = exp.Right.ToString();
         }
     }
@@ -170,7 +173,7 @@ namespace UnityCodeSmellAnalyzer
         public DeclaredVariableSchema() { }
         public void LoadMe(SyntaxNode root, SyntaxNode v, SemanticModel model)
         {
-            kind = VariableKind.Definition.ToString();
+            kind = VarKind.Definition.ToString();
             VariableDeclaratorSyntax variable = v as VariableDeclaratorSyntax;
             if (variable.Initializer != null) assignment = variable.Initializer.Value.ToString();
             name = variable.Identifier.ToString();

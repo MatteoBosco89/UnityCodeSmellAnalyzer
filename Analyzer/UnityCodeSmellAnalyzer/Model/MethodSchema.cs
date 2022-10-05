@@ -41,9 +41,9 @@ namespace UnityCodeSmellAnalyzer
 
         public bool HasBody { get { return hasBody; } }
         public bool HasExpressionBody { get { return hasBodyExpression; } }
-        public string Name { get { return name; } }
+        public virtual string Name { get { return name; } }
         public bool IsEmpty { get { return isEmpty; } }
-        public string FullName { get { return fullName; } }
+        public virtual string FullName { get { return fullName; } }
         public List<string> Modifiers { get { return modifiers; } }
         public List<string> Attributes { get { return attributes; } }
         public virtual string ReturnType { get { return returnType; } set { } }

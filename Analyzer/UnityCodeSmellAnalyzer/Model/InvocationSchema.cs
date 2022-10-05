@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Operations;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,6 +24,7 @@ namespace UnityCodeSmellAnalyzer
         protected int definitionLine;
         protected string kind;
         protected string module;
+        protected bool referenceFound = true;
         protected List<ArgumentSchema> arguments = new List<ArgumentSchema>();
 
         public string Name { get { return name; } }
@@ -32,6 +34,7 @@ namespace UnityCodeSmellAnalyzer
         public int DefinitionLine { get { return definitionLine + 1; } }
         public string Kind { get { return kind; } }
         public string Module { get { return module; } }
+        public bool ReferenceFound { get { return referenceFound; } }
         public List<ArgumentSchema> Arguments { get { return arguments; } }
 
         public InvocationSchema() { }
@@ -76,6 +79,12 @@ namespace UnityCodeSmellAnalyzer
                 module = model.GetSymbolInfo(invocation).Symbol.Locations.First().MetadataModule?.ToString();
                 var meth = model.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
                 fileName = meth.Locations.First().SourceTree?.FilePath;
+            }
+            else
+            {
+                name = invocation.Expression.ToString();
+                fullName = invocation.Expression.ToString();
+                referenceFound = false;
             }
         }
     }
