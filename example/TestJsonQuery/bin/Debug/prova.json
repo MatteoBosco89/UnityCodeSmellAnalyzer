@@ -240,12 +240,10 @@
     "Name": "Singleton Pattern",
     "Occurency": 1,
     "Smells": [
-      [
-        {
-          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
-          "Class": "Sphere.SpehereManager"
-        }
-      ]
+      {
+        "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
+        "Class": "Sphere.SpehereManager"
+      }
     ]
   }
 ]

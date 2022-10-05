@@ -121,7 +121,7 @@ namespace TestJsonQuery
             JObject result = new JObject();
             result.Add("Name", "Singleton Pattern");
             JArray smells = new JArray();
-            smells.Add(FindSingleton(data, "Modifiers", new List<string> { "static" }, new List<string> {"protected", "private"}));
+            smells.Merge(FindSingleton(data, "Modifiers", new List<string> { "static" }, new List<string> {"protected", "private"}));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
             //File.WriteAllText("SingletonPattern.json", result.ToString());
@@ -599,6 +599,146 @@ namespace TestJsonQuery
                         results.Add(token[param].ToString());
                     }
                 } 
+            }
+            return results;
+        }
+
+        public static JArray FindInvocationSmell(JArray data, List<string> methods, List<string> invocations)
+        {
+            Console.WriteLine("Analyzing...");
+            //extract all the compilation units that exhibit the the requested invocations inside the specified methods
+            JArray smells = new JArray();
+            JArray res = DirectInvocation(data, methods, invocations);
+            smells.Merge(res);
+            Console.Write("\tExtracting Smell With Depth >= 1...");
+            //anlyze the other invocation insiede the specified methods to found out if they contain the requested invocations
+            foreach (JToken token in data)
+            {
+                JObject comUnit = new JObject();
+                if (token is JObject @object) comUnit = @object;
+                //get the invocations of the current compilation unit inside the specified methods
+                var r = comUnit.SelectTokens($"$..Methods[?({QueryString(".", "Name", methods, "==", "||")})]..Invocations");
+                JArray jArray = new JArray(r);
+                //contains the methods already checked for the current compilation unit (to avoid recursive invocation)
+                List<string> checkedMethods = new List<string>();
+                //contains the methods to check for the current compiltion unit
+                List<MethodReference> methodsToCheck = new List<MethodReference>();
+                foreach (JToken inv in jArray.Values())
+                {
+                    string name = inv["Name"].ToString();
+                    string fullName = inv["FullName"].ToString();
+                    //Console.WriteLine(fullName);
+                    if (!invocations.Contains(name))
+                    {
+                        var m = new MethodReference(fullName, (int)inv["Line"]);
+                        methodsToCheck.Add(m);
+                    }
+                }
+                //analyze to found the possible smell in depth > 1
+                JArray depthResutl = SearchIvocation(comUnit, data, methodsToCheck, invocations, checkedMethods);
+                if (depthResutl.Count() > 0)
+                {
+                    JObject j = new JObject();
+                    j.Add("Script", comUnit["FileName"].ToString());
+                    j.Add("Traceback", depthResutl);
+                    smells.Add(j);
+                }
+            }
+            Console.WriteLine("Done!");
+            Console.WriteLine("Done!!");
+            return smells;
+        }
+
+        public static JArray DirectInvocation(JArray data, List<string> methods, List<string> invocations)
+        {
+            Console.Write("\tExtracting Direct Invocations...");
+            JArray smells = new JArray();
+            var res1 = data.SelectTokens($"$.[?(@..Methods[?({QueryString(".", "Name", methods, "==", "||")})])]");
+            JArray fresults = new JArray(res1);
+
+            foreach (JToken met in fresults)
+            {
+                if (met is JObject)
+                {
+                    JObject obj = met as JObject;
+                    var r = obj.SelectTokens($"$..Methods[?({QueryString(".", "Name", methods, "==", "||")})]..Invocations");
+                    JArray invok = new JArray(r);
+                    foreach (JToken inv in invok.Values())
+                    {
+                        if (invocations.Contains(inv["Name"].ToString()))
+                        {
+                            //Console.WriteLine("Found direct invocation");
+                            JObject jo = new JObject();
+                            jo.Add("Script", obj["FileName"].ToString());
+                            jo.Add("Name", inv["Name"].ToString());
+                            jo.Add("Invocation", inv["FullName"].ToString());
+                            jo.Add("Line", inv["Line"]);
+                            smells.Add(jo);
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("Done!");
+            return smells;
+        }
+
+        public static JArray SearchIvocation(JObject parentCU, JArray data, List<MethodReference> methodsToCheck, List<string> methodsWithSmell, List<string> checkedMethods)
+        {
+            JArray results = new JArray();
+            //new list of methods to check that will be passed at the recursive call of the function
+            List<MethodReference> m_check = new List<MethodReference>();
+            List<string> check_m = new List<string>();
+
+            foreach (var method in methodsToCheck)
+            {
+                //to avoid recursive call and stack overflow, if the methods is already visited skip
+                if (checkedMethods.Contains(method.FullName)) continue;
+                check_m.Add(method.FullName);
+                //get the compilation unit that contain the method to analyze
+                var queryRes = data.SelectTokens($"$.[?(@..Methods[?(@.FullName == '{method.FullName}')])]");
+                if (queryRes.Count() < 0) continue;
+                JArray compUnit = new JArray(queryRes);
+                //get the list invocations of the method to analyze
+                queryRes = compUnit.SelectTokens($"$..Methods[?(@FullName == '{method.FullName}')]..Invocations");
+                JArray invocations = new JArray(queryRes);
+                //if the method doesn't contain invocations skip
+                if (invocations.Count() <= 0) continue;
+
+                //analyze the invocation inside the method
+                foreach (JToken inv in invocations.Values())
+                {
+                    string name = inv["Name"].ToString();
+                    string fullName = inv["FullName"].ToString();
+                    if (fullName == method.FullName) continue;
+
+                    if (methodsWithSmell.Contains(name))
+                    {
+                        //Console.WriteLine("Found smell depth > 1");
+                        JObject smell = new JObject();
+                        smell.Add("Method", method.FullName);
+                        smell.Add("LineCall", method.Line);
+                        smell.Add("Script", compUnit.First()["FileName"].ToString());
+                        smell.Add("Invocation", fullName);
+                        smell.Add("Name", inv["Name"].ToString());
+                        smell.Add("Line", inv["Line"]);
+                        results.Add(smell);
+                    }
+                    else
+                    {
+                        var m = new MethodReference(fullName, (int)inv["Line"]);
+                        m_check.Add(m);
+                    }
+                }
+                JArray arr = SearchIvocation((JObject)compUnit.First(), data, m_check, methodsWithSmell, check_m);
+                if (arr.Count() > 0)
+                {
+                    JObject j = new JObject();
+                    j.Add("Invocation", method.FullName);
+                    j.Add("Line", method.Line);
+                    j.Add("Script", compUnit.First()["FileName"].ToString());
+                    j.Add("Traceback", arr);
+                    results.Add(j);
+                }
             }
             return results;
         }
