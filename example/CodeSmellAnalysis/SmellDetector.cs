@@ -14,10 +14,9 @@ namespace CodeSmellFinder
             JObject result = new JObject();
             result.Add("Name", "Static Couplig");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, types, "Attributes", attributesList));
+            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, "Attributes", attributesList));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
-            //File.WriteAllText("StaticCoupling.json", result.ToString());
             return result;
         }
 
@@ -32,25 +31,23 @@ namespace CodeSmellFinder
             smells.Merge(DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Assignment", names));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
-            //File.WriteAllText("WeakTemporization.json", result.ToString());
             return result;
         }
 
         public static JObject ImproperCollider(JArray data, List<string> types, List<string> methods)
         {
-            //TODO: Extract all classes with specified inheritances of the types
-            //TODO: Controllare i parametri dei metodi se presentano i tipi richiesti
+            List<string> classesFound = Utility.AllClassInheritances(data, "UnityEngine.MeshCollider");
+            types.AddRange(classesFound);
             JObject result = new JObject();
             result.Add("Name", "Improper Collider");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, types, null, null));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods));
+            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, null, null));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods"));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors"));
             smells.Merge(DataExtractor.VariablesFromData(data, types, "Kind", new List<string> { "Definition" }, "", null));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
-            //File.WriteAllText("ImproperCollider.json", result.ToString());
             return result;
-
         }
 
         public static JObject DependenciesBetweenObjects(JArray data, List<string> types, List<string> methods)
@@ -58,12 +55,12 @@ namespace CodeSmellFinder
             JObject result = new JObject();
             result.Add("Name", "Dependency Between Objects");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, types, null, null));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods));
-            //smells.Merge(DependeciesInMethodsParameters(data, types));
+            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, null, null));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods"));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors"));
+            smells.Merge(DataExtractor.DependeciesInParameters(data, types));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
-            //File.WriteAllText("DependenciesBetweenObjects.json", result.ToString());
             return result;
         }
 
@@ -97,7 +94,6 @@ namespace CodeSmellFinder
             }
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
-            //File.WriteAllText("LackOfSeparation.json", result.ToString());
             return result;
         }
 
@@ -109,16 +105,59 @@ namespace CodeSmellFinder
             smells.Merge(DataExtractor.FindSingleton(data, "Modifiers", new List<string> { "static" }, new List<string> { "protected", "private" }));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
-            //File.WriteAllText("SingletonPattern.json", result.ToString());
             return result;
         }
 
-        public static void VelocityChange(JArray data)
+        public static JObject InstantiateDestroy(JArray data)
         {
-            //TODO: Eseguire la ricerca su RIGIDBODY E CHARACTER CONTROLLER
+            JObject result = new JObject();
+            result.Add("Name", "Instantiate - Destroy");
             JArray smells = new JArray();
+            smells.Merge(DataExtractor.FindInvocationSmell(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "Instantiate", "Destroy" }));
+            result.Add("Occurency", smells.Count());
+            result.Add("Smells", smells);
+            return result;
+        }
 
-            File.WriteAllText("TrasformChange.json", smells.ToString());
+        public static JObject FindMethods(JArray data)
+        {
+            JObject result = new JObject();
+            result.Add("Name", "Find Methods");
+            JArray smells = new JArray();
+            smells.Merge(DataExtractor.FindInvocationSmell(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "Find", "FindGameObjectsWithTag", "FindObjectOfType", "FindGameObjectWithTag" }));
+            result.Add("Occurency", smells.Count());
+            result.Add("Smells", smells);
+            return result;
+        }
+
+        public static JObject PoorStateDesign(JArray data)
+        {
+            JObject result = new JObject();
+            result.Add("Name", "Poor State Design");
+            JArray smells = new JArray();
+            List<string> methods = new List<string> { "Update", "FixedUpdate" };
+            //le invocazioni vengono controllate per tutto il metodo quindi dovrebbero essere gia gestite
+            smells.Merge(DataExtractor.FieldsInConditionStatementInMethods(data, true, "Name", methods, "IfBlocks", "StartLine"));
+            smells.Merge(DataExtractor.FieldsInConditionStatementInMethods(data, true, "Name", methods, "SwitchBlocks", "StartLine"));
+            smells.Merge(DataExtractor.PropertiesInConditionStatementInMethods(data, true, "Name", methods, "IfBlocks", "StartLine"));
+            smells.Merge(DataExtractor.PropertiesInConditionStatementInMethods(data, true, "Name", methods, "SwitchBlocks", "StartLine"));
+            result.Add("Occurency", smells.Count());
+            result.Add("Smells", smells);
+            return result;
+        }
+
+        public static JObject VelocityChange(JArray data)
+        {
+            //TODO: Eseguire la ricerca su RIGIDBODY
+            //ricercare tutte le variabili e i fields di tipo RigidBody
+            //Verificare se .velocity e .angularVelocity del rigidBody vengono assegnati
+            JObject result = new JObject();
+            JArray smells = new JArray();
+            result.Add("Name", "Velocity Change");
+            smells.Merge(DataExtractor.VariablesFromData(data, null, "Kind", new List<string> { "Assignment" }, "Name", new List<string> { ".velocity", ".angularVelocity" }));
+            result.Add("Occurency", smells.Count());
+            result.Add("Smells", smells);
+            return result;
         }
     }
 }

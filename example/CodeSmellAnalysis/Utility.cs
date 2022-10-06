@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CodeSmellFinder
 {
@@ -93,7 +94,75 @@ namespace CodeSmellFinder
             return results;
 
         }
+        public static List<string> ClassInheritance(JArray data, string param1, string param2, string param3, string inheritances)
+        {
+            List<string> classes = new List<string>();
+            var res = data.SelectTokens($"$..{param1}");
+            JArray results = new JArray(res);
 
+            foreach (JToken c in results.Values())
+            {
+                if (c is JObject)
+                {
+                    string inh = c[param2].ToString();
+                    if (inheritances.Contains(inh))
+                    {
+                        classes.Add(c[param3].ToString());
+                    }
+                }
+            }
+            return classes;
+        }
+
+        public static List<String> AllClassInheritances(JArray data, string inheritance)
+        {
+            List<string> baseInher = new List<string>();
+            baseInher.AddRange(ClassInheritance(data, "Classes", "FullInheritanceName", "FullName", inheritance));
+            baseInher = AllInheritances(data, baseInher);
+            return baseInher;
+        }
+
+        public static List<string> AllInheritances(JArray data, List<string> baseInher)
+        {
+            List<string> allInheritances = new List<string>();
+            allInheritances.AddRange(baseInher);
+            for (int i = 0; i < baseInher.Count; i++)
+            {
+                var res = data.SelectTokens($"$..Classes[?(@.FullInheritanceName == '{baseInher[i]}')]");
+                JArray results = new JArray(res);
+                foreach (JToken cu in results)
+                {
+                    string name = cu["FullName"].ToString();
+                    if(!allInheritances.Contains(name))allInheritances.Add(name);
+                }
+            }
+            if (baseInher.Count < allInheritances.Count) AllInheritances(data, allInheritances);
+            return allInheritances;
+        }
+
+        public static List<string> GetAllInvocationsOfClassInMethods(JObject cl, string methodName, string param)
+        {
+            List<string> invoks = new List<string>();
+
+            var queryRes = cl.SelectTokens("$.Methods");
+            JArray res = new JArray(queryRes);
+            foreach (JToken m in res.Values())
+            {
+                invoks.Add(m[param].ToString());
+            }
+            JToken method = cl.SelectToken($"$.Methods[?(@.{param} == '{methodName}')]");
+            queryRes = method.SelectTokens("$..Invocations");
+            JArray results = new JArray(queryRes);
+            List<string> invkres = new List<string>();
+            foreach(JToken inv in results.Values())
+            {
+                if (ListInString(invoks, inv["FullName"].ToString())) invkres.Add(inv["FullName"].ToString());
+            }
+
+            return invkres;
+
+        }
     }
+    
 }
 

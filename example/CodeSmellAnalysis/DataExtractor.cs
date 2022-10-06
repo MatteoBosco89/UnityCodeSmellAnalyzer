@@ -8,59 +8,6 @@ namespace CodeSmellFinder
 {
     public static class DataExtractor
     {
-        public static JArray DependeciesInMethodsParameters(JArray data, List<string> types)
-        {
-            JArray smells = new JArray();
-            return smells;
-        }
-
-       
-        public static List<string> ClassInheritance(JArray data, string param1, string param2, string param3, string inheritances)
-        {
-            List<string> classes = new List<string>();
-            var res = data.SelectTokens($"$..{param1}");
-            JArray results = new JArray(res);
-
-            foreach (JToken c in results)
-            {
-                if (c is JObject)
-                {
-                    string inh = c[param2].ToString();
-                    if (inh.Contains(inheritances))
-                    {
-                        classes.Add(c[param3].ToString());
-                    }
-                }
-            }
-            return classes;
-        }
-
-        public static List<String> AllClassInheritances(JArray data, string inheritance)
-        {
-            List<string> baseInher = new List<string>();
-            baseInher.AddRange(ClassInheritance(data, "Classes", "Inheritance", "FullName", inheritance));
-            baseInher.AddRange(AllInheritances(data, baseInher));
-            return baseInher;
-        }
-
-        public static List<string> AllInheritances(JArray data, List<string> baseInher)
-        {
-            List<string> allInheritances = new List<string>();
-            allInheritances.AddRange(baseInher);
-            for (int i = 0; i < baseInher.Count; i++)
-            {
-                var res = data.SelectTokens($"$..Classes[?(@.InheritanceFullName == '{baseInher[i]}')]");
-                JArray results = new JArray(res);
-                foreach (JToken cu in results)
-                {
-                    string name = cu["FullName"].ToString();
-                    allInheritances.Add(name);
-                }
-            }
-            if (baseInher.Count < allInheritances.Count) AllInheritances(data, allInheritances);
-            return allInheritances;
-        }
-
         public static JArray MethodsWithName(JArray data, string param, List<string> methods)
         {
             JArray smells = new JArray();
@@ -282,22 +229,6 @@ namespace CodeSmellFinder
             return smells;
         }
 
-
-
-        public static JArray FieldDependeciesInCompilationUnit(JArray data, List<string> types, string param, List<string> values)
-        {
-            JArray smells = new JArray();
-            foreach (JToken token in data)
-            {
-                if (token is JObject)
-                {
-                    JObject cu = (JObject)token;
-                    smells.Merge(FieldWithParam(cu, "..", "Type", true, types, param, values));
-                }
-            }
-            return smells;
-        }
-
         public static JArray FindSingleton(JArray data, string param, List<string> fieldModifiers, List<string> constructorModifiers)
         {
             JArray smells = new JArray();
@@ -363,6 +294,20 @@ namespace CodeSmellFinder
             return smells;
         }
 
+        public static JArray FieldDependeciesInCompilationUnit(JArray data, string typeParam, List<string> types, string param, List<string> values)
+        {
+            JArray smells = new JArray();
+            foreach (JToken token in data)
+            {
+                if (token is JObject)
+                {
+                    JObject cu = (JObject)token;
+                    smells.Merge(FieldWithParam(cu, "..", typeParam, true, types, param, values));
+                }
+            }
+            return smells;
+        }
+
         public static JArray FieldWithParam(JObject cu, string queryOp, string keyParam, bool equals, List<string> types, string param1, List<string> values)
         {
             JArray smells = new JArray();
@@ -381,7 +326,8 @@ namespace CodeSmellFinder
                 }
 
                 string type = field[keyParam].ToString();
-                if (equals) if (!types.Contains(type) && types != null) continue;
+                if (equals) 
+                    if (!Utility.StringInList(types, type) && types != null) continue;
                 if (!equals) if (!Utility.ListInString(types, type)) continue;
                 JObject s = new JObject();
                 if (cu.ContainsKey("FileName"))
@@ -397,15 +343,16 @@ namespace CodeSmellFinder
         }
 
 
-        public static JArray DependeciesInMethods(JArray data, List<string> types, List<string> methods)
+        public static JArray DependeciesInMethods(JArray data, List<string> types, List<string> methods, string collection)
         {
+            //Aggiugere se possibile il full name del returntype di un invocation
             JArray results = new JArray();
             foreach (JToken token in data)
             {
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
-                    var query = cu.SelectTokens($"$..Methods");
+                    var query = cu.SelectTokens($"$..{collection}");
 
                     JArray res = new JArray(query);
                     foreach (JToken method in res.Values())
@@ -416,7 +363,7 @@ namespace CodeSmellFinder
                             string name = inv["Name"].ToString();
                             if (!methods.Contains(name)) continue;
                             string returnType = inv["ReturnType"].ToString();
-                            if (types.Contains(returnType))
+                            if (Utility.StringInList(types, returnType))
                             {
                                 JObject s = new JObject();
                                 s.Add("Script", cu["FileName"].ToString());
@@ -436,7 +383,51 @@ namespace CodeSmellFinder
             return results;
         }
 
+        public static JArray DependeciesInParameters(JArray data, List<string> types)
+        {
+            JArray smells = new JArray();
+            foreach(JToken cu in data)
+            {
+                var queryRes = cu.SelectTokens($"$..Methods");
+                JArray res = new JArray(queryRes);
+                foreach(JToken m in res.Values())
+                {
+                    JArray pars = m["Parameters"] as JArray;
+                    foreach(JToken p in pars)
+                    {
+                        string type = p["Type"].ToString();
+                        if (!Utility.StringInList(types, type)) continue;
+                        JObject s = new JObject();
+                        s.Add("Script", cu["FileName"]);
+                        s.Add("Parameter", p["Name"]);
+                        s.Add("Method", m["FullName"]);
+                        s.Add("Type", type);
+                        s.Add("Line", m["Line"]);
+                        smells.Add(s);
+                    }
+                }
+                queryRes = cu.SelectTokens($"$..Constructors");
+                res = new JArray(queryRes);
+                foreach (JToken m in res.Values())
+                {
+                    JArray pars = m["Parameters"] as JArray;
+                    foreach (JToken p in pars)
+                    {
+                        string type = p["Type"].ToString();
+                        if (!Utility.StringInList(types, type)) continue;
+                        JObject s = new JObject();
+                        s.Add("Script", cu["FileName"]);
+                        s.Add("Parameter", p["Name"]);
+                        s.Add("Constructor", m["FullName"]);
+                        s.Add("Type", type);
+                        s.Add("Line", m["Line"]);
+                        smells.Add(s);
+                    }
+                }
 
+            }
+            return smells;
+        }
 
         public static JArray FindInvocationSmell(JArray data, List<string> methods, List<string> invocations)
         {
@@ -500,9 +491,8 @@ namespace CodeSmellFinder
                     JArray invok = new JArray(r);
                     foreach (JToken inv in invok.Values())
                     {
-                        if (invocations.Contains(inv["Name"].ToString()))
+                        if (Utility.ListInString(invocations, inv["FullName"].ToString()))
                         {
-                            //Console.WriteLine("Found direct invocation");
                             JObject jo = new JObject();
                             jo.Add("Script", obj["FileName"].ToString());
                             jo.Add("Name", inv["Name"].ToString());
@@ -546,7 +536,7 @@ namespace CodeSmellFinder
                     string fullName = inv["FullName"].ToString();
                     if (fullName == method.FullName) continue;
 
-                    if (methodsWithSmell.Contains(name))
+                    if (Utility.ListInString(methodsWithSmell, fullName))
                     {
                         //Console.WriteLine("Found smell depth > 1");
                         JObject smell = new JObject();
@@ -578,5 +568,177 @@ namespace CodeSmellFinder
             return results;
         }
 
+        public static JArray FieldsInConditionStatementInMethods(JArray data, bool inInvocation, string metParam, List<string> methods, string condBlock, string lineParam)
+        {
+            JArray smells = new JArray();
+            foreach(JToken token in data)
+            {
+                if(token is JObject)
+                {
+                    JObject cu = token as JObject;
+                    var queryRes = cu.SelectTokens("$..Classes");
+                    JArray classes = new JArray(queryRes);
+                    foreach(JToken cl in classes.Values())
+                    {
+                        if(cl is JObject)
+                        {
+                            JArray fields = new JArray(cl.SelectTokens($"$.Fields"));
+
+                            List<string> fieldsFullName = new List<string>();
+                            foreach(JToken f in fields.Values())
+                            {
+                                fieldsFullName.Add(f["FullName"].ToString());
+                            }
+
+                            JArray methodsFound = new JArray(cl.SelectTokens($"$.Methods[?({Utility.QueryString(".", metParam, methods, "==", "||")})]"));
+                            foreach(JToken m in methodsFound)
+                            {
+                                if (inInvocation)
+                                {
+                                    List<string> invoks = Utility.GetAllInvocationsOfClassInMethods(cl as JObject,  m["FullName"].ToString(), "FullName");
+                                    foreach(string invName in invoks)
+                                    {
+                                        JArray res = new JArray(cl.SelectTokens($"$.Methods[?(@.FullName == '{invName}')]"));
+                                        foreach(JToken Minv in res)
+                                        {
+                                            JArray condStatements1 = new JArray(Minv.SelectTokens($"$..{condBlock}"));
+                                            foreach (JToken ifs in condStatements1.Values())
+                                            {
+                                                JToken fieldsFound = ifs["Condition"]["Fields"];
+                                                foreach (JToken f in fieldsFound)
+                                                {
+                                                    if (Utility.StringInList(fieldsFullName, f.ToString()))
+                                                    {
+                                                        JObject s = new JObject();
+                                                        s.Add("Script", cu["FileName"]);
+                                                        s.Add("Class", cl["FullName"]);
+                                                        s.Add("Method", m["FullName"]);
+                                                        s.Add("Invocation", Minv["FullName"]);
+                                                        s.Add("ConditionBlock", condBlock);
+                                                        s.Add("Line", ifs[lineParam]);
+                                                        smells.Add(s);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                               
+                                JArray condStatements = new JArray(m.SelectTokens($"$..{condBlock}"));
+                                foreach (JToken ifs in condStatements.Values())
+                                {
+                                    JToken fieldsFound = ifs["Condition"]["Fields"];
+                                    foreach (JToken f in fieldsFound)
+                                    {
+                                        if (Utility.StringInList(fieldsFullName, f.ToString()))
+                                        {
+                                            JObject s = new JObject();
+                                            s.Add("Script", cu["FileName"]);
+                                            s.Add("Class", cl["FullName"]);
+                                            s.Add("Method", m["FullName"]);
+                                            s.Add("ConditionBlock", condBlock);
+                                            s.Add("Line", ifs[lineParam]);
+                                            smells.Add(s);
+                                        }
+                                    }
+                                }
+                               
+                            }
+                        }
+                    }
+                }
+            }
+            return smells;
+        }
+
+        public static JArray PropertiesInConditionStatementInMethods(JArray data, bool inInvocation, string metParam, List<string> methods, string condBlock, string lineParam)
+        {
+            JArray smells = new JArray();
+            foreach (JToken token in data)
+            {
+                if (token is JObject)
+                {
+                    JObject cu = token as JObject;
+                    var queryRes = cu.SelectTokens("$..Classes");
+                    JArray classes = new JArray(queryRes);
+                    foreach (JToken cl in classes.Values())
+                    {
+                        if (cl is JObject)
+                        {
+                            JArray properties = new JArray(cl.SelectTokens($"$.Properties"));
+                            string classFullName = cl["FullName"].ToString();
+                            List<string> propertiesFullName = new List<string>();
+                            foreach (JToken f in properties.Values())
+                            {
+                                string fFullName = classFullName + "." + f["Name"].ToString();
+                                propertiesFullName.Add(fFullName);
+                            }
+
+                            JArray methodsFound = new JArray(cl.SelectTokens($"$.Methods[?({Utility.QueryString(".", metParam, methods, "==", "||")})]"));
+                            foreach (JToken m in methodsFound)
+                            {
+                                if (inInvocation)
+                                {
+                                    List<string> invoks = Utility.GetAllInvocationsOfClassInMethods(cl as JObject,  m["FullName"].ToString(), "FullName");
+                                    foreach (string invName in invoks)
+                                    {
+                                        JArray res = new JArray(cl.SelectTokens($"$.Methods[?(@.FullName == '{invName}')]"));
+                                        foreach (JToken Minv in res)
+                                        {
+                                            JArray condStatements1 = new JArray(Minv.SelectTokens($"$..{condBlock}"));
+                                            foreach (JToken ifs in condStatements1.Values())
+                                            {
+                                                JToken propertiesFound = ifs["Condition"]["Properties"];
+                                                foreach (JToken f in propertiesFound)
+                                                {
+                                                    if (Utility.StringInList(propertiesFullName, f.ToString()))
+                                                    {
+                                                        JObject s = new JObject();
+                                                        s.Add("Script", cu["FileName"]);
+                                                        s.Add("Class", cl["FullName"]);
+                                                        s.Add("Method", m["FullName"]);
+                                                        s.Add("Invocation", Minv["FullName"]);
+                                                        s.Add("ConditionBlock", condBlock);
+                                                        s.Add("Line", ifs[lineParam]);
+                                                        smells.Add(s);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                JArray condStatements = new JArray(m.SelectTokens($"$..{condBlock}"));
+                                foreach (JToken ifs in condStatements.Values())
+                                {
+                                    JToken fieldsFound = ifs["Condition"]["Fields"];
+                                    foreach (JToken f in fieldsFound)
+                                    {
+                                        if (Utility.StringInList(propertiesFullName, f.ToString()))
+                                        {
+                                            JObject s = new JObject();
+                                            s.Add("Script", cu["FileName"]);
+                                            s.Add("Class", cl["FullName"]);
+                                            s.Add("Method", m["FullName"]);
+                                            s.Add("ConditionBlock", condBlock);
+                                            s.Add("Line", ifs[lineParam]);
+                                            smells.Add(s);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+            return smells;
+        }
+        public static JArray Test(JArray data)
+        {
+            JArray smells = new JArray();
+            
+            return smells;
+        }
     }
 }
