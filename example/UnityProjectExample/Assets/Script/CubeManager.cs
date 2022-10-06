@@ -1,6 +1,7 @@
 using MyGame.Cube;
 using System.Collections;
 using System.Collections.Generic;
+using Test.Input.TestInput;
 using UnityEngine;
 
 namespace MyGame
@@ -52,11 +53,21 @@ namespace MyGame
         {
             GameObject o = Instantiate(cube.Cube);
             o.SetActive(true);
+            Smellami();
+            StateManager s = new StateManager();
+            s.Test2();
         }
 
         public void GenerateCube()
         {
             GameObject o = Instantiate(cube.Cube);
+            GameObject z = FindObjectOfType<GameObject>();
+            float x = Time.time;
+        }
+        public void Smellami()
+        {
+            StateManager s = new StateManager();
+            s.Test2();
         }
     }
 }

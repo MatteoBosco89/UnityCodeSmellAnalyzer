@@ -149,8 +149,9 @@ namespace CodeSmellFinder
         public static JObject VelocityChange(JArray data)
         {
             //TODO: Eseguire la ricerca su RIGIDBODY
-            //ricercare tutte le variabili e i fields di tipo RigidBody
-            //Verificare se .velocity e .angularVelocity del rigidBody vengono assegnati
+            //fields di tipo RigidBody
+            //metodo per metodo andare a cercare le variabili e i parametri di tipo RigidBody
+            //Verificare se .velocity e .angularVelocity di variabili/Fields di tipo rigidBody vengono assegnati
             JObject result = new JObject();
             JArray smells = new JArray();
             result.Add("Name", "Velocity Change");

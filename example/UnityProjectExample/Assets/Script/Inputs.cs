@@ -1,3 +1,4 @@
+using MyGame;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,48 +6,64 @@ using Test.Input.TestInput;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
-public class Inputs : MonoBehaviour, InterfacesTest
+using a;
+using Sphere;
+
+namespace a
 {
-    [SerializeField] Animation anim;
-    [SerializeField] GameObject o;
-
-    public int Number { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int Number1 { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int Number2 { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-    public void Print()
+    public class Inputs : MeshCollider, InterfacesTest
     {
-        List<string> list = new List<string> { "hello", "smell", "computer" };
-        foreach (string s in list) Console.WriteLine(s);
-        for (int i = 0; i < list.Count; i++)
+        [SerializeField] Animation anim;
+        [SerializeField] GameObject o;
+        MeshCollider mesh;
+        Rigidbody r = new Rigidbody();
+
+        public int Number { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Number1 { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Number2 { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void Print() { }
+
+        public void Print(SpehereManager s)
         {
-            list[i] += "we";
-            list[i].Split('i');
+            List<string> list = new List<string> { "hello", "smell", "computer" };
+            foreach (string s1 in list) Console.WriteLine(s);
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i] += "we";
+                list[i].Split('i');
+            }
+            MeshCollider m = new MeshCollider();
+            m = GetComponent<MeshCollider>();
+            r.velocity = new Vector3(0, 0, 0);
+            r.angularVelocity = new Vector3(0, 0, 0);
         }
-    }
 
-    public void PrintError()
-    {
-        throw new System.NotImplementedException();
-    }
+        public void PrintError()
+        {
+            throw new System.NotImplementedException();
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim.PlayQueued("Jump");
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            anim.PlayQueued("Jump");
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        o = Instantiate(o);
-        o.transform.position = o.transform.position + new Vector3(10, 10, 10);
-        Destroy(o);
-    }
+        // Update is called once per frame
+        void Update()
+        {
+            o = Instantiate(o);
+            o.transform.position = o.transform.position + new Vector3(10, 10, 10);
+            Destroy(o);
+            o = GameObject.Find("Player");
+        }
 
-    private void FixedUpdate()
-    {
-        StateManager s = new StateManager();
-        s.Test2();
+        private void FixedUpdate()
+        {
+            StateManager s = new StateManager();
+            CubeManager c = new CubeManager();
+            c.Smellami();
+        }
     }
 }

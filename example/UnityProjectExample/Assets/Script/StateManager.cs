@@ -2,7 +2,7 @@ using MyGame;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using a;
 namespace Test
 {
     using UnityEngine.Animations;
@@ -12,7 +12,7 @@ namespace Test
 
     namespace Input
     {
-        public abstract class Prova
+        public abstract class Prova: Inputs
         {
             protected GameObject o;
 
@@ -29,6 +29,7 @@ namespace Test
             using UnityEngine.Rendering;
             using System.Linq;
             using System;
+            using Sphere;
 
             public class StateManager : SuperClass
             {
@@ -39,38 +40,27 @@ namespace Test
                 protected bool backward = false;
                 protected bool left = false;
                 protected bool right = false;
-                protected List<int> n = new List<int> { 2, 3, 4 };
-
-                public bool IsJumping { get { return isJumping; } }
-                public List<int> N { get { return n; } }
-
+                [SerializeField] SphereCollider s;
+                [SerializeField] SpehereManager spe;
+                Inputs mesh;
                 // Start is called before the first frame update
+                public bool NoDamage { get { return noDamage; } }
                 void Start()
                 {
+                    GetComponent<CubeManager>();
+                    GetComponent<Inputs>();
                     do
                     {
                         Console.WriteLine("Hello");
                     } while (true);
                 }
 
-                public void TestIf()
-                {
-                    if (dir > 0 && forward)
-                    {
-                        Test2();
-                    }
-                    else if (dir > 0 && backward)
-                    {
-                        Test();
-                    }
-                    else Console.WriteLine("Ciao");
-                }
-
                 // Update is called once per frame
                 void Update()
                 {
                     if (!isJumping) noDamage = true;
-                    else noDamage = false;
+                    else if(noDamage) noDamage = false;
+                    Prova();
 
                     switch (dir)
                     {
@@ -79,6 +69,7 @@ namespace Test
                             backward = false;
                             left = false;
                             right = false;
+                            if (NoDamage) Console.WriteLine("");
                             break;
                         case 1:
                             forward = true;
@@ -107,44 +98,26 @@ namespace Test
                     }
                     MyGame.Cube.CubeHolder o = new MyGame.Cube.CubeHolder(result);
                     Instantiate(o.Cube);
+                    GameObject z = GameObject.FindGameObjectWithTag("Player");
+                    z.SetActive(false);
+                }
+                public Inputs Prova()
+                {
+                    if (NoDamage) return null;
+                    switch (dir)
+                    {
+                        case 0:
+                            break;
+                       
+                    }
+                    return new Inputs();
                 }
 
-		        public List<int> Numbers() { return new List<int>{ 1, 2, 3 } }
-
-                public bool Meth() { return true; }
-                public bool Meth2() { return Meth(); }
-                public int Meth3() { return (2 + 3); }
                 public override void Test2()
                 {
-                    int iii = 0;
-                    for (iii = 1; iii <= Meth3() && isJumping; iii++)
-                    {
-                        foreach (int a in N)
-                        {
-                            for (int i = 0; i < Meth3(); i++)
-                            {
-                                if (IsJumping)
-                                {
-                                    foreach (int a in N)
-                                    {
-                                        if (!IsJumping) return;
-                                        else if (IsJumping) foreach (int a in N) Console.WriteLine("ciao");
-                                    }
-                                }
-                                else
-                                {
-                                    foreach(int a in N) Console.WriteLine("ciao");
-                                }
-                            }
-                        }
-                    }
-		            
-                    
                     base.Test2();
                     Test();
-                    bool a = true;
-                    a = IsJumping;
-                    while (a && isJumping || dir <= 0 || IsJumping && Meth())
+                    while (isJumping)
                     {
                         int i = 0;
                         i = 10;
@@ -155,12 +128,10 @@ namespace Test
 
                         k.ToString();
                         Console.WriteLine(i * k);
-			            while (i > 10)
-			            {
-			                Test();
-			            }
                     }
+                    
                 }
+                
             }
         }
     }

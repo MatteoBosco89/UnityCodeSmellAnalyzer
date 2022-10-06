@@ -100,6 +100,7 @@ namespace CodeSmellFinder
                         s.Add("Script", cu["FileName"].ToString());
                         string kind = currVar["Kind"].ToString();
                         s.Add("Kind", kind);
+                        s.Add("Name", currVar["Name"]);
                         s.Add("Type", currVar["Type"].ToString());
                         s.Add("Line", currVar[kind + "Line"]);
                         smells.Add(s);
@@ -302,7 +303,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
-                    smells.Merge(FieldWithParam(cu, "..", typeParam, true, types, param, values));
+                    smells.Merge(FieldWithParam(cu, "..", typeParam, false, types, param, values));
                 }
             }
             return smells;
@@ -328,7 +329,7 @@ namespace CodeSmellFinder
                 string type = field[keyParam].ToString();
                 if (equals) 
                     if (!Utility.StringInList(types, type) && types != null) continue;
-                if (!equals) if (!Utility.ListInString(types, type)) continue;
+                if (!equals) if (!Utility.ListInString(types, type) && types != null) continue;
                 JObject s = new JObject();
                 if (cu.ContainsKey("FileName"))
                     s.Add("Script", cu["FileName"]);
@@ -512,13 +513,12 @@ namespace CodeSmellFinder
             JArray results = new JArray();
             //new list of methods to check that will be passed at the recursive call of the function
             List<MethodReference> m_check = new List<MethodReference>();
-            List<string> check_m = new List<string>();
 
             foreach (var method in methodsToCheck)
             {
                 //to avoid recursive call and stack overflow, if the methods is already visited skip
                 if (checkedMethods.Contains(method.FullName)) continue;
-                check_m.Add(method.FullName);
+                checkedMethods.Add(method.FullName);
                 //get the compilation unit that contain the method to analyze
                 var queryRes = data.SelectTokens($"$.[?(@..Methods[?(@.FullName == '{method.FullName}')])]");
                 if (queryRes.Count() < 0) continue;
@@ -554,7 +554,7 @@ namespace CodeSmellFinder
                         m_check.Add(m);
                     }
                 }
-                JArray arr = SearchIvocation((JObject)compUnit.First(), data, m_check, methodsWithSmell, check_m);
+                JArray arr = SearchIvocation((JObject)compUnit.First(), data, m_check, methodsWithSmell, checkedMethods);
                 if (arr.Count() > 0)
                 {
                     JObject j = new JObject();
@@ -734,9 +734,58 @@ namespace CodeSmellFinder
             }
             return smells;
         }
-        public static JArray Test(JArray data)
+        public static JArray FindVelocityChange(JArray data, string type, List<string> velocityParam)
         {
             JArray smells = new JArray();
+            foreach(JToken cu in data)
+            {
+                JArray classes = new JArray(cu.SelectTokens("$..Classes"));
+                foreach(JToken c in classes)
+                {
+                    List<string> fieldsName = new List<string>();
+                    
+                    JArray fields = c["Fields"] as JArray;
+                    foreach (JToken f in fields)
+                    {
+                        if (f["Type"].ToString().Contains(type)) fieldsName.Add(f["Name"].ToString());
+                    }
+                    JArray methods = c["Methods"] as JArray;
+                    foreach(JToken m in methods)
+                    {
+                        List<string> variablesName = new List<string>();
+                        JArray variables = new JArray(m.SelectTokens("$..Variable"));
+                        foreach(JToken v in variables)
+                        {
+                            if (v["Type"].ToString().Contains(type)) variablesName.Add(v["Name"].ToString());
+                        }
+                        foreach(JToken v in variables)
+                        {
+                            if (v["Kind"].ToString().Contains("Assignment"))
+                            {
+                                string name = v["Name"].ToString();
+                                if(Utility.ListInString(velocityParam, name))
+                                {
+                                    string varName = name.Split('.')[0];
+                                    if (v["VariableKind"].ToString() == "Field")
+                                    {
+                                        if (fieldsName.Contains(varName))
+                                        {
+                                            JObject s = new JObject();
+                                            s.Add("");
+                                        }
+                                    }else
+                                    {
+                                        if (variablesName.Contains(varName))
+                                        {
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             
             return smells;
         }
