@@ -130,6 +130,7 @@ namespace UnityCodeSmellAnalyzer
         protected string assignmentKind;
         protected string assignment;
         protected string variableKind;
+        protected string fullName;
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
         public string Name { get { return name; } }
@@ -138,6 +139,7 @@ namespace UnityCodeSmellAnalyzer
         public string Kind { get { return kind; } }
         public int AssignmentLine { get { return line; } }
         public string VariableKind { get { return variableKind; } }
+        public string FullName { get { return fullName; } }
         public string AssignmentKind { get { return assignmentKind; } }
         public AssignedVariableSchema() { }
 
@@ -148,8 +150,9 @@ namespace UnityCodeSmellAnalyzer
             assignmentKind = exp.Kind().ToString();
             name = exp.Left.ToString();
             line = exp.GetLocation().GetLineSpan().StartLinePosition.Line;
-            type = model.GetTypeInfo(exp).Type.ToString();
+            type = model.GetTypeInfo(exp.Left).Type?.ToString();
             variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
+            fullName = model.GetSymbolInfo(exp.Left).Symbol?.ToString();
             assignment = exp.Right.ToString();
         }
     }
