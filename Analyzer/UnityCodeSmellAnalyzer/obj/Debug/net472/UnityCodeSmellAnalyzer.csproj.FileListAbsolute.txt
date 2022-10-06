@@ -124,3 +124,4 @@ D:\progetti\UnityCodeSmellAnalyzer\Analyzer\UnityCodeSmellAnalyzer\obj\Debug\net
 D:\progetti\UnityCodeSmellAnalyzer\Analyzer\UnityCodeSmellAnalyzer\obj\Debug\net472\UnityCodeSmellAnalyzer.csproj.CopyComplete
 D:\progetti\UnityCodeSmellAnalyzer\Analyzer\UnityCodeSmellAnalyzer\obj\Debug\net472\UnityCodeSmellAnalyzer.exe
 D:\progetti\UnityCodeSmellAnalyzer\Analyzer\UnityCodeSmellAnalyzer\obj\Debug\net472\UnityCodeSmellAnalyzer.pdb
+D:\progetti\UnityCodeSmellAnalyzer\Analyzer\UnityCodeSmellAnalyzer\bin\Debug\net472\CommandLine.dll

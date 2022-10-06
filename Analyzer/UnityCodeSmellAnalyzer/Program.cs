@@ -1,17 +1,14 @@
-﻿using Microsoft.Build.Locator;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Symbols;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.MSBuild;
-using Microsoft.CodeAnalysis.Text;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Runtime.InteropServices;
+using CommandLine;
+
+
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -24,44 +21,13 @@ namespace UnityCodeSmellAnalyzer
         protected static List<CompilationUnit> project = new List<CompilationUnit>();
         protected static Dictionary<string, string> commands = new Dictionary<string, string>();
         protected static string jsonString;
-
-
-        protected static void ShowHelp()
-        {
-            Console.WriteLine("C# Code Analyzer based on Roslyn API for Unity3d");
-            Console.WriteLine(string.Format("{0,-30} {1,-30}", "OPTION", "FUNCTION"));
-            foreach (KeyValuePair<string, string> kv in commands) Console.WriteLine(string.Format("{0,-30} {1,-30}", kv.Key, kv.Value));
-        }
         
 
-        public static void Main()
+        public static void Main(string[] args)
         {
-            Console.WriteLine();
-            LoadCommands();
-            List<string> args = Environment.GetCommandLineArgs().ToList();
+            Parser.Default.ParseArguments<Options>(args).WithParsed(o => AnalyzerConfiguration.Init(o));
 
-            if(args.Contains("-help"))
-            {
-                ShowHelp();
-                return;
-            }
-            if (!args.Contains("-project"))
-            {
-                Console.WriteLine("-project command is mandatory\n");
-                ShowHelp();
-                return;
-            }
-            if (args.Contains("-project"))
-            {
-                int index = args.IndexOf("-project");
-                AnalyzerConfiguration.ProjectPath = args.ElementAt(index + 1);
-            }
-            if (args.Contains("-statements"))
-            {
-                AnalyzerConfiguration.StatementVerbose = true;
-            }
-
-            AnalyzerConfiguration.Init();
+            if (AnalyzerConfiguration.ProjectPath == null) return;
 
             LoadAssemblyList();
             LoadFileList();
@@ -70,16 +36,16 @@ namespace UnityCodeSmellAnalyzer
 
         protected static void LoadAssemblyList()
         {
-            Console.Write("Loading Assemblies...");
+            Console.WriteLine();
+            Console.WriteLine("Loading Assemblies...");
             assemblies.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
             try
             {
-                foreach(string file in AnalyzerConfiguration.Assemblies) assemblies.Add(MetadataReference.CreateFromFile(file));
-                Console.WriteLine("Loaded!");
+                foreach (string file in AnalyzerConfiguration.Assemblies) assemblies.Add(MetadataReference.CreateFromFile(file));
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Directory Not Found!");
+                Console.WriteLine(e);
             }
         }
 
@@ -165,12 +131,19 @@ namespace UnityCodeSmellAnalyzer
             Console.Write("Done!\n");
         }
 
-        protected static void LoadCommands()
-        {            
-            commands.Add("-project", "Project directory (use \"path/to/directory\" if there's spaces in the path)");
-            commands.Add("-statements", "Get all statements");
-            commands.Add("-help", "Shows this message");
-        }
 
     }
+
+    public class Options
+    {
+
+        [Option('p', "project", Required = true, HelpText = "Project Directory.")]
+        public string Project { get; set; }
+        [Option('a', "assembly", Required = false, HelpText = "Additional Assemblies Directory.")]
+        public string AssemblyDir { get; set; }
+        [Option('s', "statements", Required = false, HelpText = "Set output all Statements.")]
+        public bool Statements { get; set; }
+        
+    }
+
 }
