@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using CommandLine;
+using System.Net.NetworkInformation;
 
 namespace UnityCodeSmellAnalyzer
 {
@@ -19,36 +20,38 @@ namespace UnityCodeSmellAnalyzer
         private static CSharpCompilation compilation;
         private static ConfigModel configurations;
         private static bool statementsVerbose = false;
+        private static string projectName = "C# Project";
+        private static string configFile = "Config.json";
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
-        
         public static bool StatementVerbose { get { return statementsVerbose; } set { statementsVerbose = value; } }
-        public static CSharpCompilation Compilation
-        {
-            get { return compilation; }
-            set { compilation = value; }
-        }
-        
-        public static string ProjectPath
-        {
-            get { return projectPath; }
-            set { projectPath = value; }
-        }
+        public static CSharpCompilation Compilation { get { return compilation; } set { compilation = value; } }
+        public static string ProjectPath { get { return projectPath; } set { projectPath = value; } }
+        public static string ProjectName { get { return projectName; } set { projectName = value; } }
+        public static string ConfigFile { get { return configFile; } set { configFile = value; } }
 
+        /// <summary>
+        /// Init the Analyzer Configuration
+        /// </summary>
+        /// <param name="opt">Command Line Options</param>
         public static void Init(Options opt)
         {
-            string f = File.ReadAllText("Config.json");
+            if (opt.ConfigFile != null) configFile = opt.ConfigFile;
+            string f = File.ReadAllText(configFile);
             configurations = JsonConvert.DeserializeObject<ConfigModel>(f);
-            projectPath = opt.Project;
-            configurations.ProjectPath = opt.Project;
+            projectPath = opt.ProjectPath;
+            configurations.ProjectPath = opt.ProjectPath;
             statementsVerbose = opt.Statements;
             configurations.AdditionalAssembly = opt.AssemblyDir;
+            projectName = opt.ProjectName;
         }
 
-        
-
+        /// <summary>
+        /// Inner Class representing the Configuration Model. Responsible for the Configuration Loading and 
+        /// Project Assembly Loading.
+        /// </summary>
         [Serializable]
-        private class ConfigModel
+        internal class ConfigModel
         {
             protected List<string> assemblyFiles = new List<string>();
             protected List<string> assemblyDirectories = new List<string>();
