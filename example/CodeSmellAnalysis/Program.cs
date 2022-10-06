@@ -25,7 +25,8 @@ namespace CodeSmellFinder
             results.Add(SmellDetector.FindMethods(data));
             results.Add(SmellDetector.PoorStateDesign(data));
             results.Add(SmellDetector.VelocityChange(data));
-            File.WriteAllText("prova.json", results.ToString());
+            results.Add(SmellDetector.CountinuouslyCheckingPositionRotation(data));
+            File.WriteAllText("Smells.json", results.ToString());
         }
     }
 }

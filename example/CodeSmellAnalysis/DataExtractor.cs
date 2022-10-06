@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.IO;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 namespace CodeSmellFinder
 {
     public static class DataExtractor
@@ -432,7 +430,7 @@ namespace CodeSmellFinder
 
         public static JArray FindInvocationSmell(JArray data, List<string> methods, List<string> invocations)
         {
-            Console.WriteLine("Analyzing...");
+            Console.WriteLine("\tAnalyzing...");
             //extract all the compilation units that exhibit the the requested invocations inside the specified methods
             JArray smells = new JArray();
             JArray res = DirectInvocation(data, methods, invocations);
@@ -462,7 +460,7 @@ namespace CodeSmellFinder
                     }
                 }
                 //analyze to found the possible smell in depth > 1
-                JArray depthResutl = SearchIvocation(comUnit, data, methodsToCheck, invocations, checkedMethods);
+                JArray depthResutl = SearchIvocation(data, methodsToCheck, invocations, checkedMethods);
                 if (depthResutl.Count() > 0)
                 {
                     JObject j = new JObject();
@@ -472,7 +470,7 @@ namespace CodeSmellFinder
                 }
             }
             Console.WriteLine("Done!");
-            Console.WriteLine("Done!!");
+            Console.WriteLine("\tDone!");
             return smells;
         }
 
@@ -508,7 +506,7 @@ namespace CodeSmellFinder
             return smells;
         }
 
-        public static JArray SearchIvocation(JObject parentCU, JArray data, List<MethodReference> methodsToCheck, List<string> methodsWithSmell, List<string> checkedMethods)
+        public static JArray SearchIvocation(JArray data, List<MethodReference> methodsToCheck, List<string> methodsWithSmell, List<string> checkedMethods)
         {
             JArray results = new JArray();
             //new list of methods to check that will be passed at the recursive call of the function
@@ -524,7 +522,7 @@ namespace CodeSmellFinder
                 if (queryRes.Count() < 0) continue;
                 JArray compUnit = new JArray(queryRes);
                 //get the list invocations of the method to analyze
-                queryRes = compUnit.SelectTokens($"$..Methods[?(@FullName == '{method.FullName}')]..Invocations");
+                queryRes = compUnit.SelectTokens($"$..Methods[?(@.FullName == '{method.FullName}')]..Invocations");
                 JArray invocations = new JArray(queryRes);
                 //if the method doesn't contain invocations skip
                 if (invocations.Count() <= 0) continue;
@@ -554,7 +552,7 @@ namespace CodeSmellFinder
                         m_check.Add(m);
                     }
                 }
-                JArray arr = SearchIvocation((JObject)compUnit.First(), data, m_check, methodsWithSmell, checkedMethods);
+                JArray arr = SearchIvocation(data, m_check, methodsWithSmell, checkedMethods);
                 if (arr.Count() > 0)
                 {
                     JObject j = new JObject();
@@ -739,54 +737,132 @@ namespace CodeSmellFinder
             JArray smells = new JArray();
             foreach(JToken cu in data)
             {
-                JArray classes = new JArray(cu.SelectTokens("$..Classes"));
-                foreach(JToken c in classes)
+                JArray variables = new JArray(cu.SelectTokens("$..Variable"));
+                foreach(JToken v in variables)
                 {
-                    List<string> fieldsName = new List<string>();
-                    
-                    JArray fields = c["Fields"] as JArray;
-                    foreach (JToken f in fields)
+                    JObject var = v as JObject;
+                    if (var.ContainsKey("FullName"))
                     {
-                        if (f["Type"].ToString().Contains(type)) fieldsName.Add(f["Name"].ToString());
-                    }
-                    JArray methods = c["Methods"] as JArray;
-                    foreach(JToken m in methods)
-                    {
-                        List<string> variablesName = new List<string>();
-                        JArray variables = new JArray(m.SelectTokens("$..Variable"));
-                        foreach(JToken v in variables)
+                        string varKind = var["Kind"].ToString();
+                        if(varKind == "Assignment" || varKind == "Definition")
                         {
-                            if (v["Type"].ToString().Contains(type)) variablesName.Add(v["Name"].ToString());
-                        }
-                        foreach(JToken v in variables)
-                        {
-                            if (v["Kind"].ToString().Contains("Assignment"))
+                            string fullName = var["FullName"].ToString();
+                            if (fullName.Contains(type))
                             {
-                                string name = v["Name"].ToString();
-                                if(Utility.ListInString(velocityParam, name))
-                                {
-                                    string varName = name.Split('.')[0];
-                                    if (v["VariableKind"].ToString() == "Field")
-                                    {
-                                        if (fieldsName.Contains(varName))
-                                        {
-                                            JObject s = new JObject();
-                                            s.Add("");
-                                        }
-                                    }else
-                                    {
-                                        if (variablesName.Contains(varName))
-                                        {
-
-                                        }
-                                    }
-                                }
+                                JObject s = new JObject();
+                                s.Add("Script", cu["FileName"]);
+                                s.Add("Name", var["Name"]);
+                                s.Add("Line", var["AssignmentLine"]);
+                                smells.Add(s);
                             }
-                        }
+                        } 
                     }
                 }
             }
             
+            return smells;
+        }
+
+        public static JArray CheckPropertiesInInvocation(JArray data, List<string> methods, List<string> properties, string condBlock)
+        {
+            JArray smells = new JArray();
+
+            foreach(JToken cu in data)
+            {
+                if(cu is JObject)
+                {
+                    
+                    var query = cu.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]");
+                    JArray mets = new JArray(query);
+                    foreach(JToken m in mets)
+                    {
+                        List<MethodReference> methodsToCheck = new List<MethodReference>();
+                        List<string> checkedMethods = new List<string>();
+                        JArray invocations = new JArray(m.SelectTokens("$..Invocations"));
+                        foreach(JToken inv in invocations.Values())
+                        {
+                            methodsToCheck.Add(new MethodReference(inv["FullName"].ToString(), (int)inv["Line"]));
+                        }
+                        JArray conditionBlocks = new JArray(m.SelectTokens($"$..{condBlock}"));
+                        foreach(JToken cb in conditionBlocks.Values())
+                        {
+                            JArray propertiesFound = cb["Condition"]["Properties"] as JArray;
+                            foreach(JToken p in propertiesFound)
+                            {
+                                if (!Utility.StringInList(properties, p.ToString())) continue;
+                                JObject s = new JObject();
+                                s.Add("Script", cu["FileName"]);
+                                s.Add("Method", m["FullName"]);
+                                s.Add("ConditionBlock", condBlock);
+                                s.Add("Property", p);
+                                s.Add("Line", cb["StartLine"]);
+                                smells.Add(s);
+                            }
+                        }
+                        JArray results = PropertiesInInvocations(data, methodsToCheck, checkedMethods, properties, condBlock);
+                        if (results.Count() <= 0) continue;
+                        JObject j = new JObject();
+                        j.Add("Script", cu["FileName"].ToString());
+                        j.Add("Method", m["FullName"]);
+                        j.Add("Line", m["Line"]);
+                        j.Add("Traceback", results);
+                        smells.Add(j);
+                        
+                    }
+                }
+            }
+            return smells;
+        }
+        public static JArray PropertiesInInvocations(JArray data, List<MethodReference> methodsToCheck, List<string> checkedMethods, List<string> properties, string condBlock)
+        {
+            JArray smells = new JArray();
+            List<MethodReference> metToCk = new List<MethodReference>();
+            foreach (var method in methodsToCheck)
+            {
+                //to avoid recursive call and stack overflow, if the methods is already visited skip
+                if (checkedMethods.Contains(method.FullName)) continue;
+                checkedMethods.Add(method.FullName);
+                //get the compilation unit that contain the method to analyze
+                var queryRes = data.SelectTokens($"$.[?(@..Methods[?(@.FullName == '{method.FullName}')])]");
+                if (queryRes.Count() < 0) continue;
+                JArray compUnit = new JArray(queryRes);
+                //get the list invocations of the method to analyze
+                queryRes = compUnit.SelectTokens($"$..Methods[?(@FullName == '{method.FullName}')]..Invocations");
+                JArray invocations = new JArray(queryRes);
+                foreach(JToken inv in invocations.Values())
+                {
+                    string fullName = inv["FullName"].ToString();
+                    if (checkedMethods.Contains(fullName)) continue;
+                    metToCk.Add(new MethodReference(inv["FullName"].ToString(), (int)inv["Line"]));
+                }
+                var m = compUnit.SelectToken($"..Methods[?(@.FullName == '{method.FullName}')]");
+                if (m == null) continue;
+                JArray conditionBlocks = new JArray(m.SelectTokens($"$..{condBlock}"));
+                foreach (JToken cb in conditionBlocks.Values())
+                {
+                    JArray propertiesFound = cb["Condition"]["Properties"] as JArray;
+                    foreach (JToken p in propertiesFound)
+                    {
+                        if (!Utility.StringInList(properties, p.ToString())) continue;
+                        JObject s = new JObject();
+                        s.Add("Script", compUnit.First()["FileName"]);
+                        s.Add("Method", method.FullName);
+                        s.Add("LineCall", method.Line);
+                        s.Add("Property", p);
+                        s.Add("ConditionBlock", condBlock);
+                        s.Add("Line", cb["StartLine"]);
+                        smells.Add(s);
+                    }
+                }
+                JArray results = PropertiesInInvocations(data, methodsToCheck, checkedMethods, properties, condBlock);
+                if (results.Count() <= 0) continue;
+                JObject j = new JObject();
+                j.Add("Invocation", method.FullName);
+                j.Add("Line", method.Line);
+                j.Add("Script", compUnit.First()["FileName"].ToString());
+                j.Add("Traceback", results);
+                smells.Add(j);
+            }
             return smells;
         }
     }
