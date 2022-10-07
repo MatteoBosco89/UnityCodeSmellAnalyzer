@@ -40,6 +40,10 @@
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "CommandLineParser.NS20": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
             "Microsoft.Build.Locator": {
               "target": "Package",
               "version": "[1.2.2, )"

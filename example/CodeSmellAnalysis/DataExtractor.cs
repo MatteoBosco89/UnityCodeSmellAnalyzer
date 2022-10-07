@@ -527,12 +527,12 @@ namespace CodeSmellFinder
         /// <returns>A Jarray containing the smells found</returns>
         public static JArray FindInvocationSmell(JArray data, List<string> methods, List<string> invocations)
         {
-            Console.WriteLine("\tAnalyzing...");
+            //Console.WriteLine("\tAnalyzing...");
             //extract all the compilation units that exhibit the the requested invocations inside the specified methods
             JArray smells = new JArray();
             JArray res = DirectInvocation(data, methods, invocations);
             smells.Merge(res);
-            Console.Write("\tExtracting Smell With Depth >= 1...");
+            //Console.Write("\tExtracting Smell With Depth >= 1...");
             //anlyze the other invocation insiede the specified methods to found out if they contain the requested invocations
             foreach (JToken token in data)
             {
@@ -566,8 +566,8 @@ namespace CodeSmellFinder
                     smells.Add(j);
                 }
             }
-            Console.WriteLine("Done!");
-            Console.WriteLine("\tDone!");
+            //Console.WriteLine("Done!");
+            //Console.WriteLine("\tDone!");
             return smells;
         }
         /// <summary>
@@ -579,7 +579,7 @@ namespace CodeSmellFinder
         /// <returns>A Jarray containing the smells found</returns>
         public static JArray DirectInvocation(JArray data, List<string> methods, List<string> invocations)
         {
-            Console.Write("\tExtracting Direct Invocations...");
+            //Console.Write("\tExtracting Direct Invocations...");
             JArray smells = new JArray();
             var res1 = data.SelectTokens($"$.[?(@..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})])]");
             JArray fresults = new JArray(res1);
@@ -605,7 +605,7 @@ namespace CodeSmellFinder
                     }
                 }
             }
-            Console.WriteLine("Done!");
+            //Console.WriteLine("Done!");
             return smells;
         }
         /// <summary>

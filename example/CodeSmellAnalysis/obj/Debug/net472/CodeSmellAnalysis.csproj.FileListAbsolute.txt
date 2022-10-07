@@ -124,3 +124,4 @@ C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\CodeSme
 C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\CodeSmellAnalysis\obj\Debug\net472\CodeSmellAnalysis.csproj.CopyComplete
 C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\CodeSmellAnalysis\obj\Debug\net472\CodeSmellAnalysis.exe
 C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\CodeSmellAnalysis\obj\Debug\net472\CodeSmellAnalysis.pdb
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\CodeSmellAnalysis\bin\Debug\net472\CommandLine.dll

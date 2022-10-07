@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RzSoZewCaXpS9PFagi/IQL0esZHrX6bupqzHfxi/+9gXYFcZP+3RWhT4QgzaiDeFCbYmNhUEN2/6SyMmp18S2g==",
+  "dgSpecHash": "9SwwM0B0hpu0EEjz9k5bgcwg4GOeYhmPJHaP+qF++b+Q9kLLISU8R+KtDEyeC/ZxXtneYrKoCPzbjur0hPyAcw==",
   "success": true,
   "projectFilePath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\CodeSmellAnalysis\\CodeSmellAnalysis.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pasqu\\.nuget\\packages\\commandlineparser.ns20\\2.3.1\\commandlineparser.ns20.2.3.1.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.build.locator\\1.2.2\\microsoft.build.locator.1.2.2.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.8\\microsoft.codeanalysis.analyzers.2.9.8.nupkg.sha512",
     "C:\\Users\\pasqu\\.nuget\\packages\\microsoft.codeanalysis.common\\3.3.1\\microsoft.codeanalysis.common.3.3.1.nupkg.sha512",

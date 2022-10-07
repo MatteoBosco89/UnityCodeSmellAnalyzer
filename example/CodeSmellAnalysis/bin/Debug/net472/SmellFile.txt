@@ -1,0 +1,11 @@
+StaticCoupling
+WeakTemporization
+ImproperCollider
+DependenciesBetweenObjects
+LackOfSeparationOfConcern
+SingletonPattern
+InstantiateDestroy
+FindMethods
+PoorStateDesign
+VelocityChange
+CountinuouslyCheckingPositionRotation
