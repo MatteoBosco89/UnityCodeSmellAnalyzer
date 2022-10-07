@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class representing the Interface Declaration. 

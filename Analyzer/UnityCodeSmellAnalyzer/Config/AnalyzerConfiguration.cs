@@ -4,10 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CommandLine;
-using System.Net.NetworkInformation;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Utility Class representing configurations of the Analyzer such as:
@@ -22,6 +20,7 @@ namespace UnityCodeSmellAnalyzer
         private static bool statementsVerbose = false;
         private static string projectName = "C# Project";
         private static string configFile = "Config.json";
+        private static int logLevel = 1;
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
         public static bool StatementVerbose { get { return statementsVerbose; } set { statementsVerbose = value; } }
@@ -37,13 +36,16 @@ namespace UnityCodeSmellAnalyzer
         public static void Init(Options opt)
         {
             if (opt.ConfigFile != null) configFile = opt.ConfigFile;
-            string f = File.ReadAllText(configFile);
-            configurations = JsonConvert.DeserializeObject<ConfigModel>(f);
-            projectPath = opt.ProjectPath;
-            configurations.ProjectPath = opt.ProjectPath;
+            if (opt.ProjectName != null) projectName = opt.ProjectName;
             statementsVerbose = opt.Statements;
+            projectPath = opt.ProjectPath;
+            string f = File.ReadAllText(configFile);
+            configurations = JsonConvert.DeserializeObject<ConfigModel>(f); 
+            configurations.ProjectPath = opt.ProjectPath;
             configurations.AdditionalAssembly = opt.AssemblyDir;
-            projectName = opt.ProjectName;
+            logLevel = opt.Logging;
+            Logger.SetLogLevel(logLevel);
+            Logger.Start();
         }
 
         /// <summary>
@@ -84,24 +86,24 @@ namespace UnityCodeSmellAnalyzer
             protected void LoadProjectAssemblies()
             {
                 string[] dir = { ".dll" };
-                Console.Write("Loading Project Assemblies...");
+                Logger.Log(Logger.LogLevel.Debug, "Loading Project Assemblies...");
                 List<string> projectAssemblies = Directory.GetFiles(projectPath, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith))?.ToList();
                 if (projectAssemblies.Count > 0)
                 {
                     assemblyList.AddRange(projectAssemblies);
-                    Console.WriteLine("Done");
-                }else Console.WriteLine("Nothing Found");
+                    Logger.Log(Logger.LogLevel.Debug, "Done!");
+                }else Logger.Log(Logger.LogLevel.Error, "Nothing Found!");
             }
             protected void LoadConfigAssemblyFiles()
             {
                 if (assemblyFiles.Count <= 0) return;
-                Console.Write("Loading Config Assemblies Files...");
+                Logger.Log(Logger.LogLevel.Debug, "Loading Config Assemblies Files...");
                 assemblyList.AddRange(assemblyFiles);
             }
             protected void LoadConfigAssemblyDirectory()
             {
                 string[] dir = { ".dll" };
-                Console.Write("Loading Config Assemblies Directories...");
+                Logger.Log(Logger.LogLevel.Debug, "Loading Config Assemblies Directories...");
                 List<string> assemblyDir = new List<string>();
                 foreach (var directory in assemblyDirectories)
                 {
@@ -109,21 +111,21 @@ namespace UnityCodeSmellAnalyzer
                     tempList = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
                     if(tempList.Any()) assemblyDir.AddRange(tempList);
                 }
-                if (assemblyDir.Count <= 0) Console.WriteLine("Nothing Found");
-                else { assemblyList.AddRange(assemblyDir); Console.WriteLine("Done"); }
+                if (assemblyDir.Count <= 0) Logger.Log(Logger.LogLevel.Error, "Nothing Found!");
+                else { assemblyList.AddRange(assemblyDir); Logger.Log(Logger.LogLevel.Debug, "Done!"); }
             }
             protected void LoadAdditionalAssemblyDirectory()
             {
                 if (assemblyDirAdditional == null) return;
                 string[] dir = { ".dll" };
-                Console.Write("Loading Additional Assemblies Directory...");
+                Logger.Log(Logger.LogLevel.Debug, "Loading Additional Assemblies Directory...");
                 List<string> projectAssemblies = Directory.GetFiles(assemblyDirAdditional, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
                 if (projectAssemblies.Count > 0)
                 {
                     assemblyList.AddRange(projectAssemblies);
-                    Console.WriteLine("Done");
+                    Logger.Log(Logger.LogLevel.Debug, "Done!");
                 }
-                else Console.WriteLine("Nothing Found");
+                else Logger.Log(Logger.LogLevel.Error, "Nothing Found!");
             }
         }
 

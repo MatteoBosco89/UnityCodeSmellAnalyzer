@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using Newtonsoft.Json;
 using System;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class representing a Else Statement Block. Inherit CycleOrControlSchema.

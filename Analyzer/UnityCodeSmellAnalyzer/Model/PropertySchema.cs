@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 //// POSSONO ESSERCI VARIABILI E INVOCAZIONI
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class representing the Property Declaration. 

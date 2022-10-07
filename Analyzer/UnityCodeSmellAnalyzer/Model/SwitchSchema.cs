@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     [Serializable]
     public class SwitchSchema : CycleOrControlSchema

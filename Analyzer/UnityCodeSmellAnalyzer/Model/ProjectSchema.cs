@@ -1,7 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
 using System;
-using static UnityCodeSmellAnalyzer.Program;
 using System.Collections.Generic;
 using System.IO;
 using UnityCodeSmellAnalyzer;
@@ -9,7 +8,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class Representing the entire project analyzed. Contains trivial informations and the list of Compilation Units.
@@ -48,10 +47,10 @@ namespace UnityCodeSmellAnalyzer
         /// </summary>
         public void Analyze()
         {
+            if (!Directory.Exists(AnalyzerConfiguration.ProjectPath)) { Console.WriteLine("Project not found"); return; }
             LoadAssemblyList();
             LoadFileList();
             if (fileList.Count <= 0) return;
-            Console.WriteLine("Analysis Started");
             LoadSyntax();
             CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies);
             AnalyzerConfiguration.Compilation = compilation;
@@ -67,7 +66,6 @@ namespace UnityCodeSmellAnalyzer
             {
                 AnalyzeCompilation(syntaxTree);
             }
-
             ToJson();
             ToFile(jsonString, resultsFile);
         }
@@ -77,8 +75,7 @@ namespace UnityCodeSmellAnalyzer
         /// </summary>
         protected void LoadAssemblyList()
         {
-            Console.WriteLine();
-            Console.WriteLine("Loading Assemblies...");
+            Logger.Log(Logger.LogLevel.Debug, "Analysis Started...");
             assemblies.Add(MetadataReference.CreateFromFile(typeof(object).Assembly.Location));
             try
             {
@@ -86,7 +83,7 @@ namespace UnityCodeSmellAnalyzer
             }
             catch (Exception e)
             {
-                Console.WriteLine("Errors occurred: " + e);
+                Logger.Log(Logger.LogLevel.Critical, "Errors occurred: " + e);
             }
         }
 
@@ -95,7 +92,7 @@ namespace UnityCodeSmellAnalyzer
         /// </summary>
         protected void LoadFileList()
         {
-            Console.Write("Loading Project...");
+            Logger.Log(Logger.LogLevel.Debug, "Loading Project...");
             try
             {
                 string[] dir = { ".cs" };
@@ -104,11 +101,11 @@ namespace UnityCodeSmellAnalyzer
                 {
                     fileList.Add(f);
                 }
-                Console.WriteLine("Loaded!");
+                Logger.Log(Logger.LogLevel.Debug, "Loaded!");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Errors occurred: " + e);
+                Logger.Log(Logger.LogLevel.Critical, "Errors occurred: " + e);
             }
         }
 
@@ -124,7 +121,7 @@ namespace UnityCodeSmellAnalyzer
             CompilationUnitSyntax root = tree.GetCompilationUnitRoot();
             SemanticModel model = AnalyzerConfiguration.Compilation.GetSemanticModel(tree);
             CompilationUnit cu = new CompilationUnit(name, fileName);
-            Console.WriteLine("Analyzing " + cu.Name);
+            Logger.Log(Logger.LogLevel.Debug, "Analyzing " + cu.Name);
             cu.LoadInformations(root, model);
             project.Add(cu);
         }
@@ -164,9 +161,9 @@ namespace UnityCodeSmellAnalyzer
         /// <param name="file">The file</param>
         protected void ToFile(string toWrite, string file)
         {
-            Console.Write("Saving Results...");
+            Logger.Log(Logger.LogLevel.Debug, "Saving Results in " + file);
             File.WriteAllText(file, toWrite);
-            Console.Write("Done!\n");
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
 
         

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
 	/// <summary>
 	/// Class representing the Namespace Declaration. 

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class representing the Method Declaration. 

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Markup;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
 	/// <summary>
 	/// Class representing the Class Declaration. 

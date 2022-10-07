@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     [Serializable]
     public class CaseSchema : CycleOrControlSchema

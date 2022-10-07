@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class representing a Condition Statement Block. Inherit SyntaxSchema.
@@ -88,7 +88,7 @@ namespace UnityCodeSmellAnalyzer
         /// Remove operands and create the token list
         /// </summary>
         /// <param name="condition">The condition string</param>
-        /// <returns></returns>
+        /// <returns>The normalized condition string</returns>
         public List<string> Normalize(string condition)
         {
             foreach (var c in operators)

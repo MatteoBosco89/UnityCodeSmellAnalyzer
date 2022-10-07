@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Newtonsoft.Json;
 using System;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     [Serializable]
     public class CatchSchema : CycleOrControlSchema

@@ -1,12 +1,12 @@
 ﻿using CommandLine;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Main
     /// </summary>
     internal class Program
-    {  
+    {
         public static void Main(string[] args)
         {
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => AnalyzerConfiguration.Init(o));
@@ -30,5 +30,11 @@ namespace UnityCodeSmellAnalyzer
         public string ProjectName { get; set; }
         [Option('c', "config", Required = false, HelpText = "Configuration File.")]
         public string ConfigFile { get; set; }
+        [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)")]
+        public int Logging { get; set; }
     }
+
+
+    
+
 }

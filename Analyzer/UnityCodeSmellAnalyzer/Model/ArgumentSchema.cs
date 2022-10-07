@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     /// <summary>
     /// Class representing the Argument of an Invocation. 

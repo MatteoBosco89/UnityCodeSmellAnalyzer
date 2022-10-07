@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 
-namespace UnityCodeSmellAnalyzer
+namespace CSharpAnalyzer
 {
     public static class SyntaxWalker
     {
