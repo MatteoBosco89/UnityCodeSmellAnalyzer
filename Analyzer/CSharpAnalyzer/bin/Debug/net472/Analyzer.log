@@ -1,0 +1,22 @@
+07/10/2022 16:08:20 Analysis Started...
+07/10/2022 16:08:20 Loading Project Assemblies...
+07/10/2022 16:08:20 Done!
+07/10/2022 16:08:20 Loading Config Assemblies Directories...
+07/10/2022 16:08:20 Done!
+07/10/2022 16:08:26 Loading Project...
+07/10/2022 16:08:26 Loaded!
+07/10/2022 16:08:27 Analyzing Program
+07/10/2022 16:08:29 Analyzing State
+07/10/2022 16:08:30 Analyzing StateInState
+07/10/2022 16:08:30 Analyzing StateManager
+07/10/2022 16:08:30 Analyzing .NETCoreApp,Version=v6.0.AssemblyAttributes
+07/10/2022 16:08:30 Analyzing TestSolution.AssemblyInfo
+07/10/2022 16:08:30 Analyzing TestSolution.GlobalUsings.g
+07/10/2022 16:08:30 Analyzing CubeManager
+07/10/2022 16:08:31 Analyzing Inputs
+07/10/2022 16:08:31 Analyzing InterfacesTest
+07/10/2022 16:08:31 Analyzing SpehereManager
+07/10/2022 16:08:31 Analyzing StateManager
+07/10/2022 16:08:31 Analyzing SuperClass
+07/10/2022 16:08:31 Saving Results in results.json
+07/10/2022 16:08:31 Done!
