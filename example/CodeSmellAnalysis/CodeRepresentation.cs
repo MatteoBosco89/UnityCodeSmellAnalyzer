@@ -7,6 +7,9 @@ using Newtonsoft.Json.Linq;
 
 namespace CodeSmellFinder
 {
+    /// <summary>
+    /// Simple representation of a Method reference inside invocations
+    /// </summary>
     public class MethodReference
     {
         protected string fullName;
@@ -20,7 +23,9 @@ namespace CodeSmellFinder
             this.line = line;
         }
     }
-
+    /// <summary>
+    /// Simple representation of a using statement
+    /// </summary>
     public class UsingReference
     {
         protected string fullName;
