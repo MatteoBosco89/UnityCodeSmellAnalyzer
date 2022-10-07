@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "CommandLineParser.NS20/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Build.Locator/1.2.2": {
         "type": "package",
         "compile": {
@@ -642,6 +655,19 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win7-x86": {
+      "CommandLineParser.NS20/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Build.Locator/1.2.2": {
         "type": "package",
         "compile": {
@@ -1277,6 +1303,20 @@
     }
   },
   "libraries": {
+    "CommandLineParser.NS20/2.3.1": {
+      "sha512": "DzXd/TBb1eMu/mAWicTityWdtSk+V3v9Te4tEwBiQkW7hLdf7oD3S7kt4o75KYsko1675Z5UKMdiq2GJ0CSf0w==",
+      "type": "package",
+      "path": "commandlineparser.ns20/2.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "commandlineparser.ns20.2.3.1.nupkg.sha512",
+        "commandlineparser.ns20.nuspec",
+        "lib/netstandard2.0/CommandLine.dll",
+        "lib/netstandard2.0/CommandLine.xml"
+      ]
+    },
     "Microsoft.Build.Locator/1.2.2": {
       "sha512": "tke8qeM7s23iapuxatU131tK89kdlOFZvDJ4IrX9pHJIiTPwjJO0Euw5/cSM6N8W2Q/NY/NEfJYoMFmBnbCUwQ==",
       "type": "package",
@@ -1945,6 +1985,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "CommandLineParser.NS20 >= 2.3.1",
       "Microsoft.Build.Locator >= 1.2.2",
       "Microsoft.CodeAnalysis.Analyzers >= 2.9.8",
       "Microsoft.CodeAnalysis.CSharp.Workspaces >= 3.3.1",
@@ -1992,6 +2033,10 @@
       "net472": {
         "targetAlias": "net472",
         "dependencies": {
+          "CommandLineParser.NS20": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          },
           "Microsoft.Build.Locator": {
             "target": "Package",
             "version": "[1.2.2, )"
