@@ -121,17 +121,27 @@ namespace UnityDataSmellAnalyzer
         public static void SaveResults()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
+            JObject res = new JObject();
+            res.Add("ProjectPath", directory);
+            JArray exts = new JArray();
+            foreach (string s in DIR) exts.Add(s);
+            res.Add("Extensions", exts);
             JArray ja = new JArray();
             foreach (UnityData d in mainData) ja.Add(d.ToJsonObject());
+            res.Add("ObjectsData", ja);
             Directory.CreateDirectory(RESULT_DIR);
-            File.WriteAllText(RESULT_DIR + "\\" + MAIN_FILE, ja.ToString());
+            File.WriteAllText(RESULT_DIR + "\\" + MAIN_FILE, res.ToString());
             Logger.Log(Logger.LogLevel.Debug, "\tMain Results saved in " + Path.GetFullPath(MAIN_FILE));
-            ja = new JArray();
             if (meta)
             {
+                ja = new JArray();
+                res = new JObject();
+                res.Add("ProjectPath", directory);
+                res.Add("Extensions", ".meta");
                 foreach (UnityData d in metaData) ja.Add(d.ToJsonObject());
+                res.Add("ObjectsData", ja);
                 Directory.CreateDirectory(RESULT_DIR);
-                File.WriteAllText(RESULT_DIR + "\\" + META_FILE, ja.ToString());
+                File.WriteAllText(RESULT_DIR + "\\" + META_FILE, res.ToString());
                 Logger.Log(Logger.LogLevel.Debug, "\tMeta Results saved in " + Path.GetFullPath(META_FILE));
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
