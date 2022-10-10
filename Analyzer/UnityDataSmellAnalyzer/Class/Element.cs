@@ -1,13 +1,10 @@
 ﻿using System;
 
-/*
- * This namespace contains the rappresentation of the elements inside all unity files
- */
 namespace Element
 {
-    /*
-     * The element class is the base class representing all the elements inside the unity file
-     */
+    /// <summary>
+    /// This class is the super class representing the element inside the unity meta data file
+    /// </summary>
     public class Element
     {
  

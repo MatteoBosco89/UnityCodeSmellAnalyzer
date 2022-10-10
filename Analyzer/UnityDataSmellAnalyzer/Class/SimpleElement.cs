@@ -2,9 +2,9 @@
 
 namespace Element
 {
-    /*
-     * This represent a simple element inside the unity file
-     */
+    /// <summary>
+    /// This class represent a single entry inside a unity meta data dictionary
+    /// </summary>
     public class SimpleElement : Element
     {
         protected string value;

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using CSharpAnalyzer;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,9 @@ using UnityAnalyzer;
 
 namespace UnityDataSmellAnalyzer
 {
+    /// <summary>
+    /// The class representing the unity data extractor object
+    /// </summary>
     public class UnityDataExtractor
     {
         protected static List<string> unityMainFileList = new List<string>();
@@ -23,98 +27,120 @@ namespace UnityDataSmellAnalyzer
         protected static string file_extensions = null;
         protected static int logLevel = 1;
 
+        /// <summary>
+        /// Load the configuration of the program from the given option from command line
+        /// </summary>
+        /// <param name="opt">The Options object containing the parameter given to the program</param>
         public static void Init(Options opt)
         {
             if(opt.DataPath != null)directory = opt.DataPath;
             if(opt.NoMeta) meta = false;
             if(opt.Extensions.Count() > 0) LoadExtensions(opt.Extensions);
             if(opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
+            if(opt.Verbose) Logger.Verbose = true;
+            Logger.SetLogLevel(logLevel);
+            Logger.LogFile= "UnityExtractor.Log";
+            Logger.Start();
         }
+        /// <summary>
+        /// Load the list of file inside the given project folder
+        /// </summary>
+        /// <returns>True if the operation is succesfull, false otherwise</returns>
         protected static bool LoadFileList()
         {
-            Console.WriteLine("Loading Unity File...");
+            Logger.Log(Logger.LogLevel.Debug, "Searching MetaData file inside project folder...");
             try
             {
-                Console.Write("\tSearching main file...");
+                Logger.Log(Logger.LogLevel.Debug, "Searching main file...");
                 List<string> files = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories).Where(f => DIR.Any(f.ToLower().EndsWith)).ToList();
                 foreach (string f in files)
                 {
                     unityMainFileList.Add(f);
                 }
-                Console.WriteLine("Done!");
-                Console.Write("\tLoading meta file...");
+                Logger.Log(Logger.LogLevel.Debug, "Done!");
+                Logger.Log(Logger.LogLevel.Debug, "Searching meta file...");
                 files = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories).Where(f => META.Any(f.ToLower().EndsWith)).ToList();
                 foreach (string f in files)
                 {
                     unityMetaFileList.Add(f);
                 }
-                Console.WriteLine("Done!");
+                Logger.Log(Logger.LogLevel.Debug, "Done!");
             }
             catch (Exception)
             {
-                Console.WriteLine("Directory not found!");
+                Logger.Log(Logger.LogLevel.Debug, "Directory not found!");
                 return false;
             }
-            Console.WriteLine("Done!");
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
             return true;
         }
-
+        /// <summary>
+        /// Start the analisys process
+        /// </summary>
         public static void Analyze()
         {
-            if(!LoadFileList())return;
+            Logger.Log(Logger.LogLevel.Debug, "Loading extensions...");
+            if (!LoadFileList())return;
             if(file_extensions != null)
             {
                 if (!LoadExtensionsFile()) return;
             }
-            Console.WriteLine("Analyzing...");
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
+            Logger.Log(Logger.LogLevel.Debug, "Start analisys...");
             //load all prefab/unity/controller/mat files
             //load all metafile
-            Console.Write("\tAnalyzig main files...");
+            Logger.Log(Logger.LogLevel.Debug, "Analyzing Main MetaData...");
             foreach (string file in unityMainFileList)
             {
                 if (unityMetaFileList.Contains(file + ".meta"))
                 {
-                    //Console.WriteLine(file);
+                    Logger.Log(Logger.LogLevel.Debug, $"File: {file}");
                     UnityData d = new UnityData(file, file + ".meta");
                     unityMetaFileList.Remove(file + ".meta");
                     mainData.Add(d);
                 }
             }
-            Console.WriteLine("Done!");
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
             if (meta)
             {
-                Console.Write("\tAnalyzig meta files...");
+                Logger.Log(Logger.LogLevel.Debug, "Analyzing Meta files...");
                 foreach (string file in unityMetaFileList)
                 {
+                    Logger.Log(Logger.LogLevel.Debug, $"File: {file}");
                     UnityData d = new UnityData(file);
                     metaData.Add(d);
                 }
-                Console.WriteLine("Done!");
+                Logger.Log(Logger.LogLevel.Debug, $"Done!!");
             }
-            Console.WriteLine("Done!");
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
             SaveResults();
         }
-
+        /// <summary>
+        /// Save the results inside a file
+        /// </summary>
         public static void SaveResults()
         {
-            Console.WriteLine("Saving Results...");
+            Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
             JArray ja = new JArray();
             foreach (UnityData d in mainData) ja.Add(d.ToJsonObject());
             Directory.CreateDirectory(RESULT_DIR);
             File.WriteAllText(RESULT_DIR + "\\" + MAIN_FILE, ja.ToString());
-            Console.WriteLine("\tMain Results saved in " + Path.GetFullPath(MAIN_FILE));
+            Logger.Log(Logger.LogLevel.Debug, "\tMain Results saved in " + Path.GetFullPath(MAIN_FILE));
             ja = new JArray();
             if (meta)
             {
                 foreach (UnityData d in metaData) ja.Add(d.ToJsonObject());
                 Directory.CreateDirectory(RESULT_DIR);
                 File.WriteAllText(RESULT_DIR + "\\" + META_FILE, ja.ToString());
-                Console.WriteLine("\tMeta Results saved in " + Path.GetFullPath(META_FILE));
+                Logger.Log(Logger.LogLevel.Debug, "\tMeta Results saved in " + Path.GetFullPath(META_FILE));
             }
-            Console.WriteLine("Done\n");
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
 
         }
-
+        /// <summary>
+        /// Load the file containing the list of file extension to analyze
+        /// </summary>
+        /// <returns>True if the operation is successfull, False otherwise</returns>
         protected static bool LoadExtensionsFile()
         {
             try
@@ -131,12 +157,15 @@ namespace UnityDataSmellAnalyzer
             }
             catch (FileNotFoundException)
             {
-                Console.WriteLine("Extensions file not found, using default extensions");
+                Logger.Log(Logger.LogLevel.Debug, "Extension file not found, using default extensions");
                 return false;
             }
             return true;
         }
-
+        /// <summary>
+        /// Load the extension given by command line
+        /// </summary>
+        /// <param name="elements">The List of string containig the name of the extensions to load</param>
         protected static void LoadExtensions(IEnumerable<string> elements)
         {
             List<string> extensions = new List<string>();

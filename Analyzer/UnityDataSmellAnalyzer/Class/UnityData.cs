@@ -4,10 +4,13 @@ using Element;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-//using System.Text.RegularExpressions;
 
 namespace UnityAnalyzer
 {
+    /// <summary>
+    /// This class represents the information inside a unity meta data files.
+    /// Every unity meta data file is made by a main dictionary with other sub dictionary inside
+    /// </summary>
     public class UnityData
     {
         protected string id;
@@ -21,10 +24,12 @@ namespace UnityAnalyzer
         protected Dictionary<string, Element.Element> components;
         protected int numComponents = 0;
 
-        /*
-         * This constructor is used for those file in witch the mainfile (.prefab, .controller ecc...) contains the information and
-         * the metafile only contains the guid of the object
-         */
+        /// <summary>
+        /// This constructor is used to load the main data from a unity project (suc as .unity files, .prefab ecc...)
+        /// For the files the associated .meta is needed because it contains the GUID of that specific object inside the project
+        /// </summary>
+        /// <param name="mainFile">The path to the main file</param>
+        /// <param name="metaFile">The path to the associated meta file</param>
         public UnityData(string mainFile, string metaFile)
         {
             try
@@ -44,9 +49,10 @@ namespace UnityAnalyzer
                 Console.WriteLine("No file found");
             }
         }
-        /*
-         * This constructor is used to load the data from oject stored on meta file
-         */
+        /// <summary>
+        /// This constructor is used to load only the assets witch information are stored inside the .meta files (such as .png, .texture ecc...)
+        /// </summary>
+        /// <param name="metaFile">The path to the meta file</param>
         public UnityData(string metaFile)
         {
             try
@@ -63,9 +69,10 @@ namespace UnityAnalyzer
                 Console.WriteLine("No file found");
             }
         }
-        /*
-         * Load the data from the mainfile(.prefab, .unity, .controller ecc...)
-         */
+        /// <summary>
+        /// This method load the information from the main data file in unity, such as .unity, .prefab ecc...)
+        /// </summary>
+        /// <param name="lines">The array of string containing the content of the main file</param>
         private void LoadMainData(string[] lines)
         {
             components = new Dictionary<string, Element.Element>();
@@ -99,9 +106,10 @@ namespace UnityAnalyzer
             }
         }
 
-        /*
-         * Load the data from the meta file
-         */
+        /// <summary>
+        /// This method load the information from the meta data file in unity
+        /// </summary>
+        /// <param name="lines">The array of string containing the content of the meta data</param>
         private void LoadMetaFile(string[] lines)
         {
             components = new Dictionary<string, Element.Element>();
@@ -121,9 +129,10 @@ namespace UnityAnalyzer
                 }
             }
         }
-        /*
-         * Load the id from the meta file
-         */
+      /// <summary>
+      /// Load the GUID from the meta file
+      /// </summary>
+      /// <param name="lines">The array of string containing the content of the meta file</param>
         private void LoadId(string[] lines)
         {
             foreach(string line in lines)
@@ -136,9 +145,9 @@ namespace UnityAnalyzer
             }
         }
 
-        /*
-         * Print the UnityData Object
-         */
+        /// <summary>
+        /// print the content of the unity data object
+        /// </summary>
         public void Print()
         {
             Console.WriteLine(name);
@@ -149,9 +158,10 @@ namespace UnityAnalyzer
                 kvp.Value.Print();
             }
         }
-        /*
-         * Convert the DataObject in json object
-         */
+        /// <summary>
+        /// Convert the unity data object in a json object
+        /// </summary>
+        /// <returns>The JObject representing the unity data object</returns>
         public JObject ToJsonObject()
         {
             JObject json = new JObject();
@@ -179,11 +189,6 @@ namespace UnityAnalyzer
             }
             json.Add("COMPONENTS", ja);
             return json;
-        }
-
-        public void SaveDataToJsonFile(string filename)
-        {
-            File.WriteAllText(filename, ToJsonObject().ToString());
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Text.RegularExpressions;
 
 namespace Element
 {
-    /*
-     * DictionaryElement represents the sub dictionary inside the unity file 
-     */
+    /// <summary>
+    /// Dictionary element represents the sub dictionary inside the unity meta data 
+    /// </summary>
     public class DictionaryElement : Element
     {
         protected Dictionary<string, Element> values;
@@ -19,9 +19,14 @@ namespace Element
         
         public DictionaryElement() { }
 
-        /*
-         * This method load the unity dictionary using the indentation of the file
-         */
+        /// <summary>
+        /// Load a standar dictionary inside the unity meta data file. The standard dictionary is is made up of an indented sequence of elements, 
+        /// each of which can itself be a dictionary
+        /// </summary>
+        /// <param name="lines">The array of string containing the lines of the unity data file</param>
+        /// <param name="i">The current index inside the array of lines</param>
+        /// <param name="cmpId">The cmpId string indicating the line containing the id of the component</param>
+        /// <returns>The last index visited inside the array of string</returns>
         override public int LoadNormalDictionary(string[] lines, int i, string cmpId)
         {
             values = new Dictionary<string, Element>();
@@ -126,9 +131,10 @@ namespace Element
             }
             return i;
         }
-        /*
-         * This method is used to load a sub dictionary contained inside {}
-         */
+        /// <summary>
+        /// This method load a sub dictionary inside the unity data contained within the curly brackets on a single line
+        /// </summary>
+        /// <param name="line">The line that contains the dictionary</param>
         override public void LoadParenthesisDictionary(string line)
         {
             type = line.Split(':')[0].Trim();
@@ -142,7 +148,12 @@ namespace Element
                 values[elements[0].Trim()] = new SimpleElement(elements[1].Trim());
             }
         }
-
+        /// <summary>
+        /// This method load a dictionay with a special format
+        /// </summary>
+        /// <param name="lines">The array of string containing the lines inside the unity data file</param>
+        /// <param name="i">The current index inside the array of string</param>
+        /// <returns>The last index visited inside the array of string</returns>
         public override int LoadSpecialDictionary(string[] lines, int i)
         {
             values = new Dictionary<string, Element>();
@@ -161,7 +172,13 @@ namespace Element
             }
             return i;
         }
-
+        /// <summary>
+        /// Load dictionary with a special format inside the element
+        /// </summary>
+        /// <param name="lines">The array of string that contain the lines of the unity data file</param>
+        /// <param name="i">The current index inside the array of string</param>
+        /// <param name="cmpId">The special string representig the line containig the id of the component</param>
+        /// <returns>The last visited index inside the array of string</returns>
         override public int LoadDictionaryWithSpecialElements(string[] lines, int i, string cmpId)
         {
             values = new Dictionary<string, Element>();
@@ -185,9 +202,11 @@ namespace Element
             }
             return i;
         }
-        /*
-         * This methods mesure the indentation of a line
-         */
+        /// <summary>
+        /// Measure the indentation of a given string (the indentation is made by spaces and -)
+        /// </summary>
+        /// <param name="line">The line in witch you need to count the indentation</param>
+        /// <returns>The indentation of the given line</returns>
         private int NumOfSpaces(string line)
         {
             int i = 0;
@@ -199,9 +218,9 @@ namespace Element
             return i;
         }
 
-        /*
-         * Print the object
-         */
+        /// <summary>
+        /// Print the dictionary
+        /// </summary>
         override public void Print()
         {
             Console.WriteLine(type);
@@ -220,10 +239,11 @@ namespace Element
                 }
             }
         }
-
-        /*
-         * Rapresent the Dictionary as a Json Object
-         */
+        /// <summary>
+        /// Convert the dictionary in to a JObject
+        /// </summary>
+        /// <param name="jo">The parent json object</param>
+        /// <returns>The modified json object</returns>
         public JObject ToJson(JObject jo)
         {
             JArray ja = new JArray();
