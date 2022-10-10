@@ -100,7 +100,7 @@ namespace CodeSmellFinder
             List<string> types = Utility.GetAllType(data, new List<string> { "Classes", "Interfaces" }, "Name");
             List<string> attributesList = new List<string> { "SerializeField" };
             JObject result = new JObject();
-            result.Add("Name", "Static Couplig");
+            result.Add("Name", "Static Coupling");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, "Attributes", attributesList));
             result.Add("Occurency", smells.Count());

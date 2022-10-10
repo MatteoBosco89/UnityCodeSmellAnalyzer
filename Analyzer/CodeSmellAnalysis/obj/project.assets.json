@@ -2000,11 +2000,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\CodeSmellAnalysis\\CodeSmellAnalysis.csproj",
+      "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\CodeSmellAnalysis\\CodeSmellAnalysis.csproj",
       "projectName": "CodeSmellAnalysis",
-      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\CodeSmellAnalysis\\CodeSmellAnalysis.csproj",
+      "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\CodeSmellAnalysis\\CodeSmellAnalysis.csproj",
       "packagesPath": "C:\\Users\\pasqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\example\\CodeSmellAnalysis\\obj\\",
+      "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\CodeSmellAnalysis\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pasqu\\AppData\\Roaming\\NuGet\\NuGet.Config",

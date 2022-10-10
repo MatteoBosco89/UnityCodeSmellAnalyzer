@@ -127,8 +127,13 @@ namespace CodeSmellFinder
         /// </summary>
         public static void SaveResults()
         {
+            JObject res = new JObject();
+            res.Add("ProjectName", data["ProjectName"]);
+            res.Add("ProjectLanguage", data["ProjectLanguage"]);
+            res.Add("DatasetPath", dataPath);
+            res.Add("SmellList", results);
             Logger.Log(Logger.LogLevel.Debug, $"Saving results to {resultFile}...");
-            File.WriteAllText(resultFile, results.ToString());
+            File.WriteAllText(resultFile, res.ToString());
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
