@@ -142,6 +142,7 @@
                       "Variables": [
                         {
                           "Variable": {
+                            "Cascades": [],
                             "Name": "num",
                             "Type": "int",
                             "Assignment": "c",
@@ -259,6 +260,7 @@
                           "Variables": [
                             {
                               "Variable": {
+                                "Cascades": [],
                                 "Name": "anim",
                                 "Type": "UnityEngine.Animation",
                                 "Assignment": "value",
@@ -672,6 +674,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "cube",
                         "Type": "MyGame.Cube.CubeHolder",
                         "Assignment": "new CubeHolder(x)",
@@ -1355,6 +1358,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "m",
                         "Type": "UnityEngine.MeshCollider",
                         "Assignment": "GetComponent<MeshCollider>()",
@@ -1367,6 +1371,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "r.velocity",
                         "Type": "UnityEngine.Vector3",
                         "Assignment": "new Vector3(0, 0, 0)",
@@ -1379,6 +1384,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "r.angularVelocity",
                         "Type": "UnityEngine.Vector3",
                         "Assignment": "new Vector3(0, 0, 0)",
@@ -1534,6 +1540,7 @@
                         },
                         {
                           "Variable": {
+                            "Cascades": [],
                             "Name": "list[i]",
                             "Type": "string",
                             "Assignment": "\"we\"",
@@ -1711,6 +1718,7 @@
                   "Variables": [
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "o",
                         "Type": "UnityEngine.GameObject",
                         "Assignment": "Instantiate(o)",
@@ -1723,6 +1731,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "o.transform.position",
                         "Type": "UnityEngine.Vector3",
                         "Assignment": "o.transform.position + new Vector3(10, 10, 10)",
@@ -1735,6 +1744,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "o",
                         "Type": "UnityEngine.GameObject",
                         "Assignment": "GameObject.Find(\"Player\")",
@@ -2349,6 +2359,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "cubeManager",
                         "Type": "MyGame.CubeManager",
                         "Assignment": "FindObjectOfType<CubeManager>()",
@@ -2507,6 +2518,7 @@
                     },
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "y",
                         "Type": "float",
                         "Assignment": "Time.time",
@@ -2581,6 +2593,7 @@
                   "Variables": [
                     {
                       "Variable": {
+                        "Cascades": [],
                         "Name": "cubeManager",
                         "Type": "MyGame.CubeManager",
                         "Assignment": "FindObjectOfType<CubeManager>()",
@@ -2991,6 +3004,7 @@
                             },
                             {
                               "Variable": {
+                                "Cascades": [],
                                 "Name": "r.transform.position",
                                 "Type": "?",
                                 "Assignment": "new Vector3(0, 0, 0)",
@@ -3104,6 +3118,7 @@
                                     "Variables": [
                                       {
                                         "Variable": {
+                                          "Cascades": [],
                                           "Name": "noDamage",
                                           "Type": "bool",
                                           "Assignment": "false",
@@ -3152,6 +3167,7 @@
                               "Variables": [
                                 {
                                   "Variable": {
+                                    "Cascades": [],
                                     "Name": "noDamage",
                                     "Type": "bool",
                                     "Assignment": "true",
@@ -3213,6 +3229,7 @@
                                   "Variables": [
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "forward",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3225,6 +3242,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "backward",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3237,6 +3255,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "left",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3249,6 +3268,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "right",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3382,6 +3402,7 @@
                                   "Variables": [
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "forward",
                                         "Type": "bool",
                                         "Assignment": "true",
@@ -3394,6 +3415,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "backward",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3406,6 +3428,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "left",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3418,6 +3441,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "right",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3500,6 +3524,7 @@
                                   "Variables": [
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "forward",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3512,6 +3537,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "backward",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3524,6 +3550,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "left",
                                         "Type": "bool",
                                         "Assignment": "true",
@@ -3536,6 +3563,7 @@
                                     },
                                     {
                                       "Variable": {
+                                        "Cascades": [],
                                         "Name": "right",
                                         "Type": "bool",
                                         "Assignment": "false",
@@ -3798,6 +3826,7 @@
                                 },
                                 {
                                   "Variable": {
+                                    "Cascades": [],
                                     "Name": "result",
                                     "Type": "int",
                                     "Assignment": "i * i",
@@ -4111,6 +4140,7 @@
                                 },
                                 {
                                   "Variable": {
+                                    "Cascades": [],
                                     "Name": "i",
                                     "Type": "int",
                                     "Assignment": "10",
@@ -4123,6 +4153,7 @@
                                 },
                                 {
                                   "Variable": {
+                                    "Cascades": [],
                                     "Name": "i",
                                     "Type": "int",
                                     "Assignment": "k",
@@ -4135,6 +4166,7 @@
                                 },
                                 {
                                   "Variable": {
+                                    "Cascades": [],
                                     "Name": "k",
                                     "Type": "int",
                                     "Assignment": "i * i * k",

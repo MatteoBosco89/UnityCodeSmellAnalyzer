@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace CSharpAnalyzer
 {
@@ -132,8 +133,10 @@ namespace CSharpAnalyzer
         protected string assignment;
         protected string variableKind;
         protected string fullName;
+        protected List<ConditionSchema> cascades = new List<ConditionSchema>();
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
+        public List<ConditionSchema> Cascades { get { return cascades; } }
         public string Name { get { return name; } }
         public string Type { get { return type; } }
         public string Assignment { get { return assignment; } }
@@ -143,6 +146,11 @@ namespace CSharpAnalyzer
         public string FullName { get { return fullName; } }
         public string AssignmentKind { get { return assignmentKind; } }
         public AssignedVariableSchema() { }
+
+        protected void AddCascade(ConditionSchema c)
+        {
+            cascades.Add(c);
+        }
 
         public void LoadMe(SyntaxNode root, SemanticModel model)
         {
@@ -155,20 +163,20 @@ namespace CSharpAnalyzer
             variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
             fullName = model.GetSymbolInfo(exp.Left).Symbol?.ToString();
             assignment = exp.Right.ToString();
-            List<IMemberReferenceOperation> list = (from a in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select a).ToList();
-            if(list.Count > 0)
+            List<IMemberReferenceOperation> list = (from a in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select a).ToList();      
+        }
+
+        protected void LoadCascades(List<IMemberReferenceOperation> list, SemanticModel model)
+        {
+            foreach (var l in list)
             {
-                Console.WriteLine("Expression: " + exp.Left);
-                Console.WriteLine(list.Count);
-                foreach (var l in list)
+                foreach (var c in l.Children)
                 {
-                    Console.WriteLine(l.Type);
-                    //Console.WriteLine((l as IPropertyReferenceOperation)?.Type);
-                    //Console.WriteLine((l as IFieldReferenceOperation)?.Type);
+                    ConditionSchema cas = new ConditionSchema();
+                    cas.LoadInformations(c.Syntax, model);
+                    AddCascade(cas);
                 }
-                
             }
-            
         }
     }
 
