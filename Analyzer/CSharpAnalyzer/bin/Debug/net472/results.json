@@ -771,7 +771,7 @@
                       "FullName": "Test.Input.TestInput.StateManager.Test2()",
                       "ReturnType": "Void",
                       "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                      "DefinitionLine": 118,
+                      "DefinitionLine": 120,
                       "Kind": "SourceFile",
                       "Module": null,
                       "ReferenceFound": true,
@@ -912,7 +912,7 @@
                       "FullName": "Test.Input.TestInput.StateManager.Test2()",
                       "ReturnType": "Void",
                       "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                      "DefinitionLine": 118,
+                      "DefinitionLine": 120,
                       "Kind": "SourceFile",
                       "Module": null,
                       "ReferenceFound": true,
@@ -2946,7 +2946,7 @@
                               "Module": "UnityEngine.CoreModule.dll",
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 51
+                              "Line": 52
                             },
                             {
                               "Name": "GetComponent",
@@ -2958,7 +2958,7 @@
                               "Module": "UnityEngine.CoreModule.dll",
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 52
+                              "Line": 53
                             },
                             {
                               "Name": "WriteLine",
@@ -2976,17 +2976,26 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 55
+                              "Line": 56
                             }
                           ],
                           "Variables": [
+                            {
+                              "Variable": {
+                                "Name": "r",
+                                "Type": "RigidBody",
+                                "Assignment": "new RigidBody()",
+                                "Kind": "Definition",
+                                "DefinitionLine": 57
+                              }
+                            },
                             {
                               "Variable": {
                                 "Name": "r.transform.position",
                                 "Type": "?",
                                 "Assignment": "new Vector3(0, 0, 0)",
                                 "Kind": "Assignment",
-                                "AssignmentLine": 56,
+                                "AssignmentLine": 58,
                                 "VariableKind": null,
                                 "FullName": null,
                                 "AssignmentKind": "SimpleAssignmentExpression"
@@ -2997,7 +3006,7 @@
                                 "Name": "new Vector3(0, 0, 0)",
                                 "Type": "?",
                                 "Kind": "Use",
-                                "UseLine": 56,
+                                "UseLine": 58,
                                 "UseKind": "ObjectCreation",
                                 "AssignedTo": "r.transform.position",
                                 "Value": null,
@@ -3015,7 +3024,7 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 49
+                          "Line": 50
                         },
                         {
                           "HasBody": true,
@@ -3033,12 +3042,12 @@
                               "FullName": "Test.Input.TestInput.StateManager.Prova()",
                               "ReturnType": "Inputs",
                               "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                              "DefinitionLine": 106,
+                              "DefinitionLine": 108,
                               "Kind": "SourceFile",
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 65
+                              "Line": 67
                             }
                           ],
                           "Variables": [],
@@ -3064,8 +3073,8 @@
                               },
                               "Else": {
                                 "ElseStatement": "if(noDamage) noDamage = false;",
-                                "EndLine": 64,
-                                "StartLine": 64,
+                                "EndLine": 66,
+                                "StartLine": 66,
                                 "Invocations": [],
                                 "Variables": [],
                                 "WhileBlocks": [],
@@ -3089,8 +3098,8 @@
                                     "Else": null,
                                     "DanglingElse": true,
                                     "Depth": 2,
-                                    "EndLine": 64,
-                                    "StartLine": 64,
+                                    "EndLine": 66,
+                                    "StartLine": 66,
                                     "Invocations": [],
                                     "Variables": [
                                       {
@@ -3099,7 +3108,7 @@
                                           "Type": "bool",
                                           "Assignment": "false",
                                           "Kind": "Assignment",
-                                          "AssignmentLine": 63,
+                                          "AssignmentLine": 65,
                                           "VariableKind": "Field",
                                           "FullName": "Test.Input.TestInput.StateManager.noDamage",
                                           "AssignmentKind": "SimpleAssignmentExpression"
@@ -3110,7 +3119,7 @@
                                           "Name": null,
                                           "Type": "bool",
                                           "Kind": "Use",
-                                          "UseLine": 63,
+                                          "UseLine": 65,
                                           "UseKind": "Literal",
                                           "AssignedTo": "noDamage",
                                           "Value": "false",
@@ -3137,8 +3146,8 @@
                               },
                               "DanglingElse": false,
                               "Depth": 1,
-                              "EndLine": 64,
-                              "StartLine": 63,
+                              "EndLine": 66,
+                              "StartLine": 65,
                               "Invocations": [],
                               "Variables": [
                                 {
@@ -3147,7 +3156,7 @@
                                     "Type": "bool",
                                     "Assignment": "true",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 62,
+                                    "AssignmentLine": 64,
                                     "VariableKind": "Field",
                                     "FullName": "Test.Input.TestInput.StateManager.noDamage",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -3158,7 +3167,7 @@
                                     "Name": null,
                                     "Type": "bool",
                                     "Kind": "Use",
-                                    "UseLine": 62,
+                                    "UseLine": 64,
                                     "UseKind": "Literal",
                                     "AssignedTo": "noDamage",
                                     "Value": "true",
@@ -3198,8 +3207,8 @@
                                   "labels": [
                                     "case 0:"
                                   ],
-                                  "EndLine": 75,
-                                  "StartLine": 69,
+                                  "EndLine": 77,
+                                  "StartLine": 71,
                                   "Invocations": [],
                                   "Variables": [
                                     {
@@ -3208,7 +3217,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 69,
+                                        "AssignmentLine": 71,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.forward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3220,7 +3229,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 70,
+                                        "AssignmentLine": 72,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.backward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3232,7 +3241,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 71,
+                                        "AssignmentLine": 73,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.left",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3244,7 +3253,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 72,
+                                        "AssignmentLine": 74,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.right",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3255,7 +3264,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 69,
+                                        "UseLine": 71,
                                         "UseKind": "Literal",
                                         "AssignedTo": "forward",
                                         "Value": "false",
@@ -3268,7 +3277,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 70,
+                                        "UseLine": 72,
                                         "UseKind": "Literal",
                                         "AssignedTo": "backward",
                                         "Value": "false",
@@ -3281,7 +3290,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 71,
+                                        "UseLine": 73,
                                         "UseKind": "Literal",
                                         "AssignedTo": "left",
                                         "Value": "false",
@@ -3294,7 +3303,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 72,
+                                        "UseLine": 74,
                                         "UseKind": "Literal",
                                         "AssignedTo": "right",
                                         "Value": "false",
@@ -3324,8 +3333,8 @@
                                       "Else": null,
                                       "DanglingElse": true,
                                       "Depth": 2,
-                                      "EndLine": 74,
-                                      "StartLine": 74,
+                                      "EndLine": 76,
+                                      "StartLine": 76,
                                       "Invocations": [
                                         {
                                           "Name": "WriteLine",
@@ -3343,7 +3352,7 @@
                                               "IsLiteral": false
                                             }
                                           ],
-                                          "Line": 74
+                                          "Line": 76
                                         }
                                       ],
                                       "Variables": [],
@@ -3367,8 +3376,8 @@
                                   "labels": [
                                     "case 1:"
                                   ],
-                                  "EndLine": 81,
-                                  "StartLine": 76,
+                                  "EndLine": 83,
+                                  "StartLine": 78,
                                   "Invocations": [],
                                   "Variables": [
                                     {
@@ -3377,7 +3386,7 @@
                                         "Type": "bool",
                                         "Assignment": "true",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 76,
+                                        "AssignmentLine": 78,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.forward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3389,7 +3398,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 77,
+                                        "AssignmentLine": 79,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.backward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3401,7 +3410,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 78,
+                                        "AssignmentLine": 80,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.left",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3413,7 +3422,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 79,
+                                        "AssignmentLine": 81,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.right",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3424,7 +3433,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 76,
+                                        "UseLine": 78,
                                         "UseKind": "Literal",
                                         "AssignedTo": "forward",
                                         "Value": "true",
@@ -3437,7 +3446,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 77,
+                                        "UseLine": 79,
                                         "UseKind": "Literal",
                                         "AssignedTo": "backward",
                                         "Value": "false",
@@ -3450,7 +3459,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 78,
+                                        "UseLine": 80,
                                         "UseKind": "Literal",
                                         "AssignedTo": "left",
                                         "Value": "false",
@@ -3463,7 +3472,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 79,
+                                        "UseLine": 81,
                                         "UseKind": "Literal",
                                         "AssignedTo": "right",
                                         "Value": "false",
@@ -3485,8 +3494,8 @@
                                   "labels": [
                                     "case 2:"
                                   ],
-                                  "EndLine": 87,
-                                  "StartLine": 82,
+                                  "EndLine": 89,
+                                  "StartLine": 84,
                                   "Invocations": [],
                                   "Variables": [
                                     {
@@ -3495,7 +3504,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 82,
+                                        "AssignmentLine": 84,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.forward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3507,7 +3516,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 83,
+                                        "AssignmentLine": 85,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.backward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3519,7 +3528,7 @@
                                         "Type": "bool",
                                         "Assignment": "true",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 84,
+                                        "AssignmentLine": 86,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.left",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3531,7 +3540,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 85,
+                                        "AssignmentLine": 87,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.right",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -3542,7 +3551,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 82,
+                                        "UseLine": 84,
                                         "UseKind": "Literal",
                                         "AssignedTo": "forward",
                                         "Value": "false",
@@ -3555,7 +3564,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 83,
+                                        "UseLine": 85,
                                         "UseKind": "Literal",
                                         "AssignedTo": "backward",
                                         "Value": "false",
@@ -3568,7 +3577,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 84,
+                                        "UseLine": 86,
                                         "UseKind": "Literal",
                                         "AssignedTo": "left",
                                         "Value": "true",
@@ -3581,7 +3590,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 85,
+                                        "UseLine": 87,
                                         "UseKind": "Literal",
                                         "AssignedTo": "right",
                                         "Value": "false",
@@ -3601,8 +3610,8 @@
                                 }
                               ],
                               "Depth": 1,
-                              "EndLine": 88,
-                              "StartLine": 67,
+                              "EndLine": 90,
+                              "StartLine": 69,
                               "Invocations": [],
                               "Variables": [],
                               "WhileBlocks": [],
@@ -3618,7 +3627,7 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 61
+                          "Line": 63
                         },
                         {
                           "HasBody": true,
@@ -3644,7 +3653,7 @@
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 93
+                              "Line": 95
                             },
                             {
                               "Name": "Instantiate",
@@ -3662,7 +3671,7 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 102
+                              "Line": 104
                             },
                             {
                               "Name": "FindGameObjectWithTag",
@@ -3680,7 +3689,7 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 103
+                              "Line": 105
                             },
                             {
                               "Name": "SetActive",
@@ -3698,7 +3707,7 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 104
+                              "Line": 106
                             }
                           ],
                           "Variables": [
@@ -3708,7 +3717,7 @@
                                 "Type": "int",
                                 "Assignment": "10",
                                 "Kind": "Definition",
-                                "DefinitionLine": 93
+                                "DefinitionLine": 95
                               }
                             },
                             {
@@ -3717,7 +3726,7 @@
                                 "Type": "int",
                                 "Assignment": "25",
                                 "Kind": "Definition",
-                                "DefinitionLine": 94
+                                "DefinitionLine": 96
                               }
                             },
                             {
@@ -3726,7 +3735,7 @@
                                 "Type": "int",
                                 "Assignment": "1",
                                 "Kind": "Definition",
-                                "DefinitionLine": 95
+                                "DefinitionLine": 97
                               }
                             },
                             {
@@ -3735,7 +3744,7 @@
                                 "Type": "MyGame.Cube.CubeHolder",
                                 "Assignment": "new MyGame.Cube.CubeHolder(result)",
                                 "Kind": "Definition",
-                                "DefinitionLine": 100
+                                "DefinitionLine": 102
                               }
                             },
                             {
@@ -3744,7 +3753,7 @@
                                 "Type": "GameObject",
                                 "Assignment": "GameObject.FindGameObjectWithTag(\"Player\")",
                                 "Kind": "Definition",
-                                "DefinitionLine": 102
+                                "DefinitionLine": 104
                               }
                             }
                           ],
@@ -3774,8 +3783,8 @@
                                 "k++"
                               ],
                               "Depth": 1,
-                              "EndLine": 100,
-                              "StartLine": 97,
+                              "EndLine": 102,
+                              "StartLine": 99,
                               "Invocations": [],
                               "Variables": [
                                 {
@@ -3784,7 +3793,7 @@
                                     "Type": "int",
                                     "Assignment": "0",
                                     "Kind": "Definition",
-                                    "DefinitionLine": 96
+                                    "DefinitionLine": 98
                                   }
                                 },
                                 {
@@ -3793,7 +3802,7 @@
                                     "Type": "int",
                                     "Assignment": "i * i",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 98,
+                                    "AssignmentLine": 100,
                                     "VariableKind": "Local",
                                     "FullName": "result",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -3804,7 +3813,7 @@
                                     "Name": "i * i",
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 98,
+                                    "UseLine": 100,
                                     "UseKind": "BinaryOperator",
                                     "AssignedTo": "result",
                                     "Value": null,
@@ -3814,7 +3823,7 @@
                                         "Name": "i",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 98,
+                                        "UseLine": 100,
                                         "UseKind": "LocalReference",
                                         "AssignedTo": "result",
                                         "Value": null,
@@ -3825,7 +3834,7 @@
                                         "Name": "i",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 98,
+                                        "UseLine": 100,
                                         "UseKind": "LocalReference",
                                         "AssignedTo": "result",
                                         "Value": null,
@@ -3851,7 +3860,7 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 91
+                          "Line": 93
                         },
                         {
                           "HasBody": true,
@@ -3890,8 +3899,8 @@
                               "Else": null,
                               "DanglingElse": true,
                               "Depth": 1,
-                              "EndLine": 108,
-                              "StartLine": 108,
+                              "EndLine": 110,
+                              "StartLine": 110,
                               "Invocations": [],
                               "Variables": [],
                               "WhileBlocks": [],
@@ -3914,7 +3923,7 @@
                                     "Kind": "Literal"
                                   },
                                   "ReturnType": null,
-                                  "Line": 108
+                                  "Line": 110
                                 }
                               ]
                             }
@@ -3940,8 +3949,8 @@
                                   "labels": [
                                     "case 0:"
                                   ],
-                                  "EndLine": 112,
-                                  "StartLine": 111,
+                                  "EndLine": 114,
+                                  "StartLine": 113,
                                   "Invocations": [],
                                   "Variables": [],
                                   "WhileBlocks": [],
@@ -3955,8 +3964,8 @@
                                 }
                               ],
                               "Depth": 1,
-                              "EndLine": 114,
-                              "StartLine": 109,
+                              "EndLine": 116,
+                              "StartLine": 111,
                               "Invocations": [],
                               "Variables": [],
                               "WhileBlocks": [],
@@ -3982,12 +3991,12 @@
                                 "Kind": "Method"
                               },
                               "ReturnType": "a.Inputs",
-                              "Line": 115
+                              "Line": 117
                             }
                           ],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 106
+                          "Line": 108
                         },
                         {
                           "HasBody": true,
@@ -4013,19 +4022,19 @@
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 120
+                              "Line": 122
                             },
                             {
                               "Name": "Test",
                               "FullName": "Test.Input.TestInput.StateManager.Test()",
                               "ReturnType": "Void",
                               "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                              "DefinitionLine": 91,
+                              "DefinitionLine": 93,
                               "Kind": "SourceFile",
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 121
+                              "Line": 123
                             }
                           ],
                           "Variables": [],
@@ -4047,8 +4056,8 @@
                                 "Kind": "Field"
                               },
                               "Depth": 1,
-                              "EndLine": 133,
-                              "StartLine": 122,
+                              "EndLine": 135,
+                              "StartLine": 124,
                               "Invocations": [
                                 {
                                   "Name": "ToString",
@@ -4060,7 +4069,7 @@
                                   "Module": "CommonLanguageRuntimeLibrary",
                                   "ReferenceFound": true,
                                   "Arguments": [],
-                                  "Line": 131
+                                  "Line": 133
                                 },
                                 {
                                   "Name": "WriteLine",
@@ -4078,7 +4087,7 @@
                                       "IsLiteral": false
                                     }
                                   ],
-                                  "Line": 132
+                                  "Line": 134
                                 }
                               ],
                               "Variables": [
@@ -4088,7 +4097,7 @@
                                     "Type": "int",
                                     "Assignment": "0",
                                     "Kind": "Definition",
-                                    "DefinitionLine": 123
+                                    "DefinitionLine": 125
                                   }
                                 },
                                 {
@@ -4097,7 +4106,7 @@
                                     "Type": "int",
                                     "Assignment": "30",
                                     "Kind": "Definition",
-                                    "DefinitionLine": 125
+                                    "DefinitionLine": 127
                                   }
                                 },
                                 {
@@ -4106,7 +4115,7 @@
                                     "Type": "int",
                                     "Assignment": "10",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 124,
+                                    "AssignmentLine": 126,
                                     "VariableKind": "Local",
                                     "FullName": "i",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -4118,7 +4127,7 @@
                                     "Type": "int",
                                     "Assignment": "k",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 126,
+                                    "AssignmentLine": 128,
                                     "VariableKind": "Local",
                                     "FullName": "i",
                                     "AssignmentKind": "MultiplyAssignmentExpression"
@@ -4130,7 +4139,7 @@
                                     "Type": "int",
                                     "Assignment": "i * i * k",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 128,
+                                    "AssignmentLine": 130,
                                     "VariableKind": "Local",
                                     "FullName": "k",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -4141,7 +4150,7 @@
                                     "Name": null,
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 124,
+                                    "UseLine": 126,
                                     "UseKind": "Literal",
                                     "AssignedTo": "i",
                                     "Value": "10",
@@ -4154,7 +4163,7 @@
                                     "Name": "k",
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 126,
+                                    "UseLine": 128,
                                     "UseKind": "LocalReference",
                                     "AssignedTo": "i",
                                     "Value": null,
@@ -4167,7 +4176,7 @@
                                     "Name": "i * i * k",
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 128,
+                                    "UseLine": 130,
                                     "UseKind": "BinaryOperator",
                                     "AssignedTo": "k",
                                     "Value": null,
@@ -4177,7 +4186,7 @@
                                         "Name": "i * i",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 128,
+                                        "UseLine": 130,
                                         "UseKind": "BinaryOperator",
                                         "AssignedTo": "k",
                                         "Value": null,
@@ -4187,7 +4196,7 @@
                                             "Name": "i",
                                             "Type": "int",
                                             "Kind": "Use",
-                                            "UseLine": 128,
+                                            "UseLine": 130,
                                             "UseKind": "LocalReference",
                                             "AssignedTo": "k",
                                             "Value": null,
@@ -4198,7 +4207,7 @@
                                             "Name": "i",
                                             "Type": "int",
                                             "Kind": "Use",
-                                            "UseLine": 128,
+                                            "UseLine": 130,
                                             "UseKind": "LocalReference",
                                             "AssignedTo": "k",
                                             "Value": null,
@@ -4211,7 +4220,7 @@
                                         "Name": "k",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 128,
+                                        "UseLine": 130,
                                         "UseKind": "LocalReference",
                                         "AssignedTo": "k",
                                         "Value": null,
@@ -4239,21 +4248,10 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 118
+                          "Line": 120
                         }
                       ],
                       "Fields": [
-                        {
-                          "Name": "r",
-                          "Type": "RigidBody",
-                          "Modifiers": [
-                            "protected"
-                          ],
-                          "Assignment": null,
-                          "Attributes": [],
-                          "FullName": "Test.Input.TestInput.StateManager.r",
-                          "Line": 36
-                        },
                         {
                           "Name": "isJumping",
                           "Type": "bool",

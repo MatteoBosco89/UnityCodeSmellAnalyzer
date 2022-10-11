@@ -155,14 +155,16 @@ namespace CSharpAnalyzer
             variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
             fullName = model.GetSymbolInfo(exp.Left).Symbol?.ToString();
             assignment = exp.Right.ToString();
-            List<MemberAccessExpressionSyntax> list = (from a in exp.Left.DescendantNodes().OfType<MemberAccessExpressionSyntax>() select a).ToList();
+            List<IMemberReferenceOperation> list = (from a in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select a).ToList();
             if(list.Count > 0)
             {
                 Console.WriteLine("Expression: " + exp.Left);
                 Console.WriteLine(list.Count);
                 foreach (var l in list)
                 {
-                    Console.WriteLine(model.GetSymbolInfo(l).Symbol);
+                    Console.WriteLine(l.Type);
+                    //Console.WriteLine((l as IPropertyReferenceOperation)?.Type);
+                    //Console.WriteLine((l as IFieldReferenceOperation)?.Type);
                 }
                 
             }

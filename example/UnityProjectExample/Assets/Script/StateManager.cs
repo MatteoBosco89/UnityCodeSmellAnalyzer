@@ -33,7 +33,7 @@ namespace Test
 
             public class StateManager : SuperClass
             {
-		protected RigidBody r;
+		
                 protected bool isJumping = false;
                 protected bool noDamage = false;
                 protected int dir = 0;
@@ -46,6 +46,7 @@ namespace Test
                 Inputs mesh;
                 // Start is called before the first frame update
                 public bool NoDamage { get { return noDamage; } }
+		
                 void Start()
                 {
                     GetComponent<CubeManager>();
@@ -54,6 +55,7 @@ namespace Test
                     {
                         Console.WriteLine("Hello");
                     } while (true);
+		    RigidBody r = new RigidBody();
 		    r.transform.position = new Vector3(0, 0, 0);
                 }
 
