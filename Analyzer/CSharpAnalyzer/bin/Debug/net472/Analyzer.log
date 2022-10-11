@@ -1,15 +1,15 @@
-11/10/2022 12:40:16 Analysis Started...
-11/10/2022 12:40:16 Loading Project Assemblies...
-11/10/2022 12:40:16 Nothing Found!
-11/10/2022 12:40:16 Loading Config Assemblies Directories...
-11/10/2022 12:40:16 Done!
-11/10/2022 12:40:16 Loading Project...
-11/10/2022 12:40:16 Loaded!
-11/10/2022 12:40:16 Analyzing CubeManager
-11/10/2022 12:40:19 Analyzing Inputs
-11/10/2022 12:40:20 Analyzing InterfacesTest
-11/10/2022 12:40:20 Analyzing SpehereManager
-11/10/2022 12:40:20 Analyzing StateManager
-11/10/2022 12:40:20 Analyzing SuperClass
-11/10/2022 12:40:21 Saving Results in results.json
-11/10/2022 12:40:21 Done!
+11/10/2022 15:30:19 Analysis Started...
+11/10/2022 15:30:19 Loading Project Assemblies...
+11/10/2022 15:30:19 Nothing Found!
+11/10/2022 15:30:19 Loading Config Assemblies Directories...
+11/10/2022 15:30:19 Done!
+11/10/2022 15:30:19 Loading Project...
+11/10/2022 15:30:19 Loaded!
+11/10/2022 15:30:21 Analyzing CubeManager
+11/10/2022 15:30:24 Analyzing Inputs
+11/10/2022 15:30:24 Analyzing InterfacesTest
+11/10/2022 15:30:24 Analyzing SpehereManager
+11/10/2022 15:30:24 Analyzing StateManager
+11/10/2022 15:30:25 Analyzing SuperClass
+11/10/2022 15:30:25 Saving Results in results.json
+11/10/2022 15:30:25 Done!

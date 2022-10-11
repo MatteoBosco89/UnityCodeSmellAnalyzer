@@ -1371,7 +1371,22 @@
                     },
                     {
                       "Variable": {
-                        "Cascades": [],
+                        "Cascades": [
+                          {
+                            "Tokens": [
+                              "r"
+                            ],
+                            "Properties": [],
+                            "Fields": [
+                              "a.Inputs.r"
+                            ],
+                            "Invocations": [],
+                            "Type": "UnityEngine.Rigidbody",
+                            "Statement": "r",
+                            "ExpressionType": "IdentifierName",
+                            "Kind": "Field"
+                          }
+                        ],
                         "Name": "r.velocity",
                         "Type": "UnityEngine.Vector3",
                         "Assignment": "new Vector3(0, 0, 0)",
@@ -1384,7 +1399,22 @@
                     },
                     {
                       "Variable": {
-                        "Cascades": [],
+                        "Cascades": [
+                          {
+                            "Tokens": [
+                              "r"
+                            ],
+                            "Properties": [],
+                            "Fields": [
+                              "a.Inputs.r"
+                            ],
+                            "Invocations": [],
+                            "Type": "UnityEngine.Rigidbody",
+                            "Statement": "r",
+                            "ExpressionType": "IdentifierName",
+                            "Kind": "Field"
+                          }
+                        ],
                         "Name": "r.angularVelocity",
                         "Type": "UnityEngine.Vector3",
                         "Assignment": "new Vector3(0, 0, 0)",
@@ -1731,7 +1761,36 @@
                     },
                     {
                       "Variable": {
-                        "Cascades": [],
+                        "Cascades": [
+                          {
+                            "Tokens": [
+                              "o"
+                            ],
+                            "Properties": [],
+                            "Fields": [
+                              "a.Inputs.o"
+                            ],
+                            "Invocations": [],
+                            "Type": "UnityEngine.GameObject",
+                            "Statement": "o",
+                            "ExpressionType": "IdentifierName",
+                            "Kind": "Field"
+                          },
+                          {
+                            "Tokens": [
+                              "o"
+                            ],
+                            "Properties": [],
+                            "Fields": [
+                              "a.Inputs.o"
+                            ],
+                            "Invocations": [],
+                            "Type": "UnityEngine.GameObject",
+                            "Statement": "o",
+                            "ExpressionType": "IdentifierName",
+                            "Kind": "Field"
+                          }
+                        ],
                         "Name": "o.transform.position",
                         "Type": "UnityEngine.Vector3",
                         "Assignment": "o.transform.position + new Vector3(10, 10, 10)",

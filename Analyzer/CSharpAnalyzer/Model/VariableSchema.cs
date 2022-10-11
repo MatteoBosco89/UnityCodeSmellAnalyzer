@@ -136,7 +136,6 @@ namespace CSharpAnalyzer
         protected List<ConditionSchema> cascades = new List<ConditionSchema>();
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
-        public List<ConditionSchema> Cascades { get { return cascades; } }
         public string Name { get { return name; } }
         public string Type { get { return type; } }
         public string Assignment { get { return assignment; } }
@@ -145,6 +144,7 @@ namespace CSharpAnalyzer
         public string VariableKind { get { return variableKind; } }
         public string FullName { get { return fullName; } }
         public string AssignmentKind { get { return assignmentKind; } }
+        public List<ConditionSchema> Cascades { get { return cascades; } }
         public AssignedVariableSchema() { }
 
         protected void AddCascade(ConditionSchema c)
@@ -163,14 +163,15 @@ namespace CSharpAnalyzer
             variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
             fullName = model.GetSymbolInfo(exp.Left).Symbol?.ToString();
             assignment = exp.Right.ToString();
-            List<IMemberReferenceOperation> list = (from a in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select a).ToList();      
+            List<IMemberReferenceOperation> members = (from a in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select a).ToList();
+            LoadCascades(members, model);
         }
 
-        protected void LoadCascades(List<IMemberReferenceOperation> list, SemanticModel model)
+        protected void LoadCascades(List<IMemberReferenceOperation> members, SemanticModel model)
         {
-            foreach (var l in list)
+            foreach (var m in members)
             {
-                foreach (var c in l.Children)
+                foreach (var c in m.Children)
                 {
                     ConditionSchema cas = new ConditionSchema();
                     cas.LoadInformations(c.Syntax, model);
