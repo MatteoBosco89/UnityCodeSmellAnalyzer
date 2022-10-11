@@ -1009,11 +1009,138 @@ namespace CodeSmellFinder
                 JArray results = PropertiesInInvocations(data, methodsToCheck, checkedMethods, properties, condBlock);
                 if (results.Count() <= 0) continue;
                 JObject j = new JObject();
+                j.Add("Script", compUnit.First()["FileName"].ToString());
                 j.Add("Invocation", method.FullName);
                 j.Add("Line", method.Line);
-                j.Add("Script", compUnit.First()["FileName"].ToString());
                 j.Add("Traceback", results);
                 smells.Add(j);
+            }
+            return smells;
+        }
+        /// <summary>
+        /// Search all variable with specific parameters that are changed inside the specifieds methods
+        /// </summary>
+        /// <param name="data">The dataset containing the compilation unit of the project</param>
+        /// <param name="methods">The list of methods where to search the variables</param>
+        /// <param name="varKind">The Kind parameter of the variables</param>
+        /// <param name="varType">The type of the variables</param>
+        /// <param name="varNames">The name of the variables</param>
+        /// <returns>A Jarray containing the smells found</returns>
+        public static JArray ChangesToVariableOfTypeInMethods(JArray data, List<string> methods, string varKind, string varType, List<string> varNames)
+        {
+            JArray smells = new JArray();
+            foreach(JToken compUnit in data)
+            {
+                if(compUnit is JObject)
+                {
+                    var query = compUnit.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]");
+                    JArray res = new JArray(query);
+                    foreach(JToken met in res)
+                    {
+                        //get all invocations to check
+                        List<MethodReference> methodsToCheck = new List<MethodReference>();
+                        List<string> checkedMethods = new List<string>();
+                        JArray invocations = new JArray(met.SelectTokens("$..Invocations"));
+                        foreach(JToken inv in invocations.Values())
+                        {
+                            string fullName = inv["FullName"].ToString();
+                            int line = (int)inv["Line"];
+                            methodsToCheck.Add(new MethodReference(fullName, line));
+                        }
+                        smells.Merge(SearchVariablesOfKind(compUnit, met, "..", varKind, varType, varNames));
+                        JArray results = SearchVariablesOfKindInInvocations(data, methodsToCheck, checkedMethods, varKind, varType, varNames);
+                        if (results.Count() <= 0) continue;
+                        JObject s = new JObject();
+                        s.Add("Script", compUnit["FileName"]);
+                        s.Add("Method", met["FullName"]);
+                        s.Add("Line", met["Line"]);
+                        s.Add("Traceback", results);
+                        smells.Add(s);
+                    }
+                }
+            }
+            return smells;
+        }
+        /// <summary>
+        /// Search variables with specified paramenters inside a jtoken
+        /// </summary>
+        /// <param name="compUnit">The compilation unit of the container</param>
+        /// <param name="container">The jtoken where to search the container</param>
+        /// <param name="searchOp">The depth opearator for the json path query</param>
+        /// <param name="varKind">The Kind parameter of the variables</param>
+        /// <param name="varType">The type of the variables</param>
+        /// <param name="varNames">The name of the variables</param>
+        /// <returns>A Jarray containing the smells found</returns>
+        public static JArray SearchVariablesOfKind(JToken compUnit, JToken container, string searchOp, string varKind, string varType, List<string> varNames)
+        {
+            JArray smells = new JArray();
+            JArray variables = new JArray(container.SelectTokens($"${searchOp}Variables"));
+            JArray varsAssigned = new JArray(variables.SelectTokens($"$..[?(@.Kind == '{varKind}')]"));
+            foreach (JToken currVar in varsAssigned)
+            {
+                string varName = currVar["Name"].ToString();
+                if (!Utility.ListInString(varNames, varName)) continue;
+                JArray cascades = currVar["Cascades"] as JArray;
+                foreach (JToken reference in cascades)
+                {
+                    string refName = reference["Type"].ToString();
+                    if (!refName.Contains(varType)) continue;
+                    //Console.WriteLine(refName);
+                    JObject s = new JObject();
+                    s.Add("Script", compUnit["FileName"]);
+                    s.Add("Method", container["FullName"]);
+                    s.Add("Variable", varName);
+                    s.Add("Line", currVar[$"{varKind}Line"]);
+                    //Console.WriteLine(s.ToString());
+                    smells.Add(s);
+                    break;
+                }
+
+            }
+            return smells;
+        }
+        /// <summary>
+        /// Recoursive function to search variables with specified parameters inside a list of methods and their invocations
+        /// </summary>
+        /// <param name="data">The dataset containing the compilation unit of the project</param>
+        /// <param name="methodsToCheck">The methods to check</param>
+        /// <param name="checkedMethods">The methods already checked</param>
+        /// <param name="varKind">The Kind parameter of the variables</param>
+        /// <param name="varType">The type of the variables</param>
+        /// <param name="varNames">The name of the variables</param>
+        /// <returns>A Jarray containing the smells found</returns>
+        public static JArray SearchVariablesOfKindInInvocations(JArray data, List<MethodReference> methodsToCheck, List<string> checkedMethods, string varKind, string varType, List<string> varNames)
+        {
+            JArray smells = new JArray();
+            List<MethodReference> metToCk = new List<MethodReference>();
+            foreach(MethodReference mr in methodsToCheck)
+            {
+                if (checkedMethods.Contains(mr.FullName)) continue;
+                checkedMethods.Add(mr.FullName);
+                //get the compilation unit that contain the method to analyze
+                var queryRes = data.SelectTokens($"$.[?(@..Methods[?(@.FullName == '{mr.FullName}')])]");
+                if (queryRes.Count() < 0) continue;
+                JArray compUnit = new JArray(queryRes);
+                //get the list invocations of the method to analyze
+                queryRes = compUnit.SelectTokens($"$..Methods[?(@FullName == '{mr.FullName}')]..Invocations");
+                JArray invocations = new JArray(queryRes);
+                foreach (JToken inv in invocations.Values())
+                {
+                    string fullName = inv["FullName"].ToString();
+                    if (checkedMethods.Contains(fullName)) continue;
+                    metToCk.Add(new MethodReference(inv["FullName"].ToString(), (int)inv["Line"]));
+                }
+                var m = compUnit.SelectToken($"..Methods[?(@.FullName == '{mr.FullName}')]");
+                if (m == null) continue;
+                smells.Merge(SearchVariablesOfKind(compUnit.First(), m, "..", varKind, varType, varNames));
+                JArray results = SearchVariablesOfKindInInvocations(data, metToCk, checkedMethods, varKind, varType, varNames);
+                if (results.Count() <= 0) continue;
+                JObject s = new JObject();
+                s.Add("Script", compUnit.First()["FileName"]);
+                s.Add("Invocation", mr.FullName);
+                s.Add("Line", mr.Line);
+                s.Add("Traceback", results);
+                smells.Add(s);
             }
             return smells;
         }
