@@ -5,6 +5,7 @@ using Microsoft.CodeAnalysis.Operations;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpAnalyzer
 {
@@ -154,6 +155,18 @@ namespace CSharpAnalyzer
             variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
             fullName = model.GetSymbolInfo(exp.Left).Symbol?.ToString();
             assignment = exp.Right.ToString();
+            List<MemberAccessExpressionSyntax> list = (from a in exp.Left.DescendantNodes().OfType<MemberAccessExpressionSyntax>() select a).ToList();
+            if(list.Count > 0)
+            {
+                Console.WriteLine("Expression: " + exp.Left);
+                Console.WriteLine(list.Count);
+                foreach (var l in list)
+                {
+                    Console.WriteLine(model.GetSymbolInfo(l).Symbol);
+                }
+                
+            }
+            
         }
     }
 

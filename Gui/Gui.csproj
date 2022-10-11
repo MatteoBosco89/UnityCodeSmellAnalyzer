@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="folderTextBg.gif" />
+    <None Remove="folder_o.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="folderTextBg.gif" />
+    <Resource Include="folder_o.png" />
+  </ItemGroup>
+
+</Project>

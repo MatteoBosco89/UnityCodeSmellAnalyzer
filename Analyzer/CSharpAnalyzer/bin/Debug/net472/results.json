@@ -1,2458 +1,10 @@
 {
   "ProjectName": "C# Project",
-  "ProjectDirectory": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample",
+  "ProjectDirectory": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script",
   "ConfigurationFile": "Config.json",
   "ProjectLanguage": "C#",
   "ProjectLanguageVersion": "CSharp8",
   "Project": [
-    {
-      "Name": "Program",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\Program.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [],
-      "Classes": [
-        {
-          "Name": "Program",
-          "FullName": "Program",
-          "FullInheritanceName": "object",
-          "InnerClasses": [],
-          "ClassConstraints": [],
-          "Modifiers": [
-            "public"
-          ],
-          "Inheritance": "object",
-          "Interfaces": [],
-          "Properties": [],
-          "Methods": [
-            {
-              "HasBody": false,
-              "HasExpressionBody": false,
-              "Name": "Main",
-              "IsEmpty": true,
-              "FullName": "Program.Main(string[])",
-              "Modifiers": [
-                "public",
-                "static"
-              ],
-              "Attributes": [],
-              "ReturnType": "void",
-              "Parameters": [
-                {
-                  "Name": "args",
-                  "Type": "string[]",
-                  "Assignment": null,
-                  "Attributes": []
-                }
-              ],
-              "Invocations": [],
-              "Variables": [],
-              "Statements": [],
-              "WhileBlocks": [],
-              "ForEachBlocks": [],
-              "ForBlocks": [],
-              "IfBlocks": [],
-              "SwitchBlocks": [],
-              "Returns": [],
-              "TryBlocks": [],
-              "ExpressionBody": null,
-              "Line": 5
-            }
-          ],
-          "Fields": [],
-          "Constructors": [],
-          "Attributes": [],
-          "Line": 3
-        }
-      ],
-      "Usings": [
-        {
-          "Name": "System",
-          "Line": 1
-        }
-      ],
-      "Line": 1
-    },
-    {
-      "Name": "State",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\State.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [
-        {
-          "Attributes": [],
-          "Name": "Test",
-          "Interfaces": [],
-          "Namespaces": [],
-          "Classes": [
-            {
-              "Name": "State",
-              "FullName": "Test.State",
-              "FullInheritanceName": "Test.StateManager",
-              "InnerClasses": [],
-              "ClassConstraints": [],
-              "Modifiers": [
-                "public"
-              ],
-              "Inheritance": "Test.StateManager",
-              "Interfaces": [],
-              "Properties": [],
-              "Methods": [],
-              "Fields": [
-                {
-                  "Name": "b",
-                  "Type": "int",
-                  "Modifiers": [
-                    "protected"
-                  ],
-                  "Assignment": null,
-                  "Attributes": [],
-                  "FullName": "Test.State.b",
-                  "Line": 7
-                }
-              ],
-              "Constructors": [
-                {
-                  "ClassRef": "Test.State",
-                  "ReturnType": "State",
-                  "HasBody": false,
-                  "HasExpressionBody": true,
-                  "Name": "State",
-                  "IsEmpty": false,
-                  "FullName": "State",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [
-                    "Obsolete"
-                  ],
-                  "Parameters": [
-                    {
-                      "Name": "a",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    },
-                    {
-                      "Name": "b",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    }
-                  ],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "this.b",
-                      "b"
-                    ],
-                    "Properties": [],
-                    "Fields": [
-                      "Test.State.b"
-                    ],
-                    "Invocations": [],
-                    "Type": "int",
-                    "Statement": "this.b = b",
-                    "ExpressionType": "SimpleAssignmentExpression",
-                    "Kind": "Literal"
-                  },
-                  "Line": 8
-                },
-                {
-                  "ClassRef": "Test.State",
-                  "ReturnType": "State",
-                  "HasBody": true,
-                  "HasExpressionBody": false,
-                  "Name": "State",
-                  "IsEmpty": false,
-                  "FullName": "State",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "Parameters": [
-                    {
-                      "Name": "a",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    },
-                    {
-                      "Name": "b",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    },
-                    {
-                      "Name": "c",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    }
-                  ],
-                  "Invocations": [],
-                  "Variables": [
-                    {
-                      "Variable": {
-                        "Name": "this.b",
-                        "Type": "int",
-                        "Assignment": "b",
-                        "Kind": "Assignment",
-                        "AssignmentLine": 11,
-                        "VariableKind": "Field",
-                        "FullName": "Test.State.b",
-                        "AssignmentKind": "SimpleAssignmentExpression"
-                      }
-                    },
-                    {
-                      "Variable": {
-                        "Name": "b",
-                        "Type": "int",
-                        "Kind": "Use",
-                        "UseLine": 11,
-                        "UseKind": "ParameterReference",
-                        "AssignedTo": "this.b",
-                        "Value": null,
-                        "Operation": "SimpleAssignmentExpression",
-                        "VariablesList": []
-                      }
-                    }
-                  ],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": null,
-                  "Line": 10
-                }
-              ],
-              "Attributes": [],
-              "Line": 5
-            }
-          ],
-          "Usings": [],
-          "Line": 3
-        }
-      ],
-      "Classes": [],
-      "Usings": [
-        {
-          "Name": "System",
-          "Line": 1
-        }
-      ],
-      "Line": 1
-    },
-    {
-      "Name": "StateInState",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [
-        {
-          "Attributes": [],
-          "Name": "Test",
-          "Interfaces": [],
-          "Namespaces": [],
-          "Classes": [
-            {
-              "Name": "StateInState",
-              "FullName": "Test.StateInState<T>",
-              "FullInheritanceName": "object",
-              "InnerClasses": [
-                {
-                  "Name": "InnerState",
-                  "FullName": "Test.StateInState<T>.InnerState",
-                  "FullInheritanceName": "object",
-                  "InnerClasses": [],
-                  "ClassConstraints": [],
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Inheritance": "object",
-                  "Interfaces": [],
-                  "Properties": [
-                    {
-                      "Name": "D",
-                      "Type": "int",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "IsAutoProperty": false,
-                      "Initializer": false,
-                      "InitializerValue": null,
-                      "Accessor": [
-                        {
-                          "AccessorType": "get",
-                          "HasBody": true,
-                          "HasExpressionBody": false,
-                          "IsEmpty": false,
-                          "Modifiers": [],
-                          "Attributes": [],
-                          "ReturnType": null,
-                          "Parameters": [],
-                          "Invocations": [],
-                          "Variables": [],
-                          "Statements": [],
-                          "WhileBlocks": [],
-                          "ForEachBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "Returns": [
-                            {
-                              "ReturnStatement": {
-                                "Tokens": [],
-                                "Properties": [],
-                                "Fields": [
-                                  "Test.StateInState<T>.InnerState.d"
-                                ],
-                                "Invocations": [],
-                                "Type": "int",
-                                "Statement": "d",
-                                "ExpressionType": "IdentifierName",
-                                "Kind": "Field"
-                              },
-                              "ReturnType": "int",
-                              "Line": 24
-                            }
-                          ],
-                          "TryBlocks": [],
-                          "ExpressionBody": null,
-                          "Line": 24
-                        },
-                        {
-                          "AccessorType": "set",
-                          "HasBody": true,
-                          "HasExpressionBody": false,
-                          "IsEmpty": false,
-                          "Modifiers": [
-                            "protected"
-                          ],
-                          "Attributes": [],
-                          "ReturnType": null,
-                          "Parameters": [],
-                          "Invocations": [],
-                          "Variables": [
-                            {
-                              "Variable": {
-                                "Name": "d",
-                                "Type": "int",
-                                "Assignment": "value",
-                                "Kind": "Assignment",
-                                "AssignmentLine": 23,
-                                "VariableKind": "Field",
-                                "FullName": "Test.StateInState<T>.InnerState.d",
-                                "AssignmentKind": "SimpleAssignmentExpression"
-                              }
-                            },
-                            {
-                              "Variable": {
-                                "Name": "value",
-                                "Type": "int",
-                                "Kind": "Use",
-                                "UseLine": 23,
-                                "UseKind": "ParameterReference",
-                                "AssignedTo": "d",
-                                "Value": null,
-                                "Operation": "SimpleAssignmentExpression",
-                                "VariablesList": []
-                              }
-                            }
-                          ],
-                          "Statements": [],
-                          "WhileBlocks": [],
-                          "ForEachBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "Returns": [],
-                          "TryBlocks": [],
-                          "ExpressionBody": null,
-                          "Line": 24
-                        }
-                      ],
-                      "HasExpressionBody": false,
-                      "ExpressionBody": null,
-                      "Line": 24
-                    }
-                  ],
-                  "Methods": [
-                    {
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "Name": "M",
-                      "IsEmpty": false,
-                      "FullName": "Test.StateInState<T>.InnerState.M()",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "ReturnType": "int",
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [
-                        {
-                          "ReturnStatement": {
-                            "Tokens": [],
-                            "Properties": [],
-                            "Fields": [],
-                            "Invocations": [],
-                            "Type": "int",
-                            "Statement": "12",
-                            "ExpressionType": "NumericLiteralExpression",
-                            "Kind": "Literal"
-                          },
-                          "ReturnType": "int",
-                          "Line": 35
-                        }
-                      ],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 35
-                    },
-                    {
-                      "HasBody": false,
-                      "HasExpressionBody": false,
-                      "Name": "Method2",
-                      "IsEmpty": true,
-                      "FullName": "Test.StateInState<T>.InnerState.Method2()",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "ReturnType": "void",
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 36
-                    },
-                    {
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "Name": "Method3",
-                      "IsEmpty": false,
-                      "FullName": "Test.StateInState<T>.InnerState.Method3()",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "ReturnType": "int",
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [
-                        {
-                          "ReturnStatement": {
-                            "Tokens": [],
-                            "Properties": [
-                              "Test.StateInState<T>.InnerState.D"
-                            ],
-                            "Fields": [],
-                            "Invocations": [],
-                            "Type": "int",
-                            "Statement": "D",
-                            "ExpressionType": "IdentifierName",
-                            "Kind": "Property"
-                          },
-                          "ReturnType": "int",
-                          "Line": 37
-                        }
-                      ],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 37
-                    },
-                    {
-                      "HasBody": false,
-                      "HasExpressionBody": true,
-                      "Name": "Ciaone2",
-                      "IsEmpty": false,
-                      "FullName": "Test.StateInState<T>.InnerState.Ciaone2()",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "ReturnType": "InnerState",
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": {
-                        "Tokens": [
-                          "new",
-                          "InnerState"
-                        ],
-                        "Properties": [],
-                        "Fields": [],
-                        "Invocations": [],
-                        "Type": "Test.StateInState<T>.InnerState",
-                        "Statement": "new InnerState()",
-                        "ExpressionType": "ObjectCreationExpression",
-                        "Kind": "Method"
-                      },
-                      "Line": 39
-                    }
-                  ],
-                  "Fields": [
-                    {
-                      "Name": "d",
-                      "Type": "int",
-                      "Modifiers": [
-                        "protected"
-                      ],
-                      "Assignment": null,
-                      "Attributes": [],
-                      "FullName": "Test.StateInState<T>.InnerState.d",
-                      "Line": 23
-                    }
-                  ],
-                  "Constructors": [
-                    {
-                      "ClassRef": "Test.StateInState<T>.InnerState",
-                      "ReturnType": "InnerState",
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "Name": "InnerState",
-                      "IsEmpty": false,
-                      "FullName": "InnerState",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "Parameters": [],
-                      "Invocations": [
-                        {
-                          "Name": "Method2",
-                          "FullName": "Test.StateInState<T>.InnerState.Method2()",
-                          "ReturnType": "Void",
-                          "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                          "DefinitionLine": 36,
-                          "Kind": "SourceFile",
-                          "Module": null,
-                          "ReferenceFound": true,
-                          "Arguments": [],
-                          "Line": 28
-                        },
-                        {
-                          "Name": "Method3",
-                          "FullName": "Test.StateInState<T>.InnerState.Method3()",
-                          "ReturnType": "Int32",
-                          "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                          "DefinitionLine": 37,
-                          "Kind": "SourceFile",
-                          "Module": null,
-                          "ReferenceFound": true,
-                          "Arguments": [],
-                          "Line": 29
-                        }
-                      ],
-                      "Variables": [
-                        {
-                          "Variable": {
-                            "Name": "this.d",
-                            "Type": "int",
-                            "Assignment": "1",
-                            "Kind": "Assignment",
-                            "AssignmentLine": 26,
-                            "VariableKind": "Field",
-                            "FullName": "Test.StateInState<T>.InnerState.d",
-                            "AssignmentKind": "SimpleAssignmentExpression"
-                          }
-                        },
-                        {
-                          "Variable": {
-                            "Name": "this.d",
-                            "Type": "int",
-                            "Assignment": "Method3()",
-                            "Kind": "Assignment",
-                            "AssignmentLine": 28,
-                            "VariableKind": "Field",
-                            "FullName": "Test.StateInState<T>.InnerState.d",
-                            "AssignmentKind": "SimpleAssignmentExpression"
-                          }
-                        },
-                        {
-                          "Variable": {
-                            "Name": null,
-                            "Type": "int",
-                            "Kind": "Use",
-                            "UseLine": 26,
-                            "UseKind": "Literal",
-                            "AssignedTo": "this.d",
-                            "Value": "1",
-                            "Operation": "SimpleAssignmentExpression",
-                            "VariablesList": []
-                          }
-                        },
-                        {
-                          "Variable": {
-                            "Name": "Method3()",
-                            "Type": "int",
-                            "Kind": "Use",
-                            "UseLine": 28,
-                            "UseKind": "Invocation",
-                            "AssignedTo": "this.d",
-                            "Value": null,
-                            "Operation": "SimpleAssignmentExpression",
-                            "VariablesList": []
-                          }
-                        }
-                      ],
-                      "Statements": [],
-                      "WhileBlocks": [
-                        {
-                          "Condition": {
-                            "Tokens": [
-                              "Method3",
-                              "0",
-                              "D",
-                              "0"
-                            ],
-                            "Properties": [
-                              "Test.StateInState<T>.InnerState.D"
-                            ],
-                            "Fields": [],
-                            "Invocations": [
-                              {
-                                "Name": "Method3",
-                                "FullName": "Test.StateInState<T>.InnerState.Method3()",
-                                "ReturnType": "Int32",
-                                "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                                "DefinitionLine": 37,
-                                "Kind": "SourceFile",
-                                "Module": null,
-                                "ReferenceFound": true,
-                                "Arguments": [],
-                                "Line": 31
-                              }
-                            ],
-                            "Type": "bool",
-                            "Statement": "Method3() < 0 && D > 0",
-                            "ExpressionType": "LogicalAndExpression",
-                            "Kind": "Literal"
-                          },
-                          "Depth": 1,
-                          "EndLine": 31,
-                          "StartLine": 31,
-                          "Invocations": [
-                            {
-                              "Name": "Method3",
-                              "FullName": "Test.StateInState<T>.InnerState.Method3()",
-                              "ReturnType": "Int32",
-                              "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                              "DefinitionLine": 37,
-                              "Kind": "SourceFile",
-                              "Module": null,
-                              "ReferenceFound": true,
-                              "Arguments": [],
-                              "Line": 31
-                            },
-                            {
-                              "Name": "Method2",
-                              "FullName": "Test.StateInState<T>.InnerState.Method2()",
-                              "ReturnType": "Void",
-                              "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                              "DefinitionLine": 36,
-                              "Kind": "SourceFile",
-                              "Module": null,
-                              "ReferenceFound": true,
-                              "Arguments": [],
-                              "Line": 31
-                            }
-                          ],
-                          "Variables": [],
-                          "WhileBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "ForEachBlocks": [],
-                          "ElseBlocks": [],
-                          "TryBlocks": [],
-                          "Returns": []
-                        }
-                      ],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 25
-                    },
-                    {
-                      "ClassRef": "Test.StateInState<T>.InnerState",
-                      "ReturnType": "InnerState",
-                      "HasBody": false,
-                      "HasExpressionBody": true,
-                      "Name": "InnerState",
-                      "IsEmpty": false,
-                      "FullName": "InnerState",
-                      "Modifiers": [
-                        "public"
-                      ],
-                      "Attributes": [],
-                      "Parameters": [
-                        {
-                          "Name": "d",
-                          "Type": "int",
-                          "Assignment": null,
-                          "Attributes": []
-                        }
-                      ],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": {
-                        "Tokens": [
-                          "this.d",
-                          "Method3"
-                        ],
-                        "Properties": [],
-                        "Fields": [
-                          "Test.StateInState<T>.InnerState.d"
-                        ],
-                        "Invocations": [
-                          {
-                            "Name": "Method3",
-                            "FullName": "Test.StateInState<T>.InnerState.Method3()",
-                            "ReturnType": "Int32",
-                            "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                            "DefinitionLine": 37,
-                            "Kind": "SourceFile",
-                            "Module": null,
-                            "ReferenceFound": true,
-                            "Arguments": [],
-                            "Line": 38
-                          }
-                        ],
-                        "Type": "int",
-                        "Statement": "this.d = Method3()",
-                        "ExpressionType": "SimpleAssignmentExpression",
-                        "Kind": "Literal"
-                      },
-                      "Line": 38
-                    }
-                  ],
-                  "Attributes": [],
-                  "Line": 21
-                }
-              ],
-              "ClassConstraints": [],
-              "Modifiers": [
-                "public"
-              ],
-              "Inheritance": "object",
-              "Interfaces": [],
-              "Properties": [],
-              "Methods": [
-                {
-                  "HasBody": true,
-                  "HasExpressionBody": false,
-                  "Name": "Method1",
-                  "IsEmpty": false,
-                  "FullName": "Test.StateInState<T>.Method1(string)",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "void",
-                  "Parameters": [
-                    {
-                      "Name": "s",
-                      "Type": "string",
-                      "Assignment": null,
-                      "Attributes": []
-                    }
-                  ],
-                  "Invocations": [
-                    {
-                      "Name": "Method3",
-                      "FullName": "Test.StateInState<T>.InnerState.Method3()",
-                      "ReturnType": "Int32",
-                      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                      "DefinitionLine": 37,
-                      "Kind": "SourceFile",
-                      "Module": null,
-                      "ReferenceFound": true,
-                      "Arguments": [],
-                      "Line": 18
-                    },
-                    {
-                      "Name": "Ciaone2",
-                      "FullName": "Test.StateInState<T>.InnerState.Ciaone2()",
-                      "ReturnType": "InnerState",
-                      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateInState.cs",
-                      "DefinitionLine": 39,
-                      "Kind": "SourceFile",
-                      "Module": null,
-                      "ReferenceFound": true,
-                      "Arguments": [],
-                      "Line": 18
-                    }
-                  ],
-                  "Variables": [
-                    {
-                      "Variable": {
-                        "Name": "i",
-                        "Type": "InnerState",
-                        "Assignment": "new InnerState()",
-                        "Kind": "Definition",
-                        "DefinitionLine": 16
-                      }
-                    }
-                  ],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": null,
-                  "Line": 15
-                }
-              ],
-              "Fields": [
-                {
-                  "Name": "aaaaa",
-                  "Type": "int",
-                  "Modifiers": [
-                    "protected"
-                  ],
-                  "Assignment": null,
-                  "Attributes": [],
-                  "FullName": "Test.StateInState<T>.aaaaa",
-                  "Line": 9
-                }
-              ],
-              "Constructors": [
-                {
-                  "ClassRef": "Test.StateInState<T>",
-                  "ReturnType": "StateInState",
-                  "HasBody": false,
-                  "HasExpressionBody": true,
-                  "Name": "StateInState",
-                  "IsEmpty": false,
-                  "FullName": "StateInState",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "Parameters": [
-                    {
-                      "Name": "b",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    }
-                  ],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "aaaaa",
-                      "1"
-                    ],
-                    "Properties": [],
-                    "Fields": [
-                      "Test.StateInState<T>.aaaaa"
-                    ],
-                    "Invocations": [],
-                    "Type": "int",
-                    "Statement": "aaaaa = 1",
-                    "ExpressionType": "SimpleAssignmentExpression",
-                    "Kind": "Literal"
-                  },
-                  "Line": 11
-                },
-                {
-                  "ClassRef": "Test.StateInState<T>",
-                  "ReturnType": "StateInState",
-                  "HasBody": false,
-                  "HasExpressionBody": false,
-                  "Name": "StateInState",
-                  "IsEmpty": true,
-                  "FullName": "StateInState",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "Parameters": [],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": null,
-                  "Line": 13
-                }
-              ],
-              "Attributes": [],
-              "Line": 6
-            }
-          ],
-          "Usings": [],
-          "Line": 4
-        }
-      ],
-      "Classes": [],
-      "Usings": [
-        {
-          "Name": "System",
-          "Line": 1
-        },
-        {
-          "Name": "System.Text.Json.Serialization",
-          "Line": 2
-        }
-      ],
-      "Line": 1
-    },
-    {
-      "Name": "StateManager",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [
-        {
-          "Attributes": [],
-          "Name": "Test",
-          "Interfaces": [
-            {
-              "Name": "ITest",
-              "FullName": "Test.ITest",
-              "Modifiers": [
-                "public"
-              ],
-              "Methods": [],
-              "Properties": [
-                {
-                  "Name": "P",
-                  "Type": "int",
-                  "Modifiers": [],
-                  "Attributes": [],
-                  "IsAutoProperty": true,
-                  "Initializer": false,
-                  "InitializerValue": null,
-                  "Accessor": [
-                    {
-                      "AccessorType": "get",
-                      "HasBody": false,
-                      "HasExpressionBody": false,
-                      "IsEmpty": true,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 10
-                    }
-                  ],
-                  "HasExpressionBody": false,
-                  "ExpressionBody": null,
-                  "Line": 10
-                }
-              ],
-              "Attributes": [],
-              "Line": 8
-            }
-          ],
-          "Namespaces": [],
-          "Classes": [
-            {
-              "Name": "StateManager",
-              "FullName": "Test.StateManager",
-              "FullInheritanceName": "object",
-              "InnerClasses": [],
-              "ClassConstraints": [],
-              "Modifiers": [
-                "public",
-                "abstract"
-              ],
-              "Inheritance": "object",
-              "Interfaces": [
-                "ITest"
-              ],
-              "Properties": [
-                {
-                  "Name": "D",
-                  "Type": "int",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "IsAutoProperty": false,
-                  "Initializer": false,
-                  "InitializerValue": null,
-                  "Accessor": [],
-                  "HasExpressionBody": true,
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "d"
-                    ],
-                    "Properties": [],
-                    "Fields": [
-                      "Test.StateManager.d"
-                    ],
-                    "Invocations": [],
-                    "Type": "int",
-                    "Statement": "d",
-                    "ExpressionType": "IdentifierName",
-                    "Kind": "Field"
-                  },
-                  "Line": 20
-                },
-                {
-                  "Name": "A",
-                  "Type": "int",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [
-                    "JsonIgnore"
-                  ],
-                  "IsAutoProperty": false,
-                  "Initializer": false,
-                  "InitializerValue": null,
-                  "Accessor": [
-                    {
-                      "AccessorType": "get",
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "IsEmpty": false,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [
-                        {
-                          "ReturnStatement": {
-                            "Tokens": [],
-                            "Properties": [],
-                            "Fields": [
-                              "Test.StateManager.a"
-                            ],
-                            "Invocations": [],
-                            "Type": "int",
-                            "Statement": "a",
-                            "ExpressionType": "IdentifierName",
-                            "Kind": "Field"
-                          },
-                          "ReturnType": "int",
-                          "Line": 23
-                        }
-                      ],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 23
-                    },
-                    {
-                      "AccessorType": "set",
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "IsEmpty": false,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [
-                        {
-                          "Variable": {
-                            "Name": "a",
-                            "Type": "int",
-                            "Assignment": "value",
-                            "Kind": "Assignment",
-                            "AssignmentLine": 22,
-                            "VariableKind": "Field",
-                            "FullName": "Test.StateManager.a",
-                            "AssignmentKind": "SimpleAssignmentExpression"
-                          }
-                        },
-                        {
-                          "Variable": {
-                            "Name": "value",
-                            "Type": "int",
-                            "Kind": "Use",
-                            "UseLine": 22,
-                            "UseKind": "ParameterReference",
-                            "AssignedTo": "a",
-                            "Value": null,
-                            "Operation": "SimpleAssignmentExpression",
-                            "VariablesList": []
-                          }
-                        }
-                      ],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 23
-                    }
-                  ],
-                  "HasExpressionBody": false,
-                  "ExpressionBody": null,
-                  "Line": 22
-                },
-                {
-                  "Name": "B",
-                  "Type": "int",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "IsAutoProperty": false,
-                  "Initializer": false,
-                  "InitializerValue": null,
-                  "Accessor": [
-                    {
-                      "AccessorType": "get",
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "IsEmpty": false,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [
-                        {
-                          "ReturnStatement": {
-                            "Tokens": [],
-                            "Properties": [],
-                            "Fields": [
-                              "Test.StateManager.b"
-                            ],
-                            "Invocations": [],
-                            "Type": "int",
-                            "Statement": "b",
-                            "ExpressionType": "IdentifierName",
-                            "Kind": "Field"
-                          },
-                          "ReturnType": "int",
-                          "Line": 26
-                        }
-                      ],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 26
-                    },
-                    {
-                      "AccessorType": "set",
-                      "HasBody": true,
-                      "HasExpressionBody": false,
-                      "IsEmpty": false,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [
-                        {
-                          "Variable": {
-                            "Name": "b",
-                            "Type": "int",
-                            "Assignment": "value",
-                            "Kind": "Assignment",
-                            "AssignmentLine": 26,
-                            "VariableKind": "Field",
-                            "FullName": "Test.StateManager.b",
-                            "AssignmentKind": "SimpleAssignmentExpression"
-                          }
-                        },
-                        {
-                          "Variable": {
-                            "Name": "value",
-                            "Type": "int",
-                            "Kind": "Use",
-                            "UseLine": 26,
-                            "UseKind": "ParameterReference",
-                            "AssignedTo": "b",
-                            "Value": null,
-                            "Operation": "SimpleAssignmentExpression",
-                            "VariablesList": []
-                          }
-                        }
-                      ],
-                      "Statements": [],
-                      "WhileBlocks": [
-                        {
-                          "Condition": {
-                            "Tokens": [
-                              "Meth22",
-                              "0",
-                              "Meth22",
-                              "0"
-                            ],
-                            "Properties": [],
-                            "Fields": [],
-                            "Invocations": [
-                              {
-                                "Name": "Meth22",
-                                "FullName": "Test.StateManager.Meth22()",
-                                "ReturnType": "Int32",
-                                "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                                "DefinitionLine": 79,
-                                "Kind": "SourceFile",
-                                "Module": null,
-                                "ReferenceFound": true,
-                                "Arguments": [],
-                                "Line": 27
-                              },
-                              {
-                                "Name": "Meth22",
-                                "FullName": "Test.StateManager.Meth22()",
-                                "ReturnType": "Int32",
-                                "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                                "DefinitionLine": 79,
-                                "Kind": "SourceFile",
-                                "Module": null,
-                                "ReferenceFound": true,
-                                "Arguments": [],
-                                "Line": 27
-                              }
-                            ],
-                            "Type": "bool",
-                            "Statement": "Meth22() < 0 && Meth22() > 0",
-                            "ExpressionType": "LogicalAndExpression",
-                            "Kind": "Literal"
-                          },
-                          "Depth": 1,
-                          "EndLine": 27,
-                          "StartLine": 27,
-                          "Invocations": [
-                            {
-                              "Name": "Meth22",
-                              "FullName": "Test.StateManager.Meth22()",
-                              "ReturnType": "Int32",
-                              "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                              "DefinitionLine": 79,
-                              "Kind": "SourceFile",
-                              "Module": null,
-                              "ReferenceFound": true,
-                              "Arguments": [],
-                              "Line": 27
-                            },
-                            {
-                              "Name": "Meth22",
-                              "FullName": "Test.StateManager.Meth22()",
-                              "ReturnType": "Int32",
-                              "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                              "DefinitionLine": 79,
-                              "Kind": "SourceFile",
-                              "Module": null,
-                              "ReferenceFound": true,
-                              "Arguments": [],
-                              "Line": 27
-                            }
-                          ],
-                          "Variables": [],
-                          "WhileBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "ForEachBlocks": [],
-                          "ElseBlocks": [],
-                          "TryBlocks": [],
-                          "Returns": []
-                        }
-                      ],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 27
-                    }
-                  ],
-                  "HasExpressionBody": false,
-                  "ExpressionBody": null,
-                  "Line": 24
-                },
-                {
-                  "Name": "C",
-                  "Type": "int",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "IsAutoProperty": true,
-                  "Initializer": true,
-                  "InitializerValue": {
-                    "Tokens": [
-                      "0"
-                    ],
-                    "Properties": [],
-                    "Fields": [],
-                    "Invocations": [],
-                    "Type": "int",
-                    "Statement": "0",
-                    "ExpressionType": "NumericLiteralExpression",
-                    "Kind": "Literal"
-                  },
-                  "Accessor": [
-                    {
-                      "AccessorType": "get",
-                      "HasBody": false,
-                      "HasExpressionBody": false,
-                      "IsEmpty": true,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 29
-                    },
-                    {
-                      "AccessorType": "set",
-                      "HasBody": false,
-                      "HasExpressionBody": false,
-                      "IsEmpty": true,
-                      "Modifiers": [],
-                      "Attributes": [],
-                      "ReturnType": null,
-                      "Parameters": [],
-                      "Invocations": [],
-                      "Variables": [],
-                      "Statements": [],
-                      "WhileBlocks": [],
-                      "ForEachBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "Returns": [],
-                      "TryBlocks": [],
-                      "ExpressionBody": null,
-                      "Line": 29
-                    }
-                  ],
-                  "HasExpressionBody": false,
-                  "ExpressionBody": null,
-                  "Line": 29
-                },
-                {
-                  "Name": "P",
-                  "Type": "int",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "IsAutoProperty": false,
-                  "Initializer": false,
-                  "InitializerValue": null,
-                  "Accessor": [],
-                  "HasExpressionBody": true,
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "a",
-                      "+",
-                      "d"
-                    ],
-                    "Properties": [],
-                    "Fields": [
-                      "Test.StateManager.a",
-                      "Test.StateManager.d"
-                    ],
-                    "Invocations": [],
-                    "Type": "int",
-                    "Statement": "a + d",
-                    "ExpressionType": "AddExpression",
-                    "Kind": "Method"
-                  },
-                  "Line": 31
-                }
-              ],
-              "Methods": [
-                {
-                  "HasBody": true,
-                  "HasExpressionBody": false,
-                  "Name": "MethodArg",
-                  "IsEmpty": false,
-                  "FullName": "Test.StateManager.MethodArg(int, bool, Test.State)",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "void",
-                  "Parameters": [
-                    {
-                      "Name": "a",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    },
-                    {
-                      "Name": "b",
-                      "Type": "bool",
-                      "Assignment": null,
-                      "Attributes": []
-                    },
-                    {
-                      "Name": "s",
-                      "Type": "State",
-                      "Assignment": null,
-                      "Attributes": []
-                    }
-                  ],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [
-                    {
-                      "Condition": {
-                        "Tokens": [
-                          "a",
-                          "c",
-                          "0"
-                        ],
-                        "Properties": [],
-                        "Fields": [
-                          "Test.StateManager.c"
-                        ],
-                        "Invocations": [],
-                        "Type": "bool",
-                        "Statement": "(a = c) == 0",
-                        "ExpressionType": "EqualsExpression",
-                        "Kind": "Method"
-                      },
-                      "Depth": 1,
-                      "EndLine": 35,
-                      "StartLine": 35,
-                      "Invocations": [
-                        {
-                          "Name": "WriteLine",
-                          "FullName": "System.Console.WriteLine(int)",
-                          "ReturnType": "Void",
-                          "FileName": null,
-                          "DefinitionLine": 1,
-                          "Kind": "MetadataFile",
-                          "Module": "CommonLanguageRuntimeLibrary",
-                          "ReferenceFound": true,
-                          "Arguments": [
-                            {
-                              "Argument": "a",
-                              "IsInvocation": false,
-                              "IsLiteral": false
-                            }
-                          ],
-                          "Line": 35
-                        }
-                      ],
-                      "Variables": [
-                        {
-                          "Variable": {
-                            "Name": "a",
-                            "Type": "int",
-                            "Assignment": "c",
-                            "Kind": "Assignment",
-                            "AssignmentLine": 34,
-                            "VariableKind": "Parameter",
-                            "FullName": "int",
-                            "AssignmentKind": "SimpleAssignmentExpression"
-                          }
-                        },
-                        {
-                          "Variable": {
-                            "Name": "c",
-                            "Type": "int",
-                            "Kind": "Use",
-                            "UseLine": 34,
-                            "UseKind": "FieldReference",
-                            "AssignedTo": "a",
-                            "Value": null,
-                            "Operation": "SimpleAssignmentExpression",
-                            "VariablesList": []
-                          }
-                        }
-                      ],
-                      "WhileBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "ForEachBlocks": [],
-                      "ElseBlocks": [],
-                      "TryBlocks": [],
-                      "Returns": []
-                    }
-                  ],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": null,
-                  "Line": 33
-                },
-                {
-                  "HasBody": true,
-                  "HasExpressionBody": false,
-                  "Name": "SwitchMeth",
-                  "IsEmpty": false,
-                  "FullName": "Test.StateManager.SwitchMeth()",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "void",
-                  "Parameters": [],
-                  "Invocations": [
-                    {
-                      "Name": "MethodArg",
-                      "FullName": "Test.StateManager.MethodArg(int, bool, Test.State)",
-                      "ReturnType": "Void",
-                      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                      "DefinitionLine": 33,
-                      "Kind": "SourceFile",
-                      "Module": null,
-                      "ReferenceFound": true,
-                      "Arguments": [
-                        {
-                          "Argument": "1",
-                          "IsInvocation": false,
-                          "IsLiteral": false
-                        },
-                        {
-                          "Argument": "false",
-                          "IsInvocation": false,
-                          "IsLiteral": false
-                        },
-                        {
-                          "Argument": "new State(1, 2)",
-                          "IsInvocation": true,
-                          "IsLiteral": false
-                        }
-                      ],
-                      "Line": 40
-                    }
-                  ],
-                  "Variables": [
-                    {
-                      "Variable": {
-                        "Name": "bbb",
-                        "Type": "int",
-                        "Assignment": "0",
-                        "Kind": "Definition",
-                        "DefinitionLine": 40
-                      }
-                    },
-                    {
-                      "Variable": {
-                        "Name": "aa",
-                        "Type": "int",
-                        "Assignment": "A",
-                        "Kind": "Definition",
-                        "DefinitionLine": 43
-                      }
-                    }
-                  ],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [
-                    {
-                      "Condition": {
-                        "Tokens": [
-                          "A",
-                          "0",
-                          "bbb",
-                          "0",
-                          "c",
-                          "1"
-                        ],
-                        "Properties": [
-                          "Test.StateManager.A"
-                        ],
-                        "Fields": [
-                          "Test.StateManager.c"
-                        ],
-                        "Invocations": [],
-                        "Type": "bool",
-                        "Statement": "A > 0 && bbb < 0 || c > 1",
-                        "ExpressionType": "LogicalOrExpression",
-                        "Kind": "Literal"
-                      },
-                      "Else": null,
-                      "DanglingElse": true,
-                      "Depth": 1,
-                      "EndLine": 42,
-                      "StartLine": 42,
-                      "Invocations": [
-                        {
-                          "Name": "WriteLine",
-                          "FullName": "System.Console.WriteLine(string)",
-                          "ReturnType": "Void",
-                          "FileName": null,
-                          "DefinitionLine": 1,
-                          "Kind": "MetadataFile",
-                          "Module": "CommonLanguageRuntimeLibrary",
-                          "ReferenceFound": true,
-                          "Arguments": [
-                            {
-                              "Argument": "\"A\"",
-                              "IsInvocation": false,
-                              "IsLiteral": false
-                            }
-                          ],
-                          "Line": 42
-                        }
-                      ],
-                      "Variables": [],
-                      "WhileBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "ForEachBlocks": [],
-                      "ElseBlocks": [],
-                      "TryBlocks": [],
-                      "Returns": []
-                    }
-                  ],
-                  "SwitchBlocks": [
-                    {
-                      "Condition": {
-                        "Tokens": [
-                          "A"
-                        ],
-                        "Properties": [
-                          "Test.StateManager.A"
-                        ],
-                        "Fields": [],
-                        "Invocations": [],
-                        "Type": "int",
-                        "Statement": "A",
-                        "ExpressionType": "IdentifierName",
-                        "Kind": "Property"
-                      },
-                      "CaseBranches": [
-                        {
-                          "labels": [
-                            "case 0:",
-                            "case 2:"
-                          ],
-                          "EndLine": 49,
-                          "StartLine": 47,
-                          "Invocations": [
-                            {
-                              "Name": "WriteLine",
-                              "FullName": "System.Console.WriteLine(int)",
-                              "ReturnType": "Void",
-                              "FileName": null,
-                              "DefinitionLine": 1,
-                              "Kind": "MetadataFile",
-                              "Module": "CommonLanguageRuntimeLibrary",
-                              "ReferenceFound": true,
-                              "Arguments": [
-                                {
-                                  "Argument": "0",
-                                  "IsInvocation": false,
-                                  "IsLiteral": false
-                                }
-                              ],
-                              "Line": 49
-                            }
-                          ],
-                          "Variables": [],
-                          "WhileBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "ForEachBlocks": [],
-                          "ElseBlocks": [],
-                          "TryBlocks": [],
-                          "Returns": []
-                        },
-                        {
-                          "labels": [
-                            "case 1:"
-                          ],
-                          "EndLine": 50,
-                          "StartLine": 50,
-                          "Invocations": [],
-                          "Variables": [],
-                          "WhileBlocks": [
-                            {
-                              "Condition": {
-                                "Tokens": [
-                                  "B",
-                                  "10"
-                                ],
-                                "Properties": [
-                                  "Test.StateManager.B"
-                                ],
-                                "Fields": [],
-                                "Invocations": [],
-                                "Type": "bool",
-                                "Statement": "B > 10",
-                                "ExpressionType": "GreaterThanExpression",
-                                "Kind": "Method"
-                              },
-                              "Depth": 2,
-                              "EndLine": 50,
-                              "StartLine": 50,
-                              "Invocations": [],
-                              "Variables": [
-                                {
-                                  "Variable": {
-                                    "Name": "B",
-                                    "Type": "int",
-                                    "Assignment": "1",
-                                    "Kind": "Assignment",
-                                    "AssignmentLine": 49,
-                                    "VariableKind": "Property",
-                                    "FullName": "Test.StateManager.B",
-                                    "AssignmentKind": "SubtractAssignmentExpression"
-                                  }
-                                },
-                                {
-                                  "Variable": {
-                                    "Name": null,
-                                    "Type": "int",
-                                    "Kind": "Use",
-                                    "UseLine": 49,
-                                    "UseKind": "Literal",
-                                    "AssignedTo": "B",
-                                    "Value": "1",
-                                    "Operation": "SubtractAssignmentExpression",
-                                    "VariablesList": []
-                                  }
-                                }
-                              ],
-                              "WhileBlocks": [],
-                              "ForBlocks": [],
-                              "IfBlocks": [],
-                              "SwitchBlocks": [],
-                              "ForEachBlocks": [],
-                              "ElseBlocks": [],
-                              "TryBlocks": [],
-                              "Returns": []
-                            }
-                          ],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "ForEachBlocks": [],
-                          "ElseBlocks": [],
-                          "TryBlocks": [],
-                          "Returns": []
-                        },
-                        {
-                          "labels": [
-                            "default:"
-                          ],
-                          "EndLine": 51,
-                          "StartLine": 51,
-                          "Invocations": [
-                            {
-                              "Name": "WriteLine",
-                              "FullName": "System.Console.WriteLine(int)",
-                              "ReturnType": "Void",
-                              "FileName": null,
-                              "DefinitionLine": 1,
-                              "Kind": "MetadataFile",
-                              "Module": "CommonLanguageRuntimeLibrary",
-                              "ReferenceFound": true,
-                              "Arguments": [
-                                {
-                                  "Argument": "10",
-                                  "IsInvocation": false,
-                                  "IsLiteral": false
-                                }
-                              ],
-                              "Line": 51
-                            }
-                          ],
-                          "Variables": [],
-                          "WhileBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "ForEachBlocks": [],
-                          "ElseBlocks": [],
-                          "TryBlocks": [],
-                          "Returns": []
-                        }
-                      ],
-                      "Depth": 1,
-                      "EndLine": 52,
-                      "StartLine": 45,
-                      "Invocations": [],
-                      "Variables": [],
-                      "WhileBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "ForEachBlocks": [],
-                      "ElseBlocks": [],
-                      "TryBlocks": [],
-                      "Returns": []
-                    }
-                  ],
-                  "Returns": [],
-                  "TryBlocks": [
-                    {
-                      "CatchBlocks": [
-                        {
-                          "Declaration": "(Exception)",
-                          "Filter": {
-                            "Tokens": [
-                              "A",
-                              "1"
-                            ],
-                            "Properties": [
-                              "Test.StateManager.A"
-                            ],
-                            "Fields": [],
-                            "Invocations": [],
-                            "Type": "bool",
-                            "Statement": "A == 1",
-                            "ExpressionType": "EqualsExpression",
-                            "Kind": "Method"
-                          },
-                          "EndLine": 66,
-                          "StartLine": 58,
-                          "Invocations": [
-                            {
-                              "Name": "Meth22",
-                              "FullName": "Test.StateManager.Meth22()",
-                              "ReturnType": "Int32",
-                              "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                              "DefinitionLine": 79,
-                              "Kind": "SourceFile",
-                              "Module": null,
-                              "ReferenceFound": true,
-                              "Arguments": [],
-                              "Line": 60
-                            }
-                          ],
-                          "Variables": [],
-                          "WhileBlocks": [],
-                          "ForBlocks": [],
-                          "IfBlocks": [],
-                          "SwitchBlocks": [],
-                          "ForEachBlocks": [],
-                          "ElseBlocks": [],
-                          "TryBlocks": [
-                            {
-                              "CatchBlocks": [
-                                {
-                                  "Declaration": "(Exception)",
-                                  "Filter": null,
-                                  "EndLine": 65,
-                                  "StartLine": 65,
-                                  "Invocations": [
-                                    {
-                                      "Name": "Meth23",
-                                      "FullName": "Test.StateManager.Meth23()",
-                                      "ReturnType": "Void",
-                                      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                                      "DefinitionLine": 80,
-                                      "Kind": "SourceFile",
-                                      "Module": null,
-                                      "ReferenceFound": true,
-                                      "Arguments": [],
-                                      "Line": 65
-                                    }
-                                  ],
-                                  "Variables": [],
-                                  "WhileBlocks": [],
-                                  "ForBlocks": [],
-                                  "IfBlocks": [],
-                                  "SwitchBlocks": [],
-                                  "ForEachBlocks": [],
-                                  "ElseBlocks": [],
-                                  "TryBlocks": [],
-                                  "Returns": []
-                                }
-                              ],
-                              "FinallyBlock": null,
-                              "EndLine": 65,
-                              "StartLine": 61,
-                              "Invocations": [
-                                {
-                                  "Name": "MethExp",
-                                  "FullName": "Test.StateManager.MethExp()",
-                                  "ReturnType": "Int32",
-                                  "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                                  "DefinitionLine": 82,
-                                  "Kind": "SourceFile",
-                                  "Module": null,
-                                  "ReferenceFound": true,
-                                  "Arguments": [],
-                                  "Line": 63
-                                }
-                              ],
-                              "Variables": [],
-                              "WhileBlocks": [],
-                              "ForBlocks": [],
-                              "IfBlocks": [],
-                              "SwitchBlocks": [],
-                              "ForEachBlocks": [],
-                              "ElseBlocks": [],
-                              "TryBlocks": [],
-                              "Returns": []
-                            }
-                          ],
-                          "Returns": []
-                        }
-                      ],
-                      "FinallyBlock": null,
-                      "EndLine": 66,
-                      "StartLine": 54,
-                      "Invocations": [
-                        {
-                          "Name": "Meth23",
-                          "FullName": "Test.StateManager.Meth23()",
-                          "ReturnType": "Void",
-                          "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                          "DefinitionLine": 80,
-                          "Kind": "SourceFile",
-                          "Module": null,
-                          "ReferenceFound": true,
-                          "Arguments": [],
-                          "Line": 56
-                        }
-                      ],
-                      "Variables": [],
-                      "WhileBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "ForEachBlocks": [],
-                      "ElseBlocks": [],
-                      "TryBlocks": [],
-                      "Returns": []
-                    },
-                    {
-                      "CatchBlocks": [],
-                      "FinallyBlock": {
-                        "EndLine": 75,
-                        "StartLine": 72,
-                        "Invocations": [
-                          {
-                            "Name": "Meth22",
-                            "FullName": "Test.StateManager.Meth22()",
-                            "ReturnType": "Int32",
-                            "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                            "DefinitionLine": 79,
-                            "Kind": "SourceFile",
-                            "Module": null,
-                            "ReferenceFound": true,
-                            "Arguments": [],
-                            "Line": 74
-                          }
-                        ],
-                        "Variables": [],
-                        "WhileBlocks": [],
-                        "ForBlocks": [],
-                        "IfBlocks": [],
-                        "SwitchBlocks": [],
-                        "ForEachBlocks": [],
-                        "ElseBlocks": [],
-                        "TryBlocks": [],
-                        "Returns": []
-                      },
-                      "EndLine": 75,
-                      "StartLine": 68,
-                      "Invocations": [
-                        {
-                          "Name": "Meth23",
-                          "FullName": "Test.StateManager.Meth23()",
-                          "ReturnType": "Void",
-                          "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                          "DefinitionLine": 80,
-                          "Kind": "SourceFile",
-                          "Module": null,
-                          "ReferenceFound": true,
-                          "Arguments": [],
-                          "Line": 70
-                        }
-                      ],
-                      "Variables": [],
-                      "WhileBlocks": [],
-                      "ForBlocks": [],
-                      "IfBlocks": [],
-                      "SwitchBlocks": [],
-                      "ForEachBlocks": [],
-                      "ElseBlocks": [],
-                      "TryBlocks": [],
-                      "Returns": []
-                    }
-                  ],
-                  "ExpressionBody": null,
-                  "Line": 37
-                },
-                {
-                  "HasBody": false,
-                  "HasExpressionBody": true,
-                  "Name": "Meth22",
-                  "IsEmpty": false,
-                  "FullName": "Test.StateManager.Meth22()",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "int",
-                  "Parameters": [],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "10"
-                    ],
-                    "Properties": [],
-                    "Fields": [],
-                    "Invocations": [],
-                    "Type": "int",
-                    "Statement": "10",
-                    "ExpressionType": "NumericLiteralExpression",
-                    "Kind": "Literal"
-                  },
-                  "Line": 79
-                },
-                {
-                  "HasBody": false,
-                  "HasExpressionBody": false,
-                  "Name": "Meth23",
-                  "IsEmpty": true,
-                  "FullName": "Test.StateManager.Meth23()",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "void",
-                  "Parameters": [],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": null,
-                  "Line": 80
-                },
-                {
-                  "HasBody": false,
-                  "HasExpressionBody": true,
-                  "Name": "MethExp",
-                  "IsEmpty": false,
-                  "FullName": "Test.StateManager.MethExp()",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "int",
-                  "Parameters": [],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "a",
-                      "+",
-                      "Meth22"
-                    ],
-                    "Properties": [],
-                    "Fields": [
-                      "Test.StateManager.a"
-                    ],
-                    "Invocations": [
-                      {
-                        "Name": "Meth22",
-                        "FullName": "Test.StateManager.Meth22()",
-                        "ReturnType": "Int32",
-                        "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-                        "DefinitionLine": 79,
-                        "Kind": "SourceFile",
-                        "Module": null,
-                        "ReferenceFound": true,
-                        "Arguments": [],
-                        "Line": 82
-                      }
-                    ],
-                    "Type": "int",
-                    "Statement": "a + Meth22()",
-                    "ExpressionType": "AddExpression",
-                    "Kind": "Method"
-                  },
-                  "Line": 82
-                },
-                {
-                  "HasBody": false,
-                  "HasExpressionBody": true,
-                  "Name": "Ciaone",
-                  "IsEmpty": false,
-                  "FullName": "Test.StateManager.Ciaone()",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "ReturnType": "string",
-                  "Parameters": [],
-                  "Invocations": [],
-                  "Variables": [],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": {
-                    "Tokens": [
-                      "\"Ciaone\"",
-                      "+",
-                      "\"\""
-                    ],
-                    "Properties": [],
-                    "Fields": [],
-                    "Invocations": [],
-                    "Type": "string",
-                    "Statement": "\"Ciaone\" + \"\"",
-                    "ExpressionType": "AddExpression",
-                    "Kind": "Method"
-                  },
-                  "Line": 83
-                }
-              ],
-              "Fields": [
-                {
-                  "Name": "a",
-                  "Type": "int",
-                  "Modifiers": [
-                    "protected"
-                  ],
-                  "Assignment": null,
-                  "Attributes": [],
-                  "FullName": "Test.StateManager.a",
-                  "Line": 15
-                },
-                {
-                  "Name": "b",
-                  "Type": "int",
-                  "Modifiers": [
-                    "protected"
-                  ],
-                  "Assignment": null,
-                  "Attributes": [],
-                  "FullName": "Test.StateManager.b",
-                  "Line": 16
-                },
-                {
-                  "Name": "c",
-                  "Type": "int",
-                  "Modifiers": [
-                    "protected"
-                  ],
-                  "Assignment": null,
-                  "Attributes": [],
-                  "FullName": "Test.StateManager.c",
-                  "Line": 17
-                },
-                {
-                  "Name": "d",
-                  "Type": "int",
-                  "Modifiers": [
-                    "protected"
-                  ],
-                  "Assignment": null,
-                  "Attributes": [],
-                  "FullName": "Test.StateManager.d",
-                  "Line": 18
-                }
-              ],
-              "Constructors": [
-                {
-                  "ClassRef": "Test.StateManager",
-                  "ReturnType": "StateManager",
-                  "HasBody": true,
-                  "HasExpressionBody": false,
-                  "Name": "StateManager",
-                  "IsEmpty": false,
-                  "FullName": "StateManager",
-                  "Modifiers": [
-                    "public"
-                  ],
-                  "Attributes": [],
-                  "Parameters": [
-                    {
-                      "Name": "a",
-                      "Type": "int",
-                      "Assignment": null,
-                      "Attributes": []
-                    }
-                  ],
-                  "Invocations": [],
-                  "Variables": [
-                    {
-                      "Variable": {
-                        "Name": "this.a",
-                        "Type": "int",
-                        "Assignment": "a",
-                        "Kind": "Assignment",
-                        "AssignmentLine": 87,
-                        "VariableKind": "Field",
-                        "FullName": "Test.StateManager.a",
-                        "AssignmentKind": "SimpleAssignmentExpression"
-                      }
-                    },
-                    {
-                      "Variable": {
-                        "Name": "a",
-                        "Type": "int",
-                        "Kind": "Use",
-                        "UseLine": 87,
-                        "UseKind": "ParameterReference",
-                        "AssignedTo": "this.a",
-                        "Value": null,
-                        "Operation": "SimpleAssignmentExpression",
-                        "VariablesList": []
-                      }
-                    }
-                  ],
-                  "Statements": [],
-                  "WhileBlocks": [],
-                  "ForEachBlocks": [],
-                  "ForBlocks": [],
-                  "IfBlocks": [],
-                  "SwitchBlocks": [],
-                  "Returns": [],
-                  "TryBlocks": [],
-                  "ExpressionBody": null,
-                  "Line": 86
-                }
-              ],
-              "Attributes": [],
-              "Line": 13
-            }
-          ],
-          "Usings": [],
-          "Line": 5
-        }
-      ],
-      "Classes": [],
-      "Usings": [
-        {
-          "Name": "System",
-          "Line": 1
-        },
-        {
-          "Name": "System.Runtime.ExceptionServices",
-          "Line": 2
-        },
-        {
-          "Name": "System.Text.Json.Serialization",
-          "Line": 3
-        }
-      ],
-      "Line": 1
-    },
-    {
-      "Name": ".NETCoreApp,Version=v6.0.AssemblyAttributes",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\obj\\Debug\\net6.0\\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [],
-      "Classes": [],
-      "Usings": [
-        {
-          "Name": "System",
-          "Line": 2
-        },
-        {
-          "Name": "System.Reflection",
-          "Line": 3
-        }
-      ],
-      "Line": 2
-    },
-    {
-      "Name": "TestSolution.AssemblyInfo",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\obj\\Debug\\net6.0\\TestSolution.AssemblyInfo.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [],
-      "Classes": [],
-      "Usings": [
-        {
-          "Name": "System",
-          "Line": 11
-        },
-        {
-          "Name": "System.Reflection",
-          "Line": 12
-        }
-      ],
-      "Line": 11
-    },
-    {
-      "Name": "TestSolution.GlobalUsings.g",
-      "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\obj\\Debug\\net6.0\\TestSolution.GlobalUsings.g.cs",
-      "Language": "C#",
-      "Interfaces": [],
-      "Namespaces": [],
-      "Classes": [],
-      "Usings": [
-        {
-          "Name": "global::System",
-          "Line": 2
-        },
-        {
-          "Name": "global::System.Collections.Generic",
-          "Line": 3
-        },
-        {
-          "Name": "global::System.IO",
-          "Line": 4
-        },
-        {
-          "Name": "global::System.Linq",
-          "Line": 5
-        },
-        {
-          "Name": "global::System.Net.Http",
-          "Line": 6
-        },
-        {
-          "Name": "global::System.Threading",
-          "Line": 7
-        },
-        {
-          "Name": "global::System.Threading.Tasks",
-          "Line": 8
-        }
-      ],
-      "Line": 2
-    },
     {
       "Name": "CubeManager",
       "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
@@ -3219,7 +771,7 @@
                       "FullName": "Test.Input.TestInput.StateManager.Test2()",
                       "ReturnType": "Void",
                       "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                      "DefinitionLine": 116,
+                      "DefinitionLine": 118,
                       "Kind": "SourceFile",
                       "Module": null,
                       "ReferenceFound": true,
@@ -3360,7 +912,7 @@
                       "FullName": "Test.Input.TestInput.StateManager.Test2()",
                       "ReturnType": "Void",
                       "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                      "DefinitionLine": 116,
+                      "DefinitionLine": 118,
                       "Kind": "SourceFile",
                       "Module": null,
                       "ReferenceFound": true,
@@ -5359,17 +2911,17 @@
                                     "Kind": "Field"
                                   },
                                   "ReturnType": "bool",
-                                  "Line": 47
+                                  "Line": 48
                                 }
                               ],
                               "TryBlocks": [],
                               "ExpressionBody": null,
-                              "Line": 47
+                              "Line": 48
                             }
                           ],
                           "HasExpressionBody": false,
                           "ExpressionBody": null,
-                          "Line": 47
+                          "Line": 48
                         }
                       ],
                       "Methods": [
@@ -5394,7 +2946,7 @@
                               "Module": "UnityEngine.CoreModule.dll",
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 50
+                              "Line": 51
                             },
                             {
                               "Name": "GetComponent",
@@ -5406,7 +2958,7 @@
                               "Module": "UnityEngine.CoreModule.dll",
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 51
+                              "Line": 52
                             },
                             {
                               "Name": "WriteLine",
@@ -5424,10 +2976,36 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 54
+                              "Line": 55
                             }
                           ],
-                          "Variables": [],
+                          "Variables": [
+                            {
+                              "Variable": {
+                                "Name": "r.transform.position",
+                                "Type": "?",
+                                "Assignment": "new Vector3(0, 0, 0)",
+                                "Kind": "Assignment",
+                                "AssignmentLine": 56,
+                                "VariableKind": null,
+                                "FullName": null,
+                                "AssignmentKind": "SimpleAssignmentExpression"
+                              }
+                            },
+                            {
+                              "Variable": {
+                                "Name": "new Vector3(0, 0, 0)",
+                                "Type": "?",
+                                "Kind": "Use",
+                                "UseLine": 56,
+                                "UseKind": "ObjectCreation",
+                                "AssignedTo": "r.transform.position",
+                                "Value": null,
+                                "Operation": "SimpleAssignmentExpression",
+                                "VariablesList": []
+                              }
+                            }
+                          ],
                           "Statements": [],
                           "WhileBlocks": [],
                           "ForEachBlocks": [],
@@ -5437,7 +3015,7 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 48
+                          "Line": 49
                         },
                         {
                           "HasBody": true,
@@ -5455,12 +3033,12 @@
                               "FullName": "Test.Input.TestInput.StateManager.Prova()",
                               "ReturnType": "Inputs",
                               "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                              "DefinitionLine": 104,
+                              "DefinitionLine": 106,
                               "Kind": "SourceFile",
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 63
+                              "Line": 65
                             }
                           ],
                           "Variables": [],
@@ -5486,8 +3064,8 @@
                               },
                               "Else": {
                                 "ElseStatement": "if(noDamage) noDamage = false;",
-                                "EndLine": 62,
-                                "StartLine": 62,
+                                "EndLine": 64,
+                                "StartLine": 64,
                                 "Invocations": [],
                                 "Variables": [],
                                 "WhileBlocks": [],
@@ -5511,8 +3089,8 @@
                                     "Else": null,
                                     "DanglingElse": true,
                                     "Depth": 2,
-                                    "EndLine": 62,
-                                    "StartLine": 62,
+                                    "EndLine": 64,
+                                    "StartLine": 64,
                                     "Invocations": [],
                                     "Variables": [
                                       {
@@ -5521,7 +3099,7 @@
                                           "Type": "bool",
                                           "Assignment": "false",
                                           "Kind": "Assignment",
-                                          "AssignmentLine": 61,
+                                          "AssignmentLine": 63,
                                           "VariableKind": "Field",
                                           "FullName": "Test.Input.TestInput.StateManager.noDamage",
                                           "AssignmentKind": "SimpleAssignmentExpression"
@@ -5532,7 +3110,7 @@
                                           "Name": null,
                                           "Type": "bool",
                                           "Kind": "Use",
-                                          "UseLine": 61,
+                                          "UseLine": 63,
                                           "UseKind": "Literal",
                                           "AssignedTo": "noDamage",
                                           "Value": "false",
@@ -5559,8 +3137,8 @@
                               },
                               "DanglingElse": false,
                               "Depth": 1,
-                              "EndLine": 62,
-                              "StartLine": 61,
+                              "EndLine": 64,
+                              "StartLine": 63,
                               "Invocations": [],
                               "Variables": [
                                 {
@@ -5569,7 +3147,7 @@
                                     "Type": "bool",
                                     "Assignment": "true",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 60,
+                                    "AssignmentLine": 62,
                                     "VariableKind": "Field",
                                     "FullName": "Test.Input.TestInput.StateManager.noDamage",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -5580,7 +3158,7 @@
                                     "Name": null,
                                     "Type": "bool",
                                     "Kind": "Use",
-                                    "UseLine": 60,
+                                    "UseLine": 62,
                                     "UseKind": "Literal",
                                     "AssignedTo": "noDamage",
                                     "Value": "true",
@@ -5620,8 +3198,8 @@
                                   "labels": [
                                     "case 0:"
                                   ],
-                                  "EndLine": 73,
-                                  "StartLine": 67,
+                                  "EndLine": 75,
+                                  "StartLine": 69,
                                   "Invocations": [],
                                   "Variables": [
                                     {
@@ -5630,7 +3208,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 67,
+                                        "AssignmentLine": 69,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.forward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5642,7 +3220,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 68,
+                                        "AssignmentLine": 70,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.backward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5654,7 +3232,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 69,
+                                        "AssignmentLine": 71,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.left",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5666,7 +3244,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 70,
+                                        "AssignmentLine": 72,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.right",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5677,7 +3255,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 67,
+                                        "UseLine": 69,
                                         "UseKind": "Literal",
                                         "AssignedTo": "forward",
                                         "Value": "false",
@@ -5690,7 +3268,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 68,
+                                        "UseLine": 70,
                                         "UseKind": "Literal",
                                         "AssignedTo": "backward",
                                         "Value": "false",
@@ -5703,7 +3281,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 69,
+                                        "UseLine": 71,
                                         "UseKind": "Literal",
                                         "AssignedTo": "left",
                                         "Value": "false",
@@ -5716,7 +3294,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 70,
+                                        "UseLine": 72,
                                         "UseKind": "Literal",
                                         "AssignedTo": "right",
                                         "Value": "false",
@@ -5746,8 +3324,8 @@
                                       "Else": null,
                                       "DanglingElse": true,
                                       "Depth": 2,
-                                      "EndLine": 72,
-                                      "StartLine": 72,
+                                      "EndLine": 74,
+                                      "StartLine": 74,
                                       "Invocations": [
                                         {
                                           "Name": "WriteLine",
@@ -5765,7 +3343,7 @@
                                               "IsLiteral": false
                                             }
                                           ],
-                                          "Line": 72
+                                          "Line": 74
                                         }
                                       ],
                                       "Variables": [],
@@ -5789,8 +3367,8 @@
                                   "labels": [
                                     "case 1:"
                                   ],
-                                  "EndLine": 79,
-                                  "StartLine": 74,
+                                  "EndLine": 81,
+                                  "StartLine": 76,
                                   "Invocations": [],
                                   "Variables": [
                                     {
@@ -5799,7 +3377,7 @@
                                         "Type": "bool",
                                         "Assignment": "true",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 74,
+                                        "AssignmentLine": 76,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.forward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5811,7 +3389,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 75,
+                                        "AssignmentLine": 77,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.backward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5823,7 +3401,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 76,
+                                        "AssignmentLine": 78,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.left",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5835,7 +3413,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 77,
+                                        "AssignmentLine": 79,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.right",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5846,7 +3424,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 74,
+                                        "UseLine": 76,
                                         "UseKind": "Literal",
                                         "AssignedTo": "forward",
                                         "Value": "true",
@@ -5859,7 +3437,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 75,
+                                        "UseLine": 77,
                                         "UseKind": "Literal",
                                         "AssignedTo": "backward",
                                         "Value": "false",
@@ -5872,7 +3450,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 76,
+                                        "UseLine": 78,
                                         "UseKind": "Literal",
                                         "AssignedTo": "left",
                                         "Value": "false",
@@ -5885,7 +3463,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 77,
+                                        "UseLine": 79,
                                         "UseKind": "Literal",
                                         "AssignedTo": "right",
                                         "Value": "false",
@@ -5907,8 +3485,8 @@
                                   "labels": [
                                     "case 2:"
                                   ],
-                                  "EndLine": 85,
-                                  "StartLine": 80,
+                                  "EndLine": 87,
+                                  "StartLine": 82,
                                   "Invocations": [],
                                   "Variables": [
                                     {
@@ -5917,7 +3495,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 80,
+                                        "AssignmentLine": 82,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.forward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5929,7 +3507,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 81,
+                                        "AssignmentLine": 83,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.backward",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5941,7 +3519,7 @@
                                         "Type": "bool",
                                         "Assignment": "true",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 82,
+                                        "AssignmentLine": 84,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.left",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5953,7 +3531,7 @@
                                         "Type": "bool",
                                         "Assignment": "false",
                                         "Kind": "Assignment",
-                                        "AssignmentLine": 83,
+                                        "AssignmentLine": 85,
                                         "VariableKind": "Field",
                                         "FullName": "Test.Input.TestInput.StateManager.right",
                                         "AssignmentKind": "SimpleAssignmentExpression"
@@ -5964,7 +3542,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 80,
+                                        "UseLine": 82,
                                         "UseKind": "Literal",
                                         "AssignedTo": "forward",
                                         "Value": "false",
@@ -5977,7 +3555,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 81,
+                                        "UseLine": 83,
                                         "UseKind": "Literal",
                                         "AssignedTo": "backward",
                                         "Value": "false",
@@ -5990,7 +3568,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 82,
+                                        "UseLine": 84,
                                         "UseKind": "Literal",
                                         "AssignedTo": "left",
                                         "Value": "true",
@@ -6003,7 +3581,7 @@
                                         "Name": null,
                                         "Type": "bool",
                                         "Kind": "Use",
-                                        "UseLine": 83,
+                                        "UseLine": 85,
                                         "UseKind": "Literal",
                                         "AssignedTo": "right",
                                         "Value": "false",
@@ -6023,8 +3601,8 @@
                                 }
                               ],
                               "Depth": 1,
-                              "EndLine": 86,
-                              "StartLine": 65,
+                              "EndLine": 88,
+                              "StartLine": 67,
                               "Invocations": [],
                               "Variables": [],
                               "WhileBlocks": [],
@@ -6040,7 +3618,7 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 59
+                          "Line": 61
                         },
                         {
                           "HasBody": true,
@@ -6066,7 +3644,7 @@
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 91
+                              "Line": 93
                             },
                             {
                               "Name": "Instantiate",
@@ -6084,7 +3662,7 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 100
+                              "Line": 102
                             },
                             {
                               "Name": "FindGameObjectWithTag",
@@ -6102,7 +3680,7 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 101
+                              "Line": 103
                             },
                             {
                               "Name": "SetActive",
@@ -6120,7 +3698,7 @@
                                   "IsLiteral": false
                                 }
                               ],
-                              "Line": 102
+                              "Line": 104
                             }
                           ],
                           "Variables": [
@@ -6130,7 +3708,7 @@
                                 "Type": "int",
                                 "Assignment": "10",
                                 "Kind": "Definition",
-                                "DefinitionLine": 91
+                                "DefinitionLine": 93
                               }
                             },
                             {
@@ -6139,7 +3717,7 @@
                                 "Type": "int",
                                 "Assignment": "25",
                                 "Kind": "Definition",
-                                "DefinitionLine": 92
+                                "DefinitionLine": 94
                               }
                             },
                             {
@@ -6148,7 +3726,7 @@
                                 "Type": "int",
                                 "Assignment": "1",
                                 "Kind": "Definition",
-                                "DefinitionLine": 93
+                                "DefinitionLine": 95
                               }
                             },
                             {
@@ -6157,7 +3735,7 @@
                                 "Type": "MyGame.Cube.CubeHolder",
                                 "Assignment": "new MyGame.Cube.CubeHolder(result)",
                                 "Kind": "Definition",
-                                "DefinitionLine": 98
+                                "DefinitionLine": 100
                               }
                             },
                             {
@@ -6166,7 +3744,7 @@
                                 "Type": "GameObject",
                                 "Assignment": "GameObject.FindGameObjectWithTag(\"Player\")",
                                 "Kind": "Definition",
-                                "DefinitionLine": 100
+                                "DefinitionLine": 102
                               }
                             }
                           ],
@@ -6196,8 +3774,8 @@
                                 "k++"
                               ],
                               "Depth": 1,
-                              "EndLine": 98,
-                              "StartLine": 95,
+                              "EndLine": 100,
+                              "StartLine": 97,
                               "Invocations": [],
                               "Variables": [
                                 {
@@ -6206,7 +3784,7 @@
                                     "Type": "int",
                                     "Assignment": "0",
                                     "Kind": "Definition",
-                                    "DefinitionLine": 94
+                                    "DefinitionLine": 96
                                   }
                                 },
                                 {
@@ -6215,7 +3793,7 @@
                                     "Type": "int",
                                     "Assignment": "i * i",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 96,
+                                    "AssignmentLine": 98,
                                     "VariableKind": "Local",
                                     "FullName": "result",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -6226,7 +3804,7 @@
                                     "Name": "i * i",
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 96,
+                                    "UseLine": 98,
                                     "UseKind": "BinaryOperator",
                                     "AssignedTo": "result",
                                     "Value": null,
@@ -6236,7 +3814,7 @@
                                         "Name": "i",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 96,
+                                        "UseLine": 98,
                                         "UseKind": "LocalReference",
                                         "AssignedTo": "result",
                                         "Value": null,
@@ -6247,7 +3825,7 @@
                                         "Name": "i",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 96,
+                                        "UseLine": 98,
                                         "UseKind": "LocalReference",
                                         "AssignedTo": "result",
                                         "Value": null,
@@ -6273,7 +3851,7 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 89
+                          "Line": 91
                         },
                         {
                           "HasBody": true,
@@ -6312,8 +3890,8 @@
                               "Else": null,
                               "DanglingElse": true,
                               "Depth": 1,
-                              "EndLine": 106,
-                              "StartLine": 106,
+                              "EndLine": 108,
+                              "StartLine": 108,
                               "Invocations": [],
                               "Variables": [],
                               "WhileBlocks": [],
@@ -6336,7 +3914,7 @@
                                     "Kind": "Literal"
                                   },
                                   "ReturnType": null,
-                                  "Line": 106
+                                  "Line": 108
                                 }
                               ]
                             }
@@ -6362,8 +3940,8 @@
                                   "labels": [
                                     "case 0:"
                                   ],
-                                  "EndLine": 110,
-                                  "StartLine": 109,
+                                  "EndLine": 112,
+                                  "StartLine": 111,
                                   "Invocations": [],
                                   "Variables": [],
                                   "WhileBlocks": [],
@@ -6377,8 +3955,8 @@
                                 }
                               ],
                               "Depth": 1,
-                              "EndLine": 112,
-                              "StartLine": 107,
+                              "EndLine": 114,
+                              "StartLine": 109,
                               "Invocations": [],
                               "Variables": [],
                               "WhileBlocks": [],
@@ -6404,12 +3982,12 @@
                                 "Kind": "Method"
                               },
                               "ReturnType": "a.Inputs",
-                              "Line": 113
+                              "Line": 115
                             }
                           ],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 104
+                          "Line": 106
                         },
                         {
                           "HasBody": true,
@@ -6435,19 +4013,19 @@
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 118
+                              "Line": 120
                             },
                             {
                               "Name": "Test",
                               "FullName": "Test.Input.TestInput.StateManager.Test()",
                               "ReturnType": "Void",
                               "FileName": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
-                              "DefinitionLine": 89,
+                              "DefinitionLine": 91,
                               "Kind": "SourceFile",
                               "Module": null,
                               "ReferenceFound": true,
                               "Arguments": [],
-                              "Line": 119
+                              "Line": 121
                             }
                           ],
                           "Variables": [],
@@ -6469,8 +4047,8 @@
                                 "Kind": "Field"
                               },
                               "Depth": 1,
-                              "EndLine": 131,
-                              "StartLine": 120,
+                              "EndLine": 133,
+                              "StartLine": 122,
                               "Invocations": [
                                 {
                                   "Name": "ToString",
@@ -6482,7 +4060,7 @@
                                   "Module": "CommonLanguageRuntimeLibrary",
                                   "ReferenceFound": true,
                                   "Arguments": [],
-                                  "Line": 129
+                                  "Line": 131
                                 },
                                 {
                                   "Name": "WriteLine",
@@ -6500,7 +4078,7 @@
                                       "IsLiteral": false
                                     }
                                   ],
-                                  "Line": 130
+                                  "Line": 132
                                 }
                               ],
                               "Variables": [
@@ -6510,7 +4088,7 @@
                                     "Type": "int",
                                     "Assignment": "0",
                                     "Kind": "Definition",
-                                    "DefinitionLine": 121
+                                    "DefinitionLine": 123
                                   }
                                 },
                                 {
@@ -6519,7 +4097,7 @@
                                     "Type": "int",
                                     "Assignment": "30",
                                     "Kind": "Definition",
-                                    "DefinitionLine": 123
+                                    "DefinitionLine": 125
                                   }
                                 },
                                 {
@@ -6528,7 +4106,7 @@
                                     "Type": "int",
                                     "Assignment": "10",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 122,
+                                    "AssignmentLine": 124,
                                     "VariableKind": "Local",
                                     "FullName": "i",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -6540,7 +4118,7 @@
                                     "Type": "int",
                                     "Assignment": "k",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 124,
+                                    "AssignmentLine": 126,
                                     "VariableKind": "Local",
                                     "FullName": "i",
                                     "AssignmentKind": "MultiplyAssignmentExpression"
@@ -6552,7 +4130,7 @@
                                     "Type": "int",
                                     "Assignment": "i * i * k",
                                     "Kind": "Assignment",
-                                    "AssignmentLine": 126,
+                                    "AssignmentLine": 128,
                                     "VariableKind": "Local",
                                     "FullName": "k",
                                     "AssignmentKind": "SimpleAssignmentExpression"
@@ -6563,7 +4141,7 @@
                                     "Name": null,
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 122,
+                                    "UseLine": 124,
                                     "UseKind": "Literal",
                                     "AssignedTo": "i",
                                     "Value": "10",
@@ -6576,7 +4154,7 @@
                                     "Name": "k",
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 124,
+                                    "UseLine": 126,
                                     "UseKind": "LocalReference",
                                     "AssignedTo": "i",
                                     "Value": null,
@@ -6589,7 +4167,7 @@
                                     "Name": "i * i * k",
                                     "Type": "int",
                                     "Kind": "Use",
-                                    "UseLine": 126,
+                                    "UseLine": 128,
                                     "UseKind": "BinaryOperator",
                                     "AssignedTo": "k",
                                     "Value": null,
@@ -6599,7 +4177,7 @@
                                         "Name": "i * i",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 126,
+                                        "UseLine": 128,
                                         "UseKind": "BinaryOperator",
                                         "AssignedTo": "k",
                                         "Value": null,
@@ -6609,7 +4187,7 @@
                                             "Name": "i",
                                             "Type": "int",
                                             "Kind": "Use",
-                                            "UseLine": 126,
+                                            "UseLine": 128,
                                             "UseKind": "LocalReference",
                                             "AssignedTo": "k",
                                             "Value": null,
@@ -6620,7 +4198,7 @@
                                             "Name": "i",
                                             "Type": "int",
                                             "Kind": "Use",
-                                            "UseLine": 126,
+                                            "UseLine": 128,
                                             "UseKind": "LocalReference",
                                             "AssignedTo": "k",
                                             "Value": null,
@@ -6633,7 +4211,7 @@
                                         "Name": "k",
                                         "Type": "int",
                                         "Kind": "Use",
-                                        "UseLine": 126,
+                                        "UseLine": 128,
                                         "UseKind": "LocalReference",
                                         "AssignedTo": "k",
                                         "Value": null,
@@ -6661,10 +4239,21 @@
                           "Returns": [],
                           "TryBlocks": [],
                           "ExpressionBody": null,
-                          "Line": 116
+                          "Line": 118
                         }
                       ],
                       "Fields": [
+                        {
+                          "Name": "r",
+                          "Type": "RigidBody",
+                          "Modifiers": [
+                            "protected"
+                          ],
+                          "Assignment": null,
+                          "Attributes": [],
+                          "FullName": "Test.Input.TestInput.StateManager.r",
+                          "Line": 36
+                        },
                         {
                           "Name": "isJumping",
                           "Type": "bool",
@@ -6674,7 +4263,7 @@
                           "Assignment": "false",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.isJumping",
-                          "Line": 36
+                          "Line": 37
                         },
                         {
                           "Name": "noDamage",
@@ -6685,7 +4274,7 @@
                           "Assignment": "false",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.noDamage",
-                          "Line": 37
+                          "Line": 38
                         },
                         {
                           "Name": "dir",
@@ -6696,7 +4285,7 @@
                           "Assignment": "0",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.dir",
-                          "Line": 38
+                          "Line": 39
                         },
                         {
                           "Name": "forward",
@@ -6707,7 +4296,7 @@
                           "Assignment": "false",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.forward",
-                          "Line": 39
+                          "Line": 40
                         },
                         {
                           "Name": "backward",
@@ -6718,7 +4307,7 @@
                           "Assignment": "false",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.backward",
-                          "Line": 40
+                          "Line": 41
                         },
                         {
                           "Name": "left",
@@ -6729,7 +4318,7 @@
                           "Assignment": "false",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.left",
-                          "Line": 41
+                          "Line": 42
                         },
                         {
                           "Name": "right",
@@ -6740,7 +4329,7 @@
                           "Assignment": "false",
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.right",
-                          "Line": 42
+                          "Line": 43
                         },
                         {
                           "Name": "s",
@@ -6751,7 +4340,7 @@
                             "SerializeField"
                           ],
                           "FullName": "Test.Input.TestInput.StateManager.s",
-                          "Line": 43
+                          "Line": 44
                         },
                         {
                           "Name": "spe",
@@ -6762,7 +4351,7 @@
                             "SerializeField"
                           ],
                           "FullName": "Test.Input.TestInput.StateManager.spe",
-                          "Line": 44
+                          "Line": 45
                         },
                         {
                           "Name": "mesh",
@@ -6771,7 +4360,7 @@
                           "Assignment": null,
                           "Attributes": [],
                           "FullName": "Test.Input.TestInput.StateManager.mesh",
-                          "Line": 45
+                          "Line": 46
                         }
                       ],
                       "Constructors": [],

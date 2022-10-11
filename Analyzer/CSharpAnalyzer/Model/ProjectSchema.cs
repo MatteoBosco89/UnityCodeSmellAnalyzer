@@ -165,8 +165,6 @@ namespace CSharpAnalyzer
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
 
-        
-
 
         /// <summary>
         /// Class representing the SyntaxTree plus additional informations needed for every Compilation Unit.

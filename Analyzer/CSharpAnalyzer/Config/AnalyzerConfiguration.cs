@@ -21,6 +21,7 @@ namespace CSharpAnalyzer
         private static string projectName = "C# Project";
         private static string configFile = "Config.json";
         private static int logLevel = 1;
+        private static bool verbose = false;
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
         public static bool StatementVerbose { get { return statementsVerbose; } set { statementsVerbose = value; } }
@@ -28,6 +29,7 @@ namespace CSharpAnalyzer
         public static string ProjectPath { get { return projectPath; } set { projectPath = value; } }
         public static string ProjectName { get { return projectName; } set { projectName = value; } }
         public static string ConfigFile { get { return configFile; } set { configFile = value; } }
+        public static bool Verbose { get { return verbose; } }
 
         /// <summary>
         /// Init the Analyzer Configuration
@@ -38,6 +40,7 @@ namespace CSharpAnalyzer
             if (opt.ConfigFile != null) configFile = opt.ConfigFile;
             if (opt.ProjectName != null) projectName = opt.ProjectName;
             statementsVerbose = opt.Statements;
+            verbose = opt.Verbose;
             projectPath = opt.ProjectPath;
             string f = File.ReadAllText(configFile);
             configurations = JsonConvert.DeserializeObject<ConfigModel>(f); 

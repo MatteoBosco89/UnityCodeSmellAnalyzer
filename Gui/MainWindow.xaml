@@ -1,0 +1,48 @@
+﻿<Window x:Class="Gui.UnityCodeSmellAnalyzer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gui"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Unity Code Smell Analyzer" Height="768" Width="1024">
+    <ScrollViewer x:Name="MainWindow" Height="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+        <GroupBox>
+            <Grid>
+                <Label x:Name="Title" Content="Unity Code Smell Analyzer" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,10,10,0" Height="40" VerticalAlignment="Top"/>
+                <DockPanel Height="80" Margin="10,70,10,0" VerticalAlignment="Top">
+                    <Grid Margin="0,0,0,0">
+                        <Button Click="ShowDirectoryDialog" Width="30" Height="30" Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Image Source="/folder_o.png"/>
+                        </Button>
+                        <TextBox x:Name="ProjectFolder" Height="20" Margin="120,0,100,0" VerticalAlignment="Center" TextChanged="ProjectFolderPlaceholder">
+                            <TextBox.Background>
+                                <ImageBrush AlignmentX="Left" Stretch="Uniform" ImageSource="/folderTextBg.gif" />
+                            </TextBox.Background>
+                        </TextBox>
+                    </Grid>
+                </DockPanel>
+                <DockPanel Height="80" Margin="10,130,10,0" VerticalAlignment="Top">
+                    <Grid>
+                        <Label Height="25" Margin="20,0,0,0" VerticalAlignment="Center" Content="Project Name"/>
+                        <TextBox x:Name="projectName" Height="20" Width="200" Margin="120,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Undefined" TextChanged="UpdateProjectName"/>
+                    </Grid>
+                </DockPanel>
+                <Label x:Name="VerbosityText" Height="25" Width="200" Margin="10,0,0,315" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Content="Verbosity Level"/>
+                <ComboBox x:Uid="VerbosityLevel" x:Name="VerbosityLevel" Height="25" Width="200" Margin="10,0,0,290" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    <ComboBoxItem>Trace</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Debug</ComboBoxItem>
+                    <ComboBoxItem>Information</ComboBoxItem>
+                    <ComboBoxItem>Warning</ComboBoxItem>
+                    <ComboBoxItem>Error</ComboBoxItem>
+                    <ComboBoxItem>Critical</ComboBoxItem>
+                    <ComboBoxItem>None</ComboBoxItem>
+                </ComboBox>
+                <ScrollViewer Background="#f6f6f6" x:Name="LogDump" Margin="10,0,10,80" Width="Auto" Height="200" VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+                <Button x:Name="Start" Content="Start" Margin="0,0,60,40" RenderTransformOrigin="0.800,-0.490" Click="StartAnalyze" Width="100" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom" Grid.Row="1"/>
+                <Button x:Name="Exit" Content="Exit" Margin="0,0,230,40" RenderTransformOrigin="0.800,-0.490" Click="ExitProgram" Width="100" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom" Grid.Row="1"/>
+            </Grid>
+        </GroupBox>
+    </ScrollViewer>
+</Window>

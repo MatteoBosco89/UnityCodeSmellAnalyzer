@@ -33,6 +33,7 @@ namespace Test
 
             public class StateManager : SuperClass
             {
+		protected RigidBody r;
                 protected bool isJumping = false;
                 protected bool noDamage = false;
                 protected int dir = 0;
@@ -53,6 +54,7 @@ namespace Test
                     {
                         Console.WriteLine("Hello");
                     } while (true);
+		    r.transform.position = new Vector3(0, 0, 0);
                 }
 
                 // Update is called once per frame

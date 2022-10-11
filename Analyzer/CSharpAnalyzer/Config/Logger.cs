@@ -29,13 +29,11 @@ namespace CSharpAnalyzer
         {
             if (logLevel == LogLevel.None) return;
             if (sw == null) return;
-            if (level >= logLevel) 
-            {
-                sw.WriteLine(DateTime.Now + " " + text);
-                sw.Flush();
-            }
-            
-            
+            if (level < logLevel) return;
+            sw.WriteLine(DateTime.Now + " " + text);
+            sw.Flush();
+            if (AnalyzerConfiguration.Verbose) Console.WriteLine(text);
+
         }
     }
 }

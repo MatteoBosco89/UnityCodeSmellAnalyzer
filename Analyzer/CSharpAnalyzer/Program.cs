@@ -30,8 +30,10 @@ namespace CSharpAnalyzer
         public string ProjectName { get; set; }
         [Option('c', "config", Required = false, HelpText = "Configuration File.")]
         public string ConfigFile { get; set; }
-        [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)")]
+        [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default).")]
         public int Logging { get; set; }
+        [Option('v', "verbose", Required = false, HelpText = "Display Log on the standard output.")]
+        public bool Verbose { get; set; }
     }
 
 
