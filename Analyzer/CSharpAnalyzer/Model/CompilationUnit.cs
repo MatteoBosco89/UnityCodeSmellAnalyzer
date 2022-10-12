@@ -17,22 +17,17 @@ namespace CSharpAnalyzer
         protected string name;
         protected string fileName;
         protected string language;
+        protected int compilationUnitLoc = 0;
         protected List<UsingSchema> usings = new List<UsingSchema>();
         protected List<NamespaceSchema> namespaces = new List<NamespaceSchema>();
         protected List<InterfaceSchema> interfaces = new List<InterfaceSchema>();
         protected List<ClassSchema> classes = new List<ClassSchema>();
 
 
-        public string Name
-        {
-            get { return name; }
-        }
-        public virtual string FileName
-        {
-            get { return fileName; }
-        }
+        public string Name { get { return name; } }
+        public virtual string FileName { get { return fileName; } }
         public virtual string Language { get { return language; } }
-
+        public int Loc { get { return compilationUnitLoc; } }
         public List<InterfaceSchema> Interfaces { get { return interfaces; } }
         public List<NamespaceSchema> Namespaces { get { return namespaces; } }
         public List<ClassSchema> Classes { get { return classes; } }
@@ -159,6 +154,7 @@ namespace CSharpAnalyzer
         {
             line = root.GetLocation().GetLineSpan().StartLinePosition.Line;
             language = root.Language;
+            compilationUnitLoc = root.GetLocation().GetLineSpan().EndLinePosition.Line - root.GetLocation().GetLineSpan().StartLinePosition.Line;
         }
     }
 }

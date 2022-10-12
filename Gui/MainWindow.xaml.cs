@@ -7,6 +7,7 @@ using System.Windows.Media.Imaging;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace Gui
 {
@@ -17,6 +18,8 @@ namespace Gui
     {
         protected Dictionary<string, string> parameters = new Dictionary<string, string>();
         protected string projectPath = "";
+        private ProcessHandler? handler;
+        private Thread? t;
 
         public UnityCodeSmellAnalyzer()
         {
@@ -24,7 +27,8 @@ namespace Gui
         }
         private void StartAnalyze(object sender, RoutedEventArgs e)
         {
-
+            handler = new ProcessHandler("D:\\progetti\\UnityCodeSmellAnalyzer\\Analyzer\\CSharpAnalyzer\\bin\\Debug\\net472\\CSharpAnalyzer.exe", "--verbose --project \"" + projectPath + "\"");
+            handler.CreateProcess(); 
         }
 
         private void ExitProgram(object sender, RoutedEventArgs e)
@@ -39,6 +43,13 @@ namespace Gui
                 DialogResult result = folderDialog.ShowDialog();
             }
 
+        }
+
+        private void WriteOutput(string text)
+        {
+            LogDump.AppendText(text);
+            LogDump.AppendText("\n");
+            LogDumpScroll.ScrollToEnd();
         }
 
         private void ProjectFolderPlaceholder(object sender, RoutedEventArgs e)

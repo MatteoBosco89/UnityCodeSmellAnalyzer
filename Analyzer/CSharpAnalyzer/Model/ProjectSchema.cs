@@ -28,9 +28,11 @@ namespace CSharpAnalyzer
         protected string projectLanguageVersion;
         protected string configurationFile;
         protected string resultsFile = "results.json";
+        protected int projectLoc = 0;
 
         public string ProjectName { get { return projectName; } }
         public string ProjectDirectory { get { return projectDir; } }
+        public int LOC { get { return projectLoc; } }
         public string ConfigurationFile { get { return configurationFile; } }
         public string ProjectLanguage { get { return projectLanguage; } }
         public string ProjectLanguageVersion { get { return projectLanguageVersion; } }
@@ -122,8 +124,20 @@ namespace CSharpAnalyzer
             CompilationUnit cu = new CompilationUnit(name, fileName);
             Logger.Log(Logger.LogLevel.Debug, "Analyzing " + cu.Name);
             cu.LoadInformations(root, model);
+            LoadLoc(root, model);
             project.Add(cu);
         }
+
+        /// <summary>
+        /// Calculate the LOC of entire project
+        /// </summary>
+        /// <param name="root">The Compilation Unit</param>
+        /// <param name="model">The model</param>
+        protected void LoadLoc(SyntaxNode root, SemanticModel model)
+        {
+            projectLoc += root.GetLocation().GetLineSpan().EndLinePosition.Line - root.GetLocation().GetLineSpan().StartLinePosition.Line;
+        }
+
         /// <summary>
         /// Create the SyntaxTree object in order to get additional informations.
         /// </summary>

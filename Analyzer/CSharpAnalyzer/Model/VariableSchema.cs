@@ -163,7 +163,7 @@ namespace CSharpAnalyzer
             variableKind = model.GetSymbolInfo(exp.Left).Symbol?.Kind.ToString();
             fullName = model.GetSymbolInfo(exp.Left).Symbol?.ToString();
             assignment = exp.Right.ToString();
-            List<IMemberReferenceOperation> members = (from a in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select a).ToList();
+            List<IMemberReferenceOperation> members = (from mem in model.GetOperation(exp.Left).DescendantsAndSelf().OfType<IMemberReferenceOperation>() select mem).ToList();
             LoadCascades(members, model);
         }
 
