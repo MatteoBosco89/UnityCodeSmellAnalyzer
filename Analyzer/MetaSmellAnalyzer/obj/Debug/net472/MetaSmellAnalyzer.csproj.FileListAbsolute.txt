@@ -1,0 +1,7 @@
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.csproj.AssemblyReference.cache
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.csproj.SuggestedBindingRedirects.cache
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.exe.config
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.AssemblyInfoInputs.cache
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.AssemblyInfo.cs
+C:\Users\pasqu\Documents\Università\Tesi\UnityCodeSmellAnalyzer\example\MetaSmellAnalyzer\obj\Debug\net472\MetaSmellAnalyzer.csproj.CoreCompileInputs.cache

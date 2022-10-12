@@ -1,21 +1,21 @@
 {
   "ProjectName": "C# Project",
   "ProjectLanguage": "C#",
-  "DatasetPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\CSharpAnalyzer\\bin\\Debug\\net472\\results.json",
+  "DatasetPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\ProgettiEsempio\\CSharpAnalyzer\\bin\\Debug\\net472\\results.json",
   "SmellList": [
     {
       "Name": "Static Coupling",
       "Occurency": 2,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Field",
           "Type": "CubeManager",
           "FullName": "Sphere.SpehereManager.c",
           "Line": 11
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Kind": "Field",
           "Type": "SpehereManager",
           "FullName": "Test.Input.TestInput.StateManager.spe",
@@ -28,56 +28,56 @@
       "Occurency": 9,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
           "Name": "Update",
-          "Line": 52
+          "Line": 55
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Name": "Update",
-          "Line": 54
+          "Line": 55
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Name": "Update",
           "Line": 45
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Name": "Update",
           "Line": 59
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Name": "Update",
           "Line": 24
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Invocation": "UnityEngine.Transform.Rotate(float, float, float)",
           "Line": 41
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Definition",
           "Type": "float",
           "Line": 36
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Assignment",
           "Type": "float",
           "Line": 38
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "In": [
             {
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
               "Method": "Sphere.SpehereManager.GiveMeCube(string)",
               "Variables": [
                 {
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
                   "Kind": "Definition",
                   "Type": "float",
                   "Line": 56
@@ -91,18 +91,18 @@
               ]
             },
             {
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
               "Method": "Sphere.SpehereManager.GiveMeCube(string)",
               "In": [
                 {
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
                   "Method": "MyGame.CubeManager.GenerateCube()",
                   "Variables": [
                     {
-                      "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
                       "Kind": "Definition",
                       "Type": "float",
-                      "Line": 64
+                      "Line": 68
                     }
                   ],
                   "Invocations": []
@@ -118,42 +118,42 @@
       "Occurency": 6,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "MeshCollider",
           "Line": 37
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "Collider",
           "Line": 21
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "SpehereManager",
           "Line": 23
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "Inputs",
           "Line": 51
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Kind": "Definition",
           "Name": "m",
           "Type": "MeshCollider",
           "Line": 35
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Definition",
           "Name": "m",
           "Type": "MeshCollider",
@@ -163,87 +163,80 @@
     },
     {
       "Name": "Dependency Between Objects",
-      "Occurency": 12,
+      "Occurency": 11,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
           "Kind": "Field",
           "Type": "CubeHolder",
           "FullName": "MyGame.CubeManager.cube",
           "Line": 43
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Field",
           "Type": "CubeManager",
           "FullName": "Sphere.SpehereManager.c",
           "Line": 11
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Field",
           "Type": "CubeManager",
           "FullName": "Sphere.SpehereManager.cubeManager",
           "Line": 12
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Field",
           "Type": "SpehereManager",
           "FullName": "Sphere.SpehereManager.sphere",
           "Line": 13
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Kind": "Field",
           "Type": "SpehereManager",
           "FullName": "Test.Input.TestInput.StateManager.spe",
           "Line": 44
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Kind": "Field",
           "Type": "Inputs",
           "FullName": "Test.Input.TestInput.StateManager.mesh",
           "Line": 45
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "SpehereManager",
           "Line": 23
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "CubeManager",
           "Line": 24
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "CubeManager",
           "Line": 50
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Kind": "Invocation",
           "Name": "GetComponent",
           "ReturnType": "Inputs",
           "Line": 51
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution\\StateManager.cs",
-          "Parameter": "s",
-          "Method": "Test.StateManager.MethodArg(int, bool, Test.State)",
-          "Type": "State",
-          "Line": 33
-        },
-        {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Parameter": "s",
           "Method": "a.Inputs.Print(Sphere.SpehereManager)",
           "Type": "SpehereManager",
@@ -256,7 +249,7 @@
       "Occurency": 1,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Usings": [
             {
               "Name": "UnityEngine.Rendering",
@@ -275,7 +268,7 @@
       "Occurency": 1,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Class": "Sphere.SpehereManager"
         }
       ]
@@ -285,40 +278,40 @@
       "Occurency": 6,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
           "Name": "Instantiate",
           "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
-          "Line": 54
-        },
-        {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
-          "Name": "Instantiate",
-          "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
-          "Line": 56
-        },
-        {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
-          "Name": "Destroy",
-          "Invocation": "UnityEngine.Object.Destroy(UnityEngine.Object)",
           "Line": 58
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+          "Name": "Instantiate",
+          "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
+          "Line": 61
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+          "Name": "Destroy",
+          "Invocation": "UnityEngine.Object.Destroy(UnityEngine.Object)",
+          "Line": 63
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
           "Traceback": [
             {
               "Invocation": "MyGame.CubeManager.Smellami()",
-              "Line": 56,
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+              "Line": 60,
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
               "Traceback": [
                 {
                   "Invocation": "Test.Input.TestInput.StateManager.Test2()",
-                  "Line": 70,
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                  "Line": 74,
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                   "Traceback": [
                     {
                       "Method": "Test.Input.TestInput.StateManager.Test()",
-                      "LineCall": 119,
-                      "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                      "LineCall": 126,
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                       "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
                       "Name": "Instantiate",
                       "Line": 100
@@ -330,22 +323,22 @@
           ]
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Traceback": [
             {
               "Invocation": "MyGame.CubeManager.Smellami()",
-              "Line": 66,
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+              "Line": 71,
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
               "Traceback": [
                 {
                   "Invocation": "Test.Input.TestInput.StateManager.Test2()",
-                  "Line": 70,
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                  "Line": 74,
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                   "Traceback": [
                     {
                       "Method": "Test.Input.TestInput.StateManager.Test()",
-                      "LineCall": 119,
-                      "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                      "LineCall": 126,
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                       "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
                       "Name": "Instantiate",
                       "Line": 100
@@ -357,20 +350,20 @@
           ]
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Traceback": [
             {
               "Invocation": "Sphere.SpehereManager.GiveMeCube(string)",
               "Line": 40,
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
               "Traceback": [
                 {
                   "Method": "MyGame.CubeManager.GenerateCube()",
                   "LineCall": 55,
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
                   "Invocation": "UnityEngine.Object.Instantiate<UnityEngine.GameObject>(UnityEngine.GameObject)",
                   "Name": "Instantiate",
-                  "Line": 63
+                  "Line": 67
                 }
               ]
             }
@@ -383,34 +376,34 @@
       "Occurency": 5,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Name": "Find",
           "Invocation": "UnityEngine.GameObject.Find(string)",
-          "Line": 59
+          "Line": 64
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Name": "FindObjectOfType",
           "Invocation": "UnityEngine.Object.FindObjectOfType<MyGame.CubeManager>()",
           "Line": 48
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
           "Traceback": [
             {
               "Invocation": "MyGame.CubeManager.Smellami()",
-              "Line": 56,
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+              "Line": 60,
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
               "Traceback": [
                 {
                   "Invocation": "Test.Input.TestInput.StateManager.Test2()",
-                  "Line": 70,
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                  "Line": 74,
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                   "Traceback": [
                     {
                       "Method": "Test.Input.TestInput.StateManager.Test()",
-                      "LineCall": 119,
-                      "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                      "LineCall": 126,
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                       "Invocation": "UnityEngine.GameObject.FindGameObjectWithTag(string)",
                       "Name": "FindGameObjectWithTag",
                       "Line": 101
@@ -422,22 +415,22 @@
           ]
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Traceback": [
             {
               "Invocation": "MyGame.CubeManager.Smellami()",
-              "Line": 66,
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+              "Line": 71,
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
               "Traceback": [
                 {
                   "Invocation": "Test.Input.TestInput.StateManager.Test2()",
-                  "Line": 70,
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                  "Line": 74,
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                   "Traceback": [
                     {
                       "Method": "Test.Input.TestInput.StateManager.Test()",
-                      "LineCall": 119,
-                      "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+                      "LineCall": 126,
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
                       "Invocation": "UnityEngine.GameObject.FindGameObjectWithTag(string)",
                       "Name": "FindGameObjectWithTag",
                       "Line": 101
@@ -449,20 +442,20 @@
           ]
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
           "Traceback": [
             {
               "Invocation": "Sphere.SpehereManager.GiveMeCube(string)",
               "Line": 40,
-              "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\SpehereManager.cs",
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\SpehereManager.cs",
               "Traceback": [
                 {
                   "Method": "MyGame.CubeManager.GenerateCube()",
                   "LineCall": 55,
-                  "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\CubeManager.cs",
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
                   "Invocation": "UnityEngine.Object.FindObjectOfType<UnityEngine.GameObject>()",
                   "Name": "FindObjectOfType",
-                  "Line": 64
+                  "Line": 68
                 }
               ]
             }
@@ -472,44 +465,59 @@
     },
     {
       "Name": "Poor State Design",
-      "Occurency": 5,
+      "Occurency": 7,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+          "Class": "MyGame.CubeManager",
+          "Method": "MyGame.CubeManager.Update()",
+          "Invocation": "MyGame.CubeManager.Smellami()",
+          "ConditionBlock": "IfBlocks",
+          "Line": 82
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+          "Class": "a.Inputs",
+          "Method": "a.Inputs.Update()",
+          "ConditionBlock": "IfBlocks",
+          "Line": 57
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Class": "Test.Input.TestInput.StateManager",
           "Method": "Test.Input.TestInput.StateManager.Update()",
           "ConditionBlock": "IfBlocks",
           "Line": 61
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Class": "Test.Input.TestInput.StateManager",
           "Method": "Test.Input.TestInput.StateManager.Update()",
           "ConditionBlock": "IfBlocks",
           "Line": 62
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Class": "Test.Input.TestInput.StateManager",
           "Method": "Test.Input.TestInput.StateManager.Update()",
           "Invocation": "Test.Input.TestInput.StateManager.Prova()",
           "ConditionBlock": "SwitchBlocks",
-          "Line": 107
+          "Line": 108
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Class": "Test.Input.TestInput.StateManager",
           "Method": "Test.Input.TestInput.StateManager.Update()",
           "ConditionBlock": "SwitchBlocks",
           "Line": 65
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\StateManager.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
           "Class": "Test.Input.TestInput.StateManager",
           "Method": "Test.Input.TestInput.StateManager.Update()",
           "Invocation": "Test.Input.TestInput.StateManager.Prova()",
           "ConditionBlock": "IfBlocks",
-          "Line": 106
+          "Line": 107
         }
       ]
     },
@@ -518,12 +526,12 @@
       "Occurency": 2,
       "Smells": [
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Name": "r.velocity",
           "Line": 37
         },
         {
-          "Script": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\Script\\Inputs.cs",
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
           "Name": "r.angularVelocity",
           "Line": 38
         }
@@ -531,8 +539,202 @@
     },
     {
       "Name": "Check position/rotation",
-      "Occurency": 0,
-      "Smells": []
+      "Occurency": 4,
+      "Smells": [
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+          "Method": "MyGame.CubeManager.Update()",
+          "Line": 55,
+          "Traceback": [
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "LineCall": 60,
+              "Property": "UnityEngine.Transform.position",
+              "ConditionBlock": "IfBlocks",
+              "Line": 82
+            }
+          ]
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+          "Method": "a.Inputs.Update()",
+          "ConditionBlock": "IfBlocks",
+          "Property": "UnityEngine.Transform.position",
+          "Line": 57
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+          "Method": "a.Inputs.FixedUpdate()",
+          "Line": 67,
+          "Traceback": [
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "LineCall": 71,
+              "Property": "UnityEngine.Transform.position",
+              "ConditionBlock": "IfBlocks",
+              "Line": 82
+            }
+          ]
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+          "Method": "Test.Input.TestInput.StateManager.Update()",
+          "Line": 59,
+          "Traceback": [
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+              "Method": "Test.Input.TestInput.StateManager.Prova()",
+              "LineCall": 63,
+              "Property": "UnityEngine.Transform.position",
+              "ConditionBlock": "IfBlocks",
+              "Line": 117
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "High Physic Computaions",
+      "Occurency": 4,
+      "Smells": [
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+          "Method": "MyGame.CubeManager.Update()",
+          "Variable": "r.transform.position",
+          "Line": 56
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+          "Method": "MyGame.CubeManager.Update()",
+          "Line": 55,
+          "Traceback": [
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "r.transform.position",
+              "Line": 75
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "M1().body.transform.position",
+              "Line": 78
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "r.rotation",
+              "Line": 79
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "r.position",
+              "Line": 80
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Invocation": "MyGame.CubeManager.Smellami()",
+              "Line": 60,
+              "Traceback": [
+                {
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                  "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+                  "Line": 74,
+                  "Traceback": [
+                    {
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                      "Invocation": "Test.Input.TestInput.StateManager.Test()",
+                      "Line": 126,
+                      "Traceback": [
+                        {
+                          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                          "Method": "Test.Input.TestInput.StateManager.Prova()",
+                          "Variable": "r.position",
+                          "Line": 115
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\Inputs.cs",
+          "Method": "a.Inputs.FixedUpdate()",
+          "Line": 67,
+          "Traceback": [
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "r.transform.position",
+              "Line": 75
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "M1().body.transform.position",
+              "Line": 78
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "r.rotation",
+              "Line": 79
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Method": "MyGame.CubeManager.Smellami()",
+              "Variable": "r.position",
+              "Line": 80
+            },
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\CubeManager.cs",
+              "Invocation": "MyGame.CubeManager.Smellami()",
+              "Line": 71,
+              "Traceback": [
+                {
+                  "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                  "Invocation": "Test.Input.TestInput.StateManager.Test2()",
+                  "Line": 74,
+                  "Traceback": [
+                    {
+                      "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                      "Invocation": "Test.Input.TestInput.StateManager.Test()",
+                      "Line": 126,
+                      "Traceback": [
+                        {
+                          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+                          "Method": "Test.Input.TestInput.StateManager.Prova()",
+                          "Variable": "r.position",
+                          "Line": 115
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+          "Method": "Test.Input.TestInput.StateManager.Update()",
+          "Line": 59,
+          "Traceback": [
+            {
+              "Script": "C:\\Users\\pasqu\\Documents\\UnityGame\\EsempioTesi\\Assets\\Script\\StateManager.cs",
+              "Method": "Test.Input.TestInput.StateManager.Prova()",
+              "Variable": "r.position",
+              "Line": 115
+            }
+          ]
+        }
+      ]
     }
   ]
 }

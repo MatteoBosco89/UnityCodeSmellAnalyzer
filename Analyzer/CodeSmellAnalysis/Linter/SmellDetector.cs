@@ -328,12 +328,31 @@ namespace CodeSmellFinder
         /// <returns>A Jobject containing the result of the analisys</returns>
         public static JObject CountinuouslyCheckingPositionRotation(JArray data)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Searching Continuously Checking Position/Rotation");
+            Logger.Log(Logger.LogLevel.Debug, "Searching Continuously Checking Position/Rotation...");
             JObject result = new JObject();
             JArray smells = new JArray();
             result.Add("Name", "Check position/rotation");
             smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "IfBlocks"));
             smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "SwitchBlocks"));
+            result.Add("Occurency", smells.Count());
+            result.Add("Smells", smells);
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
+            return result;
+        }
+        /// <summary>
+        /// This methods search for heavy weight physics computation. The smell is present if physic computations are made inside the update or
+        /// fixedupdate
+        /// </summary>
+        /// <param name="data">The dataset containing all the compilation unit of the project</param>
+        /// <returns>>A Jobject containing the result of the analisys</returns>
+        public static JObject HighPhysicsComputation(JArray data)
+        {
+            //per dividere gli smell posso anche 
+            Logger.Log(Logger.LogLevel.Debug, "Searching High Physics Computation...");
+            JObject result = new JObject();
+            result.Add("Name", "High Physic Computaions");
+            JArray smells = new JArray();
+            smells.Merge(DataExtractor.ChangesToVariableOfTypeInMethods(data, new List<string> { "Update", "FixedUpdate" }, "Assignment", "UnityEngine.Rigidbody", new List<string> { ".position", ".rotation" }));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
