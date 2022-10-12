@@ -1,16 +1,16 @@
-12/10/2022 10:34:40 Analysis Started...
-12/10/2022 10:34:40 Loading Project Assemblies...
-12/10/2022 10:34:40 Done!
-12/10/2022 10:34:40 Loading Config Assemblies Directories...
-12/10/2022 10:34:40 Done!
-12/10/2022 10:34:40 Loading Project...
-12/10/2022 10:34:40 Loaded!
-12/10/2022 10:34:41 Analyzing Program
-12/10/2022 10:34:43 Analyzing State
-12/10/2022 10:34:44 Analyzing StateInState
-12/10/2022 10:34:45 Analyzing StateManager
-12/10/2022 10:34:45 Analyzing .NETCoreApp,Version=v6.0.AssemblyAttributes
-12/10/2022 10:34:45 Analyzing TestSolution.AssemblyInfo
-12/10/2022 10:34:45 Analyzing TestSolution.GlobalUsings.g
-12/10/2022 10:34:45 Saving Results in results.json
-12/10/2022 10:34:45 Done!
+12/10/2022 18:10:17 Analysis Started...
+12/10/2022 18:10:17 Loading Project Assemblies...
+12/10/2022 18:10:17 Done!
+12/10/2022 18:10:17 Loading Config Assemblies Directories...
+12/10/2022 18:10:17 Done!
+12/10/2022 18:10:17 Loading Project...
+12/10/2022 18:10:17 Loaded!
+12/10/2022 18:10:18 Analyzing Program
+12/10/2022 18:10:19 Analyzing State
+12/10/2022 18:10:21 Analyzing StateInState
+12/10/2022 18:10:21 Analyzing StateManager
+12/10/2022 18:10:22 Analyzing .NETCoreApp,Version=v6.0.AssemblyAttributes
+12/10/2022 18:10:22 Analyzing TestSolution.AssemblyInfo
+12/10/2022 18:10:22 Analyzing TestSolution.GlobalUsings.g
+12/10/2022 18:10:22 Saving Results in results.json
+12/10/2022 18:10:22 Done!

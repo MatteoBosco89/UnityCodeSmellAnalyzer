@@ -189,10 +189,12 @@ namespace CSharpAnalyzer
     class DeclaredVariableSchema : VariableSchema
     {
         protected string assignment;
+        protected string fullName;
         [JsonIgnore]
         public override VariableSchema Variable { get { return variable; } }
         public string Name { get { return name; } }
         public string Type { get { return type; } }
+        public string FullName { get { return fullName; } }
         public string Assignment { get { return assignment; } }
         public string Kind { get { return kind; } }
         public int DefinitionLine { get { return line; } }
@@ -202,10 +204,12 @@ namespace CSharpAnalyzer
         {
             kind = VarKind.Definition.ToString();
             VariableDeclaratorSyntax variable = v as VariableDeclaratorSyntax;
+            VariableDeclarationSyntax vari = root as VariableDeclarationSyntax;
             if (variable.Initializer != null) assignment = variable.Initializer.Value.ToString();
             name = variable.Identifier.ToString();
             line = variable.GetLocation().GetLineSpan().StartLinePosition.Line;
-            type = (root as VariableDeclarationSyntax).Type.ToString();
+            type = (vari).Type?.ToString();
+            fullName = model.GetSymbolInfo(vari.Type).Symbol?.ToString();
         }
     }
 

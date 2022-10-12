@@ -2,7 +2,6 @@
   "ProjectName": "C# Project",
   "ProjectDirectory": "D:\\progetti\\UnityCodeSmellAnalyzer\\example\\UnityProjectExample\\Assets\\ExampleScript\\TestSolution",
   "LOC": 188,
-  "LLOC": 0,
   "ConfigurationFile": "Config.json",
   "ProjectLanguage": "C#",
   "ProjectLanguageVersion": "CSharp8",
@@ -912,6 +911,7 @@
                       "Variable": {
                         "Name": "i",
                         "Type": "InnerState",
+                        "FullName": "Test.StateInState<T>.InnerState",
                         "Assignment": "new InnerState()",
                         "Kind": "Definition",
                         "DefinitionLine": 16
@@ -1739,6 +1739,7 @@
                       "Variable": {
                         "Name": "bbb",
                         "Type": "int",
+                        "FullName": "int",
                         "Assignment": "0",
                         "Kind": "Definition",
                         "DefinitionLine": 40
@@ -1748,6 +1749,7 @@
                       "Variable": {
                         "Name": "aa",
                         "Type": "int",
+                        "FullName": "int",
                         "Assignment": "A",
                         "Kind": "Definition",
                         "DefinitionLine": 43
