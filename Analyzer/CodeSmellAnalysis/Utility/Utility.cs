@@ -233,6 +233,20 @@ namespace CodeSmellFinder
             return invkres;
 
         }
+        /// <summary>
+        /// Return the path of all the compilation unit of the project
+        /// </summary>
+        /// <param name="data">The dataset containing the list of compilation unit</param>
+        /// <returns></returns>
+        public static List<JToken> AllCompUnitFileName(JArray data)
+        {
+            List<JToken> compUni = new List<JToken>();
+            foreach(JToken j in data)
+            {
+                compUni.Add(j["FileName"]);
+            }
+            return compUni;
+        }
     }
 
 }

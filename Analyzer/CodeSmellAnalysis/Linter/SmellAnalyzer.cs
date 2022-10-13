@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CodeSmellFinder
 {
@@ -17,6 +18,8 @@ namespace CodeSmellFinder
         private static int logLevel = 1;
         private static List<string> smellsToAnalyze = new List<string>();
         private static bool expose = false;
+        private static bool numSmellForProject = false;
+        private static bool smellForFile = false;
 
         public static string DataPath { get { return dataPath; } set { dataPath = value; } }
         public static string SmellFile { get { return smellFile; } set { smellFile = value; } }
@@ -28,11 +31,13 @@ namespace CodeSmellFinder
         /// <param name="option">The Options object containig the parameter given by command window</param>
         public static void Init(Options option)
         {
-            if(option.DataPath != null)dataPath = option.DataPath;
-            if(option.SmellPath != null)smellFile = option.SmellPath;
-            if(option.Smell != null) smellsToAnalyze.Add(option.Smell);
-            if(option.Expose) expose = true;
-            if(option.Verbose) Logger.Verbose = true;
+            if (option.DataPath != null)dataPath = option.DataPath;
+            if (option.SmellPath != null)smellFile = option.SmellPath;
+            if (option.Smell != null) smellsToAnalyze.Add(option.Smell);
+            if (option.Expose) expose = true;
+            if (option.NumSmellForProject) numSmellForProject = true;
+            if (option.SmellForFile) smellForFile = true; 
+            if (option.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
             Logger.LogFile = "Linter.log";
             Logger.Start();
@@ -61,7 +66,12 @@ namespace CodeSmellFinder
                 return;
             }
             SearchSmell();
-            SaveResults();
+            if (numSmellForProject)
+                SaveNumSmellForProject();
+            if (smellForFile)
+                SaveNumSmellForFile();
+            if(!numSmellForProject && !smellForFile)
+                SaveResults();
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
@@ -147,6 +157,52 @@ namespace CodeSmellFinder
                 save += s + "\n";
             }
             File.WriteAllText("SmellFile.txt", save);
+        }
+        /// <summary>
+        /// Save the number of each smell in the project
+        /// </summary>
+        public static void SaveNumSmellForProject()
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Saving Num Smell For Project...");
+            string s = "";
+            foreach(JToken t in results)
+            {
+                Console.WriteLine(t["Name"]);
+                s += t["Name"].ToString() + "; " + t["Occurency"];
+                s += "\n";
+            }
+            File.WriteAllText("smellOccurencyProject.csv", s);
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
+        }
+        /// <summary>
+        /// Save the number of smell for each category for every c# script
+        /// </summary>
+        public static void SaveNumSmellForFile()
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Compilation Unit...");
+            Directory.CreateDirectory("AllSmellResult");
+            List<JToken> filesNames = Utility.AllCompUnitFileName(data["Project"] as JArray);
+            foreach(JToken smell in results)
+            {
+                string text = "";
+                foreach(JToken f in filesNames)
+                {
+                    string fn = f.ToString();
+                    int count = 0;
+                    foreach(JToken sm in smell["Smells"])
+                    {
+                        string scriptName = sm["Script"].ToString();
+                        if (fn == scriptName) count++;
+                    }
+                    text += fn + "; " + count + "\n"; 
+                    
+                }
+                string name = smell["Name"].ToString().Replace(" ", "_");
+                name = "AllSmellResult\\" + name + ".csv";
+                File.WriteAllText(name, text);
+                Logger.Log(Logger.LogLevel.Debug, "Saved: " + name);
+            }
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
     }
 }

@@ -252,7 +252,7 @@ namespace CodeSmellFinder
         {
             Logger.Log(Logger.LogLevel.Debug, "Searching Instantiate and Destroy Smells...");
             JObject result = new JObject();
-            result.Add("Name", "Instantiate - Destroy");
+            result.Add("Name", "Instantiate Destroy");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FindInvocationSmell(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "Instantiate", "Destroy" }));
             result.Add("Occurency", smells.Count());
@@ -331,7 +331,7 @@ namespace CodeSmellFinder
             Logger.Log(Logger.LogLevel.Debug, "Searching Continuously Checking Position/Rotation...");
             JObject result = new JObject();
             JArray smells = new JArray();
-            result.Add("Name", "Check position/rotation");
+            result.Add("Name", "Check position rotation");
             smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "IfBlocks"));
             smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "SwitchBlocks"));
             result.Add("Occurency", smells.Count());

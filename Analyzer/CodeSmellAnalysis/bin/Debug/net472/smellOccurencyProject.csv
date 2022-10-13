@@ -1,0 +1,12 @@
+Static Coupling; 8
+Weak Temporization; 49
+Improper Collider; 4
+Dependency Between Objects; 737
+Lack of separation of concern; 4
+Singleton Pattern; 0
+Instantiate - Destroy; 7
+Find Methods; 4
+Poor State Design; 84
+Velocity Change; 3
+Check position/rotation; 9
+High Physic Computaions; 6
