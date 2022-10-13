@@ -98,7 +98,7 @@ namespace CodeSmellFinder
         /// <param name="param1">The second param of the variable to check</param>
         /// <param name="names">The values to compare to param2</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray VariablesFromData(JArray data, List<string> types, string param, List<string> values, string param1, List<string> names)
+        public static JArray VariablesFromData(JArray data, string typeParam, List<string> types, string param, List<string> values, string param1, List<string> names, bool searchType)
         {
             JArray smells = new JArray();
             foreach (JToken token in data)
@@ -115,8 +115,16 @@ namespace CodeSmellFinder
                         JToken currVar = j["Variable"];
                         if (types != null)
                         {
-                            string type = currVar["Type"].ToString();
-                            if (!Utility.StringInList(types, type)) continue;
+                            string type = currVar[typeParam].ToString();
+                            if (searchType)
+                            {
+                                if (!Utility.StringInList(types, type)) continue;
+                            }
+                            else
+                            {
+                                if (!Utility.ListInString(types, type)) continue;
+                            }
+                                
                         }
                         if (names != null)
                         {
@@ -428,7 +436,7 @@ namespace CodeSmellFinder
         /// <param name="methods">The list of methods where to analyze the invocation</param>
         /// <param name="collection">The type of methods to check (Methods or Constructors)</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray DependeciesInMethods(JArray data, List<string> types, List<string> methods, string collection)
+        public static JArray DependeciesInMethods(JArray data, List<string> types, List<string> methods, string collection, string invParam,bool compType)
         {
             //Aggiugere se possibile il full name del returntype di un invocation
             JArray results = new JArray();
@@ -442,22 +450,27 @@ namespace CodeSmellFinder
                     JArray res = new JArray(query);
                     foreach (JToken method in res.Values())
                     {
-                        JArray invocations = new JArray(method["Invocations"].ToArray());
-                        foreach (JToken inv in invocations)
+                        JArray invocations = new JArray(method.SelectTokens("..Invocations"));
+                        foreach (JToken inv in invocations.Values())
                         {
                             string name = inv["Name"].ToString();
                             if (!methods.Contains(name)) continue;
-                            string returnType = inv["ReturnType"].ToString();
-                            if (Utility.StringInList(types, returnType))
+                            string returnType = inv[invParam].ToString();
+                            if (compType)
                             {
-                                JObject s = new JObject();
-                                s.Add("Script", cu["FileName"].ToString());
-                                s.Add("Kind", "Invocation");
-                                s.Add("Name", name);
-                                s.Add("ReturnType", returnType);
-                                s.Add("Line", inv["Line"]);
-                                results.Add(s);
+                                if (!Utility.StringInList(types, returnType)) continue;
                             }
+                            else
+                            {
+                                if (!Utility.ListInString(types, returnType)) continue;
+                            }
+                            JObject s = new JObject();
+                            s.Add("Script", cu["FileName"].ToString());
+                            s.Add("Kind", "Invocation");
+                            s.Add("Name", name);
+                            s.Add("ReturnType", returnType);
+                            s.Add("Line", inv["Line"]);
+                            results.Add(s);
 
                         }
 

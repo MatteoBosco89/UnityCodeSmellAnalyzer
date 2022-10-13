@@ -1,11 +1,9 @@
 ﻿using CSharpAnalyzer;
-using Microsoft.CodeAnalysis.Options;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Xml.Linq;
 
 namespace CodeSmellFinder
 {

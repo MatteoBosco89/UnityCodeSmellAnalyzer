@@ -148,10 +148,10 @@ namespace CodeSmellFinder
             JObject result = new JObject();
             result.Add("Name", "Improper Collider");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, null, null));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods"));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors"));
-            smells.Merge(DataExtractor.VariablesFromData(data, types, "Kind", new List<string> { "Definition" }, "", null));
+            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "FullName", types, null, null));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods", "FullName", false));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors", "FullName", false));
+            smells.Merge(DataExtractor.VariablesFromData(data, "FullName", types, "Kind", new List<string> { "Definition" }, "", null, false));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
@@ -172,8 +172,8 @@ namespace CodeSmellFinder
             result.Add("Name", "Dependency Between Objects");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, null, null));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods"));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors"));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods", "ReturnType", true));
+            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors", "ReturnType", true));
             smells.Merge(DataExtractor.DependeciesInParameters(data, types));
             result.Add("Occurency", smells.Count());
             result.Add("Smells", smells);
