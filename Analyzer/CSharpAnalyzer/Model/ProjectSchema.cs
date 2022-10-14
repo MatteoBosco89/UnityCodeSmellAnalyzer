@@ -25,6 +25,7 @@ namespace CSharpAnalyzer
         protected string projectName;
         protected string projectLanguage;
         protected string projectDir;
+        protected string directoryPath;
         protected string projectLanguageVersion;
         protected string configurationFile;
         protected string resultsFile = "results.json";
@@ -32,6 +33,7 @@ namespace CSharpAnalyzer
 
         public string ProjectName { get { return projectName; } }
         public string ProjectDirectory { get { return projectDir; } }
+        public string DirectoryPath { get { return directoryPath; } }
         public int LOC { get { return projectLoc; } }
         public string ConfigurationFile { get { return configurationFile; } }
         public string ProjectLanguage { get { return projectLanguage; } }
@@ -48,27 +50,26 @@ namespace CSharpAnalyzer
         /// </summary>
         public void Analyze()
         {
-            if (!Directory.Exists(AnalyzerConfiguration.ProjectPath)) { Console.WriteLine("Project not found"); return; }
+            if (!Directory.Exists(AnalyzerConfiguration.ProjectPath)) { Logger.Log(Logger.LogLevel.Critical, "Project not found"); return; }
+            if (!Directory.Exists(AnalyzerConfiguration.DirectoryPath)) { Logger.Log(Logger.LogLevel.Critical, "Directory not found"); return; }
             LoadAssemblyList();
             LoadFileList();
             if (fileList.Count <= 0) return;
             LoadSyntax();
             CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies);
             AnalyzerConfiguration.Compilation = compilation;
-            if (AnalyzerConfiguration.Compilation == null) { Console.WriteLine("Analysis Failed!"); return; }
+            if (AnalyzerConfiguration.Compilation == null) { Logger.Log(Logger.LogLevel.Critical, "Analysis Failed!"); return; }
             projectLanguage = AnalyzerConfiguration.Compilation.Language;
             projectDir = AnalyzerConfiguration.ProjectPath;
+            directoryPath = AnalyzerConfiguration.DirectoryPath;
             projectName = AnalyzerConfiguration.ProjectName;
             configurationFile = AnalyzerConfiguration.ConfigFile;
             projectLanguageVersion = AnalyzerConfiguration.Compilation.LanguageVersion.ToString();
-
-
             foreach (SyntaxTreeWrapper syntaxTree in compilationUnits)
             {
                 AnalyzeCompilation(syntaxTree);
             }
             ToJson();
-            ToFile(jsonString, resultsFile);
         }
 
         /// <summary>
@@ -97,7 +98,7 @@ namespace CSharpAnalyzer
             try
             {
                 string[] dir = { ".cs" };
-                List<string> files = Directory.GetFiles(AnalyzerConfiguration.ProjectPath, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
+                List<string> files = Directory.GetFiles(directoryPath, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
                 foreach (string f in files)
                 {
                     fileList.Add(f);
@@ -165,7 +166,10 @@ namespace CSharpAnalyzer
         /// </summary>
         protected void ToJson()
         {
+            Logger.Log(Logger.LogLevel.Debug, "Converting to JSON format...");
             jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
+            ToFile(jsonString, resultsFile);
         }
         /// <summary>
         /// Save the Json string to file.

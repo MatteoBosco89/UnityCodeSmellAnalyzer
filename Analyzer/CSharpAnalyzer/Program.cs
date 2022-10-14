@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using System;
 
 namespace CSharpAnalyzer
 {
@@ -10,9 +11,10 @@ namespace CSharpAnalyzer
         public static void Main(string[] args)
         {
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => AnalyzerConfiguration.Init(o));
-            if (AnalyzerConfiguration.ProjectPath == null) return;
+            if (AnalyzerConfiguration.ProjectPath == null) Environment.Exit(1);
             ProjectSchema projectSchema = new ProjectSchema();
             projectSchema.Analyze();
+            Environment.Exit(0);
         }
     }
     /// <summary>
@@ -22,6 +24,8 @@ namespace CSharpAnalyzer
     {
         [Option('p', "project", Required = true, HelpText = "Project Directory.")]
         public string ProjectPath { get; set; }
+        [Option('d', "directory", Required = false, HelpText = "Analyze only the directory provided. If not provided the Project Directory is selected.")]
+        public string Directory { get; set; }
         [Option('a', "assembly", Required = false, HelpText = "Additional Assemblies Directory.")]
         public string AssemblyDir { get; set; }
         [Option('s', "statements", Required = false, HelpText = "Set output all Statements.")]
@@ -36,7 +40,5 @@ namespace CSharpAnalyzer
         public bool Verbose { get; set; }
     }
 
-
-    
 
 }

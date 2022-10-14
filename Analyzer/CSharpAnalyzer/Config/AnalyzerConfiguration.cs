@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -20,10 +21,12 @@ namespace CSharpAnalyzer
         private static bool statementsVerbose = false;
         private static string projectName = "C# Project";
         private static string configFile = "Config.json";
+        private static string directoryPath;
         private static int logLevel = 1;
         private static bool verbose = false;
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
+        public static string DirectoryPath { get { return directoryPath; } }
         public static bool StatementVerbose { get { return statementsVerbose; } set { statementsVerbose = value; } }
         public static CSharpCompilation Compilation { get { return compilation; } set { compilation = value; } }
         public static string ProjectPath { get { return projectPath; } set { projectPath = value; } }
@@ -37,18 +40,56 @@ namespace CSharpAnalyzer
         /// <param name="opt">Command Line Options</param>
         public static void Init(Options opt)
         {
-            if (opt.ConfigFile != null) configFile = opt.ConfigFile;
-            if (opt.ProjectName != null) projectName = opt.ProjectName;
-            statementsVerbose = opt.Statements;
-            verbose = opt.Verbose;
-            projectPath = opt.ProjectPath;
-            string f = File.ReadAllText(configFile);
-            configurations = JsonConvert.DeserializeObject<ConfigModel>(f); 
-            configurations.ProjectPath = opt.ProjectPath;
-            configurations.AdditionalAssembly = opt.AssemblyDir;
             logLevel = opt.Logging;
             Logger.SetLogLevel(logLevel);
             Logger.Start();
+            LoadCommands(opt);
+            InitConfig(opt);
+            
+        }
+
+        /// <summary>
+        /// Initialize the ConfigModel object
+        /// </summary>
+        /// <param name="opt">Command Line Options</param>
+        private static void InitConfig(Options opt)
+        {
+            try
+            {
+                string f = File.ReadAllText(configFile);
+                Logger.Log(Logger.LogLevel.Critical, "Config File Found!");
+                configurations = JsonConvert.DeserializeObject<ConfigModel>(f);
+            }
+            catch (Exception) 
+            { 
+                Logger.Log(Logger.LogLevel.Critical, "Config File Not Found!");
+                configurations = new ConfigModel();
+            }
+            configurations.ProjectPath = opt.ProjectPath;
+            configurations.AdditionalAssembly = opt.AssemblyDir;
+            Logger.Log(Logger.LogLevel.Critical, "Additional Assemblies: " + (opt.AssemblyDir ?? "None"));
+        }
+
+        /// <summary>
+        /// Loads all the commands passed
+        /// </summary>
+        /// <param name="opt">Command Line Options</param>
+        private static void LoadCommands(Options opt)
+        {
+            if (opt.ProjectName != null) projectName = opt.ProjectName;
+            Logger.Log(Logger.LogLevel.Critical, "Project: " + projectName);
+            if (opt.Directory != null) directoryPath = opt.Directory;
+            else directoryPath = opt.ProjectName;
+            Logger.Log(Logger.LogLevel.Critical, "Directory Analyzed: " + directoryPath);
+            if (opt.ConfigFile != null) configFile = opt.ConfigFile;
+            Logger.Log(Logger.LogLevel.Critical, "Config File: " + configFile);
+            statementsVerbose = opt.Statements;
+            Logger.Log(Logger.LogLevel.Critical, "Statements: " + statementsVerbose);
+            verbose = opt.Verbose;
+            Logger.Log(Logger.LogLevel.Critical, "Verbose: " + verbose);
+            projectPath = opt.ProjectPath;
+            Logger.Log(Logger.LogLevel.Critical, "Project Path: " + projectPath);
+            Logger.Log(Logger.LogLevel.Critical, "Log Level: " + logLevel);
         }
 
         /// <summary>

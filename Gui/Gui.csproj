@@ -9,13 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="folderTextBg.gif" />
-    <None Remove="folder_o.png" />
+    <None Remove="Assets\folderTextBg.gif" />
+    <None Remove="Assets\folder_o.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="folderTextBg.gif" />
-    <Resource Include="folder_o.png" />
+    <Resource Include="Assets\folderTextBg.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\folder_o.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

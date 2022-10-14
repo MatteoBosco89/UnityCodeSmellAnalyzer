@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Diagnostics;
+using GuiModel;
 
 namespace Gui
 {
@@ -18,17 +20,17 @@ namespace Gui
     {
         protected Dictionary<string, string> parameters = new Dictionary<string, string>();
         protected string projectPath = "";
-        private ProcessHandler? handler;
-        private Thread? t;
+        private List<ThreadHandler> threadHandlers = new List<ThreadHandler>();
 
         public UnityCodeSmellAnalyzer()
         {
             InitializeComponent();
         }
+
         private void StartAnalyze(object sender, RoutedEventArgs e)
         {
-            handler = new ProcessHandler("D:\\progetti\\UnityCodeSmellAnalyzer\\Analyzer\\CSharpAnalyzer\\bin\\Debug\\net472\\CSharpAnalyzer.exe", "--verbose --project \"" + projectPath + "\"");
-            handler.CreateProcess(); 
+            ThreadHandler th = new ThreadHandler("CSharpAnalyzer\\CSharpAnalyzer.exe", "--verbose --project \"" + projectPath + "\"", "CSharpAnalyzer", this);
+            
         }
 
         private void ExitProgram(object sender, RoutedEventArgs e)
@@ -41,13 +43,15 @@ namespace Gui
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 DialogResult result = folderDialog.ShowDialog();
+                if (result.ToString().Equals("OK")) ProjectFolder.Text = folderDialog.SelectedPath;
             }
 
         }
 
-        private void WriteOutput(string text)
+        public void WriteOutput(string? s)
         {
-            LogDump.AppendText(text);
+            if (s == null) return;
+            LogDump.AppendText(s);
             LogDump.AppendText("\n");
             LogDumpScroll.ScrollToEnd();
         }
