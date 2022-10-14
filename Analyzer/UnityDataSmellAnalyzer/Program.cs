@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using System;
 using System.Collections.Generic;
 
 namespace UnityDataSmellAnalyzer
@@ -9,6 +10,7 @@ namespace UnityDataSmellAnalyzer
         {
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => UnityDataExtractor.Init(o));
             UnityDataExtractor.Analyze();
+            Environment.Exit(0);
         }
     }
     public class Options
