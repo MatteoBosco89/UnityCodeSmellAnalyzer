@@ -11,6 +11,7 @@ namespace UnityAnalyzer
     /// This class represents the information inside a unity meta data files.
     /// Every unity meta data file is made by a main dictionary with other sub dictionary inside
     /// </summary>
+    [Serializable]
     public class UnityData
     {
         protected string id;
@@ -23,6 +24,14 @@ namespace UnityAnalyzer
         protected const string GUID = "guid";//special substring indicating the id of a unity object
         protected Dictionary<string, Element.Element> components;
         protected int numComponents = 0;
+
+        public string Id { get { return id; } }
+        public string Name { get { return name; } }
+        public string Type { get { return type; } }
+        public string FilePath { get { return filePath; } }
+        public long FileSize { get { return fileSize; } }
+        public int NumComponents { get { return numComponents; } }
+        public Dictionary<string, Element.Element> COMPONENTS { get { return components; } }
 
         /// <summary>
         /// This constructor is used to load the main data from a unity project (suc as .unity files, .prefab ecc...)
@@ -120,12 +129,22 @@ namespace UnityAnalyzer
                     id = lines[i].Split(':')[1].Trim();
                     i++;
                 }
+                if (i == lines.Length) continue;
                 string[] vals = lines[i].Split(':');
+                if (vals.Length < 2) continue;
                 if (vals[1].Length <= 1)
                 {
                     DictionaryElement d = new DictionaryElement();
                     i = d.LoadNormalDictionary(lines, i, COMP_ID);
-                    components.Add(vals[0].Trim(), d);
+                    int k = 0;
+                    string keyName = vals[0].Trim();
+                    if (components.ContainsKey(keyName))
+                    {
+                        while (components.ContainsKey(keyName+k)) k++;
+                        keyName += k;
+                    }
+                    components.Add(keyName, d);
+                    
                 }
             }
         }

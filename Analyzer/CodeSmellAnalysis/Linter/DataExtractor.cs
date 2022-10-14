@@ -551,32 +551,37 @@ namespace CodeSmellFinder
             {
                 JObject comUnit = new JObject();
                 if (token is JObject @object) comUnit = @object;
-                //get the invocations of the current compilation unit inside the specified methods
-                var r = comUnit.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]..Invocations");
-                JArray jArray = new JArray(r);
-                //contains the methods already checked for the current compilation unit (to avoid recursive invocation)
-                List<string> checkedMethods = new List<string>();
-                //contains the methods to check for the current compiltion unit
-                List<MethodReference> methodsToCheck = new List<MethodReference>();
-                foreach (JToken inv in jArray.Values())
+
+                JArray mets = new JArray(comUnit.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]"));
+                foreach (JToken m in mets)
                 {
-                    string name = inv["Name"].ToString();
-                    string fullName = inv["FullName"].ToString();
-                    //Console.WriteLine(fullName);
-                    if (!invocations.Contains(name))
+                    //get the invocations of the current method
+                    var r = m.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]..Invocations");
+                    JArray jArray = new JArray(r);
+                    //contains the methods already checked for the current compilation unit (to avoid recursive invocation)
+                    List<string> checkedMethods = new List<string>();
+                    //contains the methods to check for the current compiltion unit
+                    List<MethodReference> methodsToCheck = new List<MethodReference>();
+                    foreach (JToken inv in jArray.Values())
                     {
-                        var m = new MethodReference(fullName, (int)inv["Line"]);
-                        methodsToCheck.Add(m);
+                        string name = inv["Name"].ToString();
+                        string fullName = inv["FullName"].ToString();
+                        //Console.WriteLine(fullName);
+                        if (!invocations.Contains(name))
+                        {
+                            var mr = new MethodReference(fullName, (int)inv["Line"]);
+                            methodsToCheck.Add(mr);
+                        }
                     }
-                }
-                //analyze to found the possible smell in depth > 1
-                JArray depthResutl = SearchIvocation(data, methodsToCheck, invocations, checkedMethods);
-                if (depthResutl.Count() > 0)
-                {
-                    JObject j = new JObject();
-                    j.Add("Script", comUnit["FileName"].ToString());
-                    j.Add("Traceback", depthResutl);
-                    smells.Add(j);
+                    //analyze to found the possible smell in depth > 1
+                    JArray depthResutl = SearchIvocation(data, methodsToCheck, invocations, checkedMethods);
+                    if (depthResutl.Count() > 0)
+                    {
+                        JObject j = new JObject();
+                        j.Add("Script", comUnit["FileName"].ToString());
+                        j.Add("Traceback", depthResutl);
+                        smells.Add(j);
+                    }
                 }
             }
             //Console.WriteLine("Done!");

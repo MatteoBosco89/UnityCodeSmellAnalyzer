@@ -5,6 +5,7 @@ namespace Element
     /// <summary>
     /// This class is the super class representing the element inside the unity meta data file
     /// </summary>
+    [Serializable]
     public class Element
     {
  

@@ -5,6 +5,7 @@ namespace Element
     /// <summary>
     /// This class represent a single entry inside a unity meta data dictionary
     /// </summary>
+    [Serializable]
     public class SimpleElement : Element
     {
         protected string value;

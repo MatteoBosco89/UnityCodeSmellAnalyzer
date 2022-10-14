@@ -9,13 +9,15 @@ namespace Element
     /// <summary>
     /// Dictionary element represents the sub dictionary inside the unity meta data 
     /// </summary>
+    [Serializable]
     public class DictionaryElement : Element
     {
         protected Dictionary<string, Element> values;
         protected string type;
-        
-        public Dictionary<string, Element> Values { get { return values; } }
         public string Type { get { return type; } }
+
+        public Dictionary<string, Element> Values { get { return values; } }
+       
         
         public DictionaryElement() { }
 
@@ -32,6 +34,7 @@ namespace Element
             values = new Dictionary<string, Element>();
             type = lines[i].Split(':')[0].Trim(); //read the type of the subdictionary from the first line passed
             i++;
+            if (i == lines.Length) return i;
             int indent = NumOfSpaces(lines[i]);//mesure the number of indentation spaces presents
             int j = 0;
             for (; i < lines.Length; i++)

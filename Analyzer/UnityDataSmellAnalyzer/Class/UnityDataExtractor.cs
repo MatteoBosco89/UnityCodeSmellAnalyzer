@@ -1,4 +1,5 @@
 ﻿using CSharpAnalyzer;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ namespace UnityDataSmellAnalyzer
         protected static List<UnityData> mainData = new List<UnityData>();
         protected static List<UnityData> metaData = new List<UnityData>();
         protected static string RESULT_DIR = "UnityDataResults";
+        protected static string META_DIR = "metaResults";
+        protected static string MAIN_DIR = "mainResults";
         protected static string MAIN_FILE = "mainData.json";
         protected static string META_FILE = "metaData.json";
         protected static bool meta = true;
@@ -80,8 +83,8 @@ namespace UnityDataSmellAnalyzer
         public static void Analyze()
         {
             Logger.Log(Logger.LogLevel.Debug, "Loading extensions...");
-            if (!LoadFileList())return;
-            if(file_extensions != null)
+            if (!LoadFileList()) return;
+            if (file_extensions != null)
             {
                 if (!LoadExtensionsFile()) return;
             }
@@ -121,13 +124,40 @@ namespace UnityDataSmellAnalyzer
         public static void SaveResults()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
+            Directory.CreateDirectory(MAIN_DIR);
+            foreach (var data in mainData)
+            {
+                JObject res = data.ToJsonObject();
+                res.Add("ProjectPath", directory);
+                string fileName = res["guid"].ToString() + ".json";
+                Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
+                File.WriteAllText(MAIN_DIR + "\\" + fileName, res.ToString());
+            }
+            if (meta)
+            {
+                Directory.CreateDirectory(META_DIR);
+                foreach (var data in metaData)
+                {
+                    JObject res = data.ToJsonObject();
+                    res.Add("ProjectPath", directory);
+                    string fileName = res["guid"].ToString() + ".json";
+                    Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
+                    File.WriteAllText(META_DIR + "\\" + fileName, res.ToString());
+                }
+            }
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
+        }
+       
+        public static void SaveResults1()
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
             JObject res = new JObject();
-            res.Add("ProjectPath", directory);
+           
             JArray exts = new JArray();
             foreach (string s in DIR) exts.Add(s);
             res.Add("Extensions", exts);
             JArray ja = new JArray();
-            foreach (UnityData d in mainData) ja.Add(d.ToJsonObject());
+            foreach (UnityData d in mainData) ja.Add(JsonConvert.SerializeObject(d));
             res.Add("ObjectsData", ja);
             Directory.CreateDirectory(RESULT_DIR);
             File.WriteAllText(RESULT_DIR + "\\" + MAIN_FILE, res.ToString());

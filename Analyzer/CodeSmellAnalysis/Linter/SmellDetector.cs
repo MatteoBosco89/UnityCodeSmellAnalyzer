@@ -347,7 +347,6 @@ namespace CodeSmellFinder
         /// <returns>>A Jobject containing the result of the analisys</returns>
         public static JObject HighPhysicsComputation(JArray data)
         {
-            //per dividere gli smell posso anche 
             Logger.Log(Logger.LogLevel.Debug, "Searching High Physics Computation...");
             JObject result = new JObject();
             result.Add("Name", "High Physic Computaions");
