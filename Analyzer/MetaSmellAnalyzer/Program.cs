@@ -1,21 +1,48 @@
-﻿using Microsoft.Build.Locator;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Symbols;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.MSBuild;
-using Microsoft.CodeAnalysis.Text;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace MetaSmellAnalyzer
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Reflection;
+using CommandLine;
+namespace MetaSmellDetector
 {
     internal class Program
     {
+
+        public static void Main(string[] args)
+        {
+            Parser.Default.ParseArguments<Options>(args).WithParsed(o => MetaDetector.Init(o));
+            MetaDetector.Analyze();
+
+        }
+
         
     }
+
+    public class Options
+    {
+        [Option('e', "expose", SetName = "exp", Required = true, HelpText = "Expose all possible smell name, Mutually exclusive with -d, --data")]
+        public bool Expose { get; set; }
+        [Option('d', "data", SetName = "dat", Required = true, HelpText = "MainData.json and MetaData.json filepath, Mutually exclusive with -e, --expose")]
+        public IEnumerable<string> DataPath { get; set; }
+        [Option('f', "file", Required = false, HelpText = "file.txt with list of smell to search")]
+        public string SmellPath { get; set; }
+        [Option('v', "verbose", Required = false, HelpText = "Enable the status log on console window")]
+        public bool Verbose { get; set; }
+        [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)")]
+        public int Logging { get; set; }
+
+    }
+
 }
+
+
+
+      
+
+
+
