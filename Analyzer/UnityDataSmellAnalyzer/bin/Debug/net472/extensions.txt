@@ -1,7 +1,0 @@
-unity
-controller
-prefab
-mat
-anim
-flare
-assets

@@ -1,0 +1,9 @@
+HeavyPhisics,Rigidbody,m_CollisionDetection,==,1,2
+SubOptimal,Animator,m_EnableBakedLightmaps,>,0
+SubOptimal1,Animator,m_EnableRealtimeLightmaps,>,0
+LightSmell,m_EnableRealtimeLightmaps,>,0
+MultipleAnimator,Animator
+InstanceCounter,guid,0
+AnyState,m_AnyStateTransitions
+SearchSmellByParam,MeshCollider
+QuerySearch,num_components,>,20

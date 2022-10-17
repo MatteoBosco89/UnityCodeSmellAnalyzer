@@ -17,17 +17,15 @@ namespace MetaSmellDetector
         {
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => MetaDetector.Init(o));
             MetaDetector.Analyze();
-
+            Environment.Exit(0);
         }
-
-        
     }
 
     public class Options
     {
         [Option('e', "expose", SetName = "exp", Required = true, HelpText = "Expose all possible smell name, Mutually exclusive with -d, --data")]
         public bool Expose { get; set; }
-        [Option('d', "data", SetName = "dat", Required = true, HelpText = "MainData.json and MetaData.json filepath, Mutually exclusive with -e, --expose")]
+        [Option('d', "data", SetName = "dat", Required = true, HelpText = "MainData directory and MetaData directory path, Mutually exclusive with -e, --expose")]
         public IEnumerable<string> DataPath { get; set; }
         [Option('f', "file", Required = false, HelpText = "file.txt with list of smell to search")]
         public string SmellPath { get; set; }

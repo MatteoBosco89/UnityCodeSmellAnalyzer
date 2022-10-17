@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using System;
 using System.Text.RegularExpressions;
 
 namespace CodeSmellFinder
@@ -10,6 +11,7 @@ namespace CodeSmellFinder
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => SmellAnalyzer.Init(o));
             if (SmellAnalyzer.DataPath == null && !SmellAnalyzer.Expose) return;
             SmellAnalyzer.Analyze();
+            Environment.Exit(0);
         }
     }
     public class Options

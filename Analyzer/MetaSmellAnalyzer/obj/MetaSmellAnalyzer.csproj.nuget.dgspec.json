@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/patriziadecristofaro/Desktop/UNIVERSITA'/MAGISTRALE/Tesi/UnityCodeSmellAnalyzer/Analyzer/MetaSmellAnalyzer/MetaSmellAnalyzer.csproj": {}
+    "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\MetaSmellAnalyzer\\MetaSmellAnalyzer.csproj": {}
   },
   "projects": {
-    "/Users/patriziadecristofaro/Desktop/UNIVERSITA'/MAGISTRALE/Tesi/UnityCodeSmellAnalyzer/Analyzer/MetaSmellAnalyzer/MetaSmellAnalyzer.csproj": {
+    "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\MetaSmellAnalyzer\\MetaSmellAnalyzer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/patriziadecristofaro/Desktop/UNIVERSITA'/MAGISTRALE/Tesi/UnityCodeSmellAnalyzer/Analyzer/MetaSmellAnalyzer/MetaSmellAnalyzer.csproj",
+        "projectUniqueName": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\MetaSmellAnalyzer\\MetaSmellAnalyzer.csproj",
         "projectName": "MetaSmellAnalyzer",
-        "projectPath": "/Users/patriziadecristofaro/Desktop/UNIVERSITA'/MAGISTRALE/Tesi/UnityCodeSmellAnalyzer/Analyzer/MetaSmellAnalyzer/MetaSmellAnalyzer.csproj",
-        "packagesPath": "/Users/patriziadecristofaro/.nuget/packages/",
-        "outputPath": "/Users/patriziadecristofaro/Desktop/UNIVERSITA'/MAGISTRALE/Tesi/UnityCodeSmellAnalyzer/Analyzer/MetaSmellAnalyzer/obj/",
+        "projectPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\MetaSmellAnalyzer\\MetaSmellAnalyzer.csproj",
+        "packagesPath": "C:\\Users\\pasqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pasqu\\Documents\\Università\\Tesi\\UnityCodeSmellAnalyzer\\Analyzer\\MetaSmellAnalyzer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/patriziadecristofaro/.config/NuGet/NuGet.Config"
+          "C:\\Users\\pasqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +70,12 @@
               "version": "[13.0.1, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
         }
       }
     }

@@ -66,13 +66,13 @@ namespace CodeSmellFinder
                 return;
             }
             SearchSmell();
+            Logger.Log(Logger.LogLevel.Debug, "Analysis Done!");
             if (numSmellForProject)
                 SaveNumSmellForProject();
             if (smellForFile)
                 SaveNumSmellForFile();
             if(!numSmellForProject && !smellForFile)
                 SaveResults();
-            Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
         /// Load data from Json file
