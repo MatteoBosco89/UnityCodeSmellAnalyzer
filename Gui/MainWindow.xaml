@@ -7,48 +7,119 @@
         mc:Ignorable="d"
         WindowState="Maximized"
         Title="Unity Code Smell Analyzer" Height="768" Width="1024">
-    <ScrollViewer x:Name="MainWindow" Height="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
-        <GroupBox>
-            <Grid>
-                <Label x:Name="Title" Content="Unity Code Smell Analyzer" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,10,10,0" Height="40" VerticalAlignment="Top"/>
-                <DockPanel Height="80" Margin="10,70,10,0" VerticalAlignment="Top">
-                    <Grid Margin="0,0,0,0">
-                        <Button Click="ShowDirectoryDialog" Width="30" Height="30" Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
-                            <Image Source="/Assets/folder_o.png"/>
-                        </Button>
-                        <TextBox x:Name="ProjectFolder" Height="20" Margin="120,0,100,0" VerticalAlignment="Center" TextChanged="ProjectFolderPlaceholder">
-                            <TextBox.Background>
-                                <ImageBrush AlignmentX="Left" Stretch="Uniform" ImageSource="/Assets/folderTextBg.gif" />
-                            </TextBox.Background>
-                        </TextBox>
-                    </Grid>
-                </DockPanel>
-                <DockPanel Height="80" Margin="10,130,10,0" VerticalAlignment="Top">
-                    <Grid>
-                        <Label Height="25" Margin="20,0,0,0" VerticalAlignment="Center" Content="Project Name"/>
-                        <TextBox x:Name="projectName" Height="20" Width="200" Margin="120,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Undefined" TextChanged="UpdateProjectName"/>
-                    </Grid>
-                </DockPanel>
-                <Label x:Name="VerbosityText" Height="25" Width="200" Margin="10,0,0,315" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Content="Verbosity Level"/>
-                <ComboBox x:Uid="VerbosityLevel" x:Name="VerbosityLevel" Height="25" Width="200" Margin="10,0,0,290" VerticalAlignment="Bottom" HorizontalAlignment="Left">
-                    <ComboBoxItem>Trace</ComboBoxItem>
-                    <ComboBoxItem IsSelected="True">Debug</ComboBoxItem>
-                    <ComboBoxItem>Information</ComboBoxItem>
-                    <ComboBoxItem>Warning</ComboBoxItem>
-                    <ComboBoxItem>Error</ComboBoxItem>
-                    <ComboBoxItem>Critical</ComboBoxItem>
-                    <ComboBoxItem>None</ComboBoxItem>
-                </ComboBox>
-                <Grid x:Name="LogDumpGrid">
-                <ScrollViewer Background="#f6f6f6" x:Name="LogDumpScroll" Margin="10,0,10,80" Width="Auto" Height="200" VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
-                        <TextBox x:Name="LogDump" TextWrapping="Wrap">
-                            
-                        </TextBox>
-                </ScrollViewer>
+    <ScrollViewer x:Name="MainWindow" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+        <StackPanel>
+            <Label x:Name="Title" Content="Unity Code Smell Analyzer" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,10,10,0" Height="40" VerticalAlignment="Top"/>
+            <DockPanel x:Name="ProjectInput" Height="Auto" Margin="10,0,10,0" VerticalAlignment="Top">
+                <Grid Margin="0,0,0,0">
+                    <Button Click="ShowDirectoryDialog" Width="25" Height="25" Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Image Source="/Assets/open.jpg"/>
+                    </Button>
+                    <Label Content="Open Project" Height="26" Margin="15,35,0,0" Width="80" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="ProjectFolder" Height="20" Margin="120,0,100,0" VerticalAlignment="Center" TextChanged="ProjectFolderPlaceholder">
+                        <TextBox.Background>
+                            <ImageBrush AlignmentX="Left" Stretch="Uniform" ImageSource="/Assets/folderTextBg.gif" />
+                        </TextBox.Background>
+                    </TextBox>
                 </Grid>
-                <Button x:Name="Start" Content="Start" Margin="0,0,60,40" RenderTransformOrigin="0.800,-0.490" Click="StartAnalyze" Width="100" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom" Grid.Row="1"/>
-                <Button x:Name="Exit" Content="Exit" Margin="0,0,230,40" RenderTransformOrigin="0.800,-0.490" Click="ExitProgram" Width="100" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom" Grid.Row="1"/>
-            </Grid>
-        </GroupBox>
+            </DockPanel>
+            <Label FontWeight="Bold" Content="Analyzer Options" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <DockPanel Width="Auto" Height="Auto" Margin="10,0,10,20" VerticalAlignment="Top">
+                <DockPanel.Style>
+                    <Style TargetType="DockPanel">
+                        <Setter Property="IsEnabled" Value="True"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=ProjectFolder}" Value="">
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+                <StackPanel Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Label Content="Analysis Target" HorizontalContentAlignment="Left"/>
+                    <RadioButton Margin="0,0,0,5" x:Name="WholeProject" IsChecked="True" Width="180" GroupName="DirectorySelection" VerticalAlignment="Center">
+                        <TextBlock Text="Analyze Whole Project" VerticalAlignment="Center"/>
+                    </RadioButton>
+                    <RadioButton Margin="0,0,0,5" x:Name="OnlyAssets" Width="180" GroupName="DirectorySelection" VerticalAlignment="Center">
+                        <TextBlock Text="Analyze Assets Folder" VerticalAlignment="Center"/>
+                    </RadioButton>
+                    <RadioButton Margin="0,0,0,5" x:Name="SubFolder" Width="180" GroupName="DirectorySelection" VerticalAlignment="Center">
+                        <WrapPanel>
+                            <TextBlock Text="Analyze Specific Sub Folder" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBox x:Name="FolderToAnalyze" Width="150" Margin="0,2,0,0" Text="">
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox">
+                                        <Setter Property="IsEnabled" Value="True"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsChecked, ElementName=SubFolder}" Value="False">
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                        </WrapPanel>
+                    </RadioButton>
+                    <Label Content="Additional Assemblies Directory" HorizontalContentAlignment="Left"/>
+                    <TextBox x:Name="AdditionalAssemblies" Width="150" Margin="10,2,0,0"/>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel>
+                <Border Margin="30,0,30,0" Background="LightGray" BorderBrush="DarkGray" BorderThickness="0.2" ClipToBounds="True">
+                    <Border Background="Transparent" BorderBrush="DarkGray" BorderThickness="0 2 7 0" Margin="-2">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
+                        </Border.Effect>
+                    </Border>
+                </Border>
+            </DockPanel>
+            <DockPanel x:Name="OutputAndStart" Margin="0,20,0,0" Height="350" Width="Auto">
+                <DockPanel.Style>
+                    <Style TargetType="DockPanel">
+                        <Setter Property="IsEnabled" Value="True"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=ProjectFolder}" Value="">
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+                <Grid x:Name="LogDumpGrid" Margin="0,0,0,0" Width="Auto" Height="Auto">
+                    <Label x:Name="VerbosityText" Height="25" Width="200" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Verbosity Level"/>
+                    <ComboBox x:Uid="VerbosityLevel" x:Name="VerbosityLevel" Height="25" Width="200" Margin="15,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <ComboBoxItem x:Uid="0">Trace</ComboBoxItem>
+                        <ComboBoxItem x:Uid="1" IsSelected="True">Debug</ComboBoxItem>
+                        <ComboBoxItem x:Uid="2">Information</ComboBoxItem>
+                        <ComboBoxItem x:Uid="3">Warning</ComboBoxItem>
+                        <ComboBoxItem x:Uid="4">Error</ComboBoxItem>
+                        <ComboBoxItem x:Uid="5">Critical</ComboBoxItem>
+                    </ComboBox>
+                    <Label Width="100" Height="28" Margin="300,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Project Name"/>
+                    <TextBox x:Name="ProjectName" Height="20" Width="200" Margin="305,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Undefined"/>
+                    <ScrollViewer Background="#f6f6f6" x:Name="LogDumpScroll" Margin="10,0,10,80" Width="Auto" Height="200" VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+                        <TextBox x:Name="LogDump" TextWrapping="Wrap">
+
+                        </TextBox>
+                    </ScrollViewer>
+                </Grid>
+            </DockPanel>
+            <DockPanel>
+                <Grid>
+                    <Button x:Name="Start" Content="Start" Margin="0,0,50,0" Click="StartAnalyze" Width="100" HorizontalAlignment="Right" Height="25" VerticalAlignment="Top">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="IsEnabled" Value="True" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=ProjectFolder}" Value="">
+                                        <Setter Property="IsEnabled" Value="False" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:Name="Exit" Content="Exit" Margin="0,0,200,0" Click="ExitProgram" Width="100" HorizontalAlignment="Right" Height="25" VerticalAlignment="Top"/>
+                </Grid>
+            </DockPanel>
+        </StackPanel>
     </ScrollViewer>
 </Window>

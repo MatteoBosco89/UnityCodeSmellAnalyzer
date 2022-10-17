@@ -11,7 +11,7 @@ namespace CSharpAnalyzer
         public static void Main(string[] args)
         {
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => AnalyzerConfiguration.Init(o));
-            if (AnalyzerConfiguration.ProjectPath == null) Environment.Exit(1);
+            if (AnalyzerConfiguration.ProjectPath == null) { Logger.Log(Logger.LogLevel.Critical, "Project cannot be reached"); Environment.Exit(1); }
             ProjectSchema projectSchema = new ProjectSchema();
             projectSchema.Analyze();
             Environment.Exit(0);

@@ -18,9 +18,7 @@ namespace Gui
     /// </summary>
     public partial class UnityCodeSmellAnalyzer : Window
     {
-        protected Dictionary<string, string> parameters = new Dictionary<string, string>();
         protected string projectPath = "";
-        private List<ThreadHandler> threadHandlers = new List<ThreadHandler>();
 
         public UnityCodeSmellAnalyzer()
         {
@@ -29,8 +27,24 @@ namespace Gui
 
         private void StartAnalyze(object sender, RoutedEventArgs e)
         {
-            ThreadHandler th = new ThreadHandler("CSharpAnalyzer\\CSharpAnalyzer.exe", "--verbose --project \"" + projectPath + "\"", "CSharpAnalyzer", this);
-            
+            Program.AddParam("projectName", ProjectName.Text.Trim());
+            Program.AddParam("projectFolder", ProjectFolder.Text.Trim());
+            Program.AddParam("logLevel", ((ComboBoxItem)VerbosityLevel.SelectedValue).Uid);
+            Program.AddParam("directory", FolderUnderAnalysis());
+            Program.Init(this);  
+        }
+
+        private string FolderUnderAnalysis()
+        {
+            string folder = "";
+            if (WholeProject.IsChecked.HasValue && WholeProject.IsChecked.Value) folder = WholeProject.Name;
+            if (OnlyAssets.IsChecked.HasValue && OnlyAssets.IsChecked.Value) folder = "Assets";
+            if (SubFolder.IsChecked.HasValue && SubFolder.IsChecked.Value)
+            {
+                if (FolderToAnalyze.Text.Trim() == "") folder = WholeProject.Name;
+                else folder = FolderToAnalyze.Text.Trim();
+            }
+            return folder;
         }
 
         private void ExitProgram(object sender, RoutedEventArgs e)
@@ -45,7 +59,6 @@ namespace Gui
                 DialogResult result = folderDialog.ShowDialog();
                 if (result.ToString().Equals("OK")) ProjectFolder.Text = folderDialog.SelectedPath;
             }
-
         }
 
         public void WriteOutput(string? s)
@@ -81,6 +94,7 @@ namespace Gui
             textImageBrush.AlignmentX = AlignmentX.Left;
             textImageBrush.Stretch = Stretch.Uniform;
             t.Background = textImageBrush;
+            ProjectName.Text = "Undefined";
         }
 
         protected void LoadProjectName()
@@ -95,17 +109,13 @@ namespace Gui
                     {
                         string name = l.Split(':')[1];
                         if (name.Trim() == "") throw new Exception();
-                        projectName.Text = name;
+                        ProjectName.Text = name;
                     }
                 }
             }
-            catch (Exception) { projectName.Text = "Undefined"; }
+            catch (Exception) { ProjectName.Text = "Undefined"; }
         }
 
-        protected void UpdateProjectName(object sender, RoutedEventArgs e)
-        {
-            parameters["name"] = projectName.Text;
-        }
 
     }
 }

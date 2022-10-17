@@ -37,6 +37,7 @@ namespace GuiModel
             process.StartInfo.FileName = name;
             process.StartInfo.Arguments = arguments;
             process.StartInfo.RedirectStandardOutput = redirectOutput;
+            process.StartInfo.RedirectStandardError = redirectOutput;
             process.StartInfo.CreateNoWindow = createNoWindow;
             process.StartInfo.WorkingDirectory = Path.GetDirectoryName(name);
             process.StartInfo.UseShellExecute = shellExecute;

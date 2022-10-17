@@ -51,14 +51,14 @@ namespace CSharpAnalyzer
         public void Analyze()
         {
             if (!Directory.Exists(AnalyzerConfiguration.ProjectPath)) { Logger.Log(Logger.LogLevel.Critical, "Project not found"); return; }
-            if (!Directory.Exists(AnalyzerConfiguration.DirectoryPath)) { Logger.Log(Logger.LogLevel.Critical, "Directory not found"); return; }
+            if (!Directory.Exists(AnalyzerConfiguration.DirectoryPath)) { Logger.Log(Logger.LogLevel.Critical, "Directory to Analyze not found"); return; }
             LoadAssemblyList();
             LoadFileList();
-            if (fileList.Count <= 0) return;
+            if (fileList.Count <= 0) { Logger.Log(Logger.LogLevel.Critical, "No .cs files found!"); return; }
             LoadSyntax();
             CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies);
             AnalyzerConfiguration.Compilation = compilation;
-            if (AnalyzerConfiguration.Compilation == null) { Logger.Log(Logger.LogLevel.Critical, "Analysis Failed!"); return; }
+            if (AnalyzerConfiguration.Compilation == null) { Logger.Log(Logger.LogLevel.Critical, "Analysis Failed! Cannot create the Compilation."); return; }
             projectLanguage = AnalyzerConfiguration.Compilation.Language;
             projectDir = AnalyzerConfiguration.ProjectPath;
             directoryPath = AnalyzerConfiguration.DirectoryPath;
@@ -98,7 +98,7 @@ namespace CSharpAnalyzer
             try
             {
                 string[] dir = { ".cs" };
-                List<string> files = Directory.GetFiles(directoryPath, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
+                List<string> files = Directory.GetFiles(AnalyzerConfiguration.DirectoryPath, "*.*", SearchOption.AllDirectories).Where(f => dir.Any(f.ToLower().EndsWith)).ToList();
                 foreach (string f in files)
                 {
                     fileList.Add(f);

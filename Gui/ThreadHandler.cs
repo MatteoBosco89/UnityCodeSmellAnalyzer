@@ -17,9 +17,9 @@ namespace GuiModel
         public Thread Thread { get { return thread; } }
         public string Name { get { return processName; } }
 
-        public ThreadHandler(string process, string commands, string name, UnityCodeSmellAnalyzer main)
+        public ThreadHandler(string process, string commands, string name, UnityCodeSmellAnalyzer window)
         {
-            this.main = main;
+            main = window;
             processName = name;
             processHandler = new ProcessHandler(process, commands);
             thread = new Thread(() => StartThread());
@@ -30,8 +30,10 @@ namespace GuiModel
         {
             processHandler.CreateProcess();
             processHandler.Process.OutputDataReceived += new DataReceivedEventHandler(OnOutputDataReceived);
+            processHandler.Process.ErrorDataReceived += new DataReceivedEventHandler(OnOutputDataReceived);
             processHandler.Process.Exited += new EventHandler(OnExit);
             processHandler.Process.BeginOutputReadLine();
+            processHandler.Process.BeginErrorReadLine();
             processHandler.Process.WaitForExit();
         }
 
@@ -40,7 +42,6 @@ namespace GuiModel
             main.Dispatcher.Invoke(() => main.WriteOutput(DateTime.Now + " " + Name + " Started"));
             CreateProcess();
         }
-
         public void OnExit(object? sender, EventArgs args)
         {
             main.Dispatcher.Invoke(() => main.WriteOutput(DateTime.Now + " " + Name + " Exited"));

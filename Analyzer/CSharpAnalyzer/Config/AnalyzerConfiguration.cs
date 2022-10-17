@@ -78,8 +78,8 @@ namespace CSharpAnalyzer
         {
             if (opt.ProjectName != null) projectName = opt.ProjectName;
             Logger.Log(Logger.LogLevel.Critical, "Project: " + projectName);
-            if (opt.Directory != null) directoryPath = opt.Directory;
-            else directoryPath = opt.ProjectName;
+            if (opt.Directory != null) directoryPath = opt.ProjectPath + opt.Directory;
+            else directoryPath = opt.ProjectPath;
             Logger.Log(Logger.LogLevel.Critical, "Directory Analyzed: " + directoryPath);
             if (opt.ConfigFile != null) configFile = opt.ConfigFile;
             Logger.Log(Logger.LogLevel.Critical, "Config File: " + configFile);
@@ -89,7 +89,7 @@ namespace CSharpAnalyzer
             Logger.Log(Logger.LogLevel.Critical, "Verbose: " + verbose);
             projectPath = opt.ProjectPath;
             Logger.Log(Logger.LogLevel.Critical, "Project Path: " + projectPath);
-            Logger.Log(Logger.LogLevel.Critical, "Log Level: " + logLevel);
+            Logger.Log(Logger.LogLevel.Critical, "Log Level: " + (Logger.LogLevel)logLevel);
         }
 
         /// <summary>
