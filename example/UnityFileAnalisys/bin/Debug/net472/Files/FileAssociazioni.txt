@@ -1,4 +1,0 @@
-.controller
-.unity
-.prefab
-.mat
