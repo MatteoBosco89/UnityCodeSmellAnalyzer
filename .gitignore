@@ -1,0 +1,5 @@
+Analyzer\CodeSmellAnalysis\bin\Debug\net472\AllSmellResult\
+Analyzer\CodeSmellAnalysis\bin\Debug\net472\Results.json
+Analyzer\CodeSmellAnalysis\bin\Debug\net472\smellOccurencyProject.csv
+Analyzer\UnityDataSmellAnalyzer\bin\Debug\net472\mainResults\
+Analyzer\UnityDataSmellAnalyzer\bin\Debug\net472\metaResults\
