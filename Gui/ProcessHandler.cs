@@ -4,6 +4,9 @@ using System.IO;
 
 namespace GuiModel
 {
+    /// <summary>
+    /// Wrapper Class for the Process, handles all the process configurations and Life Cycle.
+    /// </summary>
     public class ProcessHandler
     {
         protected string name;
@@ -31,7 +34,9 @@ namespace GuiModel
             this.arguments = arguments;
             process = new Process();
         }
-
+        /// <summary>
+        /// Create the process with the given configurations.
+        /// </summary>
         public void CreateProcess()
         {
             process.StartInfo.FileName = name;
