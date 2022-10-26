@@ -88,7 +88,7 @@ namespace MetaSmellDetector
                 ExposeSmellMethod();
                 return;
             }
-            LoadData();
+            if(dataPath != null)LoadData();
             if (!isDataLoaded)
             {
                 return;

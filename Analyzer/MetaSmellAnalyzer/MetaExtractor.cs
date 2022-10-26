@@ -374,6 +374,56 @@ namespace MetaSmellDetector
             result.Add("Smells", smells);
             return result;
         }
+        /// <summary>
+        /// This method search animation with too many key frame
+        /// </summary>
+        /// <param name="data">The dataset to analyze</param>
+        /// <param name="paramList">The list of parameters</param>
+        public static JObject TooManyKeyFrames(JArray data, List<string> paramList)
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Search Too Many Key Frame Smell...");
+            JArray smells = new JArray();
+            JObject result = new JObject();
+            result.Add("Name", "Too Many Key Frame");
+            if(paramList.Count == 1)
+            {
+                int threshold = 0;
+                try
+                {
+                    threshold = int.Parse(paramList[0]);
+                }
+                catch (Exception)
+                {
+                    Logger.Log(Logger.LogLevel.Debug, "Threshold is not a number, no threshold set");
+                }
+                var res = data.SelectTokens("$..[?(@.type == 'anim')]");
+               
+                foreach (JToken obj in res)
+                {
+                    res = obj.SelectTokens("$..m_Curve");
+                    if (res.Count() > 0)
+                    {
+                        JToken animData = res.ElementAt(0);
+                        var res1 = animData.SelectTokens("$..time");
+                        int numKey = res1.Count();
+                        if(numKey >= threshold)
+                        {
+                            JObject s = new JObject();
+                            s.Add("FileName", obj["file_path"]);
+                            s.Add("Name", obj["name"]);
+                            s.Add("Type", obj["type"]);
+                            s.Add("KeyFrames", numKey);
+                            smells.Add(s);
+                        }
+                    }
+                }
+                
+            }
+            Logger.Log(Logger.LogLevel.Debug, "Done!!");
+            result.Add("Occurrency", smells.Count());
+            result.Add("Smells", smells);
+            return result;
+        }
     }
 }
 
