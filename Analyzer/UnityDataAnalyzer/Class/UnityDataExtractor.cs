@@ -41,7 +41,11 @@ namespace UnityDataAnalyzer
             if (opt.NoMeta) meta = false;
             if (opt.Extensions.Count() > 0) LoadExtensions(opt.Extensions);
             if (opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
-            if (opt.SaveDirectory != null) save_dir = opt.SaveDirectory;
+            if (opt.SaveDirectory != null)
+            {
+                save_dir = opt.SaveDirectory;
+                save_dir = save_dir.Replace("\\", "/");
+            }
             if (opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
             Logger.LogFile = "UnityExtractor.Log";
@@ -127,7 +131,7 @@ namespace UnityDataAnalyzer
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
           
-            string main_dir =save_dir + "\\" + MAIN_DIR;
+            string main_dir =save_dir + "/" + MAIN_DIR;
             DirectoryInfo d = new DirectoryInfo(main_dir);
             if (d.Exists) d.Delete(true);
             Directory.CreateDirectory(main_dir);
@@ -137,11 +141,12 @@ namespace UnityDataAnalyzer
                 res.Add("ProjectPath", directory);
                 string fileName = res["guid"].ToString() + ".json";
                 Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                File.WriteAllText(main_dir + "\\" + fileName, res.ToString());
+                string s = main_dir + "/" + fileName;
+                File.WriteAllText(s, res.ToString());
             }
             if (meta)
             {
-                string meta_dir = save_dir + "\\" + META_DIR;
+                string meta_dir = save_dir + "/" + META_DIR;
                 d = new DirectoryInfo(meta_dir);
                 if (d.Exists) d.Delete(true);
                 Directory.CreateDirectory(meta_dir);
@@ -151,7 +156,8 @@ namespace UnityDataAnalyzer
                     res.Add("ProjectPath", directory);
                     string fileName = res["guid"].ToString() + ".json";
                     Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                    File.WriteAllText(meta_dir + "\\" + fileName, res.ToString());
+                    string s = meta_dir + "/" + fileName);
+                    File.WriteAllText(s, res.ToString());
                 }
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");

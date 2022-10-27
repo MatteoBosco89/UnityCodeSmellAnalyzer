@@ -30,6 +30,8 @@ namespace CodeSmellFinder
         public bool NumSmellForProject { get; set; }
         [Option('c', "category", Required = false, HelpText = "Save number of smell for each category for each c# script in .csv")]
         public bool SmellForFile { get; set; }
+        [Option('r', "result", Required = false, HelpText = "Save results to specified folder")]
+        public string SaveDirectory { get; set; }
         [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)")]
         public int Logging { get; set; }
     }

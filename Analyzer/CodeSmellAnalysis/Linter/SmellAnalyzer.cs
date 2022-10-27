@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace CodeSmellFinder
 {
@@ -20,6 +21,7 @@ namespace CodeSmellFinder
         private static bool expose = false;
         private static bool numSmellForProject = false;
         private static bool smellForFile = false;
+        private static string save_dir = "";
 
         public static string DataPath { get { return dataPath; } set { dataPath = value; } }
         public static string SmellFile { get { return smellFile; } set { smellFile = value; } }
@@ -36,7 +38,12 @@ namespace CodeSmellFinder
             if (option.Smell != null) smellsToAnalyze.Add(option.Smell);
             if (option.Expose) expose = true;
             if (option.NumSmellForProject) numSmellForProject = true;
-            if (option.SmellForFile) smellForFile = true; 
+            if (option.SmellForFile) smellForFile = true;
+            if (option.SaveDirectory != null)
+            {
+                save_dir = option.SaveDirectory;
+                save_dir = save_dir.Replace("\\", "/");
+            }
             if (option.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
             Logger.LogFile = "Linter.log";
@@ -137,11 +144,15 @@ namespace CodeSmellFinder
         {
             JObject res = new JObject();
             res.Add("ProjectName", data["ProjectName"]);
+            res.Add("ProjectDirectory", data["ProjectDirectory"]);
             res.Add("ProjectLanguage", data["ProjectLanguage"]);
             res.Add("DatasetPath", dataPath);
             res.Add("SmellList", results);
             Logger.Log(Logger.LogLevel.Debug, $"Saving results to {resultFile}...");
-            File.WriteAllText(resultFile, res.ToString());
+            string name;
+            if (save_dir == "") name = resultFile;
+            else name = save_dir + "/" + resultFile;
+            File.WriteAllText(name, res.ToString());
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
@@ -164,14 +175,38 @@ namespace CodeSmellFinder
         public static void SaveNumSmellForProject()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Num Smell For Project...");
-            string s = "";
-            foreach(JToken t in results)
+            string name;
+            if (save_dir == "") name = resultFile;
+            else name = save_dir + "/" + "smellOccurencyProject.csv";
+            using (var file = File.CreateText(name))
             {
-                Console.WriteLine(t["Name"]);
-                s += t["Name"].ToString() + "; " + t["Occurency"];
-                s += "\n";
+                Dictionary<string, string> csv = new Dictionary<string, string>();
+                csv.Add("ProjectName", data["ProjectDirectory"].ToString());
+                csv.Add("ProjectDirectory", data["ProjectDirectory"].ToString());
+                var j = (JArray)data["Project"];
+                csv.Add("NumScripts", j.Count().ToString());
+                foreach(JToken r in results)
+                {
+                    csv.Add(r["Name"].ToString(), r["Occurency"].ToString());
+                }
+                string h = "";
+                string v = "";
+                int i = 0;
+                foreach(string k in csv.Keys)
+                {
+                    h += k;
+                    v += csv[k];
+                    if (i < csv.Count())
+                    {
+                        h += ";";
+                        v += ";";
+                    }
+                    i++;
+                }
+                file.WriteLine(h);
+                file.WriteLine(v);
+                file.Close();
             }
-            File.WriteAllText("smellOccurencyProject.csv", s);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
@@ -180,7 +215,8 @@ namespace CodeSmellFinder
         public static void SaveNumSmellForFile()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Compilation Unit...");
-            Directory.CreateDirectory("AllSmellResult");
+            string dir = save_dir + "/" + "AllSmellResult";
+            Directory.CreateDirectory(dir);
             List<JToken> filesNames = Utility.AllCompUnitFileName(data["Project"] as JArray);
             foreach(JToken smell in results)
             {
@@ -198,7 +234,7 @@ namespace CodeSmellFinder
                     
                 }
                 string name = smell["Name"].ToString().Replace(" ", "_");
-                name = "AllSmellResult\\" + name + ".csv";
+                name = dir + "/" + name + ".csv";
                 File.WriteAllText(name, text);
                 Logger.Log(Logger.LogLevel.Debug, "Saved: " + name);
             }

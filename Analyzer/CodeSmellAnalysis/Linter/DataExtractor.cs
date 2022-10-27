@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using CSharpAnalyzer;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var queryRes = cu.SelectTokens($"$..Methods[?({Utility.QueryString(".", param, methods, "==", "||")})]");
                     JArray mets = new JArray(queryRes);
                     foreach (JToken m in mets)
@@ -57,6 +59,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var query = cu.SelectTokens($"$..Methods[?({Utility.QueryString(".", param, methods, "==", "||")})]");
                     JArray res = new JArray(query);
 
@@ -106,6 +109,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var query = cu.SelectTokens($"$..Variables[?({Utility.QueryString("..", param, values, "==", "||")})]");
                     JArray res = new JArray(query);
 
@@ -161,6 +165,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = token as JObject;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var query = cu.SelectTokens($"$..Methods[?({Utility.QueryString(".", param, methods, "==", "||")})]..Invocations");
                     JArray results = new JArray(query);
                     foreach (JToken inv in results.Values())
@@ -202,6 +207,7 @@ namespace CodeSmellFinder
                     List<MethodReference> methodsToCheck = new List<MethodReference>();
                     List<string> checkedMethods = new List<string>();
                     JObject cu = (JObject)token;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var query = cu.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]..Invocations");
                     JArray results = new JArray(query);
                     JArray invArgs = new JArray();
@@ -304,6 +310,7 @@ namespace CodeSmellFinder
             foreach (JToken token in data)
             {
                 string fileName = token["FileName"].ToString();
+                Logger.Log(Logger.LogLevel.Debug, token["Name"].ToString());
                 var query = token.SelectTokens($"..Classes");
                 JArray classes = new JArray(query);
                 foreach (JToken c in classes.Values())
@@ -379,6 +386,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     smells.Merge(FieldWithParam(cu, "..", typeParam, false, types, param, values));
                 }
             }
@@ -445,6 +453,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var query = cu.SelectTokens($"$..{collection}");
 
                     JArray res = new JArray(query);
@@ -491,6 +500,7 @@ namespace CodeSmellFinder
             JArray smells = new JArray();
             foreach (JToken cu in data)
             {
+                Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                 var queryRes = cu.SelectTokens($"$..Methods");
                 JArray res = new JArray(queryRes);
                 foreach (JToken m in res.Values())
@@ -551,6 +561,7 @@ namespace CodeSmellFinder
             {
                 JObject comUnit = new JObject();
                 if (token is JObject @object) comUnit = @object;
+                Logger.Log(Logger.LogLevel.Debug, comUnit["Name"].ToString());
 
                 JArray mets = new JArray(comUnit.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]"));
                 foreach (JToken m in mets)
@@ -708,9 +719,11 @@ namespace CodeSmellFinder
             JArray smells = new JArray();
             foreach (JToken token in data)
             {
+
                 if (token is JObject)
                 {
                     JObject cu = token as JObject;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var queryRes = cu.SelectTokens("$..Classes");
                     JArray classes = new JArray(queryRes);
                     foreach (JToken cl in classes.Values())
@@ -800,9 +813,11 @@ namespace CodeSmellFinder
             JArray smells = new JArray();
             foreach (JToken token in data)
             {
+               
                 if (token is JObject)
                 {
                     JObject cu = token as JObject;
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var queryRes = cu.SelectTokens("$..Classes");
                     JArray classes = new JArray(queryRes);
                     foreach (JToken cl in classes.Values())
@@ -890,6 +905,7 @@ namespace CodeSmellFinder
             JArray smells = new JArray();
             foreach (JToken cu in data)
             {
+                Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                 JArray variables = new JArray(cu.SelectTokens("$..Variable"));
                 foreach (JToken v in variables)
                 {
@@ -932,7 +948,7 @@ namespace CodeSmellFinder
             {
                 if (cu is JObject)
                 {
-
+                    Logger.Log(Logger.LogLevel.Debug, cu["Name"].ToString());
                     var query = cu.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]");
                     JArray mets = new JArray(query);
                     foreach (JToken m in mets)
@@ -1051,6 +1067,7 @@ namespace CodeSmellFinder
             {
                 if(compUnit is JObject)
                 {
+                    Logger.Log(Logger.LogLevel.Debug, compUnit["Name"].ToString());
                     var query = compUnit.SelectTokens($"$..Methods[?({Utility.QueryString(".", "Name", methods, "==", "||")})]");
                     JArray res = new JArray(query);
                     foreach(JToken met in res)
