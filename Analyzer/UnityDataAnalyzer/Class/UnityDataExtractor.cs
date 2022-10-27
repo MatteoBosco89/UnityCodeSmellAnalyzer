@@ -156,7 +156,7 @@ namespace UnityDataAnalyzer
                     res.Add("ProjectPath", directory);
                     string fileName = res["guid"].ToString() + ".json";
                     Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                    string s = meta_dir + "/" + fileName);
+                    string s = meta_dir + "/" + fileName;
                     File.WriteAllText(s, res.ToString());
                 }
             }
