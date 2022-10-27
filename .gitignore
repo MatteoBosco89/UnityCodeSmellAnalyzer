@@ -4,6 +4,7 @@ Analyzer\CodeSmellAnalysis\bin\Debug\net472\smellOccurencyProject.csv
 Analyzer\UnityDataSmellAnalyzer\bin\Debug\net472\mainResults\
 Analyzer\UnityDataSmellAnalyzer\bin\Debug\net472\metaResults\
 example\
+Repos\
 .DS_Store
 
 ## Ignore Visual Studio temporary files, build results, and
