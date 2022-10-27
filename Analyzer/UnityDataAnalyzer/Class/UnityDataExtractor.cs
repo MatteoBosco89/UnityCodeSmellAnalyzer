@@ -42,7 +42,7 @@ namespace UnityDataAnalyzer
             if(opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
             if(opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
-            Logger.LogFile= "UnityExtractor.Log";
+            Logger.LogFile = "UnityExtractor.Log";
             Logger.Start();
         }
         /// <summary>
@@ -124,6 +124,8 @@ namespace UnityDataAnalyzer
         public static void SaveResults()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
+            DirectoryInfo d = new DirectoryInfo(MAIN_DIR);
+            if (d.Exists) d.Delete(true);
             Directory.CreateDirectory(MAIN_DIR);
             foreach (var data in mainData)
             {
@@ -135,6 +137,8 @@ namespace UnityDataAnalyzer
             }
             if (meta)
             {
+                d = new DirectoryInfo(META_DIR);
+                if (d.Exists) d.Delete(true);
                 Directory.CreateDirectory(META_DIR);
                 foreach (var data in metaData)
                 {

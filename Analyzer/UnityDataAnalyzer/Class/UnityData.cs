@@ -4,6 +4,7 @@ using Element;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace UnityAnalyzer
 {
@@ -86,8 +87,11 @@ namespace UnityAnalyzer
         {
             components = new Dictionary<string, Element.Element>();
             int j = 0;
+            if (lines[0].Contains("\u0004")) return;
+            if (!lines[0].Contains(SPEC_STR)) return;
             for (int i = 0; i < lines.Length; i++)
             {
+                if (lines[0].Contains("\u0004")) return;
                 string cid = "";
                 if (lines[i].Contains(SPEC_STR)) continue;
                 
@@ -97,12 +101,15 @@ namespace UnityAnalyzer
                     
                     i++;
                 }
-                //Console.WriteLine("maindata"+lines[i]);
+                Console.WriteLine("maindata"+lines[i]);
+                if (lines[i].Split(':').Length <= 1) return;
                 if (lines[i].Split(':')[1].Length <= 1)
                 {
+                    //Console.WriteLine("if " + lines[i]);
                     DictionaryElement d = new DictionaryElement();
                     i = d.LoadNormalDictionary(lines, i, COMP_ID);
                     i--;
+                    
                     if (components.ContainsKey(cid))
                     {
                         j++;

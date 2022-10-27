@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.CodeAnalysis.CSharp;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,43 +40,62 @@ namespace Element
             int j = 0;
             for (; i < lines.Length; i++)
             {
-                int num_spaces = NumOfSpaces(lines[i]) - indent; //calculate the indentation of the current line in respect of the line containing the type of the subdictionary
-
+                
+                int num_spaces = NumOfSpaces(lines[i]) - indent;
+                //Console.WriteLine(num_spaces);//calculate the indentation of the current line in respect of the line containing the type of the subdictionary
                 if (num_spaces < 0)return i; //if the current line doesn't have the same indentation of the subdictionary block return
-                if (lines[i].Trim().Length <= 1) return i; //if the line is empty return
+                
+                if (lines[i].Trim().Length <= 1)return i;//if the line is empty return
+               
                 if (lines[i].Contains(cmpId)) return i;
+               
                 string[] vals = lines[i].Split(':'); //split the line using the ':' separator
-                                                    // the first element of vals is the name of the element inside the subdictionary
-                                                    // the second element is the value
+                                                     // the first element of vals is the name of the element inside the subdictionary
+                //Console.WriteLine("a" + lines[i] + vals.Length);                             // the second element is the value
                 Element d;
                 try 
                 {
                     if(vals.Length == 1)// verify if the dictionary doesn't contain key value pair inside
                     {
+                        
                         d = new DictionaryElement();
                         i = d.LoadSpecialDictionary(lines, i);
                         i--;
                     }
                     else if (vals[1].Length <= 1)//if the second element of the line is empty it means that we have another sub dictionary or an empty value
                     {
-                        if (i + 1 < lines.Length)//if the next line doesn't have the same indentation that means we have a sub dictionary else we have an empty element
+                        
+                        if (i + 1 < lines.Length)
                         {
-                            if (NumOfSpaces(lines[i + 1]) - indent > 0)
+                            
+                            if (NumOfSpaces(lines[i + 1]) - indent > 0)//if the next line doesn't have the same indentation that means we have a sub dictionary else we have an empty element
                             {
+                               
                                 //some time the element of the sub dictionary are - {fileID: 8600129312555473672}
                                 string[] temp = lines[i + 1].Split('{');
                                 if (!temp[0].Contains(":"))
                                 {
-                                    d = new DictionaryElement();
-                                    i = d.LoadDictionaryWithSpecialElements(lines, i, cmpId);
-                                    i--;
+                                    if (!lines[i + 1].Contains("{")){
+                                        
+                                        d = new DictionaryElement();
+                                        i = d.LoadSpecialDictionary(lines, i);
+                                        i--;
+                                    }
+                                    else
+                                    {
+                                        d = new DictionaryElement();
+                                        i = d.LoadDictionaryWithSpecialElements(lines, i, cmpId);
+                                        i--;
+                                    }
                                 }
                                 else
                                 {
+                                    
                                     d = new DictionaryElement();
                                     i = d.LoadNormalDictionary(lines, i, cmpId);
                                     i--;
                                 }
+                                
                             }
                             else
                                 d = new SimpleElement("");
@@ -119,12 +139,15 @@ namespace Element
                         d = new SimpleElement(vals[1].Trim());
                     }
                     string key = vals[0].Trim();//because inside the unity file some element inside the dictionary have the same name a progressiv index is added to avoid conflicts
+                    j = 0;
                     if (values.ContainsKey(key))
                     {
-                        j++;
+                        while (values.ContainsKey(key + j))
+                        {
+                            j++;
+                        }
                         key = key + j;
                     }
-                    else j = 0;
 
                     values.Add(key, d);
                 } 
@@ -162,7 +185,9 @@ namespace Element
             values = new Dictionary<string, Element>();
             type = lines[i].Split(':')[0].Trim(); //read the type of the subdictionary from the first line passed
             i++;
+            Console.WriteLine(lines[i]);
             int indent = NumOfSpaces(lines[i]);
+            Console.WriteLine(indent);
             int j = 0;
             for(; i < lines.Length; i++)
             {
