@@ -40,7 +40,7 @@
                 </DockPanel.Style>
                 <DockPanel x:Name="CodeSmellSection">
                     <StackPanel Margin="0,0,0,0" Width="240" VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <Label Content="Analysis Target" HorizontalContentAlignment="Left"/>
+                    <Label Content="Analysis Target" HorizontalContentAlignment="Center"/>
                     <RadioButton Margin="0,0,0,5" x:Name="WholeProject" IsChecked="True" Width="180" GroupName="DirectorySelection" VerticalAlignment="Center">
                         <TextBlock Text="Analyze Whole Project" VerticalAlignment="Center"/>
                     </RadioButton>
@@ -65,7 +65,7 @@
                         </WrapPanel>
                     </RadioButton>
                     <Label Content="Additional Assemblies Directory" HorizontalContentAlignment="Left"/>
-                    <TextBox x:Name="AdditionalAssemblies" Width="150" Margin="10,2,0,0"/>
+                    <TextBox x:Name="AdditionalAssemblies" Width="200" Margin="10,2,0,0"/>
                 </StackPanel>
                 <StackPanel Margin="0,0,0,0" Width="240" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Label Content="Code Smell Detection" HorizontalContentAlignment="Center"/>
@@ -78,7 +78,7 @@
                     <CheckBox x:Name="NoMeta" Content="Ignore Meta Files"/>
                     <Label Content="Extentions List to search" HorizontalContentAlignment="Left"/>
                     <Label Content="divided by space (ext1 ext2 ...)" Margin="0,-12,0,0" HorizontalContentAlignment="Left"/>
-                    <TextBox x:Name="ExtList" Width="150" Margin="10,2,0,0"/>
+                    <TextBox x:Name="ExtList" Width="150" Margin="-50,2,0,0"/>
                     
                 </StackPanel>
                 <StackPanel Margin="0,0,0,0" Width="240" VerticalAlignment="Top" HorizontalAlignment="Left">

@@ -31,6 +31,8 @@ namespace Gui
             Program.AddParam("projectFolder", ProjectFolder.Text.Trim());
             Program.AddParam("logLevel", ((ComboBoxItem)VerbosityLevel.SelectedValue).Uid);
             Program.AddParam("directory", FolderUnderAnalysis());
+            Program.AddParam("nometa", (bool)NoMeta.IsChecked ? "1" : "0");
+            if (ExtList.Text.Trim() != "") Program.AddParam("ext", ExtList.Text.Trim());
             Program.Init(this);  
         }
 

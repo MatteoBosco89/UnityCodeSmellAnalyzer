@@ -37,6 +37,7 @@ namespace GuiModel
         private static void StartAnalysis()
         {
             threadHandlers.Add(new ThreadHandler("CSharpAnalyzer\\CSharpAnalyzer.exe", CreateCommand(Utility.CSharpAnalyzer), "CSharpAnalyzer", main));
+            threadHandlers.Add(new ThreadHandler("UnityDataAnalyzer\\UnityDataAnalyzer.exe", CreateCommand(Utility.UnityDataAnalyzer), "UnityDataAnalyzer", main));
         }
         /// <summary>
         /// Starts Smell Detecion

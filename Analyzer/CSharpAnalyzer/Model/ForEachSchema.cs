@@ -44,7 +44,7 @@ namespace CSharpAnalyzer
             iterator = forEach.Identifier.ToString();
             iteratorType = forEach.Type.ToString();
             iterable = forEach.Expression.ToString();
-            iterableType = model.GetTypeInfo(forEach.Expression).Type.ToString();
+            iterableType = model.GetTypeInfo(forEach.Expression).Type?.ToString();
             if (model.GetSymbolInfo(forEach.Expression).Symbol is IMethodSymbol)
             {
                 expressionIsInvocation = true;
