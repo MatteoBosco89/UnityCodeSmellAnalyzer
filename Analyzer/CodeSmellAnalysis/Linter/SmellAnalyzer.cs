@@ -42,7 +42,6 @@ namespace CodeSmellFinder
             if (option.SaveDirectory != null)
             {
                 save_dir = option.SaveDirectory;
-                save_dir = save_dir.Replace("\\", "/");
             }
             if (option.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
@@ -149,9 +148,9 @@ namespace CodeSmellFinder
             res.Add("DatasetPath", dataPath);
             res.Add("SmellList", results);
             Logger.Log(Logger.LogLevel.Debug, $"Saving results to {resultFile}...");
-            string name;
-            if (save_dir == "") name = resultFile;
-            else name = save_dir + "/" + resultFile;
+            string name = Directory.GetCurrentDirectory();
+            if (save_dir == "") name = Path.Combine(name, resultFile);
+            else name = Path.Combine(save_dir, resultFile);
             File.WriteAllText(name, res.ToString());
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
@@ -175,9 +174,9 @@ namespace CodeSmellFinder
         public static void SaveNumSmellForProject()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Num Smell For Project...");
-            string name;
-            if (save_dir == "") name = resultFile;
-            else name = save_dir + "/" + "smellOccurencyProject.csv";
+            string name = Directory.GetCurrentDirectory();
+            if (save_dir == "") name = Path.Combine(name, resultFile);
+            else name = Path.Combine(save_dir , "smellOccurencyProject.csv");
             using (var file = File.CreateText(name))
             {
                 Dictionary<string, string> csv = new Dictionary<string, string>();
@@ -215,7 +214,9 @@ namespace CodeSmellFinder
         public static void SaveNumSmellForFile()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Compilation Unit...");
-            string dir = save_dir + "/" + "AllSmellResult";
+            string dir = Directory.GetCurrentDirectory();
+            if (save_dir == "") dir = Path.Combine(dir, "AllSmellResult");
+            else dir = Path.Combine(save_dir, "AllSmellResult");
             Directory.CreateDirectory(dir);
             List<JToken> filesNames = Utility.AllCompUnitFileName(data["Project"] as JArray);
             foreach(JToken smell in results)
@@ -234,7 +235,7 @@ namespace CodeSmellFinder
                     
                 }
                 string name = smell["Name"].ToString().Replace(" ", "_");
-                name = dir + "/" + name + ".csv";
+                name = Path.Combine(dir, name + ".csv");
                 File.WriteAllText(name, text);
                 Logger.Log(Logger.LogLevel.Debug, "Saved: " + name);
             }
