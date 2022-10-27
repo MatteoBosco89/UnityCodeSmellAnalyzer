@@ -185,9 +185,9 @@ namespace Element
             values = new Dictionary<string, Element>();
             type = lines[i].Split(':')[0].Trim(); //read the type of the subdictionary from the first line passed
             i++;
-            Console.WriteLine(lines[i]);
+            //Console.WriteLine(lines[i]);
             int indent = NumOfSpaces(lines[i]);
-            Console.WriteLine(indent);
+            //Console.WriteLine(indent);
             int j = 0;
             for(; i < lines.Length; i++)
             {
