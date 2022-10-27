@@ -130,8 +130,9 @@ namespace UnityDataAnalyzer
         public static void SaveResults()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
-          
-            string main_dir =save_dir + "/" + MAIN_DIR;
+            string main_dir;
+            if (save_dir == "") main_dir = MAIN_DIR;
+            else main_dir =save_dir + "/" + MAIN_DIR;
             DirectoryInfo d = new DirectoryInfo(main_dir);
             if (d.Exists) d.Delete(true);
             Directory.CreateDirectory(main_dir);
@@ -146,7 +147,9 @@ namespace UnityDataAnalyzer
             }
             if (meta)
             {
-                string meta_dir = save_dir + "/" + META_DIR;
+                string meta_dir;
+                if (save_dir == "") meta_dir = MAIN_DIR;
+                else meta_dir = save_dir + "/" + MAIN_DIR;
                 d = new DirectoryInfo(meta_dir);
                 if (d.Exists) d.Delete(true);
                 Directory.CreateDirectory(meta_dir);
