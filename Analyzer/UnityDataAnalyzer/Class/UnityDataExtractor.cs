@@ -44,7 +44,6 @@ namespace UnityDataAnalyzer
             if (opt.SaveDirectory != null)
             {
                 save_dir = opt.SaveDirectory;
-                save_dir = save_dir.Replace("\\", "/");
             }
             if (opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
@@ -130,9 +129,9 @@ namespace UnityDataAnalyzer
         public static void SaveResults()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
-            string main_dir;
-            if (save_dir == "") main_dir = MAIN_DIR;
-            else main_dir =save_dir + "/" + MAIN_DIR;
+            string main_dir = Directory.GetCurrentDirectory();
+            if (save_dir == "") main_dir = Path.Combine(main_dir, MAIN_DIR);
+            else main_dir = Path.Combine(save_dir, MAIN_DIR);
             DirectoryInfo d = new DirectoryInfo(main_dir);
             if (d.Exists) d.Delete(true);
             Directory.CreateDirectory(main_dir);
@@ -142,14 +141,14 @@ namespace UnityDataAnalyzer
                 res.Add("ProjectPath", directory);
                 string fileName = res["guid"].ToString() + ".json";
                 Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                string s = main_dir + "/" + fileName;
+                string s = Path.Combine(main_dir, fileName);
                 File.WriteAllText(s, res.ToString());
             }
             if (meta)
             {
-                string meta_dir;
-                if (save_dir == "") meta_dir = MAIN_DIR;
-                else meta_dir = save_dir + "/" + MAIN_DIR;
+                string meta_dir = Directory.GetCurrentDirectory();
+                if (save_dir == "") meta_dir = Path.Combine(meta_dir, META_DIR);
+                else meta_dir = Path.Combine(save_dir, META_DIR);
                 d = new DirectoryInfo(meta_dir);
                 if (d.Exists) d.Delete(true);
                 Directory.CreateDirectory(meta_dir);
@@ -159,7 +158,7 @@ namespace UnityDataAnalyzer
                     res.Add("ProjectPath", directory);
                     string fileName = res["guid"].ToString() + ".json";
                     Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                    string s = meta_dir + "/" + fileName;
+                    string s = Path.Combine(meta_dir, fileName);
                     File.WriteAllText(s, res.ToString());
                 }
             }
