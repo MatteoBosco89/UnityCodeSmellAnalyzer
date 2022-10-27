@@ -25,6 +25,8 @@ namespace UnityDataAnalyzer
         public IEnumerable<string> Extensions { get; set; }
         [Option('v', "verbose", Required = false, HelpText = "Enable the status log on console window")]
         public bool Verbose { get; set; }
+        [Option('s', "save", Required = false, HelpText = "Save results to specified folder")]
+        public string SaveDirectory { get; set; }
         [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)")]
         public int Logging { get; set; }
     }

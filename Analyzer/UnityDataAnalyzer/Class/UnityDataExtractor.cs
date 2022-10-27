@@ -26,6 +26,7 @@ namespace UnityDataAnalyzer
         protected static string MAIN_FILE = "mainData.json";
         protected static string META_FILE = "metaData.json";
         protected static bool meta = true;
+        protected static string save_dir = "";
         protected static string directory = null;
         protected static string file_extensions = null;
         protected static int logLevel = 1;
@@ -36,11 +37,12 @@ namespace UnityDataAnalyzer
         /// <param name="opt">The Options object containing the parameter given to the program</param>
         public static void Init(Options opt)
         {
-            if(opt.DataPath != null)directory = opt.DataPath;
-            if(opt.NoMeta) meta = false;
-            if(opt.Extensions.Count() > 0) LoadExtensions(opt.Extensions);
-            if(opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
-            if(opt.Verbose) Logger.Verbose = true;
+            if (opt.DataPath != null)directory = opt.DataPath;
+            if (opt.NoMeta) meta = false;
+            if (opt.Extensions.Count() > 0) LoadExtensions(opt.Extensions);
+            if (opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
+            if (opt.SaveDirectory != null) save_dir = opt.SaveDirectory;
+            if (opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
             Logger.LogFile = "UnityExtractor.Log";
             Logger.Start();
@@ -124,63 +126,37 @@ namespace UnityDataAnalyzer
         public static void SaveResults()
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
-            DirectoryInfo d = new DirectoryInfo(MAIN_DIR);
+          
+            string main_dir =save_dir + "\\" + MAIN_DIR;
+            DirectoryInfo d = new DirectoryInfo(main_dir);
             if (d.Exists) d.Delete(true);
-            Directory.CreateDirectory(MAIN_DIR);
+            Directory.CreateDirectory(main_dir);
             foreach (var data in mainData)
             {
                 JObject res = data.ToJsonObject();
                 res.Add("ProjectPath", directory);
                 string fileName = res["guid"].ToString() + ".json";
                 Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                File.WriteAllText(MAIN_DIR + "\\" + fileName, res.ToString());
+                File.WriteAllText(main_dir + "\\" + fileName, res.ToString());
             }
             if (meta)
             {
-                d = new DirectoryInfo(META_DIR);
+                string meta_dir = save_dir + "\\" + META_DIR;
+                d = new DirectoryInfo(meta_dir);
                 if (d.Exists) d.Delete(true);
-                Directory.CreateDirectory(META_DIR);
+                Directory.CreateDirectory(meta_dir);
                 foreach (var data in metaData)
                 {
                     JObject res = data.ToJsonObject();
                     res.Add("ProjectPath", directory);
                     string fileName = res["guid"].ToString() + ".json";
                     Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
-                    File.WriteAllText(META_DIR + "\\" + fileName, res.ToString());
+                    File.WriteAllText(meta_dir + "\\" + fileName, res.ToString());
                 }
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
        
-        public static void SaveResults1()
-        {
-            Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
-            JObject res = new JObject();
-           
-            JArray exts = new JArray();
-            foreach (string s in DIR) exts.Add(s);
-            res.Add("Extensions", exts);
-            JArray ja = new JArray();
-            foreach (UnityData d in mainData) ja.Add(JsonConvert.SerializeObject(d));
-            res.Add("ObjectsData", ja);
-            Directory.CreateDirectory(RESULT_DIR);
-            File.WriteAllText(RESULT_DIR + "\\" + MAIN_FILE, res.ToString());
-            Logger.Log(Logger.LogLevel.Debug, "\tMain Results saved in " + Path.GetFullPath(MAIN_FILE));
-            if (meta)
-            {
-                ja = new JArray();
-                res = new JObject();
-                res.Add("ProjectPath", directory);
-                res.Add("Extensions", ".meta");
-                foreach (UnityData d in metaData) ja.Add(d.ToJsonObject());
-                res.Add("ObjectsData", ja);
-                Directory.CreateDirectory(RESULT_DIR);
-                File.WriteAllText(RESULT_DIR + "\\" + META_FILE, res.ToString());
-                Logger.Log(Logger.LogLevel.Debug, "\tMeta Results saved in " + Path.GetFullPath(META_FILE));
-            }
-            Logger.Log(Logger.LogLevel.Debug, "Done!");
-
-        }
         /// <summary>
         /// Load the file containing the list of file extension to analyze
         /// </summary>
