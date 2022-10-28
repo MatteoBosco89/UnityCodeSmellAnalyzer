@@ -94,6 +94,9 @@ namespace UnityDataAnalyzer
                 if (!LoadExtensionsFile()) return;
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
+            Logger.Log(Logger.LogLevel.Debug, "Creating Result Directories");
+            CreateResultDirectory(MAIN_DIR);
+            if (meta) CreateResultDirectory(META_DIR);
             Logger.Log(Logger.LogLevel.Debug, "Start analisys...");
             //load all prefab/unity/controller/mat files
             //load all metafile
@@ -102,10 +105,12 @@ namespace UnityDataAnalyzer
             {
                 if (unityMetaFileList.Contains(file + ".meta"))
                 {
-                    Logger.Log(Logger.LogLevel.Debug, $"File: {file}");
+                    Logger.Log(Logger.LogLevel.Debug, $"Analyzing File: {file}");
                     UnityData d = new UnityData(file, file + ".meta");
+                    Logger.Log(Logger.LogLevel.Debug, $"Data Extracted!");
                     unityMetaFileList.Remove(file + ".meta");
-                    mainData.Add(d);
+                    SaveSingleFile(d, MAIN_DIR);
+                    //mainData.Add(d);
                 }
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
@@ -114,14 +119,16 @@ namespace UnityDataAnalyzer
                 Logger.Log(Logger.LogLevel.Debug, "Analyzing Meta files...");
                 foreach (string file in unityMetaFileList)
                 {
-                    Logger.Log(Logger.LogLevel.Debug, $"File: {file}");
+                    Logger.Log(Logger.LogLevel.Debug, $"Analyzing File: {file}");
                     UnityData d = new UnityData(file);
-                    metaData.Add(d);
+                    Logger.Log(Logger.LogLevel.Debug, $"Data Extracted!");
+                    SaveSingleFile(d, META_DIR);
+                    //metaData.Add(d);
                 }
                 Logger.Log(Logger.LogLevel.Debug, $"Done!!");
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
-            SaveResults();
+            //SaveResults();
         }
         /// <summary>
         /// Save the results inside a file
@@ -140,7 +147,7 @@ namespace UnityDataAnalyzer
                 JObject res = data.ToJsonObject();
                 res.Add("ProjectPath", directory);
                 string fileName = res["guid"].ToString() + ".json";
-                Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
+                Logger.Log(Logger.LogLevel.Debug, "Saving File: " + fileName);
                 string s = Path.Combine(main_dir, fileName);
                 File.WriteAllText(s, res.ToString());
             }
@@ -157,12 +164,37 @@ namespace UnityDataAnalyzer
                     JObject res = data.ToJsonObject();
                     res.Add("ProjectPath", directory);
                     string fileName = res["guid"].ToString() + ".json";
-                    Logger.Log(Logger.LogLevel.Debug, "File: " + fileName);
+                    Logger.Log(Logger.LogLevel.Debug, "Saving File: " + fileName);
                     string s = Path.Combine(meta_dir, fileName);
                     File.WriteAllText(s, res.ToString());
                 }
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
+        }
+
+        protected static void SaveSingleFile(UnityData data, string dir)
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Saving Results...");
+            string main_dir = Directory.GetCurrentDirectory();
+            if (save_dir == "") main_dir = Path.Combine(main_dir, dir);
+            else main_dir = Path.Combine(save_dir, dir);
+            JObject res = data.ToJsonObject();
+            res.Add("ProjectPath", directory);
+            string fileName = res["guid"].ToString() + ".json";
+            Logger.Log(Logger.LogLevel.Debug, "Saving File: " + fileName);
+            string s = Path.Combine(main_dir, fileName);
+            File.WriteAllText(s, res.ToString());
+            Logger.Log(Logger.LogLevel.Debug, "Done!!");
+        }
+
+        protected static void CreateResultDirectory(string dir)
+        {
+            string main_dir = Directory.GetCurrentDirectory();
+            if (save_dir == "") main_dir = Path.Combine(main_dir, dir);
+            else main_dir = Path.Combine(save_dir, dir);
+            DirectoryInfo d = new DirectoryInfo(main_dir);
+            if (d.Exists) d.Delete(true);
+            Directory.CreateDirectory(main_dir);
         }
        
         /// <summary>

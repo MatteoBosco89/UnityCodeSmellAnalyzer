@@ -101,8 +101,7 @@ namespace UnityAnalyzer
                     
                     i++;
                 }
-                //Console.WriteLine("maindata"+lines[i]);
-                if (lines[i].Split(':').Length <= 1) return;
+                if (lines[i].Split(':').Length <= 1) continue;
                 if (lines[i].Split(':')[1].Length <= 1)
                 {
                     //Console.WriteLine("if " + lines[i]);
