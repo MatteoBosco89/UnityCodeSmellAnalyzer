@@ -44,12 +44,25 @@ namespace UnityDataAnalyzer
             if (opt.Extensions.Count() > 0) LoadExtensions(opt.Extensions);
             if (opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
             if (opt.SaveDirectory != null) save_dir = opt.SaveDirectory;
+            CreateSaveDirectory();
             if (opt.ProjectName != null) projectName = opt.ProjectName;
             if (opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
             if (save_dir == "") save_dir = Directory.GetCurrentDirectory();
             Logger.LogFile = Path.Combine(save_dir, "UnityExtractor.Log");
             Logger.Start();
+        }
+
+        protected static void CreateSaveDirectory()
+        {
+            if (save_dir == "") return;
+            Console.WriteLine(Path.DirectorySeparatorChar);
+            if (save_dir.EndsWith(Path.DirectorySeparatorChar.ToString()))
+            {
+                save_dir = save_dir.Remove(save_dir.Length - 1);
+            }
+            if (Directory.Exists(save_dir)) return;
+            else Directory.CreateDirectory(save_dir);
         }
         /// <summary>
         /// Load the list of file inside the given project folder
