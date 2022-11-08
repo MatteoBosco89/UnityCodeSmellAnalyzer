@@ -103,7 +103,7 @@ namespace CodeSmellFinder
             result.Add("Name", "Static Coupling");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, "Attributes", attributesList));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -127,7 +127,7 @@ namespace CodeSmellFinder
             smells.Merge(DataExtractor.FindArgumentsInInvocation(data, "Name", methods, names));
             smells.Merge(DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Assignment", names));
             smells.Merge(DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Assignment", names));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -152,7 +152,7 @@ namespace CodeSmellFinder
             smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods", "FullName", false));
             smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors", "FullName", false));
             smells.Merge(DataExtractor.VariablesFromData(data, "FullName", types, "Kind", new List<string> { "Definition" }, "", null, false));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -175,7 +175,7 @@ namespace CodeSmellFinder
             smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods", "ReturnType", true));
             smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors", "ReturnType", true));
             smells.Merge(DataExtractor.DependeciesInParameters(data, types));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -216,7 +216,7 @@ namespace CodeSmellFinder
                     }
                 }
             }
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -237,7 +237,7 @@ namespace CodeSmellFinder
             result.Add("Name", "Singleton Pattern");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FindSingleton(data, "Modifiers", new List<string> { "static" }, new List<string> { "protected", "private" }));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -255,7 +255,7 @@ namespace CodeSmellFinder
             result.Add("Name", "Instantiate Destroy");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FindInvocationSmell(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "Instantiate", "Destroy" }));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -273,7 +273,7 @@ namespace CodeSmellFinder
             result.Add("Name", "Find Methods");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.FindInvocationSmell(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "Find", "FindGameObjectsWithTag", "FindObjectOfType", "FindGameObjectWithTag" }));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -296,7 +296,7 @@ namespace CodeSmellFinder
             smells.Merge(DataExtractor.FieldsInConditionStatementInMethods(data, true, "Name", methods, "SwitchBlocks", "StartLine"));
             smells.Merge(DataExtractor.PropertiesInConditionStatementInMethods(data, true, "Name", methods, "IfBlocks", "StartLine"));
             smells.Merge(DataExtractor.PropertiesInConditionStatementInMethods(data, true, "Name", methods, "SwitchBlocks", "StartLine"));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -314,7 +314,7 @@ namespace CodeSmellFinder
             JArray smells = new JArray();
             result.Add("Name", "Velocity Change");
             smells.Merge(DataExtractor.FindPropertiesChange(data, "UnityEngine.Rigidbody", new List<string> { ".velocity", ".angularVelocity" }));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -334,7 +334,7 @@ namespace CodeSmellFinder
             result.Add("Name", "Check position rotation");
             smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "IfBlocks"));
             smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "SwitchBlocks"));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
@@ -352,7 +352,7 @@ namespace CodeSmellFinder
             result.Add("Name", "High Physic Computaions");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.ChangesToVariableOfTypeInMethods(data, new List<string> { "Update", "FixedUpdate" }, "Assignment", "UnityEngine.Rigidbody", new List<string> { ".position", ".rotation" }));
-            result.Add("Occurency", smells.Count());
+            result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;

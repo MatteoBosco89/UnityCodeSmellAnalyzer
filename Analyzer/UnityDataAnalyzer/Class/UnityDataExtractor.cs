@@ -265,6 +265,8 @@ namespace UnityDataAnalyzer
             string headers = "";
             string values = "";
             int i = 0;
+            headers += "ProjectName;ProjectPath;";
+            values += projectName + ";" + directory + ";";
             foreach(KeyValuePair<string, int> k in numMainFiles)
             {
                 headers += k.Key + ";";

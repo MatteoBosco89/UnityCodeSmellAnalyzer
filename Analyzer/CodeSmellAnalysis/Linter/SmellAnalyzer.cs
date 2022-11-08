@@ -186,7 +186,7 @@ namespace CodeSmellFinder
                 csv.Add("NumScripts", j.Count().ToString());
                 foreach(JToken r in results)
                 {
-                    csv.Add(r["Name"].ToString(), r["Occurency"].ToString());
+                    csv.Add(r["Name"].ToString(), r["Occurrency"].ToString());
                 }
                 string h = "";
                 string v = "";

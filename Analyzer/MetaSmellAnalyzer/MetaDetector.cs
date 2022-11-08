@@ -3,6 +3,7 @@ using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace MetaSmellDetector
 {
@@ -190,7 +191,7 @@ namespace MetaSmellDetector
                 csv.Add("ProjectPath", mainData.First()["ProjectPath"].ToString());
                 foreach (JToken r in smells)
                 {
-                    csv.Add(r["Name"].ToString(), r["Occurency"].ToString());
+                    csv.Add(r["Name"].ToString(), r["Occurrency"].ToString());
                 }
                 string h = "";
                 string v = "";

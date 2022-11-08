@@ -45,10 +45,6 @@ namespace UnityAnalyzer
             this.components = new Dictionary<string, Element.Element>();
             this.numComponents = 0;
         }
-
-
-
-
         /// <summary>
         /// This constructor is used to load the main data from a unity project (suc as .unity files, .prefab ecc...)
         /// For the files the associated .meta is needed because it contains the GUID of that specific object inside the project
