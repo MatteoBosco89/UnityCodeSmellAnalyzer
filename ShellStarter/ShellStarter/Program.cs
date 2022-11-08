@@ -27,7 +27,8 @@ namespace Starter
         protected List<string> repos = new List<string>();
         protected ThreadHandler codeAnalysis;
         protected ThreadHandler dataAnalysis;
-        List<string> codeAnalysisProc = new List<string> { "CSharpAnalyzer/CSharpAnalyzer.exe", "CodeSmellAnalysis/CodeSmellAnalysis.exe" };
+        //List<string> codeAnalysisProc = new List<string> { "CSharpAnalyzer/CSharpAnalyzer.exe", "CodeSmellAnalysis/CodeSmellAnalysis.exe" };
+        List<string> codeAnalysisProc = new List<string> { "CSharpAnalyzer/CSharpAnalyzer.exe" };
         List<string> dataAnalysisProc = new List<string> { "UnityDataNalyzer/UnityDataNalyzer.exe", "MetaSmellAnalyzer/MetaSmellAnalyzer.exe" };
 
 
@@ -46,18 +47,13 @@ namespace Starter
             {
                 StartThread(d);
                 //while(!codeAnalysis.Finished || !dataAnalysis.Finished) { }
-                
+                while (!codeAnalysis.Finished) { }
             }
-        }
-
-        public void WriteOutput(string s)
-        {
-            Logger.Log(Logger.LogLevel.Debug, s);
         }
 
         public void StartThread(string repo)
         {
-            //codeAnalysis = new ThreadHandler(codeAnalysisProc, CodeAnalysisCommands, this);
+            codeAnalysis = new ThreadHandler(codeAnalysisProc, CodeAnalysisCommands(repo), "Results" + Path.DirectorySeparatorChar + ProjectName(repo) + Path.DirectorySeparatorChar + "CodeSmell" + Path.DirectorySeparatorChar + "CSharpAnalyzer.log");
             //dataAnalysis = new ThreadHandler(dataAnalysisProc, dataAnalysisComm, this);
         }
 
@@ -72,8 +68,8 @@ namespace Starter
             List<string> commands = new List<string>();
             string path = Path.GetFullPath(repo);
             string name = ProjectName(repo);
-            commands.Add("-n " + name + " -p " + path + " -r ../Results/CodeSmell -v");
-            commands.Add("-d ../Results/CodeSmell/results.json -r ../Results/CodeSmell -c -v");
+            commands.Add("-n " + name + " -p " + path + " -r ../Results/" + name + "/CodeSmell -v");
+            //commands.Add("-d ../Results/" + name + "/CodeSmell/CodeAnalysis.json -r ../Results/" + name + "/CodeSmell -c -v");
             return commands;
         }
 
@@ -82,6 +78,11 @@ namespace Starter
             List<string> commands = new List<string>();
 
             return commands;
+        }
+
+        public static void WriteOutput(string s)
+        {
+            Logger.Log(Logger.LogLevel.Debug, s);
         }
 
         // -d path/to/result.json -v -c divisi per categoria -r path/to/resultFolder

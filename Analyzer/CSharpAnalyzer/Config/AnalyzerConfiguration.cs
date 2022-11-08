@@ -25,7 +25,7 @@ namespace CSharpAnalyzer
         private static int logLevel = 1;
         private static bool verbose = false;
         private static string resultsDir = string.Empty;
-        private static string resultsFile = "results.json";
+        private static string resultsFile = "CodeAnalysis.json";
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
         public static string DirectoryPath { get { return directoryPath; } }
@@ -92,13 +92,12 @@ namespace CSharpAnalyzer
         /// <param name="opt">Command Line Options</param>
         private static void LoadCommands(Options opt)
         {
+            Logger.Log(Logger.LogLevel.Critical, "Results File: " + resultsFile);
             if (opt.ProjectName != null) projectName = opt.ProjectName;
             Logger.Log(Logger.LogLevel.Critical, "Project: " + projectName);
             if (opt.Directory != null) directoryPath = opt.ProjectPath + opt.Directory;
             else directoryPath = opt.ProjectPath;
             Logger.Log(Logger.LogLevel.Critical, "Directory Analyzed: " + directoryPath);
-            if (opt.Results != null) resultsDir = Path.GetFullPath(opt.Results);
-            Logger.Log(Logger.LogLevel.Critical, "Results Directory: " + resultsDir);
             if (opt.ConfigFile != null) configFile = opt.ConfigFile;
             Logger.Log(Logger.LogLevel.Critical, "Config File: " + configFile);
             statementsVerbose = opt.Statements;
