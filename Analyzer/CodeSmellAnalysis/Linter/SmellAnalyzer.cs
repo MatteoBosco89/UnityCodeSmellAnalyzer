@@ -13,7 +13,7 @@ namespace CodeSmellFinder
     {
         private static string dataPath = null;
         private static string smellFile = null;
-        private static string resultFile = "Results.json";
+        private static string resultFile = "codeSmells.json";
         private static JObject data = null; 
         private static JArray results = new JArray();
         private static int logLevel = 1;
@@ -177,7 +177,7 @@ namespace CodeSmellFinder
             Logger.Log(Logger.LogLevel.Debug, "Saving Num Smell For Project...");
             string name = Directory.GetCurrentDirectory();
             if (save_dir == "") name = Path.Combine(name, resultFile);
-            else name = Path.Combine(save_dir , "smellOccurencyProject.csv");
+            else name = Path.Combine(save_dir , "codeSmells.csv");
             using (var file = File.CreateText(name))
             {
                 Dictionary<string, string> csv = new Dictionary<string, string>();
@@ -216,8 +216,8 @@ namespace CodeSmellFinder
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Categories...");
             string dir = Directory.GetCurrentDirectory();
-            if (save_dir == "") dir = Path.Combine(dir, "SmellsResults");
-            else dir = Path.Combine(save_dir, "SmellsResults");
+            if (save_dir == "") dir = Path.Combine(dir, "CodeSmells");
+            else dir = Path.Combine(save_dir, "CodeSmells");
             if (Directory.Exists(dir)) Directory.Delete(dir, true);
             Directory.CreateDirectory(dir);
             

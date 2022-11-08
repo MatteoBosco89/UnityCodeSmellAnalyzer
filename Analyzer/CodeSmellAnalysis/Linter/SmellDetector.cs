@@ -349,7 +349,7 @@ namespace CodeSmellFinder
         {
             Logger.Log(Logger.LogLevel.Debug, "Searching High Physics Computation...");
             JObject result = new JObject();
-            result.Add("Name", "High Physic Computaions");
+            result.Add("Name", "High Physic Computations");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.ChangesToVariableOfTypeInMethods(data, new List<string> { "Update", "FixedUpdate" }, "Assignment", "UnityEngine.Rigidbody", new List<string> { ".position", ".rotation" }));
             result.Add("Occurrency", smells.Count());
