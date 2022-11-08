@@ -217,6 +217,7 @@ namespace CodeSmellFinder
             string dir = Directory.GetCurrentDirectory();
             if (save_dir == "") dir = Path.Combine(dir, "SmellsResults");
             else dir = Path.Combine(save_dir, "SmellsResults");
+            if (Directory.Exists(dir)) Directory.Delete(dir, true);
             Directory.CreateDirectory(dir);
             
             foreach(JToken smell in results)

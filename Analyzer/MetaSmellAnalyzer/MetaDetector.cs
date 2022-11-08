@@ -165,7 +165,7 @@ namespace MetaSmellDetector
             Logger.Log(Logger.LogLevel.Debug, "Saving results...");
             if (saveDir == "") saveDir = Directory.GetCurrentDirectory();
             saveDir = Path.Combine(saveDir, "MetaSmellResults");
-            if(Directory.Exists(saveDir))Directory.Delete(saveDir);
+            if(Directory.Exists(saveDir))Directory.Delete(saveDir, true);
             Directory.CreateDirectory(saveDir);
             foreach(JToken smell in smells)
             {
