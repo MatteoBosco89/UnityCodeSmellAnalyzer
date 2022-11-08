@@ -45,7 +45,8 @@ namespace CodeSmellFinder
             }
             if (option.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
-            Logger.LogFile = "Linter.log";
+            if (save_dir == "") Directory.GetCurrentDirectory();
+            Logger.LogFile = Path.Combine(save_dir, "Linter.log");
             Logger.Start();
         }
         /// <summary>

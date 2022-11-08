@@ -47,7 +47,8 @@ namespace UnityDataAnalyzer
             if (opt.ProjectName != null) projectName = opt.ProjectName;
             if (opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
-            Logger.LogFile = "UnityExtractor.Log";
+            if (save_dir == "") save_dir = Directory.GetCurrentDirectory();
+            Logger.LogFile = Path.Combine(save_dir, "UnityExtractor.Log");
             Logger.Start();
         }
         /// <summary>

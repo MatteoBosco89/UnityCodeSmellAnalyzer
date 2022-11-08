@@ -31,7 +31,8 @@ namespace MetaSmellDetector
             if (opt.SaveOnMultipleFile) saveOnMultipleFile = true;
             if (opt.SaveResultCsv) saveCsv = true;
             Logger.SetLogLevel(logLevel);
-            Logger.LogFile = "metaLinter.log";
+            if(saveDir == "") saveDir = Directory.GetCurrentDirectory();
+            Logger.LogFile = Path.Combine(saveDir, "metaLinter.log");
             Logger.Start();
         }
 

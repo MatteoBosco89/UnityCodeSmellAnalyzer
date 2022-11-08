@@ -20,7 +20,7 @@ namespace MetaSmellDetector
         public static LogLevel Level { get { return logLevel; } set { logLevel = value; } }
 
         public static bool Verbose { get { return verbose; } set { verbose = value; } }
-
+        
         /// <summary>
         /// Initialize the Logger
         /// </summary>
