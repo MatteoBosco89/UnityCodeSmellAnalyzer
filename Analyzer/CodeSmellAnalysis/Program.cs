@@ -28,7 +28,7 @@ namespace CodeSmellFinder
         public bool Verbose { get; set; }
         [Option('p', "project", Required = false, HelpText = "Save number of smell for the project in .csv")]
         public bool NumSmellForProject { get; set; }
-        [Option('c', "category", Required = false, HelpText = "Save number of smell for each category for each c# script in .csv")]
+        [Option('c', "category", Required = false, HelpText = "Save smell divided by category")]
         public bool SmellForFile { get; set; }
         [Option('r', "result", Required = false, HelpText = "Save results to specified folder")]
         public string SaveDirectory { get; set; }

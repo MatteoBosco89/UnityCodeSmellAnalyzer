@@ -34,6 +34,21 @@ namespace UnityAnalyzer
         public int NumComponents { get { return numComponents; } }
         public Dictionary<string, Element.Element> COMPONENTS { get { return components; } }
 
+
+        public UnityData(string id, string name, string type)
+        {
+            this.id = id;
+            this.name = name;
+            this.type = type;
+            this.filePath = "No path";
+            this.fileSize = 0;
+            this.components = new Dictionary<string, Element.Element>();
+            this.numComponents = 0;
+        }
+
+
+
+
         /// <summary>
         /// This constructor is used to load the main data from a unity project (suc as .unity files, .prefab ecc...)
         /// For the files the associated .meta is needed because it contains the GUID of that specific object inside the project

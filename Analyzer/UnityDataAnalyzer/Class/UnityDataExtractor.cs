@@ -30,6 +30,8 @@ namespace UnityDataAnalyzer
         protected static string directory = null;
         protected static string file_extensions = null;
         protected static int logLevel = 1;
+        protected static string projectName = "UnityProject";
+        protected static Dictionary<string, int> numMainFiles = new Dictionary<string, int>();
 
         /// <summary>
         /// Load the configuration of the program from the given option from command line
@@ -41,10 +43,8 @@ namespace UnityDataAnalyzer
             if (opt.NoMeta) meta = false;
             if (opt.Extensions.Count() > 0) LoadExtensions(opt.Extensions);
             if (opt.ExtensionFile != null) file_extensions = opt.ExtensionFile;
-            if (opt.SaveDirectory != null)
-            {
-                save_dir = opt.SaveDirectory;
-            }
+            if (opt.SaveDirectory != null) save_dir = opt.SaveDirectory;
+            if (opt.ProjectName != null) projectName = opt.ProjectName;
             if (opt.Verbose) Logger.Verbose = true;
             Logger.SetLogLevel(logLevel);
             Logger.LogFile = "UnityExtractor.Log";
@@ -101,6 +101,8 @@ namespace UnityDataAnalyzer
             //load all prefab/unity/controller/mat files
             //load all metafile
             Logger.Log(Logger.LogLevel.Debug, "Analyzing Main MetaData...");
+            UnityData pi = new UnityData("ProjectInfo", "InfoFile", "info");
+            SaveSingleFile(pi, MAIN_DIR);
             foreach (string file in unityMainFileList)
             {
                 if (unityMetaFileList.Contains(file + ".meta"))
@@ -127,8 +129,8 @@ namespace UnityDataAnalyzer
                 }
                 Logger.Log(Logger.LogLevel.Debug, $"Done!!");
             }
+            SaveNumFileAnalyzed();
             Logger.Log(Logger.LogLevel.Debug, "Done!");
-            //SaveResults();
         }
         /// <summary>
         /// Save the results inside a file
@@ -145,6 +147,7 @@ namespace UnityDataAnalyzer
             foreach (var data in mainData)
             {
                 JObject res = data.ToJsonObject();
+                res.Add("ProjectName", projectName);
                 res.Add("ProjectPath", directory);
                 string fileName = res["guid"].ToString() + ".json";
                 Logger.Log(Logger.LogLevel.Debug, "Saving File: " + fileName);
@@ -162,6 +165,7 @@ namespace UnityDataAnalyzer
                 foreach (var data in metaData)
                 {
                     JObject res = data.ToJsonObject();
+                    res.Add("ProjectName", projectName);
                     res.Add("ProjectPath", directory);
                     string fileName = res["guid"].ToString() + ".json";
                     Logger.Log(Logger.LogLevel.Debug, "Saving File: " + fileName);
@@ -179,6 +183,7 @@ namespace UnityDataAnalyzer
             if (save_dir == "") main_dir = Path.Combine(main_dir, dir);
             else main_dir = Path.Combine(save_dir, dir);
             JObject res = data.ToJsonObject();
+            res.Add("ProjectName", projectName);
             res.Add("ProjectPath", directory);
             string fileName = res["guid"].ToString() + ".json";
             Logger.Log(Logger.LogLevel.Debug, "Saving File: " + fileName);
@@ -237,6 +242,39 @@ namespace UnityDataAnalyzer
             }
             DIR = extensions.ToArray();
             Console.WriteLine(DIR[0]);
+        }
+
+        protected static void NumOfAnalyzedFiles()
+        {
+            foreach(string ext in DIR)
+            {
+                int num = 0;
+                foreach(string file in unityMainFileList)
+                {
+                    if (file.Contains(ext)) num++;
+                }
+                numMainFiles[ext] = num;
+            }
+        }
+
+        protected static void SaveNumFileAnalyzed()
+        {
+            NumOfAnalyzedFiles();
+            string main_dir = Directory.GetCurrentDirectory();
+            if (save_dir != "") main_dir = save_dir;
+            string headers = "";
+            string values = "";
+            int i = 0;
+            foreach(KeyValuePair<string, int> k in numMainFiles)
+            {
+                headers += k.Key + ";";
+                values += k.Value.ToString()+";";
+            }
+            headers += ".meta";
+            values += unityMetaFileList.Count.ToString();
+
+            string csv = headers + "\n" + values;
+            File.WriteAllText(Path.Combine(main_dir, "numMetaFiles.csv"), csv);
         }
     }
 }

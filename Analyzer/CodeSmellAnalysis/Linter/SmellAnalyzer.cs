@@ -180,7 +180,7 @@ namespace CodeSmellFinder
             using (var file = File.CreateText(name))
             {
                 Dictionary<string, string> csv = new Dictionary<string, string>();
-                csv.Add("ProjectName", data["ProjectDirectory"].ToString());
+                csv.Add("ProjectName", data["ProjectName"].ToString());
                 csv.Add("ProjectDirectory", data["ProjectDirectory"].ToString());
                 var j = (JArray)data["Project"];
                 csv.Add("NumScripts", j.Count().ToString());
@@ -209,35 +209,21 @@ namespace CodeSmellFinder
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
-        /// Save the number of smell for each category for every c# script
+        /// Save the number of smell for each category
         /// </summary>
         public static void SaveNumSmellForFile()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Compilation Unit...");
+            Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Categories...");
             string dir = Directory.GetCurrentDirectory();
-            if (save_dir == "") dir = Path.Combine(dir, "AllSmellResult");
-            else dir = Path.Combine(save_dir, "AllSmellResult");
+            if (save_dir == "") dir = Path.Combine(dir, "SmellsResults");
+            else dir = Path.Combine(save_dir, "SmellsResults");
             Directory.CreateDirectory(dir);
-            List<JToken> filesNames = Utility.AllCompUnitFileName(data["Project"] as JArray);
+            
             foreach(JToken smell in results)
             {
-                string text = "";
-                foreach(JToken f in filesNames)
-                {
-                    string fn = f.ToString();
-                    int count = 0;
-                    foreach(JToken sm in smell["Smells"])
-                    {
-                        string scriptName = sm["Script"].ToString();
-                        if (fn == scriptName) count++;
-                    }
-                    text += fn + "; " + count + "\n"; 
-                    
-                }
-                string name = smell["Name"].ToString().Replace(" ", "_");
-                name = Path.Combine(dir, name + ".csv");
-                File.WriteAllText(name, text);
-                Logger.Log(Logger.LogLevel.Debug, "Saved: " + name);
+                string fileName = smell["Name"].ToString().Replace(" ", "_") + ".json";
+                Logger.Log(Logger.LogLevel.Debug, "Saving: " + fileName);
+                File.WriteAllText(Path.Combine(dir, fileName), smell.ToString());
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }

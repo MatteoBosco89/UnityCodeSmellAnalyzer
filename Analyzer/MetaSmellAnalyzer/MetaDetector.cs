@@ -17,13 +17,18 @@ namespace MetaSmellDetector
         private static int logLevel = 1;
         private static bool expose= false;
         private static IEnumerable<string> dataPath;
-
+        private static string saveDir = "";
+        private static bool saveOnMultipleFile = false;
+        private static bool saveCsv = false;
         public static void Init(Options opt)
         {
             if (opt.DataPath.Count() > 0) dataPath = opt.DataPath;
             if (opt.SmellPath != null) smellFile = opt.SmellPath;
             if (opt.Verbose) Logger.Verbose = true;
             if (opt.Expose) expose = true;
+            if (opt.SaveDir != null) saveDir = opt.SaveDir;
+            if (opt.SaveOnMultipleFile) saveOnMultipleFile = true;
+            if (opt.SaveResultCsv) saveCsv = true;
             Logger.SetLogLevel(logLevel);
             Logger.LogFile = "metaLinter.log";
             Logger.Start();
@@ -100,7 +105,9 @@ namespace MetaSmellDetector
             }
             SearchSmell(data);
             Logger.Log(Logger.LogLevel.Debug, "Analysis Done!");
-            SaveResult();
+            if (saveOnMultipleFile) SaveMultipleFile();
+            if (saveCsv) SaveOnCsv();
+            if(!saveOnMultipleFile && !saveCsv)  SaveResult();
         }
 
         public static void ExposeSmellMethod()
@@ -142,12 +149,68 @@ namespace MetaSmellDetector
 
         public static void SaveResult()
         {
+            if (saveDir == "") saveDir = Directory.GetCurrentDirectory();
             Logger.Log(Logger.LogLevel.Debug, "Saving results...");
             JObject result = new JObject();
+            result.Add("ProjectName", mainData.First()["ProjectName"]);
             result.Add("ProjectPath", mainData.First()["ProjectPath"]);
             result.Add("SmellList", smells);
-            File.WriteAllText("results.json", result.ToString());
+            File.WriteAllText(Path.Combine(saveDir, "results.json"), result.ToString());
             Logger.Log(Logger.LogLevel.Debug, "Results saved in results.json");
+        }
+
+        public static void SaveMultipleFile()
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Saving results...");
+            if (saveDir == "") saveDir = Directory.GetCurrentDirectory();
+            saveDir = Path.Combine(saveDir, "MetaSmellResults");
+            if(Directory.Exists(saveDir))Directory.Delete(saveDir);
+            Directory.CreateDirectory(saveDir);
+            foreach(JToken smell in smells)
+            {
+                string fileName = smell["Name"].ToString().Replace(" ", "_")+".json";
+                Logger.Log(Logger.LogLevel.Debug, "Saving: " + fileName);
+                fileName = Path.Combine(saveDir, fileName);
+                File.WriteAllText(fileName, smell.ToString());
+            }
+            Logger.Log(Logger.LogLevel.Debug, "Results saved in " + saveDir);
+        }
+
+        public static void SaveOnCsv()
+        {
+            if (mainData.Count <= 0) return;
+            Logger.Log(Logger.LogLevel.Debug, "Saving Num Smell For Project...");
+            string name = Directory.GetCurrentDirectory();
+            if (saveDir == "") name = Path.Combine(name, "metaSmellOccurrencyProject.csv");
+            else name = Path.Combine(saveDir, "metaSmellOccurrencyProject.csv");
+            using (var file = File.CreateText(name))
+            {
+                Dictionary<string, string> csv = new Dictionary<string, string>();
+                csv.Add("ProjectName", mainData.First()["ProjectName"].ToString());
+                csv.Add("ProjectPath", mainData.First()["ProjectPath"].ToString());
+                foreach (JToken r in smells)
+                {
+                    csv.Add(r["Name"].ToString(), r["Occurency"].ToString());
+                }
+                string h = "";
+                string v = "";
+                int i = 0;
+                foreach (string k in csv.Keys)
+                {
+                    h += k;
+                    v += csv[k];
+                    if (i < csv.Count())
+                    {
+                        h += ";";
+                        v += ";";
+                    }
+                    i++;
+                }
+                file.WriteLine(h);
+                file.WriteLine(v);
+                file.Close();
+            }
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
     }
 }
