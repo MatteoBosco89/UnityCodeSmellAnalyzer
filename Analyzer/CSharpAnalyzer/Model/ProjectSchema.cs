@@ -28,7 +28,6 @@ namespace CSharpAnalyzer
         protected string directoryPath;
         protected string projectLanguageVersion;
         protected string configurationFile;
-        protected string resultsFile = "results.json";
         protected int projectLoc = 0;
 
         public string ProjectName { get { return projectName; } }
@@ -169,17 +168,16 @@ namespace CSharpAnalyzer
             Logger.Log(Logger.LogLevel.Debug, "Converting to JSON format...");
             jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
-            ToFile(jsonString, resultsFile);
+            ToFile(jsonString);
         }
         /// <summary>
         /// Save the Json string to file.
         /// </summary>
         /// <param name="toWrite">String To Write in results file</param>
-        /// <param name="file">The file</param>
-        protected void ToFile(string toWrite, string file)
+        protected void ToFile(string toWrite)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Saving Results in " + file);
-            File.WriteAllText(file, toWrite);
+            Logger.Log(Logger.LogLevel.Debug, "Saving Results in " + AnalyzerConfiguration.ResultsFile);
+            File.WriteAllText(AnalyzerConfiguration.ResultsFile, toWrite);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
 

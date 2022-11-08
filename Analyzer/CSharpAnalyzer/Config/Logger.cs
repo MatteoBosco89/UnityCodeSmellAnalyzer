@@ -9,7 +9,7 @@ namespace CSharpAnalyzer
     /// </summary>
     public static class Logger
     {
-        private static string logFile = "Analyzer.log";
+        private static string logFile = "CSharpAnalyzer.log";
         private static LogLevel logLevel;
         /// <summary>
         /// LogLevel <see cref="Enum"/> provides Trace, Debug, Information, Warning, Error, Critical and None
@@ -24,6 +24,7 @@ namespace CSharpAnalyzer
         public static void Start()
         {
             if (logLevel == LogLevel.None) return;
+            logFile = AnalyzerConfiguration.ResultsDir + logFile;
             File.WriteAllText(logFile, "");
         }
         /// <summary>

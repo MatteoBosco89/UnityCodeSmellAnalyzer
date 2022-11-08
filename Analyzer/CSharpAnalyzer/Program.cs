@@ -24,6 +24,8 @@ namespace CSharpAnalyzer
     {
         [Option('p', "project", Required = true, HelpText = "Project Directory.")]
         public string ProjectPath { get; set; }
+        [Option('r', "results", Required = false, HelpText = "Results Directory. If not provided results are saved in the current Directory.")]
+        public string Results { get; set; }
         [Option('d', "directory", Required = false, HelpText = "Analyze only the directory provided. If not provided the Project Directory is selected.")]
         public string Directory { get; set; }
         [Option('a', "assembly", Required = false, HelpText = "Additional Assemblies Directory.")]

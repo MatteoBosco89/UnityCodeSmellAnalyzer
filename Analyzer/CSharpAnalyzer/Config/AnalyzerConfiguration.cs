@@ -24,6 +24,8 @@ namespace CSharpAnalyzer
         private static string directoryPath;
         private static int logLevel = 1;
         private static bool verbose = false;
+        private static string resultsDir = string.Empty;
+        private static string resultsFile = "results.json";
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
         public static string DirectoryPath { get { return directoryPath; } }
@@ -33,6 +35,8 @@ namespace CSharpAnalyzer
         public static string ProjectName { get { return projectName; } set { projectName = value; } }
         public static string ConfigFile { get { return configFile; } set { configFile = value; } }
         public static bool Verbose { get { return verbose; } }
+        public static string ResultsDir { get { return resultsDir; } }
+        public static string ResultsFile { get { return resultsFile; } }
 
         /// <summary>
         /// Init the Analyzer Configuration
@@ -41,13 +45,25 @@ namespace CSharpAnalyzer
         public static void Init(Options opt)
         {
             logLevel = opt.Logging;
+            if (opt.Results != null) resultsDir = Path.GetFullPath(opt.Results);
+            NormalizePath();
             Logger.SetLogLevel(logLevel);
             Logger.Start();
             LoadCommands(opt);
             InitConfig(opt);
             
         }
-
+        /// <summary>
+        /// Path normalization based on OS.
+        /// </summary>
+        private static void NormalizePath()
+        {
+            if (string.IsNullOrEmpty(resultsDir)) return;
+            if (resultsDir.EndsWith("/") || resultsDir.EndsWith("\\")) resultsDir = resultsDir.Remove(resultsDir.Length - 1);
+            if (!Directory.Exists(resultsDir)) Directory.CreateDirectory(resultsDir);
+            resultsDir += Path.DirectorySeparatorChar;
+            resultsFile = resultsDir + resultsFile;
+        }
         /// <summary>
         /// Initialize the ConfigModel object
         /// </summary>
@@ -81,6 +97,8 @@ namespace CSharpAnalyzer
             if (opt.Directory != null) directoryPath = opt.ProjectPath + opt.Directory;
             else directoryPath = opt.ProjectPath;
             Logger.Log(Logger.LogLevel.Critical, "Directory Analyzed: " + directoryPath);
+            if (opt.Results != null) resultsDir = Path.GetFullPath(opt.Results);
+            Logger.Log(Logger.LogLevel.Critical, "Results Directory: " + resultsDir);
             if (opt.ConfigFile != null) configFile = opt.ConfigFile;
             Logger.Log(Logger.LogLevel.Critical, "Config File: " + configFile);
             statementsVerbose = opt.Statements;
