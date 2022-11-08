@@ -5,10 +5,8 @@ using Microsoft.CodeAnalysis.Operations;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 
 namespace CSharpAnalyzer
 {
@@ -63,6 +61,7 @@ namespace CSharpAnalyzer
 
         public override void LoadInformations(SyntaxNode root, SemanticModel model)
         {
+            if (root == null) return;
             LoadBasicInformations(root, model);
             foreach (string t in Normalize(root.ToString()))
             {
@@ -78,7 +77,7 @@ namespace CSharpAnalyzer
             LoadMemberAccess(mrol, model);
             
             conditionStatement = root.ToString();
-            conditionType = root.Kind().ToString();
+            conditionType = root.Kind().ToString(); ;
             conditionKind = model.GetSymbolInfo(root).Symbol?.Kind.ToString();
             if (conditionKind == null) conditionKind = literal;
             type = model.GetTypeInfo(root).Type?.ToString();
