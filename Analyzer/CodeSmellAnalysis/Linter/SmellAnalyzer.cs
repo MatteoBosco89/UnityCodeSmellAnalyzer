@@ -86,20 +86,23 @@ namespace CodeSmellFinder
         /// </summary>
         public static void LoadData()
         {
+            var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All, MaxDepth = 256 };
             Logger.Log(Logger.LogLevel.Debug, "Loading Dataset...");
             try
             {
                 string s = File.ReadAllText(dataPath);
-                data = JObject.Parse(s);
+
+                //data = JObject.Parse(s);
+                data = JsonConvert.DeserializeObject<JObject>(s, settings);
             }
             catch (FileNotFoundException)
             {
                 Logger.Log(Logger.LogLevel.Debug, "Dataset.json not found");
             }
-            catch (JsonReaderException)
-            {
-                Logger.Log(Logger.LogLevel.Debug, "Dataset.json doesn't contains a Json Object");
-            }
+            //catch (JsonReaderException)
+            //{
+            //    Logger.Log(Logger.LogLevel.Debug, "Dataset.json doesn't contains a Json Object");
+            //}
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
         /// <summary>
