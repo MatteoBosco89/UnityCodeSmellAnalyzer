@@ -32,6 +32,7 @@ namespace UnityDataAnalyzer
         protected static int logLevel = 1;
         protected static string projectName = "UnityProject";
         protected static Dictionary<string, int> numMainFiles = new Dictionary<string, int>();
+        protected static long MAXBYTE = 15360;
 
         /// <summary>
         /// Load the configuration of the program from the given option from command line
@@ -56,7 +57,6 @@ namespace UnityDataAnalyzer
         protected static void CreateSaveDirectory()
         {
             if (save_dir == "") return;
-            Console.WriteLine(Path.DirectorySeparatorChar);
             if (save_dir.EndsWith(Path.DirectorySeparatorChar.ToString()))
             {
                 save_dir = save_dir.Remove(save_dir.Length - 1);
@@ -121,6 +121,8 @@ namespace UnityDataAnalyzer
             {
                 if (unityMetaFileList.Contains(file + ".meta"))
                 {
+                    long fileSize = (new FileInfo(file)).Length;
+                    if (fileSize > MAXBYTE) continue;
                     Logger.Log(Logger.LogLevel.Debug, $"Analyzing File: {file}");
                     UnityData d = new UnityData(file, file + ".meta");
                     Logger.Log(Logger.LogLevel.Debug, $"Data Extracted!");
