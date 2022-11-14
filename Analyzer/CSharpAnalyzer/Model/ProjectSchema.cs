@@ -6,6 +6,7 @@ using System.IO;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Threading;
 
 namespace CSharpAnalyzer
 {
@@ -176,12 +177,34 @@ namespace CSharpAnalyzer
         /// <param name="toWrite">String To Write in results file</param>
         protected void ToFile(string toWrite)
         {
+            FileSystemWatcher watcher = new FileSystemWatcher(AnalyzerConfiguration.ResultsDir + "/");
+            watcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.Security
+                                 | NotifyFilters.Size;
+            watcher.Filter = "*.json";
+            watcher.Changed += OnCreated;
+            watcher.IncludeSubdirectories = true;
+            watcher.EnableRaisingEvents = true;
             Logger.Log(Logger.LogLevel.Debug, "Saving Results in " + AnalyzerConfiguration.ResultsFile);
             File.WriteAllText(AnalyzerConfiguration.ResultsFile, toWrite);
+            while (!AnalyzerConfiguration.ResultsCreated) { }
             Logger.Log(Logger.LogLevel.Debug, "Done!");
         }
-
-
+        /// <summary>
+        /// Listener, checks if the results file is created.
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Args</param>
+        private static void OnCreated(object sender, FileSystemEventArgs e)
+        {
+            Logger.Log(Logger.LogLevel.Debug, "File Saved");
+            AnalyzerConfiguration.ResultsCreated = true;
+        }
         /// <summary>
         /// Class representing the SyntaxTree plus additional informations needed for every Compilation Unit.
         /// </summary>

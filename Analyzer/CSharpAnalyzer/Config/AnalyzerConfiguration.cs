@@ -16,6 +16,7 @@ namespace CSharpAnalyzer
     {
         
         private static string projectPath = null;
+        private static bool resultsCreated = false;
         private static CSharpCompilation compilation;
         private static ConfigModel configurations;
         private static bool statementsVerbose = false;
@@ -25,7 +26,8 @@ namespace CSharpAnalyzer
         private static int logLevel = 1;
         private static bool verbose = false;
         private static string resultsDir = string.Empty;
-        private static string resultsFile = "CodeAnalysis.json";
+        private static string resultsFileName = "CodeAnalysis.json";
+        private static string resultsFile = string.Empty;
 
         public static List<string> Assemblies { get { return configurations.Assemblies; } }
         public static string DirectoryPath { get { return directoryPath; } }
@@ -37,7 +39,8 @@ namespace CSharpAnalyzer
         public static bool Verbose { get { return verbose; } }
         public static string ResultsDir { get { return resultsDir; } }
         public static string ResultsFile { get { return resultsFile; } }
-
+        public static string ResultsFileName { get { return resultsFileName; } }
+        public static bool ResultsCreated { get { return resultsCreated; } set { resultsCreated = value; } }
         /// <summary>
         /// Init the Analyzer Configuration
         /// </summary>
@@ -46,6 +49,7 @@ namespace CSharpAnalyzer
         {
             logLevel = opt.Logging;
             if (opt.Results != null) resultsDir = Path.GetFullPath(opt.Results);
+            if (string.IsNullOrEmpty(resultsDir)) resultsDir = Directory.GetCurrentDirectory();
             NormalizePath();
             Logger.SetLogLevel(logLevel);
             Logger.Start();
@@ -61,8 +65,7 @@ namespace CSharpAnalyzer
             if (string.IsNullOrEmpty(resultsDir)) return;
             if (resultsDir.EndsWith("/") || resultsDir.EndsWith("\\")) resultsDir = resultsDir.Remove(resultsDir.Length - 1);
             if (!Directory.Exists(resultsDir)) Directory.CreateDirectory(resultsDir);
-            resultsDir += Path.DirectorySeparatorChar;
-            resultsFile = resultsDir + resultsFile;
+            resultsFile = resultsDir + Path.DirectorySeparatorChar + resultsFileName;
         }
         /// <summary>
         /// Initialize the ConfigModel object
