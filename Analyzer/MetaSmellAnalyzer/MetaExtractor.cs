@@ -71,7 +71,15 @@ namespace MetaSmellDetector
                     var token = c.SelectTokens($"$..COMPONENTS[?(@..{paramList[0]})]");
                     if (token.Count() > 0)
                     {
-                        token = c.SelectTokens($"$..COMPONENTS[?(@..{paramList[1]} {paramList[2]} '{paramList[3]}'|| '{paramList[4]}')]");
+                        token = c.SelectTokens($"$..COMPONENTS[?(@..{paramList[1]} {paramList[2]} '{paramList[3]}')]");
+                        if (token.Count() > 0)
+                        {
+                            JObject jo = new JObject();
+                            jo.Add("FilePath", c["file_path"].ToString());
+                            jo.Add("Name", c["name"].ToString());
+                            smells.Add(jo);
+                        }
+                        token = c.SelectTokens($"$..COMPONENTS[?(@..{paramList[1]} {paramList[2]} '{paramList[4]}')]");
                         if (token.Count() > 0)
                         {
                             JObject jo = new JObject();
@@ -286,9 +294,11 @@ namespace MetaSmellDetector
             if (paramList.Count == 1) { 
                 foreach (JObject c in data)
                 {
+                    bool found = false;
                     var token = c.SelectTokens($"$..COMPONENTS[?(@..{paramList[0]})]..{paramList[0]}");
                     foreach (JToken p in token)
                     {
+                        if (found) break;
                         if (p is JArray)
                         {
                             if (p.Count() > 0)
@@ -297,6 +307,7 @@ namespace MetaSmellDetector
                                 jo.Add("FilePath", c["file_path"].ToString());
                                 jo.Add("Name", c["name"].ToString());
                                 smells.Add(jo);
+                                found = true;
                             }
                         }
                     }
@@ -324,7 +335,21 @@ namespace MetaSmellDetector
                 try
                 {
                     int result1 = Int32.Parse(paramList[2]);
-                    List<JToken> tokens = data.SelectTokens($"$.[?(@.{paramList[0]} {paramList[1]} {result1})]").ToList();
+                    foreach (JToken token in data)
+                    {
+                        string svalue = token[paramList[0]].ToString();
+                        int val = int.Parse(svalue);
+                        if(val > result1)
+                        {
+                            JObject jo = new JObject();
+                            jo.Add("FilePath", token["file_path"].ToString());
+                            jo.Add("Name", token["name"].ToString());
+                            jo.Add("NumComponents", token["num_components"].ToString());
+                            smells.Add(jo);
+                        }
+                    }
+                    
+                    /*List<JToken> tokens = data.SelectTokens($"$.[?(@.{paramList[0]} {paramList[1]} {result1})]").ToList();
                     foreach (JToken c in tokens)
                     {
                         JObject jo = new JObject();
@@ -332,7 +357,7 @@ namespace MetaSmellDetector
                         jo.Add("Name", c["name"].ToString());
                         jo.Add("NumComponents", c["num_components"].ToString());
                         smells.Add(jo);
-                    }
+                    }*/
                 }
                 catch (FormatException)
                 {
