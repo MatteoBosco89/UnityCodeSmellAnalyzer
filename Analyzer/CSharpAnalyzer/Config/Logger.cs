@@ -24,7 +24,7 @@ namespace CSharpAnalyzer
         public static void Start()
         {
             if (logLevel == LogLevel.None) return;
-            logFile = AnalyzerConfiguration.ResultsDir + logFile;
+            logFile = AnalyzerConfiguration.ResultsDir + Path.DirectorySeparatorChar + logFile;
             File.WriteAllText(logFile, "");
         }
         /// <summary>

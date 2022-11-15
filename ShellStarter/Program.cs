@@ -1,4 +1,8 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Xml.Linq;
 using CommandLine;
@@ -90,7 +94,7 @@ namespace Starter
             return new List<string> { "CSharpAnalyzer/CSharpAnalyzer.exe", "CodeSmellAnalysis/CodeSmellAnalysis.exe" };
         }
         /// <summary>
-        /// Construc process list to run based on OS. DataSmell Case
+        /// Construct process list to run based on OS. DataSmell Case
         /// </summary>
         /// <returns>List of process</returns>
         protected List<string> DataAnalysisProcesses()

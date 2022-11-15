@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using Starter;
 
@@ -57,7 +59,7 @@ namespace StarterModel
         /// </summary>
         /// <param name="sender">The process</param>
         /// <param name="args">Data Arguments</param>
-        public void OnExit(object? sender, EventArgs args)
+        public void OnExit(object sender, EventArgs args)
         {
             try
             {
@@ -69,7 +71,7 @@ namespace StarterModel
             else
             {
                 finished = true;
-                thread.Interrupt();
+                thread.Abort();
             }
         }
 
