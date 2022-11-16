@@ -509,7 +509,7 @@ namespace CodeSmellFinder
                     foreach (JToken p in pars)
                     {
                         string type = p["Type"].ToString();
-                        if (!Utility.StringInList(types, type)) continue;
+                        if (!types.Contains(type)) continue;
                         JObject s = new JObject();
                         s.Add("Script", cu["FileName"]);
                         s.Add("Parameter", p["Name"]);
@@ -527,7 +527,7 @@ namespace CodeSmellFinder
                     foreach (JToken p in pars)
                     {
                         string type = p["Type"].ToString();
-                        if (!Utility.StringInList(types, type)) continue;
+                        if (!types.Contains(type)) continue;
                         JObject s = new JObject();
                         s.Add("Script", cu["FileName"]);
                         s.Add("Parameter", p["Name"]);

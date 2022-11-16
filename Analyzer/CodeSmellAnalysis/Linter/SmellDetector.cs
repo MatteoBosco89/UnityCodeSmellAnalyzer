@@ -141,10 +141,11 @@ namespace CodeSmellFinder
         public static JObject ImproperCollider(JArray data)
         {
             Logger.Log(Logger.LogLevel.Debug, "Searching Improper Collider Smells...");
-            List<string> classesFound = Utility.AllClassInheritances(data, "UnityEngine.MeshCollider");
+            //List<string> classesFound = Utility.AllClassInheritances(data, "UnityEngine.MeshCollider");
+            //foreach (string className in classesFound) Console.WriteLine("Class: " + className);
             List<string> types = new List<string> { "UnityEngine.MeshCollider" };
             List<string> methods = new List<string> { "GetComponent" };
-            types.AddRange(classesFound);
+            //types.AddRange(classesFound);
             JObject result = new JObject();
             result.Add("Name", "Improper Collider");
             JArray smells = new JArray();
@@ -167,6 +168,7 @@ namespace CodeSmellFinder
         {
             Logger.Log(Logger.LogLevel.Debug, "Searching Dependency Between Object Smells...");
             List<string> types = Utility.GetAllType(data, new List<string> { "Classes", "Interfaces" }, "Name");
+            //foreach(string type in types)Console.WriteLine(type);
             JObject result = new JObject();
             List<string> methods = new List<string> { "GetComponent" };
             result.Add("Name", "Dependency Between Objects");
