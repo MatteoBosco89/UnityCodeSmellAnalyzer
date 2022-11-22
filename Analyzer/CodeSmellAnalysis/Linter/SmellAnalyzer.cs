@@ -179,7 +179,7 @@ namespace CodeSmellFinder
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Num Smell For Project...");
             string name = Directory.GetCurrentDirectory();
-            if (save_dir == "") name = Path.Combine(name, resultFile);
+            if (save_dir == "") name = Path.Combine(name, "codeSmells.csv");
             else name = Path.Combine(save_dir , "codeSmells.csv");
             using (var file = File.CreateText(name))
             {
@@ -188,6 +188,7 @@ namespace CodeSmellFinder
                 csv.Add("ProjectDirectory", data["ProjectDirectory"].ToString());
                 var j = (JArray)data["Project"];
                 csv.Add("NumScripts", j.Count().ToString());
+                csv.Add("LOC", data["LOC"].ToString());
                 foreach(JToken r in results)
                 {
                     csv.Add(r["Name"].ToString(), r["Occurrency"].ToString());
