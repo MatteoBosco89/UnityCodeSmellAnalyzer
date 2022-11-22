@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using Starter;
@@ -66,13 +67,43 @@ namespace StarterModel
                 UnityCodeSmellAnalyzer.WriteOutput(DateTime.Now + " " + Name + " Log can be found in " + currentWorkingDirectory);
                 UnityCodeSmellAnalyzer.WriteOutput(DateTime.Now + " " + Name + " Exited. Process PID " + currentProcess.Process.Id);
             }catch(Exception) { }
-            
-            if (processList.Count > 0) CreateProcess();
+
+            if (processList.Count > 0)
+            {
+                if(processList.ElementAt(0).Name == "CodeSmellAnalysis/CodeSmellAnalysis.exe")
+                {
+                    bool found = false;
+                    FileInfo file = new FileInfo(currentWorkingDirectory + "/CodeAnalysis.json");
+                    while (!found)
+                    {
+                        Path.GetFullPath(currentWorkingDirectory);
+                        if (File.Exists(currentWorkingDirectory + "/CodeAnalysis.json"))
+                        {
+                            if(!IsFileLocked(file)) found = true;
+                        }
+                    }
+                }
+                CreateProcess();
+            }
             else
             {
                 finished = true;
                 thread.Abort();
             }
+        }
+
+        protected virtual bool IsFileLocked(FileInfo file)
+        {
+            try
+            {
+                using (FileStream stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
+                {
+                    stream.Close();
+                }
+            }
+            catch (IOException) { return true; }
+
+            return false;
         }
 
     }
