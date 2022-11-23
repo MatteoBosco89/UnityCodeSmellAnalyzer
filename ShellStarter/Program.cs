@@ -142,7 +142,6 @@ namespace Starter
             {
                 commands.Add("-n " + name + " -a " + path + " -d ../Results/" + name + "/DataSmell -v");
                 commands.Add("-d ../Results/" + name + "/DataSmell -r ../Results/" + name + "/DataSmell -c -v");
-
             }
             else
             {

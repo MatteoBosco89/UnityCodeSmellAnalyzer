@@ -27,13 +27,23 @@ namespace Gui
 
         private void StartAnalyze(object sender, RoutedEventArgs e)
         {
+            StartEnable(false);
             Program.AddParam("projectName", ProjectName.Text.Trim());
             Program.AddParam("projectFolder", ProjectFolder.Text.Trim());
             Program.AddParam("logLevel", ((ComboBoxItem)VerbosityLevel.SelectedValue).Uid);
             Program.AddParam("directory", FolderUnderAnalysis());
-            Program.AddParam("nometa", (bool)NoMeta.IsChecked ? "1" : "0");
+            Program.AddParam("nometa", NoMeta.IsChecked);
+            Program.AddParam("codeCat", CodeCategory.IsChecked);
+            Program.AddParam("dataCat", DataCategory.IsChecked);
+            Program.AddParam("codeCsv", CodeCsv.IsChecked);
+            Program.AddParam("dataCsv", DataCsv.IsChecked);
             if (ExtList.Text.Trim() != "") Program.AddParam("ext", ExtList.Text.Trim());
-            Program.Init(this);  
+            Program.Init(this);
+        }
+
+        public void StartEnable(bool state)
+        {
+            Start.IsEnabled = state;
         }
 
         private string FolderUnderAnalysis()

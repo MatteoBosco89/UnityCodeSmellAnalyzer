@@ -16,7 +16,9 @@ namespace GuiModel
         protected bool createNoWindow = true;
         protected Process process;
 
+
         public Process Process { get { return process; } }
+        public string Name { get { return name; } }
 
         public ProcessHandler(string name, string arguments, bool redirectOutput, bool shellExecute, bool createNoWindow)
         {

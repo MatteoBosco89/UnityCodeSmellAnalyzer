@@ -69,6 +69,8 @@
                 </StackPanel>
                 <StackPanel Margin="0,0,0,0" Width="240" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Label Content="Code Smell Detection" HorizontalContentAlignment="Center"/>
+                    <CheckBox x:Name="CodeCategory" Content="Divide Smells in Category"/>
+                    <CheckBox x:Name="CodeCsv" Content="Additional Info in .csv"/>
                 </StackPanel>
                 </DockPanel>
                 <Border Margin="20,0,20,0" Background="LightGray" BorderBrush="DarkGray" BorderThickness="0.2"/>
@@ -79,11 +81,11 @@
                     <Label Content="Extentions List to search" HorizontalContentAlignment="Left"/>
                     <Label Content="divided by space (ext1 ext2 ...)" Margin="0,-12,0,0" HorizontalContentAlignment="Left"/>
                     <TextBox x:Name="ExtList" Width="150" Margin="-50,2,0,0"/>
-                    
                 </StackPanel>
                 <StackPanel Margin="0,0,0,0" Width="240" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Label Content="Unity Data Smell Detection" HorizontalContentAlignment="Center"/>
-
+                    <CheckBox x:Name="DataCategory" Content="Divide Smells in Category"/>
+                    <CheckBox x:Name="DataCsv" Content="Additional Info in .csv"/>
                 </StackPanel>
                 </DockPanel>
             </DockPanel>

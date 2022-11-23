@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Windows.Threading;
 using Gui;
@@ -12,19 +15,26 @@ namespace GuiModel
     /// </summary>
     public class ThreadHandler
     {
-        protected ProcessHandler processHandler;
+        protected List<ProcessHandler> processList = new List<ProcessHandler>();
         protected Thread thread;
-        protected string processName;
+        protected ProcessHandler currentProcess;
+        protected string currentProcessName;
+        protected string currentWorkingDirectory;
         protected UnityCodeSmellAnalyzer main;
+        protected bool finished = false;
+        protected string type;
 
-        public ProcessHandler ProcessHandler { get { return processHandler; } }
+        public bool Finished { get { return finished; } }
+        public ProcessHandler CurrentProcess { get { return currentProcess; } }
         public Thread Thread { get { return thread; } }
-        public string Name { get { return processName; } }
-        public ThreadHandler(string process, string commands, string name, UnityCodeSmellAnalyzer window)
+        public string Name { get { return currentProcessName; } }
+        public ThreadHandler(List<string> processes, List<string> commands, string currentWorkingDir, UnityCodeSmellAnalyzer window, string type)
         {
+            this.type = type;
+            currentWorkingDirectory = currentWorkingDir;
             main = window;
-            processName = name;
-            processHandler = new ProcessHandler(process, commands);
+            var pc = processes.Zip(commands, (p, c) => new { Proc = p, Comm = c });
+            foreach (var i in pc) processList.Add(new ProcessHandler(i.Proc, i.Comm));
             thread = new Thread(() => StartThread());
             thread.Start();
         }
@@ -33,13 +43,15 @@ namespace GuiModel
         /// </summary>
         public void CreateProcess()
         {
-            processHandler.CreateProcess();
-            processHandler.Process.OutputDataReceived += new DataReceivedEventHandler(OnOutputDataReceived);
-            processHandler.Process.ErrorDataReceived += new DataReceivedEventHandler(OnOutputDataReceived);
-            processHandler.Process.Exited += new EventHandler(OnExit);
-            processHandler.Process.BeginOutputReadLine();
-            processHandler.Process.BeginErrorReadLine();
-            processHandler.Process.WaitForExit();
+            currentProcess = processList.ElementAt(0);
+            processList.RemoveAt(0);
+            currentProcess.CreateProcess();
+            currentProcessName = currentProcess.Process.ProcessName;
+            SendMessage("Begin Analysis");
+            currentProcess.Process.Exited += new EventHandler(OnExit);
+            currentProcess.Process.BeginOutputReadLine();
+            currentProcess.Process.BeginErrorReadLine();
+            currentProcess.Process.WaitForExit();
         }
         /// <summary>
         /// Starts the Thread and calls the <see cref="CreateProcess"/> Method.
@@ -57,15 +69,51 @@ namespace GuiModel
         public void OnExit(object? sender, EventArgs args)
         {
             main.Dispatcher.Invoke(() => main.WriteOutput(DateTime.Now + " " + Name + " Exited"));
+            if (processList.Count > 0)
+            {
+                if (processList.ElementAt(0).Name == "CodeSmellAnalysis/CodeSmellAnalysis.exe")
+                {
+                    bool found = false;
+                    FileInfo file = new FileInfo(currentWorkingDirectory + "/CodeAnalysis.json");
+                    while (!found)
+                    {
+                        Path.GetFullPath(currentWorkingDirectory);
+                        if (File.Exists(currentWorkingDirectory + "/CodeAnalysis.json"))
+                        {
+                            if (!IsFileLocked(file)) found = true;
+                        }
+                    }
+                }
+                CreateProcess();
+            }
+            else
+            {
+                finished = true;
+                thread.Interrupt();
+            }
         }
         /// <summary>
         /// Event Listener, catches the Data Redirected from the process.
         /// </summary>
         /// <param name="sender">The Process</param>
         /// <param name="e">The Redirected Data</param>
-        public void OnOutputDataReceived(object sender, DataReceivedEventArgs e)
+        public void SendMessage(string message)
         {
-            main.Dispatcher.Invoke(() => main.WriteOutput(DateTime.Now + " " + Name + " " + e.Data));
+            main.Dispatcher.Invoke(() => main.WriteOutput(DateTime.Now + " " + Name + " " + message));
+        }
+
+        protected virtual bool IsFileLocked(FileInfo file)
+        {
+            try
+            {
+                using (FileStream stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
+                {
+                    stream.Close();
+                }
+            }
+            catch (IOException) { return true; }
+
+            return false;
         }
 
     }
