@@ -54,7 +54,7 @@ namespace CSharpAnalyzer
             if (!Directory.Exists(AnalyzerConfiguration.DirectoryPath)) { Logger.Log(Logger.LogLevel.Critical, "Directory to Analyze not found"); return; }
             LoadAssemblyList();
             LoadFileList();
-            if (fileList.Count <= 0) { Logger.Log(Logger.LogLevel.Critical, "No .cs files found!"); return; }
+            if (fileList.Count <= 0) { Logger.Log(Logger.LogLevel.Critical, "No .cs files found!"); ToJson(); return; }
             LoadSyntax();
             CSharpCompilation compilation = CSharpCompilation.Create(null, syntaxTrees: GetCU(), references: assemblies);
             AnalyzerConfiguration.Compilation = compilation;
