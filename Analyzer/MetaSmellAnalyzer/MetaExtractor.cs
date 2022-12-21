@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
+using System.Drawing.Printing;
 
 namespace MetaSmellDetector
 {
@@ -260,18 +261,31 @@ namespace MetaSmellDetector
                 {
                     List<string> st = new List<string>();
                     var token = c.SelectTokens($"$..COMPONENTS[?(@..{paramList[0]})]..{paramList[0]}");
+                    JArray reference = new JArray();
                     foreach (JToken p in token)
                     {
-                        st.Add(p.ToString());
+                        JObject res = Utility.SearchData(data, paramList[0], p.ToString());
+                        if(res != null)
+                        {
+                            
+                            JObject stat = new JObject();
+                            stat["FilePath"] = res["file_path"];
+                            stat["Name"] = res["name"];
+                            stat["guid"] = res["guid"];
+                            stat["Type"] = res["type"];
+                            reference.Add(stat);
+                        }
                     }
-                    if (st.Count() > threshold)
+                    if(reference.Count > threshold)
                     {
                         JObject jo = new JObject();
                         jo.Add("FilePath", c["file_path"].ToString());
                         jo.Add("Name", c["name"].ToString());
-                        jo.Add("NumReference", st.Count());
+                        jo.Add("NumReference", reference.Count());
+                        jo.Add("Reference", reference);
                         smells.Add(jo);
                     }
+                   
                 }
             }
             Logger.Log(Logger.LogLevel.Debug, "Done!!");
@@ -448,6 +462,22 @@ namespace MetaSmellDetector
             result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             return result;
+        }
+    }
+
+    public static class Utility
+    {
+        public static JObject SearchData(JArray data, string param, string value)
+        {
+            foreach (JToken tok in data)
+            {
+                var p_val = tok[param].ToString();
+                if(p_val == value)
+                {
+                    return tok as JObject;
+                }
+            }
+            return null;
         }
     }
 }
