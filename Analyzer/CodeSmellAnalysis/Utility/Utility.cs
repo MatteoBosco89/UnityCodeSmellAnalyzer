@@ -35,6 +35,23 @@ namespace CodeSmellFinder
             }
             return query1;
         }
+
+
+        public static string QueryStringMultipleParms(string sop, List<string> param, List<string> names, string compOp, string logicOp)
+        {
+            string query1 = "";
+            if (param.Count != names.Count)
+                return null;
+            for (int i = 0; i < names.Count; i++)
+            {
+                query1 += $"@{sop}{param[i]} {compOp} '{names[i]}'";
+                if (i < names.Count - 1)
+                    query1 += $" {logicOp} ";
+            }
+            return query1;
+        }
+
+
         /// <summary>
         /// Search if one of the values inside the List is contained inside a a string
         /// </summary>
@@ -140,6 +157,43 @@ namespace CodeSmellFinder
             return results;
 
         }
+
+        /// <summary>
+        /// Find Usings in a Compilation Unit belonging to different
+        /// second level package.
+        /// For example UnityEngine.Input and UnityEngine.UI are different
+        /// whereas Unityengine.Input.Keyboard and UnityEngine.Input.Mouse are not
+        /// </summary>
+        /// <param name="comUnit">The compilation unit</param>
+        /// <param name="lib">The list of library name to search inside the using of the compilation unit</param>
+        /// <returns>A list of UsingReference found inside the compilation unit for the specified list of library</returns>
+        public static List<UsingReference> FindUsingModule(JObject comUnit, List<string> lib)
+        {
+            List<UsingReference> results = new List<UsingReference>();
+            Dictionary<string, int> allImports = new Dictionary<string, int>();
+
+            var query = comUnit.SelectTokens($"$..Usings");
+            JArray usings = new JArray(query);
+            foreach (JToken token in usings.Values())
+            {
+                String[] moduleNameSpaces = token["Name"].ToString().Split('.');
+                String module = token["Name"].ToString();
+
+                if (moduleNameSpaces.Length > 1)
+
+                    module = moduleNameSpaces[0] + "." + moduleNameSpaces[1];
+
+                    if (!Utility.ListInString(lib, module)) continue;
+                    if (allImports.ContainsKey(module)) continue;
+                    allImports[module] = 1;
+                    results.Add(new UsingReference(token["Name"].ToString(), (int)token["Line"]));
+            }
+            return results;
+
+        }
+
+
+
         /// <summary>
         /// Return all the classes name that inherit the specified class
         /// </summary>

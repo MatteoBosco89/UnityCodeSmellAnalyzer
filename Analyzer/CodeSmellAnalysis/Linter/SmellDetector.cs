@@ -11,7 +11,7 @@ using System.Xml.Linq;
 namespace CodeSmellFinder
 {
     /// <summary>
-    /// Static class containing all the methods to search a specified smell
+    /// Static class containing all the methods to search for a specified smell
     /// </summary>
     public class SmellDetector
     {
@@ -102,19 +102,21 @@ namespace CodeSmellFinder
             JObject result = new JObject();
             result.Add("Name", "Static Coupling");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, "Attributes", attributesList));
+            smells.Merge(DataExtractor.FieldDependenciesInCompilationUnit(data, "Type", types, "Attributes", attributesList));
             result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
         }
+
+
         /// <summary>
         /// Method to search all smell of type Weak Temporization. The smell is present if the classes use the Update method and
-        /// if the classes use the Time.time instead of Time.deltatime for all operation relative to time inside the FixedUpdate Method.
+        /// if the classes use the Time.time instead of Time.deltatime for all operation related to time inside the FixedUpdate Method.
         /// </summary>
         /// <param name="data">The dataset containing all the compilation unit of the project</param>
         /// <returns>A Jobject containing the result of the analisys</returns>
-        public static JObject WeakTemporization(JArray data)
+        /*public static JObject WeakTemporizationOld(JArray data)
         {
             Logger.Log(Logger.LogLevel.Debug, "Searching Weak Temporization Smells...");
             List<string> methods = new List<string> { "FixedUpdate" };
@@ -131,7 +133,96 @@ namespace CodeSmellFinder
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
             return result;
+        }*/
+
+
+
+        /// <summary>
+        /// Method to search all smell of type Weak Temporization. The smell is present if the classes use the Update method and
+        /// if the classes use the Time.time instead of Time.deltatime for all operation related to time inside the FixedUpdate Method.
+        /// </summary>
+        /// <param name="data">The dataset containing all the compilation unit of the project</param>
+        /// <returns>A Jobject containing the result of the analisys</returns>
+        public static JObject WeakTemporization(JArray data)
+        {
+            Logger.Log(Logger.LogLevel.Debug, "Searching Weak Temporization Smells...");
+            List<string> methods = new List<string> { "Update" };
+            List<string> kinds = new List<string> { "Assignment", "Definition" };
+            List<string> names = new List<string> { "Time.deltaTime" };
+            List<string> transformInvokes = new List<string> { "transform." };
+            JObject result = new JObject();
+            result.Add("Name", "Weak Temporization");
+
+            JArray smells = new JArray();
+
+            //Searching for Update methods
+            JArray updates = new JArray();
+
+            JArray darg = DataExtractor.FindArgumentsInInvocation(data, "Name", methods, names);
+            JArray dvar = DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Assignment", names);
+            JArray dinv = DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Assignment", names);
+
+
+            
+            JArray tmet = DataExtractor.FindInvocationSmell(data,methods, transformInvokes);
+            JArray trarg = DataExtractor.FindArgumentsInInvocation(data, "Name", methods, transformInvokes);
+            JArray trvar = DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Name", transformInvokes);
+            JArray trinv = DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Name", transformInvokes);
+
+
+
+            foreach (JToken token in data)
+            {
+                if (token is JObject)
+                {
+                    JObject cu = (JObject)token;
+                    updates = DataExtractor.GetMethodsWithName(cu, "Name", new List<string> { "Update" });
+
+                    foreach (JToken methodToken in updates)
+                    {
+
+                        //Discards empty updates
+                        if ((methodToken is JObject) && methodToken["IsEmpty"].ToString()=="False" && methodToken["HasBody"].ToString() == "True")
+                        {
+                            //Checks for the presence of Time.deltaTime
+                            JArray met = new JArray(methodToken);
+                            
+                            JArray vuse = DataExtractor.GetVarUse(methodToken as JObject, names[0]);
+     
+                            if ((darg.Count == 0 && dvar.Count==0 && dinv.Count==0 && vuse.Count==0) 
+                                && (
+                                trarg.Count>0 ||
+                                trvar.Count>0 ||
+                                trinv.Count>0 ||
+                                tmet.Count>0))
+                            {
+                                Logger.Log(Logger.LogLevel.Debug, "Update with no temporization");
+                                JObject s = new JObject();
+                                s.Add("Script", token["FileName"]);
+                                s.Add("Name", methodToken["Name"]);
+                                s.Add("Line", methodToken["Line"]);
+                                smells.Add(s);
+                            }
+                        }
+                    }
+                }
+            }
+
+            methods = new List<string> { "FixedUpdate" };
+            names = new List<string> { "Time.time" };
+            kinds = new List<string> { "Assignment", "Definition"};
+
+            smells.Merge(DataExtractor.FindArgumentsInInvocation(data, "Name", methods, names));
+            smells.Merge(DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Assignment", names));
+            smells.Merge(DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Assignment", names));
+            result.Add("Occurrency", smells.Count());
+
+            result.Add("Smells", smells);
+            Logger.Log(Logger.LogLevel.Debug, "Done!");
+            return result;
         }
+
+
         /// <summary>
         /// Method to search all the smell of type Improper collider. The smell is present inside a class if that classe uses object of type 
         /// MeshCollider instead of the standard collider present in unity.
@@ -149,9 +240,9 @@ namespace CodeSmellFinder
             JObject result = new JObject();
             result.Add("Name", "Improper Collider");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "FullName", types, null, null));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods", "FullName", false));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors", "FullName", false));
+            smells.Merge(DataExtractor.FieldDependenciesInCompilationUnit(data, "FullName", types, null, null));
+            smells.Merge(DataExtractor.DependenciesInMethods(data, types, methods, "Methods", "FullName", false));
+            smells.Merge(DataExtractor.DependenciesInMethods(data, types, methods, "Constructors", "FullName", false));
             smells.Merge(DataExtractor.VariablesFromData(data, "FullName", types, "Kind", new List<string> { "Definition" }, "", null, false));
             result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
@@ -173,10 +264,10 @@ namespace CodeSmellFinder
             List<string> methods = new List<string> { "GetComponent" };
             result.Add("Name", "Dependency Between Objects");
             JArray smells = new JArray();
-            smells.Merge(DataExtractor.FieldDependeciesInCompilationUnit(data, "Type", types, null, null));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Methods", "ReturnType", true));
-            smells.Merge(DataExtractor.DependeciesInMethods(data, types, methods, "Constructors", "ReturnType", true));
-            smells.Merge(DataExtractor.DependeciesInParameters(data, types));
+            smells.Merge(DataExtractor.FieldDependenciesInCompilationUnit(data, "Type", types, null, null));
+            smells.Merge(DataExtractor.DependenciesInMethods(data, types, methods, "Methods", "ReturnType", true));
+            smells.Merge(DataExtractor.DependenciesInMethods(data, types, methods, "Constructors", "ReturnType", true));
+            smells.Merge(DataExtractor.DependenciesInParameters(data, types));
             result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
@@ -190,7 +281,7 @@ namespace CodeSmellFinder
         /// <returns>A Jobject containing the result of the analisys</returns>
         public static JObject LackOfSeparationOfConcern(JArray data)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Searching Lack Of Seapration Of Concern Smells...");
+            Logger.Log(Logger.LogLevel.Debug, "Searching Lack Of Separation Of Concern Smells...");
             List<string> lib = new List<string> { "UnityEngine." };
             JObject result = new JObject();
             result.Add("Name", "Lack of separation of concern");
@@ -200,7 +291,7 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject comUnit = (JObject)token;
-                    List<UsingReference> usings = Utility.FindUsing(comUnit, lib);
+                    List<UsingReference> usings = Utility.FindUsingModule(comUnit, lib);
                     if (usings.Count > 1)
                     {
                         JObject s = new JObject();
@@ -224,7 +315,7 @@ namespace CodeSmellFinder
             return result;
         }
         /// <summary>
-        /// Method to search for all the smell of type Singleton Patter. The smell is present inside a class if the class
+        /// Method to search for all the smell of type Singleton Pattern. The smell is present inside a class if the class
         /// implements the singleton pattern. To verify if a class implements the pattern the following condition needs to check:
         /// - the class have a field of the same kind of the class itself
         /// - the class have a protected/private constructor
@@ -345,7 +436,7 @@ namespace CodeSmellFinder
         /// This methods search for heavy weight physics computation. The smell is present if physic computations are made inside the update or
         /// fixedupdate
         /// </summary>
-        /// <param name="data">The dataset containing all the compilation unit of the project</param>
+        /// <param name="data">The dataset containing all the compilation units of the project</param>
         /// <returns>>A Jobject containing the result of the analisys</returns>
         public static JObject HighPhysicsComputation(JArray data)
         {

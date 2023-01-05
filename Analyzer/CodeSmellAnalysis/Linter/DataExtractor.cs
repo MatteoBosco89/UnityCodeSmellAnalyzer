@@ -10,6 +10,46 @@ namespace CodeSmellFinder
     /// </summary>
     public static class DataExtractor
     {
+
+
+        /// <summary>
+        /// Method to search and return all the Methods with specified param values
+        /// </summary>
+        /// <param name="data">The dataset containing the compilation unit of the project</param>
+        /// <param name="param">The param inside the method</param>
+        /// <param name="methods">The values to compare the param to </param>
+        /// <returns>A Jarray containing the method JSON</returns>
+        public static JArray GetMethodsWithName(JObject data, string param, List<string> methods)
+        {
+
+            Logger.Log(Logger.LogLevel.Debug, "Analyzing: " + data["Name"].ToString());
+            var queryRes = data.SelectTokens($"$..Methods[?({Utility.QueryString(".", param, methods, "==", "||")})]");
+
+            return new JArray(queryRes);
+        }
+
+
+        /// <summary>
+        /// Method to search and return all usages of a given symbol
+        /// </summary>
+        /// <param name="data">The dataset containing the compilation unit to analyze</param>
+        /// <param name="varNames">The symbol to be searched </param>
+        /// <returns>A Jarray containing the object JSON</returns>
+        public static JArray GetVarUse(JObject data, string varName)
+        {
+
+            Logger.Log(Logger.LogLevel.Debug, "Analyzing: " + data["Name"].ToString());
+            var queryRes = data.SelectTokens($"$..VariablesList[?({Utility.QueryStringMultipleParms(".", new List<string>{"Name","Kind"}, new List<string>{varName,"Use"}, "==", "||")})]");
+
+            return new JArray(queryRes);
+        }
+
+
+
+
+
+
+
         /// <summary>
         /// Method to search all the Methods with specified param values
         /// </summary>
@@ -40,6 +80,10 @@ namespace CodeSmellFinder
             }
             return smells;
         }
+
+
+
+
         /// <summary>
         /// Method to search all the variable inside a method with specified parameters
         /// </summary>
@@ -187,7 +231,7 @@ namespace CodeSmellFinder
             return smells;
         }
         /// <summary>
-        /// Search all the variable inside the invocation of a set of methods (Depth search)
+        /// Search for all the variables inside the invocation of a set of methods (Depth search)
         /// </summary>
         /// <param name="data">The dataset containing the compilation unit of the project</param>
         /// <param name="param">The param of the methods to check</param>
@@ -378,7 +422,7 @@ namespace CodeSmellFinder
         /// <param name="param">The other parameter to check for the field</param>
         /// <param name="values">The list of values to compare to param</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray FieldDependeciesInCompilationUnit(JArray data, string typeParam, List<string> types, string param, List<string> values)
+        public static JArray FieldDependenciesInCompilationUnit(JArray data, string typeParam, List<string> types, string param, List<string> values)
         {
             JArray smells = new JArray();
             foreach (JToken token in data)
@@ -444,7 +488,7 @@ namespace CodeSmellFinder
         /// <param name="methods">The list of methods where to analyze the invocation</param>
         /// <param name="collection">The type of methods to check (Methods or Constructors)</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray DependeciesInMethods(JArray data, List<string> types, List<string> methods, string collection, string invParam,bool compType)
+        public static JArray DependenciesInMethods(JArray data, List<string> types, List<string> methods, string collection, string invParam,bool compType)
         {
             //Aggiugere se possibile il full name del returntype di un invocation
             JArray results = new JArray();
@@ -495,7 +539,7 @@ namespace CodeSmellFinder
         /// <param name="data">The dataset containing the compilation unit of the project</param>
         /// <param name="types">The list of types to check</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray DependeciesInParameters(JArray data, List<string> types)
+        public static JArray DependenciesInParameters(JArray data, List<string> types)
         {
             JArray smells = new JArray();
             foreach (JToken cu in data)
@@ -541,6 +585,10 @@ namespace CodeSmellFinder
             }
             return smells;
         }
+
+        
+
+
         /// <summary>
         /// Search inside a list of methods all the specified invocations (Depth search)
         /// </summary>
@@ -556,7 +604,7 @@ namespace CodeSmellFinder
             JArray res = DirectInvocation(data, methods, invocations);
             smells.Merge(res);
             //Console.Write("\tExtracting Smell With Depth >= 1...");
-            //anlyze the other invocation insiede the specified methods to found out if they contain the requested invocations
+            //anlyze the other invocations inside the specified methods to find out if they contain the requested invocations
             foreach (JToken token in data)
             {
                 JObject comUnit = new JObject();
@@ -585,7 +633,7 @@ namespace CodeSmellFinder
                         }
                     }
                     //analyze to found the possible smell in depth > 1
-                    JArray depthResutl = SearchIvocation(data, methodsToCheck, invocations, checkedMethods);
+                    JArray depthResutl = SearchInvocation(data, methodsToCheck, invocations, checkedMethods);
                     if (depthResutl.Count() > 0)
                     {
                         JObject j = new JObject();
@@ -637,15 +685,19 @@ namespace CodeSmellFinder
             //Console.WriteLine("Done!");
             return smells;
         }
+
+
+
+
         /// <summary>
-        /// Recoursive method to search all invocation inside a set of methods
+        /// Recursive method to search all invocations inside a set of methods
         /// </summary>
         /// <param name="data">The dataset containing the compilation unit of the project</param>
         /// <param name="methodsToCheck">The list of methods where to search the invocations</param>
         /// <param name="methodsWithSmell">The list of invocation to search</param>
         /// <param name="checkedMethods">The list of methods already visited</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray SearchIvocation(JArray data, List<MethodReference> methodsToCheck, List<string> methodsWithSmell, List<string> checkedMethods)
+        public static JArray SearchInvocation(JArray data, List<MethodReference> methodsToCheck, List<string> methodsWithSmell, List<string> checkedMethods)
         {
             JArray results = new JArray();
             //new list of methods to check that will be passed at the recursive call of the function
@@ -691,7 +743,7 @@ namespace CodeSmellFinder
                         m_check.Add(m);
                     }
                 }
-                JArray arr = SearchIvocation(data, m_check, methodsWithSmell, checkedMethods);
+                JArray arr = SearchInvocation(data, m_check, methodsWithSmell, checkedMethods);
                 if (arr.Count() > 0)
                 {
                     JObject j = new JObject();
@@ -894,7 +946,7 @@ namespace CodeSmellFinder
             return smells;
         }
         /// <summary>
-        /// Search all the assignmet made to properties of specified object type
+        /// Search all the assignment made to properties of specified object type
         /// </summary>
         /// <param name="data">The dataset containing the compilation unit of the project</param>
         /// <param name="type">The object type to search</param>

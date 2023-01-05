@@ -59,7 +59,7 @@ namespace CodeSmellFinder
                 ExposeSmellMethod();
                 return;
             }
-            Logger.Log(Logger.LogLevel.Debug, "Start analisys...");
+            Logger.Log(Logger.LogLevel.Debug, "Start analysis...");
             LoadData();
             LoadSmells();
             if (smellsToAnalyze.Count < 0)
