@@ -167,7 +167,7 @@ namespace Starter
     /// </summary>
     public class Options
     {
-        [Option('d', "directory", Required = true, HelpText = "Repos Directory")]
+        [Option('d', "directory", Required = true, HelpText = "Directory containing the repository to analyze")]
         public string Directory { get; set; }
         [Option('v', "verbose", Required = false, HelpText = "Display Log on the standard output.")]
         public bool Verbose { get; set; }
