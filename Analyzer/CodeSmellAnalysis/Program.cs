@@ -24,7 +24,7 @@ namespace CodeSmellFinder
         public string DataPath { get; set; }
         [Option('s', "smell", Required = false, HelpText = "Searches for a single smell")]
         public string Smell { get; set; }
-        [Option('f', "file", Required = false, HelpText = "Textual file with the list of smells to search for")]
+        [Option('f', "file", Required = false, HelpText = "Textual file with the list of smells to search for (use the names produced by the -e option)")]
         public string SmellPath { get; set; }
         [Option('v', "verbose", Required = false, HelpText = "Enables the status log on the console window")]
         public bool Verbose { get; set; }

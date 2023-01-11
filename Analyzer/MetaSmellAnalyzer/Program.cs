@@ -27,7 +27,7 @@ namespace MetaSmellDetector
         public bool Expose { get; set; }
         [Option('d', "data", SetName = "dat", Required = true, HelpText = "Main data directory and Metadata directory path, Mutually exclusive with -e, --expose")]
         public IEnumerable<string> DataPath { get; set; }
-        [Option('f', "file", Required = false, HelpText = "Textual file with the list of smells to search")]
+        [Option('f', "file", Required = false, HelpText = "Textual file with the list of smells to search (use the names produced by the -e option)")]
         public string SmellPath { get; set; }
         [Option('v', "verbose", Required = false, HelpText = "Enables the status log on console window")]
         public bool Verbose { get; set; }
