@@ -158,16 +158,7 @@ namespace CodeSmellFinder
             //Searching for Update methods
             JArray updates = new JArray();
 
-            JArray darg = DataExtractor.FindArgumentsInInvocation(data, "Name", methods, names);
-            JArray dvar = DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Assignment", names);
-            JArray dinv = DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Assignment", names);
-
-
             
-            JArray tmet = DataExtractor.FindInvocationSmell(data,methods, transformInvokes);
-            JArray trarg = DataExtractor.FindArgumentsInInvocation(data, "Name", methods, transformInvokes);
-            JArray trvar = DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Name", transformInvokes);
-            JArray trinv = DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Name", transformInvokes);
 
 
 
@@ -176,6 +167,21 @@ namespace CodeSmellFinder
                 if (token is JObject)
                 {
                     JObject cu = (JObject)token;
+
+
+                    JArray darg = DataExtractor.FindArgumentsInInvocation(new JArray(cu), "Name", methods, names);
+                    JArray dvar = DataExtractor.VariableFromMethods(new JArray(cu), "Name", methods, "Kind", kinds, "Assignment", names);
+                    JArray dinv = DataExtractor.FindVariableInInvocations(new JArray(cu), "Name", methods, "Kind", kinds, "Assignment", names);
+
+
+
+                    JArray tmet = DataExtractor.FindInvocationSmell(new JArray(cu), methods, transformInvokes);
+                    JArray trarg = DataExtractor.FindArgumentsInInvocation(new JArray(cu), "Name", methods, transformInvokes);
+                    JArray trvar = DataExtractor.VariableFromMethods(new JArray(cu), "Name", methods, "Kind", kinds, "Name", transformInvokes);
+                    JArray trinv = DataExtractor.FindVariableInInvocations(new JArray(cu), "Name", methods, "Kind", kinds, "Name", transformInvokes);
+
+
+
                     updates = DataExtractor.GetMethodsWithName(cu, "Name", new List<string> { "Update" });
 
                     foreach (JToken methodToken in updates)
@@ -193,7 +199,8 @@ namespace CodeSmellFinder
                                 && (
                                 trarg.Count>0 ||
                                 trvar.Count>0 ||
-                                trinv.Count>0 ||
+                                trinv.Count>0
+                                ||
                                 tmet.Count>0))
                             {
                                 Logger.Log(Logger.LogLevel.Debug, "Update with no temporization");
@@ -214,7 +221,7 @@ namespace CodeSmellFinder
 
             smells.Merge(DataExtractor.FindArgumentsInInvocation(data, "Name", methods, names));
             smells.Merge(DataExtractor.VariableFromMethods(data, "Name", methods, "Kind", kinds, "Assignment", names));
-            smells.Merge(DataExtractor.FindVariableInIvocations(data, "Name", methods, "Kind", kinds, "Assignment", names));
+            smells.Merge(DataExtractor.FindVariableInInvocations(data, "Name", methods, "Kind", kinds, "Assignment", names));
             result.Add("Occurrency", smells.Count());
 
             result.Add("Smells", smells);

@@ -89,7 +89,7 @@ namespace MetaSmellDetector
 
         public static void Analyze()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Start analisys...");
+            Logger.Log(Logger.LogLevel.Debug, "Start analysis...");
             if (expose)
             {
                 ExposeSmellMethod();
@@ -114,7 +114,7 @@ namespace MetaSmellDetector
 
         public static void ExposeSmellMethod()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Exposing names of smells methods...");
+            Logger.Log(Logger.LogLevel.Debug, "Exposing names of smell methods...");
             List<string> methods = MetaExtractor.SmellsMethods();
             string text = "";
             foreach(string s in methods)
@@ -128,7 +128,7 @@ namespace MetaSmellDetector
 
         public static void SearchSmell(JArray data)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Searching smells...");
+            Logger.Log(Logger.LogLevel.Debug, "Searching for smells...");
             try
             {
                 string[] lines = File.ReadAllLines(smellFile);

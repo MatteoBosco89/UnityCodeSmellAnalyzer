@@ -241,7 +241,7 @@ namespace CodeSmellFinder
         /// <param name="param2">The second param of the variables to check</param>
         /// <param name="names">The list of values to compare to param2</param>
         /// <returns>A Jarray containing the smells found</returns>
-        public static JArray FindVariableInIvocations(JArray data, string param, List<string> methods, string param1, List<string> values, string param2, List<string> names)
+        public static JArray FindVariableInInvocations(JArray data, string param, List<string> methods, string param1, List<string> values, string param2, List<string> names)
         {
             JArray smells = new JArray();
             foreach (JToken token in data)
@@ -594,7 +594,7 @@ namespace CodeSmellFinder
         /// </summary>
         /// <param name="data">The dataset containing the compilation unit of the project</param>
         /// <param name="methods">The list of methods where to search the invocations</param>
-        /// <param name="invocations">The list of invocation to search</param>
+        /// <param name="invocations">The list of invocations to search</param>
         /// <returns>A Jarray containing the smells found</returns>
         public static JArray FindInvocationSmell(JArray data, List<string> methods, List<string> invocations)
         {

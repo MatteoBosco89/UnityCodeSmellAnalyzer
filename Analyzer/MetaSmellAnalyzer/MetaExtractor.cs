@@ -54,7 +54,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell "Heavy Phisics Computation". The smell is present if an object uses  a Rigidbody with m_CollisionDetection set
+        /// This method search smell "Heavy Physics Computation". The smell is present if an object uses  a Rigidbody with m_CollisionDetection set
         /// to 1 or 2
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
@@ -236,7 +236,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell "static coupling" with guid associates with other gameobject
+        /// This method search smell "static coupling" with guid associated with other gameobjects
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -385,7 +385,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell contains meshcollider
+        /// This method search smell contains a meshcollider
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -414,7 +414,7 @@ namespace MetaSmellDetector
             return result;
         }
         /// <summary>
-        /// This method search animation with too many key frame
+        /// This method search animation with too many key frames
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
