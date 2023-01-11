@@ -15,19 +15,19 @@ namespace UnityDataAnalyzer
     }
     public class Options
     {
-        [Option('a', "asset",Required = true, HelpText = "Path to Assets directory")]
+        [Option('a', "asset",Required = true, HelpText = "Path to the Assets directory")]
         public string DataPath { get; set; }
-        [Option('m', "nometa", Required = false, HelpText = "Don't load .meta files")]
+        [Option('m', "nometa", Required = false, HelpText = "If specified, the tool does no load .meta files")]
         public bool NoMeta { get; set; }
-        [Option('f', "fileExt", Required = false, HelpText = "Extension.txt file")]
+        [Option('f', "fileExt", Required = false, HelpText = "File (default Extension.txt) containing the extensions to analyze")]
         public string ExtensionFile { get; set; }
-        [Option('e', "ext", Required = false, HelpText = "List of extension to search")]
+        [Option('e', "ext", Required = false, HelpText = "List of extensions to search")]
         public IEnumerable<string> Extensions { get; set; }
-        [Option('v', "verbose", Required = false, HelpText = "Enable the status log on console window")]
+        [Option('v', "verbose", Required = false, HelpText = "Enable the status log on the console window")]
         public bool Verbose { get; set; }
-        [Option('d', "dir", Required = false, HelpText = "Save results to specified folder")]
+        [Option('d', "dir", Required = false, HelpText = "Save results to specified folder (default is the current directory)")]
         public string SaveDirectory { get; set; }
-        [Option('n', "name", Required = false, HelpText = "Specify Project Name")]
+        [Option('n', "name", Required = false, HelpText = "Specify the project Name")]
         public string ProjectName { get; set; } 
         [Option('l', "log", Required = false, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)")]
         public int Logging { get; set; }

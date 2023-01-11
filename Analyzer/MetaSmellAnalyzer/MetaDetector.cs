@@ -38,7 +38,7 @@ namespace MetaSmellDetector
 
         public static void LoadData()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Loading DataSet...");
+            Logger.Log(Logger.LogLevel.Debug, "Loading Dataset...");
             try
             {
                 Logger.Log(Logger.LogLevel.Debug, "Loading main data...");
@@ -57,10 +57,10 @@ namespace MetaSmellDetector
                         Logger.Log(Logger.LogLevel.Debug, $"File: {file} is not json");
                     }                  
                 }
-                Logger.Log(Logger.LogLevel.Debug, "Main data loaded!");
+                Logger.Log(Logger.LogLevel.Debug, "Maindata loaded!");
                 if (dataPath.Count() > 1)
                 {
-                    Logger.Log(Logger.LogLevel.Debug, "Loading meta data...");
+                    Logger.Log(Logger.LogLevel.Debug, "Loading metadata...");
                     files = Directory.GetFiles(dataPath.ElementAt(1), "*.*", SearchOption.AllDirectories).Where(f => DIR.Any(f.ToLower().EndsWith)).ToList();
                     foreach (string file in files)
                     {
@@ -74,14 +74,14 @@ namespace MetaSmellDetector
                             Logger.Log(Logger.LogLevel.Debug, $"File: {file} is not json");
                         }
                     }
-                    Logger.Log(Logger.LogLevel.Debug, "Meta data loaded!");
+                    Logger.Log(Logger.LogLevel.Debug, "Metadata loaded!");
                 }
                 isDataLoaded = true;
                 Logger.Log(Logger.LogLevel.Debug, "Dataset Loaded!");
             }
             catch (FileNotFoundException)
             {
-                Logger.Log(Logger.LogLevel.Debug, "DataSet Not Found");
+                Logger.Log(Logger.LogLevel.Debug, "Dataset Not Found");
                 isDataLoaded = false;
             }
            

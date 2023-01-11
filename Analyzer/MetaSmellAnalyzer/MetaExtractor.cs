@@ -54,7 +54,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell "Heavy Physics Computation". The smell is present if an object uses  a Rigidbody with m_CollisionDetection set
+        /// This method searches for the smell "Heavy Physics Computation". The smell is present if an object uses  a Rigidbody with m_CollisionDetection set
         /// to 1 or 2
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
@@ -98,7 +98,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell "SubOptimal", this method search all smell with activate rbaked light if object have Animator component (is dynamic)
+        /// This method searches for the smell "SubOptimal", this method search all smell with activate rbaked light if object have Animator component (is dynamic)
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -133,7 +133,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell "SubOptimal1", this function search all smell with activate real-time light if doesn't have animator (is static)
+        /// This method searches for the smell "SubOptimal1", this function search all smell with activate real-time light if doesn't have animator (is static)
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -168,7 +168,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell with light of type real time activate and greater than a threshold
+        /// This method searches the smell related to light of type real time activated 
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -199,7 +199,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell with activate Animator 
+        /// This method searches for smell Multiple Animator
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -236,7 +236,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell "static coupling" with guid associated with other gameobjects
+        /// This method searches for smell "Static coupling" with guid associated with other gameobjects
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -295,7 +295,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell with Anystate in the animator 
+        /// This method searches for the smell with Anystate in the animator 
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -334,7 +334,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search with num_components or file_size greather than treshold
+        /// This method searches num_components or file_size greather than a given treshold
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
@@ -385,7 +385,7 @@ namespace MetaSmellDetector
         }
 
         /// <summary>
-        /// This method search smell contains a meshcollider
+        /// This method searches for components containing a meshcollider
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
