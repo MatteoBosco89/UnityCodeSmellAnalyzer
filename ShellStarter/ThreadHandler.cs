@@ -70,7 +70,7 @@ namespace StarterModel
 
             if (processList.Count > 0)
             {
-                if(processList.ElementAt(0).Name == "CodeSmellAnalysis/CodeSmellAnalysis.exe")
+                if(processList.ElementAt(0).Name == "CodeSmellAnalyzer.exe")
                 {
                     bool found = false;
                     FileInfo file = new FileInfo(currentWorkingDirectory + "/CodeAnalysis.json");

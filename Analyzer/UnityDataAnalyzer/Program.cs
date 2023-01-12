@@ -8,14 +8,16 @@ namespace UnityDataAnalyzer
     {
         public static void Main(string[] args)
         {
+
             Parser.Default.ParseArguments<Options>(args).WithParsed(o => UnityDataExtractor.Init(o));
             UnityDataExtractor.Analyze();
             Environment.Exit(0);
+            
         }
     }
     public class Options
     {
-        [Option('a', "asset",Required = true, HelpText = "Path to the Assets directory")]
+        [Option('d', "dir",Required = true, HelpText = "Path to the Assets directory")]
         public string DataPath { get; set; }
         [Option('m', "nometa", Required = false, HelpText = "If specified, the tool does no load .meta files")]
         public bool NoMeta { get; set; }
@@ -25,7 +27,7 @@ namespace UnityDataAnalyzer
         public IEnumerable<string> Extensions { get; set; }
         [Option('v', "verbose", Required = false, HelpText = "Enable the status log on the console window")]
         public bool Verbose { get; set; }
-        [Option('d', "dir", Required = false, HelpText = "Save results to specified folder (default is the current directory)")]
+        [Option('r', "results", Required = false, HelpText = "Saves results to specified folder (default is the current directory)")]
         public string SaveDirectory { get; set; }
         [Option('n', "name", Required = false, HelpText = "Specify the project Name")]
         public string ProjectName { get; set; } 

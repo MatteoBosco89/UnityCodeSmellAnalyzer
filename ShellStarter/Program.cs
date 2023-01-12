@@ -71,8 +71,8 @@ namespace Starter
         /// <param name="repo">The repository to analyze</param>
         public void StartThread(string repo)
         {
-            codeAnalysis = new ThreadHandler(CodeAnalysisProcesses(), CodeAnalysisCommands(repo), "Results" + Path.DirectorySeparatorChar + ProjectName(repo) + Path.DirectorySeparatorChar + "CodeSmell" + Path.DirectorySeparatorChar);
-            dataAnalysis = new ThreadHandler(DataAnalysisProcesses(), DataAnalysisCommands(repo), "Results" + Path.DirectorySeparatorChar + ProjectName(repo) + Path.DirectorySeparatorChar + "DataSmell" + Path.DirectorySeparatorChar);
+            codeAnalysis = new ThreadHandler(CodeAnalysisProcesses(), CodeAnalysisCommands(repo), "Results" + Path.DirectorySeparatorChar + ProjectName(repo) + Path.DirectorySeparatorChar + "Code" + Path.DirectorySeparatorChar);
+            dataAnalysis = new ThreadHandler(DataAnalysisProcesses(), DataAnalysisCommands(repo), "Results" + Path.DirectorySeparatorChar + ProjectName(repo) + Path.DirectorySeparatorChar + "Data" + Path.DirectorySeparatorChar);
         }
         /// <summary>
         /// Fetch the project name from the repository path.
@@ -140,12 +140,12 @@ namespace Starter
             WriteOutput(DateTime.Now + " Analyzing Data " + name + " Repository");
             if(os == OS.Windows)
             {
-                commands.Add("-n " + name + " -a " + path + " -d Results/" + name + "/Data -v");
+                commands.Add("-n " + name + " -d " + path + " -r Results/" + name + "/Data -v");
                 commands.Add("-d Results/" + name + "/Data -r Results/" + name + "/Data -c -v");
             }
             else
             {
-                commands.Add("UnityDataAnalyzer.exe -n " + name + " -a " + path + " -d Results/" + name + "/Data -v");
+                commands.Add("UnityDataAnalyzer.exe -n " + name + " -d " + path + " -r Results/" + name + "/Data -v");
                 commands.Add("MetaSmellAnalyzer.exe -d Results/" + name + "/Data -r Results/" + name + "/Data -c -v");
             }
             return commands;
