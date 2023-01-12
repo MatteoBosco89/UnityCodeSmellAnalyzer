@@ -445,11 +445,11 @@ namespace CodeSmellFinder
         /// </summary>
         /// <param name="data">The dataset containing all the compilation units of the project</param>
         /// <returns>>A Jobject containing the result of the analisys</returns>
-        public static JObject HighPhysicsComputation(JArray data)
+        public static JObject HeavyPhysicsComputation(JArray data)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Searching High Physics Computation...");
+            Logger.Log(Logger.LogLevel.Debug, "Searching Heavy Physics Computation...");
             JObject result = new JObject();
-            result.Add("Name", "High Physic Computations");
+            result.Add("Name", "Heavy Physics Computations");
             JArray smells = new JArray();
             smells.Merge(DataExtractor.ChangesToVariableOfTypeInMethods(data, new List<string> { "Update", "FixedUpdate" }, "Assignment", "UnityEngine.Rigidbody", new List<string> { ".position", ".rotation" }));
             result.Add("Occurrency", smells.Count());

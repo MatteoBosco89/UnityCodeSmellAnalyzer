@@ -91,7 +91,7 @@ namespace Starter
         protected List<string> CodeAnalysisProcesses()
         {
             if(os == OS.Unix) return new List<string> { "mono", "mono" };
-            return new List<string> { "CSharpAnalyzer/CSharpAnalyzer.exe", "CodeSmellAnalysis/CodeSmellAnalysis.exe" };
+            return new List<string> { "CSharpAnalyzer.exe", "CodeSmellAnalyzer.exe" };
         }
         /// <summary>
         /// Construct process list to run based on OS. DataSmell Case
@@ -100,7 +100,7 @@ namespace Starter
         protected List<string> DataAnalysisProcesses()
         {
             if (os == OS.Unix) return new List<string> { "mono", "mono" };
-            return new List<string> { "UnityDataAnalyzer/UnityDataAnalyzer.exe", "MetaSmellAnalyzer/MetaSmellAnalyzer.exe" };
+            return new List<string> { "UnityDataAnalyzer.exe", "MetaSmellAnalyzer.exe" };
         }
         /// <summary>
         /// Construct code analysis commands.
@@ -115,14 +115,14 @@ namespace Starter
             WriteOutput(DateTime.Now + " Analyzing Code " + name + " Repository");
             if(os == OS.Windows)
             {
-                commands.Add("-n " + name + " -p " + path + " -r ../Results/" + name + "/CodeSmell -v");
-                commands.Add("-d ../Results/" + name + "/CodeSmell/CodeAnalysis.json -r ../Results/" + name + "/CodeSmell -c -v");
+                commands.Add("-n " + name + " -p " + path + " -r Results/" + name + "/CodeSmell -v");
+                commands.Add("-d Results/" + name + "/CodeSmell/CodeAnalysis.json -r Results/" + name + "/CodeSmell -c -v");
 
             }
             else
             {
-                commands.Add("CSharpAnalyzer/CSharpAnalyzer.exe -n " + name + " -p " + path + " -r ../Results/" + name + "/CodeSmell -v");
-                commands.Add("CodeSmellAnalysis/CodeSmellAnalysis.exe -d ../Results/" + name + "/CodeSmell/CodeAnalysis.json -r ../Results/" + name + "/CodeSmell -c -v");
+                commands.Add("CSharpAnalyzer.exe -n " + name + " -p " + path + " -r Results/" + name + "/CodeSmell -v");
+                commands.Add("CodeSmellAnalyzer.exe -d Results/" + name + "/CodeSmell/CodeAnalysis.json -r Results/" + name + "/CodeSmell -c -v");
 
             }
             return commands;
@@ -140,13 +140,13 @@ namespace Starter
             WriteOutput(DateTime.Now + " Analyzing Data " + name + " Repository");
             if(os == OS.Windows)
             {
-                commands.Add("-n " + name + " -a " + path + " -d ../Results/" + name + "/DataSmell -v");
-                commands.Add("-d ../Results/" + name + "/DataSmell -r ../Results/" + name + "/DataSmell -c -v");
+                commands.Add("-n " + name + " -a " + path + " -d Results/" + name + "/DataSmell -v");
+                commands.Add("-d Results/" + name + "/DataSmell -r Results/" + name + "/DataSmell -c -v");
             }
             else
             {
-                commands.Add("UnityDataAnalyzer/UnityDataAnalyzer.exe -n " + name + " -a " + path + " -d ../Results/" + name + "/DataSmell -v");
-                commands.Add("MetaSmellAnalyzer/MetaSmellAnalyzer.exe -d ../Results/" + name + "/DataSmell -r ../Results/" + name + "/DataSmell -c -v");
+                commands.Add("UnityDataAnalyzer.exe -n " + name + " -a " + path + " -d Results/" + name + "/DataSmell -v");
+                commands.Add("MetaSmellAnalyzer.exe -d Results/" + name + "/DataSmell -r Results/" + name + "/DataSmell -c -v");
             }
             return commands;
         }
