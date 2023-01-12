@@ -220,8 +220,8 @@ namespace CodeSmellFinder
         {
             Logger.Log(Logger.LogLevel.Debug, "Saving Smells For Categories...");
             string dir = Directory.GetCurrentDirectory();
-            if (save_dir == "") dir = Path.Combine(dir, "CodeSmells");
-            else dir = Path.Combine(save_dir, "CodeSmells");
+            if (save_dir == "") dir = Path.Combine(dir, "CodeSmellResults");
+            else dir = Path.Combine(save_dir, "CodeSmellResults");
             if (Directory.Exists(dir)) Directory.Delete(dir, true);
             Directory.CreateDirectory(dir);
             

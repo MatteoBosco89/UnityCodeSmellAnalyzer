@@ -115,14 +115,14 @@ namespace Starter
             WriteOutput(DateTime.Now + " Analyzing Code " + name + " Repository");
             if(os == OS.Windows)
             {
-                commands.Add("-n " + name + " -p " + path + " -r Results/" + name + "/CodeSmell -v");
-                commands.Add("-d Results/" + name + "/CodeSmell/CodeAnalysis.json -r Results/" + name + "/CodeSmell -c -v");
+                commands.Add("-n " + name + " -p " + path + " -r Results/" + name + "/Code -v");
+                commands.Add("-d Results/" + name + "/Code/CodeAnalysis.json -r Results/" + name + "/Code -c -v");
 
             }
             else
             {
-                commands.Add("CSharpAnalyzer.exe -n " + name + " -p " + path + " -r Results/" + name + "/CodeSmell -v");
-                commands.Add("CodeSmellAnalyzer.exe -d Results/" + name + "/CodeSmell/CodeAnalysis.json -r Results/" + name + "/CodeSmell -c -v");
+                commands.Add("CSharpAnalyzer.exe -n " + name + " -p " + path + " -r Results/" + name + "/Code -v");
+                commands.Add("CodeSmellAnalyzer.exe -d Results/" + name + "/Code/CodeAnalysis.json -r Results/" + name + "/Code -c -v");
 
             }
             return commands;
@@ -140,13 +140,13 @@ namespace Starter
             WriteOutput(DateTime.Now + " Analyzing Data " + name + " Repository");
             if(os == OS.Windows)
             {
-                commands.Add("-n " + name + " -a " + path + " -d Results/" + name + "/DataSmell -v");
-                commands.Add("-d Results/" + name + "/DataSmell -r Results/" + name + "/DataSmell -c -v");
+                commands.Add("-n " + name + " -a " + path + " -d Results/" + name + "/Data -v");
+                commands.Add("-d Results/" + name + "/Data -r Results/" + name + "/Data -c -v");
             }
             else
             {
-                commands.Add("UnityDataAnalyzer.exe -n " + name + " -a " + path + " -d Results/" + name + "/DataSmell -v");
-                commands.Add("MetaSmellAnalyzer.exe -d Results/" + name + "/DataSmell -r Results/" + name + "/DataSmell -c -v");
+                commands.Add("UnityDataAnalyzer.exe -n " + name + " -a " + path + " -d Results/" + name + "/Data -v");
+                commands.Add("MetaSmellAnalyzer.exe -d Results/" + name + "/Data -r Results/" + name + "/Data -c -v");
             }
             return commands;
         }
@@ -169,7 +169,7 @@ namespace Starter
     {
         [Option('d', "directory", Required = true, HelpText = "Directory containing the repository to analyze")]
         public string Directory { get; set; }
-        [Option('v', "verbose", Required = false, HelpText = "Display Log on the standard output.")]
+        [Option('v', "verbose", Required = false, HelpText = "Displays the log on the standard output.")]
         public bool Verbose { get; set; }
     }
 
