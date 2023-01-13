@@ -59,7 +59,7 @@ namespace MetaSmellDetector
         /// </summary>
         /// <param name="data">The dataset to analyze</param>
         /// <param name="paramList">The list of parameters</param>
-        public static JObject HeavyPhisics(JArray data, List<string> paramList)
+        public static JObject HeavyPhysics(JArray data, List<string> paramList)
         {
             Logger.Log(Logger.LogLevel.Debug, "Heavy Physics Computation...");
             JArray smells = new JArray();
