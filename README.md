@@ -2,7 +2,7 @@
 
 UnityLint is a tool for detecting bad game smells in Unity video games. It is able to detect 18 types of video game bad smells defined in literature ([Nardone et al., 2022](https://mdipenta.github.io/files/tosem-gamesmells.pdf)). 
 
-More in detail, UnityLint detects the following video game smells belonging to different categories:
+UnityLint detects the following video game smells belonging to different categories:
 
 **Design and Game Logic**
 
@@ -37,35 +37,38 @@ More in detail, UnityLint detects the following video game smells belonging to d
 
 ### Table of Contents
 
+**[Download and Installation](#download-and-installation)**
 **[Starter Tool](#starter-tool)**
 **[CSharpAnalyzer](#csharpanalyzer)**
 **[CodeSmellAnalyzer](#codesmellanalyzer)**
 **[UnityDataAnalyzer](#unitydataanalyzer)**
 **[MetaSmellAnalyzer](#metasmellanalyzer)**
 
-## Installation & Download
+## Download And Installation
 
-You can [download](https://github.com/MatteoBosco89/UnityCodeSmellAnalyzer/releases/tag/v1.0.0) the latest runnable version of UnityLint for Windows, macOS and Linux.
+You can [download](https://github.com/mdipenta/UnityCodeSmellAnalyzer/releases/) the latest available release of UnityLint.
 
-> **Note**
-> If you're using Mac/Linux, to run UnityLint you have to install [Mono](https://www.mono-project.com/).
+Alternatively, you can [recompile](#recompiling) the tool using Visual Studio.
+
+**Requirements**
+The tool works natively under Windows 10 or above. Also, the tool works under Linux and Mac OS, and requires you to install [Mono](https://www.mono-project.com/).
 
 ## Starter Tool
 
 ShellStarter is the execution file of UnityLint tool. Given a project or a list of projects, it detects video game smells. 
 
-### How To Use
+### How to Use it
 
 Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
-Type the following command to run **ShellStarter** tool (depending on your OS (Windows or Mac/Linux))
+Type the following command to run **ShellStarter** tool (depending on your OS (Windows or MacOS/Linux))
 
 *Windows*
 ```bash
 ShellStarter.exe -d <dirPath>
 ```
 
-*Mac / Linux*
+*MacOS / Linux*
 ```bash
 mono ShellStarter.exe -d <dirPath>
 ```
@@ -88,7 +91,7 @@ Furthermore, you can use the following **Optional Arguments**:
 
 CSharpAnalizer extracts information from the project's source code using API of Roslyn compiler. It provides as output a JSON file containing all information extracted from source code.
 
-### How To Use
+### How to Use it
 
 Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
@@ -99,7 +102,7 @@ Type the following command to run **CSharpAnalyzer** tool (depending on your OS 
 CSharpAnalyzer.exe -p <projectDirPath>
 ```
 
-*Mac / Linux*
+*MacOS / Linux*
 ```bash
 mono CSharpAnalyzer.exe -p <projectDirPath>
 ```
@@ -130,16 +133,16 @@ Furthermore, you can use the following **Optional Arguments**:
 
 -v, --verbose       Displays the log on the standard output.
 
---help              Display this help screen.
+--help              Displays this help screen.
 
---version           Display version information.
+--version           Displays version information.
 ```
 
 ## CodeSmellAnalyzer
 
 CodeSmellAnalyzer applies detection rules and identifies video game smells located into source code. It uses as input JSON file produced by CSharpAnalyzer.
 
-### How To Use
+### How to Use it
 
 Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
@@ -154,7 +157,7 @@ or
 CodeSmellAnalyzer.exe -e
 ```
 
-*Mac / Linux*
+*MacOS / Linux*
 ```bash
 mono CodeSmellAnalyzer.exe -d <JSON-filePath>
 ```
@@ -186,19 +189,19 @@ names produced by the -e option)
 
 -c, --category    Saves the smells by category
 
--r, --result      Save results into a specified folder
+-r, --result      Saves results into a specified folder
 
 -l, --log         Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 
 Critical 5 None 6 (Debug is Default)
 
---help            Display this help screen.
+--help            Displays this help screen.
 ```
 
 ## UnityDataAnalyzer
 
 UnityDataAnalyzer extracts information from the project's metadata (i.e., from files with the following extensions: .unity, .controller, .prefab, .mat, .anim, .flare, .assets and .meta). It provides as output a JSON file containing all information extracted from source code.
 
-### How To Use
+### How to Use it
 
 Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
@@ -235,16 +238,16 @@ Furthermore, you can use the following **Optional Arguments**:
 
 -l, --log        Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)
 
---help           Display this help screen.
+--help           Displays this help screen.
 
---version        Display version information.
+--version        Displays version information.
 ```
 
 ## MetaSmellAnalyzer
 
 MetaSmellAnalyzer applies detection rules and identifies video game smells located into metadata. It uses as input JSON file produced by UnityDataAnalyzer.
 
-### How To Use
+### How to Use it
 
 Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
@@ -259,7 +262,7 @@ or
 MetaSmellAnalyzer.exe -e
 ```
 
-*Mac / Linux*
+*MacOS / Linux*
 ```bash
 mono MetaSmellAnalyzer.exe -d <JSON-filePath>
 ```
@@ -300,7 +303,7 @@ Critical 5 None 6 (Debug is Default)
 ```
 
 > **Note**
-> MetaSmellAnalyzer detects some smells using thresholds and/or fixed values. These values are defined into [smell.txt](https://github.com/mdipenta/UnityCodeSmellAnalyzer/blob/main/Analyzer/MetaSmellAnalyzer/smell.txt) file.
+> MetaSmellAnalyzer detects some smells using thresholds and/or fixed values. These values are defined in the [smell.txt](https://github.com/mdipenta/UnityCodeSmellAnalyzer/blob/main/Analyzer/MetaSmellAnalyzer/smell.txt) file.
 > Values used are explained in the following:
 > - m_CollisionDetection: this variable is used to detect Heavy Phisics Computation for collision between Rigidbody collider and other colliders in the scene. The smell exists if this m_CollisionDetection variable of Rigidbody is equal to **1** or **2**. These values correspond to **Continuous** or **Continuous Dynamic** (see [Unity Manual](https://docs.unity3d.com/Manual/class-Rigidbody.html) for further details).
 > - m_EnableBakedLightmaps (into Animator): this parameter is used to detect Sub-optimal, expensive choice of lights, shadows, or reflections smell. If this variable assumes a value greater than **0** the gameobject uses baked lights.
@@ -312,6 +315,17 @@ Critical 5 None 6 (Debug is Default)
 > - num_components: this parameter refers to Bloated Assets smell. The detection rule computes the number of component into metadata and checks if this number is greater than **12** (as defined into the file).
 > - TooManyKeyFrames: this parameter is used to detect Too many Keyframes in animations smell. The detection rule checks, into .anim files, if the variable m_Curve has a number of time values greater than **7**.
 
+
+## Recompiling UnityLint
+UnityLint can be recompiled using Visual Studio (tested with Vistual Studio Community Edition 2019 for Windows and for MacOS, version 8.10.21). The sources of the five tools are located into the following folders:
+- [ShellStarter](ShellStarter)
+- [Analyzer/CSharpAnalyzer](Analyzer/CSharpAnalyzer)
+- [Analyzer/CodeSmellAnalyzer](Analyzer/CodeSmellAnalyzer)
+- [Analyzer/MetaSmellAnalyzer](Analyzer/MetaSmellAnalyzer)
+- [Analyzer/UhityDataAnalyzer](Analyzer/UhityDataAnalyze)
+
+To create a release (as well as to use the ShellStarter), you need to put the compilation result (.exe files and DLLs) of all tools in the same directory. Also, you need to add the smell.txt configuration file.
+
 ## License
 
-Distributed under the MIT License. See [LICENSE](link to license file) for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
