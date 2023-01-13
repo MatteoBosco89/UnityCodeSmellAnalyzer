@@ -43,14 +43,16 @@ UnityLint detects the following video game smells belonging to different categor
 **[CodeSmellAnalyzer](#codesmellanalyzer)**
 **[UnityDataAnalyzer](#unitydataanalyzer)**
 **[MetaSmellAnalyzer](#metasmellanalyzer)**
+**[Recompiling UnityLint](#recompiling-unitylint)**
 
 ## Download And Installation
 
 You can [download](https://github.com/mdipenta/UnityCodeSmellAnalyzer/releases/) the latest available release of UnityLint.
 
-Alternatively, you can [recompile](#recompiling) the tool using Visual Studio.
+Alternatively, you can [recompile](#recompiling-unitylint) the tool using Visual Studio.
 
-**Requirements**
+### Requirements
+
 The tool works natively under Windows 10 or above. Also, the tool works under Linux and Mac OS, and requires you to install [Mono](https://www.mono-project.com/).
 
 ## Starter Tool
