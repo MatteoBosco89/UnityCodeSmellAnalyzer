@@ -420,10 +420,10 @@ namespace MetaSmellDetector
         /// <param name="paramList">The list of parameters</param>
         public static JObject TooManyKeyFrames(JArray data, List<string> paramList)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Search Too Many Key Frame Smell...");
+            Logger.Log(Logger.LogLevel.Debug, "Search Too Many Key Frames Smell...");
             JArray smells = new JArray();
             JObject result = new JObject();
-            result.Add("Name", "Too Many Key Frame");
+            result.Add("Name", "Too Many Key Frames");
             if(paramList.Count == 1)
             {
                 int threshold = 0;
