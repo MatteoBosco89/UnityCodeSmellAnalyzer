@@ -1,92 +1,317 @@
-# tool-demo-unity-linter
+# UnityLint
+
+UnityLint is a tool for detecting bad game smells in Unity video games. It is able to detect 18 types of video game bad smells defined in literature ([Nardone et al., 2022](https://mdipenta.github.io/files/tosem-gamesmells.pdf)). 
+
+More in detail, UnityLint detects the following video game smells belonging to different categories:
+
+**Design and Game Logic**
+
+- Bloated assets
+- Creating components/objects at run-time
+- Dependencies between objects
+- Lack of separation of concerns
+- Poor design of object state management
+- Static coupling
+- Search by string/ID
+- Singleton vs. static
+- Weak temporization strategy
+
+**Animation**
+
+- Continuously checking position/rotation
+- Multiple Animators over model component
+- Too many Keyframes in animations
+- Use of anystate in animator controller
+
+**Physics**
+
+- Heavy-weight physics computation in game objects updates
+- Improper mesh settings for a collider
+- Setting object velocity and override forces
+
+**Rendering**
+
+- Lack of optimization when drawing/rendering objects
+- Sub-optimal, expensive choice of lights, shadows, or reflections
 
 
+### Table of Contents
 
-## Getting started
+**[Starter Tool](#starter-tool)**
+**[CSharpAnalyzer](#csharpanalyzer)**
+**[CodeSmellAnalyzer](#codesmellanalyzer)**
+**[UnityDataAnalyzer](#unitydataanalyzer)**
+**[MetaSmellAnalyzer](#metasmellanalyzer)**
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Installation & Download
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+You can [download](https://github.com/MatteoBosco89/UnityCodeSmellAnalyzer/releases/tag/v1.0.0) the latest runnable version of UnityLint for Windows, macOS and Linux.
 
-## Add your files
+> **Note**
+> If you're using Mac/Linux, to run UnityLint you have to install [Mono](https://www.mono-project.com/).
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Starter Tool
+
+ShellStarter is the execution file of UnityLint tool. Given a project or a list of projects, it detects video game smells. 
+
+### How To Use
+
+Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
+
+Type the following command to run **ShellStarter** tool (depending on your OS (Windows or Mac/Linux))
+
+*Windows*
+```bash
+ShellStarter.exe -d <dirPath>
+```
+
+*Mac / Linux*
+```bash
+mono ShellStarter.exe -d <dirPath>
+```
+
+where the **Required Argument** is:
+```bash
+-p, --project       Project directory.
+```
+
+Furthermore, you can use the following **Optional Arguments**:
+```bash
+-v, --verbose      Display Log on the standard output.
+
+--help             Display this help screen.
+
+--version          Display version information.
+```
+
+## CSharpAnalyzer
+
+CSharpAnalizer extracts information from the project's source code using API of Roslyn compiler. It provides as output a JSON file containing all information extracted from source code.
+
+### How To Use
+
+Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
+
+Type the following command to run **CSharpAnalyzer** tool (depending on your OS (Windows or Mac/Linux))
+
+*Windows*
+```bash
+CSharpAnalyzer.exe -p <projectDirPath>
+```
+
+*Mac / Linux*
+```bash
+mono CSharpAnalyzer.exe -p <projectDirPath>
+```
+
+where the **Required Argument** is:
+```bash
+-p, --project       Project directory.
+```
+
+Furthermore, you can use the following **Optional Arguments**:
+```bash
+-r, --results       Directory where to store the results (CodeAnalysis.json file). 
+                    If not provided, results are saved in the current directory.
+
+-d, --directory     Analyze the specified directory only. 
+                    If not provided, the project directory is selected.
+
+-a, --assembly      Additional assemblies directory (i.e., to analyze DLLs).
+
+-s, --statements    Set output all statements.
+
+-n, --name          The project name.
+
+-c, --config        Configuration File.
+
+-l, --log           (Default: 1) Log Level: Trace 0 Debug 1 Information 
+                    2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default).
+
+-v, --verbose       Displays the log on the standard output.
+
+--help              Display this help screen.
+
+--version           Display version information.
+```
+
+## CodeSmellAnalyzer
+
+CodeSmellAnalyzer applies detection rules and identifies video game smells located into source code. It uses as input JSON file produced by CSharpAnalyzer.
+
+### How To Use
+
+Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
+
+Type the following command to run **CodeSmellAnalyzer** tool (depending on your OS (Windows or Mac/Linux))
+
+*Windows*
+```bash
+CodeSmellAnalyzer.exe -d <JSON-filePath>
+```
+or 
+```bash
+CodeSmellAnalyzer.exe -e
+```
+
+*Mac / Linux*
+```bash
+mono CodeSmellAnalyzer.exe -d <JSON-filePath>
+```
+or 
+```bash
+mono CodeSmellAnalyzer.exe -e
+```
+
+where the **Required Argument** mutually exclusive can be:
+```bash
+-e, --expose      Required. Exposes all possible smell names, Mutually 
+exclusive with -d, --data
+
+-d, --data        Required. json file name produced by the Code Analyzer, 
+Mutually exclusive with -e, --expose
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/vittoria.nardone/tool-demo-unity-linter.git
-git branch -M main
-git push -uf origin main
+
+Furthermore, you can use the following **Optional Arguments**:
+```bash
+-s, --smell       Searches for a single smell
+
+-f, --file        Textual file with the list of smells to search for (use the
+names produced by the -e option)
+
+-v, --verbose     Enables the status log on the console window
+
+-p, --project     Saves the number of smells for the project in a .csv file
+
+-c, --category    Saves the smells by category
+
+-r, --result      Save results into a specified folder
+
+-l, --log         Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 
+Critical 5 None 6 (Debug is Default)
+
+--help            Display this help screen.
 ```
 
-## Integrate with your tools
+## UnityDataAnalyzer
 
-- [ ] [Set up project integrations](https://gitlab.com/vittoria.nardone/tool-demo-unity-linter/-/settings/integrations)
+UnityDataAnalyzer extracts information from the project's metadata (i.e., from files with the following extensions: .unity, .controller, .prefab, .mat, .anim, .flare, .assets and .meta). It provides as output a JSON file containing all information extracted from source code.
 
-## Collaborate with your team
+### How To Use
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
-## Test and Deploy
+Type the following command to run **UnityDataAnalyzer** tool (depending on your OS (Windows or Mac/Linux))
 
-Use the built-in continuous integration in GitLab.
+*Windows*
+```bash
+UnityDataAnalyzer.exe -a <assetDirPath> 
+```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+*Mac / Linux*
+```bash
+mono UnityDataAnalyzer.exe -d <assetDirPath>
+```
 
-***
+where the **Required Argument** is:
+```bash
+-d, --dir        Required. Path to the Assets directory
+```
 
-# Editing this README
+Furthermore, you can use the following **Optional Arguments**:
+```bash
+-m, --nometa     If specified, the tool does no load .meta files
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+-f, --fileExt    File (default Extension.txt) containing the extensions to analyze
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+-e, --ext        List of extensions to search
 
-## Name
-Choose a self-explaining name for your project.
+-v, --verbose    Enable the status log on the console window
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+-r, --results    Saves results to specified folder (default is the current directory)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+-n, --name       Specify the project Name
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+-l, --log        Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default)
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+--help           Display this help screen.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+--version        Display version information.
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## MetaSmellAnalyzer
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+MetaSmellAnalyzer applies detection rules and identifies video game smells located into metadata. It uses as input JSON file produced by UnityDataAnalyzer.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### How To Use
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Open your command line/terminal and navigate to the directory in which downloaded exe files are located.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Type the following command to run **MetaSmellAnalyzer** tool (depending on your OS (Windows or Mac/Linux))
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+*Windows*
+```bash
+MetaSmellAnalyzer.exe -d <JSON-filePath>
+```
+or 
+```bash
+MetaSmellAnalyzer.exe -e
+```
+
+*Mac / Linux*
+```bash
+mono MetaSmellAnalyzer.exe -d <JSON-filePath>
+```
+or 
+```bash
+mono MetaSmellAnalyzer.exe -e
+```
+
+where the **Required Argument** mutually exclusive can be:
+```bash
+-e, --expose      Required. Lists all possible smell names (saving them in 
+the smellsmethods.txt file). Mutually exclusive with -d, 
+--data
+
+-d, --data        Required. Main data directory and Metadata directory path, 
+Mutually exclusive with -e, --expose
+```
+
+Furthermore, you can use the following **Optional Arguments**:
+```bash
+-f, --file        Textual file with the list of smells to search (use the 
+names produced by the -e option)
+
+-v, --verbose     Enables the status log on console window
+
+-r, --results     Saves results to the specified directory
+
+-c, --category    Saves results by smell category
+
+-p, --project     Saves results as .csv file for the project
+
+-l, --log         Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 
+Critical 5 None 6 (Debug is Default)
+
+--help            Display this help screen.
+
+--version         Display version information.
+```
+
+> **Note**
+> MetaSmellAnalyzer detects some smells using thresholds and/or fixed values. These values are defined into [smell.txt](https://github.com/mdipenta/UnityCodeSmellAnalyzer/blob/main/Analyzer/MetaSmellAnalyzer/smell.txt) file.
+> Values used are explained in the following:
+> - m_CollisionDetection: this variable is used to detect Heavy Phisics Computation for collision between Rigidbody collider and other colliders in the scene. The smell exists if this m_CollisionDetection variable of Rigidbody is equal to **1** or **2**. These values correspond to **Continuous** or **Continuous Dynamic** (see [Unity Manual](https://docs.unity3d.com/Manual/class-Rigidbody.html) for further details).
+> - m_EnableBakedLightmaps (into Animator): this parameter is used to detect Sub-optimal, expensive choice of lights, shadows, or reflections smell. If this variable assumes a value greater than **0** the gameobject uses baked lights.
+> - m_EnableRealtimeLightmaps (into Animator): this parameter is used to detect Sub-optimal, expensive choice of lights, shadows, or reflections smell. If this variable assumes a value greater than **0** the gameobject uses real-time lights.
+> - m_EnableRealtimeLightmaps: this parameter is used to detect the Lack of optimization when drawing/rendering objects. If this variable is present into metadata and it assumes values greater than **0** the smell occurs. Values greater than **0** imply the use of dynamic lights that could influence the rendering.
+> - guid: this parameter is used to detect Static coupling smell. It counts the number of guid associated with other gameobjects and verifies that this number is greater that **0**.
+> - m_AnyStateTransitions: this variable detects the Usage of anystate in animator controller by checking the presence of m_AnyStateTransitions in the Animator.
+> - MeshCollider: this parameter is used to detect Improper mesh settings for a collider by searching for components containing a Meshcollider.
+> - num_components: this parameter refers to Bloated Assets smell. The detection rule computes the number of component into metadata and checks if this number is greater than **12** (as defined into the file).
+> - TooManyKeyFrames: this parameter is used to detect Too many Keyframes in animations smell. The detection rule checks, into .anim files, if the variable m_Curve has a number of time values greater than **7**.
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Distributed under the MIT License. See [LICENSE](link to license file) for more information.
