@@ -431,9 +431,9 @@ namespace CodeSmellFinder
             Logger.Log(Logger.LogLevel.Debug, "Searching Continuously Checking Position/Rotation...");
             JObject result = new JObject();
             JArray smells = new JArray();
-            result.Add("Name", "Check position rotation");
-            smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "IfBlocks"));
-            smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "SwitchBlocks"));
+            result.Add("Name", "Check position or rotation");
+            smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "transform.","transform.position", "transform.rotation","UnityEngine.Transform", "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "IfBlocks"));
+            smells.Merge(DataExtractor.CheckPropertiesInInvocation(data, new List<string> { "Update", "FixedUpdate" }, new List<string> { "transform.","transform.position", "transform.rotation","UnityEngine.Transform", "UnityEngine.Transform.position", "UnityEngine.Transform.rotation" }, "SwitchBlocks"));
             result.Add("Occurrency", smells.Count());
             result.Add("Smells", smells);
             Logger.Log(Logger.LogLevel.Debug, "Done!");
