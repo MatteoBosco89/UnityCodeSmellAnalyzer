@@ -1,6 +1,19 @@
 # UnityLint
 
-UnityLint is a tool for detecting bad game smells in Unity video games. It is able to detect 18 types of video game bad smells defined in a previous research work ([Nardone et al., 2022](https://mdipenta.github.io/files/tosem-gamesmells.pdf)): *Vittoria Nardone, Biruk Asmare Muse, Mouna Abidi, Foutse Khomh, and Massimiliano Di Penta. 2022. Video Game Bad Smells: What they are and how Developers Perceive Them. ACM Trans. Softw. Eng. Methodol. (September 2022). https://doi.org/10.1145/3563214 * 
+UnityLint is a tool for detecting bad game smells in Unity video
+games. It is able to detect 18 types of video game bad smells defined
+in a previous research work
+([Nardone et al., 2022](https://mdipenta.github.io/files/tosem-gamesmells.pdf)):
+*Vittoria Nardone, Biruk Asmare Muse, Mouna Abidi, Foutse Khomh, and
+Massimiliano Di Penta. 2022. Video Game Bad Smells: What they are and
+how Developers Perceive Them. ACM
+Trans. Softw. Eng. Methodol. (September
+2022). https://doi.org/10.1145/3563214 *
+
+- **Teaser** [https://youtu.be/HooegxZ8H6g](https://youtu.be/HooegxZ8H6g)
+- **Longer Video**
+[https://youtu.be/eJBm2N5xiJs](https://youtu.be/eJBm2N5xiJs)
+
 
 UnityLint detects the following video game smells belonging to different categories:
 
