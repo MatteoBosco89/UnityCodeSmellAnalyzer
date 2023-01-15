@@ -58,6 +58,8 @@ UnityLint detects the following video game smells belonging to different categor
 **[UnityDataAnalyzer](#unitydataanalyzer)**
 **[MetaSmellAnalyzer](#metasmellanalyzer)**
 **[Recompiling UnityLint](#recompiling-unitylint)**
+**[Other contents](#other-contents)**
+**[License](#license)**
 
 ## Download And Installation
 
@@ -341,6 +343,11 @@ UnityLint can be recompiled using Visual Studio (tested with Vistual Studio Comm
 - [Analyzer/UhityDataAnalyzer](Analyzer/UhityDataAnalyze)
 
 To create a release (as well as to use the ShellStarter), you need to put the compilation result (.exe files and DLLs) of all tools in the same directory. Also, you need to add the smell.txt configuration file.
+
+
+## Other contents
+- [Evaluation](Evaluation) contains datasets and validation sheets used to the preliminary tool validation
+- [Examples](Examples) contains an example (also used in the video) to run the tool with.
 
 ## License
 
