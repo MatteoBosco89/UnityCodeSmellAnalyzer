@@ -1,0 +1,29 @@
+Prj;File;Usings;ANNOTATOR-1;ANNOTATOR-2;FINAL;CONFLICT
+/home/videogames/dataset/ballance/;/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Scripts/RuntimeHierarchy/Helpers/HierarchyDragDropListener.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/voxelfield/;/home/videogames/dataset/voxelfield/Assets/Scripts/Voxelfield/Interface/BuyMenuButton.cs;See File Lack_of_separation_of_concern.json;YES;NO;FP;1
+/home/videogames/dataset/ballance/;/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/ArrayField.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/unity3d-lolo/;/home/videogames/dataset/unity3d-lolo/Assets/Framework/ShibaInu/Components/ViewPager.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/simulator/;/home/videogames/dataset/simulator/Packages/com.unity.render-pipelines.high-definition/Editor/Material/UIBlocks/HDShaderGUI.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/aitd-roomviewer;/home/videogames/dataset/aitd-roomviewer/Assets/Scripts/Model/ModelLoader.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/darkest-dungeon-unity;/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/UI/Slots/InventorySlot.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/darkest-dungeon-unity;/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/Managers/EstateSceneManager.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/nsmb-mariovsluigi;/home/videogames/dataset/nsmb-mariovsluigi/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/card-game-simulator;/home/videogames/dataset/card-game-simulator/Assets/Scripts/Cgs/Cards/CardsExplorer.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/nova;/home/videogames/dataset/nova/Assets/Nova/Sources/Scripts/UI/Dialogue/GameViewInput.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/inputsystem;/home/videogames/dataset/inputsystem/Assets/QA/Tests/Xbox Controller Basic/Scripts/GamepadButtonState.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/project-404;/home/videogames/dataset/project-404/Assets/Scripts/Scene_Specific/Demo/DemoController.cs;See File Lack_of_separation_of_concern.json;NO;YES;TP;1
+/home/videogames/dataset/fanren;/home/videogames/dataset/fanren/Assets/3rd/EasyTouchBundle/EasyTouch/Plugins/Components/QuickTouch.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/anyrpgcore;/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/UI/CloseableWindows/SystemVideoPanelController.cs;See File Lack_of_separation_of_concern.json;YES;NO;TP;1
+/home/videogames/dataset/card-game-simulator;/home/videogames/dataset/card-game-simulator/Assets/Scripts/Cgs/Menu/MainMenuHighlight.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/ldtktounity;/home/videogames/dataset/ldtktounity/Assets/LDtkUnity/Editor/ExportNativePrefab/LDtkNativePrefabFactory.cs;See File Lack_of_separation_of_concern.json;YES;NO;FP;1
+/home/videogames/dataset/anyrpgcore;/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/GameManager/SystemConfigurationManager.cs;See File Lack_of_separation_of_concern.json;YES;NO;FP;1
+/home/videogames/dataset/ballance;/home/videogames/dataset/ballance/Assets/System/Scripts/UI/Core/Controls/SplitViewDragger.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/darkest-dungeon-unity;/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/UI/Slots/QuirkSlot.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/simulator;/home/videogames/dataset/simulator/Packages/com.unity.render-pipelines.high-definition/Editor/Material/StackLit/ShaderGraph/StackLitSurfaceOptionPropertyBlock.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/ballance;/home/videogames/dataset/ballance/Assets/System/Scripts/Services/GameUIManager.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/cytoid;/home/videogames/dataset/cytoid/Assets/Packages/Coffee/UIExtensions/SoftMaskForUGUI/Scripts/SoftMaskable.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/ballance;/home/videogames/dataset/ballance/Assets/System/Scripts/Services/DebugTools/DebugStat.cs;See File Lack_of_separation_of_concern.json;YES;YES;TP;
+/home/videogames/dataset/simulator;/home/videogames/dataset/simulator/Packages/com.unity.render-pipelines.high-definition/Editor/Lighting/DiffusionProfileOverrideEditor.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/inputsystem;/home/videogames/dataset/inputsystem/Assets/Samples/InputRecorder/InputRecorder.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;
+/home/videogames/dataset/inputsystem/;/home/videogames/dataset/inputsystem/Assets/Samples/RebindingUI/RebindActionUI.cs;See File Lack_of_separation_of_concern.json;YES;NO;FP;1
+/home/videogames/dataset/ballance;/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Scripts/RuntimeHierarchy/HierarchyField.cs;See File Lack_of_separation_of_concern.json;NO;NO;FP;

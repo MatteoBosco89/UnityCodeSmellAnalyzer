@@ -1,0 +1,15 @@
+Static Coupling: BomberSpawner.cs 11
+Static Coupling: BomberSpawner.cs 14
+Static Coupling: BomberSpawner.cs 15
+Static Coupling: CameraMouseInput.cs 7
+Dependencies between objects: BomberSpawner.cs 11
+Dependencies between objects: EntityCollisionSystem.cs 39
+Dependencies between objects: EntityCollisionSystem.cs 40
+Dependencies between objects: EntityCollisionSystem.cs 42
+Dependencies between objects: EntityCollisionSystem.cs 43
+Dependencies between objects: EntityCollisionSystem.cs 78
+Dependencies between objects: InactiveGoo.cs 106
+Dependencies between objects: EntityCollisionSystem.cs 99
+
+TP = 20
+FN = 12

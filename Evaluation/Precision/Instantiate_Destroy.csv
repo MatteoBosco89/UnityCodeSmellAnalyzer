@@ -1,0 +1,5 @@
+Prj,File,Name,Invocation,Line,ANNOTATOR-1,ANNOTATOR-2,FINAL,CONFLICTS
+/home/videogames/dataset/project-404/,/home/videogames/dataset/project-404/Assets/Scripts/_Objects/Enemy/EnemyDamageScript.cs,Instantiate,Instantiate,75,YES,YES,TP,
+/home/videogames/dataset/nsmb-mariovsluigi/,/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/World Elements/LooseCoin.cs,Destroy,Photon.Pun.PhotonNetwork.Destroy(Photon.Pun.PhotonView),45,YES,YES,TP,
+/home/videogames/dataset/unity-tactical-rpg-battle-system/,/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scripts/Tactical/UI/Component/FloatingMessage.cs,Destroy,Destroy,25,YES,YES,TP,
+/home/videogames/dataset/cytoid/,/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanDestroy.cs,DestroyNow,Lean.Touch.LeanDestroy.DestroyNow(),20,YES,YES,TP,

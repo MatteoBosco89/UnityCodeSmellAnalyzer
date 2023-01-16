@@ -1,0 +1,12 @@
+Dependencies between objects: ObjectPooler.cs 22
+Dependencies between objects: ObjectPooler.cs 44
+Dependencies between objects: ObjectPooler.cs 75
+Dependencies between objects: ObjectPooler.cs 94
+Dependencies between objects: ObjectPooler.cs 116
+Dependencies between objects: FlightController.cs 77
+Dependencies between objects: UIcontroller.cs 14
+
+Singleton: 1
+
+TP = 61
+FN = 7

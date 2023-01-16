@@ -1,0 +1,1234 @@
+{
+    "Name": "Weak Temporization",
+    "Occurrency": 232,
+    "Smells": [
+        {
+            "Script": "/home/videogames/dataset/lcc/Assets/Scripts/Logic/Manager/Tips/Tips.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/inputsystem/Assets/Samples/UnityRemote/UnityRemoteTestScript.cs",
+            "Name": "Update",
+            "Line": 42
+        },
+        {
+            "Script": "/home/videogames/dataset/inputsystem/Assets/QA/Tests/Touch/Scripts/TouchscreenTouchVisualizer.cs",
+            "Name": "Update",
+            "Line": 37
+        },
+        {
+            "Script": "/home/videogames/dataset/inputsystem/ExternalSampleProjects/InputDeviceTester/Assets/InputDeviceTester/Scripts/Input/ProcessorFloatISX.cs",
+            "Name": "Update",
+            "Line": 34
+        },
+        {
+            "Script": "/home/videogames/dataset/inputsystem/ExternalSampleProjects/InputDeviceTester/Assets/InputDeviceTester/Scripts/Input/ProcessorVector3ISX.cs",
+            "Name": "Update",
+            "Line": 34
+        },
+        {
+            "Script": "/home/videogames/dataset/inputsystem/ExternalSampleProjects/InputDeviceTester/Assets/InputDeviceTester/Scripts/Input/ProcessorVector2ISX.cs",
+            "Name": "Update",
+            "Line": 34
+        },
+        {
+            "Script": "/home/videogames/dataset/inputsystem/ExternalSampleProjects/TouchSamples/Assets/Demo/Scripts/Tapping/TapTarget.cs",
+            "Name": "Update",
+            "Line": 59
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Plugins/SimpleFileBrowser/Scripts/FileBrowser.cs",
+            "Name": "Update",
+            "Line": 862
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Game/Scripts/Native/Small/MouseRotate.cs",
+            "Name": "Update",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Game/Scripts/Native/Small/LookAt.cs",
+            "Name": "Update",
+            "Line": 36
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Game/Scripts/Native/Others/PureAimPlayer.cs",
+            "Name": "Update",
+            "Line": 51
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Scripts/RuntimeHierarchy/Helpers/PseudoSceneSourceTransform.cs",
+            "Name": "Update",
+            "Line": 99
+        },
+        {
+            "Script": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/Characters/States/PatrolState.cs",
+            "Name": "Update",
+            "Line": 54
+        },
+        {
+            "Script": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/Characters/States/ReturnState.cs",
+            "Name": "Update",
+            "Line": 30
+        },
+        {
+            "Script": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/Characters/States/EvadeState.cs",
+            "Name": "Update",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/Characters/BaseClasses/CharacterCombat.cs",
+            "Name": "Update",
+            "Line": 154
+        },
+        {
+            "Script": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Scripts/Abilities/Object/ChanneledCylinderScript.cs",
+            "Name": "Update",
+            "Line": 73
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/_Player/Player.cs",
+            "Name": "Update",
+            "Line": 71
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/Utilities/Collider_PikminSlip.cs",
+            "Name": "Update",
+            "Line": 13
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/Utilities/Billboard.cs",
+            "Name": "Update",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Scripts/TpsGun.cs",
+            "Name": "Update",
+            "Line": 40
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Scripts/NameTag.cs",
+            "Name": "Update",
+            "Line": 28
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Scripts/DoorAnimation.cs",
+            "Name": "Update",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Utility/DragRigidbody.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonTransformViewClassic.cs",
+            "Name": "Update",
+            "Line": 70
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonTransformView.cs",
+            "Name": "Update",
+            "Line": 48
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Photon/PhotonUnityNetworking/UtilityScripts/Culling/CullingHandler.cs",
+            "Name": "Update",
+            "Line": 96
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/RigidbodyFirstPersonController.cs",
+            "Name": "Update",
+            "Line": 129
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Environment/Water/Water/Scripts/SpecularLighting.cs",
+            "Name": "Update",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonTransformViewClassic.cs",
+            "Name": "Update",
+            "Line": 70
+        },
+        {
+            "Script": "/home/videogames/dataset/warkingdoms/Assets/Scripts/Testing/UnstuckAgentHelper.cs",
+            "Name": "Update",
+            "Line": 22
+        },
+        {
+            "Script": "/home/videogames/dataset/warkingdoms/Assets/Scripts/Script Utilities/RotationLock.cs",
+            "Name": "Update",
+            "Line": 7
+        },
+        {
+            "Script": "/home/videogames/dataset/warkingdoms/Assets/Scripts/Rekruiting/Rekruiting.cs",
+            "Name": "Update",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/warkingdoms/Assets/Scripts/Fog of War/FogOfWarShaderFiller.cs",
+            "Name": "Update",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Scripts/Storyboard/StoryboardComponentRenderer.cs",
+            "Name": "Update",
+            "Line": 80
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Scripts/Storyboard/StoryboardComponentRenderer.cs",
+            "Name": "Update",
+            "Line": 90
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanRotate.cs",
+            "Name": "Update",
+            "Line": 42
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanScale.cs",
+            "Name": "Update",
+            "Line": 55
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanTranslate.cs",
+            "Name": "Update",
+            "Line": 39
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanRotateCustomAxis.cs",
+            "Name": "Update",
+            "Line": 42
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanCanvasArrow.cs",
+            "Name": "Update",
+            "Line": 26
+        },
+        {
+            "Script": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/Runtime/AssetsManager/UnitTest/ObjectPools/Examples/PoolingGameObjects/Bullet.cs",
+            "Name": "Update",
+            "Line": 15
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/Tweener/Example.cs",
+            "Name": "Update",
+            "Line": 30
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/_RunningCrush/Scripts/RC_RevivePointer.cs",
+            "Name": "Update",
+            "Line": 40
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/_Project/Scripts/FT_CastToMePosition.cs",
+            "Name": "Update",
+            "Line": 31
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/_Project/Scripts/FT_RotatePoint.cs",
+            "Name": "Update",
+            "Line": 32
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/_Project/Scripts/FT_FollowMouse.cs",
+            "Name": "Update",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/UI/JCS_ResizeUI.cs",
+            "Name": "Update",
+            "Line": 109
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/JCS_HitDamageAction.cs",
+            "Name": "Update",
+            "Line": 56
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/JCS_RevolutioAction.cs",
+            "Name": "Update",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/JCS_DetectAction.cs",
+            "Name": "Update",
+            "Line": 47
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/Pathfinding/JCS_SimplePathAction.cs",
+            "Name": "Update",
+            "Line": 73
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/3D/JCS_3DDistanceTileAction.cs",
+            "Name": "Update",
+            "Line": 60
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/3D/JCS_3DPositionTileAction.cs",
+            "Name": "Update",
+            "Line": 75
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/2D/JCS_2DActiveSkillAction.cs",
+            "Name": "Update",
+            "Line": 60
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Enable/JCS_DisableWithCertainRangeEvent.cs",
+            "Name": "Update",
+            "Line": 77
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Effects/3D/JCS_3DMouseMovement.cs",
+            "Name": "Update",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/2D/Shooting/JCS_2DCursorShootAction.cs",
+            "Name": "Update",
+            "Line": 62
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Components/VFXRain.cs",
+            "Name": "Update",
+            "Line": 140
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Components/VehicleActions.cs",
+            "Name": "Update",
+            "Line": 320
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Map/MapWaypoint.cs",
+            "Name": "Update",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Map/MapTargetWaypoint.cs",
+            "Name": "Update",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Editor/Map/MapAnnotations.cs",
+            "Name": "Update",
+            "Line": 280
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Dynamics/Examples/ExampleVehicleFMU.cs",
+            "Invocation": "fmu.DoStep",
+            "Line": 100
+        },
+        {
+            "Script": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Components/InterestManagement/SpatialHashing/SpatialHashingInterestManagement.cs",
+            "Name": "Update",
+            "Line": 72
+        },
+        {
+            "Script": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/AdditiveScenes/Scripts/ShootingTankBehaviour.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Scripts/Navigation/NavWalker.cs",
+            "Name": "Update",
+            "Line": 53
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs",
+            "Name": "Update",
+            "Line": 12
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/UtilityScripts/NetworkCullingHandler.cs",
+            "Name": "Update",
+            "Line": 81
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Spine/SpineUnity/Editor/SkeletonDataAssetInspector.cs",
+            "Name": "Update",
+            "Line": 731
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/MarcoPolo-Tutorial/ClickDetector.cs",
+            "Name": "Update",
+            "Line": 7
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformView.cs",
+            "Name": "Update",
+            "Line": 66
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Demo2DJumpAndRunWithPhysics/Scripts/JumpAndRunMovement.cs",
+            "Name": "Update",
+            "Line": 22
+        },
+        {
+            "Script": "/home/videogames/dataset/fungus/Assets/Fungus/Scripts/Components/View.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/UI/MiniMap.cs",
+            "Name": "Update",
+            "Line": 9
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Util/NightSlider.cs",
+            "Name": "Update",
+            "Line": 18
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/PlayerHotkeys.cs",
+            "Name": "Update",
+            "Line": 15
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/SmartFootstepSystem.cs",
+            "Name": "Update",
+            "Line": 38
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs",
+            "Name": "Update",
+            "Line": 12
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Photon Unity Networking/UtilityScripts/NetworkCullingHandler.cs",
+            "Name": "Update",
+            "Line": 81
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Standard Assets/Utility/DragRigidbody.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformView.cs",
+            "Name": "Update",
+            "Line": 66
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/RigidbodyFirstPersonController.cs",
+            "Name": "Update",
+            "Line": 129
+        },
+        {
+            "Script": "/home/videogames/dataset/mirage/Assets/Examples/AdditiveScenes/Scripts/ShootingTankBehaviour.cs",
+            "Name": "Update",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/AdditiveScenes/Scripts/ShootingTankBehaviour.cs",
+            "Name": "Update",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/NetworkAnimator.cs",
+            "In": [
+                {
+                    "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/NetworkAnimator.cs",
+                    "Method": "Mirage.NetworkAnimator.CheckSendRate()",
+                    "Variables": [
+                        {
+                            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/NetworkAnimator.cs",
+                            "Kind": "Definition",
+                            "Type": "var",
+                            "Line": 159
+                        }
+                    ],
+                    "Invocations": []
+                }
+            ]
+        },
+        {
+            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/Experimental/NetworkTransformBase.cs",
+            "In": [
+                {
+                    "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/Experimental/NetworkTransformBase.cs",
+                    "Method": "Mirage.Experimental.NetworkTransformBase.NeedsTeleport()",
+                    "Variables": [
+                        {
+                            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/Experimental/NetworkTransformBase.cs",
+                            "Kind": "Definition",
+                            "Type": "var",
+                            "Line": 189
+                        },
+                        {
+                            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/Experimental/NetworkTransformBase.cs",
+                            "Kind": "Definition",
+                            "Type": "var",
+                            "Line": 190
+                        },
+                        {
+                            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Components/Experimental/NetworkTransformBase.cs",
+                            "Kind": "Definition",
+                            "Type": "var",
+                            "Line": 192
+                        }
+                    ],
+                    "Invocations": []
+                }
+            ]
+        },
+        {
+            "Script": "/home/videogames/dataset/voxelfield/Assets/Scripts/Voxels/Chunk.cs",
+            "Name": "Update",
+            "Line": 46
+        },
+        {
+            "Script": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scripts/Tactical/Grid/Component/Tile.cs",
+            "Name": "Update",
+            "Line": 41
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/ThrowBalls/_scripts/BallShadowController.cs",
+            "Name": "Update",
+            "Line": 14
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/HideAndSeek/_scripts/HideAndSeekTutorialManager.cs",
+            "Name": "Update",
+            "Line": 48
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/DancingDots/_scripts/DancingDotsDraggableDot.cs",
+            "Name": "Update",
+            "Line": 135
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Assessments/_scripts/DroppableBehaviour.cs",
+            "Name": "Update",
+            "Line": 67
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/ReadingGame/_scripts/ReadingBarSet.cs",
+            "Name": "Update",
+            "Line": 317
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/ReadingGame/_scripts/EnvironmentPopper.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Balloons/_scripts/FloatingLetterController.cs",
+            "Name": "Update",
+            "Line": 132
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Balloons/_scripts/TestPhysics.cs",
+            "Name": "Update",
+            "Line": 55
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Scanner/_scripts/ScannerRotateGear.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_manage/preview_Actors/_scripts/RewardsUI.cs",
+            "Name": "Update",
+            "Line": 56
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_manage/preview_Actors/_scripts/GOFollower.cs",
+            "Name": "Update",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/AnturaSpace/BoneShadowController.cs",
+            "Name": "Update",
+            "Line": 26
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Intro/IntroPlantWind.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Intro/IntroFactory.cs",
+            "Name": "Update",
+            "Line": 111
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Map/StageCulling.cs",
+            "Name": "Update",
+            "Line": 26
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Map/MapClickController.cs",
+            "Name": "Update",
+            "Line": 16
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/SickLetters/_scripts/States/PlayGameState.cs",
+            "Name": "Update",
+            "Line": 46
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/FastCrowd/_scripts/Crowd/StrollingLetterHangingState.cs",
+            "Name": "Update",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/FastCrowd/_scripts/Crowd/StrollingLetterScaredState.cs",
+            "Name": "Update",
+            "Line": 38
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/TakeMeHome/_scripts/States/TakeMeHomeTutorialPlayState.cs",
+            "Name": "Update",
+            "Line": 64
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Assessments/_scripts/Utilities/SortingDragManager.cs",
+            "Name": "Update",
+            "Line": 190
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/MissingLetter/_scripts/States/MissingLetterTutorialState.cs",
+            "Name": "Update",
+            "Line": 47
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Tutorial/TutorialUISystem/TutorialUIFinger.cs",
+            "Name": "Update",
+            "Line": 22
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Intro/States/IntroStrollingLetterScaredState.cs",
+            "Name": "Update",
+            "Line": 39
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Intro/States/IntroStrollingLetterHangingState.cs",
+            "Name": "Update",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Minigames/Utility/CircleButtonBox.cs",
+            "Name": "Update",
+            "Line": 139
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Minigames/Utility/FixedHeightShadow.cs",
+            "Name": "Update",
+            "Line": 15
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Map/UI/MapPlayInfoPanel.cs",
+            "Name": "Update",
+            "Line": 32
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Map/UI/MapPlayButtonsPanel.cs",
+            "Name": "Update",
+            "Line": 28
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Map/Objects/Flag.cs",
+            "Name": "Update",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/AnturaSpace/Dog/DogStates/AnturaIdleState.cs",
+            "Name": "Update",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Maze/_scripts/MazeCharacter.cs",
+            "Kind": "Assignment",
+            "Type": "float",
+            "Line": 1096
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/AnturaSpace/BoneShadowController.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Intro/IntroPlantWind.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Intro/IntroFactory.cs",
+            "Name": "Update",
+            "Line": 111
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Map/MapClickController.cs",
+            "Name": "Update",
+            "Line": 16
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/ThrowBalls/_scripts/BallShadowController.cs",
+            "Name": "Update",
+            "Line": 14
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/HideAndSeek/_scripts/HideAndSeekTutorialManager.cs",
+            "Name": "Update",
+            "Line": 42
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/DancingDots/_scripts/DancingDotsDraggableDot.cs",
+            "Name": "Update",
+            "Line": 121
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/_scripts/DroppableBehaviour.cs",
+            "Name": "Update",
+            "Line": 59
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/ReadingGame/_scripts/EnvironmentPopper.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/_scripts/FloatingLetterController.cs",
+            "Name": "Update",
+            "Line": 132
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/_scripts/TestPhysics.cs",
+            "Name": "Update",
+            "Line": 55
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Scanner/_scripts/ScannerRotateGear.cs",
+            "Name": "Update",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_manage/preview_Actors/_scripts/RewardsUI.cs",
+            "Name": "Update",
+            "Line": 46
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_manage/preview_Actors/_scripts/GOFollower.cs",
+            "Name": "Update",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Tutorial/TutorialUISystem/TutorialUIFinger.cs",
+            "Name": "Update",
+            "Line": 22
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Intro/States/IntroStrollingLetterScaredState.cs",
+            "Name": "Update",
+            "Line": 39
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Intro/States/IntroStrollingLetterHangingState.cs",
+            "Name": "Update",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Minigames/Utility/CircleButtonBox.cs",
+            "Name": "Update",
+            "Line": 134
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Minigames/Utility/FixedHeightShadow.cs",
+            "Name": "Update",
+            "Line": 15
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Map/UI/MapPlayInfoPanel.cs",
+            "Name": "Update",
+            "Line": 32
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Map/UI/MapPlayButtonsPanel.cs",
+            "Name": "Update",
+            "Line": 28
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/SickLetters/_scripts/States/PlayGameState.cs",
+            "Name": "Update",
+            "Line": 43
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/FastCrowd/_scripts/Crowd/StrollingLetterHangingState.cs",
+            "Name": "Update",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/FastCrowd/_scripts/Crowd/StrollingLetterScaredState.cs",
+            "Name": "Update",
+            "Line": 38
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/TakeMeHome/_scripts/States/TakeMeHomeTutorialPlayState.cs",
+            "Name": "Update",
+            "Line": 62
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/_scripts/Utilities/SortingDragManager.cs",
+            "Name": "Update",
+            "Line": 175
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/ReadingGame/_scripts/States/ReadingGameAnswerState.cs",
+            "Name": "Update",
+            "Line": 86
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/AnturaSpace/Dog/DogStates/AnturaIdleState.cs",
+            "Name": "Update",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Maze/_scripts/MazeCharacter.cs",
+            "Kind": "Assignment",
+            "Type": "float",
+            "Line": 908
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Behaviours/World/FocusPointManager.cs",
+            "Name": "Update",
+            "Line": 95
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Behaviours/Ped/Ped.cs",
+            "Name": "Update",
+            "Line": 398
+        },
+        {
+            "Script": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Scripts/Menu/Rotator.cs",
+            "Name": "Update",
+            "Line": 12
+        },
+        {
+            "Script": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Scripts/Camera/CameraControl.cs",
+            "Name": "Update",
+            "Line": 168
+        },
+        {
+            "Script": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Scripts/Interaction/CopyPaste.cs",
+            "Name": "Update",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Scripts/Graphics/ComponentEditBounds.cs",
+            "Name": "Update",
+            "Line": 53
+        },
+        {
+            "Script": "/home/videogames/dataset/unitytutorials-rts/Assets/Scripts/Units/UnitsSelection.cs",
+            "Name": "Update",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/UI/ClickFeedbackLerper.cs",
+            "Name": "Update",
+            "Line": 22
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/Action/Input/AoeActionInput.cs",
+            "Name": "Update",
+            "Line": 45
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/GameplayObjects/Character/ClientCharacter.cs",
+            "Name": "Update",
+            "Line": 273
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/GameplayObjects/Projectiles/PhysicsProjectile.cs",
+            "Name": "Update",
+            "Line": 152
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Utils/NetworkOverlay/NetworkStats.cs",
+            "Invocation": "Mathf.PingPong",
+            "Line": 138
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Utils/NetworkOverlay/NetworkStats.cs",
+            "Kind": "Assignment",
+            "Type": "?",
+            "Line": 137
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/UserInput/ClientInputSender.cs",
+            "Kind": "Assignment",
+            "Type": "float",
+            "Line": 253
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/UserInput/ClientInputSender.cs",
+            "In": [
+                {
+                    "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/UserInput/ClientInputSender.cs",
+                    "Method": "Unity.BossRoom.Gameplay.UserInput.ClientInputSender.PerformSkill(Unity.BossRoom.Gameplay.Actions.ActionID, Unity.BossRoom.Gameplay.UserInput.ClientInputSender.SkillTriggerStyle, ulong)",
+                    "Variables": [
+                        {
+                            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/UserInput/ClientInputSender.cs",
+                            "Kind": "Assignment",
+                            "Type": "float",
+                            "Line": 330
+                        }
+                    ],
+                    "Invocations": []
+                }
+            ]
+        },
+        {
+            "Script": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Snapshot Interpolation/ServerCube.cs",
+            "Name": "Update",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Snapshot Interpolation/ClientCube.cs",
+            "Name": "Update",
+            "Line": 146
+        },
+        {
+            "Script": "/home/videogames/dataset/mirror/Assets/Mirror/Components/InterestManagement/SpatialHashing/SpatialHashingInterestManagement.cs",
+            "Name": "Update",
+            "Line": 82
+        },
+        {
+            "Script": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/AdditiveScenes/Scripts/ShootingTankBehaviour.cs",
+            "Name": "Update",
+            "Line": 24
+        },
+        {
+            "Script": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scripts/TMP_FrameRateCounter.cs",
+            "Name": "Update",
+            "Line": 70
+        },
+        {
+            "Script": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scripts/TMP_UiFrameRateCounter.cs",
+            "Name": "Update",
+            "Line": 59
+        },
+        {
+            "Script": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/15_QuadTree/QuadTreeTesterSupervisor.cs",
+            "Name": "Update",
+            "Line": 66
+        },
+        {
+            "Script": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/AStarManager.cs",
+            "Name": "Update",
+            "Line": 63
+        },
+        {
+            "Script": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/ReferenceCode/MoveTarget.cs",
+            "Name": "Update",
+            "Line": 6
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/VendorUIButton.cs",
+            "Name": "Update",
+            "Line": 56
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/MinimapLockRotationScript.cs",
+            "Name": "Update",
+            "Line": 41
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/StatusMenu.cs",
+            "Name": "Update",
+            "Line": 68
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/CUOptionScript.cs",
+            "Name": "Update",
+            "Line": 63
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/ReticleScript.cs",
+            "Name": "Update",
+            "Line": 222
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/TooltipManager.cs",
+            "Name": "Update",
+            "Line": 21
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/SelectionBoxScript.cs",
+            "Name": "Update",
+            "Line": 161
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/MinimapArrowScript.cs",
+            "Name": "Update",
+            "Line": 124
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/ShardRock.cs",
+            "Name": "Update",
+            "Line": 189
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/ShellPart.cs",
+            "Name": "Update",
+            "Line": 314
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Shard.cs",
+            "Name": "Update",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Flag.cs",
+            "Name": "Update",
+            "Line": 13
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/BombScript.cs",
+            "Name": "Update",
+            "Line": 90
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/MainBullet.cs",
+            "Name": "Update",
+            "Line": 53
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/TractorBeam.cs",
+            "Name": "Update",
+            "Line": 74
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/DialogueSystem.cs",
+            "Name": "Update",
+            "Line": 176
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Entity Definitions/GroundCraft.cs",
+            "Name": "Update",
+            "Line": 15
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Entity Definitions/Drone.cs",
+            "Name": "Update",
+            "Line": 150
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Entity Definitions/PlayerCore.cs",
+            "Name": "Update",
+            "Line": 338
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Entity Definitions/Yard.cs",
+            "Name": "Update",
+            "Line": 44
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/AI/AIMovement.cs",
+            "Name": "Update",
+            "Line": 48
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Scripts/ARCoreInterface.cs",
+            "Name": "Update",
+            "Line": 366
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/MapboxAR/Scripts/PlayerSizeFromLocationAccuracy.cs",
+            "Name": "Update",
+            "Line": 42
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/script/visible.cs",
+            "Name": "Update",
+            "Line": 39
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Scripts/PlaceOnPlane.cs",
+            "Name": "Update",
+            "Line": 11
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/ARFocusSquare/ARFocusSquare.cs",
+            "Name": "Update",
+            "Line": 48
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/ARRemote/Scripts/ARRemoteDevice.cs",
+            "Name": "Update",
+            "Line": 258
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/FocusSquare/FocusSquare.cs",
+            "Name": "Update",
+            "Line": 58
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/MapboxAR/Scripts/ManualSync/RotateOnYTargetTransform.cs",
+            "Name": "Update",
+            "Line": 10
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/MapboxAR/Scripts/ManualSync/FollowTargetTransform.cs",
+            "Name": "Update",
+            "Line": 10
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/arcamera_test.cs",
+            "Name": "Update",
+            "Line": 11
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/parent.cs",
+            "Name": "Update",
+            "Line": 37
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Unity/Map/QuadTreeTileProvider.cs",
+            "Name": "Update",
+            "Line": 186
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Scripts/CameraBillboard.cs",
+            "Name": "Update",
+            "Line": 14
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/GoogleARCore/SDK/Scripts/Anchor.cs",
+            "Name": "Update",
+            "Line": 104
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/6_ZoomableMap/Scripts/SpawnOnMap.cs",
+            "Name": "Update",
+            "Line": 43
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewTrackedPoseDriver.cs",
+            "Name": "Update",
+            "Line": 35
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/UnityPointCloudExample.cs",
+            "Name": "Update",
+            "Line": 33
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/UnityARCameraManager.cs",
+            "Name": "Update",
+            "Line": 76
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/AR3DOFCameraManager.cs",
+            "Name": "Update",
+            "Line": 60
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Astronaut/AstronautMouseController.cs",
+            "Name": "Update",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Astronaut/CharacterMovement.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/Plugins/Animancer/Utilities/PixelPerfectPositioning.cs",
+            "Name": "Update",
+            "Line": 39
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/EGamePlay.Unity/Combat/AbilityItem/AbilityItemProxyObj.cs",
+            "Name": "Update",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/RPG Character Animation Pack FREE/Code/RPGCharacterControllerFREE.cs",
+            "Name": "Update",
+            "Line": 79
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/RpgExample/MonoScripts/Hero.cs",
+            "Name": "Update",
+            "Line": 153
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/RpgExample/MonoScripts/Monster.cs",
+            "Name": "Update",
+            "Line": 61
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/RpgExample/MonoScripts/SpellPreviewManagers/PointSelectManager.cs",
+            "Name": "Update",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/RpgExample/MonoScripts/SpellPreviewManagers/TargetSelectManager.cs",
+            "Name": "Update",
+            "Line": 31
+        },
+        {
+            "Script": "/home/videogames/dataset/battleofmages/Assets/Scripts/Players/NetworkShadow.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/battleofmages/Assets/Scripts/Players/Snap.cs",
+            "In": [
+                {
+                    "Script": "/home/videogames/dataset/battleofmages/Assets/Scripts/Players/Snap.cs",
+                    "Method": "BoM.Players.Snap.CheckSnap(Vector3)",
+                    "Variables": [
+                        {
+                            "Script": "/home/videogames/dataset/battleofmages/Assets/Scripts/Players/Snap.cs",
+                            "Kind": "Assignment",
+                            "Type": "float",
+                            "Line": 32
+                        }
+                    ],
+                    "Invocations": []
+                }
+            ]
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/CommonUI/MyGridLayout.cs",
+            "Name": "Update",
+            "Line": 566
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/Animancer/Utilities/PixelPerfectPositioning.cs",
+            "Name": "Update",
+            "Line": 39
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Scripts/GPUInstancerFloatingOriginHandler.cs",
+            "Name": "Update",
+            "Line": 19
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/SceneScript/MapScene/MapContent.cs",
+            "Name": "Update",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Scripts/Core/Contract/GPUInstancerManager.cs",
+            "Name": "Update",
+            "Line": 238
+        },
+        {
+            "Script": "/home/videogames/dataset/nice-lua/Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/FPSExample/FPSPlayerControl.cs",
+            "Name": "Update",
+            "Line": 31
+        },
+        {
+            "Script": "/home/videogames/dataset/ecs-iaus-sytstem/Assets/Systems/Debug Tools/RetreatTestingTool.cs",
+            "Name": "Update",
+            "Line": 34
+        }
+    ]
+}

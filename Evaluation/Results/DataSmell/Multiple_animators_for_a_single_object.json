@@ -1,0 +1,86 @@
+{
+    "Name": "Multiple animators for a single object",
+    "Occurrency": 16,
+    "Smells": [
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/WideFloatingPlatform.prefab",
+            "Name": "WideFloatingPlatform",
+            "NumAnimator": 5
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/FloatingPlatform.prefab",
+            "Name": "FloatingPlatform",
+            "NumAnimator": 5
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/pew_medium.prefab",
+            "Name": "pew_medium",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/maggot.prefab",
+            "Name": "maggot",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/pew_small.prefab",
+            "Name": "pew_small",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/pew_large.prefab",
+            "Name": "pew_large",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/ectoplasm_large.prefab",
+            "Name": "ectoplasm_large",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/ancestor_nebula.prefab",
+            "Name": "ancestor_nebula",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/cauldron_full.prefab",
+            "Name": "cauldron_full",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/fungal_bloat.prefab",
+            "Name": "fungal_bloat",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/cauldron_empty.prefab",
+            "Name": "cauldron_empty",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/formless_melee.prefab",
+            "Name": "formless_melee",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/ectoplasm.prefab",
+            "Name": "ectoplasm",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/AssaultCannon/AssaultCannonPreview.prefab",
+            "Name": "AssaultCannonPreview",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/04_Metaball/Cell.prefab",
+            "Name": "Cell",
+            "NumAnimator": 2
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/05_Voronoi/Cell.prefab",
+            "Name": "Cell",
+            "NumAnimator": 2
+        }
+    ]
+}

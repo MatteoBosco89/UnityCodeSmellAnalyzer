@@ -1,0 +1,86 @@
+{
+    "Name": "Singleton Pattern",
+    "Occurrency": 20,
+    "Smells": [
+        {
+            "Script": "/home/videogames/dataset/lcc/Assets/3rdPlugins/ETTask/ETTask.cs",
+            "Class": "ET.ETTask"
+        },
+        {
+            "Script": "/home/videogames/dataset/lcc/Assets/3rdPlugins/ETTask/ETTask.cs",
+            "Class": "ET.ETTask<T>"
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/External Assets/AstarPathfindingProject/Core/AstarPath.cs",
+            "Class": "AstarPath"
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Diagnostics/ObservableLogger.cs",
+            "Class": "UniRx.Diagnostics.ObservableLogger"
+        },
+        {
+            "Script": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/3rdPlugins/UniTask/Runtime/UniTaskCompletionSource.cs",
+            "Class": "Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource"
+        },
+        {
+            "Script": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/3rdPlugins/UniTask/Runtime/UniTaskCompletionSource.cs",
+            "Class": "Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource<T>"
+        },
+        {
+            "Script": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/3rdPlugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs",
+            "Class": "Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<TStateMachine>"
+        },
+        {
+            "Script": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/3rdPlugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs",
+            "Class": "Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<TStateMachine, T>"
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Network/Codec/JCS_CodecFactory.cs",
+            "Class": "JCSUnity.JCS_CodecFactory"
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDProjectSettings.cs",
+            "Class": "UnityEditor.Rendering.HighDefinition.HDProjectSettings"
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Plugins/websocket-sharp/Net/EndPointManager.cs",
+            "Class": "WebSocketSharp.Net.EndPointManager"
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Plugins/websocket-sharp/Net/WebHeaderCollection.cs",
+            "Class": "WebSocketSharp.Net.WebHeaderCollection"
+        },
+        {
+            "Script": "/home/videogames/dataset/bundlemaster_integrateettask/Assets/BundleMaster/ETTaskAsync/ETTask.cs",
+            "Class": "ET.ETTask"
+        },
+        {
+            "Script": "/home/videogames/dataset/bundlemaster_integrateettask/Assets/BundleMaster/ETTaskAsync/ETTask.cs",
+            "Class": "ET.ETTask<T>"
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Networking/Player.cs",
+            "Class": "SanAndreasUnity.Net.Player"
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Importing/Vehicles/CarColors.cs",
+            "Class": "SanAndreasUnity.Importing.Vehicles.CarColors"
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Importing/RenderWareStream/Section.cs",
+            "Class": "SanAndreasUnity.Importing.RenderWareStream.SectionData"
+        },
+        {
+            "Script": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameFramework/Libraries/GameFramework/FileSystem/FileSystem.cs",
+            "Class": "GameFramework.FileSystem.FileSystem"
+        },
+        {
+            "Script": "/home/videogames/dataset/unitytutorials-rts/Assets/Scripts/GameData.cs",
+            "Class": "GameData"
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/MyDBManager.cs",
+            "Class": "MyDBManager"
+        }
+    ]
+}

@@ -1,0 +1,2329 @@
+{
+  "check1": "ANNOTATOR-1",
+  "check2": "ANNOTATOR-1",
+  "Name": "Dependency Between Objects",
+  "Occurrency": 290,
+  "Smells": [
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\project-404\\Assets\\External Assets\\AstarPathfindingProject\\Modifiers\\RaycastModifier.cs",
+      "Parameter": "node",
+      "Method": "Pathfinding.RaycastModifier.Filter.CanTraverse(Pathfinding.GraphNode)",
+      "Type": "GraphNode",
+      "Line": 130,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\CloseableWindows\\DialogPanelController.cs",
+      "Kind": "Field",
+      "Type": "UIManager",
+      "FullName": "AnyRPG.DialogPanelController.uIManager",
+      "Line": 59,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\egameplay\\Assets\\EGamePlay\\Helper\\LitJson\\Lexer.cs",
+      "Parameter": "ctx",
+      "Method": "LitJson.Lexer.State3(LitJson.FsmContext)",
+      "Type": "FsmContext",
+      "Line": 326,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\Interop\\UserDataRegistries\\TypeDescriptorRegistry.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<Type, IUserDataDescriptor>",
+      "FullName": "MoonSharp.Interpreter.Interop.UserDataRegistries.TypeDescriptorRegistry.s_TypeRegistryHistory",
+      "Line": 20,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Tests\\Editor\\SyncListStructTest.cs",
+      "Kind": "Field",
+      "Type": "SyncList<TestPlayer>",
+      "FullName": "Mirror.Tests.TestPlayerBehaviour.myList",
+      "Line": 9,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Data\\ImuData.cs",
+      "Kind": "Field",
+      "Type": "Vector3",
+      "FullName": "Simulator.Bridge.Data.ImuData.AngularVelocity",
+      "Line": 26,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\CosmosFramework\\Runtime\\Base\\DataStructure\\AStar\\Source\\AStar.cs",
+      "Kind": "Field",
+      "Type": "Queue<List<Node>>",
+      "FullName": "Cosmos.AStar.nodeListQueue",
+      "Line": 67,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\reflex\\Assets\\Reflex.IL2CPP.Tests\\ExpressionTreeBenchmark.cs",
+      "Kind": "Field",
+      "Type": "RingBuffer<long>",
+      "FullName": "ExpressionTreeBenchmark._expressionGetterBuffer",
+      "Line": 18,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Sensors\\Postprocessing\\SunFlareFX.cs",
+      "Parameter": "data",
+      "Method": "Simulator.Sensors.Postprocessing.SunFlareFX.Render(Simulator.Sensors.Postprocessing.PostProcessPassContext, RTHandle, RTHandle, Simulator.Sensors.Postprocessing.SunFlare)",
+      "Type": "SunFlare",
+      "Line": 120,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mapboxargame\\Assets\\Mapbox\\Examples\\Scripts\\ReverseGeocodeUserInput.cs",
+      "Kind": "Field",
+      "Type": "Geocoder",
+      "FullName": "Mapbox.Examples.ReverseGeocodeUserInput._geocoder",
+      "Line": 28,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\3rdPlugins\\AssetGraph-1.8-release-BD\\Editor\\System\\Node\\Buitin\\PrefabBuilder.cs",
+      "Parameter": "streamManager",
+      "Method": "UnityEngine.AssetGraph.PrefabBuilder.OnInspectorGUI(UnityEngine.AssetGraph.NodeGUI, UnityEngine.AssetGraph.AssetReferenceStreamManager, UnityEngine.AssetGraph.NodeGUIInspector, System.Action)",
+      "Type": "AssetReferenceStreamManager",
+      "Line": 87,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\3rdPlugins\\NuGet\\Editor\\NugetHelper.cs",
+      "Parameter": "package",
+      "Method": "NugetForUnity.NugetHelper.InstallIdentifier(NugetForUnity.NugetPackageIdentifier, bool)",
+      "Type": "NugetPackageIdentifier",
+      "Line": 1308,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\egameplay\\Assets\\Plugins\\Animancer\\Internal\\Core\\AnimancerPlayable.cs",
+      "Parameter": "animancer",
+      "Method": "Animancer.AnimancerPlayable.SetOutput(Animancer.IAnimancerComponent)",
+      "Type": "IAnimancerComponent",
+      "Line": 316,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\egameplay\\Assets\\Plugins\\Animancer\\Utilities\\TimeSynchronisationGroup.cs",
+      "Parameter": "state",
+      "Method": "Animancer.TimeSynchronisationGroup.SyncTime(object, Animancer.AnimancerState)",
+      "Type": "AnimancerState",
+      "Line": 90,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Templates\\TemplatesBlendModule.cs",
+      "Kind": "Field",
+      "Type": "InlineProperty",
+      "FullName": "AmplifyShaderEditor.TemplatesBlendModule.m_destFactorAlphaInline",
+      "Line": 84,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\AssetBundles-Browser\\Editor\\AssetBundleModel\\ABModel.cs",
+      "Kind": "Field",
+      "Type": "Color",
+      "FullName": "AssetBundleBrowser.AssetBundleModel.Model.k_LightGrey",
+      "Line": 25,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\tengine\\Assets\\TEngine\\Scripts\\Runtime\\Entity\\EntitySystem.cs",
+      "Parameter": "entityLogicType",
+      "Method": "TEngine.Runtime.Entity.EntitySystem.ShowEntity(int, System.Type, string, string, int)",
+      "Type": "Type",
+      "Line": 398,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirage\\Assets\\Tests\\Runtime\\ClientServer\\NetworkBehaviorRpcTest.cs",
+      "Parameter": "value",
+      "Method": "Mirage.Tests.Runtime.ClientServer.SampleBehaviorWithRpc.SendNetworkBehaviour(Mirage.NetworkBehaviour)",
+      "Type": "NetworkBehaviour",
+      "Line": 34,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\RenderPipeline\\Raytracing\\HDRaytracingRecursiveRenderer.cs",
+      "Parameter": "hdCamera",
+      "Method": "UnityEngine.Rendering.HighDefinition.HDRenderPipeline.RaytracingRecursiveRender(UnityEngine.Rendering.HighDefinition.HDCamera, CommandBuffer)",
+      "Type": "HDCamera",
+      "Line": 143,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\_Core\\AppManager.cs",
+      "Kind": "Field",
+      "Type": "AppSettingsManager",
+      "FullName": "Antura.Core.AppManager.AppSettingsManager",
+      "Line": 36,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Plugins\\websocket-sharp\\HttpRequest.cs",
+      "Parameter": "stream",
+      "Method": "WebSocketSharp.HttpRequest.Read(System.IO.Stream, int)",
+      "Type": "Stream",
+      "Line": 171,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\3rdPlugins\\AssetGraph-1.8-release-BD\\Editor\\System\\Node\\Buitin\\BundleConfigurator.cs",
+      "Parameter": "variant",
+      "Method": "UnityEngine.AssetGraph.BundleConfigurator.UpdateVariant(UnityEngine.AssetGraph.DataModel.Version2.NodeData, UnityEngine.AssetGraph.BundleConfigurator.Variant)",
+      "Type": "Variant",
+      "Line": 136,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Scripts\\Runtime\\Config\\ConfigComponent.cs",
+      "Parameter": "e",
+      "Method": "UnityGameFramework.Runtime.ConfigComponent.OnReadDataFailure(object, GameFramework.ReadDataFailureEventArgs)",
+      "Type": "ReadDataFailureEventArgs",
+      "Line": 392,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Devices\\Precompiled\\FastTouchscreen.cs",
+      "Parameter": "parent",
+      "Method": "UnityEngine.InputSystem.FastTouchscreen.Initialize_ctrlTouchscreentouch7radiusx(UnityEngine.InputSystem.Utilities.InternedString, UnityEngine.InputSystem.InputControl)",
+      "Type": "InputControl",
+      "Line": 6470,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Templates\\TemplateSubShader.cs",
+      "Parameter": "subShaderData",
+      "Constructor": "TemplateSubShader",
+      "Type": "TemplateSubShaderInfo",
+      "Line": 44,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\unity3d-lolo\\Assets\\Framework\\ToLua\\BaseType\\LuaInterface_EventObjectWrap.cs",
+      "Parameter": "L",
+      "Method": "LuaInterface_EventObjectWrap.Register(LuaInterface.LuaState)",
+      "Type": "LuaState",
+      "Line": 7,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Generators\\Matrix\\Runtime\\MatrixModifiers.cs",
+      "Parameter": "stop",
+      "Method": "MapMagic.Nodes.MatrixGenerators.Erosion200.Generate(MapMagic.Products.TileData, MapMagic.Products.StopToken)",
+      "Type": "StopToken",
+      "Line": 1066,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_games\\Assessments\\_scripts\\DefaultLogicInjector.cs",
+      "Parameter": "question",
+      "Method": "Antura.Assessment.DefaultLogicInjector.Wire(Antura.Assessment.IQuestion, Antura.Assessment.Answer[])",
+      "Type": "IQuestion",
+      "Line": 46,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Abilities\\Ability\\InstantEffectAbilityProperties.cs",
+      "Parameter": "target",
+      "Method": "AnyRPG.InstantEffectAbilityProperties.Cast(AnyRPG.IAbilityCaster, AnyRPG.Interactable, AnyRPG.AbilityEffectContext)",
+      "Type": "Interactable",
+      "Line": 18,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Scripts\\Runtime\\WebRequest\\WWWWebRequestAgentHelper.cs",
+      "Kind": "Field",
+      "Type": "EventHandler<WebRequestAgentHelperErrorEventArgs>",
+      "FullName": "UnityGameFramework.Runtime.WWWWebRequestAgentHelper.m_WebRequestAgentHelperErrorEventHandler",
+      "Line": 26,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\cecil-0.11.4\\Mono.Cecil\\AssemblyWriter.cs",
+      "Parameter": "marshal_info",
+      "Method": "MonoFN.Cecil.SignatureWriter.WriteMarshalInfo(MonoFN.Cecil.MarshalInfo)",
+      "Type": "MarshalInfo",
+      "Line": 3206,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\Tree\\Expressions\\LiteralExpression.cs",
+      "Parameter": "value",
+      "Constructor": "LiteralExpression",
+      "Type": "DynValue",
+      "Line": 15,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Interactables\\Interactable.cs",
+      "Parameter": "sourceCharacter",
+      "Method": "AnyRPG.Interactable.GetCurrentInteractables(AnyRPG.BaseCharacter, bool, float)",
+      "Type": "BaseCharacter",
+      "Line": 686,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\egameplay\\Assets\\EGamePlay\\Combat\\Action\\Actions\\AttackAction.cs",
+      "Parameter": "action",
+      "Method": "EGamePlay.Combat.AttackActionAbility.TryMakeAction(out EGamePlay.Combat.AttackAction)",
+      "Type": "AttackAction",
+      "Line": 16,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\voxelfield\\Packages\\Swihoni.Sessions\\Runtime\\Items\\Modifiers\\ItemModifierBase.cs",
+      "Parameter": "item",
+      "Method": "Swihoni.Sessions.Items.Modifiers.ItemModifierBase.OnUnequip(in Swihoni.Sessions.SessionContext, Swihoni.Sessions.Player.Components.InventoryComponent, Swihoni.Sessions.Player.Components.ItemComponent)",
+      "Type": "ItemComponent",
+      "Line": 185,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\3rdPlugins\\UniTask\\Runtime\\Linq\\CombineLatest.cs",
+      "Kind": "Field",
+      "Type": "IUniTaskAsyncEnumerable<T6>",
+      "FullName": "Cysharp.Threading.Tasks.Linq.CombineLatest<T1, T2, T3, T4, T5, T6, T7, TResult>._CombineLatest.source6",
+      "Line": 2364,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\canbus\\proto\\zhongyun.cs",
+      "Kind": "Field",
+      "Type": "Gear_enable_controlType?",
+      "FullName": "apollo.canbus.Gear_control_a1.__pbn__gear_enable_control",
+      "Line": 56,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\Player\\ProfileSelector\\ProfileSelectorUI.cs",
+      "Kind": "Field",
+      "Type": "UIButton",
+      "FullName": "Antura.UI.ProfileSelectorUI.BtPlay",
+      "Line": 25,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Editor\\RenderPipeline\\Settings\\DefaultSettingsPanel.cs",
+      "Kind": "Field",
+      "Type": "Vector2",
+      "FullName": "UnityEditor.Rendering.HighDefinition.DefaultSettingsPanelProvider.DefaultSettingsPanelIMGUI.m_ScrollViewPosition",
+      "Line": 58,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Devices\\Remote\\InputRemoting.cs",
+      "Kind": "Field",
+      "Type": "IObserver<Message>",
+      "FullName": "UnityEngine.InputSystem.InputRemoting.Subscriber.observer",
+      "Line": 399,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\Examples\\ExampleScripts\\08_ObjectPool\\MyObjectSpawner.cs",
+      "Kind": "Field",
+      "Type": "IObjectPool",
+      "FullName": "Cosmos.Test.MyObjectSpawner.capsulePool",
+      "Line": 20,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Editor\\Lanelet2MapExporter.cs",
+      "Kind": "Field",
+      "Type": "HashSet<LaneData>",
+      "FullName": "Simulator.Editor.Lanelet2MapExporter.LanesData",
+      "Line": 48,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\phos\\Assets\\Scripts\\Map\\Tiles\\MappedTiles\\ResourceTile.cs",
+      "Parameter": "tInfo",
+      "Constructor": "ResourceTile",
+      "Type": "ResourceTileInfo",
+      "Line": 13,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\shellcore\\Assets\\Plugins\\Node_Editor\\Framework\\Interface\\NodeEditorInputSystem.cs",
+      "Parameter": "inputInfo",
+      "Method": "NodeEditorFramework.NodeEditorInputSystem.FillContextMenu(NodeEditorFramework.NodeEditorInputInfo, NodeEditorFramework.Utilities.GenericMenu, NodeEditorFramework.ContextType)",
+      "Type": "NodeEditorInputInfo",
+      "Line": 153,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Generators\\Matrix\\Runtime\\TexturesOut.cs",
+      "Parameter": "data",
+      "Method": "MapMagic.Nodes.MatrixGenerators.DirectMatricesOutput200.Finalize(MapMagic.Products.TileData, MapMagic.Products.StopToken)",
+      "Type": "TileData",
+      "Line": 781,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\CoreLib\\TableModule.cs",
+      "Parameter": "dynValue2",
+      "Method": "MoonSharp.Interpreter.CoreLib.TableModule.LuaComparerToClrComparer(MoonSharp.Interpreter.DynValue, MoonSharp.Interpreter.DynValue)",
+      "Type": "DynValue",
+      "Line": 115,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Storyboard\\Controllers\\FocusEaser.cs",
+      "Parameter": "renderer",
+      "Constructor": "FocusEaser",
+      "Type": "StoryboardRenderer",
+      "Line": 5,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\cecil-0.11.4\\Mono.Cecil\\AssemblyWriter.cs",
+      "Parameter": "resource",
+      "Method": "MonoFN.Cecil.MetadataBuilder.AddEmbeddedResource(MonoFN.Cecil.EmbeddedResource)",
+      "Type": "EmbeddedResource",
+      "Line": 1212,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\ScenarioEditor\\Managers\\LaneSnappingHandler.cs",
+      "Parameter": "transformToMove",
+      "Method": "Simulator.ScenarioEditor.Managers.LaneSnappingHandler.SnapToLane(Simulator.ScenarioEditor.Managers.LaneSnappingHandler.LaneType, Transform, Transform, float)",
+      "Type": "Transform",
+      "Line": 310,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Components\\InterestManagement\\Team\\TeamInterestManagement.cs",
+      "Kind": "Field",
+      "Type": "HashSet<string>",
+      "FullName": "Mirror.TeamInterestManagement.dirtyTeams",
+      "Line": 15,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\Animancer\\Examples\\09 Animator Controllers\\03 3D Game Kit\\Creatures\\Creature.cs",
+      "Kind": "Field",
+      "Type": "CreatureState",
+      "FullName": "Animancer.Examples.AnimatorControllers.GameKit.Creature._Locomotion",
+      "Line": 75,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\tengine\\Assets\\TEngine\\Scripts\\Runtime\\ObjectPool\\Core\\ObjectPoolComponent.cs",
+      "Parameter": "objectType",
+      "Method": "TEngine.Runtime.ObjectPool.ObjectPoolComponent.CreateSingleSpawnObjectPool(System.Type, int, float)",
+      "Type": "Type",
+      "Line": 365,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Scripts\\Commands\\MoveToView.cs",
+      "Kind": "Field",
+      "Type": "LeanTweenType",
+      "FullName": "Fungus.MoveToView.posTweenType",
+      "Line": 31,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\3rdPlugins\\AssetGraph-1.8-release-BD\\Editor\\System\\Node\\Buitin\\RegressionTestNode.cs",
+      "Parameter": "inspector",
+      "Method": "RegressionTestNode.OnInspectorGUI(UnityEngine.AssetGraph.NodeGUI, UnityEngine.AssetGraph.AssetReferenceStreamManager, UnityEngine.AssetGraph.NodeGUIInspector, System.Action)",
+      "Type": "NodeGUIInspector",
+      "Line": 113,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\3rdPlugins\\AssetGraph-1.8-release-BD\\Editor\\System\\Node\\Buitin\\Label.cs",
+      "Parameter": "inspector",
+      "Method": "UnityEngine.AssetGraph.Label.OnInspectorGUI(UnityEngine.AssetGraph.NodeGUI, UnityEngine.AssetGraph.AssetReferenceStreamManager, UnityEngine.AssetGraph.NodeGUIInspector, System.Action)",
+      "Type": "NodeGUIInspector",
+      "Line": 50,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\lcc\\Assets\\3rdPlugins\\protobuf-net\\ProtoWriter.cs",
+      "Parameter": "writer",
+      "Method": "ProtoBuf.ProtoWriter.WriteObject(object, int, ProtoBuf.ProtoWriter, ProtoBuf.PrefixStyle, int)",
+      "Type": "ProtoWriter",
+      "Line": 78,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\ballance\\Assets\\Plugins\\AssetUsageDetector\\Editor\\AssetUsageDetectorWindow.cs",
+      "Kind": "Field",
+      "Type": "List<ObjectToSearch>",
+      "FullName": "AssetUsageDetectorNamespace.AssetUsageDetectorWindow.objectsToSearch",
+      "Line": 47,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\RenderPipeline\\HDRenderPipeline.SubsurfaceScattering.cs",
+      "Parameter": "hdCamera",
+      "Method": "UnityEngine.Rendering.HighDefinition.HDRenderPipeline.RenderSubsurfaceScattering(RenderGraph, UnityEngine.Rendering.HighDefinition.HDCamera, TextureHandle, in UnityEngine.Rendering.HighDefinition.HDRenderPipeline.LightingBuffers, ref UnityEngine.Rendering.HighDefinition.HDRenderPipeline.PrepassOutput)",
+      "Type": "HDCamera",
+      "Line": 44,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\_Core\\Navigation\\SceneTransitionManager.cs",
+      "Parameter": "_transitionSettings",
+      "Method": "Antura.Core.SceneTransitionManager.SetSettings(Antura.Core.SceneTransitionSettings)",
+      "Type": "SceneTransitionSettings",
+      "Line": 58,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\multiplayer-fps\\Assets\\Photon\\PhotonUnityNetworking\\UtilityScripts\\PhotonPlayer\\PlayerNumbering.cs",
+      "Parameter": "newPlayer",
+      "Method": "Photon.Pun.UtilityScripts.PlayerNumbering.OnPlayerEnteredRoom(Photon.Realtime.Player)",
+      "Type": "Player",
+      "Line": 99,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Mechanics\\Skills\\Effects\\PullEffect.cs",
+      "Parameter": "performer",
+      "Method": "PullEffect.ApplyInstant(FormationUnit, FormationUnit, Effect)",
+      "Type": "FormationUnit",
+      "Line": 13,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Plugins\\PdfSharp\\Didstopia\\SharpZipLib\\Zip\\Compression\\Deflater.cs",
+      "Kind": "Field",
+      "Type": "DeflaterPending",
+      "FullName": "Didstopia.PDFSharp.SharpZipLib.Zip.Compression.Deflater.pending",
+      "Line": 587,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Editor\\Weaver\\Processors\\TargetRpcProcessor.cs",
+      "Parameter": "writers",
+      "Method": "Mirror.Weaver.TargetRpcProcessor.ProcessTargetRpcCall(Mirror.Weaver.WeaverTypes, Mirror.Weaver.Writers, Mirror.Weaver.Logger, Mono.CecilX.TypeDefinition, Mono.CecilX.MethodDefinition, Mono.CecilX.CustomAttribute, ref bool)",
+      "Type": "Writers",
+      "Line": 95,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\cecil-0.11.4\\rocks\\Mono.Cecil.Rocks\\DocCommentId.cs",
+      "Parameter": "member",
+      "Method": "MonoFN.Cecil.Rocks.DocCommentId.GetDocCommentId(MonoFN.Cecil.IMemberDefinition)",
+      "Type": "IMemberDefinition",
+      "Line": 231,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\project-404\\Assets\\External Assets\\AstarPathfindingProject\\Core\\AstarPath.cs",
+      "Kind": "Field",
+      "Type": "AstarData",
+      "FullName": "AstarPath.data",
+      "Line": 58,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\sanandreasunity\\Assets\\Scripts\\Chat\\ChatManager.cs",
+      "Parameter": "chatPreprocessor",
+      "Method": "SanAndreasUnity.Chat.ChatManager.RegisterChatPreprocessor(SanAndreasUnity.Chat.ChatPreprocessor)",
+      "Type": "ChatPreprocessor",
+      "Line": 199,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\PlayerManager.cs",
+      "Kind": "Field",
+      "Type": "LogManager",
+      "FullName": "AnyRPG.PlayerManager.logManager",
+      "Line": 86,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\AnturaSpace\\Shop\\ShopDecorationsManager.cs",
+      "Kind": "Field",
+      "Type": "ShopDecorationObject",
+      "FullName": "Antura.AnturaSpace.ShopDecorationsManager.currentDraggedDecoration",
+      "Line": 241,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Menu\\Palette\\PalettePopUp.cs",
+      "Kind": "Field",
+      "Type": "GUIStyle",
+      "FullName": "AmplifyShaderEditor.PalettePopUp.m_style",
+      "Line": 15,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\Lean\\Touch\\Examples\\Scripts\\LeanFingerSet.cs",
+      "Kind": "Field",
+      "Type": "LeanSelectable",
+      "FullName": "Lean.Touch.LeanFingerSet.RequiredSelectable",
+      "Line": 31,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\jcsunity\\Assets\\JCSUnity\\Scripts\\UI\\JCS_SlideScreenPanelHolder.cs",
+      "Kind": "Field",
+      "Type": "JCS_SlidePanel[]",
+      "FullName": "JCSUnity.JCS_SlideScreenPanelHolder.mSlidePanelsComponents",
+      "Line": 40,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\stream-chat-unity\\Assets\\Plugins\\StreamChat\\Core\\Web\\QueryParametersExt.cs",
+      "Parameter": "source",
+      "Method": "StreamChat.Core.Web.QueryParametersExt.AppendFrom(StreamChat.Core.Web.QueryParameters, StreamChat.Core.Web.IAppendableQueryParameters)",
+      "Type": "IAppendableQueryParameters",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Editor\\OpenDriveMapImporter.cs",
+      "Parameter": "mapDataPoints",
+      "Method": "Simulator.Editor.OpenDriveMapImporter.MoveGameObjectUnderIntersection(Simulator.Map.MapIntersection, Simulator.Map.MapDataPoints)",
+      "Type": "MapDataPoints",
+      "Line": 1842,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Nodes\\Master\\MasterNodeDataCollector.cs",
+      "Kind": "Field",
+      "Type": "List<InputCoordsCollector>",
+      "FullName": "AmplifyShaderEditor.MasterNodeDataCollector.m_customShadowCoordsList",
+      "Line": 117,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Plugins\\LiteNetLib\\Utils\\NetSerializer.cs",
+      "Parameter": "r",
+      "Method": "LiteNetLib.Utils.NetSerializer.BoolSerializer<T>.Read(T, LiteNetLib.Utils.NetDataReader)",
+      "Type": "NetDataReader",
+      "Line": 407,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\UIManagers\\ActionBarManager.cs",
+      "Kind": "Field",
+      "Type": "SystemBarController",
+      "FullName": "AnyRPG.ActionBarManager.systemBarController",
+      "Line": 13,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Actions\\InputActionMap.cs",
+      "Kind": "Field",
+      "Type": "InputDevice[]",
+      "FullName": "UnityEngine.InputSystem.InputActionMap.DeviceArray.m_DeviceArray",
+      "Line": 803,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Plugins\\UniRx\\Scripts\\UnityEngineBridge\\MainThreadDispatcher.cs",
+      "Kind": "Field",
+      "Type": "MainThreadDispatcher",
+      "FullName": "UniRx.MainThreadDispatcher.instance",
+      "Line": 407,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\CharacterPanelManager.cs",
+      "Parameter": "newSpecialization",
+      "Method": "AnyRPG.CharacterPanelManager.HandleSpecializationChange(AnyRPG.ClassSpecialization, AnyRPG.ClassSpecialization)",
+      "Type": "ClassSpecialization",
+      "Line": 88,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Libraries\\GameFramework\\Base\\GameFrameworkEntry.cs",
+      "Parameter": "moduleType",
+      "Method": "GameFramework.GameFrameworkEntry.GetModule(System.Type)",
+      "Type": "Type",
+      "Line": 84,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\sanandreasunity\\Assets\\Scripts\\Behaviours\\World\\Cell.cs",
+      "Kind": "Field",
+      "Type": "List<EntranceExitMapObject>",
+      "FullName": "SanAndreasUnity.Behaviours.World.Cell.m_enexes",
+      "Line": 21,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ldtktounity\\Assets\\LDtkUnity\\Editor\\CustomEditor\\SectionDrawers\\LDtkSectionDrawer.cs",
+      "Parameter": "editor",
+      "Constructor": "LDtkSectionDrawer",
+      "Type": "LDtkImporterEditor",
+      "Line": 27,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\CosmosFramework\\Runtime\\Modules\\WebRequest\\WebRequester.cs",
+      "Kind": "Field",
+      "Type": "Action<WebRequestSuccessEventArgs>",
+      "FullName": "Cosmos.WebRequest.WebRequester.onSuccessCallback",
+      "Line": 29,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\stream-chat-unity\\Assets\\Plugins\\StreamChat\\Core\\API\\Internal\\InternalModerationApi.cs",
+      "Parameter": "muteUserRequest",
+      "Method": "StreamChat.Core.API.Internal.InternalModerationApi.MuteUserAsync(StreamChat.Core.InternalDTO.Requests.MuteUserRequestInternalDTO)",
+      "Type": "MuteUserRequestInternalDTO",
+      "Line": 19,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirage\\Assets\\Tests\\Runtime\\ClientServer\\NetworkIdentitySyncvarTest.cs",
+      "Kind": "Field",
+      "Type": "NetworkIdentity",
+      "FullName": "Mirage.Tests.Runtime.ClientServer.SampleBehaviorWithNI.target",
+      "Line": 11,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Scripts\\Runtime\\Sound\\SoundComponent.cs",
+      "Kind": "Invocation",
+      "Name": "GetComponent",
+      "ReturnType": "BaseComponent",
+      "Line": 138,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_games\\Assessments\\_scripts\\ItemFactory.cs",
+      "Parameter": "data",
+      "Method": "Antura.Assessment.ItemFactory.SpawnQuestion(Antura.LivingLetters.ILivingLetterData)",
+      "Type": "ILivingLetterData",
+      "Line": 37,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Libraries\\GameFramework\\Download\\DownloadManager.cs",
+      "Parameter": "downloadAgentHelper",
+      "Method": "GameFramework.Download.DownloadManager.AddDownloadAgentHelper(GameFramework.Download.IDownloadAgentHelper)",
+      "Type": "IDownloadAgentHelper",
+      "Line": 239,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\com.unity.multiplayer.samples.coop\\Assets\\Scripts\\Gameplay\\Action\\ConcreteActions\\PickUpAction.cs",
+      "Kind": "Field",
+      "Type": "RaycastHitComparer",
+      "FullName": "Unity.BossRoom.Gameplay.Actions.PickUpAction.s_RaycastHitComparer",
+      "Line": 21,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\hogwarts\\Assets\\PostProcessing\\Runtime\\Models\\ColorGradingModel.cs",
+      "Kind": "Field",
+      "Type": "ColorGradingCurve",
+      "FullName": "UnityEngine.PostProcessing.ColorGradingModel.CurvesSettings.green",
+      "Line": 220,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_games\\Maze\\_scripts\\MazeGame.cs",
+      "Kind": "Field",
+      "Type": "MazeLetter",
+      "FullName": "Antura.Minigames.Maze.MazeGame.currentMazeLetter",
+      "Line": 87,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\Runtime\\Transporting\\Transports\\Tugboat\\LiteNetLib\\SequencedChannel.cs",
+      "Kind": "Field",
+      "Type": "NetPacket",
+      "FullName": "LiteNetLib.SequencedChannel._lastPacket",
+      "Line": 10,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\unity3d-lolo\\Assets\\Framework\\ShibaInu\\Core\\ResManager.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<string, AssetInfo>",
+      "FullName": "ShibaInu.ResManager.s_resMap",
+      "Line": 41,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Components\\Discovery\\NetworkDiscoveryBase.cs",
+      "Kind": "Field",
+      "Type": "UdpClient",
+      "FullName": "Mirror.Discovery.NetworkDiscoveryBase<Request, Response>.serverUdpClient",
+      "Line": 43,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Editor\\Weaver\\Processors\\NetworkBehaviourProcessor.cs",
+      "Kind": "Field",
+      "Type": "WeaverTypes",
+      "FullName": "Mirror.Weaver.NetworkBehaviourProcessor.weaverTypes",
+      "Line": 18,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_games\\FastCrowd\\_scripts\\DropAreas\\DropContainer.cs",
+      "Parameter": "_letterView",
+      "Method": "Antura.Minigames.FastCrowd.DropContainer.Droppable_OnWrongMatch(Antura.LivingLetters.LivingLetterController)",
+      "Type": "LivingLetterController",
+      "Line": 149,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\Editor\\EditorEnvironment\\EditorSetting\\BDFrameworkEditorSetting.cs",
+      "Kind": "Field",
+      "Type": "WindowsPlayerSetting",
+      "FullName": "BDFramework.Editor.BDFrameworkEditorSetting.WindowsPlayerDebug",
+      "Line": 107,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\Compositor\\CompositionManager.cs",
+      "Kind": "Field",
+      "Type": "GameObject",
+      "FullName": "UnityEngine.Rendering.HighDefinition.Compositor.CompositionManager.m_CompositorGameObject",
+      "Line": 151,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_games\\Egg\\_scripts\\EggController.cs",
+      "Parameter": "_answersData",
+      "Method": "Antura.Minigames.Egg.EggController.SetAnswers(Antura.LivingLetters.ILivingLetterData)",
+      "Type": "ILivingLetterData",
+      "Line": 406,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\drivers\\proto\\delphi_esr.cs",
+      "Kind": "Field",
+      "Type": "global::ProtoBuf.IExtension",
+      "FullName": "apollo.drivers.Vehicle2_4f1.__pbn__extensionData",
+      "Line": 1836,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Utils\\InlineProperty.cs",
+      "Parameter": "owner",
+      "Method": "AmplifyShaderEditor.InlineProperty.CustomDrawer(ref AmplifyShaderEditor.UndoParentNode, AmplifyShaderEditor.InlineProperty.DrawPropertySection, string)",
+      "Type": "UndoParentNode",
+      "Line": 100,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Navigation\\Elements\\ParallaxElement.cs",
+      "Parameter": "element",
+      "Method": "ParallaxAnimation.OnUpdate(ParallaxElement)",
+      "Type": "ParallaxElement",
+      "Line": 188,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\jcsunity\\Assets\\JCSUnity\\Scripts\\Network\\Handler\\JCS_HelloHandler.cs",
+      "Parameter": "client",
+      "Method": "JCSUnity.JCS_HelloHandler.handlePacket(JCSUnity.JCS_BinaryReader, JCSUnity.JCS_Client)",
+      "Type": "JCS_Client",
+      "Line": 23,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Components\\InterestManagement\\Team\\TeamInterestManagement.cs",
+      "Parameter": "identity",
+      "Method": "Mirror.TeamInterestManagement.OnSpawned(Mirror.NetworkIdentity)",
+      "Type": "NetworkIdentity",
+      "Line": 17,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\pal3.unity\\Assets\\Scripts\\Pal3\\Data\\GameResourceProvider.cs",
+      "Kind": "Field",
+      "Type": "IMaterialFactory",
+      "FullName": "Pal3.Data.GameResourceProvider._materialFactory",
+      "Line": 47,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\Errors\\SyntaxErrorException.cs",
+      "Parameter": "t",
+      "Constructor": "SyntaxErrorException",
+      "Type": "Token",
+      "Line": 23,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\ballance\\Assets\\System\\Scripts\\Services\\LuaService\\LuaWapper\\GameLuaWapperEvents\\GameLuaObjectAnimatorEventCaller.cs",
+      "Kind": "Field",
+      "Type": "LuaTable",
+      "FullName": "Ballance2.Services.LuaService.LuaWapper.GameLuaWapperEvents.GameLuaObjectAnimatorEventCaller.self",
+      "Line": 30,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\Buttons\\ActionButton.cs",
+      "Kind": "Field",
+      "Type": "ActionBarManager",
+      "FullName": "AnyRPG.ActionButton.actionBarManager",
+      "Line": 60,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\egameplay\\Assets\\EGamePlay\\Combat\\_CombatEntity\\Components\\ActionPointComponent.cs",
+      "Parameter": "actionExecution",
+      "Method": "EGamePlay.Combat.ActionPointComponent.TriggerActionPoint(EGamePlay.Combat.ActionPointType, EGamePlay.Entity)",
+      "Type": "Entity",
+      "Line": 135,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\PlayerManager.cs",
+      "Parameter": "characterStats",
+      "Method": "AnyRPG.PlayerManager.HandleDie(AnyRPG.CharacterStats)",
+      "Type": "CharacterStats",
+      "Line": 838,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\_Core\\Navigation\\NavigationManager.cs",
+      "Parameter": "minigameData",
+      "Method": "Antura.Core.NavigationManager.GoToScene(Antura.Core.AppScene, Antura.Database.MiniGameData, bool)",
+      "Type": "MiniGameData",
+      "Line": 248,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\Helpers\\GeneralHelper.cs",
+      "Kind": "Field",
+      "Type": "MethodReference",
+      "FullName": "FishNet.CodeGenerating.Helping.GeneralHelper.List_RemoveRange_MethodRef",
+      "Line": 31,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Network\\Core\\Components\\DistributedRigidbody.cs",
+      "Kind": "Field",
+      "Type": "Vector3",
+      "FullName": "Simulator.Network.Core.Components.DistributedRigidbody.SnapshotData.LocalPosition",
+      "Line": 42,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Characters\\BaseClasses\\UnitController.cs",
+      "Parameter": "movementSoundArea",
+      "Method": "AnyRPG.UnitController.UnsetMovementSoundArea(AnyRPG.MovementSoundArea)",
+      "Type": "MovementSoundArea",
+      "Line": 990,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\tengine\\Assets\\TEngine\\Scripts\\Runtime\\Core\\Procedure\\ProcedureManager.cs",
+      "Parameter": "procedureType",
+      "Method": "TEngine.Runtime.ProcedureManager.GetProcedure(System.Type)",
+      "Type": "Type",
+      "Line": 174,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\RenderPipeline\\Settings\\CaptureSettings.cs",
+      "Kind": "Field",
+      "Type": "LayerMask",
+      "FullName": "UnityEngine.Rendering.HighDefinition.ObsoleteCaptureSettings.volumeLayerMask",
+      "Line": 72,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Scripts\\Runtime\\Resource\\ResourceComponent.cs",
+      "Parameter": "loadBinaryCallbacks",
+      "Method": "UnityGameFramework.Runtime.ResourceComponent.LoadBinary(string, GameFramework.Resource.LoadBinaryCallbacks)",
+      "Type": "LoadBinaryCallbacks",
+      "Line": 1022,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\sanandreasunity\\Assets\\Scripts\\Importing\\Conversion\\Geometry.cs",
+      "Kind": "Field",
+      "Type": "CollisionFile",
+      "FullName": "SanAndreasUnity.Importing.Conversion.Geometry.GeometryParts._collisions",
+      "Line": 393,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Character\\Character.cs",
+      "Parameter": "buffEntry",
+      "Method": "Character.ApplyBuff(BuffInfo)",
+      "Type": "BuffInfo",
+      "Line": 539,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\control\\proto\\control_conf.cs",
+      "Kind": "Field",
+      "Type": "global::apollo.canbus.Chassis.DrivingMode?",
+      "FullName": "apollo.control.ControlConf.__pbn__driving_mode",
+      "Line": 394,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\pal3.unity\\Assets\\Scripts\\Pal3\\Actor\\ActorController.cs",
+      "Parameter": "command",
+      "Method": "Pal3.Actor.ActorController.Execute(Pal3.Command.SceCommands.ActorSetFacingDirectionCommand)",
+      "Type": "ActorSetFacingDirectionCommand",
+      "Line": 173,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Quest\\SubtitleProperties.cs",
+      "Parameter": "systemGameManager",
+      "Method": "AnyRPG.SubtitleProperties.SetupScriptableObjects(AnyRPG.SystemGameManager)",
+      "Type": "SystemGameManager",
+      "Line": 26,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Plugins\\websocket-sharp\\Net\\HttpListenerResponse.cs",
+      "Parameter": "cookie",
+      "Method": "WebSocketSharp.Net.HttpListenerResponse.SetCookie(WebSocketSharp.Net.Cookie)",
+      "Type": "Cookie",
+      "Line": 1115,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\cecil-0.11.4\\Mono.Cecil.Cil\\Instruction.cs",
+      "Parameter": "site",
+      "Method": "MonoFN.Cecil.Cil.Instruction.Create(MonoFN.Cecil.Cil.OpCode, MonoFN.Cecil.CallSite)",
+      "Type": "CallSite",
+      "Line": 161,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\Examples\\ExampleScripts\\03_UI\\Panel\\Inventory\\Slot\\Item.cs",
+      "Kind": "Field",
+      "Type": "ItemDataset",
+      "FullName": "Item.itemDataSet",
+      "Line": 11,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\nsmb-mariovsluigi\\Assets\\Photon\\PhotonUnityNetworking\\Code\\PhotonNetworkPart.cs",
+      "Parameter": "view",
+      "Method": "Photon.Pun.PhotonNetwork.CleanRpcBufferIfMine(Photon.Pun.PhotonView)",
+      "Type": "PhotonView",
+      "Line": 1070,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameMain\\Scripts\\Base\\GameEntry.Builtin.cs",
+      "Kind": "Invocation",
+      "Name": "GetComponent",
+      "ReturnType": "DownloadComponent",
+      "Line": 205,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\pal3.unity\\Assets\\Plugins\\IngameDebugConsole\\Scripts\\DebugLogItem.cs",
+      "Parameter": "listView",
+      "Method": "IngameDebugConsole.DebugLogItem.Initialize(IngameDebugConsole.DebugLogRecycledListView)",
+      "Type": "DebugLogRecycledListView",
+      "Line": 102,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\com.unity.multiplayer.samples.coop\\Assets\\Scripts\\Gameplay\\GameplayObjects\\RuntimeDataContainers\\GameDataSource.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<CharacterTypeEnum, CharacterClass>",
+      "FullName": "Unity.BossRoom.Gameplay.GameplayObjects.GameDataSource.m_CharacterDataMap",
+      "Line": 23,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\ScenarioEditor\\UI\\Utilities\\FloatInputWithUnits.cs",
+      "Kind": "Field",
+      "Type": "InputField",
+      "FullName": "Simulator.ScenarioEditor.UI.Utilities.FloatInputWithUnits.input",
+      "Line": 61,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\stream-chat-unity\\Assets\\Plugins\\StreamChat\\Core\\StreamChatClient.cs",
+      "Kind": "Field",
+      "Type": "IHttpClient",
+      "FullName": "StreamChat.Core.StreamChatClient._httpClient",
+      "Line": 381,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Plugins\\websocket-sharp\\Net\\HttpConnection.cs",
+      "Kind": "Field",
+      "Type": "EndPoint",
+      "FullName": "WebSocketSharp.Net.HttpConnection._remoteEndPoint",
+      "Line": 76,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\CosmosFramework\\Runtime\\Modules\\Network\\KCP\\kcp2k\\highlevel\\NonAlloc\\KcpServerConnectionNonAlloc.cs",
+      "Kind": "Field",
+      "Type": "IPEndPointNonAlloc",
+      "FullName": "kcp2k.KcpServerConnectionNonAlloc.reusableSendEndPoint",
+      "Line": 11,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\Animancer\\Examples\\04 Directional Sprites\\02 Character Controller\\SpriteCharacterController.cs",
+      "Kind": "Field",
+      "Type": "DirectionalAnimationSet",
+      "FullName": "Animancer.Examples.DirectionalSprites.SpriteCharacterController._Idle",
+      "Line": 30,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mapboxargame\\Assets\\UnityARKitPlugin\\ARKitRemote\\SerializableObjects.cs",
+      "Kind": "Field",
+      "Type": "serializableUnityARMatrix4x4",
+      "FullName": "Utils.serializableUnityARCamera.displayTransform",
+      "Line": 242,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Nodes\\Master\\MasterNodeDataCollector.cs",
+      "Parameter": "node",
+      "Method": "AmplifyShaderEditor.MasterNodeDataCollector.AddPropertyNode(AmplifyShaderEditor.PropertyNode)",
+      "Type": "PropertyNode",
+      "Line": 1327,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_games\\DancingDots\\_scripts\\States\\QuestionGameState.cs",
+      "Kind": "Field",
+      "Type": "DancingDotsGame",
+      "FullName": "Antura.Minigames.DancingDots.QuestionGameState.game",
+      "Line": 5,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\nice-lua\\Assets\\Scripts\\Common\\FlatBuffers\\ByteBufferUtil.cs",
+      "Parameter": "bb",
+      "Method": "FlatBuffers.ByteBufferUtil.RemoveSizePrefix(FlatBuffers.ByteBuffer)",
+      "Type": "ByteBuffer",
+      "Line": 33,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Utils\\InteractableMonoBehavior.cs",
+      "Kind": "Field",
+      "Type": "PointerDataEvent",
+      "FullName": "InteractableMonoBehavior.onPointerExit",
+      "Line": 12,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\ballance\\Assets\\Plugins\\RuntimeInspector\\Scripts\\RuntimeInspector\\Helpers\\TooltipArea.cs",
+      "Kind": "Field",
+      "Type": "InspectorField",
+      "FullName": "RuntimeInspectorNamespace.TooltipArea.drawer",
+      "Line": 8,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\ScenarioEditor\\Managers\\LaneSnappingHandler.cs",
+      "Parameter": "transformToRotate",
+      "Method": "Simulator.ScenarioEditor.Managers.LaneSnappingHandler.SnapToLane(Simulator.ScenarioEditor.Managers.LaneSnappingHandler.LaneType, Transform, Transform, float)",
+      "Type": "Transform",
+      "Line": 310,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\unity3d-lolo\\Assets\\Framework\\3rdParty\\Demigiant\\DOTweenPro\\Editor\\DOTweenPreviewManager.cs",
+      "Kind": "Field",
+      "Type": "GUIStyle",
+      "FullName": "DG.DOTweenEditor.DOTweenPreviewManager.Styles.previewBox",
+      "Line": 246,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Core\\NetworkServer.cs",
+      "Parameter": "identity",
+      "Method": "Mirror.NetworkServer.GetNetworkIdentity(GameObject, out Mirror.NetworkIdentity)",
+      "Type": "NetworkIdentity",
+      "Line": 681,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Items\\Item.cs",
+      "Parameter": "actionButton",
+      "Method": "AnyRPG.Item.ChooseMonitorCoroutine(AnyRPG.ActionButton)",
+      "Type": "ActionButton",
+      "Line": 348,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Scripts\\Commands\\LoadScene.cs",
+      "Parameter": "variable",
+      "Method": "Fungus.LoadScene.HasReference(Fungus.Variable)",
+      "Type": "Variable",
+      "Line": 53,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\Runtime\\AssetsManager\\Sql\\TableQuery.cs",
+      "Parameter": "conn",
+      "Constructor": "TableQuery",
+      "Type": "SQLiteConnection",
+      "Line": 59,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\ballance\\Assets\\Plugins\\Graphy - Ultimate Stats Monitor\\Runtime\\Audio\\G_AudioMonitor.cs",
+      "Kind": "Field",
+      "Type": "GraphyManager.LookForAudioListener",
+      "FullName": "Tayx.Graphy.Audio.G_AudioMonitor.m_findAudioListenerInCameraIfNull",
+      "Line": 34,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\cecil-0.11.4\\Mono.Cecil\\TypeDefinitionCollection.cs",
+      "Parameter": "item",
+      "Method": "MonoFN.Cecil.TypeDefinitionCollection.OnInsert(MonoFN.Cecil.TypeDefinition, int)",
+      "Type": "TypeDefinition",
+      "Line": 48,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\Lean\\Touch\\Scripts\\LeanTouch.cs",
+      "Kind": "Field",
+      "Type": "System.Action<LeanFinger>",
+      "FullName": "Lean.Touch.LeanTouch.OnFingerSet",
+      "Line": 169,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Utils\\UIUtils.cs",
+      "Kind": "Field",
+      "Type": "GUIStyle",
+      "FullName": "AmplifyShaderEditor.UIUtils.NodeHeaderSquare",
+      "Line": 252,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Abilities\\Effect\\LengthEffectProperties.cs",
+      "Parameter": "targetCharacter",
+      "Method": "AnyRPG.LengthEffectProperties.CancelEffect(AnyRPG.BaseCharacter)",
+      "Type": "BaseCharacter",
+      "Line": 274,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\Interop\\StandardDescriptors\\ReflectionMemberDescriptors\\OverloadedMethodMemberDescriptor.cs",
+      "Parameter": "overload",
+      "Method": "MoonSharp.Interpreter.Interop.OverloadedMethodMemberDescriptor.AddOverload(MoonSharp.Interpreter.Interop.BasicDescriptors.IOverloadableMemberDescriptor)",
+      "Type": "IOverloadableMemberDescriptor",
+      "Line": 121,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\Interop\\BasicDescriptors\\DispatchingUserDataDescriptor.cs",
+      "Parameter": "script",
+      "Method": "MoonSharp.Interpreter.Interop.BasicDescriptors.DispatchingUserDataDescriptor.Index(MoonSharp.Interpreter.Script, object, MoonSharp.Interpreter.DynValue, bool)",
+      "Type": "Script",
+      "Line": 218,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Managers\\RaidSceneManager.cs",
+      "Parameter": "room",
+      "Method": "RaidSceneManager.RoomLoadingEvent(DungeonRoom, RoomTransitionType, RaidHallSector)",
+      "Type": "DungeonRoom",
+      "Line": 647,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\CloseableWindows\\LoadGamePanel.cs",
+      "Kind": "Field",
+      "Type": "List<LoadGameButton>",
+      "FullName": "AnyRPG.LoadGamePanel.loadGameButtons",
+      "Line": 46,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Navigation\\Elements\\ActionTabs.cs",
+      "Parameter": "to",
+      "Method": "ActionTabs.OnScreenChangeFinished(Screen, Screen)",
+      "Type": "Screen",
+      "Line": 214,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Actions\\InputActionAsset.cs",
+      "Kind": "Field",
+      "Type": "InputActionRebindingExtensions.ParameterOverride[]",
+      "FullName": "UnityEngine.InputSystem.InputActionAsset.m_ParameterOverrides",
+      "Line": 927,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\nova\\Assets\\Nova\\Sources\\Core\\Variables.cs",
+      "Parameter": "variables",
+      "Method": "Nova.Variables.CloneFrom(Nova.Variables)",
+      "Type": "Variables",
+      "Line": 154,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Tools\\GUI\\Editor\\PopupMenu.cs",
+      "Kind": "Field",
+      "Type": "List<Item>",
+      "FullName": "Den.Tools.GUI.Popup.PopupMenu.items",
+      "Line": 25,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\Editor\\Inspectors\\ContinueScreenInspector.cs",
+      "Kind": "Field",
+      "Type": "ContinueScreen",
+      "FullName": "Antura.Editor.Inspectors.ContinueScreenInspector.src",
+      "Line": 17,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\jcsunity\\Assets\\JCSUnity\\Scripts\\Actions\\JCS_SwingAttackAction.cs",
+      "Kind": "Field",
+      "Type": "JCS_ApplyDamageTextToLiveObjectAction",
+      "FullName": "JCSUnity.JCS_SwingAttackAction.mApplyDamageTextAction",
+      "Line": 85,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\hack-and-slash-framework\\Assets\\HnSF\\State\\StateFunctionMapperBase.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<Type, Action<IFighterBase, IStateVariables, StateTimeline, int>>",
+      "FullName": "HnSF.StateFunctionMapperBase.functions",
+      "Line": 10,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\Helpers\\ReaderHelper.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<TypeReference, MethodReference>",
+      "FullName": "FishNet.CodeGenerating.Helping.ReaderHelper._instancedReaderMethods",
+      "Line": 21,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Tests\\Editor\\Weaver\\WeaverSyncObjectsTests_IsSuccess\\SyncObjectsExactlyMax.cs",
+      "Kind": "Field",
+      "Type": "SyncList<int>",
+      "FullName": "WeaverSyncObjectsTest.SyncObjectsExactlyMax.SyncObjectsExactlyMax.list53",
+      "Line": 66,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Runtime\\Transports\\SimpleWebTransport\\Server\\ServerSslHelper.cs",
+      "Parameter": "conn",
+      "Method": "Mirror.SimpleWeb.ServerSslHelper.TryCreateStream(Mirror.SimpleWeb.Connection)",
+      "Type": "Connection",
+      "Line": 37,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Mechanics\\AI\\Target Desires\\TargetSelectionRank.cs",
+      "Parameter": "performer",
+      "Method": "TargetSelectionRank.FilterTargets(FormationUnit, System.Collections.Generic.List<FormationUnit>)",
+      "Type": "FormationUnit",
+      "Line": 12,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\pal3.unity\\Assets\\Scripts\\Pal3\\Feature\\HotelManager.cs",
+      "Parameter": "command",
+      "Method": "Pal3.Feature.HotelManager.Execute(Pal3.Command.SceCommands.UIShowHotelMenuCommand)",
+      "Type": "UIShowHotelMenuCommand",
+      "Line": 47,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Graphs\\ParentGraph.cs",
+      "Parameter": "node",
+      "Method": "AmplifyShaderEditor.ParentGraph.AddNode(AmplifyShaderEditor.ParentNode, bool, bool, bool, bool)",
+      "Type": "ParentNode",
+      "Line": 832,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mapboxargame\\Assets\\Mapbox\\Examples\\Scripts\\ObjectInspectorModifier.cs",
+      "Kind": "Field",
+      "Type": "FeatureSelectionDetector",
+      "FullName": "Mapbox.Examples.ObjectInspectorModifier._tempDetector",
+      "Line": 15,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ldtktounity\\Assets\\LDtkUnity\\Runtime\\Fields\\LDtkFieldElement.cs",
+      "Parameter": "instance",
+      "Constructor": "LDtkFieldElement",
+      "Type": "FieldInstance",
+      "Line": 41,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Editor\\Sky\\PhysicallyBasedSky\\PhysicallyBasedSkyEditor.cs",
+      "Kind": "Field",
+      "Type": "SerializedDataParameter",
+      "FullName": "UnityEditor.Rendering.HighDefinition.PhysicallyBasedSkyEditor.m_HorizonTint",
+      "Line": 40,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\digital-logic-sim-ce\\Assets\\Scripts\\Graphics\\ChipPackage.cs",
+      "Parameter": "chip",
+      "Method": "ChipPackage.SetSizeAndSpacing(Chip)",
+      "Type": "Chip",
+      "Line": 104,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Terrains\\Weld.cs",
+      "Parameter": "welded",
+      "Method": "MapMagic.Terrains.Weld.RestoreDraftWeld(MapMagic.Terrains.TerrainTile, Den.Tools.Coord)",
+      "Type": "TerrainTile",
+      "Line": 685,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\com.unity.multiplayer.samples.coop\\Assets\\Scripts\\Navigation\\DynamicNavPath.cs",
+      "Kind": "Field",
+      "Type": "NavigationSystem",
+      "FullName": "Unity.BossRoom.Navigation.DynamicNavPath.m_NavigationSystem",
+      "Line": 17,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\Helpers\\Extension\\TypeDefinitionExtensions.cs",
+      "Parameter": "typeDef",
+      "Method": "FishNet.CodeGenerating.Helping.Extension.TypeDefinitionExtensionsOld.IsStatic(MonoFN.Cecil.TypeDefinition)",
+      "Type": "TypeDefinition",
+      "Line": 257,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\reflexityai\\Assets\\Plugins\\xNode\\Scripts\\Editor\\NodeEditorWindow.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<XNode.NodePort, Rect>",
+      "FullName": "XNodeEditor.NodeEditorWindow._portConnectionPoints",
+      "Line": 15,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\jcsunity\\Assets\\JCSUnity\\Scripts\\Effects\\Particle\\Weather\\JCS_StaticLightning.cs",
+      "Kind": "Field",
+      "Type": "JCS_SoundPlayer",
+      "FullName": "JCSUnity.JCS_StaticLightning.mSoundPlayer",
+      "Line": 46,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\shellcore\\Assets\\Scripts\\HUD Scripts\\SaveMenuIcon.cs",
+      "Kind": "Field",
+      "Type": "SaveMenuHandler",
+      "FullName": "SaveMenuIcon.handler",
+      "Line": 9,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\CoreLib\\StringModule.cs",
+      "Parameter": "executionContext",
+      "Method": "MoonSharp.Interpreter.CoreLib.StringModule.sub(MoonSharp.Interpreter.ScriptExecutionContext, MoonSharp.Interpreter.CallbackArguments)",
+      "Type": "ScriptExecutionContext",
+      "Line": 246,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\SaveManager.cs",
+      "Kind": "Field",
+      "Type": "SystemDataFactory",
+      "FullName": "AnyRPG.SaveManager.systemDataFactory",
+      "Line": 21,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\lcc\\Assets\\3rdPlugins\\protobuf-net\\Serializers\\StringSerializer.cs",
+      "Parameter": "source",
+      "Method": "ProtoBuf.Serializers.StringSerializer.Read(object, ProtoBuf.ProtoReader)",
+      "Type": "ProtoReader",
+      "Line": 33,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Professions\\Skill.cs",
+      "Kind": "Field",
+      "Type": "PlayerManager",
+      "FullName": "AnyRPG.Skill.playerManager",
+      "Line": 32,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Tools\\Matrix\\Edges.cs",
+      "Parameter": "edges",
+      "Method": "Den.Tools.FloatEdges.Weld_Z(Den.Tools.FloatEdges, Den.Tools.FloatEdges, float[*,*], int)",
+      "Type": "FloatEdges",
+      "Line": 258,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Utilities\\Utility.cs",
+      "Parameter": "controllable",
+      "Method": "Simulator.Utilities.Utility.ParseControlPolicy(Simulator.Controllable.IControllable, SimpleJSON.JSONNode, out string)",
+      "Type": "IControllable",
+      "Line": 359,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\reflexityai\\Assets\\Plugins\\xNode\\Scripts\\Editor\\NodeEditor.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<XNode.NodePort, Vector2>",
+      "FullName": "XNodeEditor.NodeEditor.portPositions",
+      "Line": 19,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\DataTypes\\Table.cs",
+      "Parameter": "v",
+      "Method": "MoonSharp.Interpreter.Table.NextKey(MoonSharp.Interpreter.DynValue)",
+      "Type": "DynValue",
+      "Line": 555,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Game\\Screens\\Overlay\\PauseButton.cs",
+      "Kind": "Field",
+      "Type": "Game",
+      "FullName": "PauseButton.game",
+      "Line": 9,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\Helpers\\AttributeHelper.cs",
+      "Parameter": "ca",
+      "Method": "FishNet.CodeGenerating.Helping.AttributeHelper.GetRpcAttributeType(MonoFN.Cecil.CustomAttribute)",
+      "Type": "CustomAttribute",
+      "Line": 45,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Photon Unity Networking\\UtilityScripts\\NetworkCullingHandler.cs",
+      "Kind": "Field",
+      "Type": "PhotonView",
+      "FullName": "NetworkCullingHandler.pView",
+      "Line": 18,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Navigation\\Elements\\ActionTabs.cs",
+      "Kind": "Field",
+      "Type": "TransitionElement",
+      "FullName": "ActionTabs.tabBackground",
+      "Line": 22,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\Runtime\\Managing\\Server\\Object\\ServerObjects.cs",
+      "Parameter": "nob",
+      "Method": "FishNet.Managing.Server.ServerObjects.WriteDespawnAndSend(FishNet.Object.NetworkObject, FishNet.Object.DespawnType)",
+      "Type": "NetworkObject",
+      "Line": 732,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Nodes\\Constants\\PropertyNode.cs",
+      "Parameter": "data",
+      "Method": "AmplifyShaderEditor.PropertyNode.PropertyNameFromTemplate(AmplifyShaderEditor.TemplateShaderPropertyData)",
+      "Type": "TemplateShaderPropertyData",
+      "Line": 1482,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\LiteDB\\Engine\\Query\\Pipeline\\DocumentCacheEnumerable.cs",
+      "Kind": "Field",
+      "Type": "IDocumentLookup",
+      "FullName": "LiteDB.Engine.DocumentCacheEnumerable._lookup",
+      "Line": 20,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Navigation\\Screens\\CommunityHome\\CollectionSection.cs",
+      "Kind": "Field",
+      "Type": "Text",
+      "FullName": "CollectionSection.titleText",
+      "Line": 7,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\multiplayer-fps\\Assets\\Photon\\PhotonUnityNetworking\\Code\\PhotonNetworkPart.cs",
+      "Parameter": "player",
+      "Method": "Photon.Pun.PhotonNetwork.RPC(Photon.Pun.PhotonView, string, Photon.Pun.RpcTarget, Photon.Realtime.Player, bool, params object[])",
+      "Type": "Player",
+      "Line": 1150,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Menu\\Clipboard.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<string, ClipboardData>",
+      "FullName": "AmplifyShaderEditor.Clipboard.m_multiPassMasterNodeData",
+      "Line": 37,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\Buttons\\ActionButton.cs",
+      "Parameter": "item",
+      "Method": "AnyRPG.ActionButton.UpdateItemCount(AnyRPG.Item)",
+      "Type": "Item",
+      "Line": 463,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\EditionSelection\\SelectNativeLanguageButton.cs",
+      "Kind": "Field",
+      "Type": "TextRender",
+      "FullName": "Antura.UI.SelectNativeLanguageButton.Label",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\tengine\\Assets\\TEngine\\Scripts\\Runtime\\Core\\Json\\LitJson\\JsonWriter.cs",
+      "Kind": "Field",
+      "Type": "StringBuilder",
+      "FullName": "LitJson.JsonWriter.inst_string_builder",
+      "Line": 50,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\ThirdPartyContent\\NavMeshComponents\\Editor\\NavMeshLinkEditor.cs",
+      "Parameter": "navLink",
+      "Method": "UnityEditor.AI.NavMeshLinkEditor.RenderBoxGizmo(UnityEngine.AI.NavMeshLink, GizmoType)",
+      "Type": "NavMeshLink",
+      "Line": 138,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Devices\\Precompiled\\FastTouchscreen.cs",
+      "Parameter": "parent",
+      "Method": "UnityEngine.InputSystem.FastTouchscreen.Initialize_ctrlTouchscreentouch8startPositionx(UnityEngine.InputSystem.Utilities.InternedString, UnityEngine.InputSystem.InputControl)",
+      "Type": "InputControl",
+      "Line": 7039,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\planning\\proto\\decision.cs",
+      "Kind": "Field",
+      "Type": "global::ProtoBuf.IExtension",
+      "FullName": "apollo.planning.MainNotReady.__pbn__extensionData",
+      "Line": 1034,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\digital-logic-sim-ce\\Assets\\Scripts\\Interaction\\PinAndWireInteraction.cs",
+      "Kind": "Field",
+      "Type": "Pin",
+      "FullName": "PinAndWireInteraction.pinUnderMouse",
+      "Line": 19,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\shellcore\\Assets\\Scripts\\Game Object Definitions\\Entity Definitions\\Entity.cs",
+      "Kind": "Field",
+      "Type": "Entity",
+      "FullName": "Entity.lastDamagedBy",
+      "Line": 209,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Core\\NetworkReaderExtensions.cs",
+      "Parameter": "reader",
+      "Method": "Mirror.NetworkReaderExtensions.ReadGuid(Mirror.NetworkReader)",
+      "Type": "NetworkReader",
+      "Line": 146,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Components\\VehicleActions.cs",
+      "Kind": "Field",
+      "Type": "List<Light>",
+      "FullName": "VehicleActions.fogLights",
+      "Line": 42,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_manage\\manage_Database\\_scripts\\DataParsers\\LetterParser.cs",
+      "Parameter": "table",
+      "Method": "Antura.Database.Management.LetterParser.FinalValidation(Antura.Database.LetterTable, Antura.Database.DatabaseObject)",
+      "Type": "LetterTable",
+      "Line": 80,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Game\\Game.cs",
+      "Kind": "Field",
+      "Type": "GameEvent",
+      "FullName": "Game.onGameBeforeExit",
+      "Line": 82,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Scripts\\Commands\\Collection\\CollectionCommandContainsAny.cs",
+      "Kind": "Field",
+      "Type": "BooleanVariable",
+      "FullName": "Fungus.CollectionCommandContainsAny.result",
+      "Line": 18,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Nodes\\Master\\DependenciesHelper.cs",
+      "Parameter": "owner",
+      "Method": "AmplifyShaderEditor.DependenciesHelper.Draw(AmplifyShaderEditor.ParentNode, bool)",
+      "Type": "ParentNode",
+      "Line": 58,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\Material\\Decal\\DecalSystem.cs",
+      "Kind": "Field",
+      "Type": "Vector4[]",
+      "FullName": "UnityEngine.Rendering.HighDefinition.DecalSystem.m_BaseColor",
+      "Line": 288,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\RenderPipeline\\HDRenderPipeline.cs",
+      "Kind": "Field",
+      "Type": "FrameSettings",
+      "FullName": "UnityEngine.Rendering.HighDefinition.HDRenderPipeline.FullScreenDebugParameters.frameSettings",
+      "Line": 4258,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Runtime\\Transports\\KCP\\kcp2k\\where-allocation\\Scripts\\Extensions.cs",
+      "Parameter": "remoteEndPoint",
+      "Method": "WhereAllocation.Extensions.ReceiveFrom_NonAlloc(Socket, byte[], WhereAllocation.IPEndPointNonAlloc)",
+      "Type": "IPEndPointNonAlloc",
+      "Line": 34,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Mechanics\\Skills\\Effects\\UnstunEffect.cs",
+      "Parameter": "performer",
+      "Method": "UnstunEffect.ApplyQueued(FormationUnit, FormationUnit, Effect)",
+      "Type": "FormationUnit",
+      "Line": 20,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\impossibleodds-toolkit\\Assets\\Impossible Odds\\Toolkit\\Runtime\\Xml\\Processors\\XmlLookupProcessor.cs",
+      "Kind": "Field",
+      "Type": "XmlSerializationDefinition",
+      "FullName": "ImpossibleOdds.Xml.Processors.XmlLookupProcessor.definition",
+      "Line": 13,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Debugger\\SDK\\DebugSession.cs",
+      "Parameter": "response",
+      "Method": "MoonSharp.VsCodeDebugger.SDK.DebugSession.Evaluate(MoonSharp.VsCodeDebugger.SDK.Response, MoonSharp.Interpreter.Table)",
+      "Type": "Response",
+      "Line": 508,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Editor\\Wizard\\ConvertEquipmentWizard.cs",
+      "Kind": "Field",
+      "Type": "List<Equipment>",
+      "FullName": "AnyRPG.ConvertEquipmentWizard.equipmentList",
+      "Line": 12,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\TeacherAI\\QuestionBuilding\\QuestionBuilders\\LetterAlterationsInWordsQuestionBuilder.cs",
+      "Parameter": "letterAlterationFilters",
+      "Constructor": "LetterAlterationsInWordsQuestionBuilder",
+      "Type": "LetterAlterationFilters",
+      "Line": 34,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\Runtime\\Transporting\\Transports\\Tugboat\\LiteNetLib\\Utils\\NetSerializer.cs",
+      "Parameter": "w",
+      "Method": "LiteNetLib.Utils.NetSerializer.FastCall<T>.Write(T, LiteNetLib.Utils.NetDataWriter)",
+      "Type": "NetDataWriter",
+      "Line": 33,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\perception\\proto\\tracker_config.cs",
+      "Kind": "Field",
+      "Type": "global::ProtoBuf.IExtension",
+      "FullName": "MatcherConfig.__pbn__extensionData",
+      "Line": 9,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\CloseableWindows\\AssignToActionBarsUI.cs",
+      "Kind": "Field",
+      "Type": "List<AssignActionButton>",
+      "FullName": "AnyRPG.AssignToActionBarsUI.assignActionButtons",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Editor\\Lighting\\HDLightExplorerExtension.cs",
+      "Kind": "Field",
+      "Type": "Dictionary<ReflectionProbe, SerializedObject>",
+      "FullName": "UnityEditor.Rendering.HighDefinition.HDLightExplorerExtension.serializedReflectionProbeDataPairing",
+      "Line": 53,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Characters\\BaseClasses\\AbilityManager.cs",
+      "Parameter": "baseAbility",
+      "Method": "AnyRPG.AbilityManager.PerformWeaponAffinityCheck(AnyRPG.BaseAbilityProperties, bool)",
+      "Type": "BaseAbilityProperties",
+      "Line": 388,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\LiteDB\\Utils\\Extensions\\BufferSliceExtensions.cs",
+      "Parameter": "buffer",
+      "Method": "LiteDB.BufferSliceExtensions.ReadByte(LiteDB.BufferSlice, int)",
+      "Type": "BufferSlice",
+      "Line": 18,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\nova\\Assets\\Nova\\Sources\\ThirdParty\\ToLua\\ToLua\\BaseType\\LuaInterface_EventObjectWrap.cs",
+      "Parameter": "L",
+      "Method": "LuaInterface_EventObjectWrap.Register(LuaInterface.LuaState)",
+      "Type": "LuaState",
+      "Line": 7,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\AmplifyShaderEditor\\Plugins\\Editor\\Nodes\\DynamicTypeNode.cs",
+      "Parameter": "dataCollector",
+      "Method": "AmplifyShaderEditor.DynamicTypeNode.GenerateShaderForOutput(int, ref AmplifyShaderEditor.MasterNodeDataCollector, bool)",
+      "Type": "MasterNodeDataCollector",
+      "Line": 452,
+      "valid":"true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\Buttons\\DescribableCraftingInputIcon.cs",
+      "Parameter": "describable",
+      "Method": "AnyRPG.DescribableCraftingInputIcon.SetDescribableCommon(AnyRPG.IDescribable)",
+      "Type": "IDescribable",
+      "Line": 52,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\bdframework.core\\Packages\\com.popo.bdframework\\Editor\\EditorPipeline\\BuildPipeline\\BuildAssetBundleEditor\\AssetGraph\\Node\\SetGranularityByFolderTag.cs",
+      "Parameter": "data",
+      "Method": "BDFramework.Editor.AssetGraph.Node.SetGranularityByFolderTag.Initialize(UnityEngine.AssetGraph.DataModel.Version2.NodeData)",
+      "Type": "NodeData",
+      "Line": 48,
+      "valid":"false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirror\\Assets\\Mirror\\Components\\InterestManagement\\Match\\MatchInterestManagement.cs",
+      "Parameter": "identity",
+      "Method": "Mirror.MatchInterestManagement.OnRebuildObservers(Mirror.NetworkIdentity, HashSet<Mirror.NetworkConnectionToClient>)",
+      "Type": "NetworkIdentity",
+      "Line": 140,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ldtktounity\\Assets\\LDtkUnity\\Editor\\Utility\\Artifacts\\LDtkBackgroundArtifactFactory.cs",
+      "Parameter": "lvl",
+      "Constructor": "LDtkBackgroundArtifactFactory",
+      "Type": "Level",
+      "Line": 15,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirage\\Assets\\Mirage\\Runtime\\INetworkPlayer.cs",
+      "Parameter": "identity",
+      "Method": "Mirage.IVisibilityTracker.ContainsInVisList(Mirage.NetworkIdentity)",
+      "Type": "NetworkIdentity",
+      "Line": 66,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Devices\\Precompiled\\FastTouchscreen.cs",
+      "Parameter": "parent",
+      "Method": "UnityEngine.InputSystem.FastTouchscreen.Initialize_ctrlTouchscreentouch7press(UnityEngine.InputSystem.Utilities.InternedString, UnityEngine.InputSystem.InputControl)",
+      "Type": "InputControl",
+      "Line": 6160,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\Lighting\\Reflection\\Volume\\InfluenceVolume.cs",
+      "Kind": "Field",
+      "Type": "Vector3",
+      "FullName": "UnityEngine.Rendering.HighDefinition.InfluenceVolume.m_BoxBlendNormalDistanceNegative",
+      "Line": 26,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Spine\\SpineSharp\\Source\\SkeletonBounds.cs",
+      "Parameter": "attachment",
+      "Method": "Spine.SkeletonBounds.getPolygon(Spine.BoundingBoxAttachment)",
+      "Type": "BoundingBoxAttachment",
+      "Line": 202,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mapboxargame\\Assets\\Mapbox\\Core\\mapbox-sdk-cs\\Platform\\SQLite\\SQLite.cs",
+      "Parameter": "exception",
+      "Method": "SQLite4Unity3d.NotNullConstraintViolationException.New(SQLite4Unity3d.SQLiteException, SQLite4Unity3d.TableMapping, object)",
+      "Type": "SQLiteException",
+      "Line": 96,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Plugins\\LiteNetLib\\BaseChannel.cs",
+      "Parameter": "packet",
+      "Method": "LiteNetLib.BaseChannel.AddToQueue(LiteNetLib.NetPacket)",
+      "Type": "NetPacket",
+      "Line": 20,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\drivers\\radar\\conti_radar\\proto\\conti_radar_conf.cs",
+      "Kind": "Field",
+      "Type": "global::ProtoBuf.IExtension",
+      "FullName": "apollo.drivers.conti_radar.RadarConf.__pbn__extensionData",
+      "Line": 83,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\drivers\\proto\\mobileye.cs",
+      "Kind": "Field",
+      "Type": "global::ProtoBuf.IExtension",
+      "FullName": "apollo.drivers.Lka_767.__pbn__extensionData",
+      "Line": 964,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\LiteDB\\Engine\\Disk\\DiskWriterQueue.cs",
+      "Kind": "Field",
+      "Type": "ConcurrentQueue<PageBuffer>",
+      "FullName": "LiteDB.Engine.DiskWriterQueue._queue",
+      "Line": 27,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\towerdefense-gameframework-demo\\Assets\\GameFramework\\Scripts\\Runtime\\Resource\\EditorResourceComponent.cs",
+      "Kind": "Field",
+      "Type": "GameFrameworkLinkedList<UnloadSceneInfo>",
+      "FullName": "UnityGameFramework.Runtime.EditorResourceComponent.m_UnloadSceneInfos",
+      "Line": 48,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Generators\\Matrix\\Runtime\\HeightOut.cs",
+      "Parameter": "stop",
+      "Method": "MapMagic.Nodes.MatrixGenerators.HeightOutput200.Finalize(MapMagic.Products.TileData, MapMagic.Products.StopToken)",
+      "Type": "StopToken",
+      "Line": 74,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\AnturaSpace\\Shop\\ShopDecorationObject.cs",
+      "Kind": "Field",
+      "Type": "ShopActionUI",
+      "FullName": "Antura.AnturaSpace.ShopDecorationObject.shopActionUI",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Thirdparty\\FungusLua\\Thirdparty\\MoonSharp\\Interpreter\\Tree\\Expressions\\BinaryOperatorExpression.cs",
+      "Parameter": "node",
+      "Method": "MoonSharp.Interpreter.Tree.Expressions.BinaryOperatorExpression.AddNode(MoonSharp.Interpreter.Tree.Expressions.BinaryOperatorExpression.LinkedList, MoonSharp.Interpreter.Tree.Expressions.BinaryOperatorExpression.Node)",
+      "Type": "Node",
+      "Line": 91,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\Runtime\\Transporting\\Transports\\Tugboat\\LiteNetLib\\Utils\\NetSerializer.cs",
+      "Parameter": "w",
+      "Method": "LiteNetLib.Utils.NetSerializer.IntSerializer<T>.Write(T, LiteNetLib.Utils.NetDataWriter)",
+      "Type": "NetDataWriter",
+      "Line": 328,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\hogwarts\\Assets\\Photon Unity Networking\\Plugins\\PhotonNetwork\\PhotonView.cs",
+      "Parameter": "stream",
+      "Method": "PhotonView.SerializeView(PhotonStream, PhotonMessageInfo)",
+      "Type": "PhotonStream",
+      "Line": 346,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\ballance\\Assets\\Plugins\\RuntimeInspector\\Scripts\\RuntimeInspector\\Helpers\\PopupBase.cs",
+      "Kind": "Field",
+      "Type": "UISkin",
+      "FullName": "RuntimeInspectorNamespace.PopupBase.m_skin",
+      "Line": 30,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\CosmosFramework\\Editor\\IndieEditor\\CosmosConfig\\CosmosConfigEditor.cs",
+      "Kind": "Field",
+      "Type": "CosmosConfig",
+      "FullName": "Cosmos.Editor.CosmosConfigEditor.cosmosConfig",
+      "Line": 12,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\Runtime\\Serializing\\ReaderExtensions.cs",
+      "Parameter": "reader",
+      "Method": "FishNet.Serializing.ReaderExtensions.ReadVector3(FishNet.Serializing.Reader)",
+      "Type": "Reader",
+      "Line": 42,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\Material\\Eye\\Eye.cs",
+      "Kind": "Field",
+      "Type": "Vector3",
+      "FullName": "UnityEngine.Rendering.HighDefinition.Eye.BSDFData.diffuseNormalWS",
+      "Line": 90,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Plugins\\PdfSharp\\Didstopia\\Drawing\\XGraphics.cs",
+      "Kind": "Field",
+      "Type": "XGraphicsInternals",
+      "FullName": "Didstopia.PDFSharp.Drawing.XGraphics._internals",
+      "Line": 4960,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Raid\\Area\\AreaObjects\\RaidHallwayView.cs",
+      "Kind": "Field",
+      "Type": "RaidBorderWall",
+      "FullName": "RaidHallwayView.rightWall",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\UI\\CloseableWindows\\PetSpawnControlPanel.cs",
+      "Kind": "Field",
+      "Type": "CharacterRace",
+      "FullName": "AnyRPG.PetSpawnControlPanel.characterRace",
+      "Line": 56,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\ResourceProfiles\\EquipmentSlotProfile.cs",
+      "Parameter": "systemGameManager",
+      "Method": "AnyRPG.EquipmentSlotProfile.SetupScriptableObjects(AnyRPG.SystemGameManager)",
+      "Type": "SystemGameManager",
+      "Line": 46,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Plugins\\PdfSharp\\Didstopia\\Pdf_Advanced\\PdfResources.cs",
+      "Parameter": "form",
+      "Method": "Didstopia.PDFSharp.Pdf.Advanced.PdfResources.AddForm(Didstopia.PDFSharp.Pdf.Advanced.PdfFormXObject)",
+      "Type": "PdfFormXObject",
+      "Line": 99,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Abilities\\Effect\\FixedLengthEffectProperties.cs",
+      "Kind": "Field",
+      "Type": "SystemAbilityController",
+      "FullName": "AnyRPG.FixedLengthEffectProperties.systemAbilityController",
+      "Line": 19,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Components\\VisualizerToggle.cs",
+      "Kind": "Field",
+      "Type": "GameObject",
+      "FullName": "Simulator.Sensors.UI.VisualizerToggle.TFVisualPrefab",
+      "Line": 17,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\openkcc\\Packages\\com.nickmaltbie.openkcc\\OpenKCC\\FSM\\Attributes\\UpdateAttributes.cs",
+      "Kind": "Field",
+      "Type": "OnUpdateEvent",
+      "FullName": "nickmaltbie.OpenKCC.FSM.Attributes.OnUpdateEvent.Instance",
+      "Line": 31,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\GameManager\\ResourceProfiles\\LootTable.cs",
+      "Kind": "Field",
+      "Type": "List<LootGroup>",
+      "FullName": "AnyRPG.LootTable.lootGroups",
+      "Line": 23,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Items\\CastableItem.cs",
+      "Kind": "Field",
+      "Type": "SystemAbilityController",
+      "FullName": "AnyRPG.CastableItem.systemAbilityController",
+      "Line": 26,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cosmosframework\\Assets\\CosmosFramework\\Runtime\\Modules\\Network\\KCP\\kcp2k\\highlevel\\KcpConnection.cs",
+      "Kind": "Field",
+      "Type": "Kcp",
+      "FullName": "kcp2k.KcpConnection.kcp",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\nova\\Assets\\Nova\\Sources\\Core\\ScriptParsing\\FlowChartTree.cs",
+      "Parameter": "node",
+      "Method": "Nova.FlowChartTree.HasNode(Nova.FlowChartNode)",
+      "Type": "FlowChartNode",
+      "Line": 102,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\cecil-0.11.4\\rocks\\Mono.Cecil.Rocks\\SecurityDeclarationRocks.cs",
+      "Parameter": "attribute",
+      "Method": "MonoFN.Cecil.Rocks.SecurityDeclarationRocks.CompleteSecurityAttributeProperties(System.Security.Permissions.SecurityAttribute, MonoFN.Cecil.SecurityAttribute)",
+      "Type": "SecurityAttribute",
+      "Line": 110,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\phos\\Assets\\Scripts\\Map\\Tiles\\TileInfo\\Buildings\\TurretTileEntity.cs",
+      "Kind": "Field",
+      "Type": "ProjectileMeshEntity",
+      "FullName": "Amatsugu.Phos.TileEntities.TurretTileEntity.projectileMesh",
+      "Line": 25,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\ss3d\\Assets\\Scripts\\External\\FishNet\\CodeGenerating\\Helpers\\GeneralHelper.cs",
+      "Parameter": "typeRef",
+      "Method": "FishNet.CodeGenerating.Helping.GeneralHelper.HasSerializerAndDeserializer(MonoFN.Cecil.TypeReference, bool)",
+      "Type": "TypeReference",
+      "Line": 907,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Editor\\PointCloud\\PointCloudRendererEditor.cs",
+      "Parameter": "editedObject",
+      "Method": "Simulator.Editor.PointCloud.PointCloudRendererEditor.DrawNormalsContent(Simulator.PointCloud.PointCloudRenderer)",
+      "Type": "PointCloudRenderer",
+      "Line": 297,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\LiteDB\\Document\\Expression\\Parser\\BsonExpressionParser.cs",
+      "Parameter": "tokenizer",
+      "Method": "LiteDB.BsonExpressionParser.TryParseDocument(LiteDB.Tokenizer, LiteDB.ExpressionContext, LiteDB.BsonDocument, LiteDB.DocumentScope)",
+      "Type": "Tokenizer",
+      "Line": 578,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\antura\\Assets\\_core\\_scripts\\Minigames\\Utility\\CircleButton.cs",
+      "Kind": "Field",
+      "Type": "ILivingLetterData",
+      "FullName": "Antura.Minigames.CircleButton.answer",
+      "Line": 32,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\Material\\RenderPipelineMaterial.cs",
+      "Parameter": "hdAsset",
+      "Method": "UnityEngine.Rendering.HighDefinition.RenderPipelineMaterial.Build(UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset, UnityEngine.Rendering.HighDefinition.RenderPipelineResources)",
+      "Type": "HDRenderPipelineAsset",
+      "Line": 18,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Packages\\com.unity.render-pipelines.high-definition\\Runtime\\Lighting\\Shadow\\HDShadowSettings.cs",
+      "Kind": "Field",
+      "Type": "CascadeEndBorderParameter",
+      "FullName": "UnityEngine.Rendering.HighDefinition.HDShadowSettings.cascadeShadowBorder3",
+      "Line": 81,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\reflexityai\\Assets\\Plugins\\xNode\\Scripts\\Editor\\NodeGraphImporter.cs",
+      "Parameter": "graph",
+      "Method": "XNodeEditor.NodeGraphImporter.AddRequired(XNode.NodeGraph, System.Type, ref Vector2)",
+      "Type": "NodeGraph",
+      "Line": 35,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Bridge\\Cyber\\Protobuf\\drivers\\proto\\delphi_esr.cs",
+      "Kind": "Field",
+      "Type": "global::ProtoBuf.IExtension",
+      "FullName": "apollo.drivers.Esr_sim1_5c0.__pbn__extensionData",
+      "Line": 2496,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Mechanics\\Skills\\Effects\\UnstunEffect.cs",
+      "Parameter": "performer",
+      "Method": "UnstunEffect.ApplyInstant(FormationUnit, FormationUnit, Effect)",
+      "Type": "FormationUnit",
+      "Line": 5,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Plugins\\LiteNetLib\\Utils\\NetSerializer.cs",
+      "Parameter": "r",
+      "Method": "LiteNetLib.Utils.NetSerializer.FastCallStatic<TClass, TProperty>.Read(TClass, LiteNetLib.Utils.NetDataReader)",
+      "Type": "NetDataReader",
+      "Line": 160,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\unity-tactical-rpg-battle-system\\Assets\\Scripts\\Debug\\StatsEquipmentTests.cs",
+      "Parameter": "target",
+      "Method": "StatsEquipmentTests.UnEquipCursedItem(Tactical.Actor.Component.Unit)",
+      "Type": "Unit",
+      "Line": 68,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Managers\\RaidSceneManager.cs",
+      "Parameter": "fromRaidSector",
+      "Method": "RaidSceneManager.RoomLoadingEvent(DungeonRoom, RoomTransitionType, RaidHallSector)",
+      "Type": "RaidHallSector",
+      "Line": 647,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\anyrpgcore\\Assets\\AnyRPG\\Core\\System\\Scripts\\Quest\\QuestObjective.cs",
+      "Kind": "Field",
+      "Type": "SystemEventManager",
+      "FullName": "AnyRPG.QuestObjective.systemEventManager",
+      "Line": 24,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\darkest-dungeon-unity\\Assets\\Scripts\\Database\\DarkestJsonReader.cs",
+      "Kind": "Field",
+      "Type": "List<JsonNarrationEntryAudioEvent>",
+      "FullName": "DarkestJson.JsonNarrationEntry.audio_events",
+      "Line": 52,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Components\\InterestManagement\\Match\\MatchInterestManagement.cs",
+      "Parameter": "identity",
+      "Method": "Mirror.MatchInterestManagement.OnDestroyed(Mirror.NetworkIdentity)",
+      "Type": "NetworkIdentity",
+      "Line": 40,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Editor\\Lanelet2MapExporter.cs",
+      "Parameter": "lineData",
+      "Method": "Simulator.Editor.Lanelet2MapExporter.CreateWayFromLine(Simulator.Editor.LineData, OsmSharp.Tags.TagsCollection, bool)",
+      "Type": "LineData",
+      "Line": 311,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\jcsunity\\Assets\\JCSUnity\\Scripts\\Util\\JCS_UIUtil.cs",
+      "Parameter": "dd",
+      "Method": "JCSUnity.JCS_UIUtil.Dropdown_GetSelectedValue(JCSUnity.JCS_Dropdown)",
+      "Type": "JCS_Dropdown",
+      "Line": 246,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\card-game-simulator\\Assets\\Mirror\\Runtime\\NetworkWriterExtensions.cs",
+      "Parameter": "writer",
+      "Method": "Mirror.NetworkWriterExtensions.WriteRectNullable(Mirror.NetworkWriter, Rect?)",
+      "Type": "NetworkWriter",
+      "Line": 221,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\com.unity.multiplayer.samples.coop\\Assets\\Scripts\\Gameplay\\UI\\IPConnectionWindow.cs",
+      "Kind": "Field",
+      "Type": "ISubscriber<ConnectStatus>",
+      "FullName": "Unity.BossRoom.Gameplay.UI.IPConnectionWindow.m_ConnectStatusSubscriber",
+      "Line": 23,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\3rd\\EasyTouchBundle\\EasyTouch\\Plugins\\Components\\EasyTouchTrigger.cs",
+      "Kind": "Field",
+      "Type": "List<EasyTouchReceiver>",
+      "FullName": "HedgehogTeam.EasyTouch.EasyTouchTrigger.receivers",
+      "Line": 37,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\fungus\\Assets\\Fungus\\Scripts\\Components\\Stage.cs",
+      "Kind": "Field",
+      "Type": "LeanTweenType",
+      "FullName": "Fungus.Stage.fadeEaseType",
+      "Line": 33,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Packages\\AssetBundles-Browser\\Editor\\AssetListTree.cs",
+      "Kind": "Field",
+      "Type": "AssetBundleManageTab",
+      "FullName": "AssetBundleBrowser.AssetListTree.m_Controller",
+      "Line": 14,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\inputsystem\\Packages\\com.unity.inputsystem\\InputSystem\\Devices\\Precompiled\\FastTouchscreen.cs",
+      "Parameter": "parent",
+      "Method": "UnityEngine.InputSystem.FastTouchscreen.Initialize_ctrlTouchscreentouch2radiusx(UnityEngine.InputSystem.Utilities.InternedString, UnityEngine.InputSystem.InputControl)",
+      "Type": "InputControl",
+      "Line": 3835,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\fanren\\Assets\\MapMagic\\Core\\MapMagicObject.cs",
+      "Parameter": "tile",
+      "Method": "MapMagic.Core.MapMagicObject.AssignPreviewTile(MapMagic.Terrains.TerrainTile)",
+      "Type": "TerrainTile",
+      "Line": 185,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\mirage\\Assets\\Tests\\Weaver\\GeneratedReaderWriterTests~\\CreatesForClassFromDifferentAssemblies.cs",
+      "Parameter": "data",
+      "Method": "GeneratedReaderWriter.CreatesForClassFromDifferentAssemblies.CreatesForClassFromDifferentAssemblies.RpcDoSomething(Mirage.Weaver.Extra.SomeDataClass)",
+      "Type": "SomeDataClass",
+      "Line": 8,
+      "valid": "true"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet\\cytoid\\Assets\\Scripts\\Navigation\\Elements\\TranslucentCover.cs",
+      "Parameter": "sprite",
+      "Method": "TranslucentCover.Set(Sprite)",
+      "Type": "Sprite",
+      "Line": 18,
+      "valid": "false"
+    },
+    {
+      "Script": "D:\\DatasetTesi\\DataSet1\\simulator\\Assets\\Scripts\\Editor\\Lanelet2MapImporter.cs",
+      "Parameter": "P",
+      "Method": "Simulator.Editor.Lanelet2MapImporter.GetProjectedPoint(Vector3, Vector3, Vector3)",
+      "Type": "Vector3",
+      "Line": 1108,
+      "valid": "false"
+    }
+  ],
+  "FILENAME": "Dependency_Between_Objects.json"
+}

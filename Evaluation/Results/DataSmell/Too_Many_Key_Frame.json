@@ -1,0 +1,60 @@
+{
+    "Name": "Too Many Key Frame",
+    "Occurrency": 9,
+    "Smells": [
+        {
+            "FileName": "/home/videogames/dataset/ballance/Assets/Game/Animations/P_ExtraLife_Animation.anim",
+            "Name": "P_ExtraLife_Animation",
+            "Type": "anim",
+            "KeyFrames": 7
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Animations/GUI/Common/Anim_cmn_pulse_1sec.anim",
+            "Name": "Anim_cmn_pulse_1sec",
+            "Type": "anim",
+            "KeyFrames": 7
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Animations/GUI/Common/Anim_cmn_pulse.anim",
+            "Name": "Anim_cmn_pulse",
+            "Type": "anim",
+            "KeyFrames": 7
+        },
+        {
+            "FileName": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/Menu/starspawn.anim",
+            "Name": "starspawn",
+            "Type": "anim",
+            "KeyFrames": 11
+        },
+        {
+            "FileName": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/WorldElements/Bumping/brick_down.anim",
+            "Name": "brick_down",
+            "Type": "anim",
+            "KeyFrames": 7
+        },
+        {
+            "FileName": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/WorldElements/MovingTiles/Squisher.anim",
+            "Name": "Squisher",
+            "Type": "anim",
+            "KeyFrames": 7
+        },
+        {
+            "FileName": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/PropellerSpinner/propmushroom.anim",
+            "Name": "propmushroom",
+            "Type": "anim",
+            "KeyFrames": 8
+        },
+        {
+            "FileName": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/WorldElements/Coin/coinfromblock_gp.anim",
+            "Name": "coinfromblock_gp",
+            "Type": "anim",
+            "KeyFrames": 7
+        },
+        {
+            "FileName": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/WorldElements/Bumping/brick.anim",
+            "Name": "brick",
+            "Type": "anim",
+            "KeyFrames": 7
+        }
+    ]
+}

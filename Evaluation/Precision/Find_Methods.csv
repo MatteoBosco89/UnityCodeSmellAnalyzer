@@ -1,0 +1,3 @@
+Prj,file,Name,Invocation,Line,ANNOTATOR-1,ANNOTATOR-2,FINAL,CONFLICTS,
+/home/videogames/dataset/merino/,/home/videogames/dataset/merino/Assets/YarnSpinner/Examples/DemoScripts/PlayerCharacter.cs,FindObjectOfType<DialogueRunner>,FindObjectOfType<DialogueRunner>,58,YES,YES,TP,,
+/home/videogames/dataset/antura_arabic/,/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/_scripts/Utilities/SortingDragManager.cs,FindBuckets,Antura.Assessment.SortingDragManager.FindBuckets(),178,YES,YES,TP,,
