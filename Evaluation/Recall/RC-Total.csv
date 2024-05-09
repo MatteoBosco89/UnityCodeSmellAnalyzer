@@ -1,0 +1,20 @@
+;Recall;
+SMELL;TP;FN
+Bloated assets;61;0
+Creating components/objects at run-time;1;0
+Dependencies between objects;262;19
+Lack of separation of concerns;6;2
+Poor design of object state management;136;12
+Static coupling;113;4
+Search by string/ID;0;0
+Singleton vs. static;0;2
+Weak temporization strategy;40;0
+Continuously checking position/rotation;0;0
+Multiple Animators over model component;5;0
+Too many Keyframes in animations;12;0
+Use of anystate in animator controller;8;0
+Heavy-weight physics computation in game objects updates;10;0
+Improper mesh settings for a collider;10;0
+Setting object velocity and override forces;0;2
+Lack of optimization when drawing/rendering objects;9;0
+Sub-optimal, expensive choice of lights, shadows, or reflections;9;0

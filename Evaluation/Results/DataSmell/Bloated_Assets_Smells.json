@@ -1,0 +1,4191 @@
+{
+    "Name": "Bloated Assets Smells",
+    "Occurrency": 837,
+    "Smells": [
+        {
+            "FilePath": "/home/videogames/dataset/lcc/Assets/Bundles/Prefab/Panel/TopPanel.prefab",
+            "Name": "TopPanel",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lcc/Assets/Resources/Prefab/Panel/LoadingPanel.prefab",
+            "Name": "LoadingPanel",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lcc/Assets/Bundles/Prefab/Panel/MainPanel.prefab",
+            "Name": "MainPanel",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/GamepadVisualizer.unity",
+            "Name": "GamepadVisualizer",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Tests/InputSystem/Assets/UITKTestScene.unity",
+            "Name": "UITKTestScene",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/SimpleDemo/SimpleDemo_UsingPlayerInput.unity",
+            "Name": "SimpleDemo_UsingPlayerInput",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/SimpleControlsVis.prefab",
+            "Name": "SimpleControlsVis",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/MouseVis.prefab",
+            "Name": "MouseVis",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/SimpleControlsVisualizer.unity",
+            "Name": "SimpleControlsVisualizer",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/ExternalSampleProjects/InputDeviceTester/Assets/InputDeviceTester/Prefabs/Touch Highlight - Input System.prefab",
+            "Name": "Touch Highlight - Input System",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/UI/Slider.prefab",
+            "Name": "Slider",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/ColorField.prefab",
+            "Name": "ColorField",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/System/CoreUI/AlertWindow.prefab",
+            "Name": "AlertWindow",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Moduls/P_Modul_19.prefab",
+            "Name": "P_Modul_19",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/UI/Keypad/SimpleTouch Joystick.prefab",
+            "Name": "SimpleTouch Joystick",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Moduls/P_Trafo_Stone.prefab",
+            "Name": "P_Trafo_Stone",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Intro/IntroUI.prefab",
+            "Name": "IntroUI",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/NumberField.prefab",
+            "Name": "NumberField",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Packages/com.imengyu.demo/TimerView.prefab",
+            "Name": "TimerView",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/SimpleFileBrowser/Prefabs/SimpleFileBrowserQuickLink.prefab",
+            "Name": "SimpleFileBrowserQuickLink",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/RuntimeInspector.prefab",
+            "Name": "RuntimeInspector",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/StringField.prefab",
+            "Name": "StringField",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/UI/CheckBox.prefab",
+            "Name": "CheckBox",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/UI/Comps/ItemHighscore.prefab",
+            "Name": "ItemHighscore",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/ExposedMethodField.prefab",
+            "Name": "ExposedMethodField",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Moduls/P_Trafo_Wood.prefab",
+            "Name": "P_Trafo_Wood",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Moduls/P_Modul_41.prefab",
+            "Name": "P_Modul_41",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeHierarchy/HierarchyField.prefab",
+            "Name": "HierarchyField",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Moduls/P_Trafo_Paper.prefab",
+            "Name": "P_Trafo_Paper",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/UI/Toggle.prefab",
+            "Name": "Toggle",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Helpers/ReferencePickerItem.prefab",
+            "Name": "ReferencePickerItem",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/UI/Speical/BallanceLogo3DObjects.prefab",
+            "Name": "BallanceLogo3DObjects",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/BoolField.prefab",
+            "Name": "BoolField",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/TextureReferenceField.prefab",
+            "Name": "TextureReferenceField",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/ExternalResources/ColorWheel/ColorWheel.prefab",
+            "Name": "ColorWheel",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Resources/RuntimeInspector/DraggedReferenceItem.prefab",
+            "Name": "DraggedReferenceItem",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/UI/Tab.prefab",
+            "Name": "Tab",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Resources/RuntimeInspector/Tooltip.prefab",
+            "Name": "Tooltip",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/SimpleFileBrowser/Prefabs/SimpleFileBrowserItem.prefab",
+            "Name": "SimpleFileBrowserItem",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/System/CoreUI/SideTabItem.prefab",
+            "Name": "SideTabItem",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Prefabs/RuntimeInspector/Fields/GameObjectField.prefab",
+            "Name": "GameObjectField",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/UI/InputField.prefab",
+            "Name": "InputField",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/Moduls/P_Modul_37.prefab",
+            "Name": "P_Modul_37",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/System/Prefabs/UI/Progress.prefab",
+            "Name": "Progress",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/UI/Controls/ButtonKeyChoose.prefab",
+            "Name": "ButtonKeyChoose",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ballance/Assets/Game/Prefabs/UI/Comps/LicensesView.prefab",
+            "Name": "LicensesView",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/tengine/Assets/TEngine.Demo/Demo/TEngine.UIDemo/UIDemo.unity",
+            "Name": "UIDemo",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/tengine/Assets/TEngine.Demo/Demo/TEngine.ActorDemo/ActorDemo.unity",
+            "Name": "ActorDemo",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/tengine/Assets/TEngine/EntryPrefab/TEngine.prefab",
+            "Name": "TEngine",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/tengine/Assets/TEngine/Scripts/Runtime/UIModule/Resources/UIRoot.prefab",
+            "Name": "UIRoot",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/reeseunitydemos/Assets/Scripts/Nav/NavHybridDemo/HumanoidAnimatorController.controller",
+            "Name": "HumanoidAnimatorController",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/reflexityai/Assets/Examples/CubeAI/ProfilerTesting.unity",
+            "Name": "ProfilerTesting",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/reflexityai/Assets/Examples/CubeAI/Prefabs/Cube.prefab",
+            "Name": "Cube",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/AssignActionButton.prefab",
+            "Name": "AssignActionButton",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/Character/Unit/DefaultCharacterUnit.prefab",
+            "Name": "DefaultCharacterUnit",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/QuestTrackerQuest.prefab",
+            "Name": "QuestTrackerQuest",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/HighlightButton200x50.prefab",
+            "Name": "HighlightButton200x50",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/CurrencyAmountSmall.prefab",
+            "Name": "CurrencyAmountSmall",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/QuestLogHighlightButton.prefab",
+            "Name": "QuestLogHighlightButton",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/KeyBindingsButton.prefab",
+            "Name": "KeyBindingsButton",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/lever_bone.prefab",
+            "Name": "lever_bone",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Contents/MessageFeed.prefab",
+            "Name": "MessageFeed",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/WritingSet/Prefab/InkJar.prefab",
+            "Name": "InkJar",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Games/EmptyGame/Scenes/EmptyGame/EmptyGame.unity",
+            "Name": "EmptyGame",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/OrangeHighlightButton461x104.prefab",
+            "Name": "OrangeHighlightButton461x104",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/TemplatePrefabs/EnvironmentAreas/LavaPondTemplate.prefab",
+            "Name": "LavaPondTemplate",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/BoneLever.prefab",
+            "Name": "BoneLever",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Games/FeaturesDemoGame/Prefab/EnvironmentAreas/LavaPond.prefab",
+            "Name": "LavaPond",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/gate_wood.prefab",
+            "Name": "gate_wood",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Contents/CharacterPreviewPanel.prefab",
+            "Name": "CharacterPreviewPanel",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/InteractionPanelQuest.prefab",
+            "Name": "InteractionPanelQuest",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/WoodFenceGate.prefab",
+            "Name": "WoodFenceGate",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/MusicPlayerHighlightButton.prefab",
+            "Name": "MusicPlayerHighlightButton",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Inventory/Bag.prefab",
+            "Name": "Bag",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Games/FeaturesDemoGame/Prefab/EnvironmentAreas/WaterPond.prefab",
+            "Name": "WaterPond",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/Character/Unit/DefaultUMACharacterUnit.prefab",
+            "Name": "DefaultUMACharacterUnit",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Inventory/BankBag.prefab",
+            "Name": "BankBag",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Games/FeaturesDemoGame/Prefab/UnitSpawnNode/LoopPatrolNPCUnitSpawnNode.prefab",
+            "Name": "LoopPatrolNPCUnitSpawnNode",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/TemplatePrefabs/EnvironmentAreas/WaterPondTemplate.prefab",
+            "Name": "WaterPondTemplate",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/MainMenu/HighlightButton353x88.prefab",
+            "Name": "HighlightButton353x88",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/SetColorHighlightButton.prefab",
+            "Name": "SetColorHighlightButton",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/InteractionPanelOption.prefab",
+            "Name": "InteractionPanelOption",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/TemplatePrefabs/UnitSpawnNode/Patrol/LoopPatrolNPCUnitSpawnNodeTemplate.prefab",
+            "Name": "LoopPatrolNPCUnitSpawnNodeTemplate",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/CurrencyAmount.prefab",
+            "Name": "CurrencyAmount",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/UnitFrameStatusEffectBar.prefab",
+            "Name": "UnitFrameStatusEffectBar",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Inventory/Slot.prefab",
+            "Name": "Slot",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Handles/Prop/PotionRedFillableHandle.prefab",
+            "Name": "PotionRedFillableHandle",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/Potions/Prefab/Potion.prefab",
+            "Name": "Potion",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Buttons/KeyBindCancelButton.prefab",
+            "Name": "KeyBindCancelButton",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/UI/Window/Contents/MainMapPanel.prefab",
+            "Name": "MainMapPanel",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Games/MovementTestGame/Prefab/EnvironmentAreas/WaterPond.prefab",
+            "Name": "WaterPond",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/toolnity/Assets/_Tests/BasicTest.unity",
+            "Name": "BasicTest",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/toolnity/Packages/Toolnity - Favorites/Samples~/Favorites Test.unity",
+            "Name": "Favorites Test",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Animations/Objects/Enemies/Posies/New/1/animator_Pellet_Posy.controller",
+            "Name": "animator_Pellet_Posy",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Plants/pref_aquatic_leaf.prefab",
+            "Name": "pref_aquatic_leaf",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Animators/Objects/Pikmin/Pikmin.controller",
+            "Name": "Pikmin",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Treasures/pref_Cherry.prefab",
+            "Name": "pref_Cherry",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Pellets/pref_Pellet_5_Red.prefab",
+            "Name": "pref_Pellet_5_Red",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Plants/pref_big_leaf.prefab",
+            "Name": "pref_big_leaf",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/pref_CardboardBox.prefab",
+            "Name": "pref_CardboardBox",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/P1/Models/Players/Olimar/P1/anim_controller_Olimar.controller",
+            "Name": "anim_controller_Olimar",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/pref_Health_Wheel.prefab",
+            "Name": "pref_Health_Wheel",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Pellets/pref_Pellet_10_Red.prefab",
+            "Name": "pref_Pellet_10_Red",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Environment/Water/Water4/Prefabs/Water4Advanced.prefab",
+            "Name": "Water4Advanced",
+            "NumComponents": "58"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Cameras/Prefabs/FreeLookCameraRig.prefab",
+            "Name": "FreeLookCameraRig",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Environment/Water/Water4/Prefabs/Water4Simple.prefab",
+            "Name": "Water4Simple",
+            "NumComponents": "38"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/CrossPlatformInput/Prefabs/CarTiltControls.prefab",
+            "Name": "CarTiltControls",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Cameras/Prefabs/MultipurposeCameraRig.prefab",
+            "Name": "MultipurposeCameraRig",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/CrossPlatformInput/Prefabs/MobileSingleStickControl.prefab",
+            "Name": "MobileSingleStickControl",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Enemy/Goomba.prefab",
+            "Name": "Goomba",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/LooseCoin.prefab",
+            "Name": "LooseCoin",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/MegaMushroom.prefab",
+            "Name": "MegaMushroom",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/IceFlower.prefab",
+            "Name": "IceFlower",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/1-Up.prefab",
+            "Name": "1-Up",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Enemy/Spiny.prefab",
+            "Name": "Spiny",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/FrozenCube.prefab",
+            "Name": "FrozenCube",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/MiniMushroom.prefab",
+            "Name": "MiniMushroom",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/Enemy/Goomba/Goomba.controller",
+            "Name": "Goomba",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/Enemy/PirahnaPlant/PiranhaPlant.controller",
+            "Name": "PiranhaPlant",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Static/Spinner.prefab",
+            "Name": "Spinner",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/FireFlower.prefab",
+            "Name": "FireFlower",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Enemy/Bobomb.prefab",
+            "Name": "Bobomb",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Enemy/Koopa.prefab",
+            "Name": "Koopa",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Enemy/PiranhaPlant.prefab",
+            "Name": "PiranhaPlant",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/Mushroom.prefab",
+            "Name": "Mushroom",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Powerup/PropellerMushroom.prefab",
+            "Name": "PropellerMushroom",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Resources/Prefabs/Bump/BlockBump.prefab",
+            "Name": "BlockBump",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Lo_40.prefab",
+            "Name": "Trunk_Felled_Lo_40",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Lo_1.prefab",
+            "Name": "Trunk_Full_Lo_1",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/Spider/spider_controller.controller",
+            "Name": "spider_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Hi_5.prefab",
+            "Name": "Trunk_Felled_Hi_5",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Lo_3.prefab",
+            "Name": "Trunk_Full_Lo_3",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/Bitgem/Orc_RTS_Pack/Prefabs/altar_orc.prefab",
+            "Name": "altar_orc",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Hi_1.prefab",
+            "Name": "Trunk_Felled_Hi_1",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_archer_controller.controller",
+            "Name": "orc_archer_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_catapult_controller.controller",
+            "Name": "human_catapult_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Lo_20.prefab",
+            "Name": "Trunk_Felled_Lo_20",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/Bitgem/Human_RTS_Pack/Prefabs/oracle_human.prefab",
+            "Name": "oracle_human",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Hi_1.prefab",
+            "Name": "Trunk_Full_Hi_1",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Lo_4.prefab",
+            "Name": "Trunk_Full_Lo_4",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Lo_30.prefab",
+            "Name": "Trunk_Felled_Lo_30",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/Bitgem/Human_RTS_Pack/Prefabs/banner_human.prefab",
+            "Name": "banner_human",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Free/fantasySpider/spider_controller.controller",
+            "Name": "spider_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/woodElf_boltthrower_controller.controller",
+            "Name": "woodElf_boltthrower_controller",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Hi_5.prefab",
+            "Name": "Trunk_Full_Hi_5",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Prefabs/HealthbarUIElement.prefab",
+            "Name": "HealthbarUIElement",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_shaman_controller.controller",
+            "Name": "orc_shaman_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_wolfrider_controller.controller",
+            "Name": "orc_wolfrider_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_cavalry_controller.controller",
+            "Name": "human_cavalry_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_mage_controller.controller",
+            "Name": "human_mage_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Hi_3.prefab",
+            "Name": "Trunk_Full_Hi_3",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Lo_50.prefab",
+            "Name": "Trunk_Felled_Lo_50",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Prefabs/SelectedUnitUIElement.prefab",
+            "Name": "SelectedUnitUIElement",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Lo_2.prefab",
+            "Name": "Trunk_Full_Lo_2",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_worker_controller.controller",
+            "Name": "human_worker_controller",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_infantry_controller.controller",
+            "Name": "orc_infantry_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Hi_2.prefab",
+            "Name": "Trunk_Felled_Hi_2",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/demon_controller.controller",
+            "Name": "demon_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Hi_4.prefab",
+            "Name": "Trunk_Felled_Hi_4",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Hi_3.prefab",
+            "Name": "Trunk_Felled_Hi_3",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_archer_controller.controller",
+            "Name": "human_archer_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Hi_2.prefab",
+            "Name": "Trunk_Full_Hi_2",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_worker_controller.controller",
+            "Name": "orc_worker_controller",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Hi_4.prefab",
+            "Name": "Trunk_Full_Hi_4",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/Bitgem/Orc_RTS_Pack/Prefabs/banner_orc.prefab",
+            "Name": "banner_orc",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_catapult_controller.controller",
+            "Name": "orc_catapult_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Scenes/banner_test.unity",
+            "Name": "banner_test",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Trunk_Full_Lo_5.prefab",
+            "Name": "Trunk_Full_Lo_5",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/DAX/Low Poly Stylized Trees/LP_Conifers/Prefabs/Compound/Felled/Trunk_Felled_Lo_10.prefab",
+            "Name": "Trunk_Felled_Lo_10",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_infantry_controller.controller",
+            "Name": "human_infantry_controller",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/UI/InputField.prefab",
+            "Name": "InputField",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/UI/Preference/PillRadioButton.prefab",
+            "Name": "PillRadioButton",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Common/Examples/Prefabs/Canvas.prefab",
+            "Name": "Canvas",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/FlickNote.prefab",
+            "Name": "FlickNote",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/Packages/Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/CUIColorPicker.prefab",
+            "Name": "CUIColorPicker",
+            "NumComponents": "33"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/CriterionEntry.prefab",
+            "Name": "CriterionEntry",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/MediumAvatarWithName.prefab",
+            "Name": "MediumAvatarWithName",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/DifficultyBall.prefab",
+            "Name": "DifficultyBall",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/NoteID.prefab",
+            "Name": "NoteID",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/UI/Button.prefab",
+            "Name": "Button",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/UI/SoftButton.prefab",
+            "Name": "SoftButton",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/HoldNote.prefab",
+            "Name": "HoldNote",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/PerformanceSmall.prefab",
+            "Name": "PerformanceSmall",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Common/Examples/Prefabs/Button.prefab",
+            "Name": "Button",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Common/Examples/Prefabs/Grid.prefab",
+            "Name": "Grid",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/StartButton.prefab",
+            "Name": "StartButton",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/DragHead.prefab",
+            "Name": "DragHead",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/Performance.prefab",
+            "Name": "Performance",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/CDragHead.prefab",
+            "Name": "CDragHead",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/LongHoldNote.prefab",
+            "Name": "LongHoldNote",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/Resources/Prefabs/Navigation/RewardView.prefab",
+            "Name": "RewardView",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Navigation/TierPerformanceSmall.prefab",
+            "Name": "TierPerformanceSmall",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/Packages/Sleek Render/Example Scene/Floating Island.unity",
+            "Name": "Floating Island",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/UI/Preference/ToggleRadioGroupPreferenceElementVertical.prefab",
+            "Name": "ToggleRadioGroupPreferenceElementVertical",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cytoid/Assets/StaticResources/Prefabs/Game/DragChild.prefab",
+            "Name": "DragChild",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/Runtime/3rdGithub/BetterStreamingAssets/BSA_TestScene.unity",
+            "Name": "BSA_TestScene",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Assets/Resource/Runtime/Windows/UFlux/01Component/Component_test01.prefab",
+            "Name": "Component_test01",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/Runtime/AssetsManager/UnitTest/ObjectPools/Examples/PoolingGameObjects/PoolingGameObjects.unity",
+            "Name": "PoolingGameObjects",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Assets/Resource/Runtime/Windows/UFlux/02CustomComponentBindAdator/01/item.prefab",
+            "Name": "item",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Assets/Resource/Runtime/Windows/UFlux/demo007/Window_DI.prefab",
+            "Name": "Window_DI",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Assets/Scenes/Simple/Prefab/StartPage.prefab",
+            "Name": "StartPage",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/Resource/UIRoot.prefab",
+            "Name": "UIRoot",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_RunningCrush/Resources/RC_LiquidBar.prefab",
+            "Name": "RC_LiquidBar",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/Dialogue/JCS SlidButton (Container).prefab",
+            "Name": "JCS SlidButton (Container)",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/UI/BF_GameUI.prefab",
+            "Name": "BF_GameUI",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_AF_Soot.prefab",
+            "Name": "BF_AF_Soot",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/UI/JCS_BasePanel.prefab",
+            "Name": "JCS_BasePanel",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/UI/Toggle/JCS_Toggle.prefab",
+            "Name": "JCS_Toggle",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/GameObjects/Etcs/Stars/WaterBalloon/WaterBalloon_Soot.prefab",
+            "Name": "WaterBalloon_Soot",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Animations/QqCandy_lvl1/QqCandy_lvl1_walk.controller",
+            "Name": "QqCandy_lvl1_walk",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_TeinCheng_Track.prefab",
+            "Name": "BF_TeinCheng_Track",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_TeinCheng_AF.prefab",
+            "Name": "BF_TeinCheng_AF",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/UI/JCS_TweenPanel.prefab",
+            "Name": "JCS_TweenPanel",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/JCS_Settings.prefab",
+            "Name": "JCS_Settings",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_Project/Scenes/FT_OrderEvent.unity",
+            "Name": "FT_OrderEvent",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_red_arrow_shoot.prefab",
+            "Name": "BF_red_arrow_shoot",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_red_arrow_shoot_split.prefab",
+            "Name": "BF_red_arrow_shoot_split",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/LevelDesignUI/JCS_BlackSlideScreen.prefab",
+            "Name": "JCS_BlackSlideScreen",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scenes/Demo/3D/JCS_3DThrowAction.unity",
+            "Name": "JCS_3DThrowAction",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_WaterBalloon_Soot.prefab",
+            "Name": "BF_WaterBalloon_Soot",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/UI/JCS_DialoguePanel.prefab",
+            "Name": "JCS_DialoguePanel",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/GameObjects/Etcs/Bullets/JCS_2DBullet.prefab",
+            "Name": "JCS_2DBullet",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/GameObjects/Etcs/Bullets/JCS_2DTrackBullet.prefab",
+            "Name": "JCS_2DTrackBullet",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/GameObjects/Etcs/Arrows/red_arrow_shoot.prefab",
+            "Name": "red_arrow_shoot",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_red_arrow_shoot_keep_look.prefab",
+            "Name": "BF_red_arrow_shoot_keep_look",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/GameObjects/Etcs/Stars/FootBall/AF_Soot.prefab",
+            "Name": "AF_Soot",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/LevelDesignUI/JCS_2DScene.prefab",
+            "Name": "JCS_2DScene",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/UI/Liquid Bar/JCS_3DLiquidBar.prefab",
+            "Name": "JCS_3DLiquidBar",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_red_arrow_shoot_split_track.prefab",
+            "Name": "BF_red_arrow_shoot_split_track",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_RunningCrush/Resources/GameObjects/RC_Player_1.prefab",
+            "Name": "RC_Player_1",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Animations/Characters/Player_01/Player_Stand.controller",
+            "Name": "Player_Stand",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/_BossFight/Resources/GameObject/BF_red_arrow_shoot_split_track_02.prefab",
+            "Name": "BF_red_arrow_shoot_split_track_02",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Resources/GameObjects/Characters/TeinCheng.prefab",
+            "Name": "TeinCheng",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/UI/VisualizerToggle.prefab",
+            "Name": "VisualizerToggle",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/ScenarioEditor/MapElements/Waypoint.prefab",
+            "Name": "Waypoint",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/VehiclePreviewRoot.prefab",
+            "Name": "VehiclePreviewRoot",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/TrafficControl/TrafficSignalVerticalFullConeBlack3.prefab",
+            "Name": "TrafficSignalVerticalFullConeBlack3",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/ScenarioEditor/InspectorContent/EditPanels/Agents/AgentColorEditPanel.prefab",
+            "Name": "AgentColorEditPanel",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/ScenarioEditor/InspectorContent/EditPanels/EffectorEditPanels/DefaultEffectorEditPanel.prefab",
+            "Name": "DefaultEffectorEditPanel",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/ScenarioEditor/MapElements/AgentWaypoint.prefab",
+            "Name": "AgentWaypoint",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/ScenarioEditor/MapElements/DestinationPointWaypoint.prefab",
+            "Name": "DestinationPointWaypoint",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/simulator/Assets/Prefabs/ScenarioEditor/MapElements/DestinationPoint.prefab",
+            "Name": "DestinationPoint",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jackframe/Assets/com.jackwithtea.jackframe/Runtime/UnityCore/UI/Editor/Resources/UI_CANVAS.prefab",
+            "Name": "UI_CANVAS",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jackframe/Assets/com.jackwithtea.bezier/Sample/Bezier.Sample.unity",
+            "Name": "Bezier.Sample",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jackframe/Assets/Practice/Sample/scene_practice.unity",
+            "Name": "scene_practice",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/thats-ridiculous/Assets/Scenes/Sandbox/PurpleCubesGrid.unity",
+            "Name": "PurpleCubesGrid",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/thats-ridiculous/Assets/Scenes/Sandbox/Buildings.unity",
+            "Name": "Buildings",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bundlemaster_integrateettask/Assets/Scenes/Init.unity",
+            "Name": "Init",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/WideFloatingPlatform.prefab",
+            "Name": "WideFloatingPlatform",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/GoogleMobileAds/Editor/Resources/DummyAds/Interstitials/768x1024.prefab",
+            "Name": "768x1024",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/GoogleMobileAds/Editor/Resources/DummyAds/Banners/CENTER.prefab",
+            "Name": "CENTER",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/GoogleMobileAds/Editor/Resources/DummyAds/Banners/SMART_BANNER.prefab",
+            "Name": "SMART_BANNER",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/GoogleMobileAds/Editor/Resources/DummyAds/Interstitials/1024x768.prefab",
+            "Name": "1024x768",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnLeftPlatformThin.prefab",
+            "Name": "TurnLeftPlatformThin",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Joystick Pack/Prefabs/Variable Joystick.prefab",
+            "Name": "Variable Joystick",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnRightPlatform.prefab",
+            "Name": "TurnRightPlatform",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Joystick Pack/Prefabs/Floating Joystick.prefab",
+            "Name": "Floating Joystick",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnLeftPlatform.prefab",
+            "Name": "TurnLeftPlatform",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/GoogleMobileAds/Editor/Resources/DummyAds/Banners/ADAPTIVE.prefab",
+            "Name": "ADAPTIVE",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Joystick Pack/Prefabs/Dynamic Joystick.prefab",
+            "Name": "Dynamic Joystick",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/FloatingPlatform.prefab",
+            "Name": "FloatingPlatform",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Benchmark/Scenes/Scene.unity",
+            "Name": "Scene",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/Buttons/ButtonPair.prefab",
+            "Name": "ButtonPair",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/Settings Toggle.prefab",
+            "Name": "Settings Toggle",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/AdditiveScenes/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Tanks/Prefabs/Projectile.prefab",
+            "Name": "Projectile",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/Toggle.prefab",
+            "Name": "Toggle",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Room/Prefabs/GamePlayer.prefab",
+            "Name": "GamePlayer",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/CardGameView/Card Zone - Horizontal.prefab",
+            "Name": "Card Zone - Horizontal",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/Buttons/Button.prefab",
+            "Name": "Button",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/CardGameView/Multiplayer/Card Model.prefab",
+            "Name": "Card Model",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/AdditiveLevels/Prefabs/Portal.prefab",
+            "Name": "Portal",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/AdditiveLevels/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/AdditiveLevels/Scenes/Offline.unity",
+            "Name": "Offline",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/Label Scroll Area.prefab",
+            "Name": "Label Scroll Area",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Tanks/Prefabs/Tank.prefab",
+            "Name": "Tank",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/ScrollView Vertical.prefab",
+            "Name": "ScrollView Vertical",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/Scrollbar Horizontal.prefab",
+            "Name": "Scrollbar Horizontal",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Components/InputField.prefab",
+            "Name": "InputField",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Room/Scenes/OfflineScene.unity",
+            "Name": "OfflineScene",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/MultipleMatches/Prefabs/MatchGUI.prefab",
+            "Name": "MatchGUI",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Prefabs/Play/Multiplayer/NetworkManager.prefab",
+            "Name": "NetworkManager",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/peco/Assets/_Prefabs/Enemies/EnemyTest.prefab",
+            "Name": "EnemyTest",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/peco/Assets/_Prefabs/Player/PecoTestCapsule.prefab",
+            "Name": "PecoTestCapsule",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/peco/Assets/_Art/_Animations/PecoBearTest/PecoBearTest.controller",
+            "Name": "PecoBearTest",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/NavWalkers/BenchmarkWalker.prefab",
+            "Name": "BenchmarkWalker",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Hub4.prefab",
+            "Name": "Hub4",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/NavWalkers/ArtisticWalker.prefab",
+            "Name": "ArtisticWalker",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Hub2.prefab",
+            "Name": "Hub2",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Corridor4.prefab",
+            "Name": "Corridor4",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Hub3.prefab",
+            "Name": "Hub3",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Hub6.prefab",
+            "Name": "Hub6",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Hub1.prefab",
+            "Name": "Hub1",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Corridor6.prefab",
+            "Name": "Corridor6",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Hub5.prefab",
+            "Name": "Hub5",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Corridor2.prefab",
+            "Name": "Corridor2",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Corridor1.prefab",
+            "Name": "Corridor1",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Corridor3.prefab",
+            "Name": "Corridor3",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/BenchmarkPieces/Platform.prefab",
+            "Name": "Platform",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/ArtisticPieces/Corridor5.prefab",
+            "Name": "Corridor5",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel.prefab",
+            "Name": "Tunnel",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel T Junction.prefab",
+            "Name": "Tunnel T Junction",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/2x2x4 Ramp.prefab",
+            "Name": "2x2x4 Ramp",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/2x2 Platform.prefab",
+            "Name": "2x2 Platform",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Wall Corner Top.prefab",
+            "Name": "Wall Corner Top",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel Cross.prefab",
+            "Name": "Tunnel Cross",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel Corner.prefab",
+            "Name": "Tunnel Corner",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/Examples/Animator/Animations/Player/Humanoid.controller",
+            "Name": "Humanoid",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Gold Player Tests/Prefabs/Interact Button.prefab",
+            "Name": "Interact Button",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Wall Straight Top.prefab",
+            "Name": "Wall Straight Top",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/ImageGallery/ImageGalleryEntry.prefab",
+            "Name": "ImageGalleryEntry",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/Alert/NotificationItem.prefab",
+            "Name": "NotificationItem",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/Character.prefab",
+            "Name": "Character",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/NovaGameController.prefab",
+            "Name": "NovaGameController",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/CGUncropped/rain/UncroppedSprites.prefab",
+            "Name": "UncroppedSprites",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/Config/RecorderPopupController.prefab",
+            "Name": "RecorderPopupController",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/ChapterSelectView.prefab",
+            "Name": "ChapterSelectView",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/Avatar.prefab",
+            "Name": "Avatar",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nova/Assets/Nova/Prefabs/Config/InputBindingEntry.prefab",
+            "Name": "InputBindingEntry",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Raid/UnitOverlay/UnitOverlayController.controller",
+            "Name": "UnitOverlayController",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Raid/MonsterTooltip/MonsterTooltipAnimator.controller",
+            "Name": "MonsterTooltipAnimator",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/PunBasics-Tutorial/Animator/Kyle Robot.controller",
+            "Name": "Kyle Robot",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/pew_medium.prefab",
+            "Name": "pew_medium",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/maggot.prefab",
+            "Name": "maggot",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/pew_small.prefab",
+            "Name": "pew_small",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/pew_large.prefab",
+            "Name": "pew_large",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Shared Assets/Animations/RPGController.controller",
+            "Name": "RPGController",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Shared Assets/Prefabs/UI/Toggle Regular.prefab",
+            "Name": "Toggle Regular",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Estate/PanelWindows/ActivityLog/Goal.prefab",
+            "Name": "Goal",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoChangeOwner/Resources/OwnershipSphere.prefab",
+            "Name": "OwnershipSphere",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Estate/Buildings/Graveyard/DeathRecord.prefab",
+            "Name": "DeathRecord",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/ectoplasm_large.prefab",
+            "Name": "ectoplasm_large",
+            "NumComponents": "32"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoHub/Prefabs/Button Regular.prefab",
+            "Name": "Button Regular",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Estate/PanelWindows/ActivityLog/ActivityRecord.prefab",
+            "Name": "ActivityRecord",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/Multiplayer/MultiplayerHeroSlot.prefab",
+            "Name": "MultiplayerHeroSlot",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Shared Assets/Animations/Layer.controller",
+            "Name": "Layer",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Demo2DJumpAndRunWithPhysics/Animations/RobotKyle2D.controller",
+            "Name": "RobotKyle2D",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoWorker/DemoWorkerGame-Scene.unity",
+            "Name": "DemoWorkerGame-Scene",
+            "NumComponents": "29"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/ancestor_nebula.prefab",
+            "Name": "ancestor_nebula",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Estate/PanelWindows/Glossary/GlossaryRecord.prefab",
+            "Name": "GlossaryRecord",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Raid/LootSlot.prefab",
+            "Name": "LootSlot",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoWorker/DemoWorker-Scene.unity",
+            "Name": "DemoWorker-Scene",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/cauldron_full.prefab",
+            "Name": "cauldron_full",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Estate/Exchange/Exchange.prefab",
+            "Name": "Exchange",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoRockPaperScissors/DemoRPS-Connect-Scene.unity",
+            "Name": "DemoRPS-Connect-Scene",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/fungal_bloat.prefab",
+            "Name": "fungal_bloat",
+            "NumComponents": "32"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/PunBasics-Tutorial/Prefabs/Demo Intro UI.prefab",
+            "Name": "Demo Intro UI",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Raid/Map/RoomSlot.prefab",
+            "Name": "RoomSlot",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/Misc/ColorCorrectionLookup.prefab",
+            "Name": "ColorCorrectionLookup",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/cauldron_empty.prefab",
+            "Name": "cauldron_empty",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoChangeOwner/Resources/OwnershipCube.prefab",
+            "Name": "OwnershipCube",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Raid/Map/HallwaySlot.prefab",
+            "Name": "HallwaySlot",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/formless_melee.prefab",
+            "Name": "formless_melee",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Raid/UnitOverlay/UnitOverlayControllerShared.controller",
+            "Name": "UnitOverlayControllerShared",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/PunBasics-Tutorial/Prefabs/Player UI.prefab",
+            "Name": "Player UI",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Prefabs/UI/Raid/Map/HallSectorSlot.prefab",
+            "Name": "HallSectorSlot",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Resources/Prefabs/Monsters/ectoplasm.prefab",
+            "Name": "ectoplasm",
+            "NumComponents": "32"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/Playground/Prefabs/P1.prefab",
+            "Name": "P1",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/FungusLua/Bindings/SpawnPrefab.unity",
+            "Name": "SpawnPrefab",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/Fungus/Resources/Prefabs/Stage.prefab",
+            "Name": "Stage",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/Fungus/Resources/Prefabs/NarrativeLogEntryDisplay.prefab",
+            "Name": "NarrativeLogEntryDisplay",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/Playground/Prefabs/Enemy.prefab",
+            "Name": "Enemy",
+            "NumComponents": "29"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/Playground/Prefabs/Spawner.prefab",
+            "Name": "Spawner",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/Tests/Vec3_property_set.unity",
+            "Name": "Vec3_property_set",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/Tests/Overlapping_Flash.unity",
+            "Name": "Overlapping_Flash",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/FirstPerson/Prefabs/Key.prefab",
+            "Name": "Key",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/FungusLua/Store/SceneB.unity",
+            "Name": "SceneB",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/FungusLua/Bindings/CustomScriptExample.unity",
+            "Name": "CustomScriptExample",
+            "NumComponents": "31"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/FungusLua/HelloWorld/HelloWorld.unity",
+            "Name": "HelloWorld",
+            "NumComponents": "32"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/FungusExamples/Usfxr/UsfxrAudioExample.unity",
+            "Name": "UsfxrAudioExample",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fungus/Assets/Fungus/Resources/Prefabs/NarrativeLog.prefab",
+            "Name": "NarrativeLog",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/hogwarts/Assets/Scripts/Externals/Highlighting System/HighlightingSystemDemo/Scenes/Mobile.unity",
+            "Name": "Mobile",
+            "NumComponents": "34"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/hogwarts/Assets/Scripts/Externals/Highlighting System/HighlightingSystemDemo/Assets/MainCamera.prefab",
+            "Name": "MainCamera",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/hogwarts/Assets/Standard Assets/CrossPlatformInput/Prefabs/CarTiltControls.prefab",
+            "Name": "CarTiltControls",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/hogwarts/Assets/Scripts/Externals/Book-Page Curl/Example/scenes/Example_1_Basic Book.unity",
+            "Name": "Example_1_Basic Book",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/hogwarts/Assets/Standard Assets/CrossPlatformInput/Prefabs/MobileSingleStickControl.prefab",
+            "Name": "MobileSingleStickControl",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/Basic/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/AdditiveScenes/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/Tanks/Prefabs/Projectile.prefab",
+            "Name": "Projectile",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/MultipleAdditiveScenes/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Tests/Scenes/SceneObjectSpawningTestsScene.unity",
+            "Name": "SceneObjectSpawningTestsScene",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/InterestManagement/Prefabs/Tank.prefab",
+            "Name": "Tank",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/Tanks/Prefabs/Tank.prefab",
+            "Name": "Tank",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/MultipleAdditiveScenes/Prefabs/Icosphere.prefab",
+            "Name": "Icosphere",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Tests/Performance/Runtime/MultipleClients/Scenes/Scene.unity",
+            "Name": "Scene",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/pal3.unity/Assets/Resources/Prefabs/SelectionUIButton.prefab",
+            "Name": "SelectionUIButton",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/pal3.unity/Assets/Resources/Prefabs/Resource Initializer.prefab",
+            "Name": "Resource Initializer",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Items/Sand Launcher Variant.prefab",
+            "Name": "Sand Launcher Variant",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Items/C4 Visuals Variant.prefab",
+            "Name": "C4 Visuals Variant",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Sand Bomb Throwable Visual Variant.prefab",
+            "Name": "Sand Bomb Throwable Visual Variant",
+            "NumComponents": "34"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Items/Gun Item Visuals.prefab",
+            "Name": "Gun Item Visuals",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Animations/Arms.controller",
+            "Name": "Arms",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Items/Pistol Visuals Variant.prefab",
+            "Name": "Pistol Visuals Variant",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Prefabs/Progress.prefab",
+            "Name": "Progress",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Items/Pickaxe Visuals.prefab",
+            "Name": "Pickaxe Visuals",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Missile Visual.prefab",
+            "Name": "Missile Visual",
+            "NumComponents": "31"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Prefabs/Buy Menu Button Variant.prefab",
+            "Name": "Buy Menu Button Variant",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Prefabs/Animation Camera.prefab",
+            "Name": "Animation Camera",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Prefabs/Kill Feed Entry.prefab",
+            "Name": "Kill Feed Entry",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Prefabs/Steam Friend Entry.prefab",
+            "Name": "Steam Friend Entry",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/Overlay/Turn Order Entry.prefab",
+            "Name": "Turn Order Entry",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Abilities/White Magic/Holy.prefab",
+            "Name": "Holy",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/Overlay/Action Menu Controller.prefab",
+            "Name": "Action Menu Controller",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/Overlay/Battle Message Controller.prefab",
+            "Name": "Battle Message Controller",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/Overlay/Turn Order Controller.prefab",
+            "Name": "Turn Order Controller",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/Overlay/Action Menu Entry.prefab",
+            "Name": "Action Menu Entry",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/UI/Overlay/Floating Message.prefab",
+            "Name": "Floating Message",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Abilities/Common/Attack.prefab",
+            "Name": "Attack",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Units/Monster.prefab",
+            "Name": "Monster",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Abilities/White Magic/Cure.prefab",
+            "Name": "Cure",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Abilities/DEBUG/EXTERMINATE.prefab",
+            "Name": "EXTERMINATE",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Abilities/Necromancy/Vampiric Claw.prefab",
+            "Name": "Vampiric Claw",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scenes/Sandbox/PoolTest2.unity",
+            "Name": "PoolTest2",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/Overlay/Hit Indicator Panel Controller.prefab",
+            "Name": "Hit Indicator Panel Controller",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scenes/Sandbox/PoolTest1.unity",
+            "Name": "PoolTest1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Prefabs/UI/World Space/Unit Direction Indicator.prefab",
+            "Name": "Unit Direction Indicator",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/UI/World Space/Status Icon.prefab",
+            "Name": "Status Icon",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Resources/Units/Hero.prefab",
+            "Name": "Hero",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scenes/Tests/LevelGrothTest.unity",
+            "Name": "LevelGrothTest",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Egg.prefab",
+            "Name": "Decoration_Egg",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Egg/Prefabs/Button.prefab",
+            "Name": "Button",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/cactus.prefab",
+            "Name": "cactus",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/house_small.prefab",
+            "Name": "house_small",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Animations/UI/MoodButton.controller",
+            "Name": "MoodButton",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Debug/Debug UI Panel Row.prefab",
+            "Name": "Debug UI Panel Row",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Environments/objects/prefab/pencil_small (1).prefab",
+            "Name": "pencil_small (1)",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Assessments/Prefabs/Assessment.prefab",
+            "Name": "Assessment",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MixedLetters/Prefabs/SeparateLetter.prefab",
+            "Name": "SeparateLetter",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_5/tree_1.prefab",
+            "Name": "tree_1",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_6/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Balloons/Prefabs/LetterPrompt.prefab",
+            "Name": "LetterPrompt",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_5/tree_3.prefab",
+            "Name": "tree_3",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Environments/objects/prefab/reward_gift.prefab",
+            "Name": "reward_gift",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Book/ItemMiniGame.prefab",
+            "Name": "ItemMiniGame",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Book/CompletionSlider.prefab",
+            "Name": "CompletionSlider",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop5.prefab",
+            "Name": "Decoration_Prop5",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/ReadingGame/Prefabs/ReadingGameButton.prefab",
+            "Name": "ReadingGameButton",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Map/Stage Icon.prefab",
+            "Name": "Stage Icon",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_5/tree_2.prefab",
+            "Name": "tree_2",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/VariationBadge_UI.prefab",
+            "Name": "VariationBadge_UI",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Environments/objects/prefab/paper_assessment (1).prefab",
+            "Name": "paper_assessment (1)",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/BonesCounter.prefab",
+            "Name": "BonesCounter",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_tests/RewardSystemTest/RewardSystemTest.unity",
+            "Name": "RewardSystemTest",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/WidgetNextButton.prefab",
+            "Name": "WidgetNextButton",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Rewards/reward_mobile_console.prefab",
+            "Name": "reward_mobile_console",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Rewards/reward_umbrella.prefab",
+            "Name": "reward_umbrella",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/DancingDots/Prefabs/DragableDot.prefab",
+            "Name": "DragableDot",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/Buttons/Btn Generic with Text.prefab",
+            "Name": "Btn Generic with Text",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Tube.prefab",
+            "Name": "Decoration_Tube",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Map/CollectibleBone.prefab",
+            "Name": "CollectibleBone",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/Gallery/Panel Gallery Manager.prefab",
+            "Name": "Panel Gallery Manager",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/forest_pine.prefab",
+            "Name": "forest_pine",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/house_big.prefab",
+            "Name": "house_big",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop1.prefab",
+            "Name": "Decoration_Prop1",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Debug/Debug UI Panel MiniGame Button.prefab",
+            "Name": "Debug UI Panel MiniGame Button",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/cactus__small_map4.prefab",
+            "Name": "cactus__small_map4",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_1/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Pencil.prefab",
+            "Name": "Decoration_Pencil",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_6/tree_2.prefab",
+            "Name": "tree_2",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Rewards/reward_collar_medal.prefab",
+            "Name": "reward_collar_medal",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/VariationBadge.prefab",
+            "Name": "VariationBadge",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/boulder.prefab",
+            "Name": "boulder",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_4/tree_2.prefab",
+            "Name": "tree_2",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Balloons/Animations/WordFlexibleContainer.controller",
+            "Name": "WordFlexibleContainer",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Various/Spring.prefab",
+            "Name": "Spring",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_2/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_4/tree_3.prefab",
+            "Name": "tree_3",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Rewards/reward_collar_bow.prefab",
+            "Name": "reward_collar_bow",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Carpet2.prefab",
+            "Name": "Decoration_Carpet2",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Tobogan/Prefabs/HeightMeter.prefab",
+            "Name": "HeightMeter",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Assessments/Prefabs/SceneDecorations.prefab",
+            "Name": "SceneDecorations",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/DecorationSlot.prefab",
+            "Name": "DecorationSlot",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Carpet1.prefab",
+            "Name": "Decoration_Carpet1",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_3/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/island_tree.prefab",
+            "Name": "island_tree",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/ColorTickle/Prefab/ColorCanvas.prefab",
+            "Name": "ColorCanvas",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_6/tree_3.prefab",
+            "Name": "tree_3",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Tree3.prefab",
+            "Name": "Decoration_Tree3",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Prefabs/LetterChoice.prefab",
+            "Name": "LetterChoice",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_4/tree_1.prefab",
+            "Name": "tree_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Interactables/ThrowableBoneBiscuit.prefab",
+            "Name": "ThrowableBoneBiscuit",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_5/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/mountain.prefab",
+            "Name": "mountain",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/Environment/Theme_4/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Animations/DropZone.controller",
+            "Name": "DropZone",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/UI/Buttons/Btn OpenEditionPanel.prefab",
+            "Name": "Btn OpenEditionPanel",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop2.prefab",
+            "Name": "Decoration_Prop2",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Egg.prefab",
+            "Name": "Decoration_Egg",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Egg/Prefabs/Button.prefab",
+            "Name": "Button",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/cactus.prefab",
+            "Name": "cactus",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/house_small.prefab",
+            "Name": "house_small",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Animations/UI/MoodButton.controller",
+            "Name": "MoodButton",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Debug/Debug UI Panel Row.prefab",
+            "Name": "Debug UI Panel Row",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Environments/objects/prefab/pencil_small (1).prefab",
+            "Name": "pencil_small (1)",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/Prefabs/Assessment.prefab",
+            "Name": "Assessment",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MixedLetters/Prefabs/SeparateLetter.prefab",
+            "Name": "SeparateLetter",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_5/tree_1.prefab",
+            "Name": "tree_1",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_6/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/Prefabs/LetterPrompt.prefab",
+            "Name": "LetterPrompt",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_5/tree_3.prefab",
+            "Name": "tree_3",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Environments/objects/prefab/reward_gift.prefab",
+            "Name": "reward_gift",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Book/Prefabs/ItemMiniGame.prefab",
+            "Name": "ItemMiniGame",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Book/Prefabs/CompletionSlider.prefab",
+            "Name": "CompletionSlider",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop5.prefab",
+            "Name": "Decoration_Prop5",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/ReadingGame/Prefabs/ReadingGameButton.prefab",
+            "Name": "ReadingGameButton",
+            "NumComponents": "29"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Map/Stage Icon.prefab",
+            "Name": "Stage Icon",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_5/tree_2.prefab",
+            "Name": "tree_2",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Environments/objects/prefab/paper_assessment (1).prefab",
+            "Name": "paper_assessment (1)",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/game_Assessment.unity",
+            "Name": "game_Assessment",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/BonesCounter.prefab",
+            "Name": "BonesCounter",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/SceneTransitionerUI.prefab",
+            "Name": "SceneTransitionerUI",
+            "NumComponents": "29"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_tests/RewardSystemTest/RewardSystemTest.unity",
+            "Name": "RewardSystemTest",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/WidgetNextButton.prefab",
+            "Name": "WidgetNextButton",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Rewards/reward_mobile_console.prefab",
+            "Name": "reward_mobile_console",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Rewards/reward_umbrella.prefab",
+            "Name": "reward_umbrella",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/DancingDots/Prefabs/DragableDot.prefab",
+            "Name": "DragableDot",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/Buttons/Btn Generic with Text.prefab",
+            "Name": "Btn Generic with Text",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Tube.prefab",
+            "Name": "Decoration_Tube",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Map/CollectibleBone.prefab",
+            "Name": "CollectibleBone",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/Gallery/Panel Gallery Manager.prefab",
+            "Name": "Panel Gallery Manager",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/forest_pine.prefab",
+            "Name": "forest_pine",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/house_big.prefab",
+            "Name": "house_big",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop1.prefab",
+            "Name": "Decoration_Prop1",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Debug/Debug UI Panel MiniGame Button.prefab",
+            "Name": "Debug UI Panel MiniGame Button",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/cactus__small_map4.prefab",
+            "Name": "cactus__small_map4",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_1/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Pencil.prefab",
+            "Name": "Decoration_Pencil",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_6/tree_2.prefab",
+            "Name": "tree_2",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Rewards/reward_collar_medal.prefab",
+            "Name": "reward_collar_medal",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/boulder.prefab",
+            "Name": "boulder",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_4/tree_2.prefab",
+            "Name": "tree_2",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/Animations/WordFlexibleContainer.controller",
+            "Name": "WordFlexibleContainer",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/WidgetSubtitles.prefab",
+            "Name": "WidgetSubtitles",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Various/Spring.prefab",
+            "Name": "Spring",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_2/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/UI/Gallery/Btn Take Photo.prefab",
+            "Name": "Btn Take Photo",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_4/tree_3.prefab",
+            "Name": "tree_3",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Rewards/reward_collar_bow.prefab",
+            "Name": "reward_collar_bow",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Carpet2.prefab",
+            "Name": "Decoration_Carpet2",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Tobogan/Prefabs/HeightMeter.prefab",
+            "Name": "HeightMeter",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/Prefabs/SceneDecorations.prefab",
+            "Name": "SceneDecorations",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/DecorationSlot.prefab",
+            "Name": "DecorationSlot",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Carpet1.prefab",
+            "Name": "Decoration_Carpet1",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_3/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/island_tree.prefab",
+            "Name": "island_tree",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_6/tree_3.prefab",
+            "Name": "tree_3",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Tree3.prefab",
+            "Name": "Decoration_Tree3",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Prefabs/LetterChoice.prefab",
+            "Name": "LetterChoice",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_4/tree_1.prefab",
+            "Name": "tree_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Interactables/ThrowableBoneBiscuit.prefab",
+            "Name": "ThrowableBoneBiscuit",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_5/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/mountain.prefab",
+            "Name": "mountain",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/Environment/Theme_4/paper_lines_1.prefab",
+            "Name": "paper_lines_1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Animations/DropZone.controller",
+            "Name": "DropZone",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop2.prefab",
+            "Name": "Decoration_Prop2",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/openkcc/Assets/Samples/SimplifiedDemoKCC/SimplifiedPlayer.prefab",
+            "Name": "SimplifiedPlayer",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/openkcc/Assets/Prefabs/Environment/Moving Platform.prefab",
+            "Name": "Moving Platform",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/openkcc/Assets/Prefabs/Environment/Push Block.prefab",
+            "Name": "Push Block",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/openkcc/Assets/Samples/SimplifiedDemoKCC/SimplifiedPlayerWithJump.prefab",
+            "Name": "SimplifiedPlayerWithJump",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/openkcc/Assets/Samples/ExampleFirstPersonKCC/Character/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/HDRPDefaultResources/DefaultSceneRoot.prefab",
+            "Name": "DefaultSceneRoot",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/Prefabs/Shared Effects/Player Spawner.prefab",
+            "Name": "Player Spawner",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/Prefabs/Shared Effects/TestFleetSpawnGraphic.prefab",
+            "Name": "TestFleetSpawnGraphic",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/Prefabs/Menu/Slider.prefab",
+            "Name": "Slider",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/Prefabs/Environment/WormholeTest.prefab",
+            "Name": "WormholeTest",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/Prefabs/Shared Effects/ExplosionWithSound.prefab",
+            "Name": "ExplosionWithSound",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/lsss-wip/Assets/Prefabs/Shared Effects/TestSpawnGraphic.prefab",
+            "Name": "TestSpawnGraphic",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/sanandreasunity/Assets/Prefabs/Enex.prefab",
+            "Name": "Enex",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/sanandreasunity/Assets/Scenes/Main.unity",
+            "Name": "Main",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/sanandreasunity/Assets/Prefabs/Bar.prefab",
+            "Name": "Bar",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/PlasmaLance/PlasmaLance.prefab",
+            "Name": "PlasmaLance",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/RocketPlatform/RocketPlatform.prefab",
+            "Name": "RocketPlatform",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/UI/Dynamic/TowerBuildButton.prefab",
+            "Name": "TowerBuildButton",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/AssaultCannon/AssaultCannonPreview.prefab",
+            "Name": "AssaultCannonPreview",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/UI/UIForms/UIDownloadForm.prefab",
+            "Name": "UIDownloadForm",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level2.prefab",
+            "Name": "RocketPlatform_Level2",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/EMPGenerator/EMPGenerator.prefab",
+            "Name": "EMPGenerator",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level3.prefab",
+            "Name": "AssaultCannon_Level3",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level1.prefab",
+            "Name": "AssaultCannon_Level1",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/MissileArray/MissileArrayPreview.prefab",
+            "Name": "MissileArrayPreview",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/AssaultCannon/AssaultCannon.prefab",
+            "Name": "AssaultCannon",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/PlasmaLance/PlasmaLancePreview.prefab",
+            "Name": "PlasmaLancePreview",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/RocketPlatform/RocketPlatformPreview.prefab",
+            "Name": "RocketPlatformPreview",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level1.prefab",
+            "Name": "RocketPlatform_Level1",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/UI/UIForms/UIUpdateResourceForm.prefab",
+            "Name": "UIUpdateResourceForm",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/MissileArray/MissileArray.prefab",
+            "Name": "MissileArray",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level2.prefab",
+            "Name": "AssaultCannon_Level2",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/towerdefense-gameframework-demo/Assets/GameMain/Entity/HPBar.prefab",
+            "Name": "HPBar",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Prefabs/Chip Design/Chip Package Template.prefab",
+            "Name": "Chip Package Template",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Prefabs/Chip Design/Builtin Chips/Output.prefab",
+            "Name": "Output",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/digital-logic-sim-ce/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity",
+            "Name": "BasicSampleScene",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Prefabs/Chip Design/Builtin Chips/Test/Constant.prefab",
+            "Name": "Constant",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Prefabs/Chip Design/Builtin Chips/Input.prefab",
+            "Name": "Input",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unitytutorials-rts/Assets/Resources/Prefabs/UI/Inputs/InputBinding.prefab",
+            "Name": "InputBinding",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unitytutorials-rts/Assets/Scenes/MinimapCaptureScene.unity",
+            "Name": "MinimapCaptureScene",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unitytutorials-rts/Assets/Scenes/Core.unity",
+            "Name": "Core",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unitytutorials-rts/Assets/Resources/Prefabs/UI/Menu/MenuScenePick.prefab",
+            "Name": "MenuScenePick",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unitytutorials-rts/Assets/Resources/Prefabs/UI/TechnologyTree/UITechnologyTreeNode.prefab",
+            "Name": "UITechnologyTreeNode",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unitytutorials-rts/Assets/Resources/Prefabs/UI/Inputs/Slider.prefab",
+            "Name": "Slider",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/spritedicing/Assets/Samples/Scenes/UI.unity",
+            "Name": "UI",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/spritedicing/Assets/Samples/Scenes/FlatColor.unity",
+            "Name": "FlatColor",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/UI/MessageWindow.prefab",
+            "Name": "MessageWindow",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Character/PlayerAvatar.prefab",
+            "Name": "PlayerAvatar",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Character/ImpBoss.prefab",
+            "Name": "ImpBoss",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Dungeon/Dungeon Pieces/env_spawn_door.prefab",
+            "Name": "env_spawn_door",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/UI/UIHealth.prefab",
+            "Name": "UIHealth",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Dungeon/Dungeon Pieces/crystal/DestroyedCrystal.prefab",
+            "Name": "DestroyedCrystal",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/State/BossRoomState.prefab",
+            "Name": "BossRoomState",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Menus/EnvLighting_ForBaking.prefab",
+            "Name": "EnvLighting_ForBaking",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Character/Character.prefab",
+            "Name": "Character",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/UnityLogo.prefab",
+            "Name": "UnityLogo",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Dungeon/Dungeon Pieces/env_torch2.prefab",
+            "Name": "env_torch2",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Dungeon/Dungeon Pieces/pillar/env_pillar.prefab",
+            "Name": "env_pillar",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Packages/com.unity.multiplayer.samples.coop/Utilities/Net/RNSM/NetStatsMonitorPrefab.prefab",
+            "Name": "NetStatsMonitorPrefab",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/UI/UIRadioButton.prefab",
+            "Name": "UIRadioButton",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/stream-chat-unity/Assets/Plugins/StreamChat/SampleProject/Prefabs/UI/Popups/MessageOptionsPopup.prefab",
+            "Name": "MessageOptionsPopup",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/06_LoopTabBar/Tab.prefab",
+            "Name": "Tab",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/04_Metaball/Cell.prefab",
+            "Name": "Cell",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/09_LoadTexture/Cell.prefab",
+            "Name": "Cell",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/03_InfiniteScroll/Cell.prefab",
+            "Name": "Cell",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/05_Voronoi/Cell.prefab",
+            "Name": "Cell",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/01_Basic/Cell.prefab",
+            "Name": "Cell",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/02_FocusOn/Cell.prefab",
+            "Name": "Cell",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Benchmark/Scenes/Scene.unity",
+            "Name": "Scene",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Snapshot Interpolation/SnapshotInterpolation.unity",
+            "Name": "SnapshotInterpolation",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/AdditiveScenes/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Room/Prefabs/GamePlayer.prefab",
+            "Name": "GamePlayer",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/CCU/CCU.unity",
+            "Name": "CCU",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/AdditiveLevels/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/AdditiveLevels/Scenes/Offline.unity",
+            "Name": "Offline",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Tests/Runtime/Scenes/SceneObjectSpawningTestsScene.unity",
+            "Name": "SceneObjectSpawningTestsScene",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Tanks/Prefabs/Tank.prefab",
+            "Name": "Tank",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Room/Scenes/OfflineScene.unity",
+            "Name": "OfflineScene",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/MultipleMatches/Prefabs/MatchGUI.prefab",
+            "Name": "MatchGUI",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Scripts/External/UnityToolbarExtender/unity-toolbar-extender-1.4.1/Example~/SceneSwitcher/Scenes/ToolbarExtenderExampleScene2.unity",
+            "Name": "ToolbarExtenderExampleScene2",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity",
+            "Name": "14 - Multi Font & Sprites",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scenes/22 - Basic Scripting Example.unity",
+            "Name": "22 - Basic Scripting Example",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Content/UI/GenericPanel.prefab",
+            "Name": "GenericPanel",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scenes/11 - The Style Tag.unity",
+            "Name": "11 - The Style Tag",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scenes/Benchmark (Floating Text).unity",
+            "Name": "Benchmark (Floating Text)",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Scripts/External/UnityToolbarExtender/unity-toolbar-extender-1.4.1/Example~/SceneSwitcher/Scenes/ToolbarExtenderExampleScene1.unity",
+            "Name": "ToolbarExtenderExampleScene1",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scenes/23 - Animating Vertex Attributes.unity",
+            "Name": "23 - Animating Vertex Attributes",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Art/Font/TextMesh Pro/Examples & Extras/Scenes/13 - Soft Hyphenation.unity",
+            "Name": "13 - Soft Hyphenation",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/12_Algorithm/12_Algorithm.unity",
+            "Name": "12_Algorithm",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/03_UI/03_UI.unity",
+            "Name": "03_UI",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/Resources/UI/StorePanel.prefab",
+            "Name": "StorePanel",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/02_ResourceLoad/02_ResourceLoad.unity",
+            "Name": "02_ResourceLoad",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/14_AStarPathfinding.unity",
+            "Name": "14_AStarPathfinding",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/01_QuickStart/01_QuickStart.unity",
+            "Name": "01_QuickStart",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/Resources/UI/SettingPanel.prefab",
+            "Name": "SettingPanel",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/AssetBundleTest/Scene/TestAddtiveScene.unity",
+            "Name": "TestAddtiveScene",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/AssetBundleTest/Prefab/Label.prefab",
+            "Name": "Label",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/23_Entity/EntityPrefabs/EntityGameLoadingSlider.prefab",
+            "Name": "EntityGameLoadingSlider",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/23_Entity/EntityPrefabs/EntityGameLauncherPanel.prefab",
+            "Name": "EntityGameLauncherPanel",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/23_Entity/Animations/PlayerAnimController.controller",
+            "Name": "PlayerAnimController",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/18_Encrytion/18_Encrytion.unity",
+            "Name": "18_Encrytion",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/Resources/UI/StatusPanel.prefab",
+            "Name": "StatusPanel",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/Resources/UI/Slot.prefab",
+            "Name": "Slot",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/TargetInfo.prefab",
+            "Name": "TargetInfo",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Rocket Tank.prefab",
+            "Name": "Rocket Tank",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/PartyMemberImage.prefab",
+            "Name": "PartyMemberImage",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/BasePropertyPrefabs/FloatOrString.prefab",
+            "Name": "FloatOrString",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (5).prefab",
+            "Name": "GameObject (5)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Strike Drone.prefab",
+            "Name": "Strike Drone",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject.prefab",
+            "Name": "GameObject",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Scenes/RTNodeEditorTest.unity",
+            "Name": "RTNodeEditorTest",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Missile Tank.prefab",
+            "Name": "Missile Tank",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (1).prefab",
+            "Name": "GameObject (1)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/InventoryButton.prefab",
+            "Name": "InventoryButton",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (8).prefab",
+            "Name": "GameObject (8)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Gun Drone.prefab",
+            "Name": "Gun Drone",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (4).prefab",
+            "Name": "GameObject (4)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/PartIndexInventoryButton.prefab",
+            "Name": "PartIndexInventoryButton",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (10).prefab",
+            "Name": "GameObject (10)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/Shellcore Prefabs/PlayerCore.prefab",
+            "Name": "PlayerCore",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (2).prefab",
+            "Name": "GameObject (2)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/WaveSpawnContents.prefab",
+            "Name": "WaveSpawnContents",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Counter Drone.prefab",
+            "Name": "Counter Drone",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/Keybind Box.prefab",
+            "Name": "Keybind Box",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/KeySelect.prefab",
+            "Name": "KeySelect",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (6).prefab",
+            "Name": "GameObject (6)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (3).prefab",
+            "Name": "GameObject (3)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/WindowedMode.prefab",
+            "Name": "WindowedMode",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/StatusMenuMap.prefab",
+            "Name": "StatusMenuMap",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Bullet Tank.prefab",
+            "Name": "Bullet Tank",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/OutpostSprite.prefab",
+            "Name": "OutpostSprite",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/Mission Header.prefab",
+            "Name": "Mission Header",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Laser Tank.prefab",
+            "Name": "Laser Tank",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/BunkerSprite.prefab",
+            "Name": "BunkerSprite",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Beam Tank.prefab",
+            "Name": "Beam Tank",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Torpedo Drone.prefab",
+            "Name": "Torpedo Drone",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/Shellcore Prefabs/Shellcore.prefab",
+            "Name": "Shellcore",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (7).prefab",
+            "Name": "GameObject (7)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/Ability Prefabs/backgroundbox.prefab",
+            "Name": "backgroundbox",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/MissileStation.prefab",
+            "Name": "MissileStation",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Siege Tank.prefab",
+            "Name": "Siege Tank",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/GameObject (9).prefab",
+            "Name": "GameObject (9)",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/SpritePrefabs/Light Drone.prefab",
+            "Name": "Light Drone",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/CUOptionPrefab.prefab",
+            "Name": "CUOptionPrefab",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/OutpostButton.prefab",
+            "Name": "OutpostButton",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/shellcore/Assets/Prefabs/HUD Prefabs/PartyMemberInfo.prefab",
+            "Name": "PartyMemberInfo",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/ArtsPoiLabelPrefab 1.prefab",
+            "Name": "ArtsPoiLabelPrefab 1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Resources/Prefabs/GamePanel/CoolingTime-Panel.prefab",
+            "Name": "CoolingTime-Panel",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/5_Playground/Scenes/RemoveZ-Fighting.unity",
+            "Name": "RemoveZ-Fighting",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/Common/Prefabs/AxesPrefab.prefab",
+            "Name": "AxesPrefab",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/MapboxAR/Prefabs/LocationProvider.prefab",
+            "Name": "LocationProvider",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/ARFocusSquare/ARFocusSquareScene.unity",
+            "Name": "ARFocusSquareScene",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Resources/PredictPanel.prefab",
+            "Name": "PredictPanel",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Prefabs/CustomMarkerPrefab.prefab",
+            "Name": "CustomMarkerPrefab",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/1_DataExplorer/Traffic/DirectionSlice.prefab",
+            "Name": "DirectionSlice",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/AddRemoveAnchorExample/AddRemoveAnchorScene.unity",
+            "Name": "AddRemoveAnchorScene",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/ShopPoiLabelPrefab.prefab",
+            "Name": "ShopPoiLabelPrefab",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Prefabs/Level geometry.prefab",
+            "Name": "Level geometry",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_prefab/predict_open.controller",
+            "Name": "predict_open",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/NightlifePoiLabelPrefab.prefab",
+            "Name": "NightlifePoiLabelPrefab",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/DefaultPoiLabelPrefab 1.prefab",
+            "Name": "DefaultPoiLabelPrefab 1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Resources/Pin.prefab",
+            "Name": "Pin",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/ARKitRemote/UnityARKitRemote.unity",
+            "Name": "UnityARKitRemote",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Resources/Prefabs/GamePanel/Insufficient-Panel.prefab",
+            "Name": "Insufficient-Panel",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/AddRemoveAnchorExample/RandomCube.prefab",
+            "Name": "RandomCube",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/ServicePoiLabelPrefab.prefab",
+            "Name": "ServicePoiLabelPrefab",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Resources/MakiUiPrefab.prefab",
+            "Name": "MakiUiPrefab",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Dropdown.controller",
+            "Name": "Dropdown",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/FoodPoiLabelPrefab 1.prefab",
+            "Name": "FoodPoiLabelPrefab 1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Prefabs/LoadingScreenCanvas.prefab",
+            "Name": "LoadingScreenCanvas",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Resources/Selector.prefab",
+            "Name": "Selector",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Resources/Prefabs/GamePanel/LevelInsufficient-Panel.prefab",
+            "Name": "LevelInsufficient-Panel",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/MapboxAR/Prefabs/AR.prefab",
+            "Name": "AR",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Resources/BuildingWallSlice.prefab",
+            "Name": "BuildingWallSlice",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/TransportationPoiLabelPrefab.prefab",
+            "Name": "TransportationPoiLabelPrefab",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/ARRemote/RemoteDevice.unity",
+            "Name": "RemoteDevice",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/3_POIPlacement/Resources/OutdoorPoiLabelPrefab 1.prefab",
+            "Name": "OutdoorPoiLabelPrefab 1",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/TurnBaseExample/Prefabs/Hero.prefab",
+            "Name": "Hero",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/RpgExample/Prefabs/Monster.prefab",
+            "Name": "Monster",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/RpgExample/Prefabs/Item.prefab",
+            "Name": "Item",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/Demo Elements/Prefabs/Camera.prefab",
+            "Name": "Camera",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/EGPsExamples/TurnBaseExample/Prefabs/Monster.prefab",
+            "Name": "Monster",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/SuperCharacterController/Scenes/SpaceZone.unity",
+            "Name": "SpaceZone",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/unity-chan!/Unity-chan! Model/SplashScreen/SplashScreen_Light.unity",
+            "Name": "SplashScreen_Light",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/SuperCharacterController/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/unity-chan!/Unity-chan! Model/Scenes/ActionCheck.unity",
+            "Name": "ActionCheck",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/unity-chan!/Unity-chan! Model/SplashScreen/SplashScreen_Dark.unity",
+            "Name": "SplashScreen_Dark",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestAsyncJsonProcessing.unity",
+            "Name": "TestAsyncJsonProcessing",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestEnumSerialization.unity",
+            "Name": "TestEnumSerialization",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestSerializationCallbacks.unity",
+            "Name": "TestSerializationCallbacks",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestEnumDuplicates.unity",
+            "Name": "TestEnumDuplicates",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestDuplicateImplementations.unity",
+            "Name": "TestDuplicateImplementations",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestAsyncXmlProcessing.unity",
+            "Name": "TestAsyncXmlProcessing",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestEnumHashCodes.unity",
+            "Name": "TestEnumHashCodes",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/impossibleodds-toolkit/Assets/Tests/Scenes/TestIteratorMemoryAlloc.unity",
+            "Name": "TestIteratorMemoryAlloc",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Production/Tritium Breeder.prefab",
+            "Name": "Tritium Breeder",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/UI/NotifPopup Min.prefab",
+            "Name": "NotifPopup Min",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Production/Solar Panels.prefab",
+            "Name": "Solar Panels",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Military/Artillery.prefab",
+            "Name": "Artillery",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Gathering/Thumper Mine.prefab",
+            "Name": "Thumper Mine",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Defense/Sheild Generator.prefab",
+            "Name": "Sheild Generator",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/UI/NotifPopup Big.prefab",
+            "Name": "NotifPopup Big",
+            "NumComponents": "28"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Gathering/Offshore Pump.prefab",
+            "Name": "Offshore Pump",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/Tiles/Buildings/Player/Defense/Anti Air Turret.prefab",
+            "Name": "Anti Air Turret",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/phos/Assets/Prefabs/UI/Selection Icon.prefab",
+            "Name": "Selection Icon",
+            "NumComponents": "27"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/battleofmages/Assets/Prefabs/Skill Slot.prefab",
+            "Name": "Skill Slot",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/battleofmages/Assets/Prefabs/UI/Input Field.prefab",
+            "Name": "Input Field",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/battleofmages/Assets/Prefabs/UI/Slider.prefab",
+            "Name": "Slider",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/SkyBox/Day Sun Mid EpicHigh/Day Sun Mid EpicHigh.unity",
+            "Name": "Day Sun Mid EpicHigh",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9Obelisk3.prefab",
+            "Name": "Ruin2_9Obelisk3",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/SkyBox/Fantasy High/FantasyClouds2_High.unity",
+            "Name": "FantasyClouds2_High",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/ModelWeapons/W_Right_Scourge.prefab",
+            "Name": "W_Right_Scourge",
+            "NumComponents": "26"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/Lean/Common/Examples/Prefabs/Canvas.prefab",
+            "Name": "Canvas",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/ColorVariations/ColorVariationsDemo.unity",
+            "Name": "ColorVariationsDemo",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/ScreenLogger/Example/LoadingScene.unity",
+            "Name": "LoadingScene",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3D/Jyx2Timeline/[Timeline]ka691_\u5c0f\u867e\u7c73\u5c45_\u8f6f\u4f53\u5a03\u5a03\u8df3\u8d77.prefab",
+            "Name": "[Timeline]ka691_\u5c0f\u867e\u7c73\u5c45_\u8f6f\u4f53\u5a03\u5a03\u8df3\u8d77",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/mode_01/Prefab/Sark_4.prefab",
+            "Name": "Sark_4",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/mode_01/Prefab/Box_3.prefab",
+            "Name": "Box_3",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack FREE/Prefabs/Character/RPG-CharacterFREE.prefab",
+            "Name": "RPG-CharacterFREE",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/mode_01/Prefab/Sark_1.prefab",
+            "Name": "Sark_1",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Resources/Prefab/UIPrefab/CatchWupingCanvas.prefab",
+            "Name": "CatchWupingCanvas",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Plugins/Pixelplacement/iTween/Sample/Sample.unity",
+            "Name": "Sample",
+            "NumComponents": "24"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/DOTween Examples/Example Assets/Prefabs/Environment.prefab",
+            "Name": "Environment",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/_SharedResources/Prefabs/GrassMower.prefab",
+            "Name": "GrassMower",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/PrefabInstancing/Prefabs/Asteroid_02_LOD.prefab",
+            "Name": "Asteroid_02_LOD",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Mods/JYX2/Maps/GameMaps/TestLight.unity",
+            "Name": "TestLight",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/BuildingParts/Others/B3_Jia.prefab",
+            "Name": "B3_Jia",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Prefabs/\u5bb4\u4f1a\u684c\u5b50.prefab",
+            "Name": "\u5bb4\u4f1a\u684c\u5b50",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Buildings/Bridge/Bridge_04 (1).prefab",
+            "Name": "Bridge_04 (1)",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/SkyBox/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky.unity",
+            "Name": "Cartoon_FluffyBlueSky",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/EasyTouchBundle/EasyTouchControls/Prefab/ThirdPersonController.prefab",
+            "Name": "ThirdPersonController",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/DetailInstancing/Prefabs/Fence.prefab",
+            "Name": "Fence",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/_SharedResources/Prefabs/SceneElements.prefab",
+            "Name": "SceneElements",
+            "NumComponents": "30"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/PrefabInstancing/Prefabs/Asteroid_01_LOD.prefab",
+            "Name": "Asteroid_01_LOD",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/Lean/Common/Examples/Prefabs/InfoInWorld.prefab",
+            "Name": "InfoInWorld",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Mods/SAMPLE/Prefabs/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/48 Particle Effect Pack/DemoScense/DemoScense.unity",
+            "Name": "DemoScense",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GameObjectBrush/Prefabs/Multi Object Prefab.prefab",
+            "Name": "Multi Object Prefab",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/MapMagic/Demo/Light/AS Screens Cam Lights.prefab",
+            "Name": "AS Screens Cam Lights",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u9752\u86d9_controller.controller",
+            "Name": "\u9752\u86d9_controller",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/mode_01/Prefab/Box_1.prefab",
+            "Name": "Box_1",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/SkyBox/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds.unity",
+            "Name": "Cartoon_SunSetLightClouds",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9Obelisk1.prefab",
+            "Name": "Ruin2_9Obelisk1",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/DetailInstancing/Prefabs/Vegetation/Fern_01_LOD.prefab",
+            "Name": "Fern_01_LOD",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u706b\u8718\u86dbcontroller.controller",
+            "Name": "\u706b\u8718\u86dbcontroller",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/ExplosiveLLC/SuperCharacterController/Scenes/SpaceZone.unity",
+            "Name": "SpaceZone",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/DOTween Examples/Paths.unity",
+            "Name": "Paths",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/DOTween Examples/Sequences.unity",
+            "Name": "Sequences",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/mode_01/Prefab/Sark_3.prefab",
+            "Name": "Sark_3",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/mode_01/Prefab/Box_2.prefab",
+            "Name": "Box_2",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Wolf_Animated/Scene/Wolf_scene.unity",
+            "Name": "Wolf_scene",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/EasyTouchBundle/EasyTouchControls/Prefab/ThirdPersonControllerDungeon.prefab",
+            "Name": "ThirdPersonControllerDungeon",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Prefabs/\u5bb4\u4f1a\u684c\u5b502.prefab",
+            "Name": "\u5bb4\u4f1a\u684c\u5b502",
+            "NumComponents": "21"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/ExplosiveLLC/SuperCharacterController/Player.prefab",
+            "Name": "Player",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3D/Jyx2Timeline/[Timeline]ka691_\u5c0f\u867e\u7c73\u5c45_\u8f6f\u4f53\u5a03\u5a03\u6253\u62db\u547c.prefab",
+            "Name": "[Timeline]ka691_\u5c0f\u867e\u7c73\u5c45_\u8f6f\u4f53\u5a03\u5a03\u6253\u62db\u547c",
+            "NumComponents": "17"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9Obelisk2.prefab",
+            "Name": "Ruin2_9Obelisk2",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/PrefabInstancing/Prefabs/Asteroid_03_LOD.prefab",
+            "Name": "Asteroid_03_LOD",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/EasyTouchBundle/EasyTouchControls/Prefab/FirstPersonController-Simple.prefab",
+            "Name": "FirstPersonController-Simple",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/DetailInstancing/Prefabs/Vegetation/Fern_02_LOD.prefab",
+            "Name": "Fern_02_LOD",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Buildings/Wall/Wall_24.prefab",
+            "Name": "Wall_24",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/Lean/Common/Examples/Prefabs/InfoInUI.prefab",
+            "Name": "InfoInUI",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Resources/Prefab/UIPrefab/BagGridItem.prefab",
+            "Name": "BagGridItem",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Resources/Prefab/UIPrefab/Tips_UI_Canvas.prefab",
+            "Name": "Tips_UI_Canvas",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Prefabs/Core/UICanvas.prefab",
+            "Name": "UICanvas",
+            "NumComponents": "19"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Prefabs/Test/Samples/ListItem.prefab",
+            "Name": "ListItem",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Prefabs/Test/Samples/ToggleSwitch-iOS.prefab",
+            "Name": "ToggleSwitch-iOS",
+            "NumComponents": "18"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Prefabs/Core/Progress.prefab",
+            "Name": "Progress",
+            "NumComponents": "22"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Prefabs/Test/TestTips.prefab",
+            "Name": "TestTips",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Models/Skeleton/Skeleton.controller",
+            "Name": "Skeleton",
+            "NumComponents": "15"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Scenes/ThreeIslands/Prefabs/Buildings/SM_Bld_Western_Windmill_01.prefab",
+            "Name": "SM_Bld_Western_Windmill_01",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Templates/StompyRobot/SRDebugger/Scenes/Sample.unity",
+            "Name": "Sample",
+            "NumComponents": "25"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Templates/StompyRobot/SRDebugger/UI/Prefabs/InfoBlock.prefab",
+            "Name": "InfoBlock",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Templates/StompyRobot/SRDebugger/Resources/SRDebugger/UI/Prefabs/Tabs/BugReporter.prefab",
+            "Name": "BugReporter",
+            "NumComponents": "23"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Scenes/Empty.unity",
+            "Name": "Empty",
+            "NumComponents": "13"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/aitd-roomviewer/Assets/Gui/Slider.prefab",
+            "Name": "Slider",
+            "NumComponents": "20"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/aitd-roomviewer/Assets/Gui/BoxInfo.prefab",
+            "Name": "BoxInfo",
+            "NumComponents": "16"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ecs-iaus-sytstem/Assets/Prefabs/Evil Test Cubie Follower.prefab",
+            "Name": "Evil Test Cubie Follower",
+            "NumComponents": "14"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ecs-iaus-sytstem/Assets/Scripts/For Testing Only/prefabs/Enemy.prefab",
+            "Name": "Enemy",
+            "NumComponents": "16"
+        }
+    ]
+}

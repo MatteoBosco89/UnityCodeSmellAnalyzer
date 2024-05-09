@@ -1,0 +1,86 @@
+{
+    "Name": "Heavy Physics Computation ",
+    "Occurrency": 20,
+    "Smells": [
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/Character/Unit/DefaultCharacterUnit.prefab",
+            "Name": "DefaultCharacterUnit"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/System/Prefabs/Character/Unit/DefaultUMACharacterUnit.prefab",
+            "Name": "DefaultUMACharacterUnit"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Player.prefab",
+            "Name": "Player"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Tanks/Prefabs/Projectile.prefab",
+            "Name": "Projectile"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Gold Player Tests/Prefabs/Rigidbody Shell.prefab",
+            "Name": "Rigidbody Shell"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/Tanks/Prefabs/Projectile.prefab",
+            "Name": "Projectile"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Sand Bomb Throwable Modifier.prefab",
+            "Name": "Sand Bomb Throwable Modifier"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Item Entity Modifier.prefab",
+            "Name": "Item Entity Modifier"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Missile Modifier.prefab",
+            "Name": "Missile Modifier"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Grenade Throwable Modifier.prefab",
+            "Name": "Grenade Throwable Modifier"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/voxelfield/Assets/Resources/Entities/Flashbang Throwable Modifier.prefab",
+            "Name": "Flashbang Throwable Modifier"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Interactables/ThrowableBoneBiscuit.prefab",
+            "Name": "ThrowableBoneBiscuit"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Interactables/ThrowableBoneBiscuit.prefab",
+            "Name": "ThrowableBoneBiscuit"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Tanks/Prefabs/Projectile.prefab",
+            "Name": "Projectile"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Common/Prefabs/BallPrefab.prefab",
+            "Name": "BallPrefab"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/Common/Prefabs/BallPrefab.prefab",
+            "Name": "BallPrefab"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Prefabs/PhysicsBall.prefab",
+            "Name": "PhysicsBall"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/battleofmages/Assets/Skills/Ice Ball.prefab",
+            "Name": "Ice Ball"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/battleofmages/Assets/Skills/Meteor Shower Projectile.prefab",
+            "Name": "Meteor Shower Projectile"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/battleofmages/Assets/Skills/Fire Ball.prefab",
+            "Name": "Fire Ball"
+        }
+    ]
+}

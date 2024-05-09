@@ -280,7 +280,6 @@ namespace UnityDataAnalyzer
             if (save_dir != "") main_dir = save_dir;
             string headers = "";
             string values = "";
-            int i = 0;
             headers += "ProjectName;ProjectPath;";
             values += projectName + ";" + directory + ";";
             foreach(KeyValuePair<string, int> k in numMainFiles)

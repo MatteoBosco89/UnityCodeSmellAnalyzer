@@ -1,0 +1,10 @@
+Dependency_Between_Objects C:\Users\matte\Desktop\a\ignorance\Assets\Ignorance\Demo\PongChamp\Scripts\AtariPongBall.cs 49
+Velocity_Change C:\Users\matte\Desktop\a\ignorance\Assets\Ignorance\Demo\PongChamp\Scripts\AtariPongBall.cs 63
+Velocity_Change C:\Users\matte\Desktop\a\ignorance\Assets\Ignorance\Demo\PongChamp\Scripts\AtariPongRacket.cs 22
+Lack_of_separation_of_concerns C:\Users\matte\Desktop\a\ignorance\Assets\Mirror\Runtime\Transports\Ignorance\Core\IgnoranceClient.cs
+Lack_of_separation_of_concerns C:\Users\matte\Desktop\a\ignorance\Assets\Mirror\Runtime\Transports\Ignorance\Core\IgnoranceServer.cs
+Poor_state_design C:\Users\matte\Desktop\a\ignorance\Assets\Mirror\Runtime\Transports\Ignorance\Ignorance.cs 639
+poor_state_design C:\Users\matte\Desktop\a\ignorance\Assets\Mirror\Runtime\Transports\Ignorance\Ignorance.cs 651
+
+TP = 43
+FN = 7

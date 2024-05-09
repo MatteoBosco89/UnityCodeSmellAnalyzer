@@ -1,0 +1,282 @@
+{
+    "Name": "Find Methods",
+    "Occurrency": 46,
+    "Smells": [
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Plugins/Graphy - Ultimate Stats Monitor/Runtime/Audio/G_AudioMonitor.cs",
+            "Name": "FindAudioListener",
+            "Invocation": "Tayx.Graphy.Audio.G_AudioMonitor.FindAudioListener()",
+            "Line": 121
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Utility/DragRigidbody.cs",
+            "Name": "FindCamera",
+            "Invocation": "UnityStandardAssets.Utility.DragRigidbody.FindCamera()",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Cameras/Scripts/AbstractTargetFollower.cs",
+            "Name": "FindAndTargetPlayer",
+            "Invocation": "UnityStandardAssets.Cameras.AbstractTargetFollower.FindAndTargetPlayer()",
+            "Line": 41
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Graphy - Ultimate Stats Monitor/Runtime/Audio/G_AudioMonitor.cs",
+            "Name": "FindAudioListener",
+            "Invocation": "Tayx.Graphy.Audio.G_AudioMonitor.FindAudioListener()",
+            "Line": 121
+        },
+        {
+            "Script": "/home/videogames/dataset/merino/Assets/YarnSpinner/Examples/DemoScripts/PlayerCharacter.cs",
+            "Name": "FindObjectOfType<DialogueRunner>",
+            "Invocation": "FindObjectOfType<DialogueRunner>",
+            "Line": 58
+        },
+        {
+            "Script": "/home/videogames/dataset/merino/Assets/YarnSpinner/Examples/DemoScripts/PlayerCharacter.cs",
+            "Name": "FindObjectOfType<DialogueRunner>",
+            "Invocation": "FindObjectOfType<DialogueRunner>",
+            "Line": 58
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioMonitor.cs",
+            "Name": "FindAudioListener",
+            "Invocation": "Tayx.Graphy.Audio.G_AudioMonitor.FindAudioListener()",
+            "Line": 125
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Assets/Scripts/Editor/Map/MapAnnotations.cs",
+            "Name": "FindObjectOfType<MapHolder>",
+            "Invocation": "FindObjectOfType<MapHolder>",
+            "Line": 285
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/Managers/RaidSceneManager.cs",
+            "Name": "Find",
+            "Invocation": "System.Collections.Generic.List<Door>.Find(System.Predicate<Door>)",
+            "Line": 357
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/Managers/RaidSceneManager.cs",
+            "Name": "Find",
+            "Invocation": "System.Collections.Generic.List<Door>.Find(System.Predicate<Door>)",
+            "Line": 347
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/Managers/RaidSceneManager.cs",
+            "Name": "Find",
+            "Invocation": "System.Collections.Generic.List<Door>.Find(System.Predicate<Door>)",
+            "Line": 337
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Scripts/Managers/RaidSceneManager.cs",
+            "Name": "Find",
+            "Invocation": "System.Collections.Generic.List<Door>.Find(System.Predicate<Door>)",
+            "Line": 327
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Plugins/FMOD/OneshotList.cs",
+            "Name": "FindAll",
+            "Invocation": "System.Collections.Generic.List<FMOD.Studio.EventInstance>.FindAll(System.Predicate<FMOD.Studio.EventInstance>)",
+            "Line": 21
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoChangeOwner/MaterialPerOwner.cs",
+            "Name": "FindObjectOfType<ColorPerPlayer>",
+            "Invocation": "FindObjectOfType<ColorPerPlayer>",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoMecanim/Scripts/DemoMecanimGUI.cs",
+            "Name": "FindRemoteAnimator",
+            "Invocation": "DemoMecanimGUI.FindRemoteAnimator()",
+            "Line": 37
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/PlayerHotkeys.cs",
+            "Name": "GameObject.Find (\"Canvas/TopMenu/Config\").GetComponent<ConfigMenu> ().dev.SetActive",
+            "Invocation": "GameObject.Find (\"Canvas/TopMenu/Config\").GetComponent<ConfigMenu> ().dev.SetActive",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/PlayerHotkeys.cs",
+            "Name": "GameObject.Find (\"Canvas/TopMenu/Config\").GetComponent<ConfigMenu>",
+            "Invocation": "GameObject.Find (\"Canvas/TopMenu/Config\").GetComponent<ConfigMenu>",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/PlayerHotkeys.cs",
+            "Name": "GameObject.Find",
+            "Invocation": "GameObject.Find",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/Player.cs",
+            "Name": "GameObject.Find(\"Canvas/PlayerPanel/HP Orb Bg/HP\").GetComponent<Image>",
+            "Invocation": "GameObject.Find(\"Canvas/PlayerPanel/HP Orb Bg/HP\").GetComponent<Image>",
+            "Line": 251
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Scripts/Player/Player.cs",
+            "Name": "GameObject.Find",
+            "Invocation": "GameObject.Find",
+            "Line": 251
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Standard Assets/Utility/DragRigidbody.cs",
+            "Name": "FindCamera",
+            "Invocation": "UnityStandardAssets.Utility.DragRigidbody.FindCamera()",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/mirage/Assets/Examples/Tanks/Scripts/TankGameManager.cs",
+            "Name": "FindLocalTank",
+            "Invocation": "FindLocalTank",
+            "Line": 36
+        },
+        {
+            "Script": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/Tanks/Scripts/TankGameManager.cs",
+            "Name": "FindLocalTank",
+            "Invocation": "FindLocalTank",
+            "Line": 36
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Assessments/_scripts/Utilities/SortingDragManager.cs",
+            "Name": "FindBuckets",
+            "Invocation": "Antura.Assessment.SortingDragManager.FindBuckets()",
+            "Line": 194
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Assessments/_scripts/Utilities/SortingDragManager.cs",
+            "Name": "FindBuckets",
+            "Invocation": "Antura.Assessment.SortingDragManager.FindBuckets()",
+            "Line": 178
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/UI/MapWindow.cs",
+            "Name": "FindPathToWaypoint",
+            "Invocation": "SanAndreasUnity.UI.MapWindow.FindPathToWaypoint()",
+            "Line": 422
+        },
+        {
+            "Script": "/home/videogames/dataset/digital-logic-sim-ce/Assets/Scripts/Save System/ChipSaver.cs",
+            "Name": "FindIndex",
+            "Invocation": "System.Array.FindIndex<SavedComponentChip>(SavedComponentChip[], System.Predicate<SavedComponentChip>)",
+            "Line": 127
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/GameplayObjects/Character/AI/AIBrain.cs",
+            "Name": "FindBestEligibleAIState",
+            "Invocation": "Unity.BossRoom.Gameplay.GameplayObjects.Character.AI.AIBrain.FindBestEligibleAIState()",
+            "Line": 56
+        },
+        {
+            "Script": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/ReferenceCode/Pathfinding.cs",
+            "Name": "FindPath",
+            "Invocation": "FindPath",
+            "Line": 18
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/PlayerViewScript.cs",
+            "Name": "transform.Find",
+            "Invocation": "transform.Find",
+            "Line": 77
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/PlayerViewScript.cs",
+            "Name": "transform.Find",
+            "Invocation": "transform.Find",
+            "Line": 77
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/Scripts/SiegeZoneManager.cs",
+            "Name": "AIData.flags.Find",
+            "Invocation": "AIData.flags.Find",
+            "Line": 117
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/World Creator Assets/Scripts/SiegeZoneManager.cs",
+            "Name": "targets.FindAll",
+            "Invocation": "targets.FindAll",
+            "Line": 124
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "abilities.FindAll",
+            "Invocation": "abilities.FindAll",
+            "Line": 191
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/SectorManager.cs",
+            "Name": "sectors.Find",
+            "Invocation": "sectors.Find",
+            "Line": 176
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/PassiveDialogueSystem.cs",
+            "Name": "Find",
+            "Invocation": "System.Collections.Generic.List<Entity>.Find(System.Predicate<Entity>)",
+            "Line": 106
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/PassiveDialogueSystem.cs",
+            "Name": "instance.transform.Find(\"Name\").GetComponent<Text>",
+            "Invocation": "instance.transform.Find(\"Name\").GetComponent<Text>",
+            "Line": 122
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/PassiveDialogueSystem.cs",
+            "Name": "instance.transform.Find",
+            "Invocation": "instance.transform.Find",
+            "Line": 122
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/PassiveDialogueSystem.cs",
+            "Name": "instance.transform.Find(\"Text\").GetComponent<Text>",
+            "Invocation": "instance.transform.Find(\"Text\").GetComponent<Text>",
+            "Line": 123
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/PassiveDialogueSystem.cs",
+            "Name": "instance.transform.Find",
+            "Invocation": "instance.transform.Find",
+            "Line": 123
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/AI/PartyManager.cs",
+            "Name": "partyMembers.FindAll",
+            "Invocation": "partyMembers.FindAll",
+            "Line": 306
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/dropdown_example.cs",
+            "Name": "GameObject.Find",
+            "Invocation": "GameObject.Find",
+            "Line": 50
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/CommonUI/TalkButtonController.cs",
+            "Name": "GameObject.FindGameObjectWithTag(\"Player\").GetComponent<PlayerControl>().StopMove",
+            "Invocation": "GameObject.FindGameObjectWithTag(\"Player\").GetComponent<PlayerControl>().StopMove",
+            "Line": 137
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/CommonUI/TalkButtonController.cs",
+            "Name": "GameObject.FindGameObjectWithTag(\"Player\").GetComponent<PlayerControl>",
+            "Invocation": "GameObject.FindGameObjectWithTag(\"Player\").GetComponent<PlayerControl>",
+            "Line": 137
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/CommonUI/TalkButtonController.cs",
+            "Name": "GameObject.FindGameObjectWithTag",
+            "Invocation": "GameObject.FindGameObjectWithTag",
+            "Line": 137
+        },
+        {
+            "Script": "/home/videogames/dataset/groundgrowing/Assets/Editor/MapGenEditor.cs",
+            "Name": "FindObjectOfType<MapGenerator>",
+            "Invocation": "FindObjectOfType<MapGenerator>",
+            "Line": 27
+        }
+    ]
+}

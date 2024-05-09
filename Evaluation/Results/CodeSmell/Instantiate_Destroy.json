@@ -1,0 +1,822 @@
+{
+    "Name": "Instantiate Destroy",
+    "Occurrency": 136,
+    "Smells": [
+        {
+            "Script": "/home/videogames/dataset/inputsystem/Assets/QA/Tests/Touch/Scripts/TouchscreenTouchVisualizer.cs",
+            "Name": "Instantiate<GameObject>",
+            "Invocation": "Instantiate<GameObject>",
+            "Line": 58
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/System/Scripts/Services/GameManager.cs",
+            "Name": "Destroy",
+            "Invocation": "Ballance2.GameSystem.Destroy()",
+            "Line": 1108
+        },
+        {
+            "Script": "/home/videogames/dataset/ballance/Assets/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Helpers/PopupBase.cs",
+            "Name": "DestroySelf",
+            "Invocation": "RuntimeInspectorNamespace.PopupBase.DestroySelf()",
+            "Line": 90
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/_Player/PlayerPikminController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 95
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/Utilities/HealthWheel.cs",
+            "Name": "IE_CloseAndDestroy",
+            "Invocation": "HealthWheel.IE_CloseAndDestroy()",
+            "Line": 95
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/_Player/Whistle/WhistleController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 218
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/_Objects/Enemy/EnemyDamageScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 78
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/_Objects/Enemy/EnemyDamageScript.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 75
+        },
+        {
+            "Script": "/home/videogames/dataset/project-404/Assets/Scripts/_Objects/Pikmin/PikminCarryObject.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 126
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Particle/ParticleAutoDestroy.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/UI/TrackIcon.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 32
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/KillplaneKill.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/KillplaneKill.cs",
+            "Name": "Destroy",
+            "Invocation": "Photon.Pun.PhotonNetwork.Destroy(Photon.Pun.PhotonView)",
+            "Line": 21
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/Enemy/GoombaWalk.cs",
+            "Name": "PhotonNetwork.Destroy",
+            "Invocation": "PhotonNetwork.Destroy",
+            "Line": 28
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/World Elements/LooseCoin.cs",
+            "Name": "Destroy",
+            "Invocation": "Photon.Pun.PhotonNetwork.Destroy(Photon.Pun.PhotonView)",
+            "Line": 45
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/World Elements/LooseCoin.cs",
+            "Name": "Destroy",
+            "Invocation": "Photon.Pun.PhotonNetwork.Destroy(Photon.Pun.PhotonView)",
+            "Line": 58
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/World Elements/FrozenCube.cs",
+            "Name": "Destroy",
+            "Invocation": "Photon.Pun.PhotonNetwork.Destroy(Photon.Pun.PhotonView)",
+            "Line": 102
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/World Elements/FrozenCube.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 121
+        },
+        {
+            "Script": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Scripts/Entity/World Elements/FrozenCube.cs",
+            "Name": "Destroy",
+            "Invocation": "Photon.Pun.PhotonNetwork.Destroy(Photon.Pun.PhotonView)",
+            "Line": 119
+        },
+        {
+            "Script": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Touch/Examples/Scripts/LeanDestroy.cs",
+            "Name": "DestroyNow",
+            "Invocation": "Lean.Touch.LeanDestroy.DestroyNow()",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Hit/JCS_HitCountEvent.cs",
+            "Name": "CheckDestroy",
+            "Invocation": "JCSUnity.JCS_HitCountEvent.CheckDestroy()",
+            "Line": 50
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Destroy/JCS_DestroyObjectWithTime.cs",
+            "Name": "FadeOut",
+            "Invocation": "JCSUnity.JCS_DestroyObjectWithTime.FadeOut()",
+            "Line": 63
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Destroy/JCS_DestroyObjectWithTime.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 69
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Destroy/JCS_DestroySoundEndEvent.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 41
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Destroy/JCS_DestroyParticleEndEvent.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 36
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Effects/Destroy/JCS_DestinationDestroy.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 101
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Actions/2D/AI/JCS_2DDeadAction.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 116
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Destroy/Anim/JCS_DestroyAnimBackForthEvent.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 116
+        },
+        {
+            "Script": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scripts/Events/Destroy/Anim/JCS_DestroyAnimEndEvent.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 51
+        },
+        {
+            "Script": "/home/videogames/dataset/simulator/Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Camera/HDCamera.cs",
+            "Name": "DestroyVolumetricHistoryBuffers",
+            "Invocation": "UnityEngine.Rendering.HighDefinition.HDRenderPipeline.DestroyVolumetricHistoryBuffers(UnityEngine.Rendering.HighDefinition.HDCamera)",
+            "Line": 607
+        },
+        {
+            "Script": "/home/videogames/dataset/peco/Assets/_SourceCode/Enemies/EnemyBase.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 44
+        },
+        {
+            "Script": "/home/videogames/dataset/reflex/Assets/Reflex.Benchmark/Factory.cs",
+            "Name": "BenchmarkInstantiateNew",
+            "Invocation": "Factory.BenchmarkInstantiateNew()",
+            "Line": 31
+        },
+        {
+            "Script": "/home/videogames/dataset/reflex/Assets/Reflex.Benchmark/Factory.cs",
+            "Name": "BenchmarkInstantiateActivator",
+            "Invocation": "Factory.BenchmarkInstantiateActivator()",
+            "Line": 32
+        },
+        {
+            "Script": "/home/videogames/dataset/reflex/Assets/Reflex.Benchmark/Factory.cs",
+            "Name": "BenchmarkInstantiateUninitializedObject",
+            "Invocation": "Factory.BenchmarkInstantiateUninitializedObject()",
+            "Line": 33
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs",
+            "Name": "GameObject.Instantiate",
+            "Invocation": "GameObject.Instantiate",
+            "Line": 18
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Plugins/Editor/FMOD/EditorUtils.cs",
+            "Name": "DestroySystem",
+            "Invocation": "FMODUnity.EditorUtils.DestroySystem()",
+            "Line": 224
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoChat/ChatGui.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 168
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/PunBasics-Tutorial/Scripts/PlayerUI.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 70
+        },
+        {
+            "Script": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoRockPaperScissors/Scripts/RpsCore.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 119
+        },
+        {
+            "Script": "/home/videogames/dataset/fungus/Assets/Fungus/Scripts/Components/SpriteFader.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 45
+        },
+        {
+            "Script": "/home/videogames/dataset/fungus/Assets/Fungus/Thirdparty/Usfxr/Scripts/SfxrAudioPlayer.cs",
+            "Name": "Destroy",
+            "Invocation": "SfxrAudioPlayer.Destroy()",
+            "Line": 72
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 29
+        },
+        {
+            "Script": "/home/videogames/dataset/hogwarts/Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs",
+            "Name": "GameObject.Instantiate",
+            "Invocation": "GameObject.Instantiate",
+            "Line": 18
+        },
+        {
+            "Script": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scripts/Tactical/UI/Component/FloatingMessage.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Tobogan/_scripts/WrongTube.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 38
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Tobogan/_scripts/HeightMeter.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 61
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Tobogan/_scripts/HeightMeter.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/ReadingGame/_scripts/EnvironmentPopper.cs",
+            "Name": "GameObject.Instantiate",
+            "Invocation": "GameObject.Instantiate",
+            "Line": 35
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/ReadingGame/_scripts/EnvironmentPopper.cs",
+            "Name": "puffGo.AddComponent<AutoDestroy>",
+            "Invocation": "puffGo.AddComponent<AutoDestroy>",
+            "Line": 36
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/Balloons/_scripts/BalloonsLetterController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 95
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/AnturaSpace/ThrowableObject.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 203
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/FastCrowd/_scripts/Crowd/LetterCrowd.cs",
+            "Name": "GameObject.Instantiate",
+            "Invocation": "GameObject.Instantiate",
+            "Line": 140
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/FastCrowd/_scripts/Crowd/LetterCrowd.cs",
+            "Name": "puffGo.AddComponent<AutoDestroy>",
+            "Invocation": "puffGo.AddComponent<AutoDestroy>",
+            "Line": 141
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_games/FastCrowd/_scripts/Crowd/LetterCrowd.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 146
+        },
+        {
+            "Script": "/home/videogames/dataset/antura/Assets/_core/_scripts/Minigames/Utility/AutoDestroy.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 18
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/AnturaSpace/ThrowableObject.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 192
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Tobogan/_scripts/WrongTube.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 38
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Tobogan/_scripts/HeightMeter.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 61
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Tobogan/_scripts/HeightMeter.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 52
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/ReadingGame/_scripts/EnvironmentPopper.cs",
+            "Name": "GameObject.Instantiate",
+            "Invocation": "GameObject.Instantiate",
+            "Line": 35
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/ReadingGame/_scripts/EnvironmentPopper.cs",
+            "Name": "puffGo.AddComponent<AutoDestroy>",
+            "Invocation": "puffGo.AddComponent<AutoDestroy>",
+            "Line": 36
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/_scripts/BalloonsLetterController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 91
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_app/_scripts/Minigames/Utility/AutoDestroy.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/FastCrowd/_scripts/Crowd/LetterCrowd.cs",
+            "Name": "GameObject.Instantiate",
+            "Invocation": "GameObject.Instantiate",
+            "Line": 140
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/FastCrowd/_scripts/Crowd/LetterCrowd.cs",
+            "Name": "puffGo.AddComponent<AutoDestroy>",
+            "Invocation": "puffGo.AddComponent<AutoDestroy>",
+            "Line": 141
+        },
+        {
+            "Script": "/home/videogames/dataset/antura_arabic/Assets/_games/FastCrowd/_scripts/Crowd/LetterCrowd.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 146
+        },
+        {
+            "Script": "/home/videogames/dataset/lsss-wip/Assets/_Code/Rendering/SpaceSkyRenderer.cs",
+            "Name": "CoreUtils.Destroy",
+            "Invocation": "CoreUtils.Destroy",
+            "Line": 57
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Behaviours/Vehicles/Vehicle.cs",
+            "Name": "Object.Destroy",
+            "Invocation": "Object.Destroy",
+            "Line": 550
+        },
+        {
+            "Script": "/home/videogames/dataset/sanandreasunity/Assets/Scripts/Behaviours/Vehicles/Damage/DetachablePart.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 64
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Utils/NetworkOverlay/NetworkLatencyWarning.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 58
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/UserInput/ClientInputSender.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 231
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/Action/Input/AoeActionInput.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 77
+        },
+        {
+            "Script": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Scripts/Gameplay/GameplayObjects/Projectiles/FXProjectile.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 71
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/WCBetterBarHandler.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 255
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 414
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 421
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 431
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 443
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 445
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 518
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Sector Creator Assets/SectorCreatorMouse.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 503
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/MapMakerScript.cs",
+            "Name": "Instantiate(tooltipPrefab, transform.parent.parent).GetComponent<RectTransform>",
+            "Invocation": "Instantiate(tooltipPrefab, transform.parent.parent).GetComponent<RectTransform>",
+            "Line": 431
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/MapMakerScript.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 431
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/MapMakerScript.cs",
+            "Name": "Destroy",
+            "Invocation": "MapMakerScript.Destroy()",
+            "Line": 382
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/MapMakerScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 461
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/HUD Scripts/TooltipManager.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 34
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/SFX Scripts/DrawCircleScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 79
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/ShellPart.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 374
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/Shard.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 83
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/EnergyRock.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 40
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Game Object Definitions/EnergySphereScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 25
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/BombScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 132
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/BombScript.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 118
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/BombScript.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 124
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/MissileScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 97
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/Cannon.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 45
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 191
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 202
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 202
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 216
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 221
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 229
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 229
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 233
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 233
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 233
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 233
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 229
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/AbilityButtonScript.cs",
+            "Name": "IsDestroyed",
+            "Invocation": "Ability.IsDestroyed()",
+            "Line": 229
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/IonLineController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 225
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Abilities/IonLineController.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 206
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/SectorManager.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 223
+        },
+        {
+            "Script": "/home/videogames/dataset/shellcore/Assets/Scripts/Functional Definitions/Interaction Definitions/PassiveDialogueSystem.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 115
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/script/visible.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 49
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Scripts/ObjectShooter.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 30
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Scripts/RemoveRigidbody.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Scripts/RemoveRigidbody.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 14
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/AddRemoveAnchorExample/UnityARUserAnchorExample.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 51
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/dropdown_example.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 55
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/dropdown_example.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 56
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/dropdown_example.cs",
+            "Name": "Instantiate",
+            "Invocation": "Instantiate",
+            "Line": 57
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_script/deleteroad.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 18
+        },
+        {
+            "Script": "/home/videogames/dataset/mapboxargame/Assets/GoogleARCore/Examples/ComputerVision/Scripts/TextureReader.cs",
+            "Name": "Destroy",
+            "Invocation": "GoogleARCore.TextureReader.TextureReaderApi.Destroy()",
+            "Line": 146
+        },
+        {
+            "Script": "/home/videogames/dataset/egameplay/Assets/EGamePlay.Unity/Combat/AbilityItem/AbilityItemProxyObj.cs",
+            "Name": "GameObject.Destroy",
+            "Invocation": "GameObject.Destroy",
+            "Line": 23
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3D/Script/GhostItem.cs",
+            "Name": "GameObject.Destroy",
+            "Invocation": "GameObject.Destroy",
+            "Line": 20
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/SceneScript/BattleScene/TextDamageController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 35
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/Script/SceneScript/BattleScene/TextDamageController.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 50
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/Lean/Common/Extras/LeanDestroy.cs",
+            "Name": "DestroyNow",
+            "Invocation": "Lean.Common.LeanDestroy.DestroyNow()",
+            "Line": 27
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/AmplifyShaderEditor/Plugins/Editor/Utils/NodeExporterUtils.cs",
+            "Name": "DestroyNode",
+            "Invocation": "AmplifyShaderEditor.AmplifyShaderEditorWindow.DestroyNode(AmplifyShaderEditor.ParentNode, bool)",
+            "Line": 220
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/AmplifyShaderEditor/Plugins/Editor/Utils/NodeExporterUtils.cs",
+            "Name": "UnityEngine.Object.DestroyImmediate",
+            "Invocation": "UnityEngine.Object.DestroyImmediate",
+            "Line": 233
+        },
+        {
+            "Script": "/home/videogames/dataset/fanren/Assets/3rd/AmplifyShaderEditor/Plugins/Editor/Utils/NodeExporterUtils.cs",
+            "Name": "UnityEngine.Object.DestroyImmediate",
+            "Invocation": "UnityEngine.Object.DestroyImmediate",
+            "Line": 235
+        },
+        {
+            "Script": "/home/videogames/dataset/nice-lua/Assets/Scripts/Common/Http/SimpleHttp.cs",
+            "Name": "DestroyImmediate",
+            "Invocation": "DestroyImmediate",
+            "Line": 45
+        },
+        {
+            "Script": "/home/videogames/dataset/nice-lua/Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/FPSExample/ImpactEffect.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 17
+        },
+        {
+            "Script": "/home/videogames/dataset/ecs-iaus-sytstem/Assets/GameMaster.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 87
+        },
+        {
+            "Script": "/home/videogames/dataset/ecs-iaus-sytstem/Assets/Systems/Global/Scripts/Spawnable.cs",
+            "Name": "Destroy",
+            "Invocation": "Destroy",
+            "Line": 28
+        }
+    ]
+}

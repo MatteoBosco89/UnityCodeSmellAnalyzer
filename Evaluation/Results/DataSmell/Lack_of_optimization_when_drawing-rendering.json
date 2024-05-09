@@ -1,0 +1,158 @@
+{
+    "Name": "Lack of optimization when drawing-rendering",
+    "Occurrency": 38,
+    "Smells": [
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/PenVisualizer.unity",
+            "Name": "PenVisualizer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/GamepadVisualizer.unity",
+            "Name": "GamepadVisualizer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/GamepadVisualizer.unity",
+            "Name": "GamepadVisualizer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/SimpleDemo/SimpleDemo_UsingActionAsset.unity",
+            "Name": "SimpleDemo_UsingActionAsset"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/SimpleDemo/SimpleDemo_UsingPlayerInput.unity",
+            "Name": "SimpleDemo_UsingPlayerInput"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/MouseVisualizer.unity",
+            "Name": "MouseVisualizer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/SimpleDemo/SimpleDemo_UsingActions.unity",
+            "Name": "SimpleDemo_UsingActions"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/SimpleDemo/SimpleDemo_UsingState.unity",
+            "Name": "SimpleDemo_UsingState"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/inputsystem/Assets/Samples/Visualizers/SimpleControlsVisualizer.unity",
+            "Name": "SimpleControlsVisualizer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/bdframework.core/Packages/com.popo.bdframework/Runtime/3rdGithub/BetterStreamingAssets/BSA_TestScene.unity",
+            "Name": "BSA_TestScene"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/jcsunity/Assets/JCSUnity/Scenes/Demo/3D/JCS_3DThrowAction.unity",
+            "Name": "JCS_3DThrowAction"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Tests/Scenes/SceneObjectSpawningTestsScene.unity",
+            "Name": "SceneObjectSpawningTestsScene"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scenes/Sandbox/PoolTest2.unity",
+            "Name": "PoolTest2"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scenes/Sandbox/PoolTest1.unity",
+            "Name": "PoolTest1"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity-tactical-rpg-battle-system/Assets/Scenes/Tests/LevelGrothTest.unity",
+            "Name": "LevelGrothTest"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_tests/RewardSystemTest/RewardSystemTest.unity",
+            "Name": "RewardSystemTest"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_tests/RewardSystemTest/RewardSystemTest.unity",
+            "Name": "RewardSystemTest"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/sanandreasunity/Assets/Scenes/Main.unity",
+            "Name": "Main"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Tests/Runtime/Scenes/SceneObjectSpawningTestsScene.unity",
+            "Name": "SceneObjectSpawningTestsScene"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Scripts/External/UnityToolbarExtender/unity-toolbar-extender-1.4.1/Example~/SceneSwitcher/Scenes/ToolbarExtenderExampleScene2.unity",
+            "Name": "ToolbarExtenderExampleScene2"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Scripts/External/UnityToolbarExtender/unity-toolbar-extender-1.4.1/Example~/SceneSwitcher/Scenes/ToolbarExtenderExampleScene1.unity",
+            "Name": "ToolbarExtenderExampleScene1"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/12_Algorithm/12_Algorithm.unity",
+            "Name": "12_Algorithm"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/03_UI/03_UI.unity",
+            "Name": "03_UI"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/14_AStarPathfinding.unity",
+            "Name": "14_AStarPathfinding"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision.unity",
+            "Name": "ComputerVision"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/5_Playground/Scenes/RemoveZ-Fighting.unity",
+            "Name": "RemoveZ-Fighting"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/AddRemoveAnchorExample/AddRemoveAnchorScene.unity",
+            "Name": "AddRemoveAnchorScene"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/ARKitRemote/UnityARKitRemote.unity",
+            "Name": "UnityARKitRemote"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/ARRemote/RemoteDevice.unity",
+            "Name": "RemoteDevice"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/SuperCharacterController/Scenes/SpaceZone.unity",
+            "Name": "SpaceZone"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/ColorVariations/ColorVariationsDemo.unity",
+            "Name": "ColorVariationsDemo"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/ExplosiveLLC/SuperCharacterController/Scenes/SpaceZone.unity",
+            "Name": "SpaceZone"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/DOTween Examples/Paths.unity",
+            "Name": "Paths"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/DOTween Examples/Sequences.unity",
+            "Name": "Sequences"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/Wolf_Animated/Scene/Wolf_scene.unity",
+            "Name": "Wolf_scene"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Scenes/Empty.unity",
+            "Name": "Empty"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/unity3d-lolo/Assets/Res/Scenes/Empty.unity",
+            "Name": "Empty"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ecs-iaus-sytstem/Assets/Scenes/SampleScene.unity",
+            "Name": "SampleScene"
+        }
+    ]
+}

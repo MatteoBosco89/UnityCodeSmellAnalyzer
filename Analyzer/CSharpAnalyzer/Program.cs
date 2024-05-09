@@ -22,15 +22,15 @@ namespace CSharpAnalyzer
     /// </summary>
     public class Options
     {
-        [Option('p', "project", Required = true, HelpText = "Project Directory.")]
+        [Option('p', "project", Required = true, HelpText = "Project directory.")]
         public string ProjectPath { get; set; }
-        [Option('r', "results", Required = false, HelpText = "Results Directory. If not provided results are saved in the current Directory.")]
+        [Option('r', "results", Required = false, HelpText = "Directory where to store the results (CodeAnalysis.json file). If not provided, results are saved in the current directory.")]
         public string Results { get; set; }
-        [Option('d', "directory", Required = false, HelpText = "Analyze only the directory provided. If not provided the Project Directory is selected.")]
+        [Option('d', "directory", Required = false, HelpText = "Analyze the specified directory only. If not provided, the project directory is selected.")]
         public string Directory { get; set; }
-        [Option('a', "assembly", Required = false, HelpText = "Additional Assemblies Directory.")]
+        [Option('a', "assembly", Required = false, HelpText = "Additional assemblies directory (i.e., to analyze DLLs).")]
         public string AssemblyDir { get; set; }
-        [Option('s', "statements", Required = false, HelpText = "Set output all Statements.")]
+        [Option('s', "statements", Required = false, HelpText = "Set output all statements.")]
         public bool Statements { get; set; }
         [Option('n', "name", Required = false, HelpText = "The project name.")]
         public string ProjectName { get; set; }
@@ -38,7 +38,7 @@ namespace CSharpAnalyzer
         public string ConfigFile { get; set; }
         [Option('l', "log", Required = false, Default = 1, HelpText = "Log Level: Trace 0 Debug 1 Information 2 Warning 3 Error 4 Critical 5 None 6 (Debug is Default).")]
         public int Logging { get; set; }
-        [Option('v', "verbose", Required = false, HelpText = "Display Log on the standard output.")]
+        [Option('v', "verbose", Required = false, HelpText = "Displays the log on the standard output.")]
         public bool Verbose { get; set; }
     }
 

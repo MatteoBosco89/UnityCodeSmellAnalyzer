@@ -1,0 +1,766 @@
+{
+    "Name": "Mesh Collider Smells",
+    "Occurrency": 152,
+    "Smells": [
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/canopy_cloth2.prefab",
+            "Name": "canopy_cloth2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/WoodFence.prefab",
+            "Name": "WoodFence",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/Crystals/prefab/rock_2.prefab",
+            "Name": "rock_2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/soul_shrine.prefab",
+            "Name": "soul_shrine",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/canopy_wood.prefab",
+            "Name": "canopy_wood",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/MedievalProps/Prefab/bed_wood.prefab",
+            "Name": "bed_wood",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Games/EmptyGame/Scenes/EmptyGame/EmptyGame.unity",
+            "Name": "EmptyGame",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/MedievalTavern/Prefab/table_wood_round.prefab",
+            "Name": "table_wood_round",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/canopy_cloth3.prefab",
+            "Name": "canopy_cloth3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/MedievalCraftingStations/Prefab/medieval_cooking_cauldron.prefab",
+            "Name": "medieval_cooking_cauldron",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/Crystals/prefab/rock_4.prefab",
+            "Name": "rock_4",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/canopy_cloth.prefab",
+            "Name": "canopy_cloth",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Templates/Game/Scenes/FirstScene/FirstScene.unity",
+            "Name": "FirstScene",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Construction/MedievalBuildings/Prefab/watchtower_wood.prefab",
+            "Name": "watchtower_wood",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/Crystals/prefab/rock_1.prefab",
+            "Name": "rock_1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/MedievalProps/Prefab/cart.prefab",
+            "Name": "cart",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/anyrpgcore/Assets/AnyRPG/Core/Content/Models/Prop/Crystals/prefab/rock_3.prefab",
+            "Name": "rock_3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Bridge/pref_BridgeEnd.prefab",
+            "Name": "pref_BridgeEnd",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Bridge/pref_BridgePiece.prefab",
+            "Name": "pref_BridgePiece",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Hazards/Water.prefab",
+            "Name": "Water",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Treasures/pref_Cherry.prefab",
+            "Name": "pref_Cherry",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Pellets/pref_Pellet_1_Red.prefab",
+            "Name": "pref_Pellet_1_Red",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Pellets/pref_Pellet_5_Red.prefab",
+            "Name": "pref_Pellet_5_Red",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Bridge/pref_Bridge.prefab",
+            "Name": "pref_Bridge",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/project-404/Assets/Resources/Prefabs/Objects/Pellets/pref_Pellet_10_Red.prefab",
+            "Name": "pref_Pellet_10_Red",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/StepsPrototype04x02x02.prefab",
+            "Name": "StepsPrototype04x02x02",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/JoinInnerPrototype01x06x01.prefab",
+            "Name": "JoinInnerPrototype01x06x01",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/PickupPrototype.prefab",
+            "Name": "PickupPrototype",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/JoinOuterPrototype02x06x02.prefab",
+            "Name": "JoinOuterPrototype02x06x02",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/JoinMidPrototype04x06x01.prefab",
+            "Name": "JoinMidPrototype04x06x01",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/HousePrototype16x16x24.prefab",
+            "Name": "HousePrototype16x16x24",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/RampPrototype04x02x02.prefab",
+            "Name": "RampPrototype04x02x02",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cytoid/Assets/Packages/Lean/Common/Examples/Prefabs/Grid.prefab",
+            "Name": "Grid",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/simulator/Assets/Prefabs/Map/MapStopSign.prefab",
+            "Name": "MapStopSign",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnLeftPlatformThin.prefab",
+            "Name": "TurnLeftPlatformThin",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnRightPlatform.prefab",
+            "Name": "TurnRightPlatform",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnLeftPlatform.prefab",
+            "Name": "TurnLeftPlatform",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/AdditiveLevels/Prefabs/Plane.prefab",
+            "Name": "Plane",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Icosphere.prefab",
+            "Name": "Icosphere",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/snappable-meshes-pcg/Assets/Prefabs/BenchmarkPieces/Platform.prefab",
+            "Name": "Platform",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel.prefab",
+            "Name": "Tunnel",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel T Junction.prefab",
+            "Name": "Tunnel T Junction",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/2x2x4 Ramp.prefab",
+            "Name": "2x2x4 Ramp",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Wall Corner.prefab",
+            "Name": "Wall Corner",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Wall Corner Top.prefab",
+            "Name": "Wall Corner Top",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel Cross.prefab",
+            "Name": "Tunnel Cross",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Tunnel Corner.prefab",
+            "Name": "Tunnel Corner",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Stage Prefabs/Wall Straight Top.prefab",
+            "Name": "Wall Straight Top",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/DemoWorker/DemoWorkerGame-Scene.unity",
+            "Name": "DemoWorkerGame-Scene",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/MultipleAdditiveScenes/Prefabs/Icosphere.prefab",
+            "Name": "Icosphere",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/voxelfield/Assets/Resources/Models/Tree Variant.prefab",
+            "Name": "Tree Variant",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/voxelfield/Assets/Prefabs/Chunk.prefab",
+            "Name": "Chunk",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/house_small.prefab",
+            "Name": "house_small",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop5.prefab",
+            "Name": "Decoration_Prop5",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/forest_pine.prefab",
+            "Name": "forest_pine",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/house_big.prefab",
+            "Name": "house_big",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop1.prefab",
+            "Name": "Decoration_Prop1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/cactus__small_map4.prefab",
+            "Name": "cactus__small_map4",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/boulder.prefab",
+            "Name": "boulder",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/_core/Models/Map/Prefabs/bush.prefab",
+            "Name": "bush",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Carpet2.prefab",
+            "Name": "Decoration_Carpet2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Tree3.prefab",
+            "Name": "Decoration_Tree3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura/Assets/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop2.prefab",
+            "Name": "Decoration_Prop2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/house_small.prefab",
+            "Name": "house_small",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop5.prefab",
+            "Name": "Decoration_Prop5",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/forest_pine.prefab",
+            "Name": "forest_pine",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/house_big.prefab",
+            "Name": "house_big",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop1.prefab",
+            "Name": "Decoration_Prop1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/cactus__small_map4.prefab",
+            "Name": "cactus__small_map4",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/boulder.prefab",
+            "Name": "boulder",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Models/Map/Prefabs/bush.prefab",
+            "Name": "bush",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Carpet2.prefab",
+            "Name": "Decoration_Carpet2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Tree3.prefab",
+            "Name": "Decoration_Tree3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/antura_arabic/Assets/_app/Resources/Prefabs/AnturaSpace/Decorations/Decoration_Prop2.prefab",
+            "Name": "Decoration_Prop2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/unity-flightphysics/Assets/FlightPhysics/Prefabs/Environment/Runways/ip_runway_creator2/Small_Runway_001.prefab",
+            "Name": "Small_Runway_001",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/unity-flightphysics/Assets/FlightPhysics/Prefabs/Environment/Runways/ip_runway_creator1/Large_Runway_001.prefab",
+            "Name": "Large_Runway_001",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/unity-flightphysics/Assets/FlightPhysics/Prefabs/Environment/Nature/WaterPlane.prefab",
+            "Name": "WaterPlane",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Prefabs/Dungeon/Dungeon Pieces/GroundPlane.prefab",
+            "Name": "GroundPlane",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/AdditiveLevels/Prefabs/Plane.prefab",
+            "Name": "Plane",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/MultipleAdditiveScenes/Prefabs/Icosphere.prefab",
+            "Name": "Icosphere",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola.prefab",
+            "Name": "BeepsCola",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola 6.prefab",
+            "Name": "BeepsCola 6",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola 1.prefab",
+            "Name": "BeepsCola 1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola 3.prefab",
+            "Name": "BeepsCola 3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola 5.prefab",
+            "Name": "BeepsCola 5",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola 2.prefab",
+            "Name": "BeepsCola 2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/ss3d/Assets/Content/Items/BeepsCola 4.prefab",
+            "Name": "BeepsCola 4",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/19_SquareGrid/SquareTilePrefab/SquareTilePrefab.prefab",
+            "Name": "SquareTilePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/TilePrefabs/TileDefault.prefab",
+            "Name": "TileDefault",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cosmosframework/Assets/Examples/Common/UnitSquare/UnitSquare.prefab",
+            "Name": "UnitSquare",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/20_AOI/AOITilePrefab.prefab",
+            "Name": "AOITilePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/cosmosframework/Assets/Examples/ExampleScripts/14_AStarPathfinding/TilePrefabs/TileHighlight.prefab",
+            "Name": "TileHighlight",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/Common/Prefabs/debugPlanePrefab.prefab",
+            "Name": "debugPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Bricks.prefab",
+            "Name": "Bricks",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Common/Prefabs/debugPlanePrefab.prefab",
+            "Name": "debugPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Office Supplies Low Poly/Assets/Prefabs/Calculator 1.prefab",
+            "Name": "Calculator 1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Common/Prefabs/shadowPlanePrefab.prefab",
+            "Name": "shadowPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Snow.prefab",
+            "Name": "Snow",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Stone.prefab",
+            "Name": "Stone",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/Common/Prefabs/occlusionPlanePrefab.prefab",
+            "Name": "occlusionPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Common/Prefabs/collisionPlanePrefab.prefab",
+            "Name": "collisionPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Common/Prefabs/occlusionPlanePrefab.prefab",
+            "Name": "occlusionPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Prefabs/Level geometry.prefab",
+            "Name": "Level geometry",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/Common/Prefabs/shadowPlanePrefab.prefab",
+            "Name": "shadowPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/Resources/Pin.prefab",
+            "Name": "Pin",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Ground.prefab",
+            "Name": "Ground",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/FJU/Map/map_prefab/DeviceOrientation.prefab",
+            "Name": "DeviceOrientation",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Grass.prefab",
+            "Name": "Grass",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Office Supplies Low Poly/Assets/Prefabs/Stapler black.prefab",
+            "Name": "Stapler black",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Bush.prefab",
+            "Name": "Bush",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Water.prefab",
+            "Name": "Water",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/UnityARKitPlugin/Examples/Common/Prefabs/collisionPlanePrefab.prefab",
+            "Name": "collisionPlanePrefab",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/mapboxargame/Assets/Mapbox/Examples/8_VoxelMap/Prefabs/Voxels/Sand.prefab",
+            "Name": "Sand",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/Demo Elements/Prefabs/Stage/Tree-Stump.prefab",
+            "Name": "Tree-Stump",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/egameplay/Assets/ExplosiveLLC/SuperCharacterController/Scenes/SpaceZone.unity",
+            "Name": "SpaceZone",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/egameplay/Assets/unity-chan!/Unity-chan! Model/Scenes/ActionCheck.unity",
+            "Name": "ActionCheck",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9Obelisk3.prefab",
+            "Name": "Ruin2_9Obelisk3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Mountain/Platform_01.prefab",
+            "Name": "Platform_01",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/BuildingParts/Langan_Zhuzi/Langan/Langan_05_2.prefab",
+            "Name": "Langan_05_2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ancient_Stones2.prefab",
+            "Name": "Ancient_Stones2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ancient_Stones5.prefab",
+            "Name": "Ancient_Stones5",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/DOTween Examples/Example Assets/Prefabs/Environment.prefab",
+            "Name": "Environment",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9A.prefab",
+            "Name": "Ruin2_9A",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_3.prefab",
+            "Name": "Ruin2_3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin3_1C.prefab",
+            "Name": "Ruin3_1C",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_2.prefab",
+            "Name": "Ruin2_2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/Mods/JYX2/Maps/GameMaps/TestLight.unity",
+            "Name": "TestLight",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9F.prefab",
+            "Name": "Ruin2_9F",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9E.prefab",
+            "Name": "Ruin2_9E",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/SkyBox/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky.unity",
+            "Name": "Cartoon_FluffyBlueSky",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Ground/Water/YWML2/stream.prefab",
+            "Name": "stream",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin3_1B.prefab",
+            "Name": "Ruin3_1B",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3rd/GPUInstancer/Demos/_SharedResources/Prefabs/SceneElements.prefab",
+            "Name": "SceneElements",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9B.prefab",
+            "Name": "Ruin2_9B",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ancient_Stones4.prefab",
+            "Name": "Ancient_Stones4",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin3_1A.prefab",
+            "Name": "Ruin3_1A",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/ExplosiveLLC/Demo Elements/Prefabs/Stage/Tree-Stump.prefab",
+            "Name": "Tree-Stump",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_4.prefab",
+            "Name": "Ruin2_4",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ancient_Stones3.prefab",
+            "Name": "Ancient_Stones3",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9Obelisk1.prefab",
+            "Name": "Ruin2_9Obelisk1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Mountain/HugeRock_01_LOD.prefab",
+            "Name": "HugeRock_01_LOD",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_6.prefab",
+            "Name": "Ruin2_6",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/ExplosiveLLC/SuperCharacterController/Scenes/SpaceZone.unity",
+            "Name": "SpaceZone",
+            "Type": "unity"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Ground/terrain/Prefab/1/Terrain_06.prefab",
+            "Name": "Terrain_06",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ancient_Stones1.prefab",
+            "Name": "Ancient_Stones1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_1.prefab",
+            "Name": "Ruin2_1",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/TileWorldCreator/Ground.prefab",
+            "Name": "Ground",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9Obelisk2.prefab",
+            "Name": "Ruin2_9Obelisk2",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_5.prefab",
+            "Name": "Ruin2_5",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ancient_Stones6.prefab",
+            "Name": "Ancient_Stones6",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9C.prefab",
+            "Name": "Ruin2_9C",
+            "Type": "prefab"
+        },
+        {
+            "FileName": "/home/videogames/dataset/fanren/Assets/3DScene/Model/Common/Rock/Ruins/Ruin2_9D.prefab",
+            "Name": "Ruin2_9D",
+            "Type": "prefab"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+
+SINGLETON C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Cameras\Manager.cs 7
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\Energy.cs 45
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\Flight.cs 92
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\Gravity.cs 28
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\OwnerMovement.cs 26
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\OwnerMovement.cs 31
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\OwnerSendPosition.cs 41
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\ProxyMovement.cs 27
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\Rotation.cs 39
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\Rotation.cs 43
+POOR_STATE_DESIGN C:\Users\matte\Desktop\a\battleofmages\Assets\Scripts\Players\SkillSystem.cs 77
+
+
+TP = 262
+FN = 11

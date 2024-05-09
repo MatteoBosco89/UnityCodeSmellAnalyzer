@@ -1,0 +1,5 @@
+Prj,File,Name,Type,ANNOTATOR-1,ANNOTATOR-2,FINAL,CONFLICT
+/home/videogames/dataset/cuboidaldrift,/home/videogames/dataset/cuboidaldrift/Assets/Prefabs/Platforms/TurnLeftPlatformThin.prefab,TurnLeftPlatformThin,prefab,YES,YES,TP,
+/home/videogames/dataset/fanren,/home/videogames/dataset/fanren/Assets/Mods/JYX2/Maps/GameMaps/TestLight.unity,TestLight,unity,YES,YES,TP,
+/home/videogames/dataset/multiplayer-fps,/home/videogames/dataset/multiplayer-fps/Assets/Standard Assets/Prototyping/Prefabs/JoinOuterPrototype02x06x02.prefab,JoinOuterPrototype02x06x02,prefab,YES,YES,TP,
+/home/videogames/dataset/mapboxargame,/home/videogames/dataset/mapboxargame/Assets/UnityARInterface/Examples/Common/Prefabs/shadowPlanePrefab.prefab,shadowPlanePrefab,prefab,YES,YES,TP,

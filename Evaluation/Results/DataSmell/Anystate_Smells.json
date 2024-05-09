@@ -1,0 +1,346 @@
+{
+    "Name": "Anystate Smells",
+    "Occurrency": 85,
+    "Smells": [
+        {
+            "FilePath": "/home/videogames/dataset/project-404/Assets/P1/Models/Players/Olimar/P1/anim_controller_Olimar.controller",
+            "Name": "anim_controller_Olimar"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/Enemy/PirahnaPlant/PiranhaPlant.controller",
+            "Name": "PiranhaPlant"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/nsmb-mariovsluigi/Assets/Animations/Menu/Sprite Mask.controller",
+            "Name": "Sprite Mask"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Bought/Spider/spider_controller.controller",
+            "Name": "spider_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_archer_controller.controller",
+            "Name": "orc_archer_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_catapult_controller.controller",
+            "Name": "human_catapult_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/3rdParty/Free/fantasySpider/spider_controller.controller",
+            "Name": "spider_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/woodElf_boltthrower_controller.controller",
+            "Name": "woodElf_boltthrower_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/UnitAnim.controller",
+            "Name": "UnitAnim"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_shaman_controller.controller",
+            "Name": "orc_shaman_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_wolfrider_controller.controller",
+            "Name": "orc_wolfrider_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_cavalry_controller.controller",
+            "Name": "human_cavalry_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_mage_controller.controller",
+            "Name": "human_mage_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_worker_controller.controller",
+            "Name": "human_worker_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_infantry_controller.controller",
+            "Name": "orc_infantry_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/demon_controller.controller",
+            "Name": "demon_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_archer_controller.controller",
+            "Name": "human_archer_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_worker_controller.controller",
+            "Name": "orc_worker_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/orc_catapult_controller.controller",
+            "Name": "orc_catapult_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/warkingdoms/Assets/Animations/Units/human_infantry_controller.controller",
+            "Name": "human_infantry_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/card-game-simulator/Assets/Mirror/Examples/Tanks/Models/(Public Domain) Recon_Tank/Controller.controller",
+            "Name": "Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/gold-player/Assets/Hertzole/Gold Player/WebGL Example/Gold Player Tests/Weapon Animations/Shotgun.controller",
+            "Name": "Shotgun"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Raid/Announcement/AnnouncementController.controller",
+            "Name": "AnnouncementController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Raid/UnitSelector/UnitSelectionController.controller",
+            "Name": "UnitSelectionController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Controls/HeroSlot/HeroSlotController.controller",
+            "Name": "HeroSlotController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Shared Assets/Animations/RPGController.controller",
+            "Name": "RPGController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Photon Unity Networking/Demos/Demo2DJumpAndRunWithPhysics/Animations/RobotKyle2D.controller",
+            "Name": "RobotKyle2D"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Estate/Fader/EstateFade.controller",
+            "Name": "EstateFade"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Controls/PartySlot/PartySlotController.controller",
+            "Name": "PartySlotController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Controls/TownSlot/TownSlotController.controller",
+            "Name": "TownSlotController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/darkest-dungeon-unity/Assets/Animations/Controls/UpgradeButton/UpgradeController.controller",
+            "Name": "UpgradeController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/InterestManagement/Models/Controller.controller",
+            "Name": "Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirage/Assets/Mirage/Samples~/Tanks/Models/(Public Domain) Recon_Tank/Controller.controller",
+            "Name": "Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_core/Animations/UI/MoodButton.controller",
+            "Name": "MoodButton"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Animations/LivingLetter_MakeFriends.controller",
+            "Name": "LivingLetter_MakeFriends"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Animations/LetterPicker.controller",
+            "Name": "LetterPicker"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Scanner/Animations/TrapDoorAnimator.controller",
+            "Name": "TrapDoorAnimator"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Animations/LetterChoice.controller",
+            "Name": "LetterChoice"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Balloons/Animations/LetterPrompt.controller",
+            "Name": "LetterPrompt"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Balloons/Animations/WordFlexibleContainer.controller",
+            "Name": "WordFlexibleContainer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Animations/Balloon.controller",
+            "Name": "Balloon"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/Balloons/Animations/Balloon.controller",
+            "Name": "Balloon"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura/Assets/_games/MakeFriends/Animations/DropZone.controller",
+            "Name": "DropZone"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_app/Animations/UI/MoodButton.controller",
+            "Name": "MoodButton"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Animations/LivingLetter_MakeFriends.controller",
+            "Name": "LivingLetter_MakeFriends"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Animations/LetterPicker.controller",
+            "Name": "LetterPicker"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Scanner/Animations/TrapDoorAnimator.controller",
+            "Name": "TrapDoorAnimator"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Animations/LetterChoice.controller",
+            "Name": "LetterChoice"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/Animations/LetterPrompt.controller",
+            "Name": "LetterPrompt"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/Animations/WordFlexibleContainer.controller",
+            "Name": "WordFlexibleContainer"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Animations/Balloon.controller",
+            "Name": "Balloon"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/Balloons/Animations/Balloon.controller",
+            "Name": "Balloon"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/antura_arabic/Assets/_games/MakeFriends/Animations/DropZone.controller",
+            "Name": "DropZone"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/com.unity.multiplayer.samples.coop/Assets/Animations/UI/AnimController_UI_Message.controller",
+            "Name": "AnimController_UI_Message"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/01_Basic/CellScroll.controller",
+            "Name": "CellScroll"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/03_InfiniteScroll/CellScroll.controller",
+            "Name": "CellScroll"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/Common/CellSelect.controller",
+            "Name": "CellSelect"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/05_Voronoi/CellScroll.controller",
+            "Name": "CellScroll"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/06_LoopTabBar/Tab.controller",
+            "Name": "Tab"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/02_FocusOn/CellScroll.controller",
+            "Name": "CellScroll"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fancyscrollview/Assets/FancyScrollView/Examples/Sources/04_Metaball/CellScroll.controller",
+            "Name": "CellScroll"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mirror/Assets/Mirror/Examples/Tanks/Models/(Public Domain) Recon_Tank/Controller.controller",
+            "Name": "Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Content/Entities/Human/HumanCharacterAnimator.controller",
+            "Name": "HumanCharacterAnimator"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/ss3d/Assets/Content/Entities/Silicon/Engineer Borg/Engi Borg.controller",
+            "Name": "Engi Borg"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/mapboxargame/Assets/Dropdown.controller",
+            "Name": "Dropdown"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u82d7\u4eba\u51e4\u6342\u773cController.controller",
+            "Name": "\u82d7\u4eba\u51e4\u6342\u773cController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u795e\u9f99\u5f1f\u5b50Controller.controller",
+            "Name": "\u795e\u9f99\u5f1f\u5b50Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u5cb3\u8001\u4e09Controller.controller",
+            "Name": "\u5cb3\u8001\u4e09Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u86c7_controller.controller",
+            "Name": "\u86c7_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u5c0f\u9f99\u5973Controller.controller",
+            "Name": "\u5c0f\u9f99\u5973Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u661f\u5bbf\u5f1f\u5b50Controller.controller",
+            "Name": "\u661f\u5bbf\u5f1f\u5b50Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u8881\u627f\u5fd7Controller.controller",
+            "Name": "\u8881\u627f\u5fd7Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u91d1\u82b1\u5a46\u5a46Controller.controller",
+            "Name": "\u91d1\u82b1\u5a46\u5a46Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u55bd\u5570Controller.controller",
+            "Name": "\u55bd\u5570Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u9cc4\u9c7c_controller.controller",
+            "Name": "\u9cc4\u9c7c_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u9752\u86d9_controller.controller",
+            "Name": "\u9752\u86d9_controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u5510\u6587\u4eaeController.controller",
+            "Name": "\u5510\u6587\u4eaeController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u7384\u6148Controller.controller",
+            "Name": "\u7384\u6148Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u706b\u8718\u86dbcontroller.controller",
+            "Name": "\u706b\u8718\u86dbcontroller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u82d7\u4eba\u51e4\u53d7\u4f24Controller.controller",
+            "Name": "\u82d7\u4eba\u51e4\u53d7\u4f24Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u660e\u6559\u5f1f\u5b50Controller.controller",
+            "Name": "\u660e\u6559\u5f1f\u5b50Controller"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u8c22\u900aController.controller",
+            "Name": "\u8c22\u900aController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u50e7\u4ebaController.controller",
+            "Name": "\u50e7\u4ebaController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u6d2a\u4e03\u516cController.controller",
+            "Name": "\u6d2a\u4e03\u516cController"
+        },
+        {
+            "FilePath": "/home/videogames/dataset/fanren/Assets/BuildSource/AnimationControllers/\u5907\u4efd/\u82d7\u4eba\u51e4Controller.controller",
+            "Name": "\u82d7\u4eba\u51e4Controller"
+        }
+    ]
+}

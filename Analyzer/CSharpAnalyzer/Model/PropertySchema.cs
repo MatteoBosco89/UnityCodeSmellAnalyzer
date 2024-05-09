@@ -3,7 +3,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 
-//// POSSONO ESSERCI VARIABILI E INVOCAZIONI
 
 namespace CSharpAnalyzer
 {
@@ -11,7 +10,6 @@ namespace CSharpAnalyzer
     /// Class representing the Property Declaration. 
     /// Informations gathered: Name, Type, Modifiers, LOC
     /// </summary>
-    /// TODO MIGLIORARE (VEDI LOAD INFORMATIONS)
     [Serializable]
     public class PropertySchema : SyntaxSchema
     {

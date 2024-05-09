@@ -38,7 +38,7 @@ namespace MetaSmellDetector
 
         public static void LoadData()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Loading DataSet...");
+            Logger.Log(Logger.LogLevel.Debug, "Loading Dataset...");
             try
             {
                 Logger.Log(Logger.LogLevel.Debug, "Loading main data...");
@@ -57,10 +57,10 @@ namespace MetaSmellDetector
                         Logger.Log(Logger.LogLevel.Debug, $"File: {file} is not json");
                     }                  
                 }
-                Logger.Log(Logger.LogLevel.Debug, "Main data loaded!");
+                Logger.Log(Logger.LogLevel.Debug, "Maindata loaded!");
                 if (dataPath.Count() > 1)
                 {
-                    Logger.Log(Logger.LogLevel.Debug, "Loading meta data...");
+                    Logger.Log(Logger.LogLevel.Debug, "Loading metadata...");
                     files = Directory.GetFiles(dataPath.ElementAt(1), "*.*", SearchOption.AllDirectories).Where(f => DIR.Any(f.ToLower().EndsWith)).ToList();
                     foreach (string file in files)
                     {
@@ -74,14 +74,14 @@ namespace MetaSmellDetector
                             Logger.Log(Logger.LogLevel.Debug, $"File: {file} is not json");
                         }
                     }
-                    Logger.Log(Logger.LogLevel.Debug, "Meta data loaded!");
+                    Logger.Log(Logger.LogLevel.Debug, "Metadata loaded!");
                 }
                 isDataLoaded = true;
                 Logger.Log(Logger.LogLevel.Debug, "Dataset Loaded!");
             }
             catch (FileNotFoundException)
             {
-                Logger.Log(Logger.LogLevel.Debug, "DataSet Not Found");
+                Logger.Log(Logger.LogLevel.Debug, "Dataset Not Found");
                 isDataLoaded = false;
             }
            
@@ -89,7 +89,7 @@ namespace MetaSmellDetector
 
         public static void Analyze()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Start analisys...");
+            Logger.Log(Logger.LogLevel.Debug, "Start analysis...");
             if (expose)
             {
                 ExposeSmellMethod();
@@ -114,7 +114,7 @@ namespace MetaSmellDetector
 
         public static void ExposeSmellMethod()
         {
-            Logger.Log(Logger.LogLevel.Debug, "Exposing names of smells methods...");
+            Logger.Log(Logger.LogLevel.Debug, "Exposing names of smell methods...");
             List<string> methods = MetaExtractor.SmellsMethods();
             string text = "";
             foreach(string s in methods)
@@ -128,7 +128,7 @@ namespace MetaSmellDetector
 
         public static void SearchSmell(JArray data)
         {
-            Logger.Log(Logger.LogLevel.Debug, "Searching smells...");
+            Logger.Log(Logger.LogLevel.Debug, "Searching for smells...");
             try
             {
                 string[] lines = File.ReadAllLines(smellFile);
